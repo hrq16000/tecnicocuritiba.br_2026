@@ -494,6 +494,21 @@ const BASE_ROUTES = [
     "description": "Técnico de informática no Cristo Rei, Curitiba: conserto de notebook, formatação, upgrade de SSD e Wi-Fi para estudantes e famílias. A partir de R$ 99,99. Via WhatsApp."
   },
   {
+    "path": "/bairros/boa-vista",
+    "title": "Técnico de Informática no Boa Vista (Curitiba) | PC e Notebook",
+    "description": "Técnico de informática no Boa Vista, Curitiba: conserto de computador e notebook, formatação com backup, upgrade de SSD e Wi-Fi. A partir de R$ 99,99. Via WhatsApp."
+  },
+  {
+    "path": "/bairros/cajuru",
+    "title": "Técnico de Informática no Cajuru (Curitiba) | PC e Notebook",
+    "description": "Técnico de informática no Cajuru, Curitiba: conserto de notebook e PC, formatação com backup, remoção de vírus e Wi-Fi. A partir de R$ 99,99. Atendimento via WhatsApp."
+  },
+  {
+    "path": "/bairros/boqueirao",
+    "title": "Técnico de Informática no Boqueirão (Curitiba) | PC e Notebook",
+    "description": "Técnico de informática no Boqueirão, Curitiba: conserto de PC e notebook, formatação com backup, upgrade de SSD e Wi-Fi. A partir de R$ 99,99. Atendimento via WhatsApp."
+  },
+  {
     "path": "/atendimento-domicilio",
     "title": "Atendimento de Informática em Domicílio em Curitiba",
     "description": "Atendimento técnico de informática em domicílio em Curitiba: o que resolve no local, o que exige coleta ou bancada, preparação da visita, peças e fatores de valor.",
