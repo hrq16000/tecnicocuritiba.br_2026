@@ -29,6 +29,8 @@ const SOURCES = {
   "/problemas/teclado-de-notebook-nao-funciona": "src/pages/problemas/TecladoNotebookNaoFunciona.tsx",
   "/problemas/computador-fazendo-barulho": "src/pages/problemas/ComputadorFazendoBarulho.tsx",
   "/problemas/tv-com-linhas-na-tela": "src/pages/problemas/TvComLinhasNaTela.tsx",
+  "/problemas/notebook-com-tela-preta": "src/pages/problemas/NotebookComTelaPreta.tsx",
+  "/problemas/tv-desligando-sozinha": "src/pages/problemas/TvDesligandoSozinha.tsx",
   "/problemas/notebook-superaquecendo": "src/pages/problemas/NotebookSuperaquecendo.tsx",
   "/precos-e-politicas": "src/components/TermosConteudo.tsx",
   "/como-funciona": "src/pages/ComoFunciona.tsx",

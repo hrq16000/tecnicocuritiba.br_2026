@@ -181,6 +181,9 @@ export const PROBLEMAS = [
   // Onda 12 — energia/POST em desktop e teclado de notebook, ambos autorais.
   { path: "/problemas/computador-nao-liga", changefreq: "monthly", priority: "0.6" },
   { path: "/problemas/teclado-de-notebook-nao-funciona", changefreq: "monthly", priority: "0.6" },
+  // Onda 14 — tela preta em notebook e desligamento espontâneo de TV.
+  { path: "/problemas/notebook-com-tela-preta", changefreq: "monthly", priority: "0.6" },
+  { path: "/problemas/tv-desligando-sozinha", changefreq: "monthly", priority: "0.6" },
   // Onda 13 — ruído em desktop e linhas na tela de TV, ambos autorais.
   { path: "/problemas/computador-fazendo-barulho", changefreq: "monthly", priority: "0.6" },
   { path: "/problemas/tv-com-linhas-na-tela", changefreq: "monthly", priority: "0.6" },

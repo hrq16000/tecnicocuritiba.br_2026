@@ -28,6 +28,8 @@ export const LASTMOD = {
   "/problemas/teclado-de-notebook-nao-funciona": "2026-08-12",
   "/problemas/computador-fazendo-barulho": "2026-08-13",
   "/problemas/tv-com-linhas-na-tela": "2026-08-13",
+  "/problemas/notebook-com-tela-preta": "2026-08-14",
+  "/problemas/tv-desligando-sozinha": "2026-08-14",
   "/problemas/notebook-superaquecendo": "2026-08-12",
   // Frente de monetização — página comercial de patrocínio
   "/anuncie": "2026-08-08",

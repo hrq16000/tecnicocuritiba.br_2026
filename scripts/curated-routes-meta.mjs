@@ -1308,6 +1308,82 @@ const BASE_ROUTES = [
   },
 
 {
+  "path": "/problemas/notebook-com-tela-preta",
+  "title": "Notebook com Tela Preta mas Ligado: O Que Fazer | Curitiba",
+  "description": "Notebook liga, ventoinha gira e teclado acende, mas a tela fica preta? Entenda como separar iluminação da tela, cabo interno, vídeo da placa e sistema travado antes de trocar peça, com avaliação por coleta em Curitiba.",
+  "h1": "Notebook com tela preta: como descobrir se é a tela, o cabo ou a placa",
+  "subtitulo": "O aparelho liga e responde, mas a tela continua escura. Dois testes caseiros separam três causas com custos completamente diferentes.",
+  "blocos": [
+    {
+      "titulo": "Dois testes decidem o rumo do atendimento",
+      "paragrafos": [
+        "O primeiro é a lanterna: em ambiente escuro, iluminando a tela em ângulo, procure a silhueta dos ícones. Se a imagem existe mas não é iluminada, o problema está na iluminação do painel, um grupo com boa taxa de reparo e sem envolver o vídeo da placa.",
+        "O segundo é o monitor externo. Imagem normal na saída de vídeo confirma que processador, memória e vídeo estão trabalhando, e restringe o defeito ao conjunto de tela e ao cabo interno. Sem imagem em nenhuma saída, a avaliação passa a ser de placa, com medição de tensões em bancada."
+      ]
+    },
+    {
+      "titulo": "Sintomas e o que cada um costuma indicar",
+      "paragrafos": [
+        "Tela totalmente escura com ventoinha girando indica que a placa recebeu energia e o ponto de parada está entre a geração da imagem e a tela. Imagem visível apenas sob lanterna aponta para a iluminação do painel.",
+        "Imagem normal no monitor externo restringe o defeito ao conjunto de tela. Tela que volta ao mexer na tampa indica cabo interno rompendo na dobradiça. Tela preta logo após atualização costuma ser driver de vídeo incompatível, sem qualquer peça envolvida."
+      ]
+    },
+    {
+      "titulo": "Verificações antes de acionar alguém",
+      "paragrafos": [
+        "Faça o teste da lanterna, conecte um monitor externo alternando a projeção pelo teclado, remova a fonte e mantenha o botão de energia pressionado por trinta segundos, e desconecte periféricos e cartões antes de religar.",
+        "O que não recomendamos: apertar a tela para reativar a imagem, aquecer a moldura, desmontar a tampa sem ferramenta adequada e insistir em ligar quando houver cheiro de queimado."
+      ]
+    },
+    {
+      "titulo": "O que resolve cada cenário e quais são as condições",
+      "paragrafos": [
+        "Com imagem no monitor externo, o trabalho concentra-se em cabo, conector e circuito de iluminação do conjunto de tela. Sem imagem em nenhuma saída, medimos as tensões dos circuitos de vídeo e tratamos o ponto com estação de retrabalho, sem substituir a placa inteira.",
+        "Quando o hardware responde e a origem é de software, a correção é reversão de driver, reparo da inicialização ou reinstalação limpa preservando arquivos, sempre com aprovação prévia.",
+        "Atendimento apenas por coleta e entrega no endereço informado, sem balcão. Nenhuma peça é comprada sem sua aprovação. Garantia de 90 dias sobre mão de obra e peça aplicada, limitada ao bloco reparado."
+      ]
+    }
+  ]
+},
+{
+  "path": "/problemas/tv-desligando-sozinha",
+  "title": "TV Desligando Sozinha: Causas e Conserto | Curitiba",
+  "description": "Televisor que desliga sozinho, reinicia ou entra em ciclo de LED piscando? Entenda como separar capacitor de fonte, proteção térmica, ajuste de economia e placa principal, com avaliação por coleta em Curitiba.",
+  "h1": "TV desligando sozinha: proteção da fonte, ajuste do menu ou falha de placa",
+  "subtitulo": "Televisor que apaga sem comando quase nunca é defeito aleatório: na maioria dos casos é o próprio aparelho se protegendo de uma tensão fora da faixa.",
+  "blocos": [
+    {
+      "titulo": "A TV não falha sozinha: ela se protege",
+      "paragrafos": [
+        "Todo televisor moderno monitora as próprias tensões. Quando um valor sai da faixa aceitável, o circuito de proteção corta a alimentação para evitar dano maior. Por isso o desligamento repentino costuma ser sintoma de fonte comprometida, e não de falha de software.",
+        "Antes de falar em reparo, três verificações eliminam boa parte dos chamados: temporizador ativado no menu, modo de economia por ausência de sinal e aparelho conectado com defeito derrubando a TV. São gratuitas e levam poucos minutos."
+      ]
+    },
+    {
+      "titulo": "Sintomas e o que cada um costuma indicar",
+      "paragrafos": [
+        "Desligar depois de alguns minutos ligada é o padrão clássico de componente da fonte que perde característica ao aquecer. Ciclo de desliga e liga indica proteção atuando a cada tentativa de partida.",
+        "Desligamento sempre no mesmo intervalo aponta para temporizador ou modo de economia. Queda em cenas claras ou com volume alto indica fonte incapaz de sustentar pico de consumo. Se o som continua e só a imagem some, o quadro é de iluminação da tela, não de desligamento."
+      ]
+    },
+    {
+      "titulo": "Verificações antes de acionar alguém",
+      "paragrafos": [
+        "Desative temporizador e modo de economia no menu, desconecte todos os aparelhos externos, ligue a TV direto na tomada sem extensão, anote o intervalo até o desligamento e observe o padrão do LED depois de apagar.",
+        "O que não recomendamos: abrir a traseira do televisor, tentar descarregar componentes da fonte, religar em sequência após estalo e transportar o aparelho sem proteção rígida nas bordas."
+      ]
+    },
+    {
+      "titulo": "O que resolve cada cenário e quais são as condições",
+      "paragrafos": [
+        "A avaliação mede as tensões da placa de alimentação sob carga, com o aparelho já aquecido, porque falha térmica não aparece em teste rápido. Capacitor degradado e solda fadigada são tratados em nível de componente, com teste prolongado de estabilidade antes da devolução.",
+        "Quando o custo se aproxima do valor de um televisor equivalente, ou a peça não existe mais para o modelo, orientamos não fazer o serviço. Não trocamos painel de televisor.",
+        "Atendimento apenas por coleta e entrega no endereço informado, sem balcão. Garantia de 90 dias sobre mão de obra e peça aplicada, limitada ao bloco reparado; descarga elétrica posterior é dano novo."
+      ]
+    }
+  ]
+},
+{
     "path": "/problemas/computador-fazendo-barulho",
     "title": "Computador Fazendo Barulho: Como Identificar a Origem | Curitiba",
     "description": "PC barulhento, ventoinha rugindo, estalo ou zumbido? Entenda como separar cooler, fonte, disco r\u00edgido e ru\u00eddo el\u00e9trico antes de trocar pe\u00e7a, e como funciona a coleta em Curitiba.",
