@@ -83,6 +83,9 @@ export const BAIRROS = [
   "/bairros/santa-felicidade",
   "/bairros/cabral",
   "/bairros/cristo-rei",
+  "/bairros/boa-vista",
+  "/bairros/cajuru",
+  "/bairros/boqueirao",
 ].map((path) => ({ path, changefreq: "monthly", priority: "0.65" }));
 
 /**
