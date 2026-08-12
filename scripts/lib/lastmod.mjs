@@ -38,6 +38,8 @@ export const LASTMOD = {
   "/problemas/notebook-desligando-sozinho": "2026-08-12",
   "/problemas/pen-drive-nao-reconhecido": "2026-08-12",
   "/problemas/touchpad-nao-funciona": "2026-08-12",
+  "/problemas/dobradica-do-notebook-quebrada": "2026-08-12",
+  "/problemas/computador-sem-som": "2026-08-12",
   "/problemas/notebook-superaquecendo": "2026-08-12",
   // Frente de monetização — página comercial de patrocínio
   "/anuncie": "2026-08-08",

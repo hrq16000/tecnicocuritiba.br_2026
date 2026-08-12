@@ -1574,6 +1574,82 @@ const BASE_ROUTES = [
   ]
 },
 {
+  "path": "/problemas/dobradica-do-notebook-quebrada",
+  "title": "Dobradiça do Notebook Quebrada: Conserto | Curitiba",
+  "description": "Dobradiça do notebook quebrada, carcaça estufando ou tampa que não para em pé? Veja como avaliar o dano na estrutura, o risco para o cabo de vídeo e o que realmente resolve, com avaliação técnica em Curitiba.",
+  "h1": "Dobradiça do notebook quebrada: carcaça, cabo de vídeo e reparo estrutural",
+  "subtitulo": "Dobradiça solta raramente fica igual: ela evolui para carcaça estufada, moldura descolando e cabo de vídeo pinçado.",
+  "blocos": [
+    {
+      "titulo": "Dobradiça quebrada tem estágios, e eles custam diferente",
+      "paragrafos": [
+        "Quase nenhum notebook chega com a dobradiça rompida de uma vez. Primeiro a tampa deixa de parar no ângulo escolhido, depois a carcaça começa a estufar perto do encaixe, em seguida a moldura da tela descola de um lado e só então o conjunto cede por completo.",
+        "O custo do reparo acompanha o estágio: corrigir a fixação enquanto o problema é estrutural é um serviço; esperar até o cabo de vídeo ser pinçado dentro do canal da dobradiça leva o orçamento para o conjunto da tela."
+      ]
+    },
+    {
+      "titulo": "Sintomas e o que cada um costuma indicar",
+      "paragrafos": [
+        "Tampa que não para no ângulo escolhido indica folga interna ou parafuso arrancado da base plástica. Carcaça estufando perto da dobradiça é o sinal clássico de bucha de fixação arrancada, com o plástico assumindo a carga.",
+        "Tela que pisca ao movimentar a tampa aponta para cabo de vídeo pinçado, e moldura descolando mostra que o conjunto da tela já está sendo puxado pela estrutura."
+      ]
+    },
+    {
+      "titulo": "Verificações seguras antes de qualquer tentativa",
+      "paragrafos": [
+        "Pare de abrir e fechar o equipamento, observe se a carcaça está estufando, verifique se a tela pisca ao movimentar a tampa e confira se a moldura descolou em algum canto. Todos esses passos são de observação e não exigem abrir o notebook.",
+        "O que não recomendamos: colar a carcaça, apertar parafusos com força em plástico já arrancado, forçar a tampa até o fim do curso e transportar o notebook aberto."
+      ]
+    },
+    {
+      "titulo": "O que resolve cada cenário e quais são as condições",
+      "paragrafos": [
+        "Com bucha arrancada, o reparo recompõe o ponto de fixação da carcaça e devolve firmeza à tampa. Eixo empenado ou mecanismo travado exige peça nova, e a disponibilidade para o modelo é confirmada antes da aprovação.",
+        "Se o cabo de vídeo foi pinçado ou a tela trincou junto, o orçamento passa a incluir o conjunto da tela e não apenas a estrutura.",
+        "Atendimento apenas por coleta e entrega no endereço informado, sem balcão. Garantia de 90 dias sobre mão de obra e peça aplicada, limitada ao serviço executado."
+      ]
+    }
+  ]
+},
+{
+  "path": "/problemas/computador-sem-som",
+  "title": "Computador Sem Som: Como Resolver | Curitiba",
+  "description": "Computador sem som, som só no fone ou saída de áudio sumida do Windows? Veja como separar dispositivo de saída errado, driver, conector danificado e falha no chip de áudio antes de trocar peça, com avaliação em Curitiba.",
+  "h1": "Computador sem som: saída errada, driver, conector ou chip de áudio",
+  "subtitulo": "A maior parte dos computadores sem áudio não tem peça queimada: o que falta é investigar na ordem certa.",
+  "blocos": [
+    {
+      "titulo": "A ordem certa de investigar áudio",
+      "paragrafos": [
+        "Falta de som é o sintoma em que mais se troca peça sem necessidade. A investigação correta segue quatro camadas: saída selecionada, mixer por aplicativo, driver do sistema e só então hardware.",
+        "Monitores conectados por HDMI aparecem como dispositivo de áudio mesmo sem alto-falante. O sistema passa a enviar o som para lá e o usuário conclui que a placa queimou, quando nada quebrou."
+      ]
+    },
+    {
+      "titulo": "Sintomas e o que cada um costuma indicar",
+      "paragrafos": [
+        "Nenhum som em nenhum programa aponta para dispositivo de saída errado, serviço de áudio parado ou driver ausente. Som só no fone indica conector oxidado ou fone fixado como padrão pelo sistema.",
+        "Saída sumida da lista do Windows aparece quando o driver foi removido ou quando o chip de áudio deixou de responder. Chiado e picotes entram em conflito de driver, interferência elétrica ou cabo sem blindagem."
+      ]
+    },
+    {
+      "titulo": "Verificações seguras antes de trocar qualquer peça",
+      "paragrafos": [
+        "Confira o dispositivo de saída, abra o mixer de volume, teste um fone conhecido nas saídas frontal e traseira, teste a caixa em outro equipamento e verifique o gerenciador de dispositivos. Nenhum passo exige abrir o gabinete.",
+        "O que não recomendamos: instalar pacotes automáticos de driver baixados de sites genéricos, comprar caixa de som antes de testar a saída e forçar o plugue em jack com folga."
+      ]
+    },
+    {
+      "titulo": "O que resolve cada cenário e quais são as condições",
+      "paragrafos": [
+        "Quando o hardware responde, a solução é reinstalar o driver adequado ao modelo e restaurar as saídas padrão. Jack solto, oxidado ou desconectado da placa-mãe é serviço de bancada.",
+        "Boa parte dos casos de áudio se resolve por atendimento remoto, sem retirar o equipamento, e é isso que indicamos quando cabe.",
+        "Atendimento sem balcão, com retirada e devolução no endereço informado. Garantia de 90 dias sobre mão de obra e peça aplicada, limitada ao serviço executado."
+      ]
+    }
+  ]
+},
+{
   "path": "/problemas/computador-travando",
   "title": "Computador Travando: Causas e Conserto | Curitiba",
   "description": "Computador travando do nada, congelando a tela ou parando só em jogos e programas pesados? Veja como separar memória com defeito, superaquecimento, disco em falha e driver antes de trocar peça, com avaliação técnica em Curitiba.",
