@@ -291,6 +291,13 @@ export const SOLUTION_FLOW: SolutionProblem[] = [
         mensagem: "Meu monitor está mostrando sem sinal. Quero avaliação técnica.",
       },
       {
+        equipamento: "Tela do computador piscando",
+        solucao: { label: "Tela do computador piscando", path: "/problemas/tela-do-computador-piscando" },
+        modalidade: "coleta",
+        porque: "Cabo, taxa de atualização e driver são descartados antes de suspeitar do monitor ou da placa de vídeo.",
+        mensagem: "A tela do meu computador está piscando. Quero avaliação técnica.",
+      },
+      {
         equipamento: "Impressora offline ou sem imprimir",
         solucao: { label: "Impressora não imprime", path: "/problemas/impressora-nao-imprime" },
         modalidade: "remoto",
