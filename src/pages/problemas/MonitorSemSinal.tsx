@@ -178,26 +178,12 @@ const MonitorSemSinal = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <PageSEO
-        title={TITLE}
-        description={DESCRIPTION}
-        path={PATH}
-        breadcrumbs={[
-          { name: "Início", path: "/" },
-          { name: "Problemas", path: "/problemas" },
-          { name: "Monitor sem sinal", path: PATH },
-        ]}
-      />
+      <PageSEO title={TITLE} description={DESCRIPTION} path={PATH} />
       <Header />
-      <Breadcrumbs
-        items={[
-          { label: "Problemas", href: "/problemas" },
-          { label: "Monitor sem sinal" },
-        ]}
-      />
+      <Breadcrumbs items={[{ label: "Problemas" }, { label: "Monitor sem sinal" }]} />
 
-      <section className="bg-[hsl(var(--hero-bg))] px-4 pb-10 pt-8 text-white sm:pb-14 sm:pt-12">
-        <div className="container mx-auto max-w-4xl">
+      <section className="bg-[hsl(var(--hero-bg))] text-white">
+        <div className="container mx-auto max-w-4xl px-4 py-8 sm:py-12 md:py-14">
           <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-accent-on-dark sm:mb-3 sm:text-sm">
             Sintoma · Curitiba e região
           </p>
