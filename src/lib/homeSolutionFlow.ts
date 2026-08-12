@@ -291,6 +291,13 @@ export const SOLUTION_FLOW: SolutionProblem[] = [
         mensagem: "Meu monitor está mostrando sem sinal. Quero avaliação técnica.",
       },
       {
+        equipamento: "Mouse ou teclado parou de responder",
+        solucao: { label: "Mouse não funciona", path: "/problemas/mouse-nao-funciona" },
+        modalidade: "remoto",
+        porque: "Teste em outra máquina e ajuste de porta USB resolvem a maioria dos casos sem retirar o equipamento.",
+        mensagem: "Meu mouse parou de funcionar. Quero avaliação técnica.",
+      },
+      {
         equipamento: "Tela do computador piscando",
         solucao: { label: "Tela do computador piscando", path: "/problemas/tela-do-computador-piscando" },
         modalidade: "coleta",
@@ -339,6 +346,13 @@ export const SOLUTION_FLOW: SolutionProblem[] = [
         modalidade: "coleta",
         porque: "Falha térmica de fonte só aparece com o aparelho aquecido e medição sob carga em bancada.",
         mensagem: "Minha TV está desligando sozinha. Quero avaliação da fonte com coleta.",
+      },
+      {
+        equipamento: "Smart TV travando ou lenta",
+        solucao: { label: "TV travando", path: "/problemas/tv-travando" },
+        modalidade: "remoto",
+        porque: "Memória cheia, aplicativo desatualizado e Wi-Fi fraco no cômodo respondem pela maioria dos travamentos.",
+        mensagem: "Minha smart TV está travando. Quero avaliação técnica.",
       },
       {
         equipamento: "TV com imagem e sem som",

@@ -460,6 +460,8 @@ const ProblemaTouchpadNaoFunciona = lazy(() => import("./pages/problemas/Touchpa
 const ProblemaDobradicaNotebookQuebrada = lazy(() => import("./pages/problemas/DobradicaNotebookQuebrada"));
 const ProblemaComputadorSemSom = lazy(() => import("./pages/problemas/ComputadorSemSom"));
 const ProblemaTelaDoComputadorPiscando = lazy(() => import("./pages/problemas/TelaDoComputadorPiscando"));
+const ProblemaTvTravando = lazy(() => import("./pages/problemas/TvTravando"));
+const ProblemaMouseNaoFunciona = lazy(() => import("./pages/problemas/MouseNaoFunciona"));
 const ProblemaNotebookNaoConectaWifi = lazy(() => import("./pages/problemas/NotebookNaoConectaWifi"));
 const ProblemaNotebookSuperaquecendo = lazy(() => import("./pages/problemas/NotebookSuperaquecendo"));
 
@@ -1007,6 +1009,8 @@ const App = () => (
             <Route path="/problemas/dobradica-do-notebook-quebrada" element={<ProblemaDobradicaNotebookQuebrada />} />
             <Route path="/problemas/computador-sem-som" element={<ProblemaComputadorSemSom />} />
             <Route path="/problemas/tela-do-computador-piscando" element={<ProblemaTelaDoComputadorPiscando />} />
+            <Route path="/problemas/tv-travando" element={<ProblemaTvTravando />} />
+            <Route path="/problemas/mouse-nao-funciona" element={<ProblemaMouseNaoFunciona />} />
             <Route path="/problemas/notebook-nao-conecta-no-wifi" element={<ProblemaNotebookNaoConectaWifi />} />
 
             <Route path="/problemas/notebook-superaquecendo" element={<ProblemaNotebookSuperaquecendo />} />

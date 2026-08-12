@@ -76,6 +76,8 @@ export const INTENT_MATRIX = [
   { path: "/problemas/tela-do-computador-piscando", keyword: "tela do computador piscando", role: "sintoma de imagem instavel/tremendo", notCompeting: ["/problemas/monitor-sem-sinal", "/servicos/conserto-monitor", "/servicos/conserto-placa", "/problemas/computador-travando"] },
   { path: "/problemas/notebook-nao-conecta-no-wifi", keyword: "notebook nao conecta no wifi", role: "sintoma de falha de conexao sem fio no notebook", notCompeting: ["/problemas/wifi-caindo-toda-hora", "/servicos/redes-e-wifi", "/servicos/manutencao-de-notebook", "/atendimento-remoto"] },
   { path: "/problemas/computador-sem-som", keyword: "computador sem som", role: "sintoma de ausencia de audio em desktop", notCompeting: ["/problemas/tv-sem-som", "/servicos/manutencao-de-computador", "/servicos/conserto-placa", "/servicos/formatacao"] },
+  { path: "/problemas/tv-travando", keyword: "tv travando", role: "sintoma de lentidao/travamento em smart tv", notCompeting: ["/problemas/tv-desligando-sozinha", "/servicos/conserto-tv", "/servicos/redes-e-wifi", "/problemas/tv-com-linhas-na-tela"] },
+  { path: "/problemas/mouse-nao-funciona", keyword: "mouse nao funciona", role: "sintoma de periferico apontador em desktop", notCompeting: ["/problemas/touchpad-nao-funciona", "/servicos/manutencao-de-computador", "/servicos/conserto-placa", "/atendimento-remoto"] },
   { path: "/problemas/teclado-de-notebook-nao-funciona", keyword: "teclado de notebook nao funciona", role: "sintoma de teclado em notebook", notCompeting: ["/servicos/manutencao-de-notebook", "/problemas/notebook-molhado", "/servicos/conserto-placa"] },
 ];
 
