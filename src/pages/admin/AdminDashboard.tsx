@@ -243,10 +243,11 @@ const AdminDashboard = () => {
   const maxDay = Math.max(1, ...byDay.map(d => d.wa + d.call));
 
   const exportCsv = () => {
-    const cols = ["created_at", "event_type", "route_type", "servico", "bairro", "cidade", "cta_location", "modalidade", "equipamento", "problema", "path", "utm_source", "utm_medium", "utm_campaign"];
+    const cols: (keyof ClickEvent)[] = ["created_at", "event_type", "route_type", "servico", "bairro", "cidade", "cta_location", "modalidade", "equipamento", "problema", "path", "utm_source", "utm_medium", "utm_campaign"];
     const csv = [
       cols.join(","),
-      ...rows.map(r => cols.map(c => `"${String((r as any)[c] ?? "").replace(/"/g, '""')}"`).join(",")),
+      ...rows.map(r => cols.map(c => `"${String(r[c] ?? "").replace(/"/g, '""')}"`).join(",")),
+
     ].join("\n");
     const blob = new Blob([`\uFEFF${csv}`], { type: "text/csv;charset=utf-8" });
     const url = URL.createObjectURL(blob);
