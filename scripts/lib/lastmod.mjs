@@ -43,6 +43,8 @@ export const LASTMOD = {
   "/problemas/tela-do-computador-piscando": "2026-08-12",
   "/problemas/notebook-nao-conecta-no-wifi": "2026-08-12",
   "/problemas/windows-nao-inicia": "2026-08-12",
+  "/problemas/webcam-nao-funciona": "2026-08-13",
+  "/problemas/tv-nao-conecta-no-wifi": "2026-08-13",
   "/problemas/tv-com-imagem-escura": "2026-08-12",
   "/problemas/tv-travando": "2026-08-12",
   "/problemas/mouse-nao-funciona": "2026-08-12",

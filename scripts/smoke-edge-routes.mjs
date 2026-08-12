@@ -80,6 +80,8 @@ const PRIORITY = [
   "/problemas/tela-do-computador-piscando",
   "/problemas/notebook-nao-conecta-no-wifi",
   "/problemas/windows-nao-inicia",
+  "/problemas/webcam-nao-funciona",
+  "/problemas/tv-nao-conecta-no-wifi",
   "/problemas/tv-com-imagem-escura",
   "/problemas/tv-travando",
   "/problemas/mouse-nao-funciona",

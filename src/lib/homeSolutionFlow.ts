@@ -305,6 +305,20 @@ export const SOLUTION_FLOW: SolutionProblem[] = [
         mensagem: "A tela do meu computador está piscando. Quero avaliação técnica.",
       },
       {
+        equipamento: "Webcam sem imagem em reuniões",
+        solucao: { label: "Webcam não funciona", path: "/problemas/webcam-nao-funciona" },
+        modalidade: "remoto",
+        porque: "Permissão do sistema e driver respondem pela maior parte dos casos e se resolvem por acesso remoto.",
+        mensagem: "Minha webcam não está funcionando. Quero avaliação técnica.",
+      },
+      {
+        equipamento: "Smart TV sem conectar no Wi-Fi",
+        solucao: { label: "TV não conecta no Wi-Fi", path: "/problemas/tv-nao-conecta-no-wifi" },
+        modalidade: "remoto",
+        porque: "Cobertura, faixa de frequência e perfil de rede são checados antes de suspeitar do módulo da TV.",
+        mensagem: "Minha smart TV não conecta no Wi-Fi. Quero avaliação técnica.",
+      },
+      {
         equipamento: "Windows não carrega ao ligar",
         solucao: { label: "Windows não inicia", path: "/problemas/windows-nao-inicia" },
         modalidade: "coleta",

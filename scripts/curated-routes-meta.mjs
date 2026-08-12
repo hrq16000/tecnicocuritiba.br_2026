@@ -1688,6 +1688,81 @@ const BASE_ROUTES = [
   ]
 },
 {
+  "path": "/problemas/webcam-nao-funciona",
+  "title": "Webcam Não Funciona: Causas e Solução | Curitiba",
+  "description": "Webcam do notebook sem imagem, tela preta na reunião ou câmera não encontrada pelo sistema? Veja como separar permissão do sistema, driver, cabo flat e falha do módulo antes de comprar câmera externa, com avaliação técnica em Curitiba.",
+  "h1": "Webcam não funciona: permissão, driver, cabo flat ou módulo",
+  "subtitulo": "Tela preta na reunião raramente é câmera queimada.",
+  "blocos": [
+    {
+      "titulo": "A ordem certa de investigar uma câmera sem imagem",
+      "paragrafos": [
+        "O primeiro divisor é gratuito: abrir o aplicativo de câmera nativo do sistema. Se a imagem aparece ali, o módulo está saudável e a falha está na permissão ou no programa usado nas reuniões.",
+        "O segundo divisor é a estabilidade. Câmera que some e volta ao mexer na tampa aponta para cabo flat prensado na dobradiça; câmera que desapareceu da lista de dispositivos aponta para driver ou módulo em falha."
+      ]
+    },
+    {
+      "titulo": "Sintomas e o que cada um costuma indicar",
+      "paragrafos": [
+        "Imagem preta em todos os programas tira a suspeita do aplicativo e leva para permissão do sistema, driver ou hardware. Funcionar em um programa e falhar em outro é permissão por aplicativo ou outro software segurando a câmera aberta.",
+        "Imagem esverdeada, tremida ou muito escura indica sensor ou conector com contato parcial, e isso é avaliação de bancada, não configuração."
+      ]
+    },
+    {
+      "titulo": "Verificações seguras antes de comprar câmera externa",
+      "paragrafos": [
+        "Confira obturador físico sobre a lente, teste o aplicativo de câmera nativo, revise as permissões do sistema, feche programas de vídeo concorrentes e reinicie uma vez. Em câmera externa, troque de porta USB e teste em outro computador.",
+        "O que não recomendamos: instalar programas que prometem recuperar drivers automaticamente, forçar a moldura da tela para chegar ao módulo e desativar o antivírus inteiro para testar a câmera."
+      ]
+    },
+    {
+      "titulo": "O que resolve cada cenário e quais são as condições",
+      "paragrafos": [
+        "Permissão, driver e bloqueio de antivírus são corrigidos por atendimento remoto, sem retirar o equipamento. Cabo flat rompido e módulo em falha exigem abertura da moldura em bancada, com teste de imagem antes da devolução.",
+        "Atendimento sem balcão, com retirada e devolução no endereço informado em Curitiba e região. Garantia de 90 dias sobre mão de obra e peça aplicada, limitada ao reparo executado."
+      ]
+    }
+  ]
+},
+{
+  "path": "/problemas/tv-nao-conecta-no-wifi",
+  "title": "TV Não Conecta no Wi-Fi: O Que Fazer | Curitiba",
+  "description": "Smart TV não conecta no Wi-Fi, some da lista de redes ou cai no meio do filme? Veja como separar cobertura do roteador, faixa de 5 GHz, sistema da TV e módulo sem fio em falha antes de trocar o aparelho, com avaliação técnica em Curitiba.",
+  "h1": "TV não conecta no Wi-Fi: cobertura, faixa, sistema ou módulo",
+  "subtitulo": "Três testes gratuitos separam problema de rede de falha do aparelho.",
+  "blocos": [
+    {
+      "titulo": "A ordem certa de investigar uma TV sem conexão",
+      "paragrafos": [
+        "A primeira pergunta é se outros aparelhos conectam bem no mesmo cômodo. Se conectam, o roteador entrega sinal ali e a investigação passa para a televisão; se todos sofrem, o assunto é cobertura da rede.",
+        "A segunda pergunta é se a TV enxerga a rede na lista. Rede visível com erro de senha é perfil salvo desatualizado; lista vazia com redes vizinhas aparecendo aponta para faixa incompatível ou módulo em falha."
+      ]
+    },
+    {
+      "titulo": "Sintomas e o que cada um costuma indicar",
+      "paragrafos": [
+        "Conectar e cair depois de alguns minutos indica sinal no limite, canal congestionado ou economia de energia desligando o rádio. Enxergar apenas a rede de 2,4 GHz não é defeito: muitos modelos não suportam 5 GHz.",
+        "Conectar e não abrir aplicativos costuma ser data, hora ou DNS da televisão, e não falta de internet."
+      ]
+    },
+    {
+      "titulo": "Verificações seguras antes de trocar o aparelho",
+      "paragrafos": [
+        "Compare com outros aparelhos no mesmo cômodo, reinicie o roteador, esqueça e reconecte a rede na TV, teste a faixa de 2,4 GHz, confira data e hora e use o cabo de rede quando houver entrada. Funcionando por cabo, o defeito está no módulo sem fio.",
+        "O que não recomendamos: restaurar a televisão de fábrica como primeira tentativa, instalar atualização baixada de site não oficial e trocar o roteador antes de medir a cobertura no cômodo."
+      ]
+    },
+    {
+      "titulo": "O que resolve cada cenário e quais são as condições",
+      "paragrafos": [
+        "Cobertura fraca é trabalho de rede: posicionamento, canal e reforço de sinal, sem mexer no aparelho. Data, hora, DNS e perfil de rede inconsistente são ajustes de configuração. Módulo sem fio em falha é serviço de bancada com avaliação da placa principal.",
+        "Quando um dispositivo externo de streaming custa menos que o reparo da placa, informamos isso antes da coleta.",
+        "Atendimento sem balcão, com retirada e devolução no endereço informado em Curitiba e região. Garantia de 90 dias sobre mão de obra e peça aplicada, limitada ao reparo executado."
+      ]
+    }
+  ]
+},
+{
   "path": "/problemas/windows-nao-inicia",
   "title": "Windows Não Inicia: Como Recuperar o Sistema | Curitiba",
   "description": "Windows travado no logo, reparo automático em loop ou mensagem de disco de inicialização não encontrado? Veja como separar falha de sistema, disco com setor ruim e configuração de BIOS antes de formatar, com avaliação técnica em Curitiba.",
