@@ -498,8 +498,9 @@ const ProblemaPage = () => {
               Não pode trazer o equipamento? A gente busca!
             </h3>
             <p className="text-muted-foreground text-sm max-w-xl mx-auto">
-              Serviço de coleta e entrega em Curitiba e região metropolitana. Preencha o formulário online, 
-              concorde com os termos e agende a retirada do seu equipamento.
+              Trabalhamos apenas com coleta e entrega em Curitiba e região metropolitana — não temos balcão
+              de atendimento ao público. Preencha o formulário online, concorde com os termos e agende a
+              retirada do seu equipamento no endereço que você indicar.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center pt-2">
               <Link to="/coleta-formulario">
