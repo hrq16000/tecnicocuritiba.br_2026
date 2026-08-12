@@ -228,6 +228,20 @@ export const SOLUTION_FLOW: SolutionProblem[] = [
         mensagem: "A rede da minha empresa está instável. Quero suporte técnico empresarial.",
       },
       {
+        equipamento: "Computador congelando",
+        solucao: { label: "Computador travando", path: "/problemas/computador-travando" },
+        modalidade: "coleta",
+        porque: "Memória, temperatura e disco em falha exigem teste cruzado em bancada.",
+        mensagem: "Meu computador está travando e congelando. Quero avaliação técnica.",
+      },
+      {
+        equipamento: "Touchpad do notebook sem resposta",
+        solucao: { label: "Touchpad não funciona", path: "/problemas/touchpad-nao-funciona" },
+        modalidade: "remoto",
+        porque: "Atalho desativado e driver respondem pela maior parte dos casos e se resolvem por acesso remoto.",
+        mensagem: "O touchpad do meu notebook parou de funcionar. Quero avaliação.",
+      },
+      {
         equipamento: "Notebook lento ou travando",
         solucao: { label: "Notebook lento", path: "/problemas/notebook-lento" },
         modalidade: "coleta",

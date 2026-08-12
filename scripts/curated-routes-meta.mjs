@@ -1498,6 +1498,82 @@ const BASE_ROUTES = [
   ]
 },
 {
+  "path": "/problemas/computador-travando",
+  "title": "Computador Travando: Causas e Conserto | Curitiba",
+  "description": "Computador travando do nada, congelando a tela ou parando só em jogos e programas pesados? Veja como separar memória com defeito, superaquecimento, disco em falha e driver antes de trocar peça, com avaliação técnica em Curitiba.",
+  "h1": "Computador travando: memória, temperatura, disco em falha ou software",
+  "subtitulo": "O momento em que o travamento acontece diz mais do que qualquer teste isolado e separa peça defeituosa de problema de sistema.",
+  "blocos": [
+    {
+      "titulo": "O momento do travamento é o melhor indício",
+      "paragrafos": [
+        "Um computador que congela não dá mensagem, mas dá contexto. Travar em repouso, travar sob carga e travar sempre no mesmo programa são três problemas diferentes com causas diferentes, e registrar em que situação acontece reduz o campo de investigação antes de qualquer teste técnico.",
+        "Travamento total, sem mouse e sem teclado, coloca memória, temperatura e fonte na frente da fila. Travamento curto e repetido aponta para disco com setores em falha. Travamento com hora marcada, em um programa específico, costuma ser software puro."
+      ]
+    },
+    {
+      "titulo": "Sintomas e o que cada um costuma indicar",
+      "paragrafos": [
+        "Tela congelada que só volta reiniciando no botão sugere memória com defeito, superaquecimento do processador ou fonte instável sob carga. Pausas curtas e repetidas são a assinatura de disco em falha esperando releitura de setores.",
+        "Travar apenas em jogos e programas pesados aponta para temperatura, fonte subdimensionada ou driver de vídeo. Congelar sempre no mesmo programa indica instalação corrompida ou conflito de software, não peça queimada."
+      ]
+    },
+    {
+      "titulo": "Verificações antes de comprar qualquer peça",
+      "paragrafos": [
+        "Anote em que situação trava, observe no gerenciador de tarefas se algum recurso vai a 100% antes do congelamento, confira o espaço livre do disco, rode o diagnóstico de memória do próprio Windows e verifique a temperatura sob carga.",
+        "O que não recomendamos: trocar memória por tentativa, instalar otimizadores e continuar usando um disco que faz estalos antes de salvar os arquivos."
+      ]
+    },
+    {
+      "titulo": "O que resolve cada cenário e quais são as condições",
+      "paragrafos": [
+        "Travamento total pede diagnóstico em bancada com teste cruzado de memória e verificação de tensões da fonte. Travamento ligado ao calor resolve com limpeza interna, troca de pasta térmica e teste de temperatura sob carga depois do serviço.",
+        "Disco com setores em falha não se conserta: o caminho é preservar os dados enquanto há leitura e migrar o sistema para uma unidade saudável. Quando a origem é software, a reinstalação limpa é feita com backup antes e restauração depois.",
+        "Atendimento apenas por coleta e entrega no endereço informado, sem balcão. Garantia de 90 dias sobre mão de obra e peça aplicada, limitada ao serviço executado."
+      ]
+    }
+  ]
+},
+{
+  "path": "/problemas/touchpad-nao-funciona",
+  "title": "Touchpad Não Funciona no Notebook | Curitiba",
+  "description": "Touchpad do notebook parou de responder, funciona pela metade ou só o clique falhou? Veja como separar atalho desativado, driver, cabo flat solto e falha física antes de orçar, com avaliação técnica em Curitiba.",
+  "h1": "Touchpad não funciona: atalho desativado, driver, cabo flat ou falha física",
+  "subtitulo": "Boa parte dos touchpads que aparentam estar queimados está apenas desativada por atalho de teclado ou driver trocado em atualização.",
+  "blocos": [
+    {
+      "titulo": "O touchpad falha em três camadas",
+      "paragrafos": [
+        "Configuração, driver e hardware. A camada de configuração é a mais comum e a mais barata: um atalho de teclado pressionado sem querer desativa a peça inteira. A camada de driver aparece depois de atualizações do sistema, e só a terceira camada envolve abrir o aparelho.",
+        "Testar um mouse USB divide o problema ao meio em segundos: se o mouse funciona normalmente, o sistema está saudável e a investigação fica restrita ao touchpad."
+      ]
+    },
+    {
+      "titulo": "Sintomas e o que cada um costuma indicar",
+      "paragrafos": [
+        "Ausência total de resposta costuma ser atalho de função ou driver removido. Cursor que move com clique morto indica microswitch desgastado ou toque para clicar desativado nas configurações.",
+        "Área morta em parte da superfície aponta para trilha rompida na placa do touchpad, e cursor que pula ou clica sozinho sugere resíduo, umidade ou cabo flat mal encaixado."
+      ]
+    },
+    {
+      "titulo": "Testes gratuitos antes de qualquer orçamento",
+      "paragrafos": [
+        "Pressione a tecla de função com o ícone de touchpad, desconecte o mouse externo e reinicie, confirme nas configurações se o dispositivo está habilitado e reinstale o driver oficial do fabricante do notebook em vez do driver genérico.",
+        "O que não recomendamos: abrir o notebook com espátula improvisada, aplicar produto de limpeza direto sobre a superfície e insistir no uso depois de contato com líquido, porque a corrosão avança com o aparelho energizado."
+      ]
+    },
+    {
+      "titulo": "O que resolve cada cenário e quais são as condições",
+      "paragrafos": [
+        "Atalho, configuração e driver cobrem a maior parte dos chamados e podem ser resolvidos por acesso remoto, sem retirar o notebook do endereço. Touchpad que sumiu após queda costuma ser cabo flat solto, corrigido em bancada sem troca de peça.",
+        "Área morta e clique arrebentado exigem substituição do módulo, condicionada à disponibilidade da peça para o modelo. Sem peça compatível, informamos e devolvemos o aparelho em vez de adaptar componente de outro modelo.",
+        "Atendimento remoto ou por coleta e entrega no endereço informado, sem balcão. Garantia de 90 dias sobre mão de obra e peça aplicada, limitada ao serviço executado."
+      ]
+    }
+  ]
+},
+{
   "path": "/problemas/tv-desligando-sozinha",
   "title": "TV Desligando Sozinha: Causas e Conserto | Curitiba",
   "description": "Televisor que desliga sozinho, reinicia ou entra em ciclo de LED piscando? Entenda como separar capacitor de fonte, proteção térmica, ajuste de economia e placa principal, com avaliação por coleta em Curitiba.",
