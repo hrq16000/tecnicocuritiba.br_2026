@@ -228,6 +228,13 @@ export const SOLUTION_FLOW: SolutionProblem[] = [
         mensagem: "A rede da minha empresa está instável. Quero suporte técnico empresarial.",
       },
       {
+        equipamento: "Notebook desligando sozinho",
+        solucao: { label: "Notebook desligando sozinho", path: "/problemas/notebook-desligando-sozinho" },
+        modalidade: "coleta",
+        porque: "Temperatura, bateria e circuito de energia precisam ser medidos em bancada.",
+        mensagem: "Meu notebook está desligando sozinho. Quero avaliação técnica.",
+      },
+      {
         equipamento: "Computador congelando",
         solucao: { label: "Computador travando", path: "/problemas/computador-travando" },
         modalidade: "coleta",

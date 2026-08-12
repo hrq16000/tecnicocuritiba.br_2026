@@ -36,6 +36,8 @@ const SOURCES = {
   "/problemas/monitor-sem-sinal": "src/pages/problemas/MonitorSemSinal.tsx",
   "/problemas/notebook-lento": "src/pages/problemas/NotebookLento.tsx",
   "/problemas/computador-travando": "src/pages/problemas/ComputadorTravando.tsx",
+  "/problemas/notebook-desligando-sozinho": "src/pages/problemas/NotebookDesligandoSozinho.tsx",
+  "/problemas/pen-drive-nao-reconhecido": "src/pages/problemas/PenDriveNaoReconhecido.tsx",
   "/problemas/touchpad-nao-funciona": "src/pages/problemas/TouchpadNaoFunciona.tsx",
   "/problemas/notebook-superaquecendo": "src/pages/problemas/NotebookSuperaquecendo.tsx",
   "/precos-e-politicas": "src/components/TermosConteudo.tsx",
