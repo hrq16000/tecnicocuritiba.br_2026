@@ -261,7 +261,7 @@ export function buildWifiBairroData(bairroSlug: string): ServicoBairroData {
   const isIndex = b.indexable !== false;
   const narrativa = b.narrativaLocal ? ` ${b.narrativaLocal}` : "";
   return {
-    metaTitle: `Configuração de Wi-Fi no ${b.nome}, Curitiba a partir de R$ 99,99 | Técnico em Curitiba`,
+    metaTitle: `Wi-Fi e Mesh no ${b.nome}, Curitiba | Técnico em Curitiba`,
     metaDescription: `Instalação e configuração de Wi-Fi, mesh e roteadores no ${b.nome}, Curitiba. Atendimento presencial, valor do atendimento pelo WhatsApp e valor mínimo de R$ 99,99.`,
     servico: "Configuração de Wi-Fi",
     servicoSlug: "redes-wifi",
@@ -313,7 +313,7 @@ export function buildTvBairroData(bairroSlug: string): ServicoBairroData {
   const isIndex = b.indexable !== false;
   const narrativa = b.narrativaLocal ? ` ${b.narrativaLocal}` : "";
   return {
-    metaTitle: `Conserto de Smart TV no ${b.nome}, Curitiba com coleta e entrega | Técnico em Curitiba`,
+    metaTitle: `Conserto de Smart TV no ${b.nome} | Técnico em Curitiba`,
     metaDescription: `Reparo e troca de tela de Smart TV LED/LCD no ${b.nome}, Curitiba. Diagnóstico em bancada, coleta e entrega, valor do atendimento pelo WhatsApp.`,
     servico: "Conserto de Smart TV",
     servicoSlug: "manutencao-tv",
