@@ -474,6 +474,26 @@ const BASE_ROUTES = [
     "description": "Técnico de informática no Portão, Curitiba: conserto de notebook, manutenção de computador, formatação e upgrade de SSD. Atendimento a domicílio a partir de R$ 99,99. Via WhatsApp."
   },
   {
+    "path": "/bairros/bigorrilho",
+    "title": "Técnico de Informática no Bigorrilho (Curitiba) | Notebook e PC",
+    "description": "Técnico de informática no Bigorrilho e Champagnat, Curitiba: conserto de notebook, formatação, upgrade de SSD e Wi-Fi em apartamento. Diagnóstico a partir de R$ 99,99. Via WhatsApp."
+  },
+  {
+    "path": "/bairros/santa-felicidade",
+    "title": "Técnico de Informática em Santa Felicidade | Curitiba",
+    "description": "Técnico de informática em Santa Felicidade, Curitiba: conserto de PC e notebook, formatação, Wi-Fi em casa grande e suporte a comércio. A partir de R$ 99,99. Via WhatsApp."
+  },
+  {
+    "path": "/bairros/cabral",
+    "title": "Técnico de Informática no Cabral (Curitiba) | Notebook e PC",
+    "description": "Técnico de informática no Cabral, Curitiba: conserto de notebook, formatação, upgrade de SSD e suporte a consultórios e escritórios. A partir de R$ 99,99. Via WhatsApp."
+  },
+  {
+    "path": "/bairros/cristo-rei",
+    "title": "Técnico de Informática no Cristo Rei (Curitiba) | Notebook e PC",
+    "description": "Técnico de informática no Cristo Rei, Curitiba: conserto de notebook, formatação, upgrade de SSD e Wi-Fi para estudantes e famílias. A partir de R$ 99,99. Via WhatsApp."
+  },
+  {
     "path": "/atendimento-domicilio",
     "title": "Atendimento de Informática em Domicílio em Curitiba",
     "description": "Atendimento técnico de informática em domicílio em Curitiba: o que resolve no local, o que exige coleta ou bancada, preparação da visita, peças e fatores de valor.",
