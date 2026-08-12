@@ -22,6 +22,7 @@ import {
   setFunnelBranchContext,
   trackWaClick,
   trackAgendamentoDeepLinkClick,
+  trackTriageAutoOpen,
   trackTriagePreset,
   trackTriageFieldFill,
   trackTriageRestore,
@@ -33,6 +34,9 @@ import {
   saveDeepLinkContext,
   readDeepLinkContext,
   clearDeepLinkContext,
+  dismissTriageForSession,
+  wasTriageDismissed,
+  clearTriageDismissal,
 } from "@/lib/triagePreset";
 import { appendUtmsToUrl, captureUtmsFromUrl } from "@/lib/utmCapture";
 import { geoSuggestion } from "@/lib/geoContext";
@@ -479,8 +483,13 @@ export const WhatsAppFunnel = () => {
     (loc: string, opts: { href?: string; restore?: boolean } = {}) => {
       const path = window.location.pathname;
       const preset = resolveTriagePreset(path);
-      if (opts.restore) trackTriageRestore({ presetSource: preset?.source, origem: loc });
-      else trackAgendamentoDeepLinkClick({ href: opts.href, origem: loc, preset: preset?.source });
+      if (opts.restore) {
+        trackTriageRestore({ presetSource: preset?.source, origem: loc });
+      } else {
+        // Intenção explícita do usuário: pode reabrir mesmo após dispensa.
+        clearTriageDismissal();
+        trackAgendamentoDeepLinkClick({ href: opts.href, origem: loc, preset: preset?.source });
+      }
 
       openFunnel(loc);
 
@@ -521,6 +530,7 @@ export const WhatsAppFunnel = () => {
     const HASHES = new Set(["#agendamento", "#agendar", "#triagem"]);
     const openFromHash = () => {
       if (!HASHES.has(window.location.hash.toLowerCase())) return;
+      trackTriageAutoOpen("hash", { href: window.location.hash });
       openScheduling("deep_link_agendamento", { href: window.location.hash });
       // Limpa o hash para não reabrir ao voltar/atualizar.
       window.history.replaceState(null, "", window.location.pathname + window.location.search);
@@ -533,7 +543,14 @@ export const WhatsAppFunnel = () => {
     if (!openedFromHash) {
       const ctx = readDeepLinkContext();
       if (ctx && ctx.path === window.location.pathname) {
-        openScheduling(ctx.location || "deep_link_agendamento", { restore: true });
+        if (wasTriageDismissed()) {
+          // Usuário já dispensou nesta sessão: não reabrir, mesmo com TTL válido.
+          clearDeepLinkContext();
+          trackTriageAutoOpen("blocked_dismissed", { path: ctx.path });
+        } else {
+          trackTriageAutoOpen("ttl_restore", { path: ctx.path });
+          openScheduling(ctx.location || "deep_link_agendamento", { restore: true });
+        }
       }
     }
 
@@ -544,6 +561,7 @@ export const WhatsAppFunnel = () => {
       const hash = href.startsWith("#") ? href.toLowerCase() : "";
       if (!HASHES.has(hash)) return;
       e.preventDefault();
+      trackTriageAutoOpen("anchor_click", { href: href.slice(0, 120) });
       openScheduling("deep_link_agendamento", { href });
     };
     window.addEventListener("hashchange", openFromHash);
@@ -627,8 +645,10 @@ export const WhatsAppFunnel = () => {
       }
       trackFunnelClose(step, answers.equipment);
       clearTimers();
-      // Usuário dispensou a triagem: não reabrir automaticamente em reloads.
+      // Usuário dispensou a triagem: não reabrir automaticamente em reloads
+      // nem ao navegar internamente para outra rota nesta mesma sessão.
       clearDeepLinkContext();
+      dismissTriageForSession();
       isTransitioning.current = false;
       openerRef.current?.focus?.();
     }
