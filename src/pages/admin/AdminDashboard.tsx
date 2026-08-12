@@ -8,8 +8,10 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { supabase } from "@/integrations/supabase/client";
 import { useAdminAuth } from "@/hooks/useAdminAuth";
 import { filtrarComerciais } from "@/lib/qaExclusion";
-import { Loader2, RefreshCw, Download, LogOut } from "lucide-react";
+import { aggregateByHour, dedupeClickEvents, detectDropAlerts } from "@/lib/clickInsights";
+import { Loader2, RefreshCw, Download, LogOut, AlertTriangle } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
+
 
 type ClickEvent = {
   id: string;
@@ -48,6 +50,11 @@ const AdminDashboard = () => {
   const [dateTo, setDateTo] = useState("");
   const [bairro, setBairro] = useState(ALL);
   const [servico, setServico] = useState(ALL);
+  const [routeFilter, setRouteFilter] = useState(ALL);
+  const [campaignFilter, setCampaignFilter] = useState(ALL);
+  const [pathQuery, setPathQuery] = useState("");
+  const [dedupOn, setDedupOn] = useState(true);
+
 
   const fetchData = async () => {
     if (!isAdmin) return;
@@ -84,23 +91,42 @@ const AdminDashboard = () => {
     () => [...new Set(allRows.map((r) => r.servico).filter(Boolean) as string[])].sort(),
     [allRows],
   );
-
-  /** Linhas filtradas por bairro/serviço (todos os tipos de evento). */
-  const filteredAll = useMemo(
-    () =>
-      allRows.filter(
-        (r) =>
-          (bairro === ALL || (r.bairro || "—") === bairro) &&
-          (servico === ALL || (r.servico || "—") === servico),
-      ),
-    [allRows, bairro, servico],
+  const routeOptions = useMemo(
+    () => [...new Set(allRows.map((r) => r.route_type).filter(Boolean) as string[])].sort(),
+    [allRows],
+  );
+  const campaignOptions = useMemo(
+    () => [...new Set(allRows.map((r) => r.utm_campaign).filter(Boolean) as string[])].sort(),
+    [allRows],
   );
 
-  /** Somente cliques de conversão (wa/ligação) — base das tabelas e do CSV. */
+  /** Linhas filtradas (todos os tipos de evento) — bairro, serviço, rota, campanha e path. */
+  const filteredAll = useMemo(() => {
+    const q = pathQuery.trim().toLowerCase();
+    return allRows.filter(
+      (r) =>
+        (bairro === ALL || (r.bairro || "—") === bairro) &&
+        (servico === ALL || (r.servico || "—") === servico) &&
+        (routeFilter === ALL || (r.route_type || "—") === routeFilter) &&
+        (campaignFilter === ALL || (r.utm_campaign || "—") === campaignFilter) &&
+        (!q || (r.path || "").toLowerCase().includes(q)),
+    );
+  }, [allRows, bairro, servico, routeFilter, campaignFilter, pathQuery]);
+
+  /** Deduplicação analítica: cliques idênticos da mesma sessão em até 30s contam uma vez. */
+  const dedup = useMemo(() => dedupeClickEvents(filteredAll), [filteredAll]);
+  const workingRows = dedupOn ? dedup.unique : filteredAll;
+
+  /** Somente cliques de conversão (wa/ligação) — base das tabelas e das exportações. */
   const rows = useMemo(
-    () => filteredAll.filter((r) => r.event_type === "wa_click" || r.event_type === "call_click"),
-    [filteredAll],
+    () => workingRows.filter((r) => r.event_type === "wa_click" || r.event_type === "call_click"),
+    [workingRows],
   );
+
+  const byHour = useMemo(() => aggregateByHour(rows), [rows]);
+  const maxHour = Math.max(1, ...byHour.map((h) => h.total));
+  const dropAlerts = useMemo(() => detectDropAlerts(rows), [rows]);
+
 
   /**
    * Funil: aberturas (`funnel_open`) × conversões (`wa_click`) por sessão,
@@ -217,10 +243,11 @@ const AdminDashboard = () => {
   const maxDay = Math.max(1, ...byDay.map(d => d.wa + d.call));
 
   const exportCsv = () => {
-    const cols = ["created_at", "event_type", "route_type", "servico", "bairro", "cidade", "cta_location", "modalidade", "equipamento", "problema", "path", "utm_source", "utm_medium", "utm_campaign"];
+    const cols: (keyof ClickEvent)[] = ["created_at", "event_type", "route_type", "servico", "bairro", "cidade", "cta_location", "modalidade", "equipamento", "problema", "path", "utm_source", "utm_medium", "utm_campaign"];
     const csv = [
       cols.join(","),
-      ...rows.map(r => cols.map(c => `"${String((r as any)[c] ?? "").replace(/"/g, '""')}"`).join(",")),
+      ...rows.map(r => cols.map(c => `"${String(r[c] ?? "").replace(/"/g, '""')}"`).join(",")),
+
     ].join("\n");
     const blob = new Blob([`\uFEFF${csv}`], { type: "text/csv;charset=utf-8" });
     const url = URL.createObjectURL(blob);
@@ -230,6 +257,29 @@ const AdminDashboard = () => {
     a.click();
     URL.revokeObjectURL(url);
   };
+
+  /** Exporta o mesmo recorte em JSON, com metadados do filtro e da deduplicação. */
+  const exportJson = () => {
+    const payload = {
+      generated_at: new Date().toISOString(),
+      filters: { range, dateFrom, dateTo, bairro, servico, routeFilter, campaignFilter, pathQuery, dedup: dedupOn },
+      totals,
+      dedup: { duplicates: dedup.duplicates.length, duplicate_rate_pct: Number(dedup.duplicateRate.toFixed(2)) },
+      by_hour: byHour,
+      by_day: byDay,
+      alerts: dropAlerts,
+      events: rows,
+    };
+    const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `click-events-${new Date().toISOString().slice(0, 10)}.json`;
+    a.click();
+    URL.revokeObjectURL(url);
+  };
+
+
 
   const signOut = async () => { await supabase.auth.signOut(); };
 
@@ -281,6 +331,10 @@ const AdminDashboard = () => {
             <Button variant="outline" size="sm" onClick={exportCsv} className="gap-1">
               <Download className="h-4 w-4" /> CSV
             </Button>
+            <Button variant="outline" size="sm" onClick={exportJson} className="gap-1">
+              <Download className="h-4 w-4" /> JSON
+            </Button>
+
             <Link to="/admin/funnel"><Button variant="outline" size="sm">Leads</Button></Link>
             <Button variant="outline" size="sm" onClick={signOut} className="gap-1">
               <LogOut className="h-4 w-4" /> Sair
@@ -336,19 +390,92 @@ const AdminDashboard = () => {
               </SelectContent>
             </Select>
           </div>
-          {(bairro !== ALL || servico !== ALL) && (
+          <div className="flex flex-col gap-1">
+            <span className="text-xs text-muted-foreground">Tipo de rota</span>
+            <Select value={routeFilter} onValueChange={setRouteFilter}>
+              <SelectTrigger className="w-44"><SelectValue placeholder="Todas" /></SelectTrigger>
+              <SelectContent>
+                <SelectItem value={ALL}>Todas as rotas</SelectItem>
+                {routeOptions.map((r) => (
+                  <SelectItem key={r} value={r}>{r}</SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          </div>
+          <div className="flex flex-col gap-1">
+            <span className="text-xs text-muted-foreground">Campanha</span>
+            <Select value={campaignFilter} onValueChange={setCampaignFilter}>
+              <SelectTrigger className="w-48"><SelectValue placeholder="Todas" /></SelectTrigger>
+              <SelectContent>
+                <SelectItem value={ALL}>Todas as campanhas</SelectItem>
+                {campaignOptions.map((c) => (
+                  <SelectItem key={c} value={c}>{c}</SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          </div>
+          <label className="text-xs text-muted-foreground flex flex-col gap-1">
+            Página (path contém)
+            <input
+              type="search"
+              value={pathQuery}
+              onChange={(e) => setPathQuery(e.target.value)}
+              placeholder="/servicos/"
+              className="h-9 w-52 rounded-md border border-input bg-background px-2 text-sm"
+            />
+          </label>
+          <label className="flex items-center gap-2 text-xs text-muted-foreground h-9">
+            <input
+              type="checkbox"
+              checked={dedupOn}
+              onChange={(e) => setDedupOn(e.target.checked)}
+              className="h-4 w-4 rounded border-input"
+            />
+            Deduplicar cliques (30s)
+          </label>
+          {(bairro !== ALL || servico !== ALL || routeFilter !== ALL || campaignFilter !== ALL || pathQuery) && (
             <Button
               variant="ghost"
               size="sm"
-              onClick={() => { setBairro(ALL); setServico(ALL); }}
+              onClick={() => {
+                setBairro(ALL);
+                setServico(ALL);
+                setRouteFilter(ALL);
+                setCampaignFilter(ALL);
+                setPathQuery("");
+              }}
             >
               Limpar filtros
             </Button>
           )}
           <p className="text-xs text-muted-foreground ml-auto">
-            {rows.length} de {allRows.length} eventos
+            {rows.length} de {allRows.length} eventos · {dedup.duplicates.length} duplicatas
+            {" "}({dedup.duplicateRate.toFixed(1)}%)
           </p>
         </div>
+
+        {/* Alertas de queda */}
+        {dropAlerts.length > 0 && (
+          <div className="rounded-lg border border-destructive/40 bg-destructive/5 p-4 mb-6">
+            <h2 className="font-semibold flex items-center gap-2 text-destructive">
+              <AlertTriangle className="h-4 w-4" aria-hidden="true" /> Quedas bruscas detectadas
+            </h2>
+            <p className="text-xs text-muted-foreground mb-3">
+              Último dia comparado à média diária anterior no mesmo recorte (queda ≥ 50%).
+            </p>
+            <ul className="space-y-1 text-sm">
+              {dropAlerts.slice(0, 8).map((a) => (
+                <li key={`${a.scope}-${a.label}`} className="flex flex-wrap gap-2">
+                  <span className="font-medium">{a.scope === "servico" ? "Serviço" : "Horário"}: {a.label}</span>
+                  <span className="text-muted-foreground">
+                    média {a.baseline.toFixed(1)}/dia → {a.current} hoje ({a.dropPct.toFixed(0)}% de queda)
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
 
 
         {/* KPIs */}
@@ -428,6 +555,28 @@ const AdminDashboard = () => {
             })}
           </div>
         </div>
+
+        {/* Distribuição por hora */}
+        <div className="rounded-lg border border-border p-4 mb-6">
+          <h2 className="font-semibold mb-1">Conversões por hora do dia</h2>
+          <p className="text-xs text-muted-foreground mb-3">
+            Horário local do visitante agregado no período e filtros selecionados.
+          </p>
+          <div className="flex items-end gap-1 h-32">
+            {byHour.map((h) => (
+              <div key={h.hour} className="flex-1 flex flex-col justify-end items-center gap-1">
+                <div
+                  className="w-full rounded-t bg-accent"
+                  style={{ height: `${(h.total / maxHour) * 100}%` }}
+                  title={`${String(h.hour).padStart(2, "0")}h — WhatsApp: ${h.wa} · Ligar: ${h.call}`}
+                />
+                <span className="text-[9px] text-muted-foreground tabular-nums">{h.hour}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+
 
         {/* Conversões por tipo de rota */}
         <div className="rounded-lg border border-border overflow-hidden mb-6">
