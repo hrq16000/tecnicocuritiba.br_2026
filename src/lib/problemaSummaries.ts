@@ -1388,7 +1388,7 @@ export const problemaSummaries: ProblemaSummary[] = [
     "slug": "tv-sem-hdmi-curitiba",
     "h1": "TV Não Reconhece HDMI — Conserto em Curitiba",
     "categoria": "Problemas de TV",
-    "introSnippet": "Porta HDMI é a principal conexão de vídeo. Problema pode ser cabo, porta queimada ou chip HDMI danificado por descarga estática.  valor do atendimento presencial.",
+    "introSnippet": "Porta HDMI é a principal conexão de vídeo. Problema pode ser cabo, porta queimada ou chip HDMI danificado por descarga estática.  valor do atendimento após avaliação em bancada.",
     "gravidade": "Simples"
   },
   {
@@ -1416,7 +1416,7 @@ export const problemaSummaries: ProblemaSummary[] = [
     "slug": "tv-controle-nao-funciona-curitiba",
     "h1": "Controle Remoto Não Funciona — Soluções em Curitiba",
     "categoria": "Problemas de TV",
-    "introSnippet": "Na maioria é problema do controle (pilhas). Quando o controle está OK, pode ser sensor IR ou placa.  valor do atendimento presencial.",
+    "introSnippet": "Na maioria é problema do controle (pilhas). Quando o controle está OK, pode ser sensor IR ou placa.  valor do atendimento após avaliação em bancada.",
     "gravidade": "Simples"
   },
   {
@@ -1437,7 +1437,7 @@ export const problemaSummaries: ProblemaSummary[] = [
     "slug": "tv-pixel-morto-curitiba",
     "h1": "TV com Pixel Morto ou Preso — Diagnóstico em Curitiba",
     "categoria": "Problemas de TV",
-    "introSnippet": "Pixel morto = ponto preto permanente. Pixel preso = cor fixa. Presos às vezes recuperáveis. Mortos são permanentes.  Avaliação presencial.",
+    "introSnippet": "Pixel morto = ponto preto permanente. Pixel preso = cor fixa. Presos às vezes recuperáveis. Mortos são permanentes.  avaliação em bancada.",
     "gravidade": "Simples"
   },
   {
