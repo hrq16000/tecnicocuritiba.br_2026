@@ -101,6 +101,8 @@ não estão inclusas e o valor final só é confirmado após diagnóstico e apro
 - [Notebook com Tela Preta mas Ligado: O Que Fazer | Curitiba](https://tecnico.curitiba.br/problemas/notebook-com-tela-preta)
 - [TV Sem Som: Causas, Testes e Conserto | Curitiba](https://tecnico.curitiba.br/problemas/tv-sem-som)
 - [Impressora Não Imprime: Causas e Solução | Curitiba](https://tecnico.curitiba.br/problemas/impressora-nao-imprime)
+- [Monitor Sem Sinal: Causas e Solução | Curitiba](https://tecnico.curitiba.br/problemas/monitor-sem-sinal)
+- [Notebook Lento: Causas Reais e Solução | Curitiba](https://tecnico.curitiba.br/problemas/notebook-lento)
 - [TV Desligando Sozinha: Causas e Conserto | Curitiba](https://tecnico.curitiba.br/problemas/tv-desligando-sozinha)
 - [Computador Fazendo Barulho: Como Identificar a Origem | Curitiba](https://tecnico.curitiba.br/problemas/computador-fazendo-barulho)
 - [TV com Linhas na Tela: Tem Conserto? | Curitiba](https://tecnico.curitiba.br/problemas/tv-com-linhas-na-tela)
