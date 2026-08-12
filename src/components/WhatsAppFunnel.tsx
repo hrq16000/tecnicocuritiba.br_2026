@@ -627,6 +627,8 @@ export const WhatsAppFunnel = () => {
       }
       trackFunnelClose(step, answers.equipment);
       clearTimers();
+      // Usuário dispensou a triagem: não reabrir automaticamente em reloads.
+      clearDeepLinkContext();
       isTransitioning.current = false;
       openerRef.current?.focus?.();
     }
