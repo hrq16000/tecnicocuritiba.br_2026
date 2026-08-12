@@ -96,3 +96,28 @@ export function readDeepLinkContext(): DeepLinkContext | null {
 export function clearDeepLinkContext() {
   try { sessionStorage.removeItem(CTX_KEY); } catch { /* noop */ }
 }
+
+/* ------------------------------------------------------------------ */
+/* Dispensa explícita — vale só para a sessão atual (sessionStorage)   */
+/* ------------------------------------------------------------------ */
+
+const DISMISS_KEY = "wa-funnel:dismissed";
+
+/**
+ * Marca que o usuário fechou a triagem manualmente. Enquanto a flag existir,
+ * nenhuma abertura AUTOMÁTICA (restauração por TTL) acontece — mesmo que o
+ * contexto do deep link ainda estivesse válido. Ações explícitas (clique em
+ * CTA ou link com #agendamento) continuam abrindo normalmente.
+ */
+export function dismissTriageForSession() {
+  try { sessionStorage.setItem(DISMISS_KEY, String(Date.now())); } catch { /* noop */ }
+}
+
+export function wasTriageDismissed(): boolean {
+  try { return !!sessionStorage.getItem(DISMISS_KEY); } catch { return false; }
+}
+
+/** Intenção explícita do usuário reabre a triagem: limpa a dispensa. */
+export function clearTriageDismissal() {
+  try { sessionStorage.removeItem(DISMISS_KEY); } catch { /* noop */ }
+}
