@@ -119,20 +119,32 @@ export const SERVICO_BAIRRO = [
 ].map((path) => ({ path, changefreq: "monthly", priority: "0.6" }));
 
 /**
- * Onda 1 de liberação de índice — landings Wi-Fi e Smart TV dos bairros com
+ * Liberação de índice — landings Wi-Fi e Smart TV dos bairros com
  * `narrativaLocal` exclusiva (≥300 palavras) em `wifiTvBairroData.ts`.
  * Rota estática dedicada, canonical self e robots index.
+ * Onda 2: conclui 100% dos bairros herdados reformados.
  */
 export const WIFI_TV_BAIRRO = [
-  "/servicos/redes-wifi/jardim-das-americas",
-  "/servicos/manutencao-tv/jardim-das-americas",
-  "/servicos/redes-wifi/ecoville",
-  "/servicos/manutencao-tv/ecoville",
-  "/servicos/redes-wifi/alto-da-xv",
-  "/servicos/manutencao-tv/alto-da-xv",
-  "/servicos/redes-wifi/reboucas",
-  "/servicos/manutencao-tv/reboucas",
-].map((path) => ({ path, changefreq: "monthly", priority: "0.6" }));
+  "jardim-das-americas",
+  "ecoville",
+  "alto-da-xv",
+  "reboucas",
+  "batel",
+  "centro",
+  "agua-verde",
+  "cic",
+  "portao",
+  "bigorrilho",
+  "cabral",
+  "santa-felicidade",
+  "boa-vista",
+  "cristo-rei",
+  "cajuru",
+  "boqueirao",
+].flatMap((slug) => [
+  `/servicos/redes-wifi/${slug}`,
+  `/servicos/manutencao-tv/${slug}`,
+]).map((path) => ({ path, changefreq: "monthly", priority: "0.6" }));
 
 /**
  * Cluster de problemas (sintomas). Piloto controlado da Rodada 3B: só entram
