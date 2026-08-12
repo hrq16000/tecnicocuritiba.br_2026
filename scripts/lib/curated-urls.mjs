@@ -161,7 +161,7 @@ export const EDITORIAL = [
 /** Sub-sitemaps ativos, na ordem em que aparecem no índice. */
 export const ACTIVE_SITEMAPS = [
   ["sitemap-main.xml", [...MAIN, ...HUBS]],
-  ["sitemap-servicos.xml", [...SERVICOS, ...SERVICO_BAIRRO]],
+  ["sitemap-servicos.xml", [...SERVICOS, ...SERVICO_BAIRRO, ...WIFI_TV_BAIRRO]],
   ["sitemap-regioes.xml", REGIOES],
   ["sitemap-bairros.xml", BAIRROS],
   ["sitemap-problemas.xml", PROBLEMAS],
