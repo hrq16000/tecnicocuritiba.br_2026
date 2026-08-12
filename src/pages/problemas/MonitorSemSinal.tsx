@@ -180,7 +180,7 @@ const MonitorSemSinal = () => {
     <div className="min-h-screen bg-background">
       <PageSEO title={TITLE} description={DESCRIPTION} path={PATH} />
       <Header />
-      <Breadcrumbs items={[{ label: "Problemas" }, { label: "Monitor sem sinal" }]} />
+      <Breadcrumbs items={[{ label: "Problemas", href: "/problemas" }, { label: "Monitor sem sinal" }]} />
 
       <section className="bg-[hsl(var(--hero-bg))] text-white">
         <div className="container mx-auto max-w-4xl px-4 py-8 sm:py-12 md:py-14">
