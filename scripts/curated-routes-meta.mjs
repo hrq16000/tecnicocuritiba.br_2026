@@ -1346,6 +1346,82 @@ const BASE_ROUTES = [
   ]
 },
 {
+  "path": "/problemas/tv-sem-som",
+  "title": "TV Sem Som: Causas, Testes e Conserto | Curitiba",
+  "description": "TV com imagem normal e sem áudio, som chiado ou saída de fone mudo? Veja como separar configuração de saída, falha do amplificador de áudio e alto-falante rompido antes de orçar, com avaliação por coleta em Curitiba.",
+  "h1": "TV sem som: ajuste de saída, amplificador de áudio ou alto-falante rompido",
+  "subtitulo": "Televisor com imagem normal e nenhum áudio tem três origens bem distintas, e elas se separam com testes gratuitos feitos em poucos minutos.",
+  "blocos": [
+    {
+      "titulo": "O som se perde em um de três pontos",
+      "paragrafos": [
+        "O áudio percorre um caminho curto: a fonte gera o sinal, o processamento decide por onde ele sai, o amplificador dá potência e os alto-falantes transformam isso em som. Falta de áudio é a interrupção desse caminho em um desses pontos, e cada um tem custo bem diferente.",
+        "Por isso o primeiro passo não é orçamento, é teste de fonte. Silêncio em todas as entradas coloca a suspeita dentro do aparelho. Silêncio em uma só entrega o caso para ajuste de formato, cabo ou aparelho externo, sem reparo nenhum."
+      ]
+    },
+    {
+      "titulo": "Sintomas e o que cada um costuma indicar",
+      "paragrafos": [
+        "Silêncio em TV aberta, HDMI e aplicativo ao mesmo tempo aponta para o circuito de áudio interno. Falha isolada em uma entrada costuma ser formato de áudio incompatível ou cabo com contato ruim.",
+        "Som distorcido indica estágio de amplificação em sofrimento ou cone rompido. Perda de apenas um lado aponta para um alto-falante específico. Som no fone ou na barra com alto-falantes mudos prova que o processamento está vivo."
+      ]
+    },
+    {
+      "titulo": "Testes antes de acionar alguém",
+      "paragrafos": [
+        "Teste três fontes diferentes, force a saída para os alto-falantes internos no menu, desative Bluetooth e saída digital, coloque um fone na saída da TV e desconecte barra de som e receptor antes de concluir qualquer coisa.",
+        "O que não recomendamos: abrir a traseira do televisor, ligar alto-falante externo direto na placa, insistir em volume alto com som distorcido e transportar o aparelho sem proteção rígida nas bordas."
+      ]
+    },
+    {
+      "titulo": "O que resolve cada cenário e quais são as condições",
+      "paragrafos": [
+        "A avaliação mede o sinal desde o processamento até a saída dos alto-falantes para descobrir onde ele se perde. Amplificador de áudio e soldas fadigadas são tratados em nível de componente, sem substituir a placa inteira quando o restante está íntegro.",
+        "Não adaptamos alto-falante com impedância diferente da original, porque isso força o amplificador e cria defeito novo. Sem a peça correta para o modelo, informamos e devolvemos o aparelho.",
+        "Atendimento apenas por coleta e entrega no endereço informado, sem balcão. Garantia de 90 dias sobre mão de obra e peça aplicada, limitada ao bloco de áudio reparado; descarga elétrica posterior é dano novo."
+      ]
+    }
+  ]
+},
+{
+  "path": "/problemas/impressora-nao-imprime",
+  "title": "Impressora Não Imprime: Causas e Solução | Curitiba",
+  "description": "Impressora aparece como offline, aceita o trabalho e não imprime ou sai página em branco? Veja como separar fila travada, driver, rede Wi-Fi e falha mecânica antes de gastar com cartucho ou aparelho novo em Curitiba.",
+  "h1": "Impressora não imprime: fila travada, driver, rede ou falha mecânica",
+  "subtitulo": "A maior parte das impressoras que pararam de funcionar está intacta: o que falhou foi a fila, o driver ou o endereço na rede.",
+  "blocos": [
+    {
+      "titulo": "Impressora falha em quatro camadas diferentes",
+      "paragrafos": [
+        "Documento, fila, comunicação e mecânica. O arquivo sai do programa, entra na fila do sistema, viaja por cabo ou rede até o aparelho e só então vira papel impresso. Descobrir em qual camada o caminho se interrompeu é o trabalho técnico, e três delas não têm nada de hardware.",
+        "É por isso que trocar cartucho costuma ser a primeira reação e quase nunca a solução. Página de teste pelo painel da própria impressora e tentativa de impressão pelo celular dividem o problema ao meio em menos de dois minutos, sem custo."
+      ]
+    },
+    {
+      "titulo": "Sintomas e o que cada um costuma indicar",
+      "paragrafos": [
+        "Status offline com o aparelho ligado é quase sempre endereço novo na rede após queda de energia. Documento parado na fila trava todos os seguintes sem que exista defeito de hardware.",
+        "Página em branco em jato de tinta aponta para cabeça entupida por falta de uso; em laser, para toner mal encaixado ou cilindro no fim. Atolamento sempre no mesmo ponto indica rolete desgastado ou papel preso de uma remoção anterior."
+      ]
+    },
+    {
+      "titulo": "Testes antes de comprar suprimento",
+      "paragrafos": [
+        "Cancele a fila e reinicie a impressora pela tomada, confira se a impressora padrão é o aparelho físico e não um dispositivo virtual de PDF, imprima a página de teste pelo painel e tente imprimir pelo celular na mesma rede.",
+        "O que não recomendamos: forçar o carro de impressão com a mão, lavar cabeçote com produtos improvisados e puxar papel preso contra o sentido do mecanismo, o que costuma quebrar dentes de engrenagem."
+      ]
+    },
+    {
+      "titulo": "O que resolve cada cenário e quais são as condições",
+      "paragrafos": [
+        "Boa parte dos chamados termina sem peça: reinstalação limpa do driver, correção da porta de impressão e fixação do endereço na rede para o problema não voltar na próxima queda de energia. Atolamento repetido e ruído de engrenagem exigem avaliação em bancada.",
+        "Quando a troca de cabeçote se aproxima do valor de uma impressora equivalente, orientamos não fazer o serviço. Cartucho e toner seguem a garantia do fabricante.",
+        "Atendimento no local, remoto ou por coleta e entrega no endereço informado, sem balcão. Garantia de 90 dias sobre mão de obra e peça aplicada, limitada ao bloco reparado."
+      ]
+    }
+  ]
+},
+{
   "path": "/problemas/tv-desligando-sozinha",
   "title": "TV Desligando Sozinha: Causas e Conserto | Curitiba",
   "description": "Televisor que desliga sozinho, reinicia ou entra em ciclo de LED piscando? Entenda como separar capacitor de fonte, proteção térmica, ajuste de economia e placa principal, com avaliação por coleta em Curitiba.",

@@ -263,6 +263,13 @@ export const SOLUTION_FLOW: SolutionProblem[] = [
         mensagem: "Minha TV está desligando sozinha. Quero avaliação da fonte com coleta.",
       },
       {
+        equipamento: "TV com imagem e sem som",
+        solucao: { label: "TV sem som", path: "/problemas/tv-sem-som" },
+        modalidade: "coleta",
+        porque: "O sinal de áudio é medido do processamento até os alto-falantes para separar ajuste, amplificador e alto-falante.",
+        mensagem: "Minha TV está com imagem normal e sem som. Quero avaliação técnica com coleta.",
+      },
+      {
         equipamento: "TV com linhas na imagem",
         solucao: { label: "TV com linhas na tela", path: "/problemas/tv-com-linhas-na-tela" },
         modalidade: "coleta",
