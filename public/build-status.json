@@ -1,10 +1,10 @@
 {
-  "startedAt": "2026-08-12T19:02:20.515Z",
-  "finishedAt": "2026-08-12T19:02:22.592Z",
-  "ok": false,
+  "startedAt": "2026-08-12T19:04:23.980Z",
+  "finishedAt": "2026-08-12T19:04:26.067Z",
+  "ok": true,
   "total": 9,
-  "passed": 8,
-  "failed": 1,
+  "passed": 9,
+  "failed": 0,
   "skipped": 0,
   "gates": [
     {
@@ -12,72 +12,72 @@
       "label": "ads.txt e metatag AdSense",
       "status": "ok",
       "detail": "sem pendências",
-      "durationMs": 146,
-      "checkedAt": "2026-08-12T19:02:20.661Z"
+      "durationMs": 135,
+      "checkedAt": "2026-08-12T19:04:24.116Z"
     },
     {
       "id": "policy-jsonld",
       "label": "JSON-LD das políticas",
       "status": "ok",
       "detail": "sem pendências",
-      "durationMs": 101,
-      "checkedAt": "2026-08-12T19:02:20.762Z"
+      "durationMs": 139,
+      "checkedAt": "2026-08-12T19:04:24.255Z"
     },
     {
       "id": "telemetry",
       "label": "Transparência da telemetria",
       "status": "ok",
       "detail": "sem pendências",
-      "durationMs": 88,
-      "checkedAt": "2026-08-12T19:02:20.850Z"
+      "durationMs": 132,
+      "checkedAt": "2026-08-12T19:04:24.387Z"
     },
     {
       "id": "missing-exports",
       "label": "Exports ausentes nas rotas",
       "status": "ok",
       "detail": "sem pendências",
-      "durationMs": 746,
-      "checkedAt": "2026-08-12T19:02:21.596Z"
+      "durationMs": 839,
+      "checkedAt": "2026-08-12T19:04:25.226Z"
     },
     {
       "id": "internal-links",
       "label": "Links internos sem 404",
-      "status": "fail",
-      "detail": "  - link interno quebrado → /servicos/conserto-notebook (em src/pages/problemas/DobradicaNotebookQuebrada.tsx)",
-      "durationMs": 240,
-      "checkedAt": "2026-08-12T19:02:21.836Z"
+      "status": "ok",
+      "detail": "sem pendências",
+      "durationMs": 236,
+      "checkedAt": "2026-08-12T19:04:25.462Z"
     },
     {
       "id": "sitemap-source",
       "label": "Sitemap x fonte curada",
       "status": "ok",
       "detail": "sem pendências",
-      "durationMs": 178,
-      "checkedAt": "2026-08-12T19:02:22.014Z"
+      "durationMs": 182,
+      "checkedAt": "2026-08-12T19:04:25.644Z"
     },
     {
       "id": "aggregate-rating",
       "label": "Ausência de aggregateRating fabricado",
       "status": "ok",
       "detail": "sem pendências",
-      "durationMs": 183,
-      "checkedAt": "2026-08-12T19:02:22.197Z"
+      "durationMs": 169,
+      "checkedAt": "2026-08-12T19:04:25.813Z"
     },
     {
       "id": "media-assets",
       "label": "og:image, mídia kit e assets públicos",
       "status": "ok",
       "detail": "sem pendências",
-      "durationMs": 244,
-      "checkedAt": "2026-08-12T19:02:22.441Z"
+      "durationMs": 148,
+      "checkedAt": "2026-08-12T19:04:25.961Z"
     },
     {
       "id": "orphan-pages",
       "label": "Páginas órfãs",
       "status": "ok",
       "detail": "sem pendências",
-      "durationMs": 151,
-      "checkedAt": "2026-08-12T19:02:22.592Z"
+      "durationMs": 106,
+      "checkedAt": "2026-08-12T19:04:26.067Z"
     }
   ]
 }
