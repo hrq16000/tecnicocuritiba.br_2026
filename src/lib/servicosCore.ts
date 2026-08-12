@@ -1543,6 +1543,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { label: "TV com som e sem imagem", to: "/problemas/tv-com-som-sem-imagem" },
       { label: "TV com linhas na tela", to: "/problemas/tv-com-linhas-na-tela" },
       { label: "TV desligando sozinha", to: "/problemas/tv-desligando-sozinha" },
+      { label: "TV sem som", to: "/problemas/tv-sem-som" },
       { label: "Coleta e entrega", to: "/coleta-e-entrega" },
       { label: "Conserto de placa eletrônica", to: "/servicos/conserto-placa" },
       { label: "Equipamentos atendidos", to: "/equipamentos-atendidos" },
