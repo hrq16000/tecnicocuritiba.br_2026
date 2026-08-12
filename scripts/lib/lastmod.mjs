@@ -26,6 +26,8 @@ export const LASTMOD = {
   "/problemas/hd-nao-reconhecido": "2026-08-12",
   "/problemas/computador-nao-liga": "2026-08-12",
   "/problemas/teclado-de-notebook-nao-funciona": "2026-08-12",
+  "/problemas/computador-fazendo-barulho": "2026-08-13",
+  "/problemas/tv-com-linhas-na-tela": "2026-08-13",
   "/problemas/notebook-superaquecendo": "2026-08-12",
   // Frente de monetização — página comercial de patrocínio
   "/anuncie": "2026-08-08",

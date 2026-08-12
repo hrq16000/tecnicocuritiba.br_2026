@@ -116,6 +116,13 @@ export const SOLUTION_FLOW: SolutionProblem[] = [
         mensagem: "Meu computador desliga sozinho durante o uso. Quero diagnóstico técnico.",
       },
       {
+        equipamento: "Computador fazendo barulho",
+        solucao: { label: "Computador fazendo barulho", path: "/problemas/computador-fazendo-barulho" },
+        modalidade: "coleta",
+        porque: "Ruído de cooler, de fonte e de disco exigem testes diferentes — medimos antes de trocar peça.",
+        mensagem: "Meu computador está fazendo barulho. Quero avaliação da refrigeração e do disco.",
+      },
+      {
         equipamento: "Notebook esquentando muito",
         solucao: { label: "Notebook superaquecendo", path: "/problemas/notebook-superaquecendo" },
         modalidade: "coleta",
@@ -240,6 +247,13 @@ export const SOLUTION_FLOW: SolutionProblem[] = [
         modalidade: "coleta",
         porque: "O teste da lanterna já separa backlight de placa; painel trincado não é recuperado.",
         mensagem: "Minha TV tem som mas não tem imagem. Quero avaliação técnica com coleta.",
+      },
+      {
+        equipamento: "TV com linhas na imagem",
+        solucao: { label: "TV com linhas na tela", path: "/problemas/tv-com-linhas-na-tela" },
+        modalidade: "coleta",
+        porque: "Conexão do painel e placa de controle são testadas em bancada; dano de painel é recusado com aviso.",
+        mensagem: "Minha TV está com linhas na tela. Quero avaliação técnica com coleta.",
       },
     ],
   },

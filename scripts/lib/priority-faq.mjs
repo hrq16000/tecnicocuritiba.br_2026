@@ -27,6 +27,8 @@ const SOURCES = {
   "/problemas/hd-nao-reconhecido": "src/pages/problemas/HdNaoReconhecido.tsx",
   "/problemas/computador-nao-liga": "src/pages/problemas/ComputadorNaoLiga.tsx",
   "/problemas/teclado-de-notebook-nao-funciona": "src/pages/problemas/TecladoNotebookNaoFunciona.tsx",
+  "/problemas/computador-fazendo-barulho": "src/pages/problemas/ComputadorFazendoBarulho.tsx",
+  "/problemas/tv-com-linhas-na-tela": "src/pages/problemas/TvComLinhasNaTela.tsx",
   "/problemas/notebook-superaquecendo": "src/pages/problemas/NotebookSuperaquecendo.tsx",
   "/precos-e-politicas": "src/components/TermosConteudo.tsx",
   "/como-funciona": "src/pages/ComoFunciona.tsx",

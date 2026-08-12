@@ -1307,6 +1307,84 @@ const BASE_ROUTES = [
     ]
   },
 
+{
+    "path": "/problemas/computador-fazendo-barulho",
+    "title": "Computador Fazendo Barulho: Como Identificar a Origem | Curitiba",
+    "description": "PC barulhento, ventoinha rugindo, estalo ou zumbido? Entenda como separar cooler, fonte, disco r\u00edgido e ru\u00eddo el\u00e9trico antes de trocar pe\u00e7a, e como funciona a coleta em Curitiba.",
+    "h1": "Computador fazendo barulho: como descobrir a origem antes de trocar pe\u00e7a",
+    "subtitulo": "Rugido por temperatura, chiado de rolamento, clique de disco e zumbido el\u00e9trico t\u00eam causas, urg\u00eancias e custos diferentes \u2014 e comprar cooler novo antes do diagn\u00f3stico \u00e9 o erro mais caro.",
+    "blocos": [
+      {
+        "titulo": "Cada tipo de ru\u00eddo aponta para um lugar diferente",
+        "paragrafos": [
+          "Ru\u00eddo de ar em volume alto \u00e9 refrigera\u00e7\u00e3o respondendo a calor. Ru\u00eddo met\u00e1lico \u00e9 pe\u00e7a mec\u00e2nica gasta. Ru\u00eddo ritmado vem do armazenamento. Ru\u00eddo que acompanha a carga el\u00e9trica \u00e9 bobina. S\u00e3o quatro fam\u00edlias com desfechos que n\u00e3o se parecem.",
+          "Trocar a ventoinha de um computador com dissipador entupido devolve sil\u00eancio por poucos dias, porque a temperatura continua alta. E trocar pe\u00e7a quando o ru\u00eddo vinha do disco desperdi\u00e7a as horas em que os arquivos ainda poderiam ser copiados."
+        ]
+      },
+      {
+        "titulo": "Sintomas e o que cada um costuma indicar",
+        "paragrafos": [
+          "Ru\u00eddo constante que aumenta com o uso \u00e9 temperatura. Chiado met\u00e1lico intermitente \u00e9 rolamento em fim de vida. Clique ritmado \u00e9 disco r\u00edgido com falha de cabe\u00e7a, e nesse caso o barulho significa urg\u00eancia.",
+          "Zumbido grave sob carga \u00e9 ru\u00eddo el\u00e9trico em bobina. Batida seca costuma ser cabo encostando na h\u00e9lice. Estalo com cheiro de queimado \u00e9 o \u00fanico item da lista que pede desligar imediatamente."
+        ]
+      },
+      {
+        "titulo": "Verifica\u00e7\u00f5es antes de comprar qualquer pe\u00e7a",
+        "paragrafos": [
+          "Identifique de onde vem o som com o gabinete aberto, observe se o ru\u00eddo acompanha a carga, confira se o equipamento est\u00e1 em superf\u00edcie r\u00edgida com folga atr\u00e1s e grave um \u00e1udio curto para a triagem.",
+          "O que n\u00e3o recomendamos: lubrificar rolamento com \u00f3leo dom\u00e9stico, aspirar diretamente sobre a placa, travar a h\u00e9lice com o dedo e continuar ligando ap\u00f3s estalo com cheiro de queimado."
+        ]
+      },
+      {
+        "titulo": "O que resolve cada cen\u00e1rio e quais s\u00e3o as condi\u00e7\u00f5es",
+        "paragrafos": [
+          "Limpeza t\u00e9cnica com troca de pasta t\u00e9rmica resolve a maior parte dos casos de ru\u00eddo por temperatura, sem substituir pe\u00e7a. Rolamento gasto exige troca de ventoinha por modelo de mesmo encaixe e vaz\u00e3o, com teste sob carga antes de fechar.",
+          "Fonte barulhenta \u00e9 medida sob carga: tens\u00e3o fora da faixa transforma a troca em prote\u00e7\u00e3o do restante do hardware. Ru\u00eddo mec\u00e2nico no disco muda a prioridade para preservar os arquivos, com trabalho sobre c\u00f3pia.",
+          "Atendimento apenas por coleta e entrega no endere\u00e7o informado, sem balc\u00e3o. Nenhuma pe\u00e7a \u00e9 trocada sem sua aprova\u00e7\u00e3o. Garantia de 90 dias sobre m\u00e3o de obra e pe\u00e7a aplicada, limitada ao bloco reparado."
+        ]
+      }
+    ]
+  },
+
+{
+    "path": "/problemas/tv-com-linhas-na-tela",
+    "title": "TV com Linhas na Tela: Tem Conserto? | Curitiba",
+    "description": "Televisor com linhas verticais, horizontais ou faixas coloridas na imagem? Entenda quando \u00e9 conex\u00e3o do painel, placa de controle ou dano interno sem reparo vi\u00e1vel, e como funciona a avalia\u00e7\u00e3o por coleta em Curitiba.",
+    "h1": "TV com linhas na tela: quando \u00e9 conex\u00e3o, quando \u00e9 placa e quando n\u00e3o tem reparo",
+    "subtitulo": "Linha vertical, linha horizontal e faixa escura parecem o mesmo defeito, mas v\u00e3o de um reparo simples de contato at\u00e9 a aus\u00eancia de solu\u00e7\u00e3o vi\u00e1vel.",
+    "blocos": [
+      {
+        "titulo": "Tr\u00eas origens poss\u00edveis, com desfechos muito diferentes",
+        "paragrafos": [
+          "A primeira \u00e9 a conex\u00e3o entre a placa de controle da imagem e o painel, causa comum depois de transporte e a de reparo mais simples. A segunda \u00e9 a pr\u00f3pria placa de controle, com solda fadigada ou circuito comprometido, repar\u00e1vel em n\u00edvel de componente.",
+          "A terceira \u00e9 o painel. Com a matriz danificada por impacto ou falha interna n\u00e3o existe reparo vi\u00e1vel, e n\u00e3o trabalhamos com substitui\u00e7\u00e3o de painel de televisor. Declaramos essa limita\u00e7\u00e3o antes de recolher o aparelho."
+        ]
+      },
+      {
+        "titulo": "Sintomas e o que cada um costuma indicar",
+        "paragrafos": [
+          "Linhas verticais coloridas e fixas costumam vir do comando das colunas ou da conex\u00e3o do painel. Linhas horizontais apontam para o lado das linhas do painel, com a menor taxa de reparo vi\u00e1vel. Faixa larga escura aparece com frequ\u00eancia ap\u00f3s transporte.",
+          "Linhas que mudam conforme a temperatura indicam solda fadigada, cen\u00e1rio frequentemente repar\u00e1vel. Linhas que s\u00f3 aparecem em uma entrada sugerem problema no cabo ou no aparelho conectado, n\u00e3o no televisor."
+        ]
+      },
+      {
+        "titulo": "Testes que voc\u00ea pode fazer antes de acionar algu\u00e9m",
+        "paragrafos": [
+          "Troque de entrada e de aparelho conectado, abra o menu interno da TV para ver se as linhas aparecem sobre ele, fotografe a tela com o menu aberto e observe se o defeito muda com o tempo ligado.",
+          "O que n\u00e3o recomendamos: pressionar a tela, aquecer a moldura com secador, apoiar o televisor sobre a face de v\u00eddeo e transportar o aparelho sem prote\u00e7\u00e3o r\u00edgida nas bordas."
+        ]
+      },
+      {
+        "titulo": "O que resolve cada cen\u00e1rio e quais s\u00e3o as condi\u00e7\u00f5es",
+        "paragrafos": [
+          "A avalia\u00e7\u00e3o come\u00e7a pela inspe\u00e7\u00e3o de conectores, cabo flat e placa de controle. Parte real dos casos termina em reconex\u00e3o ou reparo de solda. Circuito comprometido segue para reparo com esta\u00e7\u00e3o de retrabalho e teste prolongado de imagem antes da devolu\u00e7\u00e3o.",
+          "Identificado dano de painel, informamos e devolvemos o aparelho sem cobrar tentativa de reparo. Quando o custo se aproxima do valor de um televisor equivalente, orientamos n\u00e3o fazer o servi\u00e7o.",
+          "Atendimento apenas por coleta e entrega no endere\u00e7o informado, sem balc\u00e3o. Garantia de 90 dias sobre m\u00e3o de obra e pe\u00e7a aplicada, limitada ao bloco reparado; impacto posterior \u00e9 dano novo e n\u00e3o est\u00e1 coberto."
+        ]
+      }
+    ]
+  },
+
   {
     "path": "/problemas/computador-nao-liga",
     "title": "Computador de Mesa N\u00e3o Liga: Diagn\u00f3stico Real | Curitiba",
