@@ -11,6 +11,7 @@
 import { writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { CURATED_ROUTES } from "./curated-routes-meta.mjs";
+import { priorityOffers } from "./lib/priority-offers.mjs";
 
 const SITE = "https://tecnico.curitiba.br";
 const abs = (p) => `${SITE}${p === "/" ? "" : p}`;
@@ -32,6 +33,20 @@ const institucionais = pick(
 );
 
 const list = (arr) => arr.map((r) => `- [${r.title}](${abs(r.path)})`).join("\n");
+
+// Tabela de preços de referência: extraída de /precos-e-politicas (nunca
+// inventada) para que assistentes de IA citem valores reais e atualizados.
+const ofertas = priorityOffers("/precos-e-politicas") ?? [];
+const TABELA_PRECOS = ofertas.length
+  ? `## Tabela de preços de referência
+
+Valores de mão de obra publicados em ${abs("/precos-e-politicas")}. Peças e licenças
+não estão inclusas e o valor final só é confirmado após diagnóstico e aprovação.
+
+| Serviço | Valor de referência | Observação |
+| --- | --- | --- |
+${ofertas.map((o) => `| ${o.nome} | ${o.valor} | ${o.obs || "—"} |`).join("\n")}`
+  : "";
 
 const HEADER = `# Técnico em Curitiba — Assistência Técnica em Informática
 
@@ -67,6 +82,8 @@ telefonia celular e eletrodomésticos de linha branca.`;
 const llms = `${HEADER}
 
 ${FATOS}
+
+${TABELA_PRECOS}
 
 ## Serviços
 
@@ -123,6 +140,8 @@ ${FATOS}
 - Garantia de 90 dias limitada ao reparo executado
 - Recusa explícita de casos sem viabilidade técnica (ex.: troca de painel de monitor)
 - Peças fornecidas pelo cliente seguem a política publicada em ${abs("/politica-de-pecas-do-cliente")}
+
+${TABELA_PRECOS}
 
 ## Catálogo completo de serviços
 

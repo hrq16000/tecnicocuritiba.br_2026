@@ -16,6 +16,26 @@
 - Contato: somente por WhatsApp, a partir do funil publicado no site
 - Não publicamos notas, médias de avaliação nem depoimentos não verificados
 
+## Tabela de preços de referência
+
+Valores de mão de obra publicados em https://tecnico.curitiba.br/precos-e-politicas. Peças e licenças
+não estão inclusas e o valor final só é confirmado após diagnóstico e aprovação.
+
+| Serviço | Valor de referência | Observação |
+| --- | --- | --- |
+| Formatação completa | a partir de R$ 99,99 | Windows + drivers essenciais • Licença não inclusa |
+| Reinstalação de sistema | a partir de R$ 99,99 | Mantendo dados do usuário quando possível |
+| Configuração de PC novo | a partir de R$ 99,99 | Ajustes iniciais e programas essenciais |
+| Remoção de vírus | a partir de R$ 99,99 | Casos complexos podem exigir mais tempo |
+| Instalação de antivírus | a partir de R$ 99,99 | Solução gratuita ou licenciada |
+| Upgrade de SSD (mão de obra) | a partir de R$ 99,99 | Peça não inclusa |
+| Upgrade de memória RAM | a partir de R$ 99,99 | Peça não inclusa |
+| Troca de HD por SSD | a partir de R$ 99,99 | Clonagem conforme o volume de dados |
+| Configuração de roteador | a partir de R$ 99,99 | Wi-Fi + segurança básica |
+| Melhoria de sinal Wi-Fi | a partir de R$ 99,99 | Repetidor / mesh |
+| Configuração de backup em nuvem | a partir de R$ 99,99 | OneDrive, Google Drive e similares |
+| Suporte técnico remoto | a partir de R$ 99,99 | Para problemas resolvíveis à distância |
+
 ## Serviços
 
 - [Formatação de PC e Notebook em Curitiba | Windows](https://tecnico.curitiba.br/servicos/formatacao)
