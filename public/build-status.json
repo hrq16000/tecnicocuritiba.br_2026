@@ -1,10 +1,10 @@
 {
-  "startedAt": "2026-08-12T23:07:16.030Z",
-  "finishedAt": "2026-08-12T23:07:17.908Z",
-  "ok": false,
+  "startedAt": "2026-08-12T23:08:23.473Z",
+  "finishedAt": "2026-08-12T23:08:25.306Z",
+  "ok": true,
   "total": 9,
-  "passed": 8,
-  "failed": 1,
+  "passed": 9,
+  "failed": 0,
   "skipped": 0,
   "gates": [
     {
@@ -12,72 +12,72 @@
       "label": "ads.txt e metatag AdSense",
       "status": "ok",
       "detail": "sem pendências",
-      "durationMs": 78,
-      "checkedAt": "2026-08-12T23:07:16.109Z"
+      "durationMs": 130,
+      "checkedAt": "2026-08-12T23:08:23.604Z"
     },
     {
       "id": "policy-jsonld",
       "label": "JSON-LD das políticas",
       "status": "ok",
       "detail": "sem pendências",
-      "durationMs": 124,
-      "checkedAt": "2026-08-12T23:07:16.233Z"
+      "durationMs": 73,
+      "checkedAt": "2026-08-12T23:08:23.677Z"
     },
     {
       "id": "telemetry",
       "label": "Transparência da telemetria",
       "status": "ok",
       "detail": "sem pendências",
-      "durationMs": 113,
-      "checkedAt": "2026-08-12T23:07:16.346Z"
+      "durationMs": 91,
+      "checkedAt": "2026-08-12T23:08:23.769Z"
     },
     {
       "id": "missing-exports",
       "label": "Exports ausentes nas rotas",
       "status": "ok",
       "detail": "sem pendências",
-      "durationMs": 727,
-      "checkedAt": "2026-08-12T23:07:17.073Z"
+      "durationMs": 679,
+      "checkedAt": "2026-08-12T23:08:24.448Z"
     },
     {
       "id": "internal-links",
       "label": "Links internos sem 404",
-      "status": "fail",
-      "detail": "  - link interno quebrado → /servicos/conserto-notebook (em src/pages/problemas/WebcamNaoFunciona.tsx)",
-      "durationMs": 254,
-      "checkedAt": "2026-08-12T23:07:17.327Z"
+      "status": "ok",
+      "detail": "sem pendências",
+      "durationMs": 236,
+      "checkedAt": "2026-08-12T23:08:24.684Z"
     },
     {
       "id": "sitemap-source",
       "label": "Sitemap x fonte curada",
       "status": "ok",
       "detail": "sem pendências",
-      "durationMs": 147,
-      "checkedAt": "2026-08-12T23:07:17.474Z"
+      "durationMs": 153,
+      "checkedAt": "2026-08-12T23:08:24.837Z"
     },
     {
       "id": "aggregate-rating",
       "label": "Ausência de aggregateRating fabricado",
       "status": "ok",
       "detail": "sem pendências",
-      "durationMs": 161,
-      "checkedAt": "2026-08-12T23:07:17.635Z"
+      "durationMs": 182,
+      "checkedAt": "2026-08-12T23:08:25.019Z"
     },
     {
       "id": "media-assets",
       "label": "og:image, mídia kit e assets públicos",
       "status": "ok",
       "detail": "sem pendências",
-      "durationMs": 164,
-      "checkedAt": "2026-08-12T23:07:17.799Z"
+      "durationMs": 182,
+      "checkedAt": "2026-08-12T23:08:25.201Z"
     },
     {
       "id": "orphan-pages",
       "label": "Páginas órfãs",
       "status": "ok",
       "detail": "sem pendências",
-      "durationMs": 109,
-      "checkedAt": "2026-08-12T23:07:17.908Z"
+      "durationMs": 105,
+      "checkedAt": "2026-08-12T23:08:25.306Z"
     }
   ]
 }

@@ -87,8 +87,8 @@ const OPCOES = [
   {
     titulo: "Revisão geral do notebook",
     desc: "Quando a câmera falha junto com teclado, som ou Wi-Fi, a avaliação completa evita trocar peça por peça sem critério.",
-    to: "/servicos/conserto-notebook",
-    label: "Conserto de notebook",
+    to: "/servicos/manutencao-de-computador",
+    label: "Manutenção de computador",
   },
   {
     titulo: "Quando o problema é o som na chamada",

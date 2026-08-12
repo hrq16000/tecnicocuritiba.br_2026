@@ -444,7 +444,7 @@ const PROBLEMA_LINKS = {
   ],
   "/problemas/webcam-nao-funciona": [
     "/servicos/manutencao-de-notebook",
-    "/servicos/conserto-notebook",
+    "/servicos/manutencao-de-computador",
     "/problemas/notebook-lento",
     "/problemas/computador-sem-som",
     "/atendimento-remoto",
