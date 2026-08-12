@@ -41,6 +41,7 @@ const routeImportMap: Record<string, () => Promise<unknown>> = {
   "/politica-de-pecas-do-cliente": () => import("./pages/PoliticaPecasCliente"),
   "/empresa-de-ti-curitiba": () => import("./pages/EmpresaDeTiCuritiba"),
   "/problemas-reais-e-casos": () => import("./pages/ProblemasReaisCasos"),
+  "/problemas": () => import("./pages/problemas/ProblemasHub"),
   "/problemas/notebook-nao-liga": () => import("./pages/problemas/NotebookNaoLiga"),
   "/problemas/computador-lento": () => import("./pages/problemas/ComputadorLento"),
   "/problemas/tela-azul-windows": () => import("./pages/problemas/TelaAzulWindows"),

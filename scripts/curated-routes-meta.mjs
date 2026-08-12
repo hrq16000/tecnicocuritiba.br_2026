@@ -1724,6 +1724,69 @@ const BASE_ROUTES = [
     }
   ]
 },
+  {
+    "path": "/problemas",
+    "title": "Problemas de Computador, Notebook e TV | Curitiba",
+    "description": "Índice de sintomas atendidos em Curitiba: computador lento, tela azul, Wi-Fi caindo, notebook que não liga e smart TV com defeito. Cada página explica causas prováveis, testes seguros e o que resolve, com avaliação técnica e coleta no endereço.",
+    "h1": "Problemas atendidos: encontre o seu sintoma antes de gastar",
+    "subtitulo": "Páginas de sintoma escritas a partir dos atendimentos reais da bancada.",
+    "blocos": [
+      {
+        "titulo": "Como usar este índice de problemas",
+        "paragrafos": [
+          "A maioria dos orçamentos errados começa com uma suspeita, não com um sintoma. Quem chega dizendo que acha que é a placa costuma pagar por uma peça que não era o problema. Por isso este índice está organizado pelo que o equipamento faz — não liga, liga sem imagem, trava, esquenta, perde rede — e não pelo componente que alguém imaginou estar em falha.",
+          "Cada página segue a mesma lógica da bancada: primeiro os testes gratuitos que separam grandes grupos de causa, depois as verificações seguras que podem ser feitas em casa e só então as intervenções que exigem ferramenta e equipamento de medição."
+        ]
+      },
+      {
+        "titulo": "Sintomas agrupados por equipamento",
+        "paragrafos": [
+          "Notebook concentra energia, tela, teclado e refrigeração no mesmo corpo, então sintomas parecidos têm origens diferentes. No computador de mesa as peças são independentes, o que permite isolar fonte, memória, vídeo e armazenamento por partes.",
+          "Televisão quase nunca quebra inteira: falha uma etapa da cadeia entre fonte, placa principal, backlight e painel. Em rede, se só um aparelho sofre o suspeito é o aparelho; se todos sofrem, o suspeito é a cobertura."
+        ]
+      },
+      {
+        "titulo": "Meu sintoma não está na lista",
+        "paragrafos": [
+          "O índice cobre os sintomas mais frequentes, mas a bancada recebe casos fora do padrão toda semana: placa com corrosão após infiltração, equipamento que só falha em um horário do dia, TV que funciona por cabo e não por streaming.",
+          "Descrever o comportamento em duas frases já é suficiente para dizermos se é caso de ajuste remoto, visita ou bancada. Informe desde quando começou, se houve queda de energia ou líquido e o que já foi tentado."
+        ]
+      },
+      {
+        "titulo": "Como funciona o atendimento e o custo",
+        "paragrafos": [
+          "Atendimento sem balcão, com retirada e devolução no endereço informado em Curitiba e região. A visita técnica inicial é sem compromisso e a coleta é gratuita nos serviços acima de uma hora de bancada.",
+          "Para procedimentos de bancada existe mínimo pré-aprovado de R$ 299,99, informado antes da execução. Garantia de 90 dias sobre mão de obra e peça aplicada, limitada ao reparo executado."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "Como escolho a página certa para o meu caso?",
+        "answer": "Escolha pelo comportamento do aparelho, não pela suspeita. Se o equipamento não dá sinal de vida, procure a página de não liga; se liga e a imagem não aparece, procure tela preta ou sem sinal; se tudo funciona devagar, procure lentidão. Sintoma descrito com precisão encurta o diagnóstico e evita troca de peça sem necessidade."
+      },
+      {
+        "question": "Lentidão sempre é vírus?",
+        "answer": "Não. Na maior parte dos casos que recebemos, lentidão vem de disco mecânico antigo, memória insuficiente para o uso atual ou aquecimento reduzindo a velocidade do processador. Infecção existe e aparece com propaganda, extensões estranhas e consumo alto sem programa aberto — nesse cenário a rota é a remoção de vírus, com verificação depois da limpeza."
+      },
+      {
+        "question": "Posso tentar resolver sozinho antes de chamar alguém?",
+        "answer": "Pode, e cada página lista os testes que não pioram o quadro: trocar cabo, testar outra tomada, reiniciar o roteador, conferir a saída de áudio selecionada. O que não recomendamos é abrir equipamento com suspeita de dano interno, tentar recuperar dados de disco com ruído mecânico ou instalar programas que prometem consertar tudo automaticamente."
+      },
+      {
+        "question": "Vocês atendem no local ou levam o equipamento?",
+        "answer": "Depende do sintoma. Cobertura de rede, configuração e ajuste de sistema são resolvidos no local ou remotamente. Falha de placa, tela, fonte e recuperação de dados são serviços de bancada, com retirada e devolução no endereço informado em Curitiba e região. Não temos balcão de atendimento ao público."
+      },
+      {
+        "question": "Como funciona o custo do diagnóstico?",
+        "answer": "A visita técnica inicial é sem compromisso e a coleta é gratuita nos serviços acima de uma hora de bancada. Para procedimentos de bancada existe um mínimo pré-aprovado de R$ 299,99, informado antes de qualquer execução. Você aprova o valor antes de o serviço começar; se não aprovar, o equipamento volta como estava."
+      },
+      {
+        "question": "E quando o conserto não compensa?",
+        "answer": "Dizemos isso abertamente. Em aparelhos antigos, o custo de placa ou painel pode passar do valor de mercado do equipamento, e nesses casos apontamos a alternativa mais barata — inclusive quando ela não envolve serviço nosso. Preferimos perder uma ordem de serviço a entregar um reparo que não se paga."
+      }
+    ]
+  },
 {
   "path": "/problemas/tv-nao-conecta-no-wifi",
   "title": "TV Não Conecta no Wi-Fi: O Que Fazer | Curitiba",

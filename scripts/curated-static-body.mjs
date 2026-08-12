@@ -153,6 +153,7 @@ const SHORT_LABEL = {
   "/equipamentos-atendidos": "Equipamentos atendidos",
   "/areas-atendidas": "Áreas atendidas",
   "/quando-nao-compensa": "Quando não compensa reparar",
+  "/problemas": "Problemas atendidos",
   "/problemas/notebook-nao-liga": "Notebook não liga",
   "/problemas/tela-azul-windows": "Tela azul no Windows",
   "/problemas/notebook-superaquecendo": "Notebook superaquecendo",
@@ -271,6 +272,7 @@ export function breadcrumbFor(path) {
 /** Saídas obrigatórias por página de sintoma (contrato editorial da onda 3C). */
 const PROBLEMA_LINKS = {
   "/problemas/computador-lento": [
+    "/problemas",
     "/servicos/manutencao-de-computador",
     "/servicos/formatacao",
     "/servicos/upgrade-ssd-ram",
@@ -281,6 +283,7 @@ const PROBLEMA_LINKS = {
     "/como-funciona",
   ],
   "/problemas/tela-azul-windows": [
+    "/problemas",
     "/servicos/formatacao",
     "/servicos/upgrade-ssd-ram",
     "/servicos/recuperacao-de-dados",
@@ -291,6 +294,7 @@ const PROBLEMA_LINKS = {
     "/como-funciona",
   ],
   "/problemas/notebook-superaquecendo": [
+    "/problemas",
     "/servicos/manutencao-de-notebook",
     "/servicos/manutencao-de-computador",
     "/servicos/formatacao",
@@ -300,6 +304,7 @@ const PROBLEMA_LINKS = {
     "/como-funciona",
   ],
   "/problemas/notebook-nao-liga": [
+    "/problemas",
     "/servicos/manutencao-de-notebook",
     "/servicos/recuperacao-de-dados",
     "/servicos/upgrade-ssd-ram",
@@ -308,6 +313,7 @@ const PROBLEMA_LINKS = {
     "/como-funciona",
   ],
   "/problemas/notebook-nao-carrega-bateria": [
+    "/problemas",
     "/servicos/manutencao-de-notebook",
     "/servicos/conserto-placa",
     "/diagnostico-tecnico",
@@ -318,6 +324,7 @@ const PROBLEMA_LINKS = {
     "/como-funciona",
   ],
   "/problemas/computador-desliga-sozinho": [
+    "/problemas",
     "/servicos/manutencao-de-computador",
     "/servicos/upgrade-ssd-ram",
     "/servicos/conserto-placa",
@@ -328,6 +335,7 @@ const PROBLEMA_LINKS = {
     "/como-funciona",
   ],
   "/problemas/wifi-caindo-toda-hora": [
+    "/problemas",
     "/servicos/redes-e-wifi",
     "/servicos/suporte-tecnico-empresarial",
     "/servicos/suporte-home-office",
@@ -336,6 +344,7 @@ const PROBLEMA_LINKS = {
     "/contato",
   ],
   "/problemas/tv-nao-liga": [
+    "/problemas",
     "/servicos/conserto-tv",
     "/servicos/conserto-placa",
     "/coleta-e-entrega",
@@ -346,6 +355,7 @@ const PROBLEMA_LINKS = {
   ],
   // Onda 10
   "/problemas/tv-com-som-sem-imagem": [
+    "/problemas",
     "/servicos/conserto-tv",
     "/servicos/conserto-placa",
     "/problemas/tv-nao-liga",
@@ -355,6 +365,7 @@ const PROBLEMA_LINKS = {
     "/como-funciona",
   ],
   "/problemas/tela-de-notebook-quebrada": [
+    "/problemas",
     "/servicos/manutencao-de-notebook",
     "/servicos/conserto-placa",
     "/servicos/recuperacao-de-dados",
@@ -364,6 +375,7 @@ const PROBLEMA_LINKS = {
     "/como-funciona",
   ],
   "/problemas/computador-nao-liga": [
+    "/problemas",
     "/servicos/manutencao-de-computador",
     "/servicos/conserto-placa",
     "/servicos/recuperacao-de-dados",
@@ -373,6 +385,7 @@ const PROBLEMA_LINKS = {
     "/como-funciona",
   ],
   "/problemas/teclado-de-notebook-nao-funciona": [
+    "/problemas",
     "/servicos/manutencao-de-notebook",
     "/problemas/notebook-molhado",
     "/servicos/conserto-placa",
@@ -382,6 +395,7 @@ const PROBLEMA_LINKS = {
     "/como-funciona",
   ],
   "/problemas/notebook-com-tela-preta": [
+    "/problemas",
     "/servicos/manutencao-de-notebook",
     "/problemas/notebook-nao-liga",
     "/problemas/tela-de-notebook-quebrada",
@@ -391,6 +405,7 @@ const PROBLEMA_LINKS = {
     "/como-funciona",
   ],
   "/problemas/monitor-sem-sinal": [
+    "/problemas",
     "/servicos/conserto-monitor",
     "/servicos/manutencao-de-computador",
     "/problemas/computador-nao-liga",
@@ -400,6 +415,7 @@ const PROBLEMA_LINKS = {
     "/precos-e-politicas",
   ],
   "/problemas/notebook-lento": [
+    "/problemas",
     "/servicos/upgrade-ssd-ram",
     "/servicos/manutencao-de-notebook",
     "/problemas/computador-lento",
@@ -409,6 +425,7 @@ const PROBLEMA_LINKS = {
     "/precos-e-politicas",
   ],
   "/problemas/notebook-desligando-sozinho": [
+    "/problemas",
     "/servicos/manutencao-de-notebook",
     "/problemas/notebook-superaquecendo",
     "/problemas/notebook-nao-carrega-bateria",
@@ -418,6 +435,7 @@ const PROBLEMA_LINKS = {
     "/precos-e-politicas",
   ],
   "/problemas/pen-drive-nao-reconhecido": [
+    "/problemas",
     "/servicos/recuperacao-de-dados",
     "/problemas/hd-nao-reconhecido",
     "/servicos/conserto-placa",
@@ -427,6 +445,7 @@ const PROBLEMA_LINKS = {
     "/precos-e-politicas",
   ],
   "/problemas/dobradica-do-notebook-quebrada": [
+    "/problemas",
     "/servicos/manutencao-de-notebook",
     "/problemas/tela-de-notebook-quebrada",
     "/problemas/notebook-com-tela-preta",
@@ -435,6 +454,7 @@ const PROBLEMA_LINKS = {
     "/precos-e-politicas",
   ],
   "/problemas/tela-do-computador-piscando": [
+    "/problemas",
     "/servicos/conserto-monitor",
     "/problemas/monitor-sem-sinal",
     "/servicos/conserto-placa",
@@ -443,6 +463,7 @@ const PROBLEMA_LINKS = {
     "/precos-e-politicas",
   ],
   "/problemas/webcam-nao-funciona": [
+    "/problemas",
     "/servicos/manutencao-de-notebook",
     "/servicos/manutencao-de-computador",
     "/problemas/notebook-lento",
@@ -451,6 +472,7 @@ const PROBLEMA_LINKS = {
     "/precos-e-politicas",
   ],
   "/problemas/tv-nao-conecta-no-wifi": [
+    "/problemas",
     "/servicos/redes-e-wifi",
     "/servicos/conserto-tv",
     "/problemas/wifi-caindo-toda-hora",
@@ -459,6 +481,7 @@ const PROBLEMA_LINKS = {
     "/precos-e-politicas",
   ],
   "/problemas/windows-nao-inicia": [
+    "/problemas",
     "/servicos/formatacao",
     "/servicos/recuperacao-de-dados",
     "/servicos/upgrade-ssd-ram",
@@ -467,6 +490,7 @@ const PROBLEMA_LINKS = {
     "/precos-e-politicas",
   ],
   "/problemas/tv-com-imagem-escura": [
+    "/problemas",
     "/servicos/conserto-tv",
     "/problemas/tv-com-som-sem-imagem",
     "/problemas/tv-nao-liga",
@@ -475,6 +499,7 @@ const PROBLEMA_LINKS = {
     "/precos-e-politicas",
   ],
   "/problemas/notebook-nao-conecta-no-wifi": [
+    "/problemas",
     "/servicos/redes-e-wifi",
     "/problemas/wifi-caindo-toda-hora",
     "/servicos/manutencao-de-notebook",
@@ -483,6 +508,7 @@ const PROBLEMA_LINKS = {
     "/precos-e-politicas",
   ],
   "/problemas/tv-travando": [
+    "/problemas",
     "/servicos/conserto-tv",
     "/problemas/tv-desligando-sozinha",
     "/servicos/redes-e-wifi",
@@ -491,6 +517,7 @@ const PROBLEMA_LINKS = {
     "/precos-e-politicas",
   ],
   "/problemas/mouse-nao-funciona": [
+    "/problemas",
     "/servicos/manutencao-de-computador",
     "/problemas/touchpad-nao-funciona",
     "/servicos/conserto-placa",
@@ -499,6 +526,7 @@ const PROBLEMA_LINKS = {
     "/precos-e-politicas",
   ],
   "/problemas/computador-sem-som": [
+    "/problemas",
     "/servicos/manutencao-de-computador",
     "/servicos/conserto-placa",
     "/servicos/formatacao",
@@ -507,6 +535,7 @@ const PROBLEMA_LINKS = {
     "/precos-e-politicas",
   ],
   "/problemas/computador-travando": [
+    "/problemas",
     "/servicos/manutencao-de-computador",
     "/problemas/computador-lento",
     "/problemas/tela-azul-windows",
@@ -516,6 +545,7 @@ const PROBLEMA_LINKS = {
     "/precos-e-politicas",
   ],
   "/problemas/touchpad-nao-funciona": [
+    "/problemas",
     "/servicos/manutencao-de-notebook",
     "/problemas/teclado-de-notebook-nao-funciona",
     "/problemas/notebook-molhado",
@@ -525,6 +555,7 @@ const PROBLEMA_LINKS = {
     "/precos-e-politicas",
   ],
   "/problemas/tv-sem-som": [
+    "/problemas",
     "/servicos/conserto-tv",
     "/problemas/tv-com-som-sem-imagem",
     "/problemas/tv-desligando-sozinha",
@@ -534,6 +565,7 @@ const PROBLEMA_LINKS = {
     "/quando-nao-compensa",
   ],
   "/problemas/impressora-nao-imprime": [
+    "/problemas",
     "/conserto-impressora-curitiba",
     "/servicos/redes-e-wifi",
     "/servicos/manutencao-de-computador",
@@ -542,6 +574,7 @@ const PROBLEMA_LINKS = {
     "/como-funciona",
   ],
   "/problemas/tv-desligando-sozinha": [
+    "/problemas",
     "/servicos/conserto-tv",
     "/problemas/tv-nao-liga",
     "/problemas/tv-com-som-sem-imagem",
@@ -551,6 +584,7 @@ const PROBLEMA_LINKS = {
     "/quando-nao-compensa",
   ],
   "/problemas/computador-fazendo-barulho": [
+    "/problemas",
     "/servicos/manutencao-de-computador",
     "/problemas/computador-desliga-sozinho",
     "/problemas/computador-lento",
@@ -560,6 +594,7 @@ const PROBLEMA_LINKS = {
     "/como-funciona",
   ],
   "/problemas/tv-com-linhas-na-tela": [
+    "/problemas",
     "/servicos/conserto-tv",
     "/servicos/conserto-placa",
     "/problemas/tv-com-som-sem-imagem",
@@ -569,6 +604,7 @@ const PROBLEMA_LINKS = {
     "/como-funciona",
   ],
   "/problemas/hd-nao-reconhecido": [
+    "/problemas",
     "/problemas/pen-drive-nao-reconhecido",
     "/servicos/recuperacao-de-dados",
     "/servicos/manutencao-de-computador",
@@ -579,6 +615,7 @@ const PROBLEMA_LINKS = {
     "/como-funciona",
   ],
   "/problemas/notebook-molhado": [
+    "/problemas",
     "/servicos/manutencao-de-notebook",
     "/servicos/conserto-placa",
     "/servicos/recuperacao-de-dados",

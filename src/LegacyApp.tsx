@@ -466,6 +466,7 @@ const ProblemaNotebookNaoConectaWifi = lazy(() => import("./pages/problemas/Note
 const ProblemaWindowsNaoInicia = lazy(() => import("./pages/problemas/WindowsNaoInicia"));
 const ProblemaWebcamNaoFunciona = lazy(() => import("./pages/problemas/WebcamNaoFunciona"));
 const ProblemaTvNaoConectaWifi = lazy(() => import("./pages/problemas/TvNaoConectaWifi"));
+const ProblemasHub = lazy(() => import("./pages/problemas/ProblemasHub"));
 const ProblemaTvComImagemEscura = lazy(() => import("./pages/problemas/TvComImagemEscura"));
 const ProblemaNotebookSuperaquecendo = lazy(() => import("./pages/problemas/NotebookSuperaquecendo"));
 
@@ -1018,6 +1019,7 @@ const App = () => (
             <Route path="/problemas/notebook-nao-conecta-no-wifi" element={<ProblemaNotebookNaoConectaWifi />} />
             <Route path="/problemas/windows-nao-inicia" element={<ProblemaWindowsNaoInicia />} />
             <Route path="/problemas/webcam-nao-funciona" element={<ProblemaWebcamNaoFunciona />} />
+            <Route path="/problemas" element={<ProblemasHub />} />
             <Route path="/problemas/tv-nao-conecta-no-wifi" element={<ProblemaTvNaoConectaWifi />} />
             <Route path="/problemas/tv-com-imagem-escura" element={<ProblemaTvComImagemEscura />} />
 
