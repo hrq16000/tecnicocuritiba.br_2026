@@ -50,6 +50,11 @@ const AdminDashboard = () => {
   const [dateTo, setDateTo] = useState("");
   const [bairro, setBairro] = useState(ALL);
   const [servico, setServico] = useState(ALL);
+  const [routeFilter, setRouteFilter] = useState(ALL);
+  const [campaignFilter, setCampaignFilter] = useState(ALL);
+  const [pathQuery, setPathQuery] = useState("");
+  const [dedupOn, setDedupOn] = useState(true);
+
 
   const fetchData = async () => {
     if (!isAdmin) return;
