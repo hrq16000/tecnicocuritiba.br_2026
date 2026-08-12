@@ -479,6 +479,7 @@ const PROBLEMA_LINKS = {
     "/como-funciona",
   ],
   "/problemas/hd-nao-reconhecido": [
+    "/problemas/pen-drive-nao-reconhecido",
     "/servicos/recuperacao-de-dados",
     "/servicos/manutencao-de-computador",
     "/servicos/upgrade-ssd-ram",
