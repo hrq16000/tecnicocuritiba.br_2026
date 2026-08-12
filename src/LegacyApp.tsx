@@ -986,6 +986,9 @@ const App = () => (
             <Route path="/problemas/tv-com-linhas-na-tela" element={<ProblemaTvLinhas />} />
             <Route path="/problemas/notebook-com-tela-preta" element={<ProblemaNotebookTelaPreta />} />
             <Route path="/problemas/tv-desligando-sozinha" element={<ProblemaTvDesligando />} />
+            <Route path="/problemas/tv-sem-som" element={<ProblemaTvSemSom />} />
+            <Route path="/problemas/impressora-nao-imprime" element={<ProblemaImpressoraNaoImprime />} />
+
             <Route path="/problemas/notebook-superaquecendo" element={<ProblemaNotebookSuperaquecendo />} />
             <Route path="/guia-tecnico-informatica" element={<GuiaTecnicoInformatica />} />
             <Route path="/problemas/:slug" element={<ProblemaPage />} />
