@@ -1688,6 +1688,82 @@ const BASE_ROUTES = [
   ]
 },
 {
+  "path": "/problemas/windows-nao-inicia",
+  "title": "Windows Não Inicia: Como Recuperar o Sistema | Curitiba",
+  "description": "Windows travado no logo, reparo automático em loop ou mensagem de disco de inicialização não encontrado? Veja como separar falha de sistema, disco com setor ruim e configuração de BIOS antes de formatar, com avaliação técnica em Curitiba.",
+  "h1": "Windows não inicia: sistema, disco ou configuração de boot",
+  "subtitulo": "Computador que liga mas não carrega o sistema quase nunca precisa de formatação imediata.",
+  "blocos": [
+    {
+      "titulo": "A ordem certa de investigar um sistema que não carrega",
+      "paragrafos": [
+        "A primeira pergunta é se o equipamento chega a exibir a marca do fabricante. Se chega, alimentação, memória e vídeo já responderam, e a falha está no caminho entre o firmware e o sistema operacional.",
+        "A segunda pergunta é se o erro é sempre igual. Falha idêntica em toda tentativa aponta para arquivo de sistema ou setor específico do disco; falha que muda de lugar aponta para memória ou alimentação instável."
+      ]
+    },
+    {
+      "titulo": "Sintomas e o que cada um costuma indicar",
+      "paragrafos": [
+        "Travar no logo com a bolinha girando costuma ser driver corrompido, atualização interrompida ou disco com leitura lenta na área do sistema. Reparo automático em loop indica arquivos de boot inconsistentes ou disco respondendo com erro intermitente.",
+        "Mensagem de dispositivo de boot não encontrado significa que o sistema nem chegou a ser lido: ou a ordem de inicialização mudou na BIOS ou o disco não está sendo reconhecido."
+      ]
+    },
+    {
+      "titulo": "Verificações seguras antes de reinstalar qualquer sistema",
+      "paragrafos": [
+        "Retire pen drives e discos externos antes de ligar, observe se aparece a marca do fabricante, fotografe a mensagem exata de erro e desligue da tomada por alguns minutos para descartar travamento de firmware. Nenhum passo apaga dados.",
+        "O que não recomendamos: reinstalar o Windows antes de conhecer a saúde do disco, usar programas de reparo de origem desconhecida e insistir em reiniciar um equipamento que já faz ruído de clique."
+      ]
+    },
+    {
+      "titulo": "O que resolve cada cenário e quais são as condições",
+      "paragrafos": [
+        "Com disco saudável, o reparo do carregador e a correção dos arquivos de boot devolvem o sistema sem formatar. Com erro de leitura, a prioridade muda: primeiro a cópia dos dados, depois a discussão sobre reparo ou troca por SSD.",
+        "Disco com dano físico severo exige sala limpa, procedimento que não executamos, e isso é informado antes de retirar o equipamento.",
+        "Atendimento sem balcão, com retirada e devolução no endereço informado em Curitiba e região. Garantia de 90 dias sobre mão de obra e peça aplicada, limitada ao reparo executado."
+      ]
+    }
+  ]
+},
+{
+  "path": "/problemas/tv-com-imagem-escura",
+  "title": "TV com Imagem Escura: Causas e Conserto | Curitiba",
+  "description": "TV com imagem escura, som normal e tela quase apagada? Veja como separar backlight queimado, placa de fonte, ajuste de brilho e falha do painel antes de trocar o aparelho, com avaliação técnica em Curitiba.",
+  "h1": "TV com imagem escura: iluminação de fundo, fonte ou ajuste",
+  "subtitulo": "Tela escura com som normal quase nunca é painel queimado.",
+  "blocos": [
+    {
+      "titulo": "A ordem certa de investigar uma tela escura",
+      "paragrafos": [
+        "O primeiro teste é gratuito e leva segundos: no escuro, aponte uma lanterna para a tela com o aparelho ligado. Se a imagem aparece fraca mas se move, o painel está funcionando e a iluminação de fundo é a suspeita principal.",
+        "O segundo passo é descartar configuração. Modo economia de energia, sensor de luz ambiente e perfis herdados de modo loja escurecem a tela sem qualquer defeito, e restaurar o padrão de fábrica elimina essa hipótese."
+      ]
+    },
+    {
+      "titulo": "Sintomas e o que cada um costuma indicar",
+      "paragrafos": [
+        "Som normal com imagem quase invisível reforça a suspeita de iluminação. Escurecimento em faixa ou em uma lateral indica trecho da iluminação apagado, e não a tela inteira em falha.",
+        "Quando a TV começa normal e escurece depois de aquecer, a suspeita recai sobre a placa de fonte ou o driver de iluminação, e isso só se confirma medindo tensão com o aparelho já quente."
+      ]
+    },
+    {
+      "titulo": "Verificações seguras antes de trocar o aparelho",
+      "paragrafos": [
+        "Faça o teste da lanterna no escuro, confira se o som continua normal, revise brilho, contraste e sensor de luz ambiente, restaure o perfil de fábrica e teste outra entrada HDMI com outro cabo. Nenhum passo exige abrir o televisor.",
+        "O que não recomendamos: abrir o televisor por conta própria, porque a placa de fonte guarda carga elevada mesmo desligada, e comprar peça anunciada como universal antes da avaliação do modelo."
+      ]
+    },
+    {
+      "titulo": "O que resolve cada cenário e quais são as condições",
+      "paragrafos": [
+        "Substituição das barras de iluminação e revisão do conjunto óptico é serviço de bancada, com teste de uniformidade antes da devolução. Capacitor estufado e driver em proteção exigem medição de tensão e relatório do que foi trocado.",
+        "Painel de televisor trincado ou com falha interna não é recuperado por nós, e isso é informado antes de retirar o aparelho.",
+        "Atendimento sem balcão, com retirada e devolução no endereço informado em Curitiba e região. Garantia de 90 dias sobre mão de obra e peça aplicada, limitada ao reparo executado."
+      ]
+    }
+  ]
+},
+{
   "path": "/problemas/tv-travando",
   "title": "TV Travando ou Muito Lenta: O Que Fazer | Curitiba",
   "description": "Smart TV travando, aplicativo congelando ou controle demorando para responder? Veja como separar memória cheia, aplicativo desatualizado, rede saturada e falha de placa antes de trocar a televisão, com avaliação técnica em Curitiba.",

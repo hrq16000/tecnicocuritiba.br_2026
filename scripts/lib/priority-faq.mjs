@@ -43,6 +43,8 @@ const SOURCES = {
   "/problemas/computador-sem-som": "src/pages/problemas/ComputadorSemSom.tsx",
   "/problemas/tela-do-computador-piscando": "src/pages/problemas/TelaDoComputadorPiscando.tsx",
   "/problemas/notebook-nao-conecta-no-wifi": "src/pages/problemas/NotebookNaoConectaWifi.tsx",
+  "/problemas/windows-nao-inicia": "src/pages/problemas/WindowsNaoInicia.tsx",
+  "/problemas/tv-com-imagem-escura": "src/pages/problemas/TvComImagemEscura.tsx",
   "/problemas/tv-travando": "src/pages/problemas/TvTravando.tsx",
   "/problemas/mouse-nao-funciona": "src/pages/problemas/MouseNaoFunciona.tsx",
   "/problemas/notebook-superaquecendo": "src/pages/problemas/NotebookSuperaquecendo.tsx",

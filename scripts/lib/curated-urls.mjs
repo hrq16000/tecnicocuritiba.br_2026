@@ -201,6 +201,9 @@ export const PROBLEMAS = [
   { path: "/problemas/computador-sem-som", changefreq: "monthly", priority: "0.6" },
   { path: "/problemas/tela-do-computador-piscando", changefreq: "monthly", priority: "0.6" },
   { path: "/problemas/notebook-nao-conecta-no-wifi", changefreq: "monthly", priority: "0.6" },
+  // Onda 22 — falha de inicialização do sistema e tela escura em TV.
+  { path: "/problemas/windows-nao-inicia", changefreq: "monthly", priority: "0.6" },
+  { path: "/problemas/tv-com-imagem-escura", changefreq: "monthly", priority: "0.6" },
   // Onda 21 — smart TV lenta e periférico apontador em desktop.
   { path: "/problemas/tv-travando", changefreq: "monthly", priority: "0.6" },
   { path: "/problemas/mouse-nao-funciona", changefreq: "monthly", priority: "0.6" },
