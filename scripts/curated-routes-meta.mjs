@@ -1308,6 +1308,84 @@ const BASE_ROUTES = [
   },
 
   {
+    "path": "/problemas/computador-nao-liga",
+    "title": "Computador de Mesa N\u00e3o Liga: Diagn\u00f3stico Real | Curitiba",
+    "description": "PC n\u00e3o liga, n\u00e3o d\u00e1 v\u00eddeo ou liga e apaga em seguida? Entenda como separar fonte, bot\u00e3o, placa-m\u00e3e e mem\u00f3ria antes de trocar pe\u00e7a por achismo, e como funciona a coleta em Curitiba.",
+    "h1": "Computador de mesa n\u00e3o liga: como descobrir a causa sem trocar pe\u00e7a por achismo",
+    "subtitulo": "\"N\u00e3o liga\" descreve pelo menos quatro defeitos diferentes, com custos que v\u00e3o de um cabo trocado a reparo de placa \u2014 e a ordem do teste \u00e9 o que evita comprar pe\u00e7a antes do diagn\u00f3stico.",
+    "blocos": [
+      {
+        "titulo": "Quatro defeitos diferentes com o mesmo nome",
+        "paragrafos": [
+          "O aparelho pode estar sem energia nenhuma, pode ligar e cortar em seguida, pode ligar sem completar o POST ou pode completar o POST sem enviar imagem ao monitor. S\u00e3o quatro estados distintos, com causas e custos que n\u00e3o se parecem.",
+          "Em bancada o caminho vai do mais barato ao mais complexo: energia da tomada, cabo, fonte, bot\u00e3o, depois montagem m\u00ednima fora do gabinete e s\u00f3 ent\u00e3o placa. O pr\u00f3prio gabinete \u00e9 uma fonte comum de curto, com espa\u00e7adores mal posicionados e cabos frontais em contato."
+        ]
+      },
+      {
+        "titulo": "Sintomas e o que cada um costuma indicar",
+        "paragrafos": [
+          "Nada acontecer ao apertar o bot\u00e3o aponta cabo, filtro de linha, fonte ou bot\u00e3o do gabinete. Ligar por um segundo e desligar indica prote\u00e7\u00e3o cortando a alimenta\u00e7\u00e3o por curto ou tens\u00e3o fora da faixa.",
+          "Ventoinha girando sem imagem costuma ser mem\u00f3ria, entrada errada no monitor ou placa de v\u00eddeo sem alimenta\u00e7\u00e3o auxiliar. Bips ou LED de diagn\u00f3stico s\u00e3o o melhor cen\u00e1rio: a placa est\u00e1 viva e informa onde parou."
+        ]
+      },
+      {
+        "titulo": "Verifica\u00e7\u00f5es seguras antes de abrir o gabinete",
+        "paragrafos": [
+          "Teste cabo e tomada com outro aparelho, confira a chave 110/220 da fonte, observe se h\u00e1 LED aceso na placa com o PC desligado e anote a sequ\u00eancia de bips. Confirme tamb\u00e9m se o monitor est\u00e1 na entrada correta.",
+          "O que n\u00e3o recomendamos: ligar repetidamente ap\u00f3s estalo ou cheiro de queimado, usar fonte emprestada de pot\u00eancia menor, for\u00e7ar encaixe de mem\u00f3ria e aplicar l\u00edquido de limpeza sobre a placa."
+        ]
+      },
+      {
+        "titulo": "O que resolve cada cen\u00e1rio e quais s\u00e3o as condi\u00e7\u00f5es",
+        "paragrafos": [
+          "Medi\u00e7\u00e3o das tens\u00f5es sob carga com fonte de refer\u00eancia define se a fonte \u00e9 a causa. Montagem m\u00ednima em bancada separa defeito real de curto provocado pelo gabinete. Falha no circuito de alimenta\u00e7\u00e3o da placa segue para reparo em n\u00edvel de componente.",
+          "Se a m\u00e1quina n\u00e3o for vi\u00e1vel, a unidade de armazenamento \u00e9 lida \u00e0 parte e os arquivos s\u00e3o entregues em m\u00eddia separada antes de qualquer decis\u00e3o sobre substituir o equipamento.",
+          "Atendimento apenas por coleta e entrega no endere\u00e7o informado, sem balc\u00e3o. Nenhuma pe\u00e7a \u00e9 trocada sem sua aprova\u00e7\u00e3o. Garantia de 90 dias sobre m\u00e3o de obra e pe\u00e7as aplicadas, limitada ao bloco reparado."
+        ]
+      }
+    ]
+  },
+
+  {
+    "path": "/problemas/teclado-de-notebook-nao-funciona",
+    "title": "Teclado do Notebook N\u00e3o Funciona: Causas e Troca | Curitiba",
+    "description": "Teclas que n\u00e3o respondem, teclado morto ou digitando sozinho? Entenda quando \u00e9 software, cabo flat, l\u00edquido ou placa, o que a troca resolve e como funciona a coleta em Curitiba.",
+    "h1": "Teclado de notebook n\u00e3o funciona: quando \u00e9 ajuste, quando \u00e9 pe\u00e7a",
+    "subtitulo": "Parte dos casos \u00e9 layout de idioma trocado, cabo flat solto ou res\u00edduo sob a tecla. A outra parte precisa de substitui\u00e7\u00e3o, e o custo muda conforme o teclado seja pe\u00e7a independente ou venha rebitado \u00e0 carca\u00e7a.",
+    "blocos": [
+      {
+        "titulo": "Dois grupos de causa, custos muito diferentes",
+        "paragrafos": [
+          "No primeiro grupo est\u00e3o as falhas que n\u00e3o exigem pe\u00e7a: idioma configurado errado, driver corrompido ap\u00f3s atualiza\u00e7\u00e3o, cabo flat solto do conector e sujeira sob teclas espec\u00edficas. S\u00e3o casos de ajuste ou limpeza.",
+          "No segundo est\u00e3o membrana rompida por desgaste, res\u00edduo de l\u00edquido entre as camadas e cabo flat partido na dobradi\u00e7a. A\u00ed a substitui\u00e7\u00e3o \u00e9 inevit\u00e1vel, e testar antes evita comprar teclado para um problema que era de configura\u00e7\u00e3o."
+        ]
+      },
+      {
+        "titulo": "Sintomas e o que cada um costuma indicar",
+        "paragrafos": [
+          "Teclado inteiro parado aponta cabo flat ou conector. Teclas isoladas apontam membrana ou sujeira, e falhas na mesma linha ou coluna indicam trilha rompida. Caracteres repetidos sugerem res\u00edduo mantendo contato permanente.",
+          "Falha que muda conforme o \u00e2ngulo da tela \u00e9 cabo flat na dobradi\u00e7a. Teclado e touchpad parando juntos mudam o cen\u00e1rio: costuma ser o controlador na placa-m\u00e3e, n\u00e3o o teclado."
+        ]
+      },
+      {
+        "titulo": "Verifica\u00e7\u00f5es que voc\u00ea mesmo pode fazer",
+        "paragrafos": [
+          "Ligue um teclado USB para separar sistema de hardware, teste dentro da BIOS, que roda antes do Windows, e confira o idioma configurado antes de concluir defeito. Observe se a falha muda ao mover a tela.",
+          "O que n\u00e3o recomendamos: lavar o teclado com \u00e1gua, secar com secador quente, arrancar teclas com objeto met\u00e1lico e continuar digitando em teclado que recebeu l\u00edquido a\u00e7ucarado."
+        ]
+      },
+      {
+        "titulo": "O que resolve cada cen\u00e1rio e quais s\u00e3o as condi\u00e7\u00f5es",
+        "paragrafos": [
+          "Reencaixe e limpeza do conector ZIF resolvem boa parte dos casos sem troca de pe\u00e7a. Quando a membrana est\u00e1 comprometida, a substitui\u00e7\u00e3o \u00e9 por pe\u00e7a de mesmo layout e conector, testada tecla a tecla antes de fechar.",
+          "Casos com l\u00edquido passam por limpeza t\u00e9cnica com desmontagem completa e secagem controlada. Falha simult\u00e2nea de teclado e touchpad segue para avalia\u00e7\u00e3o em n\u00edvel de componente.",
+          "Atendimento apenas por coleta e entrega no endere\u00e7o informado, sem balc\u00e3o. Garantia de 90 dias sobre m\u00e3o de obra e teclado aplicado; novo derramamento, queda ou press\u00e3o sobre a carca\u00e7a s\u00e3o danos novos."
+        ]
+      }
+    ]
+  },
+
+  {
     "path": "/problemas/hd-nao-reconhecido",
     "title": "HD ou SSD Não é Reconhecido: O Que Fazer | Curitiba",
     "description": "O computador não reconhece o HD ou SSD? Entenda a diferença entre falha de cabo, de partição e de mecânica, por que insistir reduz a chance de recuperar arquivos e como funciona a coleta em Curitiba.",

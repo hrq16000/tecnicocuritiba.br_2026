@@ -178,6 +178,9 @@ export const PROBLEMAS = [
   // Onda 10
   { path: "/problemas/tv-com-som-sem-imagem", changefreq: "monthly", priority: "0.6" },
   { path: "/problemas/notebook-molhado", changefreq: "monthly", priority: "0.6" },
+  // Onda 12 — energia/POST em desktop e teclado de notebook, ambos autorais.
+  { path: "/problemas/computador-nao-liga", changefreq: "monthly", priority: "0.6" },
+  { path: "/problemas/teclado-de-notebook-nao-funciona", changefreq: "monthly", priority: "0.6" },
   // Onda 11
   { path: "/problemas/tela-de-notebook-quebrada", changefreq: "monthly", priority: "0.6" },
   { path: "/problemas/hd-nao-reconhecido", changefreq: "monthly", priority: "0.6" },

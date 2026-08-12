@@ -443,6 +443,8 @@ const ProblemaTvComSomSemImagem = lazy(() => import("./pages/problemas/TvComSomS
 const ProblemaNotebookMolhado = lazy(() => import("./pages/problemas/NotebookMolhado"));
 const ProblemaTelaNotebookQuebrada = lazy(() => import("./pages/problemas/TelaDeNotebookQuebrada"));
 const ProblemaHdNaoReconhecido = lazy(() => import("./pages/problemas/HdNaoReconhecido"));
+const ProblemaComputadorNaoLiga = lazy(() => import("./pages/problemas/ComputadorNaoLiga"));
+const ProblemaTecladoNotebook = lazy(() => import("./pages/problemas/TecladoNotebookNaoFunciona"));
 const ProblemaNotebookSuperaquecendo = lazy(() => import("./pages/problemas/NotebookSuperaquecendo"));
 
 // Pillar do cluster de informática
@@ -972,6 +974,8 @@ const App = () => (
             <Route path="/problemas/notebook-molhado" element={<ProblemaNotebookMolhado />} />
             <Route path="/problemas/tela-de-notebook-quebrada" element={<ProblemaTelaNotebookQuebrada />} />
             <Route path="/problemas/hd-nao-reconhecido" element={<ProblemaHdNaoReconhecido />} />
+            <Route path="/problemas/computador-nao-liga" element={<ProblemaComputadorNaoLiga />} />
+            <Route path="/problemas/teclado-de-notebook-nao-funciona" element={<ProblemaTecladoNotebook />} />
             <Route path="/problemas/notebook-superaquecendo" element={<ProblemaNotebookSuperaquecendo />} />
             <Route path="/guia-tecnico-informatica" element={<GuiaTecnicoInformatica />} />
             <Route path="/problemas/:slug" element={<ProblemaPage />} />
