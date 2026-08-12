@@ -8,8 +8,10 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { supabase } from "@/integrations/supabase/client";
 import { useAdminAuth } from "@/hooks/useAdminAuth";
 import { filtrarComerciais } from "@/lib/qaExclusion";
-import { Loader2, RefreshCw, Download, LogOut } from "lucide-react";
+import { aggregateByHour, dedupeClickEvents, detectDropAlerts } from "@/lib/clickInsights";
+import { Loader2, RefreshCw, Download, LogOut, AlertTriangle } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
+
 
 type ClickEvent = {
   id: string;
