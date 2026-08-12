@@ -51,6 +51,8 @@ export const INTENT_MATRIX = [
   { path: "/problemas/computador-lento", keyword: "computador lento", role: "sintoma lentidao", notCompeting: ["/servicos/manutencao-de-computador", "/servicos/formatacao", "/servicos/upgrade-ssd-ram"] },
   { path: "/problemas/tela-azul-windows", keyword: "tela azul windows", role: "sintoma instabilidade do sistema", notCompeting: ["/servicos/formatacao", "/servicos/upgrade-ssd-ram", "/problemas/computador-lento"] },
   { path: "/problemas/notebook-superaquecendo", keyword: "notebook superaquecendo", role: "sintoma temperatura", notCompeting: ["/servicos/manutencao-de-notebook", "/problemas/notebook-nao-liga", "/problemas/computador-lento"] },
+  { path: "/problemas/notebook-nao-carrega-bateria", keyword: "notebook nao carrega bateria", role: "sintoma de carga e alimentacao", notCompeting: ["/servicos/manutencao-de-notebook", "/problemas/notebook-nao-liga", "/servicos/conserto-placa"] },
+  { path: "/problemas/tv-nao-liga", keyword: "tv nao liga", role: "sintoma de tv", notCompeting: ["/servicos/conserto-tv", "/servicos/conserto-placa", "/problemas/notebook-nao-liga"] },
 ];
 
 const P0 = new Set(INTENT_MATRIX.map((i) => i.path));

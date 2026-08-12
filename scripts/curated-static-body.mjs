@@ -156,6 +156,8 @@ const SHORT_LABEL = {
   "/problemas/notebook-nao-liga": "Notebook não liga",
   "/problemas/tela-azul-windows": "Tela azul no Windows",
   "/problemas/notebook-superaquecendo": "Notebook superaquecendo",
+  "/problemas/notebook-nao-carrega-bateria": "Notebook não carrega a bateria",
+  "/problemas/tv-nao-liga": "TV não liga",
   "/seguranca-dos-dados": "Segurança dos dados",
   "/servicos/suporte-home-office": "Suporte para home office",
   "/servicos/montagem-de-pc": "Montagem de PC e PC Gamer",
@@ -275,6 +277,25 @@ const PROBLEMA_LINKS = {
     "/precos-e-politicas",
     "/como-funciona",
   ],
+  "/problemas/notebook-nao-carrega-bateria": [
+    "/servicos/manutencao-de-notebook",
+    "/servicos/conserto-placa",
+    "/diagnostico-tecnico",
+    "/problemas/notebook-nao-liga",
+    "/problemas/notebook-superaquecendo",
+    "/guia-tecnico-informatica",
+    "/precos-e-politicas",
+    "/como-funciona",
+  ],
+  "/problemas/tv-nao-liga": [
+    "/servicos/conserto-tv",
+    "/servicos/conserto-placa",
+    "/coleta-e-entrega",
+    "/quando-nao-compensa",
+    "/equipamentos-atendidos",
+    "/precos-e-politicas",
+    "/como-funciona",
+  ],
 };
 
 /** Saídas obrigatórias do cluster empresarial (contrato editorial da onda 3D). */
@@ -283,9 +304,19 @@ const SERVICO_LINKS = {
   // /problemas/* órfão (só existiam no bundle React).
   "/servicos/manutencao-de-notebook": [
     "/problemas/notebook-nao-liga",
+    "/problemas/notebook-nao-carrega-bateria",
     "/servicos",
     "/servicos/formatacao",
     "/servicos/upgrade-ssd-ram",
+    "/precos-e-politicas",
+    "/contato",
+  ],
+  // Onda 8 — entrada obrigatória para o sintoma de TV no HTML servido.
+  "/servicos/conserto-tv": [
+    "/problemas/tv-nao-liga",
+    "/servicos/conserto-placa",
+    "/coleta-e-entrega",
+    "/quando-nao-compensa",
     "/precos-e-politicas",
     "/contato",
   ],

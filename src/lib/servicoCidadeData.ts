@@ -110,14 +110,14 @@ export function getFaqPorServico(servicoSlug: string, cidadeNome: string): FaqIt
       { pergunta: "Tem garantia?", resposta: "Sim, todos os serviços contam com garantia por escrito." },
     ],
     "conserto-tv": [
-      { pergunta: `Vocês fazem visita técnica para TV em ${cidadeNome}?`, resposta: `Não. Para TVs, o equipamento precisa ser trazido à oficina ou podemos organizar coleta em ${cidadeNome}. Não realizamos visita técnica a domicílio para televisores.` },
+      { pergunta: `Vocês fazem visita técnica para TV em ${cidadeNome}?`, resposta: `Não. Para TVs, o atendimento é por coleta e entrega em ${cidadeNome}: retiramos o aparelho no seu endereço, avaliamos em bancada e devolvemos testado. Não realizamos visita técnica a domicílio para televisores.` },
       { pergunta: "Quanto custa consertar TV?", resposta: "O valor depende do defeito e da peça necessária. Fazemos diagnóstico e informamos o valor antes de qualquer execução. Sem compromisso." },
       { pergunta: "Consertam Smart TV?", resposta: "Sim. LED, LCD, OLED, Smart TV de todas as marcas: Samsung, LG, Sony, TCL, Philips e mais." },
       { pergunta: "Quanto tempo leva?", resposta: "Depende do defeito e disponibilidade de peças. Em geral, de 3 a 10 dias úteis." },
       { pergunta: "Consertam tela quebrada de TV?", resposta: "Avaliamos caso a caso. Em muitos modelos, a troca do painel custa quase o valor de uma TV nova. Orientamos com honestidade." },
     ],
     "conserto-celular": [
-      { pergunta: `Vocês fazem visita para celular em ${cidadeNome}?`, resposta: `Não. Para celulares, o aparelho precisa ser trazido à oficina. Não fazemos visita a domicílio para smartphones.` },
+      { pergunta: `Vocês fazem visita para celular em ${cidadeNome}?`, resposta: `Não. Para celulares, o aparelho é retirado e devolvido por coleta e entrega. Não fazemos visita a domicílio para smartphones.` },
       { pergunta: "Quanto custa trocar tela de celular?", resposta: "Depende do modelo. Fazemos diagnóstico e informamos o valor antes de executar. Sem compromisso." },
       { pergunta: "Consertam iPhone?", resposta: "Sim. Trabalhamos com todos os modelos de iPhone, com telas originais e compatíveis de alta qualidade." },
       { pergunta: "Quanto tempo leva o reparo?", resposta: "Reparos simples (tela, bateria) ficam prontos em poucas horas. Defeitos de placa podem levar 3 a 5 dias." },

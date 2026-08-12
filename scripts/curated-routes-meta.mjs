@@ -1037,6 +1037,83 @@ const BASE_ROUTES = [
     ]
   },
   {
+    "path": "/problemas/notebook-nao-carrega-bateria",
+    "title": "Notebook Não Carrega a Bateria? Diagnóstico em Curitiba",
+    "description": "Notebook conectado à tomada mas sem carregar, parado em uma porcentagem fixa ou funcionando só no cabo: entenda o que é bateria, carregador, conector de energia ou placa, e o que verificar antes do atendimento.",
+    "h1": "Notebook não carrega a bateria: como separar bateria, carregador e placa",
+    "subtitulo": "Entre a tomada e a célula existem cabo, fonte, conector, circuito de carga e controlador. Cada etapa falha de um jeito diferente e produz o mesmo sintoma visível: a porcentagem que não sobe.",
+    "blocos": [
+      {
+        "titulo": "O caminho da energia até a bateria",
+        "paragrafos": [
+          "A energia passa por cinco etapas antes de chegar à célula: tomada e cabo, fonte externa, conector de alimentação na carcaça, circuito de carga na placa e o controlador que decide quando carregar.",
+          "Substituir a bateria com o conector rompido não resolve, e trocar o carregador com o circuito de carga danificado também não. O diagnóstico segue esse caminho, do mais barato de descartar ao mais complexo."
+        ]
+      },
+      {
+        "titulo": "Sintomas que separam as causas",
+        "paragrafos": [
+          "\"Conectado, não carregando\" indica que energia chega e o bloqueio está na etapa de carga. Desligar na hora ao remover o cabo aponta bateria sem capacidade ou contato interno rompido.",
+          "Carga travada em porcentagem fixa pode ser limite configurado pelo fabricante. Carga que aparece e some ao mexer no cabo direciona para conector de energia, não para a bateria."
+        ]
+      },
+      {
+        "titulo": "O que você pode verificar antes do atendimento",
+        "paragrafos": [
+          "Testar em outra tomada sem extensão, observar o LED de carga, anotar a mensagem exibida pelo sistema, verificar se o cabo esquenta e checar se há limite de carga habilitado no aplicativo do fabricante.",
+          "O que não recomendamos: emendar cabo rompido com fita, usar fonte de outro modelo sem conferir tensão e corrente e insistir na carga com carcaça deformada ou aquecimento anormal."
+        ]
+      },
+      {
+        "titulo": "O que resolve cada tipo de causa",
+        "paragrafos": [
+          "Leitura de saúde da bateria separa desgaste real de bloqueio por outro motivo. Teste de carregador identifica fonte de potência inferior, causa frequente de carga lenta ou inexistente.",
+          "Ressolda do conector de energia atende os casos de carga intermitente. Quando bateria e fonte estão saudáveis, a investigação passa ao circuito de carga da placa, com medição ponto a ponto.",
+          "Bateria estufada, carcaça deformada ou aquecimento na região da bateria exigem interrupção imediata do uso e avaliação antes de nova tentativa de carga."
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/problemas/tv-nao-liga",
+    "title": "TV Não Liga? Diagnóstico Técnico de TV em Curitiba",
+    "description": "TV que não liga, com LED piscando, som sem imagem ou desligando sozinha: entenda o que é fonte, placa principal, backlight ou painel, o que verificar antes do atendimento e quando o reparo não compensa.",
+    "h1": "TV não liga: como separar fonte, placa, iluminação e painel",
+    "subtitulo": "Em uma TV, \"não liga\" descreve pelo menos quatro situações diferentes, e cada uma leva a um custo e a um desfecho distintos.",
+    "blocos": [
+      {
+        "titulo": "Os quatro cenários por trás de \"a TV não liga\"",
+        "paragrafos": [
+          "Ausência total de reação concentra a suspeita na fonte. LED aceso sem partida direciona à placa principal, porque a energia de espera existe mas a inicialização não completa.",
+          "Som funcionando com tela escura costuma ser iluminação da tela, não painel queimado — é o cenário com melhor desfecho de reparo. Painel trincado ou com mancha extensa não tem conserto que compense."
+        ]
+      },
+      {
+        "titulo": "Causas mais frequentes nos atendimentos de TV",
+        "paragrafos": [
+          "Capacitores da fonte com perda de característica, proteção de entrada aberta após oscilação da rede e etapa de iluminação com uma barra interrompida respondem pela maior parte dos casos.",
+          "Firmware corrompido por atualização interrompida, cabo flat com mau contato e configuração de temporizador também aparecem, e são as hipóteses mais baratas de descartar."
+        ]
+      },
+      {
+        "titulo": "O que você pode verificar antes do atendimento",
+        "paragrafos": [
+          "Testar em outra tomada sem filtro de linha, contar as piscadas do LED, tentar ligar pelo botão físico e, no escuro, iluminar a tela de lado com lanterna para ver se aparece imagem apagada.",
+          "O que não recomendamos: abrir o gabinete por conta própria, já que há componentes que retêm carga mesmo fora da tomada, e apoiar a TV deitada sobre a tela."
+        ]
+      },
+      {
+        "titulo": "O que resolve cada tipo de causa e quando recusamos o serviço",
+        "paragrafos": [
+          "Reparo de fonte é a intervenção mais frequente e a de melhor relação custo-benefício após oscilação elétrica. Reparo de placa principal depende de medição ponto a ponto antes de qualquer promessa.",
+          "Reparo da iluminação da tela atende o clássico \"som sim, imagem não\", dependendo da disponibilidade do conjunto compatível. Não trocamos painel: a peça vale quase o aparelho.",
+          "Garantia de 90 dias sobre a mão de obra, restrita ao defeito tratado. Peças seguem a garantia do fornecedor. Não há atendimento em balcão: o aparelho é retirado e devolvido no endereço combinado."
+        ]
+      }
+    ]
+  },
+
+  {
     "path": "/problemas/notebook-nao-liga",
     "title": "Notebook Não Liga? Assistência Técnica em Curitiba",
     "description": "Notebook não liga ou liga sem imagem? Entenda os sinais, as causas possíveis, os testes externos seguros e como funciona o diagnóstico técnico em Curitiba.",

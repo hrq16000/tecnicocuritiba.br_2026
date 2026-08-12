@@ -15,6 +15,9 @@ export const LASTMOD = {
   "/problemas/computador-lento": "2026-08-09",
   // Onda 6 — novos sintomas curados
   "/problemas/tela-azul-windows": "2026-08-12",
+  // Onda 8 — sintomas de carga (notebook) e TV
+  "/problemas/notebook-nao-carrega-bateria": "2026-08-12",
+  "/problemas/tv-nao-liga": "2026-08-12",
   "/problemas/notebook-superaquecendo": "2026-08-12",
   // Frente de monetização — página comercial de patrocínio
   "/anuncie": "2026-08-08",
