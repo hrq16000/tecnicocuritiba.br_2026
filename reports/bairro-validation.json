@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-06T03:47:14.082Z",
+  "generatedAt": "2026-08-12T05:03:32.097Z",
   "bairros": [
     {
       "slug": "batel",
@@ -72,6 +72,20 @@
       "status": "ok"
     },
     {
+      "slug": "ecoville",
+      "nome": "Ecoville",
+      "palavrasProprias": 235,
+      "palavrasUnicas": 203,
+      "status": "ok"
+    },
+    {
+      "slug": "alto-da-xv",
+      "nome": "Alto da XV",
+      "palavrasProprias": 213,
+      "palavrasUnicas": 195,
+      "status": "ok"
+    },
+    {
       "slug": "reboucas",
       "nome": "Rebouças",
       "palavrasProprias": 215,
@@ -82,8 +96,38 @@
   "pairs": [
     {
       "a": "jardim-das-americas",
+      "b": "ecoville",
+      "jaccard": 0.09,
+      "status": "ok"
+    },
+    {
+      "a": "jardim-das-americas",
+      "b": "alto-da-xv",
+      "jaccard": 0.107,
+      "status": "ok"
+    },
+    {
+      "a": "jardim-das-americas",
       "b": "reboucas",
       "jaccard": 0.126,
+      "status": "ok"
+    },
+    {
+      "a": "ecoville",
+      "b": "alto-da-xv",
+      "jaccard": 0.099,
+      "status": "ok"
+    },
+    {
+      "a": "ecoville",
+      "b": "reboucas",
+      "jaccard": 0.112,
+      "status": "ok"
+    },
+    {
+      "a": "alto-da-xv",
+      "b": "reboucas",
+      "jaccard": 0.098,
       "status": "ok"
     }
   ]
