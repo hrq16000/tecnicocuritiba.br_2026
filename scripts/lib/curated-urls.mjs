@@ -164,6 +164,8 @@ export const WIFI_TV_BAIRRO = [
  * URLs com conteúdo próprio de sintoma, distinto da página de serviço-mãe.
  */
 export const PROBLEMAS = [
+  // Hub do cluster de sintomas: índice autoral que distribui autoridade interna.
+  { path: "/problemas", changefreq: "weekly", priority: "0.7" },
   { path: "/problemas/notebook-nao-liga", changefreq: "monthly", priority: "0.6" },
   { path: "/problemas/computador-lento", changefreq: "monthly", priority: "0.6" },
   // Onda 6 — sintomas reformados com conteúdo exclusivo (tela azul e aquecimento).

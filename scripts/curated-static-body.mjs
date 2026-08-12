@@ -153,6 +153,7 @@ const SHORT_LABEL = {
   "/equipamentos-atendidos": "Equipamentos atendidos",
   "/areas-atendidas": "Áreas atendidas",
   "/quando-nao-compensa": "Quando não compensa reparar",
+  "/problemas": "Problemas atendidos",
   "/problemas/notebook-nao-liga": "Notebook não liga",
   "/problemas/tela-azul-windows": "Tela azul no Windows",
   "/problemas/notebook-superaquecendo": "Notebook superaquecendo",
