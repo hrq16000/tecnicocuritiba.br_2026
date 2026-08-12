@@ -1,3 +1,4 @@
+import { SkeletonText } from "@/components/motion/Skeletons";
 import { useEffect, useMemo, useState } from "react";
 import { Navigate } from "react-router-dom";
 import { Helmet } from "react-helmet";

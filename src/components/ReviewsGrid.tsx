@@ -1,3 +1,4 @@
+import { SkeletonCardGrid } from "@/components/motion/Skeletons";
 import { useEffect, useState } from "react";
 import { Star, MessageCircle, ShieldCheck, Truck, BadgeCheck, Clock } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
