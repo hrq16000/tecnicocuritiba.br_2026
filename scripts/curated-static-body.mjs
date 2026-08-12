@@ -396,6 +396,7 @@ const SERVICO_LINKS = {
   "/servicos/manutencao-de-computador": [
     "/problemas/computador-lento",
     "/problemas/computador-desliga-sozinho",
+    "/problemas/hd-nao-reconhecido",
     "/servicos",
     "/servicos/formatacao",
     "/servicos/upgrade-ssd-ram",
