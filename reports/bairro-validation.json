@@ -1,68 +1,68 @@
 {
-  "generatedAt": "2026-08-12T05:03:32.097Z",
+  "generatedAt": "2026-08-12T06:06:53.237Z",
   "bairros": [
     {
       "slug": "batel",
       "nome": "Batel",
-      "palavrasProprias": 0,
-      "palavrasUnicas": 0,
-      "status": "warn:sem-narrativa"
+      "palavrasProprias": 215,
+      "palavrasUnicas": 198,
+      "status": "ok"
     },
     {
       "slug": "centro",
       "nome": "Centro",
-      "palavrasProprias": 0,
-      "palavrasUnicas": 0,
-      "status": "warn:sem-narrativa"
+      "palavrasProprias": 216,
+      "palavrasUnicas": 203,
+      "status": "ok"
     },
     {
       "slug": "agua-verde",
       "nome": "Água Verde",
-      "palavrasProprias": 0,
-      "palavrasUnicas": 0,
-      "status": "warn:sem-narrativa"
+      "palavrasProprias": 203,
+      "palavrasUnicas": 190,
+      "status": "ok"
     },
     {
       "slug": "cic",
       "nome": "CIC",
-      "palavrasProprias": 0,
-      "palavrasUnicas": 0,
-      "status": "warn:sem-narrativa"
+      "palavrasProprias": 203,
+      "palavrasUnicas": 188,
+      "status": "ok"
     },
     {
       "slug": "portao",
       "nome": "Portão",
-      "palavrasProprias": 0,
-      "palavrasUnicas": 0,
-      "status": "warn:sem-narrativa"
+      "palavrasProprias": 201,
+      "palavrasUnicas": 189,
+      "status": "ok"
     },
     {
       "slug": "bigorrilho",
       "nome": "Bigorrilho",
-      "palavrasProprias": 0,
-      "palavrasUnicas": 0,
-      "status": "warn:sem-narrativa"
+      "palavrasProprias": 209,
+      "palavrasUnicas": 198,
+      "status": "ok"
     },
     {
       "slug": "cabral",
       "nome": "Cabral",
-      "palavrasProprias": 0,
-      "palavrasUnicas": 0,
-      "status": "warn:sem-narrativa"
+      "palavrasProprias": 204,
+      "palavrasUnicas": 189,
+      "status": "ok"
     },
     {
       "slug": "santa-felicidade",
       "nome": "Santa Felicidade",
-      "palavrasProprias": 0,
-      "palavrasUnicas": 0,
-      "status": "warn:sem-narrativa"
+      "palavrasProprias": 203,
+      "palavrasUnicas": 189,
+      "status": "ok"
     },
     {
       "slug": "boa-vista",
       "nome": "Boa Vista",
-      "palavrasProprias": 0,
-      "palavrasUnicas": 0,
-      "status": "warn:sem-narrativa"
+      "palavrasProprias": 204,
+      "palavrasUnicas": 186,
+      "status": "ok"
     },
     {
       "slug": "jardim-das-americas",
@@ -94,6 +94,438 @@
     }
   ],
   "pairs": [
+    {
+      "a": "batel",
+      "b": "centro",
+      "jaccard": 0.081,
+      "status": "ok"
+    },
+    {
+      "a": "batel",
+      "b": "agua-verde",
+      "jaccard": 0.087,
+      "status": "ok"
+    },
+    {
+      "a": "batel",
+      "b": "cic",
+      "jaccard": 0.066,
+      "status": "ok"
+    },
+    {
+      "a": "batel",
+      "b": "portao",
+      "jaccard": 0.087,
+      "status": "ok"
+    },
+    {
+      "a": "batel",
+      "b": "bigorrilho",
+      "jaccard": 0.091,
+      "status": "ok"
+    },
+    {
+      "a": "batel",
+      "b": "cabral",
+      "jaccard": 0.087,
+      "status": "ok"
+    },
+    {
+      "a": "batel",
+      "b": "santa-felicidade",
+      "jaccard": 0.072,
+      "status": "ok"
+    },
+    {
+      "a": "batel",
+      "b": "boa-vista",
+      "jaccard": 0.085,
+      "status": "ok"
+    },
+    {
+      "a": "batel",
+      "b": "jardim-das-americas",
+      "jaccard": 0.109,
+      "status": "ok"
+    },
+    {
+      "a": "batel",
+      "b": "ecoville",
+      "jaccard": 0.108,
+      "status": "ok"
+    },
+    {
+      "a": "batel",
+      "b": "alto-da-xv",
+      "jaccard": 0.098,
+      "status": "ok"
+    },
+    {
+      "a": "batel",
+      "b": "reboucas",
+      "jaccard": 0.073,
+      "status": "ok"
+    },
+    {
+      "a": "centro",
+      "b": "agua-verde",
+      "jaccard": 0.065,
+      "status": "ok"
+    },
+    {
+      "a": "centro",
+      "b": "cic",
+      "jaccard": 0.06,
+      "status": "ok"
+    },
+    {
+      "a": "centro",
+      "b": "portao",
+      "jaccard": 0.071,
+      "status": "ok"
+    },
+    {
+      "a": "centro",
+      "b": "bigorrilho",
+      "jaccard": 0.064,
+      "status": "ok"
+    },
+    {
+      "a": "centro",
+      "b": "cabral",
+      "jaccard": 0.074,
+      "status": "ok"
+    },
+    {
+      "a": "centro",
+      "b": "santa-felicidade",
+      "jaccard": 0.095,
+      "status": "ok"
+    },
+    {
+      "a": "centro",
+      "b": "boa-vista",
+      "jaccard": 0.081,
+      "status": "ok"
+    },
+    {
+      "a": "centro",
+      "b": "jardim-das-americas",
+      "jaccard": 0.09,
+      "status": "ok"
+    },
+    {
+      "a": "centro",
+      "b": "ecoville",
+      "jaccard": 0.066,
+      "status": "ok"
+    },
+    {
+      "a": "centro",
+      "b": "alto-da-xv",
+      "jaccard": 0.131,
+      "status": "ok"
+    },
+    {
+      "a": "centro",
+      "b": "reboucas",
+      "jaccard": 0.099,
+      "status": "ok"
+    },
+    {
+      "a": "agua-verde",
+      "b": "cic",
+      "jaccard": 0.074,
+      "status": "ok"
+    },
+    {
+      "a": "agua-verde",
+      "b": "portao",
+      "jaccard": 0.077,
+      "status": "ok"
+    },
+    {
+      "a": "agua-verde",
+      "b": "bigorrilho",
+      "jaccard": 0.093,
+      "status": "ok"
+    },
+    {
+      "a": "agua-verde",
+      "b": "cabral",
+      "jaccard": 0.074,
+      "status": "ok"
+    },
+    {
+      "a": "agua-verde",
+      "b": "santa-felicidade",
+      "jaccard": 0.068,
+      "status": "ok"
+    },
+    {
+      "a": "agua-verde",
+      "b": "boa-vista",
+      "jaccard": 0.126,
+      "status": "ok"
+    },
+    {
+      "a": "agua-verde",
+      "b": "jardim-das-americas",
+      "jaccard": 0.09,
+      "status": "ok"
+    },
+    {
+      "a": "agua-verde",
+      "b": "ecoville",
+      "jaccard": 0.08,
+      "status": "ok"
+    },
+    {
+      "a": "agua-verde",
+      "b": "alto-da-xv",
+      "jaccard": 0.094,
+      "status": "ok"
+    },
+    {
+      "a": "agua-verde",
+      "b": "reboucas",
+      "jaccard": 0.081,
+      "status": "ok"
+    },
+    {
+      "a": "cic",
+      "b": "portao",
+      "jaccard": 0.053,
+      "status": "ok"
+    },
+    {
+      "a": "cic",
+      "b": "bigorrilho",
+      "jaccard": 0.084,
+      "status": "ok"
+    },
+    {
+      "a": "cic",
+      "b": "cabral",
+      "jaccard": 0.071,
+      "status": "ok"
+    },
+    {
+      "a": "cic",
+      "b": "santa-felicidade",
+      "jaccard": 0.112,
+      "status": "ok"
+    },
+    {
+      "a": "cic",
+      "b": "boa-vista",
+      "jaccard": 0.151,
+      "status": "ok"
+    },
+    {
+      "a": "cic",
+      "b": "jardim-das-americas",
+      "jaccard": 0.106,
+      "status": "ok"
+    },
+    {
+      "a": "cic",
+      "b": "ecoville",
+      "jaccard": 0.092,
+      "status": "ok"
+    },
+    {
+      "a": "cic",
+      "b": "alto-da-xv",
+      "jaccard": 0.107,
+      "status": "ok"
+    },
+    {
+      "a": "cic",
+      "b": "reboucas",
+      "jaccard": 0.091,
+      "status": "ok"
+    },
+    {
+      "a": "portao",
+      "b": "bigorrilho",
+      "jaccard": 0.063,
+      "status": "ok"
+    },
+    {
+      "a": "portao",
+      "b": "cabral",
+      "jaccard": 0.077,
+      "status": "ok"
+    },
+    {
+      "a": "portao",
+      "b": "santa-felicidade",
+      "jaccard": 0.071,
+      "status": "ok"
+    },
+    {
+      "a": "portao",
+      "b": "boa-vista",
+      "jaccard": 0.074,
+      "status": "ok"
+    },
+    {
+      "a": "portao",
+      "b": "jardim-das-americas",
+      "jaccard": 0.073,
+      "status": "ok"
+    },
+    {
+      "a": "portao",
+      "b": "ecoville",
+      "jaccard": 0.059,
+      "status": "ok"
+    },
+    {
+      "a": "portao",
+      "b": "alto-da-xv",
+      "jaccard": 0.073,
+      "status": "ok"
+    },
+    {
+      "a": "portao",
+      "b": "reboucas",
+      "jaccard": 0.087,
+      "status": "ok"
+    },
+    {
+      "a": "bigorrilho",
+      "b": "cabral",
+      "jaccard": 0.072,
+      "status": "ok"
+    },
+    {
+      "a": "bigorrilho",
+      "b": "santa-felicidade",
+      "jaccard": 0.078,
+      "status": "ok"
+    },
+    {
+      "a": "bigorrilho",
+      "b": "boa-vista",
+      "jaccard": 0.1,
+      "status": "ok"
+    },
+    {
+      "a": "bigorrilho",
+      "b": "jardim-das-americas",
+      "jaccard": 0.088,
+      "status": "ok"
+    },
+    {
+      "a": "bigorrilho",
+      "b": "ecoville",
+      "jaccard": 0.099,
+      "status": "ok"
+    },
+    {
+      "a": "bigorrilho",
+      "b": "alto-da-xv",
+      "jaccard": 0.083,
+      "status": "ok"
+    },
+    {
+      "a": "bigorrilho",
+      "b": "reboucas",
+      "jaccard": 0.088,
+      "status": "ok"
+    },
+    {
+      "a": "cabral",
+      "b": "santa-felicidade",
+      "jaccard": 0.059,
+      "status": "ok"
+    },
+    {
+      "a": "cabral",
+      "b": "boa-vista",
+      "jaccard": 0.074,
+      "status": "ok"
+    },
+    {
+      "a": "cabral",
+      "b": "jardim-das-americas",
+      "jaccard": 0.109,
+      "status": "ok"
+    },
+    {
+      "a": "cabral",
+      "b": "ecoville",
+      "jaccard": 0.077,
+      "status": "ok"
+    },
+    {
+      "a": "cabral",
+      "b": "alto-da-xv",
+      "jaccard": 0.076,
+      "status": "ok"
+    },
+    {
+      "a": "cabral",
+      "b": "reboucas",
+      "jaccard": 0.075,
+      "status": "ok"
+    },
+    {
+      "a": "santa-felicidade",
+      "b": "boa-vista",
+      "jaccard": 0.093,
+      "status": "ok"
+    },
+    {
+      "a": "santa-felicidade",
+      "b": "jardim-das-americas",
+      "jaccard": 0.087,
+      "status": "ok"
+    },
+    {
+      "a": "santa-felicidade",
+      "b": "ecoville",
+      "jaccard": 0.074,
+      "status": "ok"
+    },
+    {
+      "a": "santa-felicidade",
+      "b": "alto-da-xv",
+      "jaccard": 0.07,
+      "status": "ok"
+    },
+    {
+      "a": "santa-felicidade",
+      "b": "reboucas",
+      "jaccard": 0.094,
+      "status": "ok"
+    },
+    {
+      "a": "boa-vista",
+      "b": "jardim-das-americas",
+      "jaccard": 0.116,
+      "status": "ok"
+    },
+    {
+      "a": "boa-vista",
+      "b": "ecoville",
+      "jaccard": 0.087,
+      "status": "ok"
+    },
+    {
+      "a": "boa-vista",
+      "b": "alto-da-xv",
+      "jaccard": 0.089,
+      "status": "ok"
+    },
+    {
+      "a": "boa-vista",
+      "b": "reboucas",
+      "jaccard": 0.088,
+      "status": "ok"
+    },
     {
       "a": "jardim-das-americas",
       "b": "ecoville",

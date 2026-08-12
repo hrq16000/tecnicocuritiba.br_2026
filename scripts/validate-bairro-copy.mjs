@@ -10,8 +10,7 @@
  *    editorial acordado na política bairro-pruning.
  *  - Jaccard entre dois bairros indexáveis ≤ 0.55, para evitar canibalização.
  *
- * Bairros herdados (sem `narrativaLocal`) são grandfathered com WARN — só
- * quebram o build a partir da onda 3 (novos slugs com narrativa obrigatória).
+ * Fail-closed: bairro indexável sem `narrativaLocal` quebra o build.
  */
 import { readFileSync, mkdirSync, writeFileSync } from "node:fs";
 import { resolve, dirname } from "node:path";
@@ -92,8 +91,10 @@ for (const e of indexable) {
   };
 
   if (!e.narrativa) {
-    console.warn(`[warn] ${e.slug} (${e.nome}) — sem narrativaLocal (grandfathered). Adicionar antes de re-promover.`);
-    bairroReport.status = "warn:sem-narrativa";
+    // Fail-closed desde a onda de reforma: todo bairro indexável precisa de narrativa exclusiva.
+    console.error(`[fail] ${e.slug} (${e.nome}) — sem narrativaLocal. Escreva copy exclusiva antes de indexar.`);
+    bairroReport.status = "fail:sem-narrativa";
+    failed = true;
   } else if (tokens.length < 200) {
     console.error(`[fail] ${e.slug} (${e.nome}) — ${tokens.length} palavras próprias (mínimo 200).`);
     bairroReport.status = "fail:palavras-insuficientes";
