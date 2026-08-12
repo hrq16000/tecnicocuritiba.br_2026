@@ -1241,14 +1241,14 @@ export const problemaSummaries: ProblemaSummary[] = [
     "slug": "tv-som-sem-video-curitiba",
     "h1": "TV com Som Mas Sem Vídeo — Conserto em Curitiba",
     "categoria": "Problemas de TV",
-    "introSnippet": "Quando a TV tem som mas não tem vídeo, o problema está no backlight ou na T-CON. A placa principal funciona — por isso o áudio está OK.  Necessário trazer a TV à oficina.",
+    "introSnippet": "Quando a TV tem som mas não tem vídeo, o problema está no backlight ou na T-CON. A placa principal funciona — por isso o áudio está OK.  Atendimento em bancada, com coleta e entrega no seu endereço (sem balcão ao público).",
     "gravidade": "Médio"
   },
   {
     "slug": "tv-listras-na-tela-curitiba",
     "h1": "TV com Listras na Tela — Diagnóstico e Conserto em Curitiba",
     "categoria": "Problemas de TV",
-    "introSnippet": "Listras verticais, horizontais, coloridas ou pretas indicam problema no painel, T-CON ou flat cables.  Necessário trazer a TV à oficina.",
+    "introSnippet": "Listras verticais, horizontais, coloridas ou pretas indicam problema no painel, T-CON ou flat cables.  Atendimento em bancada, com coleta e entrega no seu endereço (sem balcão ao público).",
     "gravidade": "Médio a complexo"
   },
   {
@@ -1262,28 +1262,28 @@ export const problemaSummaries: ProblemaSummary[] = [
     "slug": "tv-desliga-sozinha-curitiba",
     "h1": "TV Desliga Sozinha — Diagnóstico e Conserto em Curitiba",
     "categoria": "Problemas de TV",
-    "introSnippet": "TV que desliga sozinha pode ser timer, superaquecimento ou placa fonte. Verifique configurações antes de trazer.  Necessário trazer a TV à oficina.",
+    "introSnippet": "TV que desliga sozinha pode ser timer, superaquecimento ou placa fonte. Verifique configurações antes de trazer.  Atendimento em bancada, com coleta e entrega no seu endereço (sem balcão ao público).",
     "gravidade": "Médio"
   },
   {
     "slug": "smart-tv-lenta-curitiba",
     "h1": "Smart TV Lenta ou Travando — Solução em Curitiba",
     "categoria": "Problemas de TV",
-    "introSnippet": "Smart TVs ficam lentas com o tempo. Cache acumulado, RAM insuficiente e firmware desatualizado são as causas mais comuns.  Necessário trazer a TV à oficina.",
+    "introSnippet": "Smart TVs ficam lentas com o tempo. Cache acumulado, RAM insuficiente e firmware desatualizado são as causas mais comuns.  Atendimento em bancada, com coleta e entrega no seu endereço (sem balcão ao público).",
     "gravidade": "Simples"
   },
   {
     "slug": "tv-sem-wifi-curitiba",
     "h1": "TV Sem Wi-Fi ou Sem Internet — Diagnóstico em Curitiba",
     "categoria": "Problemas de TV",
-    "introSnippet": "Smart TV sem Wi-Fi perde Netflix, YouTube e todos os apps. Pode ser módulo Wi-Fi, roteador ou provedor.  Necessário trazer a TV à oficina.",
+    "introSnippet": "Smart TV sem Wi-Fi perde Netflix, YouTube e todos os apps. Pode ser módulo Wi-Fi, roteador ou provedor.  Atendimento em bancada, com coleta e entrega no seu endereço (sem balcão ao público).",
     "gravidade": "Médio"
   },
   {
     "slug": "tv-sem-som-curitiba",
     "h1": "TV Sem Som — Diagnóstico e Conserto em Curitiba",
     "categoria": "Problemas de TV",
-    "introSnippet": "TV com imagem mas sem som pode ser configuração ou hardware. Verifique mudo e saída de áudio antes.  Necessário trazer a TV à oficina.",
+    "introSnippet": "TV com imagem mas sem som pode ser configuração ou hardware. Verifique mudo e saída de áudio antes.  Atendimento em bancada, com coleta e entrega no seu endereço (sem balcão ao público).",
     "gravidade": "Simples a médio"
   },
   {
@@ -1325,7 +1325,7 @@ export const problemaSummaries: ProblemaSummary[] = [
     "slug": "caixa-som-nao-carrega-curitiba",
     "h1": "Caixa de Som Não Carrega — Conserto em Curitiba",
     "categoria": "Problemas de Rádio / Som",
-    "introSnippet": "Caixa de som portátil que não carrega ou descarrega muito rápido. Pode ser conector USB danificado, bateria viciada ou circuito de carga com defeito.  Necessário trazer à oficina",
+    "introSnippet": "Caixa de som portátil que não carrega ou descarrega muito rápido. Pode ser conector USB danificado, bateria viciada ou circuito de carga com defeito.  Atendimento em bancada, com coleta e entrega no seu endereço.",
     "gravidade": "Médio"
   },
   {
@@ -1353,7 +1353,7 @@ export const problemaSummaries: ProblemaSummary[] = [
     "slug": "som-automotivo-nao-funciona-curitiba",
     "h1": "Som Automotivo Não Funciona — Conserto em Curitiba",
     "categoria": "Problemas de Rádio / Som",
-    "introSnippet": "Problema no som do carro? Rádio que não liga, alto-falante queimado, amplificador sem saída ou Bluetooth que não conecta. Trazendo o aparelho à oficina, fazemos o diagnóstico compl",
+    "introSnippet": "Problema no som do carro? Rádio que não liga, alto-falante queimado, amplificador sem saída ou Bluetooth que não conecta. Com a coleta do aparelho para a bancada, fazemos o diagnóstico compl",
     "gravidade": "Simples a médio"
   },
   {
@@ -1395,21 +1395,21 @@ export const problemaSummaries: ProblemaSummary[] = [
     "slug": "tv-imagem-fantasma-curitiba",
     "h1": "TV com Imagem Fantasma — Conserto em Curitiba",
     "categoria": "Problemas de TV",
-    "introSnippet": "Ghosting mostra sombra/duplicação. Em OLED pode ser burn-in (permanente). Em LED/LCD geralmente é T-CON ou flat cable.  Trazer à oficina.",
+    "introSnippet": "Ghosting mostra sombra/duplicação. Em OLED pode ser burn-in (permanente). Em LED/LCD geralmente é T-CON ou flat cable.  Coleta e entrega para bancada.",
     "gravidade": "Médio"
   },
   {
     "slug": "tv-demora-ligar-curitiba",
     "h1": "TV Demora Para Ligar — Diagnóstico em Curitiba",
     "categoria": "Problemas de TV",
-    "introSnippet": "TV saudável liga em 5-15s. Se demora 30+, geralmente capacitores desgastados na fonte.  Trazer à oficina.",
+    "introSnippet": "TV saudável liga em 5-15s. Se demora 30+, geralmente capacitores desgastados na fonte.  Coleta e entrega para bancada.",
     "gravidade": "Médio"
   },
   {
     "slug": "tv-cheiro-queimado-curitiba",
     "h1": "TV com Cheiro de Queimado — Desligue Imediatamente!",
     "categoria": "Problemas de TV",
-    "introSnippet": "DESLIGUE DA TOMADA IMEDIATAMENTE. Cheiro de queimado indica curto-circuito ou componente superaquecido. Risco de incêndio.  URGENTE — Trazer à oficina.",
+    "introSnippet": "DESLIGUE DA TOMADA IMEDIATAMENTE. Cheiro de queimado indica curto-circuito ou componente superaquecido. Risco de incêndio.  URGENTE — coleta prioritária para bancada.",
     "gravidade": "Complexo"
   },
   {
@@ -1423,14 +1423,14 @@ export const problemaSummaries: ProblemaSummary[] = [
     "slug": "tv-sem-cores-curitiba",
     "h1": "TV Sem Cores — Conserto em Curitiba",
     "categoria": "Problemas de TV",
-    "introSnippet": "TV em preto e branco ou cores erradas? Pode ser configuração de acessibilidade ou T-CON/flat cable.  Trazer à oficina.",
+    "introSnippet": "TV em preto e branco ou cores erradas? Pode ser configuração de acessibilidade ou T-CON/flat cable.  Coleta e entrega para bancada.",
     "gravidade": "Médio"
   },
   {
     "slug": "tv-nao-conecta-wifi-bluetooth-curitiba",
     "h1": "TV Não Conecta Wi-Fi nem Bluetooth — Conserto em Curitiba",
     "categoria": "Problemas de TV",
-    "introSnippet": "Wi-Fi e Bluetooth usam mesmo módulo. Quando ambos falham, é o módulo. Pode ser software (reset) ou hardware (troca).  Trazer à oficina.",
+    "introSnippet": "Wi-Fi e Bluetooth usam mesmo módulo. Quando ambos falham, é o módulo. Pode ser software (reset) ou hardware (troca).  Coleta e entrega para bancada.",
     "gravidade": "Médio"
   },
   {

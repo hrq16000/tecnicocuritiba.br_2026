@@ -267,7 +267,7 @@ export default function Diagnostico60s() {
 
         <aside className="mt-12 p-5 rounded-xl border border-border bg-muted/30 text-sm">
           <strong className="block mb-1">Por que esse diagnóstico funciona?</strong>
-          Mais de 90% dos chamados na nossa oficina caem em 1 de 15 padrões. Pré-classificar
+          Mais de 90% dos chamados na nossa bancada caem em 1 de 15 padrões. Pré-classificar
           poupa tempo, evita visita desnecessária e já chega no atendimento certo. Atendemos em
           Curitiba e região metropolitana.
         </aside>
