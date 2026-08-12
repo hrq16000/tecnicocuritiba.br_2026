@@ -66,6 +66,8 @@ export const INTENT_MATRIX = [
   { path: "/problemas/tv-com-linhas-na-tela", keyword: "tv com linhas na tela", role: "sintoma de linhas na imagem de tv", notCompeting: ["/servicos/conserto-tv", "/problemas/tv-com-som-sem-imagem", "/servicos/conserto-placa"] },
   { path: "/problemas/tv-sem-som", keyword: "tv sem som", role: "sintoma de ausencia de audio em tv", notCompeting: ["/servicos/conserto-tv", "/problemas/tv-com-som-sem-imagem", "/problemas/tv-desligando-sozinha", "/servicos/conserto-placa"] },
   { path: "/problemas/impressora-nao-imprime", keyword: "impressora nao imprime", role: "sintoma de falha de impressao", notCompeting: ["/conserto-impressora-curitiba", "/servicos/redes-e-wifi", "/servicos/manutencao-de-computador"] },
+  { path: "/problemas/monitor-sem-sinal", keyword: "monitor sem sinal", role: "sintoma de ausencia de video em desktop", notCompeting: ["/servicos/conserto-monitor", "/problemas/computador-nao-liga", "/problemas/notebook-com-tela-preta", "/servicos/manutencao-de-computador"] },
+  { path: "/problemas/notebook-lento", keyword: "notebook lento", role: "sintoma de lentidao em notebook", notCompeting: ["/problemas/computador-lento", "/servicos/upgrade-ssd-ram", "/servicos/manutencao-de-notebook", "/servicos/formatacao"] },
   { path: "/problemas/teclado-de-notebook-nao-funciona", keyword: "teclado de notebook nao funciona", role: "sintoma de teclado em notebook", notCompeting: ["/servicos/manutencao-de-notebook", "/problemas/notebook-molhado", "/servicos/conserto-placa"] },
 ];
 

@@ -456,6 +456,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { question: "O serviço possui garantia?", answer: "A mão de obra segue as condições publicadas na página de preços e políticas, e a peça segue a garantia do fornecedor ou fabricante. Não existe garantia universal para qualquer falha futura do equipamento." },
     ],
     relacionados: [
+      { label: "Notebook lento: descobrir o gargalo", to: "/problemas/notebook-lento" },
       { label: "Computador lento: investigar o sintoma", to: "/problemas/computador-lento" },
       { label: "Manutenção de notebook", to: "/servicos/manutencao-de-notebook" },
       { label: "Manutenção de computador", to: "/servicos/manutencao-de-computador" },
@@ -1793,6 +1794,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { question: "E se depois da avaliação eu não quiser fazer o conserto?", answer: "Você paga apenas a avaliação e a logística, e o monitor volta montado, com todas as peças e no mesmo estado em que chegou. Não fazemos retenção de equipamento e não desmontamos aparelho recusado para aproveitamento de peça. O laudo é seu e traz o que foi medido, o que foi encontrado e por que recomendamos ou não o reparo — inclusive quando a nossa recomendação é a de não consertar." },
     ],
     relacionados: [
+      { label: "Monitor sem sinal", to: "/problemas/monitor-sem-sinal" },
       { label: "Reparo de placa eletrônica", to: "/servicos/conserto-placa" },
       { label: "Conserto de TV e Smart TV", to: "/servicos/conserto-tv" },
       { label: "Coleta e entrega", to: "/coleta-e-entrega" },

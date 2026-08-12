@@ -32,6 +32,8 @@ export const LASTMOD = {
   "/problemas/tv-desligando-sozinha": "2026-08-14",
   "/problemas/tv-sem-som": "2026-08-12",
   "/problemas/impressora-nao-imprime": "2026-08-12",
+  "/problemas/monitor-sem-sinal": "2026-08-12",
+  "/problemas/notebook-lento": "2026-08-12",
   "/problemas/notebook-superaquecendo": "2026-08-12",
   // Frente de monetização — página comercial de patrocínio
   "/anuncie": "2026-08-08",

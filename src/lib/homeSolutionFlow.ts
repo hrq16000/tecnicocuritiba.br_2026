@@ -228,6 +228,20 @@ export const SOLUTION_FLOW: SolutionProblem[] = [
         mensagem: "A rede da minha empresa está instável. Quero suporte técnico empresarial.",
       },
       {
+        equipamento: "Notebook lento ou travando",
+        solucao: { label: "Notebook lento", path: "/problemas/notebook-lento" },
+        modalidade: "coleta",
+        porque: "Disco mecânico, memória curta e calor acumulado respondem pela maior parte dos casos e exigem bancada.",
+        mensagem: "Meu notebook está muito lento. Quero avaliação do que está travando.",
+      },
+      {
+        equipamento: "Monitor sem sinal",
+        solucao: { label: "Monitor sem sinal", path: "/problemas/monitor-sem-sinal" },
+        modalidade: "coleta",
+        porque: "Teste cruzado separa cabo, saída de vídeo e monitor antes de qualquer orçamento.",
+        mensagem: "Meu monitor está mostrando sem sinal. Quero avaliação técnica.",
+      },
+      {
         equipamento: "Impressora offline ou sem imprimir",
         solucao: { label: "Impressora não imprime", path: "/problemas/impressora-nao-imprime" },
         modalidade: "remoto",

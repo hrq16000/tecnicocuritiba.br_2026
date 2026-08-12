@@ -1422,6 +1422,82 @@ const BASE_ROUTES = [
   ]
 },
 {
+  "path": "/problemas/monitor-sem-sinal",
+  "title": "Monitor Sem Sinal: Causas e Solução | Curitiba",
+  "description": "Monitor mostra \"sem sinal\" com o computador ligado? Veja como separar cabo, entrada errada, placa de vídeo e falha do próprio monitor com testes gratuitos antes de orçar, com avaliação técnica em Curitiba.",
+  "h1": "Monitor sem sinal: cabo, entrada errada, placa de vídeo ou falha do monitor",
+  "subtitulo": "A mensagem de sem sinal quase nunca diz onde está o defeito: ela apenas informa que nenhuma imagem chegou até a entrada selecionada.",
+  "blocos": [
+    {
+      "titulo": "O que a mensagem realmente significa",
+      "paragrafos": [
+        "Sem sinal quer dizer que o monitor está vivo, acordou e não encontrou imagem na entrada que está selecionada. Isso elimina de imediato a hipótese de monitor morto e transfere a investigação para três pontos: o cabo, a saída de vídeo do computador e a entrada escolhida no menu do próprio monitor.",
+        "A sequência correta é de testes cruzados: trocar o cabo, trocar a entrada, ligar o computador em outra tela e ligar o monitor em outro aparelho. Cada troca elimina uma variável, e a maioria dos casos termina aí, sem custo e sem peça."
+      ]
+    },
+    {
+      "titulo": "Sintomas e o que cada um costuma indicar",
+      "paragrafos": [
+        "Computador ligando com ventoinha girando e nenhuma imagem aponta para saída de vídeo, memória mal encaixada ou cabo em falha, não para o monitor. Imagem que some depois de alguns minutos sugere superaquecimento da placa de vídeo ou capacitor de fonte do monitor perdendo capacidade com o aquecimento.",
+        "Quando a imagem só volta ao mexer no cabo, o problema é mecânico: conector frouxo, pino torto ou solda fria na entrada. Perder o vídeo logo após um upgrade ou limpeza costuma ser módulo de memória ou placa de vídeo mal assentados."
+      ]
+    },
+    {
+      "titulo": "Testes gratuitos antes de qualquer orçamento",
+      "paragrafos": [
+        "Troque o cabo por outro em bom estado, percorra manualmente todas as entradas no menu do monitor, ligue o computador em uma TV pela porta HDMI e ligue o monitor em outro aparelho conhecido. Se o computador aparece na TV, o monitor é o suspeito; se não aparece em lugar nenhum, o problema está no computador.",
+        "Em desktop com placa de vídeo dedicada, confirme se o cabo está na placa e não na saída da placa-mãe. Reassentar memória e placa de vídeo com o aparelho desligado da tomada resolve parte real dos casos após limpeza interna."
+      ]
+    },
+    {
+      "titulo": "O que resolve cada cenário e quais são as condições",
+      "paragrafos": [
+        "Quando o teste cruzado aponta para o monitor, o reparo é em nível de componente: fonte interna, placa lógica ou conector. Recusamos troca de painel, porque o custo se aproxima do valor de um monitor novo e informamos isso antes de qualquer serviço.",
+        "Quando o teste aponta para o computador, o caminho é diagnóstico de vídeo em bancada, com reassentamento, teste com placa conhecida e verificação da saída integrada antes de indicar peça.",
+        "Atendimento apenas por coleta e entrega no endereço informado, sem balcão. Garantia de 90 dias sobre mão de obra e peça aplicada, limitada ao bloco reparado."
+      ]
+    }
+  ]
+},
+{
+  "path": "/problemas/notebook-lento",
+  "title": "Notebook Lento: Causas Reais e Solução | Curitiba",
+  "description": "Notebook demorando para ligar, travando ao abrir programas ou lento só na bateria? Veja como separar disco mecânico, memória insuficiente, calor e software antes de trocar de aparelho, com avaliação técnica em Curitiba.",
+  "h1": "Notebook lento: disco mecânico, memória curta, calor ou software acumulado",
+  "subtitulo": "Lentidão tem quatro origens bem diferentes, e cada uma tem um custo próprio: identificar a sua evita gastar com peça, formatação ou aparelho novo.",
+  "blocos": [
+    {
+      "titulo": "A lentidão nasce em um de quatro lugares",
+      "paragrafos": [
+        "Disco, memória, temperatura e software. Um notebook lento está limitado por um desses quatro pontos, e cada um deixa uma assinatura diferente no comportamento do aparelho. Confundir os quatro é o motivo de tanta gente pagar formatação e continuar com o mesmo problema no dia seguinte.",
+        "A leitura do gerenciador de tarefas resolve boa parte da dúvida em dois minutos, sem custo: o recurso que fica em 100% enquanto os outros estão folgados é o gargalo real. Só depois disso faz sentido falar em peça, reinstalação ou limpeza interna."
+      ]
+    },
+    {
+      "titulo": "Sintomas e o que cada um costuma indicar",
+      "paragrafos": [
+        "Inicialização de vários minutos com disco em uso constante é a assinatura do HD mecânico, e nenhuma limpeza de software devolve velocidade nesse caso. Travar ao abrir a segunda ou terceira janela aponta para memória insuficiente.",
+        "Perder desempenho depois de meia hora ligado é proteção térmica reduzindo a frequência do processador, por dissipador obstruído e pasta térmica ressecada. Ficar rápido na tomada e lento na bateria é plano de energia econômico ou bateria degradada."
+      ]
+    },
+    {
+      "titulo": "Testes que você pode fazer antes de acionar alguém",
+      "paragrafos": [
+        "Veja no gerenciador de tarefas qual recurso fica em 100%, confira se o disco do sistema tem menos de 10% livre, desative o que inicia junto com o sistema, remova extensões desconhecidas do navegador e compare o desempenho na tomada e na bateria.",
+        "O que não recomendamos: instalar otimizadores e limpadores de registro, apagar arquivos de sistema para liberar espaço e continuar usando disco que faz estalos antes de salvar os dados."
+      ]
+    },
+    {
+      "titulo": "O que resolve cada cenário e quais são as condições",
+      "paragrafos": [
+        "Troca do disco mecânico por SSD com ajuste de memória resolve a maior parte dos casos e tem ganho imediato no tempo de inicialização. Quando a queda só aparece com o aparelho quente, o caminho é limpeza interna e troca de pasta térmica com teste de temperatura sob carga.",
+        "Reinstalação limpa do sistema é indicada quando a causa é software acumulado, sempre com backup antes e restauração depois. Não vendemos formatação como solução de gargalo físico: se o limite for disco ou memória, dizemos isso antes.",
+        "Atendimento remoto para casos de software e coleta e entrega no endereço informado para serviços de bancada, sem balcão. Garantia de 90 dias sobre mão de obra e peça aplicada, limitada ao serviço executado."
+      ]
+    }
+  ]
+},
+{
   "path": "/problemas/tv-desligando-sozinha",
   "title": "TV Desligando Sozinha: Causas e Conserto | Curitiba",
   "description": "Televisor que desliga sozinho, reinicia ou entra em ciclo de LED piscando? Entenda como separar capacitor de fonte, proteção térmica, ajuste de economia e placa principal, com avaliação por coleta em Curitiba.",
