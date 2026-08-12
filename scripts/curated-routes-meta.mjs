@@ -1612,6 +1612,82 @@ const BASE_ROUTES = [
   ]
 },
 {
+  "path": "/problemas/tela-do-computador-piscando",
+  "title": "Tela do Computador Piscando: O Que Fazer | Curitiba",
+  "description": "Tela piscando, imagem tremendo ou monitor apagando por instantes? Veja como separar cabo, taxa de atualização, driver de vídeo, fonte do monitor e falha na placa antes de comprar peça, com avaliação técnica em Curitiba.",
+  "h1": "Tela do computador piscando: cabo, driver, monitor ou placa de vídeo",
+  "subtitulo": "Piscar de imagem tem quatro origens possíveis, e três delas custam pouco para descartar.",
+  "blocos": [
+    {
+      "titulo": "A ordem certa de investigar imagem piscando",
+      "paragrafos": [
+        "O divisor de águas é observar se o piscar acontece antes ou depois do sistema carregar. Piscar já na tela inicial da BIOS tira o sistema de suspeita e deixa cabo, monitor e saída de vídeo como candidatos.",
+        "O segundo divisor é a carga: piscar que só aparece em jogo, edição de vídeo ou tela cheia aponta para calor e consumo, e não para software."
+      ]
+    },
+    {
+      "titulo": "Sintomas e o que cada um costuma indicar",
+      "paragrafos": [
+        "Tremor em faixas horizontais costuma ser cabo mal encaixado, adaptador sem blindagem ou conector com pino sujo. Apagões curtos indicam perda momentânea de sinal, comum em cabo rompido internamente ou fonte do monitor com capacitor cansado.",
+        "Piscar que acompanha o movimento do cabo já isola o diagnóstico no cabo ou no conector. Em notebook, piscar conforme o ângulo da tampa aponta para cabo flat ou conector de tela."
+      ]
+    },
+    {
+      "titulo": "Verificações seguras antes de comprar qualquer peça",
+      "paragrafos": [
+        "Troque o cabo de vídeo por outro conhecido, ligue o monitor em outro computador, use outra saída de vídeo, reduza a taxa de atualização e tire o equipamento de filtros de linha compartilhados com motores. Nenhum passo exige abrir equipamento.",
+        "O que não recomendamos: abrir o monitor por conta própria, porque a fonte interna guarda carga mesmo desligada da tomada, e comprar placa de vídeo antes de testar o cabo."
+      ]
+    },
+    {
+      "titulo": "O que resolve cada cenário e quais são as condições",
+      "paragrafos": [
+        "Piscar depois do sistema carregar se resolve reinstalando o driver correto do modelo e acertando resolução e taxa de atualização. Fonte interna com capacitor estufado e conector com mau contato são serviços de bancada.",
+        "Painel de monitor trincado não é recuperado por nós, e isso é informado antes de retirar o equipamento.",
+        "Atendimento sem balcão, com retirada e devolução no endereço informado em Curitiba e região. Garantia de 90 dias sobre mão de obra e peça aplicada, limitada ao reparo executado."
+      ]
+    }
+  ]
+},
+{
+  "path": "/problemas/notebook-nao-conecta-no-wifi",
+  "title": "Notebook Não Conecta no Wi-Fi: Como Resolver | Curitiba",
+  "description": "Notebook não conecta no Wi-Fi, não encontra a rede ou conecta sem internet? Veja como separar driver, placa de rede desativada, antena solta e falha do roteador antes de trocar peça, com avaliação técnica em Curitiba.",
+  "h1": "Notebook não conecta no Wi-Fi: driver, adaptador, antena ou roteador",
+  "subtitulo": "Antes de trocar placa ou comprar adaptador, descubra se a falha está no notebook ou na rede.",
+  "blocos": [
+    {
+      "titulo": "A ordem certa de investigar conexão sem fio",
+      "paragrafos": [
+        "A primeira pergunta não é sobre o notebook, e sim sobre a rede: outros aparelhos conectam? Se todos falham, o trabalho é sobre roteador, cabeamento ou provedor, e mexer no notebook não muda nada.",
+        "Confirmado que só o notebook falha, a segunda pergunta é se o adaptador aparece no sistema. Visível empurra a suspeita para perfil de rede, driver e economia de energia; ausente indica módulo desativado ou placa sem contato."
+      ]
+    },
+    {
+      "titulo": "Sintomas e o que cada um costuma indicar",
+      "paragrafos": [
+        "Lista de redes vazia aponta para adaptador desativado, driver ausente ou placa não reconhecida. Conexão estabelecida sem navegação indica DNS, conflito de endereço IP ou link do provedor fora do ar.",
+        "Alcance muito curto é o sintoma clássico de antena interna desconectada, comum depois de manutenção anterior ou troca de tela, porque os cabos de antena passam pela dobradiça."
+      ]
+    },
+    {
+      "titulo": "Verificações seguras antes de trocar qualquer peça",
+      "paragrafos": [
+        "Confira se outro aparelho conecta na mesma rede, verifique modo avião e atalho de rede sem fio, esqueça a rede salva e conecte de novo, reinicie o roteador e teste o roteamento do celular. Nenhum passo exige abrir o notebook.",
+        "O que não recomendamos: instalar programas que prometem turbinar o sinal, resetar o roteador sem a senha do provedor em mãos e abrir o notebook para reencaixar a placa sem experiência."
+      ]
+    },
+    {
+      "titulo": "O que resolve cada cenário e quais são as condições",
+      "paragrafos": [
+        "Driver, perfil de rede e economia de energia costumam ser resolvidos por atendimento remoto, sem retirar o equipamento. Antena desconectada, placa mal encaixada ou módulo em falha são serviços de bancada, com teste de alcance após o reparo.",
+        "Quando o sinal falha em todos os aparelhos, o trabalho passa a ser sobre a rede: posicionamento, canal e cobertura.",
+        "Atendimento sem balcão, com retirada e devolução no endereço informado em Curitiba e região. Garantia de 90 dias sobre mão de obra e peça aplicada, limitada ao reparo executado."
+      ]
+    }
+  ]
+},
+{
   "path": "/problemas/computador-sem-som",
   "title": "Computador Sem Som: Como Resolver | Curitiba",
   "description": "Computador sem som, som só no fone ou saída de áudio sumida do Windows? Veja como separar dispositivo de saída errado, driver, conector danificado e falha no chip de áudio antes de trocar peça, com avaliação em Curitiba.",

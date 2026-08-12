@@ -199,6 +199,8 @@ export const PROBLEMAS = [
   // Onda 19 — dano estrutural em notebook e ausência de áudio em desktop.
   { path: "/problemas/dobradica-do-notebook-quebrada", changefreq: "monthly", priority: "0.6" },
   { path: "/problemas/computador-sem-som", changefreq: "monthly", priority: "0.6" },
+  { path: "/problemas/tela-do-computador-piscando", changefreq: "monthly", priority: "0.6" },
+  { path: "/problemas/notebook-nao-conecta-no-wifi", changefreq: "monthly", priority: "0.6" },
   // Onda 13 — ruído em desktop e linhas na tela de TV, ambos autorais.
   { path: "/problemas/computador-fazendo-barulho", changefreq: "monthly", priority: "0.6" },
   { path: "/problemas/tv-com-linhas-na-tela", changefreq: "monthly", priority: "0.6" },

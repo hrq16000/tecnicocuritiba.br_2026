@@ -228,6 +228,13 @@ export const SOLUTION_FLOW: SolutionProblem[] = [
     descricao: "Sinal fraco em cômodos, quedas constantes ou rede lenta com cabo.",
     opcoes: [
       {
+        equipamento: "Notebook não conecta no Wi-Fi",
+        solucao: { label: "Notebook não conecta no Wi-Fi", path: "/problemas/notebook-nao-conecta-no-wifi" },
+        modalidade: "remoto",
+        porque: "Quando só o notebook falha, driver e perfil de rede resolvem sem retirar o equipamento.",
+        mensagem: "Meu notebook não conecta no Wi-Fi. Quero avaliação técnica.",
+      },
+      {
         equipamento: "Casa ou apartamento",
         solucao: { label: "Redes e Wi-Fi", path: "/servicos/redes-e-wifi" },
         modalidade: "domicilio",
@@ -282,6 +289,13 @@ export const SOLUTION_FLOW: SolutionProblem[] = [
         modalidade: "coleta",
         porque: "Teste cruzado separa cabo, saída de vídeo e monitor antes de qualquer orçamento.",
         mensagem: "Meu monitor está mostrando sem sinal. Quero avaliação técnica.",
+      },
+      {
+        equipamento: "Tela do computador piscando",
+        solucao: { label: "Tela do computador piscando", path: "/problemas/tela-do-computador-piscando" },
+        modalidade: "coleta",
+        porque: "Cabo, taxa de atualização e driver são descartados antes de suspeitar do monitor ou da placa de vídeo.",
+        mensagem: "A tela do meu computador está piscando. Quero avaliação técnica.",
       },
       {
         equipamento: "Impressora offline ou sem imprimir",

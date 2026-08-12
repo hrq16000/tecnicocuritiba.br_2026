@@ -41,6 +41,8 @@ const SOURCES = {
   "/problemas/touchpad-nao-funciona": "src/pages/problemas/TouchpadNaoFunciona.tsx",
   "/problemas/dobradica-do-notebook-quebrada": "src/pages/problemas/DobradicaNotebookQuebrada.tsx",
   "/problemas/computador-sem-som": "src/pages/problemas/ComputadorSemSom.tsx",
+  "/problemas/tela-do-computador-piscando": "src/pages/problemas/TelaDoComputadorPiscando.tsx",
+  "/problemas/notebook-nao-conecta-no-wifi": "src/pages/problemas/NotebookNaoConectaWifi.tsx",
   "/problemas/notebook-superaquecendo": "src/pages/problemas/NotebookSuperaquecendo.tsx",
   "/precos-e-politicas": "src/components/TermosConteudo.tsx",
   "/como-funciona": "src/pages/ComoFunciona.tsx",
