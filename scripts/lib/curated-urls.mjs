@@ -79,6 +79,10 @@ export const BAIRROS = [
   "/bairros/agua-verde",
   "/bairros/centro",
   "/bairros/portao",
+  "/bairros/bigorrilho",
+  "/bairros/santa-felicidade",
+  "/bairros/cabral",
+  "/bairros/cristo-rei",
 ].map((path) => ({ path, changefreq: "monthly", priority: "0.65" }));
 
 /**
