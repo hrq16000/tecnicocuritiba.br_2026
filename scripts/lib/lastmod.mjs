@@ -18,6 +18,8 @@ export const LASTMOD = {
   // Onda 8 — sintomas de carga (notebook) e TV
   "/problemas/notebook-nao-carrega-bateria": "2026-08-12",
   "/problemas/tv-nao-liga": "2026-08-12",
+  "/problemas/computador-desliga-sozinho": "2026-08-12",
+  "/problemas/wifi-caindo-toda-hora": "2026-08-12",
   "/problemas/notebook-superaquecendo": "2026-08-12",
   // Frente de monetização — página comercial de patrocínio
   "/anuncie": "2026-08-08",

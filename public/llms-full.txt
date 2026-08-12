@@ -225,6 +225,8 @@ Demais municípios da Região Metropolitana são avaliados sob consulta pelo Wha
 - [Notebook Superaquecendo? Diagnóstico Técnico em Curitiba](https://tecnico.curitiba.br/problemas/notebook-superaquecendo)
 - [Notebook Não Carrega a Bateria? Diagnóstico em Curitiba](https://tecnico.curitiba.br/problemas/notebook-nao-carrega-bateria)
 - [TV Não Liga? Diagnóstico Técnico de TV em Curitiba](https://tecnico.curitiba.br/problemas/tv-nao-liga)
+- [Computador Desliga Sozinho? Diagnóstico em Curitiba](https://tecnico.curitiba.br/problemas/computador-desliga-sozinho)
+- [Wi-Fi Caindo Toda Hora? Diagnóstico de Rede em Curitiba](https://tecnico.curitiba.br/problemas/wifi-caindo-toda-hora)
 - [Notebook Não Liga? Assistência Técnica em Curitiba](https://tecnico.curitiba.br/problemas/notebook-nao-liga)
 
 ## Páginas institucionais e de política

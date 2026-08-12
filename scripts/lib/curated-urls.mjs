@@ -172,6 +172,9 @@ export const PROBLEMAS = [
   // Onda 8 — sintoma de carga (notebook) e vertical de TV, ambos com conteúdo autoral.
   { path: "/problemas/notebook-nao-carrega-bateria", changefreq: "monthly", priority: "0.6" },
   { path: "/problemas/tv-nao-liga", changefreq: "monthly", priority: "0.6" },
+  // Onda 9 — sintoma de desligamento (hardware/energia) e instabilidade de rede.
+  { path: "/problemas/computador-desliga-sozinho", changefreq: "monthly", priority: "0.6" },
+  { path: "/problemas/wifi-caindo-toda-hora", changefreq: "monthly", priority: "0.6" },
 ];
 
 /**

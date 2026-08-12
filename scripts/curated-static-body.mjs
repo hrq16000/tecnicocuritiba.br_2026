@@ -158,6 +158,8 @@ const SHORT_LABEL = {
   "/problemas/notebook-superaquecendo": "Notebook superaquecendo",
   "/problemas/notebook-nao-carrega-bateria": "Notebook não carrega a bateria",
   "/problemas/tv-nao-liga": "TV não liga",
+  "/problemas/computador-desliga-sozinho": "Computador desliga sozinho",
+  "/problemas/wifi-caindo-toda-hora": "Wi-Fi caindo toda hora",
   "/seguranca-dos-dados": "Segurança dos dados",
   "/servicos/suporte-home-office": "Suporte para home office",
   "/servicos/montagem-de-pc": "Montagem de PC e PC Gamer",
@@ -287,6 +289,24 @@ const PROBLEMA_LINKS = {
     "/precos-e-politicas",
     "/como-funciona",
   ],
+  "/problemas/computador-desliga-sozinho": [
+    "/servicos/manutencao-de-computador",
+    "/servicos/upgrade-ssd-ram",
+    "/servicos/conserto-placa",
+    "/problemas/notebook-superaquecendo",
+    "/problemas/tela-azul-windows",
+    "/quando-nao-compensa",
+    "/precos-e-politicas",
+    "/como-funciona",
+  ],
+  "/problemas/wifi-caindo-toda-hora": [
+    "/servicos/redes-e-wifi",
+    "/servicos/suporte-tecnico-empresarial",
+    "/servicos/suporte-home-office",
+    "/como-funciona",
+    "/precos-e-politicas",
+    "/contato",
+  ],
   "/problemas/tv-nao-liga": [
     "/servicos/conserto-tv",
     "/servicos/conserto-placa",
@@ -311,6 +331,15 @@ const SERVICO_LINKS = {
     "/precos-e-politicas",
     "/contato",
   ],
+  // Onda 9 — entrada obrigatória para o sintoma de rede no HTML servido.
+  "/servicos/redes-e-wifi": [
+    "/problemas/wifi-caindo-toda-hora",
+    "/servicos/suporte-tecnico-empresarial",
+    "/servicos/suporte-home-office",
+    "/como-funciona",
+    "/precos-e-politicas",
+    "/contato",
+  ],
   // Onda 8 — entrada obrigatória para o sintoma de TV no HTML servido.
   "/servicos/conserto-tv": [
     "/problemas/tv-nao-liga",
@@ -322,6 +351,7 @@ const SERVICO_LINKS = {
   ],
   "/servicos/manutencao-de-computador": [
     "/problemas/computador-lento",
+    "/problemas/computador-desliga-sozinho",
     "/servicos",
     "/servicos/formatacao",
     "/servicos/upgrade-ssd-ram",
