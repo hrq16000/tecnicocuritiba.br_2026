@@ -92,14 +92,46 @@ export const SERVICO_BAIRRO = [
   "/servicos/formatacao-computador/cic",
   "/servicos/formatacao-computador/batel",
   "/servicos/formatacao-computador/agua-verde",
+  "/servicos/formatacao-computador/jardim-das-americas",
+  "/servicos/formatacao-computador/ecoville",
+  "/servicos/formatacao-computador/alto-da-xv",
+  "/servicos/formatacao-computador/reboucas",
   "/servicos/remocao-virus/cic",
   "/servicos/remocao-virus/agua-verde",
+  "/servicos/remocao-virus/jardim-das-americas",
+  "/servicos/remocao-virus/ecoville",
+  "/servicos/remocao-virus/alto-da-xv",
+  "/servicos/remocao-virus/reboucas",
   "/servicos/conserto-pc-notebook/centro",
   "/servicos/conserto-pc-notebook/agua-verde",
+  "/servicos/conserto-pc-notebook/jardim-das-americas",
+  "/servicos/conserto-pc-notebook/ecoville",
+  "/servicos/conserto-pc-notebook/alto-da-xv",
+  "/servicos/conserto-pc-notebook/reboucas",
   "/servicos/upgrade-ssd-memoria/cic",
   "/servicos/upgrade-ssd-memoria/centro",
   "/servicos/upgrade-ssd-memoria/agua-verde",
   "/servicos/upgrade-ssd-memoria/portao",
+  "/servicos/upgrade-ssd-memoria/jardim-das-americas",
+  "/servicos/upgrade-ssd-memoria/ecoville",
+  "/servicos/upgrade-ssd-memoria/alto-da-xv",
+  "/servicos/upgrade-ssd-memoria/reboucas",
+].map((path) => ({ path, changefreq: "monthly", priority: "0.6" }));
+
+/**
+ * Onda 1 de liberação de índice — landings Wi-Fi e Smart TV dos bairros com
+ * `narrativaLocal` exclusiva (≥300 palavras) em `wifiTvBairroData.ts`.
+ * Rota estática dedicada, canonical self e robots index.
+ */
+export const WIFI_TV_BAIRRO = [
+  "/servicos/redes-wifi/jardim-das-americas",
+  "/servicos/manutencao-tv/jardim-das-americas",
+  "/servicos/redes-wifi/ecoville",
+  "/servicos/manutencao-tv/ecoville",
+  "/servicos/redes-wifi/alto-da-xv",
+  "/servicos/manutencao-tv/alto-da-xv",
+  "/servicos/redes-wifi/reboucas",
+  "/servicos/manutencao-tv/reboucas",
 ].map((path) => ({ path, changefreq: "monthly", priority: "0.6" }));
 
 /**
