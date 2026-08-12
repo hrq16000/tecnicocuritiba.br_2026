@@ -19,6 +19,8 @@ const SOURCES = {
   "/problemas/tela-azul-windows": "src/pages/problemas/TelaAzulWindows.tsx",
   "/problemas/notebook-nao-carrega-bateria": "src/pages/problemas/NotebookNaoCarregaBateria.tsx",
   "/problemas/tv-nao-liga": "src/pages/problemas/TvNaoLiga.tsx",
+  "/problemas/computador-desliga-sozinho": "src/pages/problemas/ComputadorDesligaSozinho.tsx",
+  "/problemas/wifi-caindo-toda-hora": "src/pages/problemas/WifiCaindoTodaHora.tsx",
   "/problemas/notebook-superaquecendo": "src/pages/problemas/NotebookSuperaquecendo.tsx",
   "/precos-e-politicas": "src/components/TermosConteudo.tsx",
   "/como-funciona": "src/pages/ComoFunciona.tsx",

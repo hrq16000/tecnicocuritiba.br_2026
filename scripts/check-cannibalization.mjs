@@ -53,6 +53,8 @@ export const INTENT_MATRIX = [
   { path: "/problemas/notebook-superaquecendo", keyword: "notebook superaquecendo", role: "sintoma temperatura", notCompeting: ["/servicos/manutencao-de-notebook", "/problemas/notebook-nao-liga", "/problemas/computador-lento"] },
   { path: "/problemas/notebook-nao-carrega-bateria", keyword: "notebook nao carrega bateria", role: "sintoma de carga e alimentacao", notCompeting: ["/servicos/manutencao-de-notebook", "/problemas/notebook-nao-liga", "/servicos/conserto-placa"] },
   { path: "/problemas/tv-nao-liga", keyword: "tv nao liga", role: "sintoma de tv", notCompeting: ["/servicos/conserto-tv", "/servicos/conserto-placa", "/problemas/notebook-nao-liga"] },
+  { path: "/problemas/computador-desliga-sozinho", keyword: "computador desliga sozinho", role: "sintoma de desligamento", notCompeting: ["/servicos/manutencao-de-computador", "/problemas/computador-lento", "/problemas/notebook-superaquecendo", "/problemas/notebook-nao-liga"] },
+  { path: "/problemas/wifi-caindo-toda-hora", keyword: "wifi caindo toda hora", role: "sintoma de rede", notCompeting: ["/servicos/redes-e-wifi", "/servicos/suporte-tecnico-empresarial"] },
 ];
 
 const P0 = new Set(INTENT_MATRIX.map((i) => i.path));

@@ -1114,6 +1114,83 @@ const BASE_ROUTES = [
   },
 
   {
+    "path": "/problemas/computador-desliga-sozinho",
+    "title": "Computador Desliga Sozinho? Diagnóstico em Curitiba",
+    "description": "Computador ou notebook que desliga sozinho, reinicia do nada ou apaga durante jogos: entenda a diferença entre temperatura, fonte, energia e software, o que observar antes do atendimento e como é feito o diagnóstico.",
+    "h1": "Computador desliga sozinho: temperatura, fonte, energia ou software",
+    "subtitulo": "O jeito como o equipamento apaga já separa quatro grupos de causa, e tratar tudo como superaquecimento é o que mais gera troca de peça desnecessária.",
+    "blocos": [
+      {
+        "titulo": "Os quatro grupos por trás de \"desliga do nada\"",
+        "paragrafos": [
+          "O grupo térmico corta a alimentação para proteger o equipamento: desligamento seco, em tempo previsível de uso, pior em tarefa pesada. É o cenário com melhor relação entre custo e resultado.",
+          "O grupo de alimentação aparece quando a fonte não sustenta o pico de consumo. O grupo lógico — memória, armazenamento e driver — costuma reiniciar com registro de erro. O quarto grupo é externo: instalação elétrica com queda de tensão, tomada com mau contato ou extensão sobrecarregada."
+        ]
+      },
+      {
+        "titulo": "Como o equipamento apaga orienta a investigação",
+        "paragrafos": [
+          "Desligamento seco significa que a alimentação foi cortada antes de o sistema registrar qualquer coisa. Reinício com aviso indica falha crítica detectada pelo sistema, o que muda completamente o caminho do diagnóstico.",
+          "Falha só em jogo ou render aponta dissipação ou fonte no limite. Falha ao mexer no cabo aponta mau contato. Falha em horário de pico da casa move a suspeita para a rede elétrica do imóvel."
+        ]
+      },
+      {
+        "titulo": "O que você pode observar antes do atendimento",
+        "paragrafos": [
+          "Anotar se o desligamento é seco ou com aviso de erro, medir em quanto tempo de uso ele acontece, testar outra tomada sem extensão, desconectar periféricos e verificar se a saída de ar está obstruída.",
+          "O que não recomendamos: insistir em ligar depois de cheiro de queimado, aplicar pasta térmica sem limpar o dissipador e manter o uso normal com desligamentos diários, porque cada corte abrupto castiga o armazenamento."
+        ]
+      },
+      {
+        "titulo": "O que resolve cada causa e quais são as condições",
+        "paragrafos": [
+          "Limpeza técnica com troca de pasta térmica atende o grupo térmico, com medição de temperatura antes e depois. Avaliação de fonte cobre a falha que só aparece sob carga. Teste de memória e leitura de saúde do disco tratam o grupo lógico.",
+          "Reparo em nível de componente fica reservado à interrupção de alimentação dentro da placa, sempre após confirmação de viabilidade. Garantia de 90 dias sobre a mão de obra, restrita ao defeito tratado. Não há atendimento em balcão: coleta e entrega ou visita técnica, conforme o caso."
+        ]
+      }
+    ]
+  },
+
+  {
+    "path": "/problemas/wifi-caindo-toda-hora",
+    "title": "Wi-Fi Caindo Toda Hora? Diagnóstico de Rede em Curitiba",
+    "description": "Wi-Fi que cai toda hora, sinal que some em um cômodo ou internet lenta só à noite: entenda a diferença entre falha do provedor, do roteador e da cobertura, o que testar antes e como é feito o diagnóstico de rede em Curitiba.",
+    "h1": "Wi-Fi caindo toda hora: provedor, roteador ou cobertura",
+    "subtitulo": "A causa mais comum de rede instável não é defeito do provedor nem do roteador, e sim cobertura mal distribuída dentro do imóvel.",
+    "blocos": [
+      {
+        "titulo": "Os três cenários por trás de \"o Wi-Fi cai\"",
+        "paragrafos": [
+          "Queda de link derruba todos os aparelhos ao mesmo tempo, inclusive os ligados por cabo, e nenhum ajuste interno corrige isso: o caminho é registrar horários e abrir chamado com a operadora.",
+          "Limitação do equipamento aparece quando o número de dispositivos cresce e a rede trava no horário de maior uso. Cobertura é o cenário mais frequente: o link está estável, mas o sinal não chega com qualidade ao cômodo onde você precisa."
+        ]
+      },
+      {
+        "titulo": "Sintomas que ajudam a separar as causas",
+        "paragrafos": [
+          "Queda simultânea em todos os aparelhos tira a suspeita do dispositivo. Perda de sinal em um único cômodo indica falta de cobertura, não queda de link. Conectar sem navegar aponta atribuição de endereço ou o próprio provedor.",
+          "Piora à noite combina mais dispositivos em casa com mais interferência das redes vizinhas. Sinal cheio com travamento em chamada de vídeo é sinal de canal disputado, porque a barra mede intensidade e não qualidade."
+        ]
+      },
+      {
+        "titulo": "O que você pode testar antes do atendimento",
+        "paragrafos": [
+          "Ligar um computador por cabo direto ao roteador é o teste que mais economiza tempo: se o cabo também cai, o problema não é Wi-Fi. Anotar horários das quedas por alguns dias revela padrão de pico.",
+          "O que não recomendamos: reiniciar o roteador várias vezes ao dia como rotina, restaurar o padrão de fábrica sem anotar as configurações do provedor e empilhar repetidores, porque cada camada de repetição reduz a velocidade disponível."
+        ]
+      },
+      {
+        "titulo": "O que resolve cada causa e quais são as condições",
+        "paragrafos": [
+          "Reposicionar o roteador, separar as faixas de rádio e escolher canal com menos concorrência resolve boa parte dos casos sem compra de equipamento. Imóvel com laje, sobrado ou edícula pede nós interligados por cabo em vez de repetidor.",
+          "Cabeamento estruturado dá estabilidade a televisor, console e computador de trabalho, liberando a faixa sem fio. Rede separada para casa e trabalho reduz concorrência de banda em home office.",
+          "Avaliação acontece no local, porque cobertura depende do imóvel. Equipamento só é indicado quando resolve algo concreto. Garantia de 90 dias sobre a mão de obra da configuração e da instalação; instabilidade do link do provedor não está coberta."
+        ]
+      }
+    ]
+  },
+
+  {
     "path": "/problemas/notebook-nao-liga",
     "title": "Notebook Não Liga? Assistência Técnica em Curitiba",
     "description": "Notebook não liga ou liga sem imagem? Entenda os sinais, as causas possíveis, os testes externos seguros e como funciona o diagnóstico técnico em Curitiba.",

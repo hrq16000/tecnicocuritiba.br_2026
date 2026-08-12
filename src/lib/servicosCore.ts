@@ -90,6 +90,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { label: "Remoção de vírus", to: "/servicos/remocao-de-virus" },
       { label: "Recuperação de dados", to: "/servicos/recuperacao-de-dados" },
       { label: "Computador lento: investigar o sintoma", to: "/problemas/computador-lento" },
+      { label: "Computador desliga sozinho", to: "/problemas/computador-desliga-sozinho" },
       { label: "Preços e políticas", to: "/precos-e-politicas" },
     ],
     blocoLocal: [
@@ -767,6 +768,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { question: "Por que a impressora some da rede depois de trocar o roteador?", answer: "Quase sempre porque o endereço do aparelho mudou ou a rede recebeu outro nome e senha. A correção é reservar um endereço fixo para a impressora e reapontar as estações — é configuração de rede, não defeito do equipamento." },
     ],
     relacionados: [
+      { label: "Wi-Fi caindo toda hora", to: "/problemas/wifi-caindo-toda-hora" },
       { label: "Suporte técnico empresarial", to: "/servicos/suporte-tecnico-empresarial" },
       { label: "Suporte para home office", to: "/servicos/suporte-home-office" },
       { label: "Equipamentos atendidos", to: "/equipamentos-atendidos" },
