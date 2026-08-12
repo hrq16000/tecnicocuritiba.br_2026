@@ -59,6 +59,8 @@ export const INTENT_MATRIX = [
   { path: "/problemas/notebook-molhado", keyword: "notebook molhado", role: "sintoma de liquido em notebook", notCompeting: ["/servicos/manutencao-de-notebook", "/servicos/conserto-placa", "/servicos/recuperacao-de-dados"] },
   { path: "/problemas/tela-de-notebook-quebrada", keyword: "tela de notebook quebrada", role: "sintoma de tela/painel em notebook", notCompeting: ["/servicos/manutencao-de-notebook", "/servicos/conserto-monitor", "/servicos/conserto-placa"] },
   { path: "/problemas/hd-nao-reconhecido", keyword: "hd nao reconhecido", role: "sintoma de armazenamento nao detectado", notCompeting: ["/servicos/recuperacao-de-dados", "/servicos/upgrade-ssd-ram", "/servicos/manutencao-de-computador"] },
+  { path: "/problemas/computador-nao-liga", keyword: "computador de mesa nao liga", role: "sintoma de energia/POST em desktop", notCompeting: ["/servicos/manutencao-de-computador", "/servicos/conserto-placa", "/problemas/notebook-nao-liga", "/problemas/computador-desliga-sozinho"] },
+  { path: "/problemas/teclado-de-notebook-nao-funciona", keyword: "teclado de notebook nao funciona", role: "sintoma de teclado em notebook", notCompeting: ["/servicos/manutencao-de-notebook", "/problemas/notebook-molhado", "/servicos/conserto-placa"] },
 ];
 
 const P0 = new Set(INTENT_MATRIX.map((i) => i.path));

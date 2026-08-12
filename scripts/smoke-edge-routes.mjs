@@ -61,6 +61,8 @@ const PRIORITY = [
   "/problemas/notebook-molhado",
   "/problemas/tela-de-notebook-quebrada",
   "/problemas/hd-nao-reconhecido",
+  "/problemas/computador-nao-liga",
+  "/problemas/teclado-de-notebook-nao-funciona",
   "/problemas/notebook-superaquecendo",
 ];
 
