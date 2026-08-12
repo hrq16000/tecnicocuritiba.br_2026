@@ -49,6 +49,8 @@ export const INTENT_MATRIX = [
   // dominante para a busca por sintoma — nunca para a busca por serviço.
   { path: "/problemas/notebook-nao-liga", keyword: "notebook nao liga", role: "sintoma notebook", notCompeting: ["/servicos/manutencao-de-notebook", "/servicos/formatacao"] },
   { path: "/problemas/computador-lento", keyword: "computador lento", role: "sintoma lentidao", notCompeting: ["/servicos/manutencao-de-computador", "/servicos/formatacao", "/servicos/upgrade-ssd-ram"] },
+  { path: "/problemas/tela-azul-windows", keyword: "tela azul windows", role: "sintoma instabilidade do sistema", notCompeting: ["/servicos/formatacao", "/servicos/upgrade-ssd-ram", "/problemas/computador-lento"] },
+  { path: "/problemas/notebook-superaquecendo", keyword: "notebook superaquecendo", role: "sintoma temperatura", notCompeting: ["/servicos/manutencao-de-notebook", "/problemas/notebook-nao-liga", "/problemas/computador-lento"] },
 ];
 
 const P0 = new Set(INTENT_MATRIX.map((i) => i.path));
