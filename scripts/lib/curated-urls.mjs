@@ -169,6 +169,9 @@ export const PROBLEMAS = [
   // Onda 6 — sintomas reformados com conteúdo exclusivo (tela azul e aquecimento).
   { path: "/problemas/tela-azul-windows", changefreq: "monthly", priority: "0.6" },
   { path: "/problemas/notebook-superaquecendo", changefreq: "monthly", priority: "0.6" },
+  // Onda 8 — sintoma de carga (notebook) e vertical de TV, ambos com conteúdo autoral.
+  { path: "/problemas/notebook-nao-carrega-bateria", changefreq: "monthly", priority: "0.6" },
+  { path: "/problemas/tv-nao-liga", changefreq: "monthly", priority: "0.6" },
 ];
 
 /**
