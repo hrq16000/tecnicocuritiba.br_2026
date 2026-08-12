@@ -311,6 +311,15 @@ const SERVICO_LINKS = {
     "/precos-e-politicas",
     "/contato",
   ],
+  // Onda 8 — entrada obrigatória para o sintoma de TV no HTML servido.
+  "/servicos/conserto-tv": [
+    "/problemas/tv-nao-liga",
+    "/servicos/conserto-placa",
+    "/coleta-e-entrega",
+    "/quando-nao-compensa",
+    "/precos-e-politicas",
+    "/contato",
+  ],
   "/servicos/manutencao-de-computador": [
     "/problemas/computador-lento",
     "/servicos",
