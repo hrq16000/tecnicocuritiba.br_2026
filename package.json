@@ -167,9 +167,9 @@
     "check:photos": "npm run check:photo-privacy",
     "photos:strip-exif": "node scripts/strip-photo-exif.mjs",
     "photos:optimize": "node scripts/optimize-photos.mjs",
-
     "check:localbusiness-cluster": "node scripts/check-localbusiness-cluster.mjs dist",
-    "test:wa-prefill": "playwright test e2e/whatsapp-prefill.spec.ts"
+    "test:wa-prefill": "playwright test e2e/whatsapp-prefill.spec.ts",
+    "check:sem-balcao": "node scripts/check-sem-balcao.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
