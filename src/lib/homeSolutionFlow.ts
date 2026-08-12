@@ -348,6 +348,13 @@ export const SOLUTION_FLOW: SolutionProblem[] = [
         mensagem: "Minha TV está desligando sozinha. Quero avaliação da fonte com coleta.",
       },
       {
+        equipamento: "Smart TV travando ou lenta",
+        solucao: { label: "TV travando", path: "/problemas/tv-travando" },
+        modalidade: "remoto",
+        porque: "Memória cheia, aplicativo desatualizado e Wi-Fi fraco no cômodo respondem pela maioria dos travamentos.",
+        mensagem: "Minha smart TV está travando. Quero avaliação técnica.",
+      },
+      {
         equipamento: "TV com imagem e sem som",
         solucao: { label: "TV sem som", path: "/problemas/tv-sem-som" },
         modalidade: "coleta",
