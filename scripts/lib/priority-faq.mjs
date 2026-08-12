@@ -23,6 +23,8 @@ const SOURCES = {
   "/problemas/wifi-caindo-toda-hora": "src/pages/problemas/WifiCaindoTodaHora.tsx",
   "/problemas/tv-com-som-sem-imagem": "src/pages/problemas/TvComSomSemImagem.tsx",
   "/problemas/notebook-molhado": "src/pages/problemas/NotebookMolhado.tsx",
+  "/problemas/tela-de-notebook-quebrada": "src/pages/problemas/TelaDeNotebookQuebrada.tsx",
+  "/problemas/hd-nao-reconhecido": "src/pages/problemas/HdNaoReconhecido.tsx",
   "/problemas/notebook-superaquecendo": "src/pages/problemas/NotebookSuperaquecendo.tsx",
   "/precos-e-politicas": "src/components/TermosConteudo.tsx",
   "/como-funciona": "src/pages/ComoFunciona.tsx",
