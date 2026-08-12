@@ -25,7 +25,7 @@ function walk(dir: string): string[] {
 
 function analyticsImports(code: string): string[] {
   const names: string[] = [];
-  const re = /import\s*\{([\s\S]*?)\}\s*from\s*['"]@\/lib\/analytics['"]/g;
+  const re = /import\s*\{([^}]*)\}\s*from\s*['"]@\/lib\/analytics['"]/g;
   let m: RegExpExecArray | null;
   while ((m = re.exec(code))) {
     for (const raw of m[1].split(",")) {
