@@ -72,6 +72,8 @@ export const INTENT_MATRIX = [
   { path: "/problemas/pen-drive-nao-reconhecido", keyword: "pen drive nao reconhecido", role: "sintoma de midia removivel nao reconhecida", notCompeting: ["/problemas/hd-nao-reconhecido", "/servicos/recuperacao-de-dados", "/servicos/conserto-placa", "/servicos/remocao-de-virus"] },
   { path: "/problemas/computador-travando", keyword: "computador travando", role: "sintoma de congelamento em desktop", notCompeting: ["/problemas/computador-lento", "/problemas/tela-azul-windows", "/problemas/computador-desliga-sozinho", "/servicos/manutencao-de-computador"] },
   { path: "/problemas/touchpad-nao-funciona", keyword: "touchpad nao funciona", role: "sintoma de touchpad em notebook", notCompeting: ["/problemas/teclado-de-notebook-nao-funciona", "/servicos/manutencao-de-notebook", "/problemas/notebook-molhado", "/atendimento-remoto"] },
+  { path: "/problemas/dobradica-do-notebook-quebrada", keyword: "dobradica do notebook quebrada", role: "sintoma de dano estrutural na tampa do notebook", notCompeting: ["/problemas/tela-de-notebook-quebrada", "/problemas/notebook-com-tela-preta", "/servicos/manutencao-de-notebook", "/servicos/conserto-notebook"] },
+  { path: "/problemas/computador-sem-som", keyword: "computador sem som", role: "sintoma de ausencia de audio em desktop", notCompeting: ["/problemas/tv-sem-som", "/servicos/manutencao-de-computador", "/servicos/conserto-placa", "/servicos/formatacao"] },
   { path: "/problemas/teclado-de-notebook-nao-funciona", keyword: "teclado de notebook nao funciona", role: "sintoma de teclado em notebook", notCompeting: ["/servicos/manutencao-de-notebook", "/problemas/notebook-molhado", "/servicos/conserto-placa"] },
 ];
 

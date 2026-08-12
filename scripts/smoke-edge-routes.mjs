@@ -75,6 +75,8 @@ const PRIORITY = [
   "/problemas/notebook-desligando-sozinho",
   "/problemas/pen-drive-nao-reconhecido",
   "/problemas/touchpad-nao-funciona",
+  "/problemas/dobradica-do-notebook-quebrada",
+  "/problemas/computador-sem-som",
   "/problemas/notebook-superaquecendo",
 ];
 

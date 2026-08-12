@@ -196,6 +196,9 @@ export const PROBLEMAS = [
   { path: "/problemas/notebook-desligando-sozinho", changefreq: "monthly", priority: "0.6" },
   { path: "/problemas/pen-drive-nao-reconhecido", changefreq: "monthly", priority: "0.6" },
   { path: "/problemas/touchpad-nao-funciona", changefreq: "monthly", priority: "0.6" },
+  // Onda 19 — dano estrutural em notebook e ausência de áudio em desktop.
+  { path: "/problemas/dobradica-do-notebook-quebrada", changefreq: "monthly", priority: "0.6" },
+  { path: "/problemas/computador-sem-som", changefreq: "monthly", priority: "0.6" },
   // Onda 13 — ruído em desktop e linhas na tela de TV, ambos autorais.
   { path: "/problemas/computador-fazendo-barulho", changefreq: "monthly", priority: "0.6" },
   { path: "/problemas/tv-com-linhas-na-tela", changefreq: "monthly", priority: "0.6" },

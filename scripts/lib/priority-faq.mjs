@@ -39,6 +39,8 @@ const SOURCES = {
   "/problemas/notebook-desligando-sozinho": "src/pages/problemas/NotebookDesligandoSozinho.tsx",
   "/problemas/pen-drive-nao-reconhecido": "src/pages/problemas/PenDriveNaoReconhecido.tsx",
   "/problemas/touchpad-nao-funciona": "src/pages/problemas/TouchpadNaoFunciona.tsx",
+  "/problemas/dobradica-do-notebook-quebrada": "src/pages/problemas/DobradicaNotebookQuebrada.tsx",
+  "/problemas/computador-sem-som": "src/pages/problemas/ComputadorSemSom.tsx",
   "/problemas/notebook-superaquecendo": "src/pages/problemas/NotebookSuperaquecendo.tsx",
   "/precos-e-politicas": "src/components/TermosConteudo.tsx",
   "/como-funciona": "src/pages/ComoFunciona.tsx",

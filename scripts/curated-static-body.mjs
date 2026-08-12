@@ -177,6 +177,8 @@ const SHORT_LABEL = {
   "/problemas/notebook-desligando-sozinho": "Notebook desligando sozinho",
   "/problemas/pen-drive-nao-reconhecido": "Pen drive não reconhecido",
   "/problemas/touchpad-nao-funciona": "Touchpad não funciona",
+  "/problemas/dobradica-do-notebook-quebrada": "Dobradiça do notebook quebrada",
+  "/problemas/computador-sem-som": "Computador sem som",
   "/problemas/tv-com-linhas-na-tela": "TV com linhas na tela",
   "/seguranca-dos-dados": "Segurança dos dados",
   "/servicos/suporte-home-office": "Suporte para home office",
