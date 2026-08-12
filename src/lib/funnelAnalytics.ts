@@ -688,6 +688,18 @@ export const trackTriageFieldFill = (fieldId: string, extra: Record<string, unkn
   track("wa_funnel_field_fill", { field_id: fieldId.slice(0, 40), ...extra });
 };
 
+/**
+ * Motivo pelo qual a triagem abriu sozinha (auditoria/QA).
+ *  - `hash`: URL carregada com #agendamento/#agendar/#triagem
+ *  - `anchor_click`: clique em link interno com esse hash
+ *  - `ttl_restore`: restauração do contexto salvo após reload
+ *  - `blocked_dismissed`: restauração suprimida porque o usuário já dispensou
+ */
+export const trackTriageAutoOpen = (
+  reason: "hash" | "anchor_click" | "ttl_restore" | "blocked_dismissed",
+  extra: Record<string, unknown> = {},
+) => track("wa_funnel_autoopen", { reason, ...extra });
+
 /** Triagem restaurada após reload mantendo o mesmo contexto do deep link. */
 export const trackTriageRestore = (params: { presetSource?: string | null; origem?: string }) =>
   track("wa_funnel_restore", {
