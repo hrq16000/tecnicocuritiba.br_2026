@@ -135,7 +135,7 @@ const ServicoCidadePage = () => {
                   <span className="font-bold text-sm">IMPORTANTE</span>
                 </div>
                 <p className="text-white/90 text-sm">
-                  Para {servico.slug === "conserto-tv" ? "TVs" : "celulares"}, <strong>não realizamos visita técnica a domicílio</strong>. O equipamento precisa ser trazido à oficina ou podemos organizar coleta.
+                  Para {servico.slug === "conserto-tv" ? "TVs" : "celulares"}, <strong>não realizamos visita técnica a domicílio</strong>. O atendimento é feito por coleta e entrega no seu endereço, com avaliação em bancada.
                 </p>
               </div>
             )}
