@@ -30,6 +30,7 @@ const InterlinkingBlock = lazy(() => import("@/components/InterlinkingBlock").th
 const ProblemasDestaque = lazy(() => import("@/components/ProblemasDestaque").then(m => ({ default: m.ProblemasDestaque })));
 const TechBrandsMarquee = lazy(() => import("@/components/TechBrandsMarquee").then(m => ({ default: m.TechBrandsMarquee })));
 const GeolocationTrigger = lazy(() => import("@/components/GeolocationTrigger").then(m => ({ default: m.GeolocationTrigger })));
+const OQueEstaAcontecendoSection = lazy(() => import("@/components/home/OQueEstaAcontecendoSection").then(m => ({ default: m.OQueEstaAcontecendoSection })));
 
 const SectionFallback = ({ height = "400px" }: { height?: string }) => (
   <div style={{ minHeight: height }} className="w-full" aria-hidden="true" />
@@ -41,6 +42,7 @@ const DeferredContent = () => (
     <JsonLdSchema />
 
     <LazyOnVisible minHeight="120px" rootMargin="-240px 0px"><Suspense fallback={<SectionFallback height="120px" />}><TechBrandsMarquee /></Suspense></LazyOnVisible>
+    <LazyOnVisible rootMargin="-240px 0px"><Suspense fallback={<SectionFallback />}><OQueEstaAcontecendoSection /></Suspense></LazyOnVisible>
     <LazyOnVisible rootMargin="-240px 0px"><Suspense fallback={<SectionFallback />}><PainSection /></Suspense></LazyOnVisible>
     <LazyOnVisible rootMargin="-240px 0px"><Suspense fallback={<SectionFallback />}><SchedulingSection /></Suspense></LazyOnVisible>
     <LazyOnVisible rootMargin="-240px 0px"><Suspense fallback={<SectionFallback />}><ServicesSection /></Suspense></LazyOnVisible>
