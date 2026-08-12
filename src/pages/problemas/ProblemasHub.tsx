@@ -201,9 +201,9 @@ const ProblemasHub = () => {
                   onClick={() => trackInternalLink(item.to, `hub_problemas_${grupo.id}`)}
                   className="group flex flex-col rounded-xl border border-border bg-card p-5 transition-colors hover:border-accent focus-visible:border-accent"
                   style={{
-                    transitionDuration: MOTION_DURATION.fast,
+                    transitionDuration: `${MOTION_DURATION.fast}ms`,
                     transitionTimingFunction: MOTION_EASING.standard,
-                    animationDelay: staggerDelay(i),
+                    animationDelay: `${staggerDelay(i)}ms`,
                   }}
                 >
                   <h3 className="mb-2 flex items-center gap-2 font-semibold text-foreground">
@@ -245,7 +245,7 @@ const ProblemasHub = () => {
           </Button>
         </section>
 
-        <ProximosPassos />
+        <ProximosPassos waHref={waHref} onCta={cta("proximos_passos")} ctaLocation="hub_problemas_proximos_passos" />
 
         <section id="faq" className="scroll-mt-24 mb-12">
           <h2 className="mb-6 text-2xl font-bold text-foreground">Perguntas frequentes sobre os problemas atendidos</h2>
