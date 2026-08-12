@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-12T06:14:35.279Z",
+  "generatedAt": "2026-08-12T06:22:15.760Z",
   "bairros": [
     {
       "slug": "batel",
@@ -262,7 +262,7 @@
     {
       "a": "centro",
       "b": "boqueirao",
-      "jaccard": 0.124,
+      "jaccard": 0.127,
       "status": "ok"
     },
     {
@@ -340,7 +340,7 @@
     {
       "a": "agua-verde",
       "b": "boqueirao",
-      "jaccard": 0.079,
+      "jaccard": 0.082,
       "status": "ok"
     },
     {
@@ -478,7 +478,7 @@
     {
       "a": "portao",
       "b": "boqueirao",
-      "jaccard": 0.122,
+      "jaccard": 0.126,
       "status": "ok"
     },
     {
@@ -640,7 +640,7 @@
     {
       "a": "santa-felicidade",
       "b": "boqueirao",
-      "jaccard": 0.122,
+      "jaccard": 0.126,
       "status": "ok"
     },
     {
@@ -682,7 +682,7 @@
     {
       "a": "boa-vista",
       "b": "boqueirao",
-      "jaccard": 0.11,
+      "jaccard": 0.113,
       "status": "ok"
     },
     {
@@ -748,7 +748,7 @@
     {
       "a": "cajuru",
       "b": "boqueirao",
-      "jaccard": 0.072,
+      "jaccard": 0.075,
       "status": "ok"
     },
     {
