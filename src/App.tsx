@@ -69,6 +69,8 @@ const routeImportMap: Record<string, () => Promise<unknown>> = {
   "/problemas/computador-sem-som": () => import("./pages/problemas/ComputadorSemSom"),
   "/problemas/tela-do-computador-piscando": () => import("./pages/problemas/TelaDoComputadorPiscando"),
   "/problemas/notebook-nao-conecta-no-wifi": () => import("./pages/problemas/NotebookNaoConectaWifi"),
+  "/problemas/tv-travando": () => import("./pages/problemas/TvTravando"),
+  "/problemas/mouse-nao-funciona": () => import("./pages/problemas/MouseNaoFunciona"),
   "/problemas/tv-com-linhas-na-tela": () => import("./pages/problemas/TvComLinhasNaTela"),
   "/problemas/notebook-superaquecendo": () => import("./pages/problemas/NotebookSuperaquecendo"),
   "/guia-tecnico-informatica": () => import("./pages/GuiaTecnicoInformatica"),
