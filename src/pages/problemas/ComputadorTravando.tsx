@@ -81,8 +81,8 @@ const OPCOES = [
   {
     titulo: "Limpeza interna e troca de pasta térmica",
     desc: "Quando o travamento só aparece com o aparelho quente, o serviço é mecânico: dissipador limpo, ventoinhas verificadas, pasta renovada e teste de temperatura sob carga depois.",
-    to: "/problemas/pc-superaquecendo",
-    label: "Computador superaquecendo",
+    to: "/problemas/computador-desliga-sozinho",
+    label: "Computador desligando sozinho",
   },
   {
     titulo: "Substituição do disco com preservação dos dados",
