@@ -57,10 +57,17 @@ Só é elegível a indexação quando cumpre TODOS:
 Se um bairro não cumprir os critérios, permanece `noindex` e fora do sitemap —
 não é excluído.
 
-## Estado atual
+## Estado atual (Onda 1 de liberação de índice)
 
 - Páginas de bairro herdadas: `noindex` ativo, ausentes do sitemap.
-- `sitemap-bairros.xml`: apenas as 13 âncoras × 2 serviços (Wi-Fi + TV Smart)
-  quando aplicável, totalizando até 26 URLs curadas.
+- Indexáveis hoje: 9 hubs `/bairros/<slug>` + 27 landings serviço × bairro
+  + 8 landings Wi-Fi/TV Smart (Jardim das Américas, Ecoville, Alto da XV,
+  Rebouças — os 4 bairros com `narrativaLocal` exclusiva validada).
+- Os 5 âncoras grandfathered (Centro, Batel, Água Verde, Portão, CIC) seguem
+  indexáveis, mas precisam de `narrativaLocal` própria antes de ganhar novas
+  landings Wi-Fi/TV.
 - Promoção de um bairro a âncora exige reescrita de `narrativaLocal` antes de
   remover o `noindex` e incluir no sitemap.
+- Gate de referência: `node scripts/validate-bairro-copy.mjs` +
+  `node scripts/check-sitemap-source.mjs` (ambos rodam no CI).
+

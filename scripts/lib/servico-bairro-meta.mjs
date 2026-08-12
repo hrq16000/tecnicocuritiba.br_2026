@@ -44,11 +44,16 @@ for (const m of factorySrc.matchAll(/^ {2}"([a-z-]+)": \{$/gm)) {
 }
 
 // ── Bairros ─────────────────────────────────────────────────────────────────
+// Fontes: `bairrosData.ts` (âncoras com layout local próprio) e
+// `wifiTvBairroData.ts` (âncoras da fábrica serviço × bairro).
 const bairros = {};
-for (const m of bairrosSrc.matchAll(/"?([a-z-]+)"?:\s*\{\s*\n\s*slug:\s*"([a-z-]+)"/g)) {
-  const body = block(bairrosSrc, bairrosSrc.indexOf("{", m.index));
-  const nome = body.match(/\n\s*nome:\s*"([^"]+)"/)?.[1];
-  if (nome) bairros[m[2]] = { slug: m[2], nome };
+const wifiTvSrc = readFileSync(join(ROOT, "src/pages/servico-bairro/wifiTvBairroData.ts"), "utf8");
+for (const src of [bairrosSrc, wifiTvSrc]) {
+  for (const m of src.matchAll(/"?([a-z-]+)"?:\s*\{\s*\n\s*slug:\s*"([a-z-]+)"/g)) {
+    const body = block(src, src.indexOf("{", m.index));
+    const nome = body.match(/\n\s*nome:\s*"([^"]+)"/)?.[1];
+    if (nome && !bairros[m[2]]) bairros[m[2]] = { slug: m[2], nome };
+  }
 }
 
 function unescape_(s) {

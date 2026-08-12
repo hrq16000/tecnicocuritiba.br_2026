@@ -16,8 +16,22 @@
 import type { ServicoBairroData } from "@/pages/servico-bairro/ServicoBairroTemplate";
 import { BAIRROS_INDEXAVEIS } from "@/pages/servico-bairro/wifiTvBairroData";
 
-/** Bairros-âncora do sitemap curado (política de poda). */
-export const BAIRROS_ANCORA = ["cic", "batel", "agua-verde", "centro", "portao"] as const;
+/**
+ * Bairros-âncora do sitemap curado (política de poda).
+ * Onda 1 de liberação de índice: os 4 bairros com `narrativaLocal` exclusiva
+ * (≥300 palavras) entram como âncoras geradas.
+ */
+export const BAIRROS_ANCORA = [
+  "cic",
+  "batel",
+  "agua-verde",
+  "centro",
+  "portao",
+  "jardim-das-americas",
+  "ecoville",
+  "alto-da-xv",
+  "reboucas",
+] as const;
 
 interface ServicoDef {
   slug: string;
