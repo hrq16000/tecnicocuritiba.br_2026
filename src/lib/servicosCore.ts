@@ -779,6 +779,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
     ],
     relacionados: [
       { label: "Wi-Fi caindo toda hora", to: "/problemas/wifi-caindo-toda-hora" },
+      { label: "Impressora não imprime", to: "/problemas/impressora-nao-imprime" },
       { label: "Suporte técnico empresarial", to: "/servicos/suporte-tecnico-empresarial" },
       { label: "Suporte para home office", to: "/servicos/suporte-home-office" },
       { label: "Equipamentos atendidos", to: "/equipamentos-atendidos" },
