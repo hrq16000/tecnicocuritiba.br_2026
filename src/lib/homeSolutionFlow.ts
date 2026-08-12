@@ -291,6 +291,13 @@ export const SOLUTION_FLOW: SolutionProblem[] = [
         mensagem: "Meu monitor está mostrando sem sinal. Quero avaliação técnica.",
       },
       {
+        equipamento: "Mouse ou teclado parou de responder",
+        solucao: { label: "Mouse não funciona", path: "/problemas/mouse-nao-funciona" },
+        modalidade: "remoto",
+        porque: "Teste em outra máquina e ajuste de porta USB resolvem a maioria dos casos sem retirar o equipamento.",
+        mensagem: "Meu mouse parou de funcionar. Quero avaliação técnica.",
+      },
+      {
         equipamento: "Tela do computador piscando",
         solucao: { label: "Tela do computador piscando", path: "/problemas/tela-do-computador-piscando" },
         modalidade: "coleta",
