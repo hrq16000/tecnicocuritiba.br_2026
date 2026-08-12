@@ -339,6 +339,8 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { label: "Remoção de vírus", to: "/servicos/remocao-de-virus" },
       { label: "Recuperação de dados", to: "/servicos/recuperacao-de-dados" },
       { label: "Computador lento: investigar o sintoma", to: "/problemas/computador-lento" },
+      { label: "Computador de mesa não liga", to: "/problemas/computador-nao-liga" },
+
       { label: "Empresa de TI em Curitiba", to: "/empresa-de-ti-curitiba" },
       { label: "Como funciona o atendimento", to: "/como-funciona" },
       { label: "Preços e políticas", to: "/precos-e-politicas" },
