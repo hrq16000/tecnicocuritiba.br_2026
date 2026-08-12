@@ -1,6 +1,6 @@
 # Relatório de Validação de Bairros
 
-Gerado em: 2026-08-12T06:14:35.279Z
+Gerado em: 2026-08-12T06:22:15.760Z
 Bairros indexáveis: 16
 
 ## Contagem de palavras próprias
@@ -30,19 +30,19 @@ Bairros indexáveis: 16
 | --- | --- | --- | --- |
 | cic | boa-vista | 0.151 | ok |
 | centro | alto-da-xv | 0.131 | ok |
+| centro | boqueirao | 0.127 | ok |
 | agua-verde | boa-vista | 0.126 | ok |
+| portao | boqueirao | 0.126 | ok |
+| santa-felicidade | boqueirao | 0.126 | ok |
 | jardim-das-americas | reboucas | 0.126 | ok |
-| centro | boqueirao | 0.124 | ok |
-| portao | boqueirao | 0.122 | ok |
-| santa-felicidade | boqueirao | 0.122 | ok |
 | cic | cajuru | 0.116 | ok |
 | boa-vista | jardim-das-americas | 0.116 | ok |
 | boa-vista | cajuru | 0.113 | ok |
+| boa-vista | boqueirao | 0.113 | ok |
 | batel | cajuru | 0.112 | ok |
 | cic | santa-felicidade | 0.112 | ok |
 | ecoville | reboucas | 0.112 | ok |
 | agua-verde | cajuru | 0.111 | ok |
-| boa-vista | boqueirao | 0.110 | ok |
 | batel | jardim-das-americas | 0.109 | ok |
 | cic | cristo-rei | 0.109 | ok |
 | cabral | jardim-das-americas | 0.109 | ok |

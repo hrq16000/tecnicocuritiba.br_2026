@@ -73,6 +73,10 @@ não estão inclusas e o valor final só é confirmado após diagnóstico e apro
 - [Técnico de Informática no Água Verde | Notebook e PC](https://tecnico.curitiba.br/bairros/agua-verde)
 - [Técnico de Informática no Centro de Curitiba | Notebook e PC](https://tecnico.curitiba.br/bairros/centro)
 - [Técnico de Informática no Portão (Curitiba) | Notebook e PC](https://tecnico.curitiba.br/bairros/portao)
+- [Técnico de Informática no Bigorrilho (Curitiba) | Notebook e PC](https://tecnico.curitiba.br/bairros/bigorrilho)
+- [Técnico de Informática em Santa Felicidade | Curitiba](https://tecnico.curitiba.br/bairros/santa-felicidade)
+- [Técnico de Informática no Cabral (Curitiba) | Notebook e PC](https://tecnico.curitiba.br/bairros/cabral)
+- [Técnico de Informática no Cristo Rei (Curitiba) | Notebook e PC](https://tecnico.curitiba.br/bairros/cristo-rei)
 
 ## Problemas comuns
 
