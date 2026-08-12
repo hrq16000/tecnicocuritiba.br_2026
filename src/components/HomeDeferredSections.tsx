@@ -42,6 +42,7 @@ const DeferredContent = () => (
     <JsonLdSchema />
 
     <LazyOnVisible minHeight="120px" rootMargin="-240px 0px"><Suspense fallback={<SectionFallback height="120px" />}><TechBrandsMarquee /></Suspense></LazyOnVisible>
+    <LazyOnVisible rootMargin="-240px 0px"><Suspense fallback={<SectionFallback />}><OQueEstaAcontecendoSection /></Suspense></LazyOnVisible>
     <LazyOnVisible rootMargin="-240px 0px"><Suspense fallback={<SectionFallback />}><PainSection /></Suspense></LazyOnVisible>
     <LazyOnVisible rootMargin="-240px 0px"><Suspense fallback={<SectionFallback />}><SchedulingSection /></Suspense></LazyOnVisible>
     <LazyOnVisible rootMargin="-240px 0px"><Suspense fallback={<SectionFallback />}><ServicesSection /></Suspense></LazyOnVisible>
