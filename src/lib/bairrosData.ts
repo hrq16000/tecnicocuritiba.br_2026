@@ -304,6 +304,211 @@ export const BAIRROS: Record<string, BairroLocalData> = {
       { question: "Qual o valor do atendimento no Portão?", answer: "A partir de R$ 99,99 quando aplicável. O valor final depende do equipamento, do deslocamento, da complexidade e de eventuais peças, sempre aprovado por você antes." },
     ],
   },
+
+  // ── BIGORRILHO ──────────────────────────────────────────────
+  bigorrilho: {
+    slug: "bigorrilho",
+    nome: "Bigorrilho",
+    nomeLocativo: "no Bigorrilho",
+    cidade: "Curitiba",
+    areaName: "Bigorrilho (Champagnat), Curitiba",
+    metaTitle: "Técnico de Informática no Bigorrilho (Curitiba) | Notebook e PC",
+    metaDescription:
+      "Técnico de informática no Bigorrilho e Champagnat, Curitiba: conserto de notebook, formatação, upgrade de SSD e Wi-Fi em apartamento. Diagnóstico a partir de R$ 99,99. Via WhatsApp.",
+    h1: "Técnico de Informática no Bigorrilho – Curitiba",
+    subtitulo:
+      "Atendimento para apartamentos e escritórios do Bigorrilho e do eixo Champagnat, com triagem pelo WhatsApp e diagnóstico antes de qualquer valor.",
+    whatsappMessage:
+      "Olá! Preciso de um técnico de informática no Bigorrilho, em Curitiba. Pode me orientar?",
+    introducaoLocal: [
+      "O Bigorrilho é um bairro verticalizado: a maior parte dos chamados vem de apartamentos e de pequenos escritórios instalados ao longo da Vicente Machado, da Bispo Dom José e do eixo Champagnat. Esse perfil muda o tipo de problema que aparece. Em vez de máquinas de bancada antigas, predominam notebooks usados como computador principal, docks com dois monitores e roteador único tentando cobrir apartamentos compridos com paredes de concreto.",
+      "Por isso, dois pedidos se repetem na região: desempenho (notebook que trava em reunião, disco cheio, inicialização lenta) e rede (queda de sinal no quarto que virou escritório). O contato começa pelo WhatsApp, com descrição do sintoma; a partir daí definimos se o caso é resolvido no local, remotamente ou se precisa seguir para bancada.",
+    ],
+    operacaoLocal: [
+      "Triagem pelo WhatsApp com foco em apartamento e home office",
+      "Agendamento em horário compatível com liberação na portaria",
+      "Diagnóstico técnico antes de informar qualquer valor",
+      "Execução só depois da sua aprovação",
+    ],
+    atendimentoLocal: [
+      "Upgrade de SSD e memória em notebook usado para trabalho",
+      "Formatação com backup e reinstalação dos programas de rotina",
+      "Reposicionamento de roteador, canais e repetidor/mesh no apartamento",
+      "Configuração de monitor externo, dock e impressora de rede",
+    ],
+    coletaBancada: [
+      "Troca de tela, dobradiça ou teclado de notebook",
+      "Superaquecimento que exige limpeza interna e troca de pasta térmica",
+      "Falha elétrica na placa após oscilação de energia no prédio",
+    ],
+    servicosPrioritarios: [
+      "/servicos/manutencao-de-notebook",
+      "/servicos/upgrade-ssd-ram",
+      "/servicos/redes-e-wifi",
+      "/servicos/formatacao",
+      "/servicos/manutencao-de-computador",
+    ],
+    faqLocal: [
+      { question: "Vocês atendem apartamento no Bigorrilho?", answer: "Sim, é o perfil mais comum na região. Combinamos o horário pelo WhatsApp e o acesso é liberado na portaria. Serviços de software, rede e upgrades costumam ser resolvidos no próprio apartamento." },
+      { question: "O Wi-Fi cai no quarto que virei escritório. Tem solução?", answer: "Na maioria dos apartamentos compridos o problema é posicionamento e canal do roteador, não velocidade contratada. Avaliamos a cobertura no local e indicamos ajuste, repetidor ou mesh conforme a planta." },
+      { question: "Preciso levar o notebook até algum endereço?", answer: "Não. Não temos balcão de atendimento ao público: ou o serviço é feito no seu endereço, ou fazemos coleta e entrega quando o caso exige bancada." },
+      { question: "Quanto custa o atendimento no Bigorrilho?", answer: "O diagnóstico começa em R$ 99,99 quando aplicável. O valor final depende do equipamento, da complexidade e de eventuais peças, e é sempre aprovado por você antes da execução." },
+    ],
+  },
+
+  // ── SANTA FELICIDADE ────────────────────────────────────────
+  "santa-felicidade": {
+    slug: "santa-felicidade",
+    nome: "Santa Felicidade",
+    nomeLocativo: "em Santa Felicidade",
+    cidade: "Curitiba",
+    areaName: "Santa Felicidade, Curitiba",
+    metaTitle: "Técnico de Informática em Santa Felicidade | Curitiba",
+    metaDescription:
+      "Técnico de informática em Santa Felicidade, Curitiba: conserto de PC e notebook, formatação, Wi-Fi em casa grande e suporte a comércio. A partir de R$ 99,99. Via WhatsApp.",
+    h1: "Técnico de Informática em Santa Felicidade – Curitiba",
+    subtitulo:
+      "Atendimento a residências amplas e ao comércio familiar de Santa Felicidade, com triagem pelo WhatsApp e diagnóstico antes de informar o valor.",
+    whatsappMessage:
+      "Olá! Preciso de um técnico de informática em Santa Felicidade, em Curitiba. Pode me orientar?",
+    introducaoLocal: [
+      "Santa Felicidade tem um perfil bem diferente dos bairros verticais: predominam casas de terreno grande, sobrados e um comércio familiar consolidado ao longo da Manoel Ribas — restaurantes, vinícolas, lojas de móveis e ateliês. Isso aparece nos chamados de duas formas. Nas casas, o problema quase sempre é cobertura de Wi-Fi: o roteador fica na sala da frente e o sinal não chega aos fundos, ao segundo andar ou à edícula.",
+      "No comércio, a prioridade é continuidade: o computador do caixa, a impressora de comanda ou a máquina que emite nota não podem ficar parados no fim de semana, quando o movimento é maior. A triagem começa pelo WhatsApp e, com o sintoma descrito, definimos se o caso se resolve no local, remotamente ou por coleta.",
+    ],
+    operacaoLocal: [
+      "Triagem pelo WhatsApp para residências e comércio do bairro",
+      "Prioridade para reduzir tempo de parada em caixa e emissão de nota",
+      "Diagnóstico antes de indicar qualquer troca de peça",
+      "Valor aprovado por você antes da execução",
+    ],
+    atendimentoLocal: [
+      "Cobertura de Wi-Fi em casas grandes, sobrados e edículas",
+      "Manutenção e limpeza de computador de mesa usado por toda a família",
+      "Formatação com backup de fotos e documentos",
+      "Suporte ao PC do caixa, impressora térmica e leitor do comércio",
+    ],
+    coletaBancada: [
+      "Computador que não liga após oscilação de energia",
+      "Reparo interno de notebook e troca de componentes",
+      "Tentativa de recuperação de dados em HD antigo",
+    ],
+    servicosPrioritarios: [
+      "/servicos/redes-e-wifi",
+      "/servicos/manutencao-de-computador",
+      "/servicos/formatacao",
+      "/servicos/manutencao-de-notebook",
+      "/servicos/suporte-tecnico-empresarial",
+    ],
+    faqLocal: [
+      { question: "O Wi-Fi não chega aos fundos da casa. Como resolvem?", answer: "Em casas grandes o ponto de partida é medir o sinal ambiente por ambiente. A partir disso indicamos reposicionamento, troca de canal, cabeamento até um segundo ponto ou sistema mesh — sem prometer solução antes de medir." },
+      { question: "Atendem restaurantes e lojas de Santa Felicidade?", answer: "Sim. Damos suporte pontual ou combinado ao computador do caixa, à impressora de comanda e à rede do estabelecimento, com foco em reduzir o tempo de parada." },
+      { question: "Posso levar o equipamento até vocês?", answer: "Não trabalhamos com balcão ao público. Quando o caso exige bancada, fazemos coleta e entrega no seu endereço, com sua aprovação antes de qualquer serviço." },
+      { question: "Qual o valor do atendimento em Santa Felicidade?", answer: "A partir de R$ 99,99 quando aplicável. O valor final depende do equipamento, do deslocamento, da complexidade e de eventuais peças, sempre informado e aprovado antes." },
+    ],
+  },
+
+  // ── CABRAL ──────────────────────────────────────────────────
+  cabral: {
+    slug: "cabral",
+    nome: "Cabral",
+    nomeLocativo: "no Cabral",
+    cidade: "Curitiba",
+    areaName: "Cabral, Curitiba",
+    metaTitle: "Técnico de Informática no Cabral (Curitiba) | Notebook e PC",
+    metaDescription:
+      "Técnico de informática no Cabral, Curitiba: conserto de notebook, formatação, upgrade de SSD e suporte a consultórios e escritórios. A partir de R$ 99,99. Via WhatsApp.",
+    h1: "Técnico de Informática no Cabral – Curitiba",
+    subtitulo:
+      "Suporte a apartamentos, consultórios e escritórios do Cabral e entorno do Centro Cívico, com triagem pelo WhatsApp e diagnóstico antes do valor.",
+    whatsappMessage:
+      "Olá! Preciso de um técnico de informática no Cabral, em Curitiba. Pode me orientar?",
+    introducaoLocal: [
+      "O Cabral mistura residências verticais com uma concentração incomum de consultórios, clínicas e escritórios pequenos, especialmente no eixo da Av. Paraná e nas ruas próximas ao Centro Cívico e ao Juvevê. Esse perfil traz uma demanda específica: computadores que rodam sistema de agenda, prontuário ou emissão fiscal e que não podem simplesmente ser formatados sem planejamento.",
+      "Nesses casos, o cuidado maior é com backup e com a ordem das etapas — primeiro copiar dados e conferir licenças e acessos, depois executar. Para as residências do bairro, os pedidos são os clássicos: lentidão, disco cheio, notebook esquentando e Wi-Fi instável. A triagem começa pelo WhatsApp e a modalidade é definida conforme o problema.",
+    ],
+    operacaoLocal: [
+      "Triagem pelo WhatsApp separando uso residencial e profissional",
+      "Backup e checagem de acessos antes de formatar máquina de trabalho",
+      "Diagnóstico técnico antes de informar valor",
+      "Janela de atendimento combinada para não parar o consultório",
+    ],
+    atendimentoLocal: [
+      "Formatação planejada com backup e reinstalação de sistemas de rotina",
+      "Upgrade de SSD e memória em máquinas de escritório",
+      "Ajuste de rede, impressora compartilhada e digitalização",
+      "Remoção de vírus e limpeza de programas indesejados",
+    ],
+    coletaBancada: [
+      "Notebook que não liga ou desliga sozinho",
+      "Troca de tela, teclado ou bateria",
+      "Diagnóstico prolongado de instabilidade de hardware",
+    ],
+    servicosPrioritarios: [
+      "/servicos/manutencao-de-notebook",
+      "/servicos/formatacao",
+      "/servicos/upgrade-ssd-ram",
+      "/servicos/suporte-tecnico-empresarial",
+      "/servicos/remocao-de-virus",
+    ],
+    faqLocal: [
+      { question: "Atendem consultórios e escritórios no Cabral?", answer: "Sim. Trabalhamos com janela de horário combinada para não interromper o atendimento, e a formatação de máquina de trabalho só acontece após backup e conferência de acessos e licenças." },
+      { question: "Vocês fazem backup antes de formatar?", answer: "Sempre que o disco permite leitura, o backup dos dados é a primeira etapa e é conferido com você antes de qualquer reinstalação. Se o disco estiver com falha, isso é informado antes de prosseguir." },
+      { question: "Preciso levar o equipamento em alguma loja?", answer: "Não. Não temos balcão ao público: o serviço é feito no seu endereço ou o equipamento é coletado e devolvido quando o caso exige bancada." },
+      { question: "Qual o valor do atendimento no Cabral?", answer: "O diagnóstico começa em R$ 99,99 quando aplicável. O valor final depende do equipamento, da complexidade e de eventuais peças, sempre aprovado por você antes." },
+    ],
+  },
+
+  // ── CRISTO REI ──────────────────────────────────────────────
+  "cristo-rei": {
+    slug: "cristo-rei",
+    nome: "Cristo Rei",
+    nomeLocativo: "no Cristo Rei",
+    cidade: "Curitiba",
+    areaName: "Cristo Rei, Curitiba",
+    metaTitle: "Técnico de Informática no Cristo Rei (Curitiba) | Notebook e PC",
+    metaDescription:
+      "Técnico de informática no Cristo Rei, Curitiba: conserto de notebook, formatação, upgrade de SSD e Wi-Fi para estudantes e famílias. A partir de R$ 99,99. Via WhatsApp.",
+    h1: "Técnico de Informática no Cristo Rei – Curitiba",
+    subtitulo:
+      "Atendimento a estudantes, repúblicas e famílias do Cristo Rei, no entorno da UFPR, com triagem pelo WhatsApp e diagnóstico antes de informar o valor.",
+    whatsappMessage:
+      "Olá! Preciso de um técnico de informática no Cristo Rei, em Curitiba. Pode me orientar?",
+    introducaoLocal: [
+      "O Cristo Rei é fortemente influenciado pela proximidade com o campus da UFPR e com o Jardim Botânico: há muitos estudantes, repúblicas e apartamentos compactos ao lado de residências de famílias que moram no bairro há décadas. Isso cria uma demanda dupla — notebooks de uso intenso, com pouco espaço em disco e prazos de entrega de trabalho, e computadores domésticos mais antigos que ficaram lentos.",
+      "Nos chamados de estudante, a prioridade quase sempre é recuperar o acesso aos arquivos e devolver a máquina funcionando rápido, sem perder documentos. Nas casas, a conversa costuma ser sobre vale a pena consertar ou trocar. A triagem começa pelo WhatsApp e o diagnóstico vem antes de qualquer valor.",
+    ],
+    operacaoLocal: [
+      "Triagem pelo WhatsApp com prioridade para prazo de trabalho e estudo",
+      "Backup dos arquivos antes de qualquer reinstalação",
+      "Diagnóstico honesto sobre consertar ou substituir",
+      "Valor aprovado por você antes da execução",
+    ],
+    atendimentoLocal: [
+      "Formatação com backup de trabalhos e documentos",
+      "Upgrade de SSD e memória em notebook de estudo",
+      "Remoção de vírus e recuperação de acesso ao sistema",
+      "Configuração de Wi-Fi em apartamento compacto e república",
+    ],
+    coletaBancada: [
+      "Notebook que não liga, com tela quebrada ou dobradiça solta",
+      "Superaquecimento e desligamento durante uso prolongado",
+      "Tentativa de recuperação de dados em disco com falha",
+    ],
+    servicosPrioritarios: [
+      "/servicos/manutencao-de-notebook",
+      "/servicos/formatacao",
+      "/servicos/upgrade-ssd-ram",
+      "/servicos/remocao-de-virus",
+      "/servicos/redes-e-wifi",
+    ],
+    faqLocal: [
+      { question: "Meu notebook travou e tenho trabalho para entregar. Dá para priorizar?", answer: "Informe o prazo já na triagem pelo WhatsApp. Quando o caso permite, priorizamos o acesso aos arquivos primeiro — mesmo que o reparo completo leve mais tempo depois." },
+      { question: "Vale a pena consertar um computador antigo no Cristo Rei?", answer: "Depende do equipamento. Em muitos casos SSD e memória devolvem a agilidade por um custo bem menor que a troca; em outros, o reparo não se paga. Explicamos os dois cenários antes de você decidir." },
+      { question: "Atendem repúblicas e apartamentos de estudante?", answer: "Sim. Serviços de software, rede e upgrade costumam ser feitos no próprio endereço. Casos de bancada seguem por coleta e entrega, com aprovação prévia." },
+      { question: "Qual o valor do atendimento no Cristo Rei?", answer: "A partir de R$ 99,99 quando aplicável. O valor final depende do equipamento, da complexidade e de eventuais peças, sempre aprovado antes da execução." },
+    ],
+  },
 };
+
 
 export const BAIRRO_LIST = Object.values(BAIRROS);
