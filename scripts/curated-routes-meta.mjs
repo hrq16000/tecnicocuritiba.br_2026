@@ -1269,6 +1269,84 @@ const BASE_ROUTES = [
   },
 
   {
+    "path": "/problemas/tela-de-notebook-quebrada",
+    "title": "Tela de Notebook Quebrada: Troca, Custo e Riscos | Curitiba",
+    "description": "Tela trincada, com manchas ou linhas? Entenda a diferença entre painel danificado, cabo flat e placa de vídeo, o que a troca resolve, o que não resolve e como funciona a coleta em Curitiba.",
+    "h1": "Tela de notebook quebrada: quando trocar e quando não é a tela",
+    "subtitulo": "Nem toda falha de imagem é painel quebrado. Um teste com monitor externo separa três cenários com custos muito diferentes: painel, cabo flat e circuito de vídeo.",
+    "blocos": [
+      {
+        "titulo": "Três cenários que parecem o mesmo defeito",
+        "paragrafos": [
+          "O painel falha por impacto, pressão ou desgaste e, quando há trinca com mancha escura, o cristal líquido já vazou: não existe reparo parcial, a peça é substituída inteira.",
+          "O cabo flat atravessa a dobradiça e se rompe aos poucos com o abre e fecha, produzindo imagem instável que muda conforme o ângulo da tampa. O terceiro cenário está na placa: alimentação do backlight ou controlador de vídeo, com painel íntegro."
+        ]
+      },
+      {
+        "titulo": "Sintomas e o que cada um costuma indicar",
+        "paragrafos": [
+          "Linhas fixas em qualquer imagem apontam painel ou conector; linhas que mudam ao mover a tampa apontam o cabo flat. Tela apagada com imagem fraca visível contra a luz indica falha de iluminação, não de painel.",
+          "Vidro estilhaçado com imagem visível é comum em modelos com touch, e a construção (vidro colado ou separado) muda bastante o custo. Dobradiça travada arranca o suporte do painel e rompe o flat com o tempo."
+        ]
+      },
+      {
+        "titulo": "Verificações que você mesmo pode fazer",
+        "paragrafos": [
+          "Ligue um monitor externo: imagem externa perfeita indica problema na tela, no flat ou no conector, não na placa de vídeo. Mova a tampa devagar e observe se a imagem muda. Ilumine a tela apagada com lanterna em ângulo.",
+          "O que não recomendamos: pressionar a mancha, colar película sobre vidro estilhaçado e comprar painel pela internet antes do diagnóstico — peça incompatível costuma não ter troca depois de aberta."
+        ]
+      },
+      {
+        "titulo": "O que resolve cada cenário e quais são as condições",
+        "paragrafos": [
+          "Troca do painel por peça de mesma resolução e conector, com teste de ângulo e uniformidade antes de fechar. Quando a falha é do cabo flat, o custo é bem menor — e é por isso que testamos antes. Falha na alimentação do backlight ou no controlador segue para reparo em nível de componente.",
+          "Se a troca não compensar diante do valor do aparelho, dizemos isso e a unidade de armazenamento pode ser lida à parte, com os arquivos entregues em mídia separada.",
+          "Atendimento apenas por coleta e entrega no endereço informado, sem balcão. Garantia de 90 dias sobre mão de obra e painel aplicado; novo impacto, queda ou pressão sobre a tampa são danos novos e não estão cobertos."
+        ]
+      }
+    ]
+  },
+
+  {
+    "path": "/problemas/hd-nao-reconhecido",
+    "title": "HD ou SSD Não é Reconhecido: O Que Fazer | Curitiba",
+    "description": "O computador não reconhece o HD ou SSD? Entenda a diferença entre falha de cabo, de partição e de mecânica, por que insistir reduz a chance de recuperar arquivos e como funciona a coleta em Curitiba.",
+    "h1": "HD ou SSD não reconhecido: o que fazer antes de perder os arquivos",
+    "subtitulo": "Quando o disco some, a diferença entre recuperar tudo e perder tudo costuma estar nas duas horas seguintes — e quase toda tentativa caseira consome parte dessa chance.",
+    "blocos": [
+      {
+        "titulo": "Por que a ordem importa mais que a ferramenta",
+        "paragrafos": [
+          "Ligar repetidamente um disco com problema mecânico desgasta a superfície. Aceitar a formatação sugerida reescreve a estrutura de pastas. Instalar programa de recuperação no mesmo computador grava dados por cima da área que se queria salvar.",
+          "Por isso o primeiro passo em bancada não é recuperar: é preservar. A leitura é feita setor a setor para uma cópia, e todo o trabalho acontece sobre essa cópia, de modo que uma tentativa não reduza a chance da seguinte."
+        ]
+      },
+      {
+        "titulo": "Sintomas e o que cada um costuma indicar",
+        "paragrafos": [
+          "Disco que some da BIOS indica problema físico ou de conexão, e nenhum programa instalado no sistema resolve esse caso. Disco visível na BIOS com sistema que não inicia costuma ser tabela de partição corrompida, com os arquivos ainda presentes.",
+          "Clique ritmado indica falha mecânica e pede desligamento imediato. Unidade que conecta e desconecta sozinha aponta alimentação insuficiente ou mau contato. SSD costuma falhar de forma abrupta, sem aviso prévio."
+        ]
+      },
+      {
+        "titulo": "Sequência segura antes de qualquer tentativa",
+        "paragrafos": [
+          "Confira na BIOS se o disco aparece, não aceite a oferta de formatar, troque cabo e porta antes de concluir que o disco morreu e, em gaveta externa, teste com fonte própria. Não instale programas de recuperação no disco que você quer recuperar.",
+          "O que não recomendamos em nenhuma hipótese: congelar o HD, bater no aparelho, abrir a unidade fora de ambiente controlado e rodar verificação de erros em disco com falha física."
+        ]
+      },
+      {
+        "titulo": "O que resolve cada cenário e quais são as condições",
+        "paragrafos": [
+          "Uma parte real dos casos termina na verificação de cabo, porta e alimentação, sem troca de peça. Partição corrompida segue para recuperação lógica sobre cópia. Ruído mecânico exige avaliação de viabilidade, com a chance real informada antes.",
+          "Resolvida a urgência, o passo que evita a repetição é a substituição por unidade nova com rotina de backup que funcione sem depender da sua memória.",
+          "Atendimento apenas por coleta e entrega no endereço informado, sem balcão. Arquivos entregues em mídia separada, nunca de volta na unidade que falhou. Não existe garantia de resultado em recuperação: garantimos transparência sobre a chance, trabalho sobre cópia e laudo quando não for possível."
+        ]
+      }
+    ]
+  },
+
+  {
     "path": "/problemas/notebook-nao-liga",
     "title": "Notebook Não Liga? Assistência Técnica em Curitiba",
     "description": "Notebook não liga ou liga sem imagem? Entenda os sinais, as causas possíveis, os testes externos seguros e como funciona o diagnóstico técnico em Curitiba.",
