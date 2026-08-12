@@ -92,6 +92,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { label: "Computador lento: investigar o sintoma", to: "/problemas/computador-lento" },
       { label: "HD ou SSD não reconhecido", to: "/problemas/hd-nao-reconhecido" },
       { label: "Computador desliga sozinho", to: "/problemas/computador-desliga-sozinho" },
+      { label: "Computador de mesa não liga", to: "/problemas/computador-nao-liga" },
       { label: "Preços e políticas", to: "/precos-e-politicas" },
     ],
     blocoLocal: [
@@ -216,6 +217,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { label: "Notebook não carrega a bateria", to: "/problemas/notebook-nao-carrega-bateria" },
       { label: "Notebook molhado: o que fazer", to: "/problemas/notebook-molhado" },
       { label: "Tela de notebook quebrada", to: "/problemas/tela-de-notebook-quebrada" },
+      { label: "Teclado de notebook não funciona", to: "/problemas/teclado-de-notebook-nao-funciona" },
       { label: "Como funciona o atendimento", to: "/como-funciona" },
       { label: "Preços e políticas", to: "/precos-e-politicas" },
       { label: "Coleta e entrega", to: "/coleta-e-entrega" },
