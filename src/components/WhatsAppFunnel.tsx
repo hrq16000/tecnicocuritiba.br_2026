@@ -500,7 +500,9 @@ export const WhatsAppFunnel = () => {
         });
       }
 
-      saveDeepLinkContext({ path, location: loc, preset });
+      // Só grava contexto em aberturas reais (clique/deep link). Restauração
+      // não renova o TTL, para não reabrir indefinidamente a cada reload.
+      if (!opts.restore) saveDeepLinkContext({ path, location: loc, preset });
 
       // Fallback: se o diálogo não montar (popup bloqueado por extensão,
       // erro de render), abre a triagem em nova aba mantendo o contexto.
@@ -625,6 +627,8 @@ export const WhatsAppFunnel = () => {
       }
       trackFunnelClose(step, answers.equipment);
       clearTimers();
+      // Usuário dispensou a triagem: não reabrir automaticamente em reloads.
+      clearDeepLinkContext();
       isTransitioning.current = false;
       openerRef.current?.focus?.();
     }
