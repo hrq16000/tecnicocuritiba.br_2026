@@ -123,6 +123,13 @@ export const SOLUTION_FLOW: SolutionProblem[] = [
         mensagem: "Meu computador está fazendo barulho. Quero avaliação da refrigeração e do disco.",
       },
       {
+        equipamento: "Notebook com tela preta",
+        solucao: { label: "Notebook com tela preta", path: "/problemas/notebook-com-tela-preta" },
+        modalidade: "coleta",
+        porque: "O teste do monitor externo separa conjunto de tela de falha de placa antes de qualquer peça.",
+        mensagem: "Meu notebook liga mas a tela fica preta. Quero avaliação técnica.",
+      },
+      {
         equipamento: "Notebook esquentando muito",
         solucao: { label: "Notebook superaquecendo", path: "/problemas/notebook-superaquecendo" },
         modalidade: "coleta",
@@ -247,6 +254,13 @@ export const SOLUTION_FLOW: SolutionProblem[] = [
         modalidade: "coleta",
         porque: "O teste da lanterna já separa backlight de placa; painel trincado não é recuperado.",
         mensagem: "Minha TV tem som mas não tem imagem. Quero avaliação técnica com coleta.",
+      },
+      {
+        equipamento: "TV que desliga sozinha",
+        solucao: { label: "TV desligando sozinha", path: "/problemas/tv-desligando-sozinha" },
+        modalidade: "coleta",
+        porque: "Falha térmica de fonte só aparece com o aparelho aquecido e medição sob carga em bancada.",
+        mensagem: "Minha TV está desligando sozinha. Quero avaliação da fonte com coleta.",
       },
       {
         equipamento: "TV com linhas na imagem",
