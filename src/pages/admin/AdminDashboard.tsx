@@ -389,19 +389,92 @@ const AdminDashboard = () => {
               </SelectContent>
             </Select>
           </div>
-          {(bairro !== ALL || servico !== ALL) && (
+          <div className="flex flex-col gap-1">
+            <span className="text-xs text-muted-foreground">Tipo de rota</span>
+            <Select value={routeFilter} onValueChange={setRouteFilter}>
+              <SelectTrigger className="w-44"><SelectValue placeholder="Todas" /></SelectTrigger>
+              <SelectContent>
+                <SelectItem value={ALL}>Todas as rotas</SelectItem>
+                {routeOptions.map((r) => (
+                  <SelectItem key={r} value={r}>{r}</SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          </div>
+          <div className="flex flex-col gap-1">
+            <span className="text-xs text-muted-foreground">Campanha</span>
+            <Select value={campaignFilter} onValueChange={setCampaignFilter}>
+              <SelectTrigger className="w-48"><SelectValue placeholder="Todas" /></SelectTrigger>
+              <SelectContent>
+                <SelectItem value={ALL}>Todas as campanhas</SelectItem>
+                {campaignOptions.map((c) => (
+                  <SelectItem key={c} value={c}>{c}</SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          </div>
+          <label className="text-xs text-muted-foreground flex flex-col gap-1">
+            Página (path contém)
+            <input
+              type="search"
+              value={pathQuery}
+              onChange={(e) => setPathQuery(e.target.value)}
+              placeholder="/servicos/"
+              className="h-9 w-52 rounded-md border border-input bg-background px-2 text-sm"
+            />
+          </label>
+          <label className="flex items-center gap-2 text-xs text-muted-foreground h-9">
+            <input
+              type="checkbox"
+              checked={dedupOn}
+              onChange={(e) => setDedupOn(e.target.checked)}
+              className="h-4 w-4 rounded border-input"
+            />
+            Deduplicar cliques (30s)
+          </label>
+          {(bairro !== ALL || servico !== ALL || routeFilter !== ALL || campaignFilter !== ALL || pathQuery) && (
             <Button
               variant="ghost"
               size="sm"
-              onClick={() => { setBairro(ALL); setServico(ALL); }}
+              onClick={() => {
+                setBairro(ALL);
+                setServico(ALL);
+                setRouteFilter(ALL);
+                setCampaignFilter(ALL);
+                setPathQuery("");
+              }}
             >
               Limpar filtros
             </Button>
           )}
           <p className="text-xs text-muted-foreground ml-auto">
-            {rows.length} de {allRows.length} eventos
+            {rows.length} de {allRows.length} eventos · {dedup.duplicates.length} duplicatas
+            {" "}({dedup.duplicateRate.toFixed(1)}%)
           </p>
         </div>
+
+        {/* Alertas de queda */}
+        {dropAlerts.length > 0 && (
+          <div className="rounded-lg border border-destructive/40 bg-destructive/5 p-4 mb-6">
+            <h2 className="font-semibold flex items-center gap-2 text-destructive">
+              <AlertTriangle className="h-4 w-4" aria-hidden="true" /> Quedas bruscas detectadas
+            </h2>
+            <p className="text-xs text-muted-foreground mb-3">
+              Último dia comparado à média diária anterior no mesmo recorte (queda ≥ 50%).
+            </p>
+            <ul className="space-y-1 text-sm">
+              {dropAlerts.slice(0, 8).map((a) => (
+                <li key={`${a.scope}-${a.label}`} className="flex flex-wrap gap-2">
+                  <span className="font-medium">{a.scope === "servico" ? "Serviço" : "Horário"}: {a.label}</span>
+                  <span className="text-muted-foreground">
+                    média {a.baseline.toFixed(1)}/dia → {a.current} hoje ({a.dropPct.toFixed(0)}% de queda)
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
 
 
         {/* KPIs */}
