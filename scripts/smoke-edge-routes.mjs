@@ -67,6 +67,8 @@ const PRIORITY = [
   "/problemas/tv-com-linhas-na-tela",
   "/problemas/notebook-com-tela-preta",
   "/problemas/tv-desligando-sozinha",
+  "/problemas/tv-sem-som",
+  "/problemas/impressora-nao-imprime",
   "/problemas/notebook-superaquecendo",
 ];
 

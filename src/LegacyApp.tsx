@@ -449,6 +449,8 @@ const ProblemaComputadorBarulho = lazy(() => import("./pages/problemas/Computado
 const ProblemaTvLinhas = lazy(() => import("./pages/problemas/TvComLinhasNaTela"));
 const ProblemaNotebookTelaPreta = lazy(() => import("./pages/problemas/NotebookComTelaPreta"));
 const ProblemaTvDesligando = lazy(() => import("./pages/problemas/TvDesligandoSozinha"));
+const ProblemaTvSemSom = lazy(() => import("./pages/problemas/TvSemSom"));
+const ProblemaImpressoraNaoImprime = lazy(() => import("./pages/problemas/ImpressoraNaoImprime"));
 const ProblemaNotebookSuperaquecendo = lazy(() => import("./pages/problemas/NotebookSuperaquecendo"));
 
 // Pillar do cluster de informática

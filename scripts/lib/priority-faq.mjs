@@ -31,6 +31,8 @@ const SOURCES = {
   "/problemas/tv-com-linhas-na-tela": "src/pages/problemas/TvComLinhasNaTela.tsx",
   "/problemas/notebook-com-tela-preta": "src/pages/problemas/NotebookComTelaPreta.tsx",
   "/problemas/tv-desligando-sozinha": "src/pages/problemas/TvDesligandoSozinha.tsx",
+  "/problemas/tv-sem-som": "src/pages/problemas/TvSemSom.tsx",
+  "/problemas/impressora-nao-imprime": "src/pages/problemas/ImpressoraNaoImprime.tsx",
   "/problemas/notebook-superaquecendo": "src/pages/problemas/NotebookSuperaquecendo.tsx",
   "/precos-e-politicas": "src/components/TermosConteudo.tsx",
   "/como-funciona": "src/pages/ComoFunciona.tsx",
