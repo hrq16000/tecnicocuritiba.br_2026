@@ -629,9 +629,11 @@ if (existsSync(distDir)) {
   if (new Set(bIntros.filter(Boolean)).size !== BAIRROS_2E.length) fail("Onda 2E: introduções dos bairros idênticas após remover o nome (doorway)");
   if (new Set(bFaqs.filter(Boolean)).size !== BAIRROS_2E.length) fail("Onda 2E: FAQs dos bairros idênticas entre páginas");
 
-  // 13.4 — H1 das 11 páginas distintos entre si
-  const all11H1 = [...cityH1s, ...bH1s].filter(Boolean);
-  if (new Set(all11H1).size !== 11) fail("Onda 2E: os H1 das 11 páginas locais devem ser todos distintos");
+  // 13.4 — H1 de todas as páginas locais curadas distintos entre si
+  const allLocalH1 = [...cityH1s, ...bH1s].filter(Boolean);
+  const expectedLocalH1 = CIDADES_2E.length + BAIRROS_2E.length;
+  if (new Set(allLocalH1).size !== expectedLocalH1)
+    fail(`Onda 2E: os H1 das ${expectedLocalH1} páginas locais devem ser todos distintos`);
 
   // 13.5 — rede de links Curitiba ↔ bairros
   for (const b of BAIRROS_2E) {
