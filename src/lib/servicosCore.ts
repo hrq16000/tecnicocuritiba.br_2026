@@ -93,6 +93,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { label: "HD ou SSD não reconhecido", to: "/problemas/hd-nao-reconhecido" },
       { label: "Computador desliga sozinho", to: "/problemas/computador-desliga-sozinho" },
       { label: "Computador de mesa não liga", to: "/problemas/computador-nao-liga" },
+      { label: "Computador fazendo barulho", to: "/problemas/computador-fazendo-barulho" },
       { label: "Preços e políticas", to: "/precos-e-politicas" },
     ],
     blocoLocal: [
@@ -1539,6 +1540,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
     relacionados: [
       { label: "TV não liga", to: "/problemas/tv-nao-liga" },
       { label: "TV com som e sem imagem", to: "/problemas/tv-com-som-sem-imagem" },
+      { label: "TV com linhas na tela", to: "/problemas/tv-com-linhas-na-tela" },
       { label: "Coleta e entrega", to: "/coleta-e-entrega" },
       { label: "Conserto de placa eletrônica", to: "/servicos/conserto-placa" },
       { label: "Equipamentos atendidos", to: "/equipamentos-atendidos" },
