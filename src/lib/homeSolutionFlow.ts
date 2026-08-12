@@ -88,6 +88,13 @@ export const SOLUTION_FLOW: SolutionProblem[] = [
         mensagem: "Meu notebook só funciona na tomada e não carrega a bateria. Quero avaliação.",
       },
       {
+        equipamento: "Notebook com tampa solta",
+        solucao: { label: "Dobradiça do notebook quebrada", path: "/problemas/dobradica-do-notebook-quebrada" },
+        modalidade: "coleta",
+        porque: "Continuar abrindo com a fixação solta costuma pinçar o cabo de vídeo e encarecer o reparo.",
+        mensagem: "A dobradiça do meu notebook quebrou e a tampa está solta. Quero avaliação.",
+      },
+      {
         equipamento: "Placa-mãe / placa eletrônica",
         solucao: { label: "Conserto de placa", path: "/servicos/conserto-placa" },
         modalidade: "coleta",
@@ -135,6 +142,13 @@ export const SOLUTION_FLOW: SolutionProblem[] = [
         modalidade: "coleta",
         porque: "Limpeza do sistema de arrefecimento e troca de pasta térmica são serviços de bancada.",
         mensagem: "Meu notebook esquenta muito e desliga. Quero limpeza e avaliação térmica.",
+      },
+      {
+        equipamento: "Computador sem som",
+        solucao: { label: "Computador sem som", path: "/problemas/computador-sem-som" },
+        modalidade: "remoto",
+        porque: "Saída padrão, mixer e driver respondem pela maioria dos casos e são verificados sem coleta.",
+        mensagem: "Meu computador está sem som. Quero verificação da saída de áudio.",
       },
       {
         equipamento: "Windows com tela azul",
