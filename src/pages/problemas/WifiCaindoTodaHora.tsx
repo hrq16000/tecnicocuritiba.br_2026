@@ -10,6 +10,7 @@ import { PageTableOfContents } from "@/components/ui/PageTableOfContents";
 import { RealImageSection } from "@/components/RealImageSection";
 import { ServicosCorrelatos } from "@/components/informatica/ServicosCorrelatos";
 import { ProximosPassos } from "@/components/informatica/ProximosPassos";
+import ProximosProblemas from "@/components/problemas/ProximosProblemas";
 import { Button } from "@/components/ui/button";
 import { SCHEMA_SLOTS, SLOT_PRIORITY, useJsonLdSlot } from "@/lib/jsonLdSlots";
 import { whatsappLink, absoluteUrl } from "@/lib/siteConfig";
@@ -399,6 +400,8 @@ const WifiCaindoTodaHora = () => {
             ))}
           </div>
         </section>
+
+        <ProximosProblemas path="/problemas/wifi-caindo-toda-hora" />
 
         <ProximosPassos waHref={waHref} onCta={cta("proximos-passos")} ctaLocation="problema_proximos_passos" />
 

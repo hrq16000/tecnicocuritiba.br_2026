@@ -9,6 +9,7 @@ import { TrustStrip } from "@/components/TrustStrip";
 import { PageTableOfContents } from "@/components/ui/PageTableOfContents";
 import { RealImageSection } from "@/components/RealImageSection";
 import { ProximosPassos } from "@/components/informatica/ProximosPassos";
+import ProximosProblemas from "@/components/problemas/ProximosProblemas";
 import { Button } from "@/components/ui/button";
 import { SCHEMA_SLOTS, SLOT_PRIORITY, useJsonLdSlot } from "@/lib/jsonLdSlots";
 import { whatsappLink, absoluteUrl } from "@/lib/siteConfig";
@@ -368,6 +369,8 @@ const NotebookNaoConectaWifi = () => {
             ))}
           </div>
         </section>
+
+        <ProximosProblemas path="/problemas/notebook-nao-conecta-no-wifi" />
 
         <ProximosPassos waHref={waHref} onCta={cta("proximos-passos")} ctaLocation="problema_proximos_passos" />
 
