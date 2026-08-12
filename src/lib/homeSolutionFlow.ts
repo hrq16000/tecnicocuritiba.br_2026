@@ -225,7 +225,14 @@ export const SOLUTION_FLOW: SolutionProblem[] = [
         solucao: { label: "Suporte técnico empresarial", path: "/servicos/suporte-tecnico-empresarial" },
         modalidade: "domicilio",
         porque: "Rede corporativa envolve cabeamento, switches e prioridade de tráfego.",
-        mensagem: "A rede da minha empresa está instável. Quero suporte técnico empresarial.",
+      },
+      {
+        equipamento: "Impressora offline ou sem imprimir",
+        solucao: { label: "Impressora não imprime", path: "/problemas/impressora-nao-imprime" },
+        modalidade: "remoto",
+        porque: "Fila travada, driver e endereço de rede respondem pela maior parte dos casos e se resolvem por acesso remoto.",
+        mensagem: "Minha impressora não está imprimindo. Quero avaliação do driver e da rede.",
+
       },
     ],
   },
