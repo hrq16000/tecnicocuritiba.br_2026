@@ -555,6 +555,28 @@ const AdminDashboard = () => {
           </div>
         </div>
 
+        {/* Distribuição por hora */}
+        <div className="rounded-lg border border-border p-4 mb-6">
+          <h2 className="font-semibold mb-1">Conversões por hora do dia</h2>
+          <p className="text-xs text-muted-foreground mb-3">
+            Horário local do visitante agregado no período e filtros selecionados.
+          </p>
+          <div className="flex items-end gap-1 h-32">
+            {byHour.map((h) => (
+              <div key={h.hour} className="flex-1 flex flex-col justify-end items-center gap-1">
+                <div
+                  className="w-full rounded-t bg-accent"
+                  style={{ height: `${(h.total / maxHour) * 100}%` }}
+                  title={`${String(h.hour).padStart(2, "0")}h — WhatsApp: ${h.wa} · Ligar: ${h.call}`}
+                />
+                <span className="text-[9px] text-muted-foreground tabular-nums">{h.hour}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+
+
         {/* Conversões por tipo de rota */}
         <div className="rounded-lg border border-border overflow-hidden mb-6">
           <div className="p-4 border-b border-border">
