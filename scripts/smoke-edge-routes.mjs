@@ -57,6 +57,8 @@ const PRIORITY = [
   "/problemas/tv-nao-liga",
   "/problemas/computador-desliga-sozinho",
   "/problemas/wifi-caindo-toda-hora",
+  "/problemas/tv-com-som-sem-imagem",
+  "/problemas/notebook-molhado",
   "/problemas/notebook-superaquecendo",
 ];
 

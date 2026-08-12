@@ -1191,6 +1191,84 @@ const BASE_ROUTES = [
   },
 
   {
+    "path": "/problemas/tv-com-som-sem-imagem",
+    "title": "TV com Som e Sem Imagem? Diagnóstico em Curitiba",
+    "description": "Televisor com som normal e tela apagada: entenda a diferença entre falha de backlight, de placa de fonte e de painel, quais testes indicam cada caso e quando o reparo realmente compensa em Curitiba.",
+    "h1": "TV com som e sem imagem: iluminação, alimentação ou painel",
+    "subtitulo": "Televisor que reproduz áudio com a tela apagada quase sempre continua gerando imagem: o que parou foi a iluminação por trás do painel.",
+    "blocos": [
+      {
+        "titulo": "Os três cenários por trás da tela apagada",
+        "paragrafos": [
+          "Falha da iluminação é o cenário mais frequente em aparelhos com anos de uso: o televisor segue processando vídeo, mas as barras de LED que iluminam o painel pararam de acender. O teste da lanterna costuma revelar isso antes mesmo da coleta.",
+          "Falha de alimentação aparece quando a etapa que gera a tensão da iluminação deixa de entregar saída, com piscadas no LED frontal e tentativa de ligar seguida de desligamento. Dano de painel é o único cenário sem reparo viável, e nele emitimos laudo com foto e recusamos o serviço."
+        ]
+      },
+      {
+        "titulo": "Sintomas que ajudam a separar as causas",
+        "paragrafos": [
+          "Som normal com tela totalmente apagada e imagem visível sob a lanterna indicam iluminação. Tela que acende por um segundo e apaga aponta proteção atuando sobre um trecho de LEDs em curto ou sobre a etapa que os alimenta.",
+          "Manchas escuras e faixas de brilho irregular sugerem barras com trechos queimados. Linhas verticais ou horizontais fixas mudam a suspeita para conexão do painel ou para o próprio painel, com desfechos bem diferentes."
+        ]
+      },
+      {
+        "titulo": "O que você pode verificar antes do atendimento",
+        "paragrafos": [
+          "Em ambiente escuro, aproxime a lanterna do celular da tela e observe se aparece o menu bem fraco. Troque a fonte de vídeo, teste em outra tomada, conte as piscadas do LED frontal e anote marca e modelo da etiqueta traseira.",
+          "O que não recomendamos: abrir a traseira por conta própria, porque a fonte armazena carga mesmo desligada; insistir em ligar e desligar quando o aparelho já entra em proteção; e pressionar a tela para testar o painel, gesto que transforma um reparo comum em dano definitivo."
+        ]
+      },
+      {
+        "titulo": "O que resolve cada causa e quais são as condições",
+        "paragrafos": [
+          "Reparo da iluminação envolve substituição das barras com especificação equivalente e teste de brilho uniforme. Falha na etapa de alimentação é tratada em nível de componente, com medição ponto a ponto, sem trocar a placa inteira por dedução.",
+          "Não há atendimento em balcão: o aparelho é coletado no endereço informado, avaliado em bancada e devolvido no mesmo endereço. O reparo só começa depois da aprovação de valor fechado e prazo.",
+          "Garantia de 90 dias sobre a mão de obra e as peças aplicadas, limitada ao bloco reparado. Surto elétrico posterior, queda, líquido e intervenção de terceiros ficam fora. Painel danificado não é reparado e recebe laudo com foto."
+        ]
+      }
+    ]
+  },
+
+  {
+    "path": "/problemas/notebook-molhado",
+    "title": "Notebook Molhado? O Que Fazer nas Primeiras Horas | Curitiba",
+    "description": "Derramou líquido no notebook? Entenda por que ligar o aparelho piora o quadro, o que fazer nas primeiras horas, como funciona a limpeza de placa e em que casos o reparo deixa de compensar. Coleta em Curitiba.",
+    "h1": "Notebook molhado: o que fazer nas primeiras horas",
+    "subtitulo": "Em aparelho que recebeu líquido, o desfecho é decidido nas primeiras horas — e as três atitudes mais comuns são justamente as que agravam o dano.",
+    "blocos": [
+      {
+        "titulo": "Por que as primeiras horas decidem o resultado",
+        "paragrafos": [
+          "O dano acontece em duas etapas. A elétrica é imediata: o líquido cria caminho entre pontos de tensão e algo queima ou entra em proteção. Quando o aparelho desliga sozinho, muitas vezes a proteção fez o trabalho dela.",
+          "A química é lenta: o resíduo continua reagindo com o cobre das trilhas por dias. É ela que separa o aparelho recuperado com limpeza daquele que exige microssolda semanas depois. Refrigerante, café com açúcar e cerveja aceleram muito esse processo em relação à água."
+        ]
+      },
+      {
+        "titulo": "Sintomas e o que cada um costuma indicar",
+        "paragrafos": [
+          "Desligar na hora e não ligar mais é o quadro com melhor prognóstico quando o aparelho não é religado antes da limpeza. Continuar funcionando normalmente é o mais enganoso: a corrosão avança em silêncio e a falha aparece semanas depois.",
+          "Teclas repetindo ou travadas apontam resíduo entre as membranas do teclado. Desligamento após alguns minutos sugere trilha com fuga de corrente. Carregador não reconhecido indica dano na etapa de entrada de energia."
+        ]
+      },
+      {
+        "titulo": "Sequência correta logo depois do acidente",
+        "paragrafos": [
+          "Desligue segurando o botão de energia, retire o carregador da tomada e do aparelho e apoie o notebook com a tela entreaberta para o líquido escorrer. Anote o que foi derramado, a quantidade aproximada e o horário, e acione a coleta o quanto antes.",
+          "O que não recomendamos: religar para ver se funciona, usar secador quente, colocar em arroz — que não remove líquido de dentro da placa e ainda deixa resíduo nas aberturas — e desmontar sem ferramenta adequada."
+        ]
+      },
+      {
+        "titulo": "O que resolve cada cenário e quais são as condições",
+        "paragrafos": [
+          "Limpeza técnica de placa, com desmontagem completa, remoção de resíduo e secagem controlada, é o procedimento que mais recupera aparelhos quando feito cedo. Oxidação avançada passa para reparo em nível de componente, com reconstrução de trilha.",
+          "Quando o dano fica restrito ao teclado ou aos conectores, a intervenção é mais simples e o prazo mais curto. Se o aparelho não voltar, os arquivos normalmente voltam: a unidade de armazenamento é lida separadamente e a cópia é entregue em mídia à parte.",
+          "Atendimento apenas por coleta e entrega no endereço informado, sem balcão. Em caso de líquido não prometemos recuperação: informamos a chance real após a inspeção. Garantia de 90 dias sobre mão de obra e peças aplicadas, limitada ao bloco reparado."
+        ]
+      }
+    ]
+  },
+
+  {
     "path": "/problemas/notebook-nao-liga",
     "title": "Notebook Não Liga? Assistência Técnica em Curitiba",
     "description": "Notebook não liga ou liga sem imagem? Entenda os sinais, as causas possíveis, os testes externos seguros e como funciona o diagnóstico técnico em Curitiba.",

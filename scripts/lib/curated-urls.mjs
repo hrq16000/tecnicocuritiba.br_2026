@@ -175,6 +175,9 @@ export const PROBLEMAS = [
   // Onda 9 — sintoma de desligamento (hardware/energia) e instabilidade de rede.
   { path: "/problemas/computador-desliga-sozinho", changefreq: "monthly", priority: "0.6" },
   { path: "/problemas/wifi-caindo-toda-hora", changefreq: "monthly", priority: "0.6" },
+  // Onda 10
+  { path: "/problemas/tv-com-som-sem-imagem", changefreq: "monthly", priority: "0.6" },
+  { path: "/problemas/notebook-molhado", changefreq: "monthly", priority: "0.6" },
 ];
 
 /**

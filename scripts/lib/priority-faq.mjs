@@ -21,6 +21,8 @@ const SOURCES = {
   "/problemas/tv-nao-liga": "src/pages/problemas/TvNaoLiga.tsx",
   "/problemas/computador-desliga-sozinho": "src/pages/problemas/ComputadorDesligaSozinho.tsx",
   "/problemas/wifi-caindo-toda-hora": "src/pages/problemas/WifiCaindoTodaHora.tsx",
+  "/problemas/tv-com-som-sem-imagem": "src/pages/problemas/TvComSomSemImagem.tsx",
+  "/problemas/notebook-molhado": "src/pages/problemas/NotebookMolhado.tsx",
   "/problemas/notebook-superaquecendo": "src/pages/problemas/NotebookSuperaquecendo.tsx",
   "/precos-e-politicas": "src/components/TermosConteudo.tsx",
   "/como-funciona": "src/pages/ComoFunciona.tsx",

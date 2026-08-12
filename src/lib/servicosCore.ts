@@ -213,6 +213,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { label: "Recuperação de dados", to: "/servicos/recuperacao-de-dados" },
       { label: "Notebook não liga", to: "/problemas/notebook-nao-liga" },
       { label: "Notebook não carrega a bateria", to: "/problemas/notebook-nao-carrega-bateria" },
+      { label: "Notebook molhado: o que fazer", to: "/problemas/notebook-molhado" },
       { label: "Como funciona o atendimento", to: "/como-funciona" },
       { label: "Preços e políticas", to: "/precos-e-politicas" },
       { label: "Coleta e entrega", to: "/coleta-e-entrega" },
@@ -1530,6 +1531,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
     ],
     relacionados: [
       { label: "TV não liga", to: "/problemas/tv-nao-liga" },
+      { label: "TV com som e sem imagem", to: "/problemas/tv-com-som-sem-imagem" },
       { label: "Coleta e entrega", to: "/coleta-e-entrega" },
       { label: "Conserto de placa eletrônica", to: "/servicos/conserto-placa" },
       { label: "Equipamentos atendidos", to: "/equipamentos-atendidos" },

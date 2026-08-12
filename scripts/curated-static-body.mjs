@@ -160,6 +160,8 @@ const SHORT_LABEL = {
   "/problemas/tv-nao-liga": "TV não liga",
   "/problemas/computador-desliga-sozinho": "Computador desliga sozinho",
   "/problemas/wifi-caindo-toda-hora": "Wi-Fi caindo toda hora",
+  "/problemas/tv-com-som-sem-imagem": "TV com som e sem imagem",
+  "/problemas/notebook-molhado": "Notebook molhado",
   "/seguranca-dos-dados": "Segurança dos dados",
   "/servicos/suporte-home-office": "Suporte para home office",
   "/servicos/montagem-de-pc": "Montagem de PC e PC Gamer",
@@ -316,6 +318,25 @@ const PROBLEMA_LINKS = {
     "/precos-e-politicas",
     "/como-funciona",
   ],
+  // Onda 10
+  "/problemas/tv-com-som-sem-imagem": [
+    "/servicos/conserto-tv",
+    "/servicos/conserto-placa",
+    "/problemas/tv-nao-liga",
+    "/coleta-e-entrega",
+    "/quando-nao-compensa",
+    "/precos-e-politicas",
+    "/como-funciona",
+  ],
+  "/problemas/notebook-molhado": [
+    "/servicos/manutencao-de-notebook",
+    "/servicos/conserto-placa",
+    "/servicos/recuperacao-de-dados",
+    "/problemas/notebook-nao-liga",
+    "/coleta-e-entrega",
+    "/precos-e-politicas",
+    "/como-funciona",
+  ],
 };
 
 /** Saídas obrigatórias do cluster empresarial (contrato editorial da onda 3D). */
@@ -325,6 +346,7 @@ const SERVICO_LINKS = {
   "/servicos/manutencao-de-notebook": [
     "/problemas/notebook-nao-liga",
     "/problemas/notebook-nao-carrega-bateria",
+    "/problemas/notebook-molhado",
     "/servicos",
     "/servicos/formatacao",
     "/servicos/upgrade-ssd-ram",
@@ -343,6 +365,7 @@ const SERVICO_LINKS = {
   // Onda 8 — entrada obrigatória para o sintoma de TV no HTML servido.
   "/servicos/conserto-tv": [
     "/problemas/tv-nao-liga",
+    "/problemas/tv-com-som-sem-imagem",
     "/servicos/conserto-placa",
     "/coleta-e-entrega",
     "/quando-nao-compensa",
