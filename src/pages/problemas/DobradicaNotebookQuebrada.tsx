@@ -81,8 +81,8 @@ const OPCOES = [
   {
     titulo: "Troca da dobradiça",
     desc: "Eixo empenado ou mecanismo travado exige peça nova. A disponibilidade depende do modelo e é confirmada antes da aprovação.",
-    to: "/servicos/conserto-notebook",
-    label: "Conserto de notebook",
+    to: "/coleta-e-entrega",
+    label: "Como funciona a coleta",
   },
   {
     titulo: "Avaliação do conjunto da tela",
