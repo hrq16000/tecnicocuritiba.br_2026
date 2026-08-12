@@ -89,6 +89,8 @@ não estão inclusas e o valor final só é confirmado após diagnóstico e apro
 ## Problemas comuns
 
 - [Computador Lento? Diagnóstico Técnico em Curitiba](https://tecnico.curitiba.br/problemas/computador-lento)
+- [Tela Azul no Windows? Diagnóstico Técnico em Curitiba](https://tecnico.curitiba.br/problemas/tela-azul-windows)
+- [Notebook Superaquecendo? Diagnóstico Técnico em Curitiba](https://tecnico.curitiba.br/problemas/notebook-superaquecendo)
 - [Notebook Não Liga? Assistência Técnica em Curitiba](https://tecnico.curitiba.br/problemas/notebook-nao-liga)
 
 ## Páginas institucionais e de política

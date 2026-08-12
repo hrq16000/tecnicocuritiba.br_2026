@@ -221,6 +221,8 @@ Demais municípios da Região Metropolitana são avaliados sob consulta pelo Wha
 ## Problemas comuns diagnosticados
 
 - [Computador Lento? Diagnóstico Técnico em Curitiba](https://tecnico.curitiba.br/problemas/computador-lento)
+- [Tela Azul no Windows? Diagnóstico Técnico em Curitiba](https://tecnico.curitiba.br/problemas/tela-azul-windows)
+- [Notebook Superaquecendo? Diagnóstico Técnico em Curitiba](https://tecnico.curitiba.br/problemas/notebook-superaquecendo)
 - [Notebook Não Liga? Assistência Técnica em Curitiba](https://tecnico.curitiba.br/problemas/notebook-nao-liga)
 
 ## Páginas institucionais e de política
