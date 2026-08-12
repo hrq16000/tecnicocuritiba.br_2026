@@ -961,6 +961,82 @@ const BASE_ROUTES = [
     ]
   },
   {
+    "path": "/problemas/tela-azul-windows",
+    "title": "Tela Azul no Windows? Diagnóstico Técnico em Curitiba",
+    "description": "Tela azul recorrente no Windows: o que o código de erro indica, quais causas são de memória, disco, driver ou temperatura, o que anotar antes do atendimento e quando formatar não resolve.",
+    "h1": "Tela azul no Windows: o que o código indica e como o diagnóstico é feito",
+    "subtitulo": "Tela azul não é um defeito: é o sistema interrompendo a execução para evitar dano maior. O que importa é o que provocou a interrupção — memória, disco, driver, temperatura ou alimentação.",
+    "blocos": [
+      {
+        "titulo": "O que a tela azul realmente informa",
+        "paragrafos": [
+          "O código exibido não nomeia a peça defeituosa: ele indica em qual camada a operação falhou. Dois equipamentos com o mesmo código podem ter causas completamente diferentes.",
+          "O que dá direção ao diagnóstico é o padrão de repetição: falha aleatória, falha só sob carga, falha durante o boot e falha logo após uma instalação apontam para grupos distintos."
+        ]
+      },
+      {
+        "titulo": "Grupos de código de erro e o que investigam",
+        "paragrafos": [
+          "MEMORY_MANAGEMENT e PAGE_FAULT_IN_NONPAGED_AREA orientam a verificação de memória; CRITICAL_PROCESS_DIED e INACCESSIBLE_BOOT_DEVICE apontam para sistema e armazenamento.",
+          "VIDEO_TDR_FAILURE e DPC_WATCHDOG_VIOLATION direcionam para driver e resposta de dispositivo; WHEA_UNCORRECTABLE_ERROR e CLOCK_WATCHDOG_TIMEOUT envolvem temperatura, alimentação e estabilidade elétrica."
+        ]
+      },
+      {
+        "titulo": "O que você pode registrar antes do atendimento",
+        "paragrafos": [
+          "Fotografar o código de erro, registrar o que estava sendo feito, lembrar de instalações e atualizações recentes, observar aquecimento antes do reinício e contar quantas vezes a falha ocorre por dia.",
+          "O que não recomendamos: reinstalar o Windows por conta própria com suspeita de disco, aplicar \"correções de registro\" baixadas por anúncio e forçar atualização de BIOS sem confirmar o modelo da placa."
+        ]
+      },
+      {
+        "titulo": "O que resolve cada tipo de causa",
+        "paragrafos": [
+          "Teste de memória em ciclos confirma ou descarta módulo com falha antes de qualquer troca. Leitura de saúde do armazenamento vem antes de reinstalação quando há suspeita de disco.",
+          "Correção de driver e de arquivos de sistema resolve boa parte dos casos sem trocar peça. Limpeza interna entra quando a falha aparece apenas sob carga.",
+          "Formatar resolve o que é sistema; não corrige memória com defeito, disco sem saúde, superaquecimento nem fonte insuficiente."
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/problemas/notebook-superaquecendo",
+    "title": "Notebook Superaquecendo? Diagnóstico Técnico em Curitiba",
+    "description": "Notebook esquentando, com cooler acelerado ou desligando sozinho: entenda o que é temperatura normal, quais causas são de poeira, pasta térmica, uso ou falha elétrica, e o que fazer antes do atendimento.",
+    "h1": "Notebook superaquecendo: o que investigar antes de trocar qualquer peça",
+    "subtitulo": "Notebook quente não é necessariamente notebook com defeito. O que importa é se ele sustenta o esforço sem perder desempenho e sem desligar.",
+    "blocos": [
+      {
+        "titulo": "Quente ou superaquecendo? A diferença prática",
+        "paragrafos": [
+          "Aquecer sob esforço, com cooler acelerando e voltando ao normal depois, é o funcionamento esperado. O problema começa quando a temperatura passa a limitar o uso.",
+          "Três sinais indicam que o limite foi atingido: queda progressiva de desempenho, desligamento sem aviso sob carga e cooler no máximo mesmo em tarefas leves."
+        ]
+      },
+      {
+        "titulo": "Geração de calor e dissipação são lados diferentes",
+        "paragrafos": [
+          "De um lado está o que o equipamento processa, como está alimentado e qual perfil de energia está ativo. Do outro, poeira no dissipador, pasta térmica ressecada, ventoinha desgastada e obstrução das entradas de ar.",
+          "Tratar apenas um dos lados é o motivo mais comum de o problema voltar poucas semanas depois do atendimento."
+        ]
+      },
+      {
+        "titulo": "O que você pode observar antes do atendimento",
+        "paragrafos": [
+          "Usar o notebook sobre superfície rígida por alguns dias, notar onde o calor concentra, observar se o cooler acelera antes do travamento, anotar os programas abertos e conferir se há fluxo de ar na saída.",
+          "O que não recomendamos: soprar ar comprimido travando as pás da ventoinha, abrir o equipamento por tutorial de outro modelo e insistir no uso com bateria estufada ou cheiro de plástico aquecido."
+        ]
+      },
+      {
+        "titulo": "O que resolve cada tipo de causa",
+        "paragrafos": [
+          "Limpeza interna com troca de pasta térmica é a intervenção de maior efeito em equipamentos há anos sem manutenção. Substituição de ventoinha entra quando a rotação segue baixa depois da limpeza.",
+          "Revisão de programas em segundo plano reduz calor gerado por consumo. Avaliação de bateria e carregador cobre os casos de desligamento sob esforço que não são térmicos.",
+          "Bateria estufada, carcaça deformada ou cheiro de queimado exigem interrupção imediata do uso e avaliação antes de qualquer reparo."
+        ]
+      }
+    ]
+  },
+  {
     "path": "/problemas/notebook-nao-liga",
     "title": "Notebook Não Liga? Assistência Técnica em Curitiba",
     "description": "Notebook não liga ou liga sem imagem? Entenda os sinais, as causas possíveis, os testes externos seguros e como funciona o diagnóstico técnico em Curitiba.",
