@@ -330,6 +330,10 @@ const AdminDashboard = () => {
             <Button variant="outline" size="sm" onClick={exportCsv} className="gap-1">
               <Download className="h-4 w-4" /> CSV
             </Button>
+            <Button variant="outline" size="sm" onClick={exportJson} className="gap-1">
+              <Download className="h-4 w-4" /> JSON
+            </Button>
+
             <Link to="/admin/funnel"><Button variant="outline" size="sm">Leads</Button></Link>
             <Button variant="outline" size="sm" onClick={signOut} className="gap-1">
               <LogOut className="h-4 w-4" /> Sair
