@@ -516,7 +516,8 @@ if (existsSync(distDir)) {
   }
 }
 
-// ── 13. Onda 2E · anti-doorway das ${CIDADES_2E.length} cidades + 5 bairros curados ───────
+let CURATED_CITY_COUNT = 0;
+// ── 13. Onda 2E · anti-doorway das ${CURATED_CITY_COUNT} cidades + 5 bairros curados ───────
 // Fatos objetivos: HTML próprio index/follow self-canonical (já validado
 // na seção 9), titles/H1 únicos e com localidade correta, rede de links
 // Curitiba↔bairros, ausência de links legados noindex, e ausência de
@@ -527,6 +528,7 @@ if (existsSync(distDir)) {
   const bairroLayout = readFileSync(resolve(root, "src/components/bairro/BairroLocalLayout.tsx"), "utf8");
   const cidData = readFileSync(resolve(root, "src/lib/cidadesData.ts"), "utf8");
 
+  CURATED_CITY_COUNT = 11;
   const CIDADES_2E = [
     { path: "/tecnico-informatica-curitiba", nome: "Curitiba" },
     { path: "/tecnico-informatica-sao-jose-pinhais", nome: "São José dos Pinhais" },
@@ -696,5 +698,5 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log(`✅ check-curated-meta: OK — 8 serviços em paridade, ${CIDADES_2E.length} cidades + 5 bairros curados sem doorway, imagens sociais alinhadas, nome institucional "${OFFICIAL_NAME}", /valores sem canonical próprio, 108 rotas legadas noindex e sitemaps derivados do manifesto curado.`);
+console.log(`✅ check-curated-meta: OK — 8 serviços em paridade, ${CURATED_CITY_COUNT} cidades + 5 bairros curados sem doorway, imagens sociais alinhadas, nome institucional "${OFFICIAL_NAME}", /valores sem canonical próprio, 108 rotas legadas noindex e sitemaps derivados do manifesto curado.`);
 
