@@ -304,6 +304,7 @@ const SERVICO_LINKS = {
   // /problemas/* órfão (só existiam no bundle React).
   "/servicos/manutencao-de-notebook": [
     "/problemas/notebook-nao-liga",
+    "/problemas/notebook-nao-carrega-bateria",
     "/servicos",
     "/servicos/formatacao",
     "/servicos/upgrade-ssd-ram",

@@ -211,6 +211,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { label: "Remoção de vírus", to: "/servicos/remocao-de-virus" },
       { label: "Recuperação de dados", to: "/servicos/recuperacao-de-dados" },
       { label: "Notebook não liga", to: "/problemas/notebook-nao-liga" },
+      { label: "Notebook não carrega a bateria", to: "/problemas/notebook-nao-carrega-bateria" },
       { label: "Como funciona o atendimento", to: "/como-funciona" },
       { label: "Preços e políticas", to: "/precos-e-politicas" },
       { label: "Coleta e entrega", to: "/coleta-e-entrega" },
@@ -1526,6 +1527,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { question: "Vocês consertam monitor de computador também?", answer: "Monitor entra como categoria atendida na avaliação de equipamentos, com o mesmo critério de bancada e as mesmas limitações de painel. Não existe página nem processo separado: o encaminhamento é feito pela triagem, junto com as demais categorias de equipamentos atendidos." },
     ],
     relacionados: [
+      { label: "TV não liga", to: "/problemas/tv-nao-liga" },
       { label: "Coleta e entrega", to: "/coleta-e-entrega" },
       { label: "Conserto de placa eletrônica", to: "/servicos/conserto-placa" },
       { label: "Equipamentos atendidos", to: "/equipamentos-atendidos" },
