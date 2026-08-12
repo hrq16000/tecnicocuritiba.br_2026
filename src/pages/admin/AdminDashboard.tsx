@@ -91,23 +91,42 @@ const AdminDashboard = () => {
     () => [...new Set(allRows.map((r) => r.servico).filter(Boolean) as string[])].sort(),
     [allRows],
   );
-
-  /** Linhas filtradas por bairro/serviço (todos os tipos de evento). */
-  const filteredAll = useMemo(
-    () =>
-      allRows.filter(
-        (r) =>
-          (bairro === ALL || (r.bairro || "—") === bairro) &&
-          (servico === ALL || (r.servico || "—") === servico),
-      ),
-    [allRows, bairro, servico],
+  const routeOptions = useMemo(
+    () => [...new Set(allRows.map((r) => r.route_type).filter(Boolean) as string[])].sort(),
+    [allRows],
+  );
+  const campaignOptions = useMemo(
+    () => [...new Set(allRows.map((r) => r.utm_campaign).filter(Boolean) as string[])].sort(),
+    [allRows],
   );
 
-  /** Somente cliques de conversão (wa/ligação) — base das tabelas e do CSV. */
+  /** Linhas filtradas (todos os tipos de evento) — bairro, serviço, rota, campanha e path. */
+  const filteredAll = useMemo(() => {
+    const q = pathQuery.trim().toLowerCase();
+    return allRows.filter(
+      (r) =>
+        (bairro === ALL || (r.bairro || "—") === bairro) &&
+        (servico === ALL || (r.servico || "—") === servico) &&
+        (routeFilter === ALL || (r.route_type || "—") === routeFilter) &&
+        (campaignFilter === ALL || (r.utm_campaign || "—") === campaignFilter) &&
+        (!q || (r.path || "").toLowerCase().includes(q)),
+    );
+  }, [allRows, bairro, servico, routeFilter, campaignFilter, pathQuery]);
+
+  /** Deduplicação analítica: cliques idênticos da mesma sessão em até 30s contam uma vez. */
+  const dedup = useMemo(() => dedupeClickEvents(filteredAll), [filteredAll]);
+  const workingRows = dedupOn ? dedup.unique : filteredAll;
+
+  /** Somente cliques de conversão (wa/ligação) — base das tabelas e das exportações. */
   const rows = useMemo(
-    () => filteredAll.filter((r) => r.event_type === "wa_click" || r.event_type === "call_click"),
-    [filteredAll],
+    () => workingRows.filter((r) => r.event_type === "wa_click" || r.event_type === "call_click"),
+    [workingRows],
   );
+
+  const byHour = useMemo(() => aggregateByHour(rows), [rows]);
+  const maxHour = Math.max(1, ...byHour.map((h) => h.total));
+  const dropAlerts = useMemo(() => detectDropAlerts(rows), [rows]);
+
 
   /**
    * Funil: aberturas (`funnel_open`) × conversões (`wa_click`) por sessão,
