@@ -1688,6 +1688,82 @@ const BASE_ROUTES = [
   ]
 },
 {
+  "path": "/problemas/tv-travando",
+  "title": "TV Travando ou Muito Lenta: O Que Fazer | Curitiba",
+  "description": "Smart TV travando, aplicativo congelando ou controle demorando para responder? Veja como separar memória cheia, aplicativo desatualizado, rede saturada e falha de placa antes de trocar a televisão, com avaliação técnica em Curitiba.",
+  "h1": "TV travando: memória cheia, aplicativo, rede ou placa",
+  "subtitulo": "Três das quatro causas de smart TV lenta custam pouco para descartar antes de aposentar o aparelho.",
+  "blocos": [
+    {
+      "titulo": "A ordem certa de investigar TV lenta",
+      "paragrafos": [
+        "O primeiro teste não exige ferramenta: ligue um conteúdo por HDMI. Se a imagem roda sem engasgo, painel e processamento de vídeo estão saudáveis, e a investigação passa a ser sobre sistema e rede.",
+        "O segundo divisor é o momento do travamento. Travar já na tela inicial aponta para memória e sistema; travar apenas dentro de aplicativos de streaming aponta para rede, buffer ou versão do app."
+      ]
+    },
+    {
+      "titulo": "Sintomas e o que cada um costuma indicar",
+      "paragrafos": [
+        "Demora de minutos para responder indica armazenamento interno lotado ou atualização mal concluída. Vídeo que congela com o som seguindo aponta para decodificação e rede instável.",
+        "Reinício ao abrir aplicativo pesado é o padrão clássico de fonte com capacitor cansado: no pico de consumo a tensão cai e a placa reinicia."
+      ]
+    },
+    {
+      "titulo": "Verificações seguras antes de trocar a televisão",
+      "paragrafos": [
+        "Teste conteúdo por HDMI, meça o sinal de Wi-Fi no ponto exato da TV, limpe o cache do aplicativo que trava, desligue a TV da tomada por dois minutos e libere espaço removendo apps sem uso. Nenhum passo exige abrir o aparelho.",
+        "O que não recomendamos: abrir a traseira da televisão por conta própria, porque a fonte guarda carga mesmo desligada da tomada, e instalar firmware baixado de site não oficial."
+      ]
+    },
+    {
+      "titulo": "O que resolve cada cenário e quais são as condições",
+      "paragrafos": [
+        "Travamento por espaço, cache ou atualização incompleta é correção de configuração, sem troca de peça. Sinal fraco no cômodo é trabalho de cobertura e canal de rede, não de televisão.",
+        "Reinício sob carga e travamento térmico levam o caso para bancada, com teste sob carga real depois do reparo. Painel de TV trincado não é recuperado por nós, e isso é informado antes da retirada.",
+        "Atendimento sem balcão, com retirada e devolução no endereço informado em Curitiba e região. Garantia de 90 dias sobre mão de obra e peça aplicada, limitada ao reparo executado."
+      ]
+    }
+  ]
+},
+{
+  "path": "/problemas/mouse-nao-funciona",
+  "title": "Mouse Não Funciona: Como Resolver | Curitiba",
+  "description": "Mouse não funciona, cursor travado ou clique falhando sozinho? Veja como separar porta USB, receptor sem fio, driver, bateria e falha do próprio mouse antes de comprar outro, com avaliação técnica em Curitiba.",
+  "h1": "Mouse não funciona: porta USB, receptor, driver ou o próprio mouse",
+  "subtitulo": "Um teste de um minuto separa defeito do periférico de falha da porta USB ou do sistema.",
+  "blocos": [
+    {
+      "titulo": "A ordem certa de investigar um mouse parado",
+      "paragrafos": [
+        "O teste que decide tudo é gratuito: levar o mouse para outro computador. Funcionando lá, o periférico está bom e a investigação passa para porta USB, energia e sistema.",
+        "O segundo divisor é a quantidade de dispositivos afetados. Só o mouse aponta para o próprio aparelho ou para uma porta específica; mouse e teclado juntos apontam para a controladora USB ou para drivers substituídos em atualização."
+      ]
+    },
+    {
+      "titulo": "Sintomas e o que cada um costuma indicar",
+      "paragrafos": [
+        "Clique que dispara duas vezes sozinho é desgaste do micro switch, típico de uso intenso, e não tem relação com vírus ou configuração. Cursor que trava por segundos aponta para pilha fraca, receptor mal posicionado ou superfície inadequada para o sensor.",
+        "Periférico que some ao acordar da suspensão é efeito da economia de energia desligando a porta USB, o que é configuração do sistema e não peça."
+      ]
+    },
+    {
+      "titulo": "Verificações seguras antes de comprar outro mouse",
+      "paragrafos": [
+        "Teste o mouse em outra máquina, troque de porta USB preferindo as traseiras, troque a pilha em modelos sem fio, aproxime o receptor, limpe o sensor e teste sobre superfície fosca. Nenhum passo exige abrir equipamento.",
+        "O que não recomendamos: instalar programas que prometem consertar drivers automaticamente, forçar o conector em porta com folga e abrir o mouse para mexer no switch sem experiência."
+      ]
+    },
+    {
+      "titulo": "O que resolve cada cenário e quais são as condições",
+      "paragrafos": [
+        "Política de energia, driver e configuração de entrada costumam ser resolvidos por atendimento remoto. Porta frontal solta, conector torto ou controladora com falha parcial são serviços de bancada, com teste em todas as portas depois do reparo.",
+        "Quando o custo do reparo supera o valor de um periférico novo, dizemos isso abertamente em vez de empurrar serviço.",
+        "Atendimento sem balcão, com retirada e devolução no endereço informado em Curitiba e região. Garantia de 90 dias sobre mão de obra e peça aplicada, limitada ao reparo executado."
+      ]
+    }
+  ]
+},
+{
   "path": "/problemas/computador-sem-som",
   "title": "Computador Sem Som: Como Resolver | Curitiba",
   "description": "Computador sem som, som só no fone ou saída de áudio sumida do Windows? Veja como separar dispositivo de saída errado, driver, conector danificado e falha no chip de áudio antes de trocar peça, com avaliação em Curitiba.",
