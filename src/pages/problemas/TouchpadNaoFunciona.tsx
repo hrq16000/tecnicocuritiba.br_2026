@@ -75,8 +75,8 @@ const OPCOES = [
   {
     titulo: "Correção por software e reinstalação de driver",
     desc: "Atalho, configuração e driver oficial cobrem a maior parte dos chamados e podem ser resolvidos por acesso remoto, sem retirar o notebook do endereço.",
-    to: "/servicos/suporte-remoto",
-    label: "Suporte remoto",
+    to: "/atendimento-remoto",
+    label: "Atendimento remoto",
   },
   {
     titulo: "Reencaixe do cabo flat em bancada",
