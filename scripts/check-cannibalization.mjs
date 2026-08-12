@@ -64,6 +64,8 @@ export const INTENT_MATRIX = [
   { path: "/problemas/tv-desligando-sozinha", keyword: "tv desligando sozinha", role: "sintoma de desligamento espontaneo de tv", notCompeting: ["/servicos/conserto-tv", "/problemas/tv-nao-liga", "/problemas/tv-com-som-sem-imagem"] },
   { path: "/problemas/computador-fazendo-barulho", keyword: "computador fazendo barulho", role: "sintoma de ruido em computador", notCompeting: ["/servicos/manutencao-de-computador", "/problemas/computador-lento", "/problemas/computador-desliga-sozinho"] },
   { path: "/problemas/tv-com-linhas-na-tela", keyword: "tv com linhas na tela", role: "sintoma de linhas na imagem de tv", notCompeting: ["/servicos/conserto-tv", "/problemas/tv-com-som-sem-imagem", "/servicos/conserto-placa"] },
+  { path: "/problemas/tv-sem-som", keyword: "tv sem som", role: "sintoma de ausencia de audio em tv", notCompeting: ["/servicos/conserto-tv", "/problemas/tv-com-som-sem-imagem", "/problemas/tv-desligando-sozinha", "/servicos/conserto-placa"] },
+  { path: "/problemas/impressora-nao-imprime", keyword: "impressora nao imprime", role: "sintoma de falha de impressao", notCompeting: ["/conserto-impressora-curitiba", "/servicos/redes-e-wifi", "/servicos/manutencao-de-computador"] },
   { path: "/problemas/teclado-de-notebook-nao-funciona", keyword: "teclado de notebook nao funciona", role: "sintoma de teclado em notebook", notCompeting: ["/servicos/manutencao-de-notebook", "/problemas/notebook-molhado", "/servicos/conserto-placa"] },
 ];
 

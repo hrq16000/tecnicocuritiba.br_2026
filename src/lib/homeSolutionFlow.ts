@@ -227,6 +227,14 @@ export const SOLUTION_FLOW: SolutionProblem[] = [
         porque: "Rede corporativa envolve cabeamento, switches e prioridade de tráfego.",
         mensagem: "A rede da minha empresa está instável. Quero suporte técnico empresarial.",
       },
+      {
+        equipamento: "Impressora offline ou sem imprimir",
+        solucao: { label: "Impressora não imprime", path: "/problemas/impressora-nao-imprime" },
+        modalidade: "remoto",
+        porque: "Fila travada, driver e endereço de rede respondem pela maior parte dos casos e se resolvem por acesso remoto.",
+        mensagem: "Minha impressora não está imprimindo. Quero avaliação do driver e da rede.",
+      },
+
     ],
   },
   {
@@ -261,6 +269,13 @@ export const SOLUTION_FLOW: SolutionProblem[] = [
         modalidade: "coleta",
         porque: "Falha térmica de fonte só aparece com o aparelho aquecido e medição sob carga em bancada.",
         mensagem: "Minha TV está desligando sozinha. Quero avaliação da fonte com coleta.",
+      },
+      {
+        equipamento: "TV com imagem e sem som",
+        solucao: { label: "TV sem som", path: "/problemas/tv-sem-som" },
+        modalidade: "coleta",
+        porque: "O sinal de áudio é medido do processamento até os alto-falantes para separar ajuste, amplificador e alto-falante.",
+        mensagem: "Minha TV está com imagem normal e sem som. Quero avaliação técnica com coleta.",
       },
       {
         equipamento: "TV com linhas na imagem",
