@@ -33,6 +33,8 @@ const SOURCES = {
   "/problemas/tv-desligando-sozinha": "src/pages/problemas/TvDesligandoSozinha.tsx",
   "/problemas/tv-sem-som": "src/pages/problemas/TvSemSom.tsx",
   "/problemas/impressora-nao-imprime": "src/pages/problemas/ImpressoraNaoImprime.tsx",
+  "/problemas/monitor-sem-sinal": "src/pages/problemas/MonitorSemSinal.tsx",
+  "/problemas/notebook-lento": "src/pages/problemas/NotebookLento.tsx",
   "/problemas/notebook-superaquecendo": "src/pages/problemas/NotebookSuperaquecendo.tsx",
   "/precos-e-politicas": "src/components/TermosConteudo.tsx",
   "/como-funciona": "src/pages/ComoFunciona.tsx",

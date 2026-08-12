@@ -451,6 +451,8 @@ const ProblemaNotebookTelaPreta = lazy(() => import("./pages/problemas/NotebookC
 const ProblemaTvDesligando = lazy(() => import("./pages/problemas/TvDesligandoSozinha"));
 const ProblemaTvSemSom = lazy(() => import("./pages/problemas/TvSemSom"));
 const ProblemaImpressoraNaoImprime = lazy(() => import("./pages/problemas/ImpressoraNaoImprime"));
+const ProblemaMonitorSemSinal = lazy(() => import("./pages/problemas/MonitorSemSinal"));
+const ProblemaNotebookLento = lazy(() => import("./pages/problemas/NotebookLento"));
 const ProblemaNotebookSuperaquecendo = lazy(() => import("./pages/problemas/NotebookSuperaquecendo"));
 
 // Pillar do cluster de informática
@@ -988,6 +990,8 @@ const App = () => (
             <Route path="/problemas/tv-desligando-sozinha" element={<ProblemaTvDesligando />} />
             <Route path="/problemas/tv-sem-som" element={<ProblemaTvSemSom />} />
             <Route path="/problemas/impressora-nao-imprime" element={<ProblemaImpressoraNaoImprime />} />
+            <Route path="/problemas/monitor-sem-sinal" element={<ProblemaMonitorSemSinal />} />
+            <Route path="/problemas/notebook-lento" element={<ProblemaNotebookLento />} />
 
             <Route path="/problemas/notebook-superaquecendo" element={<ProblemaNotebookSuperaquecendo />} />
             <Route path="/guia-tecnico-informatica" element={<GuiaTecnicoInformatica />} />
