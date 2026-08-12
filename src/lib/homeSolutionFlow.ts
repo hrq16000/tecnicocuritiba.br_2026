@@ -305,6 +305,13 @@ export const SOLUTION_FLOW: SolutionProblem[] = [
         mensagem: "A tela do meu computador está piscando. Quero avaliação técnica.",
       },
       {
+        equipamento: "Windows não carrega ao ligar",
+        solucao: { label: "Windows não inicia", path: "/problemas/windows-nao-inicia" },
+        modalidade: "coleta",
+        porque: "Antes de formatar, medimos a saúde do disco: na maior parte dos casos os arquivos são preservados.",
+        mensagem: "Meu computador liga mas o Windows não inicia. Quero avaliação técnica.",
+      },
+      {
         equipamento: "Impressora offline ou sem imprimir",
         solucao: { label: "Impressora não imprime", path: "/problemas/impressora-nao-imprime" },
         modalidade: "remoto",
@@ -360,6 +367,13 @@ export const SOLUTION_FLOW: SolutionProblem[] = [
         modalidade: "coleta",
         porque: "O sinal de áudio é medido do processamento até os alto-falantes para separar ajuste, amplificador e alto-falante.",
         mensagem: "Minha TV está com imagem normal e sem som. Quero avaliação técnica com coleta.",
+      },
+      {
+        equipamento: "TV com imagem muito escura",
+        solucao: { label: "TV com imagem escura", path: "/problemas/tv-com-imagem-escura" },
+        modalidade: "coleta",
+        porque: "O teste da lanterna separa iluminação de fundo de falha de painel antes de qualquer coleta.",
+        mensagem: "Minha TV está com a imagem muito escura. Quero avaliação técnica com coleta.",
       },
       {
         equipamento: "TV com linhas na imagem",

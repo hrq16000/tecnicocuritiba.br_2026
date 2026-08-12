@@ -79,6 +79,8 @@ const PRIORITY = [
   "/problemas/computador-sem-som",
   "/problemas/tela-do-computador-piscando",
   "/problemas/notebook-nao-conecta-no-wifi",
+  "/problemas/windows-nao-inicia",
+  "/problemas/tv-com-imagem-escura",
   "/problemas/tv-travando",
   "/problemas/mouse-nao-funciona",
   "/problemas/notebook-superaquecendo",
