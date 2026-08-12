@@ -1498,6 +1498,82 @@ const BASE_ROUTES = [
   ]
 },
 {
+  "path": "/problemas/notebook-desligando-sozinho",
+  "title": "Notebook Desligando Sozinho: Causas | Curitiba",
+  "description": "Notebook desligando sozinho do nada, só em jogos ou quando tira da tomada? Veja como separar superaquecimento, bateria em fim de vida, carregador fraco e falha de placa antes de gastar, com avaliação técnica em Curitiba.",
+  "h1": "Notebook desligando sozinho: temperatura, bateria, carregador ou placa",
+  "subtitulo": "O momento em que o notebook desliga é o dado mais valioso do diagnóstico e separa problema térmico de bateria e de falha elétrica.",
+  "blocos": [
+    {
+      "titulo": "O momento do desligamento resolve metade do caso",
+      "paragrafos": [
+        "Desligar sempre depois de alguns minutos aponta para temperatura. Desligar apenas fora da tomada aponta para bateria sem capacidade real. Desligar sem padrão nenhum aponta para carregador subdimensionado ou circuito de energia instável na placa.",
+        "Essa separação evita o erro mais caro da categoria: trocar bateria em um aparelho que estava superaquecendo, ou pagar limpeza em um notebook cuja bateria já não sustenta carga."
+      ]
+    },
+    {
+      "titulo": "Sintomas e o que cada um costuma indicar",
+      "paragrafos": [
+        "Desligamento por tempo de uso é a assinatura da proteção térmica. Desligar só em jogos e programas pesados aponta para pasta térmica ressecada, dissipador obstruído ou carregador com potência abaixo da exigida.",
+        "Estalo, cheiro de queimado ou aquecimento anormal no carregador exigem parar de usar imediatamente, porque insistir transforma reparo pontual em troca de placa."
+      ]
+    },
+    {
+      "titulo": "Verificações gratuitas antes de qualquer orçamento",
+      "paragrafos": [
+        "Anote em que situação desliga, sinta o fluxo de ar na saída do dissipador, use o aparelho sobre superfície rígida por um dia, confira se o carregador tem a potência indicada na etiqueta e observe a temperatura sob carga.",
+        "O que não recomendamos: soprar ar comprimido pelas grades, apoiar o notebook em base improvisada com o cooler bloqueado e continuar usando após cheiro de queimado."
+      ]
+    },
+    {
+      "titulo": "O que resolve cada cenário e quais são as condições",
+      "paragrafos": [
+        "Limpeza interna com troca de pasta térmica resolve a maior parte dos desligamentos por temperatura, e o resultado é verificável na medição sob carga depois do serviço. Desligamento fora da tomada exige medir a capacidade real da bateria antes de indicar troca.",
+        "Conector de alimentação com mau contato e falha no circuito de energia são serviços de bancada com microssolda, sujeitos à viabilidade avaliada caso a caso.",
+        "Atendimento apenas por coleta e entrega no endereço informado, sem balcão, com mínimo pré-aprovado de R$ 299,99 para serviços de bancada e garantia de 90 dias sobre mão de obra e peça aplicada."
+      ]
+    }
+  ]
+},
+{
+  "path": "/problemas/pen-drive-nao-reconhecido",
+  "title": "Pen Drive Não Reconhecido: O Que Fazer | Curitiba",
+  "description": "Pen drive não aparece no computador, pede formatação ou some do nada? Veja como separar porta USB, letra de unidade, tabela de partição corrompida e falha física antes de perder os arquivos, com avaliação em Curitiba.",
+  "h1": "Pen drive não reconhecido: porta USB, partição corrompida ou falha física",
+  "subtitulo": "A prioridade aqui não é o dispositivo, é o conteúdo: cada tentativa desnecessária consome parte da chance de recuperar os arquivos.",
+  "blocos": [
+    {
+      "titulo": "A prioridade é o conteúdo, não o dispositivo",
+      "paragrafos": [
+        "Pen drive é mídia de custo baixo e vida útil limitada. Quando ele para de ser reconhecido, o valor em jogo está nos arquivos, e existem dois erros que encerram muitos casos antes do diagnóstico: aceitar a formatação sugerida pelo sistema e rodar utilitários automáticos de reparo.",
+        "Ambos gravam na unidade e sobrescrevem justamente a estrutura que a recuperação usaria como mapa para localizar os dados."
+      ]
+    },
+    {
+      "titulo": "Sintomas e o que cada um costuma indicar",
+      "paragrafos": [
+        "Não aparecer em computador nenhum aponta para o próprio dispositivo: solda do conector, controlador ou memória. Aparecer em uma máquina e não em outra desloca a suspeita para porta USB, driver ou letra de unidade ocupada.",
+        "Pedido de formatação significa tabela de partição ilegível, não arquivos apagados. Pasta vazia com espaço ocupado indica estrutura corrompida ou arquivos ocultos por praga digital."
+      ]
+    },
+    {
+      "titulo": "Verificações seguras antes de qualquer tentativa",
+      "paragrafos": [
+        "Teste em outro computador, troque de porta USB, verifique no gerenciamento de disco se a unidade aparece sem letra atribuída e exiba os itens ocultos antes de concluir que a pasta está vazia. Todos esses passos são de leitura e não gravam nada.",
+        "O que não recomendamos: formatar, executar reparadores automáticos baixados por conta própria, abrir a carcaça com alicate e conectar repetidamente uma unidade que esquenta."
+      ]
+    },
+    {
+      "titulo": "O que resolve cada cenário e quais são as condições",
+      "paragrafos": [
+        "Com memória íntegra e problema de estrutura, a leitura é feita em bancada sobre imagem da mídia, sem escrita na unidade original. Conector solto por esforço mecânico é reparo de microssolda que costuma devolver a leitura normal.",
+        "Não existe garantia de recuperação, e desconfie de quem promete. O que garantimos é o método e a informação da chance real antes de você aprovar a continuidade.",
+        "Atendimento apenas por coleta e entrega no endereço informado, sem balcão. O conteúdo recuperado é entregue em mídia nova e não é retido após a entrega."
+      ]
+    }
+  ]
+},
+{
   "path": "/problemas/computador-travando",
   "title": "Computador Travando: Causas e Conserto | Curitiba",
   "description": "Computador travando do nada, congelando a tela ou parando só em jogos e programas pesados? Veja como separar memória com defeito, superaquecimento, disco em falha e driver antes de trocar peça, com avaliação técnica em Curitiba.",
