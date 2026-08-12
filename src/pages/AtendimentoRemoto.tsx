@@ -21,7 +21,7 @@ import { trackPageView, trackCTAClick } from "@/lib/analytics";
 import { MessageCircle, Zap, Download, MapPinOff, ShieldCheck, ArrowRight, Lock } from "lucide-react";
 
 const PATH = "/atendimento-remoto";
-const TITLE = "Atendimento Remoto de Informática em Curitiba";
+const TITLE = "Suporte Remoto de Informática em Curitiba | Online";
 const DESCRIPTION =
   "Suporte remoto de informática em Curitiba para configurações, sistema, programas, e-mail, impressora já conectada, orientação e home office — com autorização e acompanhamento.";
 
@@ -166,7 +166,7 @@ const AtendimentoRemoto = () => {
               {cfg3u?.eyebrow ?? "Modalidade de atendimento"} · Curitiba e região
             </p>
             <h1 className="mb-3 text-[1.6rem] font-bold leading-tight md:mb-4 md:text-4xl">
-              Atendimento remoto de informática em Curitiba
+              Suporte remoto de informática para residências e empresas
             </h1>
             <p className="mb-5 text-sm leading-relaxed opacity-95 md:text-base">
               Modalidade indicada quando o equipamento liga, o sistema carrega e há internet: configurações,

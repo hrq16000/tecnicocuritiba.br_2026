@@ -541,7 +541,8 @@ const BASE_ROUTES = [
   },
   {
     "path": "/atendimento-remoto",
-    "title": "Atendimento Remoto de Informática em Curitiba",
+    "title": "Suporte Remoto de Informática em Curitiba | Online",
+    "h1": "Suporte remoto de informática para residências e empresas",
     "description": "Suporte remoto de informática em Curitiba para configurações, sistema, programas, e-mail, impressora já conectada, orientação e home office — com autorização e acompanhamento.",
     "blocos": [
       {
