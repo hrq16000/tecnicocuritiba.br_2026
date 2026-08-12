@@ -26,7 +26,7 @@ export const PoliticaAtendimentoBlock = ({
   const cards = [
     {
       icon: Truck,
-      title: "Sem balcão de atendimento",
+      title: "Coleta e entrega no seu endereço",
       text: REGRA_SEM_BALCAO,
     },
     {
