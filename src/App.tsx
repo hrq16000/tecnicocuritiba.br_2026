@@ -221,6 +221,7 @@ const HomeApp = () => {
       <GeoAutoDetect />
       <InstitutionalJsonLd />
       <InstantNavigation setRoutePath={setRoutePath} setShowNavLoader={setShowNavLoader} />
+      <RouteProgress active={showNavLoader} />
       {showNavLoader ? <NavigationOverlay /> : null}
       {isHomeRoute(routePath) ? (
         <Index />
