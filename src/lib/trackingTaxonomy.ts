@@ -16,6 +16,7 @@ export const GA4_EVENTS = {
   funnelSubmit: "funnel_submit",
   faqToggle: "faq_toggle",
   fileDownload: "file_download",
+  internalLink: "internal_link_click",
 } as const;
 
 

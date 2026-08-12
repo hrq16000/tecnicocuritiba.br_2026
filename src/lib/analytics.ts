@@ -202,6 +202,26 @@ export const trackFileDownload = (fileName: string, rawLocation: string) => {
   });
 };
 
+/**
+ * Clique em link interno de navegação (ex.: cards de "próximos problemas").
+ * NÃO é lead nem conversão do Ads — serve para medir crawl/navegação entre
+ * páginas de sintoma e não interfere na deduplicação por `lead_id`.
+ */
+export const trackInternalLink = (target: string, section: string) => {
+  if (typeof window === 'undefined' || !window.gtag) return;
+  window.gtag('event', GA4_EVENTS.internalLink, {
+    event_category: 'navigation',
+    event_label: `${normalizeTrackingLabel(section)}_${normalizeTrackingLabel(target)}`,
+    link_target: target,
+    link_section: normalizeTrackingLabel(section),
+    page_path: window.location.pathname,
+    route_type: routeTypeFromPath(window.location.pathname),
+    non_interaction: true,
+    ...getDeviceContext(),
+    ...getUtmContext(),
+  });
+};
+
 // Track page views
 
 export const trackPageView = (pagePath: string, pageTitle: string) => {
