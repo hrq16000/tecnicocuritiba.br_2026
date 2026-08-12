@@ -1,21 +1,21 @@
 # Relatório de Validação de Bairros
 
-Gerado em: 2026-08-12T06:06:05.053Z
+Gerado em: 2026-08-12T06:06:38.437Z
 Bairros indexáveis: 13
 
 ## Contagem de palavras próprias
 
 | Slug | Nome | Palavras próprias | Únicas | Status |
 | --- | --- | --- | --- | --- |
-| batel | Batel | 17 | 17 | warn:sem-narrativa |
-| centro | Centro | 15 | 15 | warn:sem-narrativa |
-| agua-verde | Água Verde | 17 | 17 | warn:sem-narrativa |
-| cic | CIC | 15 | 15 | warn:sem-narrativa |
-| portao | Portão | 15 | 15 | warn:sem-narrativa |
-| bigorrilho | Bigorrilho | 18 | 18 | warn:sem-narrativa |
-| cabral | Cabral | 18 | 18 | warn:sem-narrativa |
-| santa-felicidade | Santa Felicidade | 15 | 15 | warn:sem-narrativa |
-| boa-vista | Boa Vista | 20 | 20 | warn:sem-narrativa |
+| batel | Batel | 215 | 198 | ok |
+| centro | Centro | 216 | 203 | ok |
+| agua-verde | Água Verde | 203 | 190 | ok |
+| cic | CIC | 203 | 188 | ok |
+| portao | Portão | 201 | 189 | ok |
+| bigorrilho | Bigorrilho | 209 | 198 | ok |
+| cabral | Cabral | 204 | 189 | ok |
+| santa-felicidade | Santa Felicidade | 203 | 189 | ok |
+| boa-vista | Boa Vista | 204 | 186 | ok |
 | jardim-das-americas | Jardim das Américas | 232 | 209 | ok |
 | ecoville | Ecoville | 235 | 203 | ok |
 | alto-da-xv | Alto da XV | 213 | 195 | ok |
@@ -25,35 +25,35 @@ Bairros indexáveis: 13
 
 | A | B | Jaccard | Status |
 | --- | --- | --- | --- |
-| agua-verde | bigorrilho | 0.167 | ok |
-| portao | boa-vista | 0.129 | ok |
+| cic | boa-vista | 0.151 | ok |
+| centro | alto-da-xv | 0.131 | ok |
+| agua-verde | boa-vista | 0.126 | ok |
 | jardim-das-americas | reboucas | 0.126 | ok |
-| bigorrilho | boa-vista | 0.118 | ok |
+| boa-vista | jardim-das-americas | 0.116 | ok |
+| cic | santa-felicidade | 0.112 | ok |
 | ecoville | reboucas | 0.112 | ok |
+| batel | jardim-das-americas | 0.109 | ok |
+| cabral | jardim-das-americas | 0.109 | ok |
+| batel | ecoville | 0.108 | ok |
+| cic | alto-da-xv | 0.107 | ok |
 | jardim-das-americas | alto-da-xv | 0.107 | ok |
-| batel | portao | 0.103 | ok |
-| agua-verde | santa-felicidade | 0.103 | ok |
-| portao | bigorrilho | 0.100 | ok |
-| bigorrilho | santa-felicidade | 0.100 | ok |
+| cic | jardim-das-americas | 0.106 | ok |
+| bigorrilho | boa-vista | 0.100 | ok |
+| centro | reboucas | 0.099 | ok |
+| bigorrilho | ecoville | 0.099 | ok |
 | ecoville | alto-da-xv | 0.099 | ok |
+| batel | alto-da-xv | 0.098 | ok |
 | alto-da-xv | reboucas | 0.098 | ok |
-| batel | agua-verde | 0.097 | ok |
-| agua-verde | cabral | 0.094 | ok |
-| bigorrilho | cabral | 0.091 | ok |
+| centro | santa-felicidade | 0.095 | ok |
+| agua-verde | alto-da-xv | 0.094 | ok |
+| santa-felicidade | reboucas | 0.094 | ok |
+| agua-verde | bigorrilho | 0.093 | ok |
+| santa-felicidade | boa-vista | 0.093 | ok |
+| cic | ecoville | 0.092 | ok |
+| batel | bigorrilho | 0.091 | ok |
+| cic | reboucas | 0.091 | ok |
+| centro | jardim-das-americas | 0.090 | ok |
+| agua-verde | jardim-das-americas | 0.090 | ok |
 | jardim-das-americas | ecoville | 0.090 | ok |
-| cic | santa-felicidade | 0.071 | ok |
-| batel | santa-felicidade | 0.067 | ok |
-| agua-verde | portao | 0.067 | ok |
-| centro | cabral | 0.065 | ok |
-| cic | cabral | 0.065 | ok |
-| batel | bigorrilho | 0.061 | ok |
-| batel | cabral | 0.061 | ok |
-| centro | boa-vista | 0.061 | ok |
-| cic | boa-vista | 0.061 | ok |
-| agua-verde | reboucas | 0.058 | ok |
-| agua-verde | boa-vista | 0.057 | ok |
-| boa-vista | jardim-das-americas | 0.050 | ok |
-| portao | reboucas | 0.047 | ok |
-| bigorrilho | reboucas | 0.046 | ok |
 
 **Resultado: OK — pronto para indexar.**
