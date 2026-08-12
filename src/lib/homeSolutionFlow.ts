@@ -193,6 +193,13 @@ export const SOLUTION_FLOW: SolutionProblem[] = [
         mensagem: "Perdi arquivos importantes. Quero avaliação de recuperação de dados.",
       },
       {
+        equipamento: "Pen drive não reconhecido",
+        solucao: { label: "Pen drive não reconhecido", path: "/problemas/pen-drive-nao-reconhecido" },
+        modalidade: "coleta",
+        porque: "Formatar ou rodar reparador automático apaga a estrutura usada no resgate dos arquivos.",
+        mensagem: "Meu pen drive não é reconhecido e preciso dos arquivos. Quero avaliação.",
+      },
+      {
         equipamento: "Empresa / vários computadores",
         solucao: { label: "Backup para empresas", path: "/servicos/backup-para-empresas" },
         modalidade: "domicilio",
@@ -226,6 +233,13 @@ export const SOLUTION_FLOW: SolutionProblem[] = [
         modalidade: "domicilio",
         porque: "Rede corporativa envolve cabeamento, switches e prioridade de tráfego.",
         mensagem: "A rede da minha empresa está instável. Quero suporte técnico empresarial.",
+      },
+      {
+        equipamento: "Notebook desligando sozinho",
+        solucao: { label: "Notebook desligando sozinho", path: "/problemas/notebook-desligando-sozinho" },
+        modalidade: "coleta",
+        porque: "Temperatura, bateria e circuito de energia precisam ser medidos em bancada.",
+        mensagem: "Meu notebook está desligando sozinho. Quero avaliação técnica.",
       },
       {
         equipamento: "Computador congelando",

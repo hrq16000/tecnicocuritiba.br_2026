@@ -192,6 +192,9 @@ export const PROBLEMAS = [
   { path: "/problemas/notebook-lento", changefreq: "monthly", priority: "0.6" },
   // Onda 17 — travamento em desktop e touchpad em notebook.
   { path: "/problemas/computador-travando", changefreq: "monthly", priority: "0.6" },
+  // Onda 18 — desligamento em notebook e mídia removível não reconhecida.
+  { path: "/problemas/notebook-desligando-sozinho", changefreq: "monthly", priority: "0.6" },
+  { path: "/problemas/pen-drive-nao-reconhecido", changefreq: "monthly", priority: "0.6" },
   { path: "/problemas/touchpad-nao-funciona", changefreq: "monthly", priority: "0.6" },
   // Onda 13 — ruído em desktop e linhas na tela de TV, ambos autorais.
   { path: "/problemas/computador-fazendo-barulho", changefreq: "monthly", priority: "0.6" },
