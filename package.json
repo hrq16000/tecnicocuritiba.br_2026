@@ -6,10 +6,11 @@
   "scripts": {
     "predev": "node scripts/generate-sitemaps.mjs && node scripts/generate-llms.mjs",
     "dev": "vite",
-    "prebuild": "node scripts/generate-sitemaps.mjs && node scripts/generate-llms.mjs && bun scripts/check-seo-basics.ts index.html && node scripts/check-security-findings-baseline.mjs && node scripts/check-ads-txt.mjs && node scripts/check-policy-jsonld.mjs && node scripts/check-telemetry-transparency.mjs && node scripts/check-missing-exports.mjs && node scripts/check-media-assets.mjs && node scripts/report-build-gates.mjs",
+    "prebuild": "node scripts/generate-sitemaps.mjs && node scripts/generate-llms.mjs && bun scripts/check-seo-basics.ts index.html && node scripts/check-security-findings-baseline.mjs && node scripts/check-ads-txt.mjs && node scripts/check-policy-jsonld.mjs && node scripts/check-telemetry-transparency.mjs && node scripts/check-missing-exports.mjs && npm run check:types && node scripts/check-media-assets.mjs && node scripts/report-build-gates.mjs",
     "check:ads-txt": "node scripts/check-ads-txt.mjs",
     "check:policy-jsonld": "node scripts/check-policy-jsonld.mjs",
     "check:missing-exports": "node scripts/check-missing-exports.mjs",
+    "check:types": "tsgo --noEmit -p tsconfig.app.json",
     "check:telemetry-transparency": "node scripts/check-telemetry-transparency.mjs",
     "build": "vite build",
     "postbuild": "bun scripts/check-seo-basics.ts dist/index.html && bun scripts/check-seo-basics.ts --curated dist && node scripts/check-jsonld-references.mjs dist && bun scripts/dump-dynamic-slugs.ts dist/dynamic-slugs.json && node scripts/generate-route-manifest.mjs dist && node scripts/check-soft-404.mjs && node scripts/generate-image-sitemap.mjs dist && node scripts/check-image-sitemap.mjs dist",
