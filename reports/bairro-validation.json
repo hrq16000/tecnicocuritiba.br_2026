@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-12T06:06:53.237Z",
+  "generatedAt": "2026-08-12T06:14:35.279Z",
   "bairros": [
     {
       "slug": "batel",
@@ -62,6 +62,27 @@
       "nome": "Boa Vista",
       "palavrasProprias": 204,
       "palavrasUnicas": 186,
+      "status": "ok"
+    },
+    {
+      "slug": "cristo-rei",
+      "nome": "Cristo Rei",
+      "palavrasProprias": 208,
+      "palavrasUnicas": 188,
+      "status": "ok"
+    },
+    {
+      "slug": "cajuru",
+      "nome": "Cajuru",
+      "palavrasProprias": 205,
+      "palavrasUnicas": 179,
+      "status": "ok"
+    },
+    {
+      "slug": "boqueirao",
+      "nome": "Boqueirão",
+      "palavrasProprias": 200,
+      "palavrasUnicas": 178,
       "status": "ok"
     },
     {
@@ -144,6 +165,24 @@
     },
     {
       "a": "batel",
+      "b": "cristo-rei",
+      "jaccard": 0.066,
+      "status": "ok"
+    },
+    {
+      "a": "batel",
+      "b": "cajuru",
+      "jaccard": 0.112,
+      "status": "ok"
+    },
+    {
+      "a": "batel",
+      "b": "boqueirao",
+      "jaccard": 0.077,
+      "status": "ok"
+    },
+    {
+      "a": "batel",
       "b": "jardim-das-americas",
       "jaccard": 0.109,
       "status": "ok"
@@ -210,6 +249,24 @@
     },
     {
       "a": "centro",
+      "b": "cristo-rei",
+      "jaccard": 0.063,
+      "status": "ok"
+    },
+    {
+      "a": "centro",
+      "b": "cajuru",
+      "jaccard": 0.095,
+      "status": "ok"
+    },
+    {
+      "a": "centro",
+      "b": "boqueirao",
+      "jaccard": 0.124,
+      "status": "ok"
+    },
+    {
+      "a": "centro",
       "b": "jardim-das-americas",
       "jaccard": 0.09,
       "status": "ok"
@@ -270,6 +327,24 @@
     },
     {
       "a": "agua-verde",
+      "b": "cristo-rei",
+      "jaccard": 0.089,
+      "status": "ok"
+    },
+    {
+      "a": "agua-verde",
+      "b": "cajuru",
+      "jaccard": 0.111,
+      "status": "ok"
+    },
+    {
+      "a": "agua-verde",
+      "b": "boqueirao",
+      "jaccard": 0.079,
+      "status": "ok"
+    },
+    {
+      "a": "agua-verde",
       "b": "jardim-das-americas",
       "jaccard": 0.09,
       "status": "ok"
@@ -324,6 +399,24 @@
     },
     {
       "a": "cic",
+      "b": "cristo-rei",
+      "jaccard": 0.109,
+      "status": "ok"
+    },
+    {
+      "a": "cic",
+      "b": "cajuru",
+      "jaccard": 0.116,
+      "status": "ok"
+    },
+    {
+      "a": "cic",
+      "b": "boqueirao",
+      "jaccard": 0.102,
+      "status": "ok"
+    },
+    {
+      "a": "cic",
       "b": "jardim-das-americas",
       "jaccard": 0.106,
       "status": "ok"
@@ -372,6 +465,24 @@
     },
     {
       "a": "portao",
+      "b": "cristo-rei",
+      "jaccard": 0.099,
+      "status": "ok"
+    },
+    {
+      "a": "portao",
+      "b": "cajuru",
+      "jaccard": 0.099,
+      "status": "ok"
+    },
+    {
+      "a": "portao",
+      "b": "boqueirao",
+      "jaccard": 0.122,
+      "status": "ok"
+    },
+    {
+      "a": "portao",
       "b": "jardim-das-americas",
       "jaccard": 0.073,
       "status": "ok"
@@ -414,6 +525,24 @@
     },
     {
       "a": "bigorrilho",
+      "b": "cristo-rei",
+      "jaccard": 0.072,
+      "status": "ok"
+    },
+    {
+      "a": "bigorrilho",
+      "b": "cajuru",
+      "jaccard": 0.093,
+      "status": "ok"
+    },
+    {
+      "a": "bigorrilho",
+      "b": "boqueirao",
+      "jaccard": 0.068,
+      "status": "ok"
+    },
+    {
+      "a": "bigorrilho",
       "b": "jardim-das-americas",
       "jaccard": 0.088,
       "status": "ok"
@@ -450,6 +579,24 @@
     },
     {
       "a": "cabral",
+      "b": "cristo-rei",
+      "jaccard": 0.065,
+      "status": "ok"
+    },
+    {
+      "a": "cabral",
+      "b": "cajuru",
+      "jaccard": 0.086,
+      "status": "ok"
+    },
+    {
+      "a": "cabral",
+      "b": "boqueirao",
+      "jaccard": 0.086,
+      "status": "ok"
+    },
+    {
+      "a": "cabral",
       "b": "jardim-das-americas",
       "jaccard": 0.109,
       "status": "ok"
@@ -480,6 +627,24 @@
     },
     {
       "a": "santa-felicidade",
+      "b": "cristo-rei",
+      "jaccard": 0.102,
+      "status": "ok"
+    },
+    {
+      "a": "santa-felicidade",
+      "b": "cajuru",
+      "jaccard": 0.076,
+      "status": "ok"
+    },
+    {
+      "a": "santa-felicidade",
+      "b": "boqueirao",
+      "jaccard": 0.122,
+      "status": "ok"
+    },
+    {
+      "a": "santa-felicidade",
       "b": "jardim-das-americas",
       "jaccard": 0.087,
       "status": "ok"
@@ -504,6 +669,24 @@
     },
     {
       "a": "boa-vista",
+      "b": "cristo-rei",
+      "jaccard": 0.103,
+      "status": "ok"
+    },
+    {
+      "a": "boa-vista",
+      "b": "cajuru",
+      "jaccard": 0.113,
+      "status": "ok"
+    },
+    {
+      "a": "boa-vista",
+      "b": "boqueirao",
+      "jaccard": 0.11,
+      "status": "ok"
+    },
+    {
+      "a": "boa-vista",
       "b": "jardim-das-americas",
       "jaccard": 0.116,
       "status": "ok"
@@ -524,6 +707,96 @@
       "a": "boa-vista",
       "b": "reboucas",
       "jaccard": 0.088,
+      "status": "ok"
+    },
+    {
+      "a": "cristo-rei",
+      "b": "cajuru",
+      "jaccard": 0.099,
+      "status": "ok"
+    },
+    {
+      "a": "cristo-rei",
+      "b": "boqueirao",
+      "jaccard": 0.089,
+      "status": "ok"
+    },
+    {
+      "a": "cristo-rei",
+      "b": "jardim-das-americas",
+      "jaccard": 0.097,
+      "status": "ok"
+    },
+    {
+      "a": "cristo-rei",
+      "b": "ecoville",
+      "jaccard": 0.065,
+      "status": "ok"
+    },
+    {
+      "a": "cristo-rei",
+      "b": "alto-da-xv",
+      "jaccard": 0.088,
+      "status": "ok"
+    },
+    {
+      "a": "cristo-rei",
+      "b": "reboucas",
+      "jaccard": 0.104,
+      "status": "ok"
+    },
+    {
+      "a": "cajuru",
+      "b": "boqueirao",
+      "jaccard": 0.072,
+      "status": "ok"
+    },
+    {
+      "a": "cajuru",
+      "b": "jardim-das-americas",
+      "jaccard": 0.093,
+      "status": "ok"
+    },
+    {
+      "a": "cajuru",
+      "b": "ecoville",
+      "jaccard": 0.073,
+      "status": "ok"
+    },
+    {
+      "a": "cajuru",
+      "b": "alto-da-xv",
+      "jaccard": 0.087,
+      "status": "ok"
+    },
+    {
+      "a": "cajuru",
+      "b": "reboucas",
+      "jaccard": 0.096,
+      "status": "ok"
+    },
+    {
+      "a": "boqueirao",
+      "b": "jardim-das-americas",
+      "jaccard": 0.087,
+      "status": "ok"
+    },
+    {
+      "a": "boqueirao",
+      "b": "ecoville",
+      "jaccard": 0.061,
+      "status": "ok"
+    },
+    {
+      "a": "boqueirao",
+      "b": "alto-da-xv",
+      "jaccard": 0.069,
+      "status": "ok"
+    },
+    {
+      "a": "boqueirao",
+      "b": "reboucas",
+      "jaccard": 0.093,
       "status": "ok"
     },
     {

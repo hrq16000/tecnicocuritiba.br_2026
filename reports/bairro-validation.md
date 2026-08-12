@@ -1,7 +1,7 @@
 # Relatório de Validação de Bairros
 
-Gerado em: 2026-08-12T06:06:53.237Z
-Bairros indexáveis: 13
+Gerado em: 2026-08-12T06:14:35.279Z
+Bairros indexáveis: 16
 
 ## Contagem de palavras próprias
 
@@ -16,6 +16,9 @@ Bairros indexáveis: 13
 | cabral | Cabral | 204 | 189 | ok |
 | santa-felicidade | Santa Felicidade | 203 | 189 | ok |
 | boa-vista | Boa Vista | 204 | 186 | ok |
+| cristo-rei | Cristo Rei | 208 | 188 | ok |
+| cajuru | Cajuru | 205 | 179 | ok |
+| boqueirao | Boqueirão | 200 | 178 | ok |
 | jardim-das-americas | Jardim das Américas | 232 | 209 | ok |
 | ecoville | Ecoville | 235 | 203 | ok |
 | alto-da-xv | Alto da XV | 213 | 195 | ok |
@@ -29,31 +32,31 @@ Bairros indexáveis: 13
 | centro | alto-da-xv | 0.131 | ok |
 | agua-verde | boa-vista | 0.126 | ok |
 | jardim-das-americas | reboucas | 0.126 | ok |
+| centro | boqueirao | 0.124 | ok |
+| portao | boqueirao | 0.122 | ok |
+| santa-felicidade | boqueirao | 0.122 | ok |
+| cic | cajuru | 0.116 | ok |
 | boa-vista | jardim-das-americas | 0.116 | ok |
+| boa-vista | cajuru | 0.113 | ok |
+| batel | cajuru | 0.112 | ok |
 | cic | santa-felicidade | 0.112 | ok |
 | ecoville | reboucas | 0.112 | ok |
+| agua-verde | cajuru | 0.111 | ok |
+| boa-vista | boqueirao | 0.110 | ok |
 | batel | jardim-das-americas | 0.109 | ok |
+| cic | cristo-rei | 0.109 | ok |
 | cabral | jardim-das-americas | 0.109 | ok |
 | batel | ecoville | 0.108 | ok |
 | cic | alto-da-xv | 0.107 | ok |
 | jardim-das-americas | alto-da-xv | 0.107 | ok |
 | cic | jardim-das-americas | 0.106 | ok |
+| cristo-rei | reboucas | 0.104 | ok |
+| boa-vista | cristo-rei | 0.103 | ok |
+| cic | boqueirao | 0.102 | ok |
+| santa-felicidade | cristo-rei | 0.102 | ok |
 | bigorrilho | boa-vista | 0.100 | ok |
 | centro | reboucas | 0.099 | ok |
-| bigorrilho | ecoville | 0.099 | ok |
-| ecoville | alto-da-xv | 0.099 | ok |
-| batel | alto-da-xv | 0.098 | ok |
-| alto-da-xv | reboucas | 0.098 | ok |
-| centro | santa-felicidade | 0.095 | ok |
-| agua-verde | alto-da-xv | 0.094 | ok |
-| santa-felicidade | reboucas | 0.094 | ok |
-| agua-verde | bigorrilho | 0.093 | ok |
-| santa-felicidade | boa-vista | 0.093 | ok |
-| cic | ecoville | 0.092 | ok |
-| batel | bigorrilho | 0.091 | ok |
-| cic | reboucas | 0.091 | ok |
-| centro | jardim-das-americas | 0.090 | ok |
-| agua-verde | jardim-das-americas | 0.090 | ok |
-| jardim-das-americas | ecoville | 0.090 | ok |
+| portao | cristo-rei | 0.099 | ok |
+| portao | cajuru | 0.099 | ok |
 
 **Resultado: OK — pronto para indexar.**
