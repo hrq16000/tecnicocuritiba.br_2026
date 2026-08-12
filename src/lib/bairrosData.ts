@@ -508,6 +508,159 @@ export const BAIRROS: Record<string, BairroLocalData> = {
       { question: "Qual o valor do atendimento no Cristo Rei?", answer: "A partir de R$ 99,99 quando aplicável. O valor final depende do equipamento, da complexidade e de eventuais peças, sempre aprovado antes da execução." },
     ],
   },
+
+  // ── BOA VISTA ───────────────────────────────────────────────
+  "boa-vista": {
+    slug: "boa-vista",
+    nome: "Boa Vista",
+    nomeLocativo: "no Boa Vista",
+    cidade: "Curitiba",
+    areaName: "Boa Vista, Curitiba",
+    metaTitle: "Técnico de Informática no Boa Vista (Curitiba) | PC e Notebook",
+    metaDescription:
+      "Técnico de informática no Boa Vista, Curitiba: conserto de computador e notebook, formatação com backup, upgrade de SSD e Wi-Fi. A partir de R$ 99,99. Via WhatsApp.",
+    h1: "Técnico de Informática no Boa Vista – Curitiba",
+    subtitulo:
+      "Atendimento a famílias e pequenos comércios do Boa Vista e entorno do terminal, com triagem pelo WhatsApp e diagnóstico antes de qualquer valor.",
+    whatsappMessage:
+      "Olá! Preciso de um técnico de informática no Boa Vista, em Curitiba. Pode me orientar?",
+    introducaoLocal: [
+      "O Boa Vista é um bairro residencial consolidado, com muitas casas de família convivendo com prédios mais novos e um comércio de rua espalhado pela Av. Paraná e pelas ruas próximas ao terminal. O reflexo disso nos chamados é claro: boa parte dos equipamentos é de uso doméstico prolongado — computadores de mesa com cinco anos ou mais, notebooks compartilhados por pais e filhos e impressoras que servem à casa inteira.",
+      "Nesse perfil, o problema mais frequente não é uma peça queimada, e sim acúmulo: disco cheio, sistema desatualizado, programas indesejados instalados junto de downloads e backup inexistente. A conversa começa pelo WhatsApp com a descrição do sintoma e, quando o disco ainda lê, a primeira etapa é sempre proteger as fotos e os documentos antes de qualquer reinstalação.",
+    ],
+    operacaoLocal: [
+      "Triagem pelo WhatsApp com foco em uso doméstico e familiar",
+      "Backup de fotos e documentos antes de formatar",
+      "Diagnóstico técnico antes de informar valor",
+      "Execução somente após a sua aprovação",
+    ],
+    atendimentoLocal: [
+      "Formatação com backup e reinstalação dos programas da casa",
+      "Remoção de vírus e limpeza de programas indesejados",
+      "Upgrade de SSD e memória em computador antigo da família",
+      "Configuração de Wi-Fi, impressora compartilhada e TV conectada",
+    ],
+    coletaBancada: [
+      "Computador que não liga ou reinicia sozinho",
+      "Limpeza interna e troca de pasta térmica em notebook que superaquece",
+      "Tentativa de recuperação de dados em HD com falha de leitura",
+    ],
+    servicosPrioritarios: [
+      "/servicos/formatacao",
+      "/servicos/manutencao-de-computador",
+      "/servicos/remocao-de-virus",
+      "/servicos/upgrade-ssd-ram",
+      "/servicos/redes-e-wifi",
+    ],
+    faqLocal: [
+      { question: "Meu computador ficou muito lento. Precisa trocar?", answer: "Na maioria dos casos do bairro, não. Computador com disco mecânico costuma voltar a responder bem com SSD, memória e limpeza do sistema. Só indicamos troca quando o reparo não se paga — e explicamos o porquê." },
+      { question: "Vocês fazem backup das fotos antes de formatar?", answer: "Sim, sempre que o disco permite leitura. O backup é a primeira etapa e é conferido com você antes de qualquer reinstalação." },
+      { question: "Preciso levar o equipamento até vocês?", answer: "Não. Não temos balcão ao público: o serviço é feito no seu endereço ou fazemos coleta e entrega quando o caso exige bancada." },
+      { question: "Qual o valor do atendimento no Boa Vista?", answer: "A partir de R$ 99,99 quando aplicável. O valor final depende do equipamento, da complexidade e de eventuais peças, sempre aprovado por você antes da execução." },
+    ],
+  },
+
+  // ── CAJURU ──────────────────────────────────────────────────
+  cajuru: {
+    slug: "cajuru",
+    nome: "Cajuru",
+    nomeLocativo: "no Cajuru",
+    cidade: "Curitiba",
+    areaName: "Cajuru, Curitiba",
+    metaTitle: "Técnico de Informática no Cajuru (Curitiba) | PC e Notebook",
+    metaDescription:
+      "Técnico de informática no Cajuru, Curitiba: conserto de notebook e PC, formatação com backup, remoção de vírus e Wi-Fi. A partir de R$ 99,99. Atendimento via WhatsApp.",
+    h1: "Técnico de Informática no Cajuru – Curitiba",
+    subtitulo:
+      "Atendimento a residências e comércio de bairro no Cajuru, com triagem pelo WhatsApp e diagnóstico antes de informar qualquer valor.",
+    whatsappMessage:
+      "Olá! Preciso de um técnico de informática no Cajuru, em Curitiba. Pode me orientar?",
+    introducaoLocal: [
+      "O Cajuru é um dos bairros mais populosos de Curitiba e tem uma malha densa de ruas residenciais entremeada por comércio de vizinhança: mercados, papelarias, lan houses, escritórios pequenos e assistências de bairro. Essa mistura aparece nos chamados de duas maneiras. Nas casas, o pedido comum é máquina lenta, sistema travando e Wi-Fi que não cobre todos os cômodos.",
+      "No comércio, o que pesa é continuidade: PC do caixa, impressora de cupom e conexão precisam voltar a funcionar rápido, porque parada significa fila. A triagem começa pelo WhatsApp e, com o sintoma descrito, definimos se o caso é resolvido no local, remotamente ou por coleta com bancada.",
+    ],
+    operacaoLocal: [
+      "Triagem pelo WhatsApp separando uso residencial e comercial",
+      "Prioridade para reduzir tempo de parada no comércio de bairro",
+      "Diagnóstico antes de indicar troca de peça",
+      "Valor aprovado antes da execução, sem surpresa",
+    ],
+    atendimentoLocal: [
+      "Formatação com backup e reinstalação dos programas de rotina",
+      "Remoção de vírus e recuperação de acesso ao sistema",
+      "Configuração de Wi-Fi em casas com muitos cômodos",
+      "Suporte ao PC do caixa, impressora térmica e rede do comércio",
+    ],
+    coletaBancada: [
+      "Notebook com tela quebrada, dobradiça solta ou que não liga",
+      "Fonte ou placa com falha após oscilação de energia",
+      "Recuperação de dados quando o disco apresenta erro de leitura",
+    ],
+    servicosPrioritarios: [
+      "/servicos/manutencao-de-notebook",
+      "/servicos/formatacao",
+      "/servicos/remocao-de-virus",
+      "/servicos/redes-e-wifi",
+      "/servicos/manutencao-de-computador",
+    ],
+    faqLocal: [
+      { question: "Atendem comércio pequeno no Cajuru?", answer: "Sim. Damos suporte pontual ao PC do caixa, à impressora de cupom e à rede do estabelecimento, com foco em reduzir o tempo em que o atendimento fica parado." },
+      { question: "O Wi-Fi não cobre a casa toda. O que fazer?", answer: "Em casas com muitos cômodos e paredes espessas, medimos o sinal ambiente por ambiente antes de indicar solução: pode ser reposicionamento, troca de canal, cabo até um segundo ponto ou mesh." },
+      { question: "Posso levar o equipamento até vocês?", answer: "Não trabalhamos com balcão ao público. Atendemos no seu endereço ou fazemos coleta e entrega quando o serviço exige bancada." },
+      { question: "Quanto custa o atendimento no Cajuru?", answer: "O diagnóstico começa em R$ 99,99 quando aplicável. O valor final depende do equipamento, da complexidade e de eventuais peças, sempre informado e aprovado antes." },
+    ],
+  },
+
+  // ── BOQUEIRÃO ───────────────────────────────────────────────
+  boqueirao: {
+    slug: "boqueirao",
+    nome: "Boqueirão",
+    nomeLocativo: "no Boqueirão",
+    cidade: "Curitiba",
+    areaName: "Boqueirão, Curitiba",
+    metaTitle: "Técnico de Informática no Boqueirão (Curitiba) | PC e Notebook",
+    metaDescription:
+      "Técnico de informática no Boqueirão, Curitiba: conserto de PC e notebook, formatação com backup, upgrade de SSD e Wi-Fi. A partir de R$ 99,99. Atendimento via WhatsApp.",
+    h1: "Técnico de Informática no Boqueirão – Curitiba",
+    subtitulo:
+      "Atendimento a moradores e pequenos negócios do Boqueirão e entorno da Marechal Floriano, com triagem pelo WhatsApp e diagnóstico antes do valor.",
+    whatsappMessage:
+      "Olá! Preciso de um técnico de informática no Boqueirão, em Curitiba. Pode me orientar?",
+    introducaoLocal: [
+      "O Boqueirão combina extensas áreas residenciais com um eixo comercial forte na Marechal Floriano Peixoto e nas vias que ligam ao terminal. É um bairro de moradores antigos, muitas casas com anexo ou edícula usada como escritório e um grande número de microempresas familiares — oficinas, distribuidoras, comércios de rua e prestadores que dependem de um único computador para emitir nota e controlar estoque.",
+      "Por isso, dois cenários dominam a triagem: o equipamento doméstico que ficou lento e precisa de recuperação de dados e desempenho, e a máquina de trabalho que não pode parar. Em ambos, o caminho é o mesmo: sintoma descrito pelo WhatsApp, diagnóstico técnico e só depois valor, sempre aprovado por você.",
+    ],
+    operacaoLocal: [
+      "Triagem pelo WhatsApp com separação entre uso doméstico e máquina de trabalho",
+      "Backup antes de qualquer reinstalação em PC que emite nota",
+      "Diagnóstico técnico antes de informar valor",
+      "Serviço executado apenas após aprovação",
+    ],
+    atendimentoLocal: [
+      "Upgrade de SSD e memória em computador de uso diário",
+      "Formatação com backup e reinstalação dos sistemas de trabalho",
+      "Ajuste de rede, impressora e compartilhamento de arquivos",
+      "Remoção de vírus e limpeza de programas indesejados",
+    ],
+    coletaBancada: [
+      "PC que não liga ou desarma ao ligar",
+      "Notebook com superaquecimento, tela ou teclado danificados",
+      "Falhas intermitentes que exigem teste prolongado em bancada",
+    ],
+    servicosPrioritarios: [
+      "/servicos/manutencao-de-computador",
+      "/servicos/upgrade-ssd-ram",
+      "/servicos/formatacao",
+      "/servicos/manutencao-de-notebook",
+      "/servicos/suporte-tecnico-empresarial",
+    ],
+    faqLocal: [
+      { question: "Meu PC emite nota e não pode parar. Como funciona?", answer: "Informe isso na triagem. Fazemos backup e conferimos acessos e licenças antes de mexer no sistema, e combinamos a janela de atendimento para reduzir o tempo de parada." },
+      { question: "Vale trocar o HD por SSD em máquina antiga?", answer: "Na maior parte dos casos sim: é a mudança que mais devolve agilidade por um custo baixo. Avaliamos o equipamento antes e dizemos com clareza quando o investimento não compensa." },
+      { question: "Preciso levar o equipamento a algum endereço?", answer: "Não. Não temos balcão ao público: atendemos no seu endereço ou fazemos coleta e entrega quando o caso exige bancada." },
+      { question: "Qual o valor do atendimento no Boqueirão?", answer: "A partir de R$ 99,99 quando aplicável. O valor final depende do equipamento, do deslocamento, da complexidade e de eventuais peças, sempre aprovado antes." },
+    ],
+  },
 };
 
 
