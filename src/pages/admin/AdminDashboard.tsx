@@ -257,6 +257,29 @@ const AdminDashboard = () => {
     URL.revokeObjectURL(url);
   };
 
+  /** Exporta o mesmo recorte em JSON, com metadados do filtro e da deduplicação. */
+  const exportJson = () => {
+    const payload = {
+      generated_at: new Date().toISOString(),
+      filters: { range, dateFrom, dateTo, bairro, servico, routeFilter, campaignFilter, pathQuery, dedup: dedupOn },
+      totals,
+      dedup: { duplicates: dedup.duplicates.length, duplicate_rate_pct: Number(dedup.duplicateRate.toFixed(2)) },
+      by_hour: byHour,
+      by_day: byDay,
+      alerts: dropAlerts,
+      events: rows,
+    };
+    const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `click-events-${new Date().toISOString().slice(0, 10)}.json`;
+    a.click();
+    URL.revokeObjectURL(url);
+  };
+
+
+
   const signOut = async () => { await supabase.auth.signOut(); };
 
   if (authLoading) {
