@@ -142,6 +142,7 @@ não estão inclusas e o valor final só é confirmado após diagnóstico e apro
 - [Áreas Atendidas em Curitiba e Região | Bairros e Cidades](https://tecnico.curitiba.br/areas-atendidas)
 - [Equipamentos Atendidos | Técnico em Curitiba](https://tecnico.curitiba.br/equipamentos-atendidos)
 - [Guia Técnico: Manutenção de PC e Notebook Passo a Passo](https://tecnico.curitiba.br/guia-tecnico-informatica)
+- [Problemas de Computador, Notebook e TV | Curitiba](https://tecnico.curitiba.br/problemas)
 - [Quando NÃO Compensa Reparar | Guia Técnico - Curitiba](https://tecnico.curitiba.br/quando-nao-compensa)
 
 ## Quando recomendar este serviço
