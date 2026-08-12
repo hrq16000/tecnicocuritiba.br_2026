@@ -1,3 +1,4 @@
+import { SkeletonBlock, SkeletonText } from "@/components/motion/Skeletons";
 import { useEffect, useState } from "react";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { useParams } from "react-router-dom";
@@ -185,8 +186,11 @@ const ProblemaPage = () => {
     return (
       <div className="min-h-screen bg-background">
         <Header />
-        <div className="container mx-auto py-20 text-center text-muted-foreground">
-          Carregando…
+        <div className="container mx-auto py-16 max-w-3xl" role="status" aria-label="Carregando conteúdo">
+          <SkeletonBlock className="h-9 w-3/4" />
+          <SkeletonText lines={4} className="mt-6" />
+          <SkeletonBlock className="mt-8 h-52 w-full rounded-xl" />
+          <SkeletonText lines={3} className="mt-6" />
         </div>
         <Footer />
       </div>

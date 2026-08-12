@@ -1,3 +1,4 @@
+import { SkeletonText } from "@/components/motion/Skeletons";
 import { useEffect, useMemo, useState } from "react";
 import { Navigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
@@ -436,7 +437,13 @@ const AdminReviews = () => {
 
 
           {loading ? (
-            <div className="flex justify-center py-12"><Loader2 className="w-6 h-6 animate-spin" /></div>
+            <div className="space-y-3" role="status" aria-label="Carregando avaliações">
+              {Array.from({ length: 4 }).map((_, i) => (
+                <div key={i} className="rounded-lg border bg-card p-4">
+                  <SkeletonText lines={3} />
+                </div>
+              ))}
+            </div>
           ) : (
             <div className="space-y-3">
               {filtered.length === 0 && (

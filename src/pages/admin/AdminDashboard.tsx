@@ -1,3 +1,4 @@
+import { SkeletonStats } from "@/components/motion/Skeletons";
 import { useEffect, useMemo, useState } from "react";
 import { Link, Navigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
@@ -479,20 +480,24 @@ const AdminDashboard = () => {
 
 
         {/* KPIs */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
-          <div className="rounded-lg border border-border p-4">
-            <p className="text-xs text-muted-foreground">Cliques WhatsApp</p>
-            <p className="text-3xl font-bold text-accent">{totals.wa}</p>
+        {loading && allRows.length === 0 ? (
+          <SkeletonStats count={3} className="sm:grid-cols-3 lg:grid-cols-3 mb-6" />
+        ) : (
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6 animate-fade-in">
+            <div className="rounded-lg border border-border p-4">
+              <p className="text-xs text-muted-foreground">Cliques WhatsApp</p>
+              <p className="text-3xl font-bold text-accent">{totals.wa}</p>
+            </div>
+            <div className="rounded-lg border border-border p-4">
+              <p className="text-xs text-muted-foreground">Cliques Ligar</p>
+              <p className="text-3xl font-bold text-primary">{totals.call}</p>
+            </div>
+            <div className="rounded-lg border border-border p-4">
+              <p className="text-xs text-muted-foreground">Total no período</p>
+              <p className="text-3xl font-bold">{totals.total}</p>
+            </div>
           </div>
-          <div className="rounded-lg border border-border p-4">
-            <p className="text-xs text-muted-foreground">Cliques Ligar</p>
-            <p className="text-3xl font-bold text-primary">{totals.call}</p>
-          </div>
-          <div className="rounded-lg border border-border p-4">
-            <p className="text-xs text-muted-foreground">Total no período</p>
-            <p className="text-3xl font-bold">{totals.total}</p>
-          </div>
-        </div>
+        )}
 
         {/* Conversão do funil WhatsApp */}
         <div className="rounded-lg border border-border p-4 mb-6">

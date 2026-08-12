@@ -1,6 +1,7 @@
 import { lazy, Suspense, startTransition, useEffect, useRef, useState } from "react";
 import Index from "./pages/Index";
 import { RouteLoader } from "./components/RouteLoader";
+import { RouteProgress } from "./components/motion/RouteProgress";
 import { startNav } from "./lib/navTelemetry";
 import ConsentBanner from "./components/ConsentBanner";
 import { AppErrorBoundary } from "./components/AppErrorBoundary";
@@ -221,6 +222,7 @@ const HomeApp = () => {
       <GeoAutoDetect />
       <InstitutionalJsonLd />
       <InstantNavigation setRoutePath={setRoutePath} setShowNavLoader={setShowNavLoader} />
+      <RouteProgress active={showNavLoader} />
       {showNavLoader ? <NavigationOverlay /> : null}
       {isHomeRoute(routePath) ? (
         <Index />

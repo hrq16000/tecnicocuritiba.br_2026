@@ -1,4 +1,5 @@
 import { IMAGES } from "@/lib/images";
+import { SmartImage } from "@/components/motion/SmartImage";
 
 export type ImageKey = "tecnicoTrabalhando" | "notebookReparo" | "placaMae" | "bancadaTecnica" | "ferramentas" | "atendimentoDomiciliar" | "componentesSsd" | "redesWifi" | "cameraSeguranca" | "diagnostico" | "desktopMontado" | "smartTv" | "suporteRemoto" | "servidores" | "segurancaDigital" | "coletaEntrega" | "clienteSatisfeito" | "microsoldagem" | "estacaoSolda" | "microscopio" | "amplificadorSom";
 
@@ -28,28 +29,26 @@ export const RealImageSection = ({
         <div className="container mx-auto">
           <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
             <figure>
-              <img
+              <SmartImage
                 src={src}
                 alt={alt}
-                loading="lazy"
-                decoding="async"
                 width={600}
                 height={400}
-                className="rounded-xl w-full h-64 md:h-72 object-cover shadow-md"
+                wrapperClassName="rounded-xl shadow-md"
+                className="rounded-xl w-full h-64 md:h-72 object-cover"
               />
               {caption && (
                 <figcaption className="text-xs text-muted-foreground mt-2 text-center italic">{caption}</figcaption>
               )}
             </figure>
             <figure>
-              <img
+              <SmartImage
                 src={src2}
                 alt={alt2}
-                loading="lazy"
-                decoding="async"
                 width={600}
                 height={400}
-                className="rounded-xl w-full h-64 md:h-72 object-cover shadow-md"
+                wrapperClassName="rounded-xl shadow-md"
+                className="rounded-xl w-full h-64 md:h-72 object-cover"
               />
               {secondaryCaption && (
                 <figcaption className="text-xs text-muted-foreground mt-2 text-center italic">{secondaryCaption}</figcaption>
@@ -66,14 +65,13 @@ export const RealImageSection = ({
       <div className="container mx-auto">
         <div className="max-w-4xl mx-auto">
           <figure>
-            <img
+            <SmartImage
               src={src}
               alt={alt}
-              loading="lazy"
-              decoding="async"
               width={600}
               height={400}
-              className="rounded-xl w-full h-64 md:h-80 object-cover shadow-md"
+              wrapperClassName="rounded-xl shadow-md"
+              className="rounded-xl w-full h-64 md:h-80 object-cover"
             />
             {caption && (
               <figcaption className="text-xs text-muted-foreground mt-2 text-center italic">{caption}</figcaption>

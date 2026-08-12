@@ -1604,3 +1604,101 @@ body[data-triage-open="1"] .wa-pulse {
 ::-webkit-scrollbar-corner {
   background: hsl(var(--secondary));
 }
+
+/* ══════════════════════════════════════════════════════════════
+   Camada de movimento (Onda 7) — skeletons, imagens e progresso
+   Tokens em src/lib/motion.ts. Tudo neutralizado em reduced-motion.
+   ══════════════════════════════════════════════════════════════ */
+:root {
+  --motion-instant: 120ms;
+  --motion-fast: 200ms;
+  --motion-base: 320ms;
+  --motion-slow: 480ms;
+  --ease-enter: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-exit: cubic-bezier(0.4, 0, 1, 1);
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes skeletonSweep {
+  0% { background-position: -160% 0; }
+  100% { background-position: 260% 0; }
+}
+
+.skeleton-block {
+  display: block;
+  border-radius: 0.5rem;
+  background-color: hsl(var(--muted));
+  background-image: linear-gradient(
+    90deg,
+    hsl(var(--muted)) 0%,
+    hsl(var(--muted-foreground) / 0.12) 45%,
+    hsl(var(--muted)) 90%
+  );
+  background-size: 220% 100%;
+  animation: skeletonSweep 1.4s var(--ease-standard) infinite;
+}
+
+/* ── Imagens reais com skeleton + fade-in ── */
+.smart-img-wrap {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: inherit;
+}
+.smart-img-skeleton {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background-color: hsl(var(--muted));
+  background-image: linear-gradient(
+    90deg,
+    hsl(var(--muted)) 0%,
+    hsl(var(--muted-foreground) / 0.12) 45%,
+    hsl(var(--muted)) 90%
+  );
+  background-size: 220% 100%;
+  animation: skeletonSweep 1.4s var(--ease-standard) infinite;
+}
+.smart-img {
+  opacity: 0;
+  transform: scale(1.012);
+  transition:
+    opacity var(--motion-base) var(--ease-enter),
+    transform var(--motion-slow) var(--ease-enter);
+  will-change: opacity;
+}
+.smart-img.is-loaded {
+  opacity: 1;
+  transform: none;
+}
+
+/* ── Progresso de navegação ── */
+.route-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  z-index: 90;
+  pointer-events: none;
+  background: transparent;
+}
+.route-progress-bar {
+  height: 100%;
+  border-radius: 0 9999px 9999px 0;
+  background: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--accent)));
+  box-shadow: 0 0 10px hsl(var(--accent) / 0.5);
+  transition: width var(--motion-fast) var(--ease-standard);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skeleton-block,
+  .smart-img-skeleton {
+    animation: none !important;
+    background-image: none !important;
+  }
+  .smart-img {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

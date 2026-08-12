@@ -1,3 +1,4 @@
+import { SkeletonCardGrid } from "@/components/motion/Skeletons";
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { Star, ShieldCheck, MessageCircle } from "lucide-react";
@@ -183,11 +184,7 @@ const Depoimentos = () => {
           </div>
 
           {loading ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {Array.from({ length: 3 }).map((_, i) => (
-                <div key={i} className="h-40 rounded-xl bg-muted/40 animate-pulse" />
-              ))}
-            </div>
+            <SkeletonCardGrid count={3} className="md:grid-cols-2 lg:grid-cols-3" />
           ) : filtradas.length === 0 ? (
             <div className="rounded-xl border border-border bg-card p-6">
               <p className="text-muted-foreground">
