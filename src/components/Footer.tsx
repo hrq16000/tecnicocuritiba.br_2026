@@ -32,7 +32,9 @@ const columns: Array<{ title: string; links: Array<{ label: string; to: string }
       { label: "Suporte empresarial", to: "/servicos/suporte-tecnico-empresarial" },
       { label: "Atendimento a domicílio", to: "/atendimento-domicilio" },
       { label: "Atendimento remoto", to: "/atendimento-remoto" },
+      { label: "Problemas atendidos", to: "/problemas" },
       { label: "FAQ", to: "/faq" },
+
     ],
   },
   {
