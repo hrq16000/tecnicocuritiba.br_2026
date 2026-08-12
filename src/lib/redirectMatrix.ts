@@ -35,6 +35,9 @@ export const REDIRECT_MATRIX: RedirectRule[] = [
   // página duplicada (evita canibalização com /servicos/montagem-de-pc).
   { from: "/servicos/pc-gamer", to: "/servicos/montagem-de-pc", motivo: "variacao-slug" },
   { from: "/servicos/montagem-de-pc-gamer", to: "/servicos/montagem-de-pc", motivo: "variacao-slug" },
+  // "tela azul" é a mesma intenção da página publicada — alias, nunca página
+  // duplicada (evitaria canibalizar /problemas/tela-azul-windows).
+  { from: "/problemas/tela-azul", to: "/problemas/tela-azul-windows", motivo: "variacao-slug" },
   { from: "/pc-gamer-curitiba", to: "/servicos/montagem-de-pc", motivo: "url-antiga" },
 
   // ── URLs comerciais antigas (raiz) ──────────────────────────
