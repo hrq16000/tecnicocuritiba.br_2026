@@ -193,6 +193,13 @@ export const SOLUTION_FLOW: SolutionProblem[] = [
         mensagem: "Perdi arquivos importantes. Quero avaliação de recuperação de dados.",
       },
       {
+        equipamento: "Pen drive não reconhecido",
+        solucao: { label: "Pen drive não reconhecido", path: "/problemas/pen-drive-nao-reconhecido" },
+        modalidade: "coleta",
+        porque: "Formatar ou rodar reparador automático apaga a estrutura usada no resgate dos arquivos.",
+        mensagem: "Meu pen drive não é reconhecido e preciso dos arquivos. Quero avaliação.",
+      },
+      {
         equipamento: "Empresa / vários computadores",
         solucao: { label: "Backup para empresas", path: "/servicos/backup-para-empresas" },
         modalidade: "domicilio",
