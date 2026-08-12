@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { PageSEO } from "@/components/PageSEO";
+import { PoliticaAtendimentoBlock } from "@/components/PoliticaAtendimentoBlock";
 import { Header } from "@/components/Header";
 import { BenefitsGrid } from "@/components/BenefitsGrid";
 import { TrustStrip } from "@/components/TrustStrip";
@@ -399,6 +400,7 @@ const AtendimentoRemoto = () => {
 
         <TrustSection />
         <CTASection />
+        <PoliticaAtendimentoBlock variant="default" />
       </main>
       <RealImageSection imageKey="suporteRemoto" caption="Suporte técnico remoto profissional" />
       <InterlinkingBlock />

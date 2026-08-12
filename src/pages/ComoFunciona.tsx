@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { PageSEO } from "@/components/PageSEO";
+import { PoliticaAtendimentoBlock } from "@/components/PoliticaAtendimentoBlock";
 import { IMAGES } from "@/lib/images";
 import { Link } from "react-router-dom";
 import { Header } from "@/components/Header";
@@ -773,6 +774,7 @@ const ComoFunciona = () => {
             </div>
           </div>
         </section>
+        <PoliticaAtendimentoBlock variant="default" />
       </main>
 
       <InterlinkingBlock />
