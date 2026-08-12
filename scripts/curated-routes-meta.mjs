@@ -6,6 +6,7 @@
 // NÃO adicionar rotas fora do manifesto curado (scripts/lib/curated-urls.mjs).
 import { SERVICO_BAIRRO } from "./lib/curated-urls.mjs";
 import { servicoBairroMeta } from "./lib/servico-bairro-meta.mjs";
+import { WIFI_TV_BAIRRO_ROUTES } from "./lib/wifi-tv-bairro-meta.mjs";
 import { priorityFaq } from "./lib/priority-faq.mjs";
 import { priorityOffers } from "./lib/priority-offers.mjs";
 import { servicoBlocos } from "./lib/servico-blocos.mjs";
@@ -541,7 +542,8 @@ const BASE_ROUTES = [
   },
   {
     "path": "/atendimento-remoto",
-    "title": "Atendimento Remoto de Informática em Curitiba",
+    "title": "Suporte Remoto de Informática em Curitiba | Online",
+    "h1": "Suporte remoto de informática para residências e empresas",
     "description": "Suporte remoto de informática em Curitiba para configurações, sistema, programas, e-mail, impressora já conectada, orientação e home office — com autorização e acompanhamento.",
     "blocos": [
       {
@@ -949,4 +951,6 @@ const BASE_ROUTES_WITH_FAQ = BASE_ROUTES.map((r) => {
   return { ...r, ...(faq ? { faq } : {}), ...(offers ? { offers } : {}), ...(blocos ? { blocos } : {}) };
 });
 
-export const CURATED_ROUTES = [...BASE_ROUTES_WITH_FAQ, ...SERVICO_BAIRRO_ROUTES];
+// Landings Wi-Fi / Smart TV × bairro (Onda 1): espelho direto de
+// wifiTvBairroData.ts, para HTML estático com canonical self.
+export const CURATED_ROUTES = [...BASE_ROUTES_WITH_FAQ, ...SERVICO_BAIRRO_ROUTES, ...WIFI_TV_BAIRRO_ROUTES];
