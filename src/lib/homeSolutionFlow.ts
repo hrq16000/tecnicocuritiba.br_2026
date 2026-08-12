@@ -228,6 +228,13 @@ export const SOLUTION_FLOW: SolutionProblem[] = [
     descricao: "Sinal fraco em cômodos, quedas constantes ou rede lenta com cabo.",
     opcoes: [
       {
+        equipamento: "Notebook não conecta no Wi-Fi",
+        solucao: { label: "Notebook não conecta no Wi-Fi", path: "/problemas/notebook-nao-conecta-no-wifi" },
+        modalidade: "remoto",
+        porque: "Quando só o notebook falha, driver e perfil de rede resolvem sem retirar o equipamento.",
+        mensagem: "Meu notebook não conecta no Wi-Fi. Quero avaliação técnica.",
+      },
+      {
         equipamento: "Casa ou apartamento",
         solucao: { label: "Redes e Wi-Fi", path: "/servicos/redes-e-wifi" },
         modalidade: "domicilio",
