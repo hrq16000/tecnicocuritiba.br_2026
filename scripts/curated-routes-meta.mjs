@@ -444,6 +444,31 @@ const BASE_ROUTES = [
     "description": "Técnico de informática em Campo Largo: formatação, conserto de notebook e PC, upgrade de SSD, remoção de vírus, redes e suporte empresarial. Atendimento a domicílio ou coleta via WhatsApp."
   },
   {
+    "path": "/tecnico-informatica-piraquara",
+    "title": "Técnico em Piraquara para Notebook, PC e Internet",
+    "description": "Técnico de informática em Piraquara: formatação, conserto de notebook e PC, upgrade de SSD, remoção de vírus e Wi-Fi. Atendimento a domicílio ou coleta combinada por WhatsApp."
+  },
+  {
+    "path": "/tecnico-informatica-quatro-barras",
+    "title": "Técnico em Quatro Barras para PC, Notebook e Redes",
+    "description": "Técnico de informática em Quatro Barras: conserto de notebook e PC, formatação, upgrade de SSD, redes e suporte a pequenas empresas. Visita agendada ou coleta via WhatsApp."
+  },
+  {
+    "path": "/tecnico-informatica-campo-magro",
+    "title": "Técnico em Campo Magro para Notebook, PC e Wi-Fi",
+    "description": "Técnico de informática em Campo Magro: conserto de notebook e PC, formatação, upgrade de SSD, remoção de vírus e Wi-Fi em chácaras e casas. Atendimento combinado por WhatsApp."
+  },
+  {
+    "path": "/tecnico-informatica-almirante-tamandare",
+    "title": "Técnico em Almirante Tamandaré | Notebook e PC",
+    "description": "Técnico de informática em Almirante Tamandaré: formatação, conserto de notebook e PC, upgrade de SSD, remoção de vírus e redes. Visita agendada ou coleta via WhatsApp."
+  },
+  {
+    "path": "/tecnico-informatica-fazenda-rio-grande",
+    "title": "Técnico em Fazenda Rio Grande | PC, Notebook e Rede",
+    "description": "Técnico de informática em Fazenda Rio Grande: conserto de notebook e PC, formatação, upgrade de SSD, remoção de vírus e redes. Atendimento agendado ou coleta via WhatsApp."
+  },
+  {
     "path": "/empresa-de-ti-curitiba",
     "title": "Empresa de TI em Curitiba | Soluções para Pequenas Empresas",
     "description": "Soluções de informática para empresas em Curitiba: diagnóstico do ambiente, computadores, redes, manutenção e organização do suporte técnico."

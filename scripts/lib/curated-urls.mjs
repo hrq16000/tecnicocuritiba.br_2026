@@ -70,6 +70,12 @@ export const REGIOES = [
   "/tecnico-informatica-colombo",
   "/tecnico-informatica-araucaria",
   "/tecnico-informatica-campo-largo",
+  // Onda 5 — cidades da RMC reformadas com narrativa local exclusiva.
+  "/tecnico-informatica-piraquara",
+  "/tecnico-informatica-quatro-barras",
+  "/tecnico-informatica-campo-magro",
+  "/tecnico-informatica-almirante-tamandare",
+  "/tecnico-informatica-fazenda-rio-grande",
 ].map((path) => ({ path, changefreq: "monthly", priority: "0.7" }));
 
 /** Bairros âncora indexáveis (política de poda: conteúdo exclusivo real). */

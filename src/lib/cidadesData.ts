@@ -327,6 +327,216 @@ export const CIDADES: Record<string, CidadeData> = {
       { question: "Recuperam arquivos de HD com defeito?", answer: "Fazemos a tentativa de recuperação de dados. Não há garantia, pois depende do estado da mídia, e informamos as chances antes de iniciar." },
     ],
   },
+
+  // ── PIRAQUARA ───────────────────────────────────────────────
+  piraquara: {
+    slug: "piraquara",
+    cidade: "Piraquara",
+    areaName: "Piraquara",
+    metaTitle: "Técnico em Piraquara para Notebook, PC e Internet",
+    metaDescription:
+      "Técnico de informática em Piraquara: formatação, conserto de notebook e PC, upgrade de SSD, remoção de vírus e Wi-Fi. Atendimento a domicílio ou coleta combinada por WhatsApp.",
+    eyebrow: "Atendimento em Piraquara",
+    h1: "Técnico em Piraquara para notebook, PC e internet",
+    h1Accent: "sem viagem até a capital",
+    subtitulo:
+      "Suporte técnico em informática em Piraquara com triagem por WhatsApp, valor aprovado antes da execução e garantia sobre o serviço realizado.",
+    whatsappMessage: "Olá! Preciso de um técnico de informática em Piraquara. Pode me orientar?",
+    proposta: [
+      "Quem mora em Piraquara costuma perder meio dia quando precisa levar um computador para a capital. Por isso o atendimento aqui é pensado para resolver no próprio endereço sempre que o problema permite, e só encaminhar para bancada o que realmente exige desmontagem, solda ou testes longos.",
+      "A cidade tem muita residência em rua sem saída, condomínio e loteamento distante do eixo principal, o que torna a combinação prévia essencial: definimos endereço, ponto de referência e janela de horário pelo WhatsApp antes de sair. Não temos balcão para receber cliente — trabalhamos com visita agendada ou coleta e entrega no seu endereço.",
+      "Os pedidos mais comuns em Piraquara são internet oscilando em casas compridas ou sobrados, notebook antigo travando, formatação com backup e recuperação de arquivos de HD que parou. Cada caso passa por diagnóstico antes de qualquer valor ser informado.",
+    ],
+    perfilLocal: [
+      "Residências espalhadas, com ruas sem saída e pontos de referência importantes",
+      "Casas compridas e sobrados em que o Wi-Fi não chega aos fundos",
+      "Máquinas usadas por mais tempo, que respondem bem a SSD e limpeza",
+      "Pequenos comércios de bairro com um único computador em operação",
+    ],
+    quandoChamar: [
+      { title: "Wi-Fi não chega aos fundos", desc: "Sinal cai no quintal, na edícula ou no segundo andar." },
+      { title: "Notebook antigo travando", desc: "Demora para ligar, esquenta e congela em tarefas simples." },
+      { title: "PC não inicia", desc: "Windows com erro, tela azul ou reinício em loop." },
+      { title: "Arquivos presos no HD", desc: "Disco fazendo barulho ou sistema que não abre mais." },
+      { title: "Vírus e pop-ups", desc: "Navegador sequestrado e propaganda abrindo sozinha." },
+      { title: "Comércio parado", desc: "O único computador da loja fora do ar." },
+    ],
+    faqs: [
+      { question: "Vocês atendem Piraquara mesmo longe do Centro?", answer: "Sim. Combinamos endereço, ponto de referência e janela de horário pelo WhatsApp antes de sair. Não prometemos tempo fixo de chegada porque depende da região e da agenda do dia." },
+      { question: "Posso levar o equipamento até vocês?", answer: "Não trabalhamos com balcão de atendimento ao público. A logística é visita agendada no seu endereço ou coleta e entrega quando o reparo precisa de bancada." },
+      { question: "Quanto custa a visita em Piraquara?", answer: "A visita/diagnóstico começa a partir de R$ 99,99 quando aplicável. O valor final depende do equipamento, deslocamento, urgência, complexidade e peças, e é aprovado por você antes da execução." },
+      { question: "Dá para melhorar o Wi-Fi de uma casa comprida?", answer: "Na maioria dos casos sim. Avaliamos posição do roteador, interferência e cabeamento e indicamos se a solução é reposicionar, cabear ou usar um ponto de acesso extra — sem empurrar equipamento desnecessário." },
+      { question: "Vocês recuperam arquivos de HD com defeito?", answer: "Fazemos a tentativa de recuperação. Não há garantia, porque depende do estado físico e lógico da mídia, e explicamos as chances antes de iniciar." },
+    ],
+  },
+
+  // ── QUATRO BARRAS ───────────────────────────────────────────
+  "quatro-barras": {
+    slug: "quatro-barras",
+    cidade: "Quatro Barras",
+    areaName: "Quatro Barras",
+    metaTitle: "Técnico em Quatro Barras para PC, Notebook e Redes",
+    metaDescription:
+      "Técnico de informática em Quatro Barras: conserto de notebook e PC, formatação, upgrade de SSD, redes e suporte a pequenas empresas. Visita agendada ou coleta via WhatsApp.",
+    eyebrow: "Atendimento em Quatro Barras",
+    h1: "Técnico em Quatro Barras para PC, notebook e redes",
+    h1Accent: "com atendimento combinado antes",
+    subtitulo:
+      "Atendimento técnico em informática em Quatro Barras, com diagnóstico explicado em linguagem clara e valor aprovado antes de qualquer serviço.",
+    whatsappMessage: "Olá! Preciso de um técnico de informática em Quatro Barras. Pode me orientar?",
+    proposta: [
+      "Quatro Barras é uma cidade compacta, mas com um perfil bem particular: uma faixa urbana concentrada, condomínios em área de mata e um corredor logístico com galpões e pequenas empresas. Isso muda o tipo de chamado — de um lado computador doméstico, do outro estação de trabalho e rede que não pode ficar fora do ar.",
+      "Para residências, o foco é resolver na visita: limpeza, troca por SSD, formatação com backup, ajuste de rede e remoção de vírus. Para empresas, priorizamos manter a operação de pé, com avaliação da rede, dos pontos de cabo e das máquinas críticas antes de propor qualquer troca.",
+      "Todo atendimento é combinado antes pelo WhatsApp. Não recebemos equipamento em balcão: ou vamos até o endereço, ou fazemos coleta e entrega quando o reparo exige bancada.",
+    ],
+    perfilLocal: [
+      "Faixa urbana concentrada e condomínios afastados em área verde",
+      "Corredor logístico com galpões e pequenas empresas",
+      "Estações de trabalho que não podem parar durante o expediente",
+      "Rede Wi-Fi em terrenos grandes, com paredes e distância entre blocos",
+    ],
+    quandoChamar: [
+      { title: "Estação de trabalho parada", desc: "Máquina do escritório ou do galpão sem ligar." },
+      { title: "Rede caindo no expediente", desc: "Internet oscilando entre setores ou blocos." },
+      { title: "Computador lento", desc: "Sistema arrastando mesmo em planilhas e navegador." },
+      { title: "Sistema corrompido", desc: "Windows com erro após queda de energia." },
+      { title: "Sem backup", desc: "Arquivos da empresa só na máquina, sem cópia." },
+      { title: "Notebook com defeito físico", desc: "Tela, teclado, dobradiça ou carregamento com falha." },
+    ],
+    faqs: [
+      { question: "Vocês atendem empresas e galpões em Quatro Barras?", answer: "Sim. Fazemos suporte pontual ou recorrente para estações de trabalho, rede e backup, sob consulta, priorizando manter a operação funcionando durante a avaliação." },
+      { question: "Atendem condomínios afastados da área urbana?", answer: "Atendemos, combinando endereço e acesso antes pelo WhatsApp. Como o deslocamento varia bastante, não prometemos tempo fixo de chegada." },
+      { question: "Qual o valor do atendimento?", answer: "A partir de R$ 99,99 para visita/diagnóstico quando aplicável. Peças e serviços adicionais são orçados e aprovados por você antes de qualquer execução." },
+      { question: "Existe loja para deixar o equipamento?", answer: "Não. Não temos balcão ao público: o serviço acontece no seu endereço ou por coleta e entrega quando o reparo precisa de bancada." },
+      { question: "Fazem cabeamento de rede?", answer: "Avaliamos a rede existente e indicamos o que faz sentido: reposicionar roteador, organizar pontos de cabo ou ampliar cobertura. O escopo é definido depois do diagnóstico." },
+    ],
+  },
+
+  // ── CAMPO MAGRO ─────────────────────────────────────────────
+  "campo-magro": {
+    slug: "campo-magro",
+    cidade: "Campo Magro",
+    areaName: "Campo Magro",
+    metaTitle: "Técnico em Campo Magro para Notebook, PC e Wi-Fi",
+    metaDescription:
+      "Técnico de informática em Campo Magro: conserto de notebook e PC, formatação, upgrade de SSD, remoção de vírus e Wi-Fi em chácaras e casas. Atendimento combinado por WhatsApp.",
+    eyebrow: "Atendimento em Campo Magro",
+    h1: "Técnico em Campo Magro para notebook, PC e Wi-Fi",
+    h1Accent: "inclusive em chácaras e sítios",
+    subtitulo:
+      "Suporte técnico em informática em Campo Magro, com avaliação antes do valor, comunicação clara e garantia sobre o serviço executado.",
+    whatsappMessage: "Olá! Preciso de um técnico de informática em Campo Magro. Pode me orientar?",
+    proposta: [
+      "Campo Magro tem muita chácara, sítio e casa em terreno grande, com internet via rádio ou fibra que chega em um ponto só. O resultado é previsível: sinal forte perto do roteador e nada no restante da propriedade. Boa parte dos chamados aqui é justamente cobertura de rede, não defeito de computador.",
+      "Também atendemos os problemas clássicos de máquina: notebook que trava, PC que não liga, formatação com backup, upgrade para SSD e remoção de vírus. Quando o reparo exige bancada, combinamos coleta e entrega para você não precisar deslocar até a capital.",
+      "Por causa da distância entre endereços, tudo é planejado antes pelo WhatsApp: descrição do problema, endereço com referência e janela de horário. Não temos balcão para atendimento ao público.",
+    ],
+    perfilLocal: [
+      "Chácaras, sítios e casas em terrenos amplos",
+      "Internet que chega em um único ponto da propriedade",
+      "Distância entre endereços que exige agendamento planejado",
+      "Uso doméstico e trabalho remoto dependendo da mesma rede",
+    ],
+    quandoChamar: [
+      { title: "Sinal só perto do roteador", desc: "Wi-Fi não cobre a casa inteira nem áreas externas." },
+      { title: "Trabalho remoto caindo", desc: "Reunião travando por instabilidade da conexão." },
+      { title: "Notebook travando", desc: "Aquecimento, lentidão e desligamento durante o uso." },
+      { title: "PC não liga", desc: "Sem imagem, sem inicialização ou reinício constante." },
+      { title: "Vírus e lentidão", desc: "Pop-ups, navegador estranho e sistema pesado." },
+      { title: "Backup inexistente", desc: "Fotos e documentos só em uma máquina." },
+    ],
+    faqs: [
+      { question: "Vocês atendem chácaras e endereços rurais em Campo Magro?", answer: "Sim, desde que o acesso seja combinado antes pelo WhatsApp com endereço e ponto de referência. O deslocamento influencia o valor e o horário possível, e isso é informado antes." },
+      { question: "Dá para levar Wi-Fi até a área externa ou outro bloco?", answer: "Na maioria dos casos sim, avaliando cabeamento e pontos de acesso adicionais. Primeiro medimos onde o sinal cai; só depois indicamos a solução, sem vender equipamento por padrão." },
+      { question: "Qual o valor da visita técnica?", answer: "A partir de R$ 99,99 quando aplicável, com valor final dependendo de equipamento, deslocamento, urgência, complexidade e peças. Nada é executado sem sua aprovação." },
+      { question: "Posso deixar o equipamento em algum endereço de vocês?", answer: "Não. Trabalhamos apenas com visita agendada ou coleta e entrega no seu endereço — não há balcão ao público." },
+      { question: "Fazem formatação preservando os arquivos?", answer: "Fazemos backup antes da formatação sempre que o disco permite ler os dados, e confirmamos com você o que precisa ser preservado antes de começar." },
+    ],
+  },
+
+  // ── ALMIRANTE TAMANDARÉ ─────────────────────────────────────
+  "almirante-tamandare": {
+    slug: "almirante-tamandare",
+    cidade: "Almirante Tamandaré",
+    areaName: "Almirante Tamandaré",
+    metaTitle: "Técnico em Almirante Tamandaré | Notebook e PC",
+    metaDescription:
+      "Técnico de informática em Almirante Tamandaré: formatação, conserto de notebook e PC, upgrade de SSD, remoção de vírus e redes. Visita agendada ou coleta via WhatsApp.",
+    eyebrow: "Atendimento em Almirante Tamandaré",
+    h1: "Técnico em Almirante Tamandaré para notebook e PC",
+    h1Accent: "com orçamento aprovado antes",
+    subtitulo:
+      "Atendimento técnico em informática em Almirante Tamandaré, com diagnóstico primeiro, valor depois e garantia sobre o serviço realizado.",
+    whatsappMessage: "Olá! Preciso de um técnico de informática em Almirante Tamandaré. Pode me orientar?",
+    proposta: [
+      "Almirante Tamandaré é uma cidade densa e vizinha imediata da capital, com bairros que crescem em ritmo próprio e muita família dividindo um único computador entre trabalho, escola e estudo. Quando essa máquina para, para tudo junto — e a prioridade passa a ser devolver o equipamento funcionando rápido, sem gastar mais do que o aparelho vale.",
+      "Por isso, aqui o diagnóstico é bem direto sobre viabilidade: em máquinas antigas, muitas vezes SSD e memória resolvem melhor do que trocar peças caras. Quando o reparo não compensa, dizemos isso com clareza em vez de empurrar serviço.",
+      "O atendimento é por visita agendada ou coleta e entrega, combinado antes pelo WhatsApp. Não recebemos equipamento em balcão.",
+    ],
+    perfilLocal: [
+      "Bairros densos, com muita residência familiar",
+      "Um computador atendendo trabalho, escola e estudo ao mesmo tempo",
+      "Parque de máquinas mais antigo, sensível a custo de peça",
+      "Comércio de vizinhança com PC de caixa e impressora",
+    ],
+    quandoChamar: [
+      { title: "PC da família parado", desc: "A única máquina de casa parou de ligar." },
+      { title: "Lentidão extrema", desc: "Windows demorando minutos para abrir programas." },
+      { title: "Vírus e propaganda", desc: "Pop-ups e páginas abrindo sozinhas no navegador." },
+      { title: "Trabalho escolar em risco", desc: "Arquivos importantes sem cópia de segurança." },
+      { title: "Impressora fora da rede", desc: "PC do comércio sem imprimir ou sem conexão." },
+      { title: "Notebook sem carregar", desc: "Bateria, fonte ou conector com falha." },
+    ],
+    faqs: [
+      { question: "Vale a pena consertar um computador antigo?", answer: "Depende do defeito. Em muitos casos, SSD e memória custam bem menos que a troca de peças principais e resolvem a lentidão. Se o reparo não compensar, avisamos antes de você gastar." },
+      { question: "Como funciona o atendimento em Almirante Tamandaré?", answer: "Você descreve o problema pelo WhatsApp, combinamos visita no seu endereço ou coleta e entrega. Não há balcão de atendimento ao público." },
+      { question: "Qual o valor do diagnóstico?", answer: "A partir de R$ 99,99 quando aplicável. O valor final considera equipamento, deslocamento, urgência, complexidade e peças, e é aprovado por você antes da execução." },
+      { question: "Atendem comércios do bairro?", answer: "Sim. Damos suporte a PC de caixa, impressora em rede e Wi-Fi de lojas pequenas, de forma pontual ou combinada sob consulta." },
+      { question: "Vocês formatam mantendo meus arquivos?", answer: "Sempre que o disco permite leitura, fazemos backup antes e confirmamos com você o que deve ser preservado. Se o disco estiver com defeito, explicamos o risco antes de continuar." },
+    ],
+  },
+
+  // ── FAZENDA RIO GRANDE ──────────────────────────────────────
+  "fazenda-rio-grande": {
+    slug: "fazenda-rio-grande",
+    cidade: "Fazenda Rio Grande",
+    areaName: "Fazenda Rio Grande",
+    metaTitle: "Técnico em Fazenda Rio Grande | PC, Notebook e Rede",
+    metaDescription:
+      "Técnico de informática em Fazenda Rio Grande: conserto de notebook e PC, formatação, upgrade de SSD, remoção de vírus e redes. Atendimento agendado ou coleta via WhatsApp.",
+    eyebrow: "Atendimento em Fazenda Rio Grande",
+    h1: "Técnico em Fazenda Rio Grande para PC, notebook e rede",
+    h1Accent: "sem depender do horário comercial da capital",
+    subtitulo:
+      "Suporte técnico em informática em Fazenda Rio Grande, com triagem por WhatsApp, valor claro antes da execução e garantia sobre o serviço realizado.",
+    whatsappMessage: "Olá! Preciso de um técnico de informática em Fazenda Rio Grande. Pode me orientar?",
+    proposta: [
+      "Fazenda Rio Grande tem uma rotina marcada pelo deslocamento: muita gente trabalha em Curitiba e só consegue resolver questões de casa no fim do dia ou no fim de semana. Isso pesa na escolha do atendimento — levar o computador para a capital costuma custar um dia inteiro.",
+      "Nosso formato aqui é combinar a janela de horário que cabe na sua rotina e resolver no endereço quando o problema permite. Reparos que exigem bancada seguem por coleta e entrega, com você acompanhando cada etapa pelo WhatsApp.",
+      "Os chamados mais frequentes são notebook lento ou travando, formatação com backup, upgrade para SSD, remoção de vírus e Wi-Fi que não cobre a casa toda em construções de dois andares. Em todos, o diagnóstico vem antes do valor.",
+    ],
+    perfilLocal: [
+      "Moradores que trabalham em Curitiba e resolvem tudo fora do horário comercial",
+      "Loteamentos residenciais em expansão, com casas de dois andares",
+      "Home office e estudo dividindo a mesma conexão",
+      "Notebooks usados intensamente no transporte diário",
+    ],
+    quandoChamar: [
+      { title: "Notebook lento no home office", desc: "Trava em reunião, navegador e planilha ao mesmo tempo." },
+      { title: "Wi-Fi fraco no andar de cima", desc: "Sinal não sobe ou cai nos quartos." },
+      { title: "PC não inicia", desc: "Tela azul, erro de sistema ou reinício em loop." },
+      { title: "Máquina cheia de vírus", desc: "Propaganda, extensões estranhas e lentidão súbita." },
+      { title: "Disco cheio ou falhando", desc: "Sem espaço, com travamentos ou barulho no HD." },
+      { title: "Horário difícil", desc: "Só dá para atender no fim do dia ou no fim de semana." },
+    ],
+    faqs: [
+      { question: "Vocês atendem fora do horário comercial em Fazenda Rio Grande?", answer: "Trabalhamos com janela de horário combinada pelo WhatsApp e tentamos encaixar horários alternativos conforme a agenda do dia. Não garantimos horário fixo antes de confirmar." },
+      { question: "Preciso levar o equipamento até Curitiba?", answer: "Não. Ou atendemos no seu endereço, ou fazemos coleta e entrega quando o reparo exige bancada. Não existe balcão para receber cliente." },
+      { question: "Quanto custa o atendimento?", answer: "A partir de R$ 99,99 para visita/diagnóstico quando aplicável. Peças e serviços extras são informados e aprovados por você antes de qualquer execução." },
+      { question: "O Wi-Fi não chega no segundo andar. Tem solução?", answer: "Geralmente sim. Avaliamos posição do roteador, material das paredes e possibilidade de cabo ou ponto de acesso adicional, indicando o caminho mais simples primeiro." },
+      { question: "Dá para acelerar um notebook antigo?", answer: "Na maioria dos casos, trocar o HD por SSD e ampliar a memória muda a experiência de uso. Avaliamos se a máquina suporta o upgrade antes de recomendar." },
+    ],
+  },
 };
 
 export const CIDADE_LIST = Object.values(CIDADES);

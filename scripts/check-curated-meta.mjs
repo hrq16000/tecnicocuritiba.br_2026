@@ -516,7 +516,8 @@ if (existsSync(distDir)) {
   }
 }
 
-// ── 13. Onda 2E · anti-doorway das 6 cidades + 5 bairros curados ───────
+let CURATED_CITY_COUNT = 0;
+// ── 13. Onda 2E · anti-doorway das ${CURATED_CITY_COUNT} cidades + 5 bairros curados ───────
 // Fatos objetivos: HTML próprio index/follow self-canonical (já validado
 // na seção 9), titles/H1 únicos e com localidade correta, rede de links
 // Curitiba↔bairros, ausência de links legados noindex, e ausência de
@@ -527,6 +528,7 @@ if (existsSync(distDir)) {
   const bairroLayout = readFileSync(resolve(root, "src/components/bairro/BairroLocalLayout.tsx"), "utf8");
   const cidData = readFileSync(resolve(root, "src/lib/cidadesData.ts"), "utf8");
 
+  CURATED_CITY_COUNT = 11;
   const CIDADES_2E = [
     { path: "/tecnico-informatica-curitiba", nome: "Curitiba" },
     { path: "/tecnico-informatica-sao-jose-pinhais", nome: "São José dos Pinhais" },
@@ -534,6 +536,11 @@ if (existsSync(distDir)) {
     { path: "/tecnico-informatica-colombo", nome: "Colombo" },
     { path: "/tecnico-informatica-araucaria", nome: "Araucária" },
     { path: "/tecnico-informatica-campo-largo", nome: "Campo Largo" },
+    { path: "/tecnico-informatica-piraquara", nome: "Piraquara" },
+    { path: "/tecnico-informatica-quatro-barras", nome: "Quatro Barras" },
+    { path: "/tecnico-informatica-campo-magro", nome: "Campo Magro" },
+    { path: "/tecnico-informatica-almirante-tamandare", nome: "Almirante Tamandaré" },
+    { path: "/tecnico-informatica-fazenda-rio-grande", nome: "Fazenda Rio Grande" },
   ];
   const BAIRROS_2E = [
     { path: "/bairros/cic", slug: "cic", nome: "CIC" },
@@ -564,7 +571,7 @@ if (existsSync(distDir)) {
   // 13.2 — titles/H1 das cidades (fonte: curated + cidadesData)
   const cityTitles = [];
   const cityH1s = [];
-  const cityBlocks = sliceByKeys(cidData, ["  curitiba:", '  "sao-jose-pinhais":', "  pinhais:", "  colombo:", "  araucaria:", '  "campo-largo":']);
+  const cityBlocks = sliceByKeys(cidData, ["  curitiba:", '  "sao-jose-pinhais":', "  pinhais:", "  colombo:", "  araucaria:", '  "campo-largo":', "  piraquara:", '  "quatro-barras":', '  "campo-magro":', '  "almirante-tamandare":', '  "fazenda-rio-grande":']);
   const cityKeyByNome = {
     "Curitiba": "  curitiba:",
     "São José dos Pinhais": '  "sao-jose-pinhais":',
@@ -572,6 +579,11 @@ if (existsSync(distDir)) {
     "Colombo": "  colombo:",
     "Araucária": "  araucaria:",
     "Campo Largo": '  "campo-largo":',
+    "Piraquara": "  piraquara:",
+    "Quatro Barras": '  "quatro-barras":',
+    "Campo Magro": '  "campo-magro":',
+    "Almirante Tamandaré": '  "almirante-tamandare":',
+    "Fazenda Rio Grande": '  "fazenda-rio-grande":',
   };
   const cityIntros = [];
   for (const c of CIDADES_2E) {
@@ -587,8 +599,8 @@ if (existsSync(distDir)) {
     const firstProposta = (blk.match(/proposta:\s*\[\s*"([^"]+)"/) || [])[1] || "";
     cityIntros.push(firstProposta.split(c.nome).join("").replace(/\s+/g, " ").trim());
   }
-  if (new Set(cityTitles).size !== CIDADES_2E.length) fail("Onda 2E: as 6 cidades devem ter titles distintos");
-  if (new Set(cityH1s.filter(Boolean)).size !== CIDADES_2E.length) fail("Onda 2E: as 6 cidades devem ter H1 distintos");
+  if (new Set(cityTitles).size !== CIDADES_2E.length) fail("Onda 2E: as cidades curadas devem ter titles distintos");
+  if (new Set(cityH1s.filter(Boolean)).size !== CIDADES_2E.length) fail("Onda 2E: as cidades curadas devem ter H1 distintos");
   if (new Set(cityIntros.filter(Boolean)).size !== CIDADES_2E.length) fail("Onda 2E: introduções das cidades idênticas após remover o nome da cidade (doorway)");
 
   // 13.3 — titles/H1/intros/FAQ dos bairros (fonte: bairrosData)
@@ -619,9 +631,11 @@ if (existsSync(distDir)) {
   if (new Set(bIntros.filter(Boolean)).size !== BAIRROS_2E.length) fail("Onda 2E: introduções dos bairros idênticas após remover o nome (doorway)");
   if (new Set(bFaqs.filter(Boolean)).size !== BAIRROS_2E.length) fail("Onda 2E: FAQs dos bairros idênticas entre páginas");
 
-  // 13.4 — H1 das 11 páginas distintos entre si
-  const all11H1 = [...cityH1s, ...bH1s].filter(Boolean);
-  if (new Set(all11H1).size !== 11) fail("Onda 2E: os H1 das 11 páginas locais devem ser todos distintos");
+  // 13.4 — H1 de todas as páginas locais curadas distintos entre si
+  const allLocalH1 = [...cityH1s, ...bH1s].filter(Boolean);
+  const expectedLocalH1 = CIDADES_2E.length + BAIRROS_2E.length;
+  if (new Set(allLocalH1).size !== expectedLocalH1)
+    fail(`Onda 2E: os H1 das ${expectedLocalH1} páginas locais devem ser todos distintos`);
 
   // 13.5 — rede de links Curitiba ↔ bairros
   for (const b of BAIRROS_2E) {
@@ -684,5 +698,5 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log(`✅ check-curated-meta: OK — 8 serviços em paridade, 6 cidades + 5 bairros curados sem doorway, imagens sociais alinhadas, nome institucional "${OFFICIAL_NAME}", /valores sem canonical próprio, 108 rotas legadas noindex e sitemaps derivados do manifesto curado.`);
+console.log(`✅ check-curated-meta: OK — 8 serviços em paridade, ${CURATED_CITY_COUNT} cidades + 5 bairros curados sem doorway, imagens sociais alinhadas, nome institucional "${OFFICIAL_NAME}", /valores sem canonical próprio, 108 rotas legadas noindex e sitemaps derivados do manifesto curado.`);
 
