@@ -68,6 +68,8 @@ export const INTENT_MATRIX = [
   { path: "/problemas/impressora-nao-imprime", keyword: "impressora nao imprime", role: "sintoma de falha de impressao", notCompeting: ["/conserto-impressora-curitiba", "/servicos/redes-e-wifi", "/servicos/manutencao-de-computador"] },
   { path: "/problemas/monitor-sem-sinal", keyword: "monitor sem sinal", role: "sintoma de ausencia de video em desktop", notCompeting: ["/servicos/conserto-monitor", "/problemas/computador-nao-liga", "/problemas/notebook-com-tela-preta", "/servicos/manutencao-de-computador"] },
   { path: "/problemas/notebook-lento", keyword: "notebook lento", role: "sintoma de lentidao em notebook", notCompeting: ["/problemas/computador-lento", "/servicos/upgrade-ssd-ram", "/servicos/manutencao-de-notebook", "/servicos/formatacao"] },
+  { path: "/problemas/computador-travando", keyword: "computador travando", role: "sintoma de congelamento em desktop", notCompeting: ["/problemas/computador-lento", "/problemas/tela-azul-windows", "/problemas/computador-desliga-sozinho", "/servicos/manutencao-de-computador"] },
+  { path: "/problemas/touchpad-nao-funciona", keyword: "touchpad nao funciona", role: "sintoma de touchpad em notebook", notCompeting: ["/problemas/teclado-de-notebook-nao-funciona", "/servicos/manutencao-de-notebook", "/problemas/notebook-molhado", "/atendimento-remoto"] },
   { path: "/problemas/teclado-de-notebook-nao-funciona", keyword: "teclado de notebook nao funciona", role: "sintoma de teclado em notebook", notCompeting: ["/servicos/manutencao-de-notebook", "/problemas/notebook-molhado", "/servicos/conserto-placa"] },
 ];
 

@@ -71,6 +71,8 @@ const PRIORITY = [
   "/problemas/impressora-nao-imprime",
   "/problemas/monitor-sem-sinal",
   "/problemas/notebook-lento",
+  "/problemas/computador-travando",
+  "/problemas/touchpad-nao-funciona",
   "/problemas/notebook-superaquecendo",
 ];
 
