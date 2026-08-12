@@ -418,6 +418,22 @@ const PROBLEMA_LINKS = {
     "/coleta-e-entrega",
     "/precos-e-politicas",
   ],
+  "/problemas/dobradica-do-notebook-quebrada": [
+    "/servicos/manutencao-de-notebook",
+    "/problemas/tela-de-notebook-quebrada",
+    "/problemas/notebook-com-tela-preta",
+    "/servicos/conserto-placa",
+    "/coleta-e-entrega",
+    "/precos-e-politicas",
+  ],
+  "/problemas/computador-sem-som": [
+    "/servicos/manutencao-de-computador",
+    "/servicos/conserto-placa",
+    "/servicos/formatacao",
+    "/problemas/tv-sem-som",
+    "/atendimento-remoto",
+    "/precos-e-politicas",
+  ],
   "/problemas/computador-travando": [
     "/servicos/manutencao-de-computador",
     "/problemas/computador-lento",
