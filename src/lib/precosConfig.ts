@@ -30,6 +30,7 @@ export const MODALIDADES: ModalidadeAtendimento[] = [
       "Inspeção superficial, sem abertura de placas e sem bancada.",
       "Peças, componentes, licenças e materiais não estão inclusos.",
       "O valor mínimo pode variar conforme a região de deslocamento.",
+      "Inclui inspeção, diagnóstico, avaliação e tentativa de reparo rápido que seja compatível com o tempo contratado.",
       "Sem promessa de solução no local: o que não for resolvível em visita é convertido em coleta.",
     ],
     indicadoQuando:
@@ -59,7 +60,9 @@ export const MODALIDADES: ModalidadeAtendimento[] = [
     resumo:
       "Diagnóstico com compromisso e tentativa de reparos compatíveis, com coleta e entrega inclusas, valor mínimo pré-aprovado de R$ 299,99.",
     detalhes: [
-      "Coleta e entrega inclusas no valor mínimo pré-aprovado.",
+      "Coleta e entrega inclusas, sem custo adicional, no valor mínimo pré-aprovado.",
+      "Reparos compatíveis dentro do mínimo pré-aprovado já são executados sem custo extra.",
+      "Se o reparo necessário ultrapassar o mínimo, o valor é informado antes de qualquer execução.",
       "Peças, componentes e licenças não estão inclusos.",
       "Reparos acima do mínimo pré-aprovado dependem da sua autorização por escrito.",
       "Cancelamento válido somente até 24 horas corridas após a coleta.",
@@ -85,3 +88,14 @@ export const QUANDO_VISITA_COMPATIVEL =
 export const VALOR_VISITA_LABEL = "R$ 99,99";
 export const VALOR_PACOTE_2H_LABEL = "R$ 279,99";
 export const VALOR_COLETA_MINIMO_LABEL = "R$ 299,99";
+
+/**
+ * Não existe balcão de atendimento ao público: o equipamento é sempre coletado
+ * e devolvido no endereço do cliente. Texto único usado em todo o site.
+ */
+export const REGRA_SEM_BALCAO =
+  "Não temos balcão de atendimento ao público: o equipamento é sempre coletado e devolvido no seu endereço, com data e horário combinados na triagem.";
+
+/** Quando a coleta substitui a visita — gatilho objetivo de tempo de serviço. */
+export const GATILHO_COLETA_SEM_CUSTO =
+  "Quando o serviço passa de 1 hora de trabalho técnico, a visita deixa de ser vantajosa e oferecemos coleta e entrega sem custo, com mínimo pré-aprovado de R$ 299,99 — reparos compatíveis dentro desse valor já saem executados.";

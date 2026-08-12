@@ -131,7 +131,7 @@ const ConsertoCelular = () => {
             <div className="grid md:grid-cols-4 gap-6 max-w-5xl mx-auto">
               {[
                 { step: "1", titulo: "Contato pelo WhatsApp", desc: `Descreva o problema do celular, modelo e envie fotos. ${REGRA_ESTIMATIVA_GRATIS}.` },
-                { step: "2", titulo: "Coleta do Aparelho", desc: `Organizamos a coleta no seu endereço ou você traz à oficina. Taxa mínima ${COLETA_TAXA_MINIMA_LABEL} pré-aprovada.` },
+                { step: "2", titulo: "Coleta do Aparelho", desc: `Organizamos a coleta no seu endereço ou combinamos o melhor horário. Taxa mínima ${COLETA_TAXA_MINIMA_LABEL} pré-aprovada.` },
                 { step: "3", titulo: "Diagnóstico e valor", desc: "Avaliamos o aparelho e informamos o valor do reparo. Valor preciso somente após coleta." },
                 { step: "4", titulo: "Reparo Rápido", desc: `Após aprovação, realizamos o conserto. Prazo: ${PRAZO_RAPIDO}.` },
               ].map((p, i) => (

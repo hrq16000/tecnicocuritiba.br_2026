@@ -36,6 +36,8 @@ jobs:
         run: npm run check:local-hierarchy
       - name: Gate de copy proibido (CNPJ, razão social, e-mail, telefone, "orçamento")
         run: npm run check:forbidden-copy
+      - name: Gate "sem balcão" (só coleta e entrega)
+        run: npm run check:sem-balcao
       - name: Gate de claims de confiança
         run: npm run check:trust-claims
       - name: Gate de cluster editorial e interlinking (Rodada 4F)

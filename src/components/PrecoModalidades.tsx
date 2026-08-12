@@ -4,6 +4,8 @@ import {
   MODALIDADES,
   REGRA_CANCELAMENTO,
   QUANDO_VISITA_COMPATIVEL,
+  REGRA_SEM_BALCAO,
+  GATILHO_COLETA_SEM_CUSTO,
   TERMOS_URL,
 } from "@/lib/precosConfig";
 
@@ -55,9 +57,12 @@ export const PrecoModalidades = ({ className = "" }: { className?: string }) => 
     <div className="mt-5 space-y-3 rounded-xl border border-accent/25 bg-accent/[0.05] p-5 text-sm text-muted-foreground">
       <p>
         <strong className="text-foreground">Coleta e entrega é o caminho da maioria dos casos.</strong>{" "}
-        {QUANDO_VISITA_COMPATIVEL}
+        {QUANDO_VISITA_COMPATIVEL} {GATILHO_COLETA_SEM_CUSTO}
       </p>
       <p>
+        <strong className="text-foreground">Logística:</strong> {REGRA_SEM_BALCAO}
+      </p>
+      <p className="mt-2 text-xs text-muted-foreground">
         <strong className="text-foreground">Cancelamento:</strong> {REGRA_CANCELAMENTO}
       </p>
       <p>
