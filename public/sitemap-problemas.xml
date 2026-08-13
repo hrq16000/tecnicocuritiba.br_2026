@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://tecnico.curitiba.br/problemas</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://tecnico.curitiba.br/problemas/notebook-nao-liga</loc><lastmod>2026-08-09</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://tecnico.curitiba.br/problemas/computador-lento</loc><lastmod>2026-08-09</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://tecnico.curitiba.br/problemas/tela-azul-windows</loc><lastmod>2026-08-12</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://tecnico.curitiba.br/problemas/notebook-superaquecendo</loc><lastmod>2026-08-12</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>

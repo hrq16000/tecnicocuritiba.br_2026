@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://tecnico.curitiba.br/blog</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://tecnico.curitiba.br/blog/quando-trocar-hd-por-ssd</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://tecnico.curitiba.br/blog/como-saber-se-pc-tem-virus-malware</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://tecnico.curitiba.br/blog/backup-como-proteger-seus-arquivos</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://tecnico.curitiba.br/blog/como-melhorar-sinal-wifi-em-casa</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://tecnico.curitiba.br/blog/notebook-superaquecendo-o-que-fazer</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://tecnico.curitiba.br/blog/organizacao-de-ti-para-pequenos-escritorios</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://tecnico.curitiba.br/blog/como-escolher-uma-workstation</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
 </urlset>
