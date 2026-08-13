@@ -1,0 +1,51 @@
+name: SEO — monitoramento diário de ranking local
+
+on:
+  schedule:
+    # 09:10 UTC ≈ 06:10 America/Sao_Paulo, após o fechamento dos dados do GSC.
+    - cron: "10 9 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  rank-daily:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Restaurar snapshot do dia anterior
+        uses: actions/cache@v4
+        with:
+          path: reports/rank-daily-snapshot.json
+          key: rank-daily-snapshot-${{ github.run_id }}
+          restore-keys: rank-daily-snapshot-
+
+      - name: Monitorar visibilidade local
+        env:
+          LOVABLE_API_KEY: ${{ secrets.LOVABLE_API_KEY }}
+          GOOGLE_SEARCH_CONSOLE_API_KEY: ${{ secrets.GOOGLE_SEARCH_CONSOLE_API_KEY }}
+        run: node scripts/monitor-rank-daily.mjs
+
+      - name: Publicar relatório
+        uses: actions/upload-artifact@v4
+        with:
+          name: rank-daily
+          path: |
+            reports/rank-daily.json
+            reports/rank-daily.md
+          if-no-files-found: warn
+
+      - name: Resumo com alertas
+        if: always()
+        run: |
+          if [ -f reports/rank-daily.md ]; then
+            cat reports/rank-daily.md >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "Sem dados do Search Console nesta execução." >> "$GITHUB_STEP_SUMMARY"
+          fi
