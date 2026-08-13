@@ -27,7 +27,7 @@ export const CTASection = () => {
             <span className="text-sm font-medium">Atendimento Imediato</span>
           </div>
           
-          <img 
+          <img decoding="async" 
             alt="Técnico Curitiba" 
             className="h-16 md:h-20 mx-auto mb-7 hover:scale-105 transition-transform duration-300" 
             src="/lovable-uploads/b702f033-fd78-4d1e-ae32-2ad60f672710.webp"

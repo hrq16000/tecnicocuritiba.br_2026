@@ -32,7 +32,7 @@ const TecnicoInformaticaCuritibaAds = () => {
       {/* Minimal Header - No Navigation */}
       <header className="bg-primary py-4">
         <div className="container mx-auto text-center">
-          <img
+          <img loading="eager" fetchPriority="high" decoding="async"
             alt="Técnico Curitiba"
             src="/logo.webp"
             className="h-12 mx-auto"

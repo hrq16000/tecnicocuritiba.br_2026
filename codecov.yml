@@ -1,0 +1,26 @@
+# Cobertura consolidada por commit/PR: unit+integration (vitest) e e2e (playwright).
+codecov:
+  require_ci_to_pass: true
+coverage:
+  precision: 2
+  round: down
+  range: "50...90"
+  status:
+    project:
+      default:
+        target: auto
+        threshold: 1%
+    patch:
+      default:
+        target: 70%
+        threshold: 5%
+flags:
+  unit:
+    paths: [src/]
+    carryforward: true
+  e2e:
+    paths: [src/]
+    carryforward: true
+comment:
+  layout: "reach, diff, flags, files"
+  require_changes: true

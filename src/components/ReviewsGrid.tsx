@@ -223,7 +223,7 @@ export const ReviewsGrid = ({
               >
                 <div className="flex items-center gap-3 mb-3">
                   {r.author_photo_url ? (
-                    <img
+                    <img decoding="async"
                       src={r.author_photo_url}
                       alt={r.author_name}
                       loading="lazy"

@@ -57,7 +57,7 @@ export const TechnicalCaseEvidence = ({ photo }: { photo: TechnicalCasePhoto }) 
 
   return (
     <figure className="overflow-hidden rounded-2xl border border-border bg-card">
-      <img src={photo.src} alt={photo.alt} loading="lazy" className="h-auto w-full object-cover" />
+      <img decoding="async" src={photo.src} alt={photo.alt} loading="lazy" className="h-auto w-full object-cover" />
       <figcaption className="space-y-1 p-4 text-sm">
         <span className="block text-muted-foreground">{photo.caption}</span>
         <span className="block text-xs font-medium text-foreground/80">

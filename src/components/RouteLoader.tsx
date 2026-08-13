@@ -19,7 +19,7 @@ export const RouteLoader = () => (
     }}
   >
     <style>{`@keyframes routeLogoPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.62;transform:scale(1.06)}}`}</style>
-    <img
+    <img loading="eager" fetchPriority="high"
       src="/logo.webp"
       alt="Técnico Curitiba"
       width={304}

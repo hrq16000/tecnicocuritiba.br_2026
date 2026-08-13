@@ -122,7 +122,7 @@ const QuandoNaoCompensa = () => {
           <div className="container mx-auto">
             <div className="max-w-4xl mx-auto -mt-8 relative z-20">
               <div className="rounded-xl overflow-hidden shadow-2xl">
-                <img src={IMAGES.componentesSsd} alt={IMAGES.componentesSsdAlt} className="w-full h-48 md:h-64 object-cover" loading="eager" width="800" height="400" />
+                <img decoding="async" src={IMAGES.componentesSsd} alt={IMAGES.componentesSsdAlt} className="w-full h-48 md:h-64 object-cover" loading="eager" width="800" height="400" />
               </div>
             </div>
           </div>
