@@ -26,3 +26,8 @@ dist-ssr
 # RODADA 4B.1 — artefatos de migração gerados
 reports/
 redirects/rollback/
+
+coverage
+/.cache
+.eslintcache
+*.map
