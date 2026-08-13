@@ -128,6 +128,7 @@ export const Footer = () => {
 
   return (
     <footer className="bg-[hsl(var(--hero-bg))] text-white">
+      <InterlinksContextuais />
       <div className="container mx-auto py-12 md:py-14">
         <div className="grid gap-10 lg:grid-cols-[1.4fr_repeat(4,1fr)]">
           <div className="space-y-4">
