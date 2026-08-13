@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-13T01:33:00.131Z",
+  "generatedAt": "2026-08-13T01:33:06.970Z",
   "regras": {
     "MIN_MENCOES": 3,
     "MIN_LINKS": 3,
-    "modo": "estatico"
+    "modo": "renderizado"
   },
   "totals": {
     "avaliadas": 74,
