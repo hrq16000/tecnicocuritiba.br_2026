@@ -132,6 +132,99 @@ const AdminPublishStatus = () => {
               ))}
             </div>
 
+            <section className="mt-8">
+              <h2 className="text-lg font-heading font-semibold">Aprovar onda em lote</h2>
+              <p className="mt-1 text-sm text-muted-foreground">
+                A liberação só fica disponível quando <strong>todas</strong> as URLs da onda passam em
+                originalidade, prova visual real e provas mínimas. Enquanto não for liberada, o gerador
+                mantém as URLs fora do sitemap.
+              </p>
+
+              {(data.ondas ?? []).length === 0 && (
+                <p className="mt-3 rounded-xl border border-dashed border-border p-4 text-sm text-muted-foreground">
+                  Nenhuma onda declarada em <code>scripts/lib/content-waves.mjs</code>.
+                </p>
+              )}
+
+              <ul className="mt-4 space-y-3">
+                {(data.ondas ?? []).map((onda) => (
+                  <li key={onda.week} className="rounded-xl border border-border p-4">
+                    <div className="flex flex-wrap items-center gap-2">
+                      <span
+                        className={`rounded-full px-2 py-0.5 text-xs font-medium ${
+                          onda.liberada
+                            ? "bg-emerald-500/15 text-emerald-600"
+                            : onda.podeAprovarEmLote
+                              ? "bg-accent/15 text-accent"
+                              : "bg-amber-500/15 text-amber-600"
+                        }`}
+                      >
+                        {onda.liberada ? "liberada" : onda.podeAprovarEmLote ? "pronta" : "bloqueada"}
+                      </span>
+                      <strong className="text-sm">Semana {onda.week}</strong>
+                      <span className="text-xs text-muted-foreground">
+                        {onda.prontasParaLote}/{onda.paths.length} URLs aprovadas
+                      </span>
+                      <Button
+                        size="sm"
+                        className="ml-auto"
+                        disabled={!onda.podeAprovarEmLote || copiada === onda.week}
+                        onClick={() => {
+                          navigator.clipboard?.writeText(onda.comando).catch(() => undefined);
+                          setCopiada(onda.week);
+                          window.setTimeout(() => setCopiada(null), 2500);
+                        }}
+                      >
+                        {onda.liberada
+                          ? "Já liberada"
+                          : copiada === onda.week
+                            ? "Comando copiado"
+                            : "Aprovar onda em lote"}
+                      </Button>
+                    </div>
+
+                    {onda.podeAprovarEmLote && (
+                      <p className="mt-2 text-xs text-muted-foreground">
+                        Execute para gravar a liberação: <code>{onda.comando}</code>
+                      </p>
+                    )}
+                    {onda.liberada && onda.liberadaEm && (
+                      <p className="mt-2 text-xs text-muted-foreground">
+                        Liberada em {new Date(onda.liberadaEm).toLocaleString("pt-BR")} — as URLs entram no
+                        próximo build do sitemap.
+                      </p>
+                    )}
+
+                    <ul className="mt-3 space-y-1 text-xs">
+                      {onda.urls.map((u) => (
+                        <li key={u.path} className="flex items-start gap-1.5">
+                          {u.ok ? (
+                            <CheckCircle2 className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emerald-600" aria-hidden="true" />
+                          ) : (
+                            <AlertTriangle className="mt-0.5 h-3.5 w-3.5 shrink-0 text-amber-600" aria-hidden="true" />
+                          )}
+                          <span>
+                            <code>{u.path}</code>
+                            {!u.ok && u.bloqueios.length > 0 && (
+                              <span className="text-muted-foreground"> — {u.bloqueios.join("; ")}</span>
+                            )}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+
+                    {onda.problems.length > 0 && (
+                      <ul className="mt-2 space-y-1 text-xs text-red-600">
+                        {onda.problems.map((p) => (
+                          <li key={p}>✗ {p}</li>
+                        ))}
+                      </ul>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </section>
+
             <div className="mt-6 flex flex-wrap items-center gap-2">
               {ESTADOS.map((e) => (
                 <Button
