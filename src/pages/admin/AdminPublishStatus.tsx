@@ -26,11 +26,25 @@ interface UrlStatus {
   estado: Estado;
 }
 
+interface OndaStatus {
+  week: string;
+  paths: string[];
+  approved: boolean;
+  problems: string[];
+  urls: { path: string; estado: Estado; bloqueios: string[]; ok: boolean }[];
+  prontasParaLote: number;
+  podeAprovarEmLote: boolean;
+  liberada: boolean;
+  liberadaEm: string | null;
+  comando: string;
+}
+
 interface Payload {
   generatedAt: string;
   fontes: Record<string, string | null>;
   regras: { WAVE_MIN: number; WAVE_MAX: number };
   totals: Record<string, number>;
+  ondas?: OndaStatus[];
   urls: UrlStatus[];
 }
 
