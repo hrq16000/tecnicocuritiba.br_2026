@@ -4,6 +4,7 @@ import { redirectRoutes } from "@/routes/redirectRoutes";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { captureUtmsFromUrl } from "@/lib/utmCapture";
 import { RouteLoader } from "@/components/RouteLoader";
+import { RouteProgress } from "@/components/motion/RouteProgress";
 import { AppErrorBoundary } from "@/components/AppErrorBoundary";
 import Index from "./pages/Index";
 
@@ -533,9 +534,24 @@ const IdleEnhancements = () => {
   );
 };
 
+/**
+ * Progresso de navegação no shell legado: ativa enquanto a rota lazy resolve
+ * (Suspense), completando em 100% ao montar o novo conteúdo.
+ */
+const LegacyRouteProgress = () => {
+  const [active, setActive] = useState(false);
+  useEffect(() => {
+    setActive(true);
+    const t = window.setTimeout(() => setActive(false), 350);
+    return () => window.clearTimeout(t);
+  }, []);
+  return <RouteProgress active={active} />;
+};
+
 const App = () => (
       <AppErrorBoundary>
       <BrowserRouter>
+        <LegacyRouteProgress />
         <ScrollToTop />
         <AppInit />
         <Suspense fallback={<RouteLoader />}>
