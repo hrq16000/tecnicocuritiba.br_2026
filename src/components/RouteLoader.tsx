@@ -7,6 +7,8 @@
 export const RouteLoader = () => (
   <div
     role="status"
+    aria-live="polite"
+    aria-busy="true"
     aria-label="Carregando"
     style={{
       minHeight: "100vh",

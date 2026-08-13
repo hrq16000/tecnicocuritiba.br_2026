@@ -42,6 +42,8 @@ export const SkeletonCardGrid = ({
 }) => (
   <div
     role="status"
+    aria-live="polite"
+    aria-busy="true"
     aria-label="Carregando conteúdo"
     className={cn("grid gap-4 sm:grid-cols-2 lg:grid-cols-3", className)}
   >
@@ -61,6 +63,8 @@ export const SkeletonStats = ({
 }) => (
   <div
     role="status"
+    aria-live="polite"
+    aria-busy="true"
     aria-label="Carregando métricas"
     className={cn("grid gap-4 sm:grid-cols-2 lg:grid-cols-4", className)}
   >
@@ -85,6 +89,8 @@ export const SkeletonTable = ({
 }) => (
   <div
     role="status"
+    aria-live="polite"
+    aria-busy="true"
     aria-label="Carregando tabela"
     className={cn("rounded-xl border border-border p-4", className)}
   >
