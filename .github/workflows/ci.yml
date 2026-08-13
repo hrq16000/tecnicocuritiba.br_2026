@@ -19,8 +19,16 @@ jobs:
           node-version: "20"
       - name: Install deps
         run: npm ci --no-audit --no-fund
-      - name: Lint (non-blocking warnings)
-        run: npm run lint --silent || echo "::warning::lint reported issues"
+      - name: Restore ESLint cache
+        uses: actions/cache@v4
+        with:
+          path: .cache/eslint
+          key: eslint-${{ runner.os }}-${{ hashFiles('eslint.config.js', 'package-lock.json') }}-${{ github.sha }}
+          restore-keys: |
+            eslint-${{ runner.os }}-${{ hashFiles('eslint.config.js', 'package-lock.json') }}-
+            eslint-${{ runner.os }}-
+      - name: Lint (cache incremental, non-blocking warnings)
+        run: npm run lint:ci --silent || echo "::warning::lint reported issues"
       - name: CTA funnel gate
         run: npm run check:cta-funnel
       - name: Internal links + sitemap gate
@@ -47,6 +55,12 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          VITE_SENTRY_DSN: ${{ secrets.VITE_SENTRY_DSN }}
+          VITE_OTEL_ENDPOINT: ${{ secrets.VITE_OTEL_ENDPOINT }}
+          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+          SENTRY_ORG: ${{ secrets.SENTRY_ORG }}
+          SENTRY_PROJECT: ${{ secrets.SENTRY_PROJECT }}
       - name: Gate de WhatsApp oculto no HTML renderizado
         run: npm run check:wa-number-dom
       - name: Gate de alt text das imagens (sem alt genérico/placeholder)
@@ -104,6 +118,30 @@ jobs:
           path: reports/local-audit.html
           retention-days: 30
 
+  unit:
+    name: unit + integration (coverage)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Install deps
+        run: npm ci --no-audit --no-fund
+      - name: Typecheck (gate obrigatório)
+        run: npm run check:types
+      - name: Testes unit/integração com cobertura
+        run: npm run test:coverage
+      - name: Upload cobertura para o Codecov
+        uses: codecov/codecov-action@v5
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          files: ./coverage/lcov.info
+          flags: unit
+          name: unit-integration
+          fail_ci_if_error: false
+
   e2e:
     runs-on: ubuntu-latest
     timeout-minutes: 20
@@ -140,6 +178,12 @@ jobs:
         run: npx playwright test e2e/a11y-empresarial.spec.ts
         env:
           E2E_BASE_URL: http://localhost:8080
+      - name: Upload resultados E2E para o Codecov (test analytics)
+        if: always()
+        uses: codecov/test-results-action@v1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          flags: e2e
 
 
   e2e-full-matrix:
