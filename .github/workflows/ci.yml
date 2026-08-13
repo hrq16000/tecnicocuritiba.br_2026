@@ -109,6 +109,24 @@ jobs:
           npx vite preview --port 4321 --strictPort &
           for i in $(seq 1 60); do curl -sf -o /dev/null http://localhost:4321/ && break; sleep 1; done
           node scripts/check-index-health.mjs --base=http://localhost:4321 --strict
+      # Originalidade: mede o DOM renderizado de TODA URL curada, exige corpo
+      # autoral mínimo por família e bloqueia duplicidade (Jaccard de shingles).
+      # Escreve reports/content-approval.json, consumido pelo gerador de sitemap.
+      - name: Gate de originalidade de conteúdo (Jaccard + corpo mínimo)
+        run: |
+          npx playwright install --with-deps chromium
+          npm run check:originality
+      - name: Upload relatório de originalidade
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: originality-report
+          path: |
+            reports/originality.json
+            reports/content-approval.json
+          retention-days: 30
+      - name: Controle de ondas Wi-Fi/TV (4–6/semana + prova visual)
+        run: npm run check:waves
       - name: Relatório HTML de auditoria local
         run: npm run report:local-audit
 

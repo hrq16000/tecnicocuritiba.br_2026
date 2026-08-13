@@ -2,13 +2,28 @@
 // `scripts/lib/curated-urls.mjs` (fonte da verdade das URLs indexáveis).
 // Este arquivo NÃO declara URLs: apenas serializa o manifesto em XML.
 // Runs via predev/prebuild; outputs to public/.
-import { writeFileSync } from "node:fs";
+import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { ACTIVE_SITEMAPS, BASE_URL, EMPTY_SITEMAPS } from "./lib/curated-urls.mjs";
 import { lastmodFor } from "./lib/lastmod.mjs";
 
+// Só entra no sitemap URL aprovada no check de originalidade
+// (reports/content-approval.json, gerado por scripts/check-originality.mjs).
+// Sem relatório disponível, o manifesto curado é usado integralmente.
+const APPROVAL_FILE = resolve("reports/content-approval.json");
+const blocked = new Set();
+if (existsSync(APPROVAL_FILE)) {
+  try {
+    const data = JSON.parse(readFileSync(APPROVAL_FILE, "utf8"));
+    for (const item of data.blocked ?? []) blocked.add(item.path);
+  } catch {
+    console.warn("aviso: reports/content-approval.json ilegível — sitemap gerado sem filtro de originalidade.");
+  }
+}
+
 function buildUrlset(entries) {
   const urls = entries
+    .filter((e) => !blocked.has(e.path))
     .map((e) => {
       const lastmod = e.lastmod ?? lastmodFor(e.path);
       return `  <url><loc>${BASE_URL}${e.path}</loc>${lastmod ? `<lastmod>${lastmod}</lastmod>` : ""}<changefreq>${e.changefreq}</changefreq><priority>${e.priority}</priority></url>`;
@@ -38,5 +53,8 @@ writeFileSync(resolve("public/sitemap-index.xml"), indexXml);
 // Alias legado.
 writeFileSync(resolve("public/sitemap.xml"), indexXml);
 
-const total = ACTIVE_SITEMAPS.reduce((n, [, e]) => n + e.length, 0);
-console.log(`sitemap curado: index + ${ACTIVE_SITEMAPS.length} sub-sitemaps (${total} urls)`);
+const declaradas = ACTIVE_SITEMAPS.reduce((n, [, e]) => n + e.length, 0);
+const emitidas = ACTIVE_SITEMAPS.reduce((n, [, e]) => n + e.filter((x) => !blocked.has(x.path)).length, 0);
+console.log(
+  `sitemap curado: index + ${ACTIVE_SITEMAPS.length} sub-sitemaps (${emitidas}/${declaradas} urls${blocked.size ? `, ${declaradas - emitidas} bloqueadas por originalidade` : ""})`,
+);
