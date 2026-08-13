@@ -15,7 +15,8 @@
  * Saída: public/url-audit.json (lido pelo painel /admin/publicacao)
  *
  * Uso:
- *   node scripts/audit-url-checklist.mjs dist            # relatório
+ *   node scripts/audit-url-checklist.mjs dist            # relatório (DOM renderizado)
+ *   node scripts/audit-url-checklist.mjs dist --static   # aproximação pelo HTML estático
  *   node scripts/audit-url-checklist.mjs dist --gate     # falha se houver
  *                                                        # URL no sitemap reprovada
  */
@@ -26,6 +27,7 @@ import { WAVES } from "./lib/content-waves.mjs";
 
 const args = process.argv.slice(2);
 const GATE = args.includes("--gate");
+const STATIC_MODE = args.includes("--static");
 const DIST = path.resolve(args.find((a) => !a.startsWith("--")) || "dist");
 
 export const MIN_PALAVRAS = 800;
@@ -75,11 +77,35 @@ const linksDe = (html, self) =>
     ),
   ];
 
+/**
+ * Conteúdo por rota. Padrão: DOM renderizado (o HTML estático deste SPA traz
+ * só o shell em boa parte das rotas). Com --static usa o HTML do dist, o que
+ * subestima corpo, seções e links.
+ */
+const htmlPorRota = new Map();
+if (STATIC_MODE) {
+  for (const p of alvos) htmlPorRota.set(p, readHtml(p));
+} else {
+  const { withRenderedPages } = await import("./lib/rendered-dom.mjs");
+  try {
+    const { results } = await withRenderedPages({
+      dist: DIST,
+      paths: alvos,
+      port: Number(process.env.URL_AUDIT_PORT || 4191),
+      extractor: () => document.querySelector("main")?.innerHTML ?? document.body.innerHTML,
+    });
+    for (const p of alvos) htmlPorRota.set(p, results.get(p) ?? readHtml(p));
+  } catch (err) {
+    console.warn(`AVISO: auditoria caiu para o modo estático — ${err.message}`);
+    for (const p of alvos) htmlPorRota.set(p, readHtml(p));
+  }
+}
+
 const assinaturas = new Map();
 const paginas = [];
 
 for (const p of alvos) {
-  const html = readHtml(p);
+  const html = htmlPorRota.get(p);
   const fotos = fotosPorPath.get(p);
   const orig = origPorPath.get(p);
 
