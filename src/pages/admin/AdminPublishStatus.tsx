@@ -108,7 +108,14 @@ const AdminPublishStatus = () => {
       .then((r) => (r.ok ? r.json() : Promise.reject(new Error(`HTTP ${r.status}`))))
       .then(setData)
       .catch(() => setErro("publish-status.json ainda não foi gerado. Rode `npm run report:publish-status`."));
+
+    // Auditoria detalhada por URL (opcional: só aparece depois de `npm run audit:urls`).
+    fetch("/url-audit.json", { cache: "no-store" })
+      .then((r) => (r.ok ? r.json() : null))
+      .then((j) => j && setAudit(j))
+      .catch(() => undefined);
   }, []);
+
 
   const urls = useMemo(() => {
     if (!data) return [];
