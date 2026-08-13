@@ -29,6 +29,8 @@ jobs:
             eslint-${{ runner.os }}-
       - name: Lint (cache incremental, non-blocking warnings)
         run: npm run lint:ci --silent || echo "::warning::lint reported issues"
+      - name: Gate de Motion Principles (skeleton, lazyload, progresso)
+        run: npm run check:motion-coverage
       - name: CTA funnel gate
         run: npm run check:cta-funnel
       - name: Internal links + sitemap gate
