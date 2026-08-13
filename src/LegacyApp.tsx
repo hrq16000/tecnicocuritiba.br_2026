@@ -66,6 +66,9 @@ const AdminOperacao = lazy(() => import("./pages/admin/AdminOperacao"));
 const AdminProvasMonitor = lazy(() => import("./pages/admin/AdminProvasMonitor"));
 const AdminProvasVerticais = lazy(() => import("./pages/admin/AdminProvasVerticais"));
 const AdminConversao = lazy(() => import("./pages/admin/AdminConversao"));
+const AdminPublishStatus = lazy(() => import("./pages/admin/AdminPublishStatus"));
+const ParceirosHub = lazy(() => import("./pages/parceiros/ParceirosHub"));
+const ParceiroPage = lazy(() => import("./pages/parceiros/ParceiroPage"));
 
 const ConsertoImpressoraCuritiba = lazy(() => import("./pages/ConsertoImpressoraCuritiba"));
 const AssistenciaEletrodomesticosInteligentesCuritiba = lazy(() => import("./pages/AssistenciaEletrodomesticosInteligentesCuritiba"));
