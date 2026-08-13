@@ -20,7 +20,6 @@
 import { existsSync, readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import path from "node:path";
 import { ACTIVE_SITEMAPS } from "./lib/curated-urls.mjs";
-import { siteConfigBaseUrl } from "./lib/site-base-url.mjs";
 
 const ALERT_AFTER_DAYS = Number((process.argv.find((a) => a.startsWith("--days=")) || "--days=7").split("=")[1]);
 const STATE = "reports/index-state.json";
@@ -40,7 +39,12 @@ if (!aprovadas.length) {
 }
 
 const hoje = new Date().toISOString().slice(0, 10);
-const base = siteConfigBaseUrl();
+const base = (() => {
+  const cfg = readFileSync(path.resolve("src/lib/siteConfig.ts"), "utf8");
+  const m = cfg.match(/baseUrl:\s*"([^"]+)"/);
+  if (!m) throw new Error("baseUrl não encontrada em src/lib/siteConfig.ts");
+  return m[1].replace(/\/$/, "");
+})();
 
 async function inspect(loc) {
   if (!token || !siteUrl) return { verdict: "desconhecido", detail: "sem credenciais GSC" };
