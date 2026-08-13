@@ -273,7 +273,7 @@ export const ServicoBairroTemplate = ({ data }: { data: ServicoBairroData }) => 
                   </div>
                 </div>
                 <div className="rounded-xl overflow-hidden shadow-lg group">
-                  <img 
+                  <img decoding="async" 
                     src={data.servicoSlug.includes("conserto") ? IMAGES.notebookReparo 
                       : data.servicoSlug.includes("formatacao") ? IMAGES.tecnicoTrabalhando
                       : data.servicoSlug.includes("virus") ? IMAGES.segurancaDigital

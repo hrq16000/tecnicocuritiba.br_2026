@@ -603,7 +603,7 @@ export default function AdminCasos() {
                     const errs = validatePhotoMetadata(p);
                     return (
                       <div key={i} className="grid gap-3 rounded-xl border border-border p-3 md:grid-cols-[160px_1fr]">
-                        <img src={p.src} alt={p.alt || "evidência sem alt"} className="h-28 w-full rounded-lg object-cover" />
+                        <img loading="lazy" decoding="async" src={p.src} alt={p.alt || "evidência sem alt"} className="h-28 w-full rounded-lg object-cover" />
                         <div className="space-y-2">
                           <Input value={p.alt} placeholder="Alt descritivo (mín. 15 caracteres)"
                             onChange={(e) => {

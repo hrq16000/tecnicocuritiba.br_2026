@@ -238,7 +238,7 @@ export const BairroTemplate = ({ data }: BairroTemplateProps) => {
               <div className="max-w-4xl mx-auto">
                 {/* Image with hover effect */}
                 <div className="mb-8 rounded-xl overflow-hidden shadow-lg group">
-                  <img 
+                  <img decoding="async" 
                     src={IMAGES.atendimentoDomiciliar} 
                     alt={`Técnico de informática realizando atendimento a domicílio no ${data.nome}, ${data.cidade}`}
                     className="w-full h-48 md:h-64 object-cover transition-transform duration-700 group-hover:scale-105"
@@ -388,7 +388,7 @@ export const BairroTemplate = ({ data }: BairroTemplateProps) => {
 
                 {/* Second image with hover zoom */}
                 <div className="mb-8 rounded-xl overflow-hidden shadow-lg group">
-                  <img 
+                  <img decoding="async" 
                     src={IMAGES.notebookReparo} 
                     alt={`Conserto de notebook e manutenção de computador no ${data.nome}, ${data.cidade}`}
                     className="w-full h-48 md:h-56 object-cover transition-transform duration-700 group-hover:scale-105"
