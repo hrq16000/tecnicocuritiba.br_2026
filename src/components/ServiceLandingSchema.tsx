@@ -1,5 +1,6 @@
 import { useMemo } from "react";
 import { SCHEMA_SLOTS, SLOT_PRIORITY, useJsonLdSlot } from "@/lib/jsonLdSlots";
+import LocalBusinessJsonLd from "@/components/LocalBusinessJsonLd";
 
 /**
  * JSON-LD por landing de serviço: Service + Offer + FAQPage + WebPage + Speakable.
@@ -109,7 +110,15 @@ export const ServiceLandingSchema = ({
   useJsonLdSlot(SCHEMA_SLOTS.faq, schemas.faqSchema, SLOT_PRIORITY.page);
   useJsonLdSlot(SCHEMA_SLOTS.webPage, schemas.webPageSchema, SLOT_PRIORITY.page);
 
-  return null;
+  // LocalBusiness (NAP único) completa o trio exigido para rich results locais
+  // em toda landing de serviço.
+  return (
+    <LocalBusinessJsonLd
+      path={path}
+      description={description}
+      services={[{ name: serviceName, url: `${BASE_URL}${path}` }]}
+    />
+  );
 };
 
 export default ServiceLandingSchema;

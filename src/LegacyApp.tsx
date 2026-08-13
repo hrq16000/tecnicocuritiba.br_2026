@@ -2,6 +2,7 @@ import { lazy, Suspense, useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { redirectRoutes } from "@/routes/redirectRoutes";
 import { ScrollToTop } from "@/components/ScrollToTop";
+import { ProblemaLocalSchema } from "@/components/problemas/ProblemaLocalSchema";
 import { captureUtmsFromUrl } from "@/lib/utmCapture";
 import { RouteLoader } from "@/components/RouteLoader";
 import { RouteProgress } from "@/components/motion/RouteProgress";
@@ -557,6 +558,7 @@ const App = () => (
       <BrowserRouter>
         <LegacyRouteProgress />
         <ScrollToTop />
+        <ProblemaLocalSchema />
         <AppInit />
         <Suspense fallback={<RouteLoader />}>
           <Routes>

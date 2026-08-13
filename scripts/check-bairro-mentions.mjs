@@ -1,0 +1,169 @@
+#!/usr/bin/env node
+/**
+ * GATE DE RELEVÂNCIA LOCAL DAS PÁGINAS DE SERVIÇO.
+ *
+ * Antes de aprovar uma URL de serviço, exige duas provas de localidade:
+ *
+ *   1. MENÇÕES  — pelo menos MIN_MENCOES bairros distintos citados de forma
+ *                 natural no corpo renderizado (nome real do bairro, não slug);
+ *   2. LINKS    — pelo menos MIN_LINKS links internos coerentes com o mapa
+ *                 bairro→serviços gerado em src/lib/localLinkMap.ts.
+ *
+ * Saída: public/bairro-mentions.json (lido pelo painel /admin/publicacao).
+ *
+ * Uso:
+ *   node scripts/check-bairro-mentions.mjs dist          # relatório
+ *   node scripts/check-bairro-mentions.mjs dist --gate   # falha se houver
+ *                                                        # serviço indexável fora da regra
+ */
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import path from "node:path";
+import { ACTIVE_SITEMAPS } from "./lib/curated-urls.mjs";
+import { BAIRRO_NOMES } from "./lib/local-nomes.mjs";
+
+const args = process.argv.slice(2);
+const GATE = args.includes("--gate");
+const STATIC_MODE = args.includes("--static");
+const DIST = path.resolve(args.find((a) => !a.startsWith("--")) || "dist");
+
+export const MIN_MENCOES = 3;
+export const MIN_LINKS = 3;
+
+const curated = [...new Set(ACTIVE_SITEMAPS.flatMap(([, e]) => e.map((x) => x.path)))].sort();
+const curatedSet = new Set(curated);
+const alvos = curated.filter((p) => p.startsWith("/servicos/"));
+
+/** Mapa esperado de links locais (extraído do arquivo gerado). */
+function lerLinkMap() {
+  const file = "src/lib/localLinkMap.ts";
+  if (!existsSync(file)) return {};
+  const src = readFileSync(file, "utf8");
+  const bloco = src.split("BAIRROS_POR_SERVICO")[1] ?? "";
+  const mapa = {};
+  let atual = null;
+  for (const linha of bloco.split("\n")) {
+    const chave = linha.match(/^\s{2}"(\/[^"]+)":/);
+    if (chave) {
+      atual = chave[1];
+      mapa[atual] = [];
+      continue;
+    }
+    const href = linha.match(/"href":\s*"(\/[^"]+)"/);
+    if (href && atual) mapa[atual].push(href[1]);
+  }
+  return mapa;
+}
+const LINKMAP = lerLinkMap();
+
+const extractor = () => {
+  const root = document.querySelector("main") ?? document.body;
+  return {
+    texto: (root.textContent || "").replace(/\s+/g, " "),
+    links: [...root.querySelectorAll("a[href^='/']")].map((a) => a.getAttribute("href") || ""),
+  };
+};
+
+function lerEstatico(routePath) {
+  const rel = routePath === "/" ? "index.html" : `${routePath.replace(/^\//, "")}/index.html`;
+  const file = path.join(DIST, rel);
+  if (!existsSync(file)) return null;
+  const html = readFileSync(file, "utf8");
+  return {
+    texto: html
+      .replace(/<script[\s\S]*?<\/script>/gi, " ")
+      .replace(/<[^>]+>/g, " ")
+      .replace(/\s+/g, " "),
+    links: [...html.matchAll(/<a[^>]+href="(\/[^"]*)"/gi)].map((m) => m[1]),
+  };
+}
+
+const dados = new Map();
+if (STATIC_MODE) {
+  for (const p of alvos) dados.set(p, lerEstatico(p));
+} else {
+  const { withRenderedPages } = await import("./lib/rendered-dom.mjs");
+  try {
+    const { results } = await withRenderedPages({
+      dist: DIST,
+      paths: alvos,
+      port: Number(process.env.BAIRRO_MENTIONS_PORT || 4194),
+      extractor,
+    });
+    for (const p of alvos) dados.set(p, results.get(p) ?? lerEstatico(p));
+  } catch (err) {
+    console.warn(`AVISO: gate de menções caiu para o modo estático — ${err.message}`);
+    for (const p of alvos) dados.set(p, lerEstatico(p));
+  }
+}
+
+const urls = alvos.map((p) => {
+  const d = dados.get(p);
+  const texto = (d?.texto ?? "").toLowerCase();
+  const mencionados = Object.entries(BAIRRO_NOMES)
+    .filter(([, nome]) => texto.includes(nome.toLowerCase()))
+    .map(([slug]) => slug);
+
+  const esperados = LINKMAP[p] ?? [];
+  const encontrados = [
+    ...new Set(
+      (d?.links ?? [])
+        .map((h) => h.split("#")[0].split("?")[0].replace(/\/$/, "") || "/")
+        .filter((h) => h !== p && curatedSet.has(h) && (h.startsWith("/bairros/") || esperados.includes(h))),
+    ),
+  ];
+  const coerentes = esperados.length ? encontrados.filter((h) => esperados.includes(h)) : encontrados;
+  const faltando = esperados.filter((h) => !encontrados.includes(h));
+
+  const problemas = [];
+  if (!d) problemas.push("página não renderizou");
+  if (mencionados.length < MIN_MENCOES)
+    problemas.push(`${mencionados.length} bairro(s) citado(s), mínimo ${MIN_MENCOES}`);
+  if (coerentes.length < MIN_LINKS)
+    problemas.push(`${coerentes.length} link(s) locais coerentes, mínimo ${MIN_LINKS}`);
+
+  return {
+    path: p,
+    noSitemap: curatedSet.has(p),
+    mencoes: mencionados.length,
+    bairrosCitados: mencionados,
+    linksLocais: coerentes.length,
+    linksExemplo: coerentes.slice(0, 6),
+    linksFaltando: faltando.slice(0, 6),
+    problemas,
+    aprovada: problemas.length === 0,
+  };
+});
+
+mkdirSync("public", { recursive: true });
+const payload = {
+  generatedAt: new Date().toISOString(),
+  regras: { MIN_MENCOES, MIN_LINKS, modo: STATIC_MODE ? "estatico" : "renderizado" },
+  totals: {
+    avaliadas: urls.length,
+    aprovadas: urls.filter((u) => u.aprovada).length,
+    reprovadas: urls.filter((u) => !u.aprovada).length,
+  },
+  urls,
+};
+writeFileSync("public/bairro-mentions.json", `${JSON.stringify(payload, null, 2)}\n`);
+console.log(
+  `check-bairro-mentions: ${payload.totals.aprovadas}/${payload.totals.avaliadas} páginas de serviço ` +
+    `com relevância local mínima → public/bairro-mentions.json`,
+);
+
+if (GATE) {
+  if (STATIC_MODE) {
+    console.error(
+      "BLOQUEADO: gate de menções de bairro exige DOM renderizado — o HTML estático deste SPA traz apenas o shell.\n" +
+        'Instale o navegador ("npx playwright install --with-deps chromium") e rode sem --static.',
+    );
+    process.exit(1);
+  }
+  const falhas = urls.filter((u) => u.noSitemap && !u.aprovada);
+  if (falhas.length) {
+    console.error(`BLOQUEADO: ${falhas.length} página(s) de serviço sem relevância local mínima:`);
+    for (const f of falhas.slice(0, 20)) console.error(`  - ${f.path}: ${f.problemas.join("; ")}`);
+    process.exit(1);
+  }
+  console.log("gate de menções de bairro: todas as páginas de serviço aprovadas.");
+}

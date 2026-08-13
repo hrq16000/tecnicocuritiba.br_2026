@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { readVitalsHistory, clearVitalsHistory, type WebVitalEntry } from "@/lib/webVitals";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { PAGE_TYPE_LABEL, pageTypeOf, ratingOf, type PageType } from "@/lib/pageTypes";
 
 
 const METRICS = ["LCP", "INP", "CLS", "FCP", "TTFB"] as const;
@@ -71,6 +72,42 @@ export default function AdminVitals() {
     }));
   }, [entries]);
 
+  /**
+   * Relatório diário por TIPO DE PÁGINA — p75 de LCP/INP/CLS agrupado por
+   * template e por dia, para atacar gargalos que travam velocidade e indexação.
+   */
+  const diarioPorTipo = useMemo(() => {
+    const map = new Map<string, { dia: string; tipo: PageType; m: Record<string, number[]> }>();
+    for (const e of entries) {
+      const dia = new Date(e.timestamp).toISOString().slice(0, 10);
+      const tipo = pageTypeOf(e.path);
+      const key = `${dia}|${tipo}`;
+      const row = map.get(key) ?? { dia, tipo, m: {} };
+      (row.m[e.name] ??= []).push(e.value);
+      map.set(key, row);
+    }
+    return [...map.values()]
+      .map((r) => {
+        const lcp = p75(r.m.LCP || []);
+        const inp = p75(r.m.INP || []);
+        const cls = p75(r.m.CLS || []);
+        const gargalos = [
+          r.m.LCP?.length && ratingOf("LCP", lcp) !== "good" ? "LCP" : null,
+          r.m.INP?.length && ratingOf("INP", inp) !== "good" ? "INP" : null,
+          r.m.CLS?.length && ratingOf("CLS", cls) !== "good" ? "CLS" : null,
+        ].filter(Boolean) as string[];
+        return {
+          ...r,
+          lcp,
+          inp,
+          cls,
+          amostras: Object.values(r.m).reduce((a, b) => a + b.length, 0),
+          gargalos,
+        };
+      })
+      .sort((a, b) => (a.dia === b.dia ? a.tipo.localeCompare(b.tipo) : b.dia.localeCompare(a.dia)));
+  }, [entries]);
+
   useEffect(() => {
     document.title = "Painel Web Vitals — Admin";
     let meta = document.querySelector('meta[name="robots"]');
@@ -125,6 +162,57 @@ export default function AdminVitals() {
               <div className="text-xs text-muted-foreground">{m.count} amostras</div>
             </Card>
           ))}
+        </section>
+
+        <section>
+          <h2 className="mb-2 text-lg font-semibold">Relatório diário por tipo de página (p75)</h2>
+          <p className="mb-2 text-sm text-muted-foreground">
+            Agrupa as medições por template e por dia. Valores fora do limite do Google aparecem em
+            vermelho — corrigir o template resolve todas as URLs daquele tipo de uma vez.
+          </p>
+          <div className="overflow-x-auto rounded-md border">
+            <table className="w-full text-sm">
+              <thead className="bg-muted/50 text-left">
+                <tr>
+                  <th className="px-3 py-2">Dia</th>
+                  <th className="px-3 py-2">Tipo de página</th>
+                  <th className="px-3 py-2">LCP</th>
+                  <th className="px-3 py-2">INP</th>
+                  <th className="px-3 py-2">CLS</th>
+                  <th className="px-3 py-2">Amostras</th>
+                  <th className="px-3 py-2">Gargalos</th>
+                </tr>
+              </thead>
+              <tbody>
+                {diarioPorTipo.map((r) => (
+                  <tr key={`${r.dia}-${r.tipo}`} className="border-t">
+                    <td className="px-3 py-2 whitespace-nowrap">{r.dia}</td>
+                    <td className="px-3 py-2">{PAGE_TYPE_LABEL[r.tipo]}</td>
+                    <td className={`px-3 py-2 ${ratingColor[ratingOf("LCP", r.lcp)]}`}>
+                      {r.lcp ? `${Math.round(r.lcp)}ms` : "—"}
+                    </td>
+                    <td className={`px-3 py-2 ${ratingColor[ratingOf("INP", r.inp)]}`}>
+                      {r.inp ? `${Math.round(r.inp)}ms` : "—"}
+                    </td>
+                    <td className={`px-3 py-2 ${ratingColor[ratingOf("CLS", r.cls)]}`}>
+                      {r.cls ? r.cls.toFixed(3) : "—"}
+                    </td>
+                    <td className="px-3 py-2">{r.amostras}</td>
+                    <td className="px-3 py-2 text-xs">
+                      {r.gargalos.length ? r.gargalos.join(", ") : "nenhum"}
+                    </td>
+                  </tr>
+                ))}
+                {diarioPorTipo.length === 0 && (
+                  <tr>
+                    <td className="px-3 py-4 text-muted-foreground" colSpan={7}>
+                      Sem medições ainda — navegue pelo site para coletar.
+                    </td>
+                  </tr>
+                )}
+              </tbody>
+            </table>
+          </div>
         </section>
 
         <section>
