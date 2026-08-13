@@ -25,6 +25,7 @@ import { ACTIVE_SITEMAPS } from "./lib/curated-urls.mjs";
 
 const args = process.argv.slice(2);
 const REPORT_ONLY = args.includes("--report");
+const STATIC_MODE = args.includes("--static");
 const DIST = path.resolve(args.find((a) => !a.startsWith("--")) || "dist");
 const PUBLIC = path.resolve("public");
 
@@ -101,19 +102,64 @@ const pages = [];
 const errors = [];
 const usoPorHash = new Map();
 
-for (const routePath of curated) {
+const gatedPaths = curated.filter((p) => familyOf(p));
+
+// ── Coleta das imagens por rota.
+// Padrão: DOM renderizado (o HTML estático deste SPA carrega só o shell em
+// boa parte das rotas, então imagens só aparecem após a hidratação).
+const imagensPorRota = new Map();
+if (STATIC_MODE) {
+  for (const routePath of gatedPaths) {
+    const html = readHtml(routePath);
+    imagensPorRota.set(routePath, html ? localImages(html) : null);
+  }
+} else {
+  const { withRenderedPages } = await import("./lib/rendered-dom.mjs");
+  try {
+    const { results } = await withRenderedPages({
+      dist: DIST,
+      paths: gatedPaths,
+      port: Number(process.env.REAL_IMAGES_PORT || 4189),
+      extractor: () => {
+        const out = new Set();
+        const push = (raw) => {
+          if (!raw) return;
+          const url = raw.trim().split(/\s+/)[0].replace(/^https?:\/\/[^/]+/, "").split("?")[0];
+          if (url.startsWith("/") && /\.(jpe?g|png|webp|avif)$/i.test(url)) out.add(url);
+        };
+        for (const img of Array.from(document.querySelectorAll("main img"))) {
+          push(img.getAttribute("src"));
+          const ss = img.getAttribute("srcset");
+          if (ss) ss.split(",").forEach(push);
+        }
+        for (const src of Array.from(document.querySelectorAll("main source[srcset]"))) {
+          (src.getAttribute("srcset") || "").split(",").forEach(push);
+        }
+        return Array.from(out);
+      },
+    });
+    for (const routePath of gatedPaths) imagensPorRota.set(routePath, results.get(routePath) ?? null);
+  } catch (err) {
+    console[REPORT_ONLY ? "warn" : "error"](
+      `${REPORT_ONLY ? "AVISO" : "BLOQUEADO"}: gate de prova visual não pôde renderizar — ${err.message}\n` +
+        `Use --static --report para um relatório aproximado.`,
+    );
+    process.exit(REPORT_ONLY ? 0 : 1);
+  }
+}
+
+for (const routePath of gatedPaths) {
   const family = familyOf(routePath);
-  if (!family) continue;
-  const html = readHtml(routePath);
-  if (!html) {
-    errors.push(`${routePath}: sem HTML estático no dist (rode o prerender antes do gate)`);
-    pages.push({ path: routePath, family, provas: [], problems: ["sem HTML estático"] });
+  const imagens = imagensPorRota.get(routePath);
+  if (!imagens) {
+    errors.push(`${routePath}: rota não renderizou no gate de prova visual`);
+    pages.push({ path: routePath, family, provas: [], problems: ["rota não renderizou"] });
     continue;
   }
 
   const problems = [];
   const provas = [];
-  for (const url of localImages(html)) {
+  for (const url of imagens) {
     if (NAO_E_PROVA.test(url)) continue;
     const info = inspect(url);
     if (!info.exists) {
