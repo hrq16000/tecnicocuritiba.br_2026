@@ -68,12 +68,31 @@ const badge = (estado: Estado) => {
   return map[estado];
 };
 
+interface AuditCheck {
+  id: string;
+  label: string;
+  ok: boolean | null;
+  detalhe: string;
+}
+
+interface AuditPayload {
+  generatedAt: string;
+  urls: { path: string; checklist: AuditCheck[]; aprovada: boolean }[];
+}
+
 const AdminPublishStatus = () => {
   const [data, setData] = useState<Payload | null>(null);
+  const [audit, setAudit] = useState<AuditPayload | null>(null);
   const [erro, setErro] = useState<string | null>(null);
   const [filtro, setFiltro] = useState<Estado | "todos">("publicado-com-pendencia");
   const [busca, setBusca] = useState("");
   const [copiada, setCopiada] = useState<string | null>(null);
+
+  const auditPorPath = useMemo(
+    () => new Map((audit?.urls ?? []).map((u) => [u.path, u])),
+    [audit],
+  );
+
 
   useEffect(() => {
     document.title = "Status de publicação | Painel interno";
