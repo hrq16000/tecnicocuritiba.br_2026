@@ -155,6 +155,18 @@ export function recordCtaSpan(name: string, attrs: Attr = {}) {
 export function initOtel() {
   if (!ENDPOINT || typeof window === "undefined") return;
   startNavigationSpan();
+  // SPA: um trace novo por rota (pushState/replaceState/voltar).
+  const patch = (key: "pushState" | "replaceState") => {
+    const orig = history[key].bind(history);
+    history[key] = ((...args: Parameters<typeof orig>) => {
+      const r = orig(...args);
+      setTimeout(() => startNavigationSpan(), 0);
+      return r;
+    }) as typeof orig;
+  };
+  patch("pushState");
+  patch("replaceState");
+  window.addEventListener("popstate", () => startNavigationSpan());
   window.addEventListener("visibilitychange", () => {
     if (document.visibilityState === "hidden") flush(true);
   });

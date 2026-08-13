@@ -15,6 +15,7 @@ import {
   viewportBucket,
 } from "./trackingTaxonomy";
 import { supabase } from "@/integrations/supabase/client";
+import { recordCtaSpan } from "./observability/otel";
 
 
 type GtagFn = (...args: unknown[]) => void;
@@ -442,12 +443,14 @@ function persistClickEvent(eventType: string, location: string, ctx: { modalidad
 export const trackWaClick = (location: string, extra: Record<string, unknown> = {}) => {
   const ctx = readTriageFallback();
   track("wa_click", { cta_location: location, customer_type: resolveCustomerType(), ...ctx, ...extra });
+  recordCtaSpan("cta.click.whatsapp", { "app.cta_location": location });
   persistClickEvent("wa_click", location, ctx, extra);
 };
 
 export const trackCallClick = (location: string, extra: Record<string, unknown> = {}) => {
   const ctx = readTriageFallback();
   track("call_click", { cta_location: location, customer_type: resolveCustomerType(), ...ctx, ...extra });
+  recordCtaSpan("cta.click.call", { "app.cta_location": location });
   persistClickEvent("call_click", location, ctx, extra);
 };
 

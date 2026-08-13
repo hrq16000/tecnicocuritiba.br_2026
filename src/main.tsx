@@ -2,9 +2,14 @@ import { createRoot } from "react-dom/client";
 import App from "./App.tsx";
 import { initErrorReporter, APP_BUILD_INFO } from "./lib/errorReporter";
 import { installCtaRuntimeGuard } from "./lib/ctaRuntimeGuard";
+import { initSentry } from "./lib/observability/sentry";
+import { initOtel } from "./lib/observability/otel";
 
 initErrorReporter();
 installCtaRuntimeGuard();
+// Observabilidade: no-op quando as variáveis de ambiente não estão definidas.
+void initSentry();
+initOtel();
 // Tema único (claro): remove qualquer `dark` herdado, força color-scheme light
 // e zera flags antigas no localStorage para ignorar preferências do usuário.
 try {
