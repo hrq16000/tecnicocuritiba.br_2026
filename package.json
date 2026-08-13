@@ -193,7 +193,8 @@
     "photos:optimize": "node scripts/optimize-photos.mjs",
     "check:localbusiness-cluster": "node scripts/check-localbusiness-cluster.mjs dist",
     "test:wa-prefill": "playwright test e2e/whatsapp-prefill.spec.ts",
-    "check:sem-balcao": "node scripts/check-sem-balcao.mjs"
+    "check:sem-balcao": "node scripts/check-sem-balcao.mjs",
+    "check:csp-inventory": "node scripts/check-csp-inventory.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",

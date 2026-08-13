@@ -34,6 +34,8 @@ const Coluna = ({
           src={destaque}
           alt={`Imagem reutilizada em ${titulo}`}
           loading="lazy"
+          decoding="async"
+
           className="h-14 w-20 rounded border border-border object-cover"
         />
         <code className="break-all text-[10px] text-muted-foreground">{destaque}</code>
