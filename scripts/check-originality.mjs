@@ -16,9 +16,16 @@
  * O gerador de sitemaps (scripts/generate-sitemaps.mjs) lê o content-approval
  * e REMOVE do XML qualquer URL bloqueada — templates ficam noindex até passar.
  *
+ * Modos:
+ *   --rendered (padrão)  serve o dist e mede o DOM renderizado (Playwright).
+ *                        Único modo que escreve reports/content-approval.json.
+ *   --static             mede apenas o HTML pré-renderizado (rápido, relatório).
+ *   --report             não falha o build (exit 0).
+ *
  * Uso:
- *   node scripts/check-originality.mjs [dist]        # gate (falha o build)
- *   node scripts/check-originality.mjs --report      # só relatório (exit 0)
+ *   npm run check:originality            # gate renderizado (falha o build)
+ *   npm run check:originality:report     # relatório renderizado
+ *   node scripts/check-originality.mjs --static --report
  */
 import { existsSync, readFileSync, mkdirSync, writeFileSync } from "node:fs";
 import path from "node:path";
@@ -26,6 +33,7 @@ import { ACTIVE_SITEMAPS } from "./lib/curated-urls.mjs";
 
 const args = process.argv.slice(2);
 const REPORT_ONLY = args.includes("--report");
+const STATIC_MODE = args.includes("--static");
 const DIST = path.resolve(args.find((a) => !a.startsWith("--")) || "dist");
 
 // ── Regras por família de rota. Primeira regex que casar vence.
@@ -110,13 +118,8 @@ if (!existsSync(DIST)) {
 
 const pages = [];
 const missing = [];
-for (const p of curated) {
-  const html = readHtml(p);
-  if (!html) {
-    missing.push(p);
-    continue;
-  }
-  const text = mainText(html);
+
+function pushPage(p, text) {
   const words = tokens(text);
   pages.push({
     path: p,
@@ -126,6 +129,62 @@ for (const p of curated) {
     uniqueTokens: new Set(words).size,
     shingles: shingles(words),
   });
+}
+
+if (STATIC_MODE) {
+  for (const p of curated) {
+    const html = readHtml(p);
+    if (!html) {
+      missing.push(p);
+      continue;
+    }
+    pushPage(p, mainText(html));
+  }
+} else {
+  // Modo renderizado: sobe o servidor de paridade e lê o <main> após hidratação.
+  const { spawn } = await import("node:child_process");
+  const { chromium } = await import("playwright");
+  const port = Number(process.env.ORIGINALITY_PORT || 4187);
+  const server = spawn(process.execPath, ["scripts/serve-dist.mjs", String(port), DIST], { stdio: "ignore" });
+  const base = `http://127.0.0.1:${port}`;
+  const ready = async () => {
+    for (let i = 0; i < 40; i++) {
+      try {
+        const r = await fetch(`${base}/`);
+        if (r.ok) return true;
+      } catch {}
+      await new Promise((r) => setTimeout(r, 250));
+    }
+    return false;
+  };
+  if (!(await ready())) {
+    server.kill("SIGKILL");
+    console.error("BLOQUEADO: servidor de paridade não subiu para o gate de originalidade.");
+    process.exit(REPORT_ONLY ? 0 : 1);
+  }
+  const browser = await chromium.launch();
+  const page = await browser.newPage({ viewport: { width: 1280, height: 1400 } });
+  try {
+    for (const p of curated) {
+      const res = await page.goto(`${base}${p}`, { waitUntil: "domcontentloaded", timeout: 30000 }).catch(() => null);
+      if (!res || res.status() >= 400) {
+        missing.push(p);
+        continue;
+      }
+      await page.waitForSelector("main", { timeout: 15000 }).catch(() => null);
+      const text = await page
+        .evaluate(() => (document.querySelector("main") || document.body)?.innerText || "")
+        .catch(() => "");
+      if (!text.trim()) {
+        missing.push(p);
+        continue;
+      }
+      pushPage(p, text.replace(/\s+/g, " ").trim());
+    }
+  } finally {
+    await browser.close();
+    server.kill("SIGKILL");
+  }
 }
 
 // ── Avaliação
@@ -177,6 +236,7 @@ writeFileSync(
   ) + "\n",
 );
 
+if (!STATIC_MODE) {
 writeFileSync(
   path.resolve("reports/content-approval.json"),
   JSON.stringify(
@@ -189,6 +249,9 @@ writeFileSync(
     2,
   ) + "\n",
 );
+} else {
+  console.log("modo --static: reports/content-approval.json NÃO foi atualizado (só o modo renderizado aprova URLs).");
+}
 
 // ── Resultado
 console.log(
