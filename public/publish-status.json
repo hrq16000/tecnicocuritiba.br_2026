@@ -1,0 +1,4349 @@
+{
+  "generatedAt": "2026-08-13T00:37:07.014Z",
+  "fontes": {
+    "originality": "2026-08-13T00:26:02.598Z",
+    "realImages": "2026-08-13T00:31:40.290Z",
+    "contentApproval": "ausente"
+  },
+  "regras": {
+    "WAVE_MIN": 4,
+    "WAVE_MAX": 6
+  },
+  "ondas": [],
+  "totals": {
+    "urls": 161,
+    "noSitemap": 161,
+    "prontas": 0,
+    "comPendencia": 130,
+    "emProva": 0
+  },
+  "urls": [
+    {
+      "path": "/",
+      "family": "institucional",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 95,
+        "minWords": 250,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/anuncie",
+      "family": null,
+      "noSitemap": true,
+      "originalidade": {
+        "words": null,
+        "minWords": null,
+        "ok": null,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/areas-atendidas",
+      "family": "institucional",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 538,
+        "minWords": 250,
+        "ok": true,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [],
+      "estado": "publicado"
+    },
+    {
+      "path": "/atendimento-domicilio",
+      "family": "institucional",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 717,
+        "minWords": 250,
+        "ok": true,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [],
+      "estado": "publicado"
+    },
+    {
+      "path": "/atendimento-remoto",
+      "family": "institucional",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 1504,
+        "minWords": 250,
+        "ok": true,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [],
+      "estado": "publicado"
+    },
+    {
+      "path": "/bairros/agua-verde",
+      "family": "local",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 108,
+        "minWords": 450,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente",
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/bairros/batel",
+      "family": "local",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 106,
+        "minWords": 450,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente",
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/bairros/bigorrilho",
+      "family": "local",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 108,
+        "minWords": 450,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente",
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/bairros/boa-vista",
+      "family": "local",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 110,
+        "minWords": 450,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente",
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/bairros/boqueirao",
+      "family": "local",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 109,
+        "minWords": 450,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente",
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/bairros/cabral",
+      "family": "local",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 107,
+        "minWords": 450,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente",
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/bairros/cajuru",
+      "family": "local",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 108,
+        "minWords": 450,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente",
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/bairros/centro",
+      "family": "local",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 109,
+        "minWords": 450,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente",
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/bairros/cic",
+      "family": "local",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 108,
+        "minWords": 450,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente",
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/bairros/cristo-rei",
+      "family": "local",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 110,
+        "minWords": 450,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente",
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/bairros/portao",
+      "family": "local",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 108,
+        "minWords": 450,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente",
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/bairros/santa-felicidade",
+      "family": "local",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 108,
+        "minWords": 450,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente",
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/blog",
+      "family": "institucional",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 299,
+        "minWords": 250,
+        "ok": true,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [],
+      "estado": "publicado"
+    },
+    {
+      "path": "/blog/backup-como-proteger-seus-arquivos",
+      "family": "editorial",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 203,
+        "minWords": 800,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/blog/como-escolher-uma-workstation",
+      "family": "editorial",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 207,
+        "minWords": 800,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/blog/como-melhorar-sinal-wifi-em-casa",
+      "family": "editorial",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 193,
+        "minWords": 800,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/blog/como-saber-se-pc-tem-virus-malware",
+      "family": "editorial",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 194,
+        "minWords": 800,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/blog/notebook-superaquecendo-o-que-fazer",
+      "family": "editorial",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 209,
+        "minWords": 800,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/blog/organizacao-de-ti-para-pequenos-escritorios",
+      "family": "editorial",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 244,
+        "minWords": 800,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/blog/quando-trocar-hd-por-ssd",
+      "family": "editorial",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 202,
+        "minWords": 800,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/coleta-e-entrega",
+      "family": "institucional",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 882,
+        "minWords": 250,
+        "ok": true,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [],
+      "estado": "publicado"
+    },
+    {
+      "path": "/como-funciona",
+      "family": "institucional",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 826,
+        "minWords": 250,
+        "ok": true,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [],
+      "estado": "publicado"
+    },
+    {
+      "path": "/contato",
+      "family": "institucional",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 98,
+        "minWords": 250,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/diagnostico-tecnico",
+      "family": "institucional",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 89,
+        "minWords": 250,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/empresa-de-ti-curitiba",
+      "family": "institucional",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 711,
+        "minWords": 250,
+        "ok": true,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [],
+      "estado": "publicado"
+    },
+    {
+      "path": "/equipamentos-atendidos",
+      "family": "institucional",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 884,
+        "minWords": 250,
+        "ok": true,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [],
+      "estado": "publicado"
+    },
+    {
+      "path": "/faq",
+      "family": "institucional",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 418,
+        "minWords": 250,
+        "ok": true,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [],
+      "estado": "publicado"
+    },
+    {
+      "path": "/guia-tecnico-informatica",
+      "family": "institucional",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 993,
+        "minWords": 250,
+        "ok": true,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [],
+      "estado": "publicado"
+    },
+    {
+      "path": "/politica-de-pecas-do-cliente",
+      "family": "institucional",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 699,
+        "minWords": 250,
+        "ok": true,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [],
+      "estado": "publicado"
+    },
+    {
+      "path": "/precos-e-politicas",
+      "family": "institucional",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 1524,
+        "minWords": 250,
+        "ok": true,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [],
+      "estado": "publicado"
+    },
+    {
+      "path": "/problemas",
+      "family": "institucional",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 817,
+        "minWords": 250,
+        "ok": true,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [],
+      "estado": "publicado"
+    },
+    {
+      "path": "/problemas/computador-desliga-sozinho",
+      "family": "problemas",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 1011,
+        "minWords": 800,
+        "ok": true,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/problemas/computador-fazendo-barulho",
+      "family": "problemas",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 1083,
+        "minWords": 800,
+        "ok": true,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/problemas/computador-lento",
+      "family": "problemas",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 1012,
+        "minWords": 800,
+        "ok": true,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/problemas/computador-nao-liga",
+      "family": "problemas",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 1078,
+        "minWords": 800,
+        "ok": true,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/problemas/computador-sem-som",
+      "family": "problemas",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 883,
+        "minWords": 800,
+        "ok": true,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/problemas/computador-travando",
+      "family": "problemas",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 949,
+        "minWords": 800,
+        "ok": true,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/problemas/dobradica-do-notebook-quebrada",
+      "family": "problemas",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 911,
+        "minWords": 800,
+        "ok": true,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/problemas/hd-nao-reconhecido",
+      "family": "problemas",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 1083,
+        "minWords": 800,
+        "ok": true,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/problemas/impressora-nao-imprime",
+      "family": "problemas",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 1008,
+        "minWords": 800,
+        "ok": true,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/problemas/monitor-sem-sinal",
+      "family": "problemas",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 1039,
+        "minWords": 800,
+        "ok": true,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/problemas/mouse-nao-funciona",
+      "family": "problemas",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 844,
+        "minWords": 800,
+        "ok": true,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/problemas/notebook-com-tela-preta",
+      "family": "problemas",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 1116,
+        "minWords": 800,
+        "ok": true,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/problemas/notebook-desligando-sozinho",
+      "family": "problemas",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 876,
+        "minWords": 800,
+        "ok": true,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/problemas/notebook-lento",
+      "family": "problemas",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 1036,
+        "minWords": 800,
+        "ok": true,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/problemas/notebook-molhado",
+      "family": "problemas",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 1086,
+        "minWords": 800,
+        "ok": true,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/problemas/notebook-nao-carrega-bateria",
+      "family": "problemas",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 992,
+        "minWords": 800,
+        "ok": true,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/problemas/notebook-nao-conecta-no-wifi",
+      "family": "problemas",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 847,
+        "minWords": 800,
+        "ok": true,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/problemas/notebook-nao-liga",
+      "family": "problemas",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 724,
+        "minWords": 800,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente",
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/problemas/notebook-superaquecendo",
+      "family": "problemas",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 1001,
+        "minWords": 800,
+        "ok": true,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/problemas/pen-drive-nao-reconhecido",
+      "family": "problemas",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 898,
+        "minWords": 800,
+        "ok": true,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/problemas/teclado-de-notebook-nao-funciona",
+      "family": "problemas",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 1007,
+        "minWords": 800,
+        "ok": true,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/problemas/tela-azul-windows",
+      "family": "problemas",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 1014,
+        "minWords": 800,
+        "ok": true,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/problemas/tela-de-notebook-quebrada",
+      "family": "problemas",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 1074,
+        "minWords": 800,
+        "ok": true,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/problemas/tela-do-computador-piscando",
+      "family": "problemas",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 819,
+        "minWords": 800,
+        "ok": true,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/problemas/touchpad-nao-funciona",
+      "family": "problemas",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 914,
+        "minWords": 800,
+        "ok": true,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/problemas/tv-com-imagem-escura",
+      "family": "problemas",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 857,
+        "minWords": 800,
+        "ok": true,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/problemas/tv-com-linhas-na-tela",
+      "family": "problemas",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 1094,
+        "minWords": 800,
+        "ok": true,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/problemas/tv-com-som-sem-imagem",
+      "family": "problemas",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 1091,
+        "minWords": 800,
+        "ok": true,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/problemas/tv-desligando-sozinha",
+      "family": "problemas",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 1066,
+        "minWords": 800,
+        "ok": true,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/problemas/tv-nao-conecta-no-wifi",
+      "family": "problemas",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 925,
+        "minWords": 800,
+        "ok": true,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/problemas/tv-nao-liga",
+      "family": "problemas",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 960,
+        "minWords": 800,
+        "ok": true,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/problemas/tv-sem-som",
+      "family": "problemas",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 990,
+        "minWords": 800,
+        "ok": true,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/problemas/tv-travando",
+      "family": "problemas",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 876,
+        "minWords": 800,
+        "ok": true,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/problemas/webcam-nao-funciona",
+      "family": "problemas",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 869,
+        "minWords": 800,
+        "ok": true,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/problemas/wifi-caindo-toda-hora",
+      "family": "problemas",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 1022,
+        "minWords": 800,
+        "ok": true,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/problemas/windows-nao-inicia",
+      "family": "problemas",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 878,
+        "minWords": 800,
+        "ok": true,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/quando-nao-compensa",
+      "family": "institucional",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 88,
+        "minWords": 250,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/seguranca-dos-dados",
+      "family": "institucional",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 1504,
+        "minWords": 250,
+        "ok": true,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [],
+      "estado": "publicado"
+    },
+    {
+      "path": "/servicos",
+      "family": "institucional",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 395,
+        "minWords": 250,
+        "ok": true,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [],
+      "estado": "publicado"
+    },
+    {
+      "path": "/servicos/backup-para-empresas",
+      "family": "servico",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 1620,
+        "minWords": 600,
+        "ok": true,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [],
+      "estado": "publicado"
+    },
+    {
+      "path": "/servicos/conserto-monitor",
+      "family": "servico",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 2618,
+        "minWords": 600,
+        "ok": true,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [],
+      "estado": "publicado"
+    },
+    {
+      "path": "/servicos/conserto-pc-notebook/agua-verde",
+      "family": "servico-bairro",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 241,
+        "minWords": 500,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/servicos/conserto-pc-notebook/alto-da-xv",
+      "family": "servico-bairro",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 244,
+        "minWords": 500,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/servicos/conserto-pc-notebook/centro",
+      "family": "servico-bairro",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 245,
+        "minWords": 500,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/servicos/conserto-pc-notebook/ecoville",
+      "family": "servico-bairro",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 239,
+        "minWords": 500,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/servicos/conserto-pc-notebook/jardim-das-americas",
+      "family": "servico-bairro",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 244,
+        "minWords": 500,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/servicos/conserto-pc-notebook/reboucas",
+      "family": "servico-bairro",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 238,
+        "minWords": 500,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/servicos/conserto-placa",
+      "family": "servico",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 2331,
+        "minWords": 600,
+        "ok": true,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [],
+      "estado": "publicado"
+    },
+    {
+      "path": "/servicos/conserto-tv",
+      "family": "servico",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 3112,
+        "minWords": 600,
+        "ok": true,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [],
+      "estado": "publicado"
+    },
+    {
+      "path": "/servicos/formatacao",
+      "family": "servico",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 1263,
+        "minWords": 600,
+        "ok": true,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [],
+      "estado": "publicado"
+    },
+    {
+      "path": "/servicos/formatacao-computador/agua-verde",
+      "family": "servico-bairro",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 243,
+        "minWords": 500,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/servicos/formatacao-computador/alto-da-xv",
+      "family": "servico-bairro",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 250,
+        "minWords": 500,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/servicos/formatacao-computador/batel",
+      "family": "servico-bairro",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 240,
+        "minWords": 500,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/servicos/formatacao-computador/cic",
+      "family": "servico-bairro",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 238,
+        "minWords": 500,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/servicos/formatacao-computador/ecoville",
+      "family": "servico-bairro",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 241,
+        "minWords": 500,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/servicos/formatacao-computador/jardim-das-americas",
+      "family": "servico-bairro",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 251,
+        "minWords": 500,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/servicos/formatacao-computador/reboucas",
+      "family": "servico-bairro",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 241,
+        "minWords": 500,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/servicos/manutencao-de-computador",
+      "family": "servico",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 1255,
+        "minWords": 600,
+        "ok": true,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [],
+      "estado": "publicado"
+    },
+    {
+      "path": "/servicos/manutencao-de-notebook",
+      "family": "servico",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 1238,
+        "minWords": 600,
+        "ok": true,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [],
+      "estado": "publicado"
+    },
+    {
+      "path": "/servicos/manutencao-preventiva-empresas",
+      "family": "servico",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 1433,
+        "minWords": 600,
+        "ok": true,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [],
+      "estado": "publicado"
+    },
+    {
+      "path": "/servicos/manutencao-tv/agua-verde",
+      "family": "wifi-tv-bairro",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 129,
+        "minWords": 600,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": "legado",
+        "approved": true,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente",
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/servicos/manutencao-tv/alto-da-xv",
+      "family": "wifi-tv-bairro",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 131,
+        "minWords": 600,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": "legado",
+        "approved": true,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente",
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/servicos/manutencao-tv/batel",
+      "family": "wifi-tv-bairro",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 123,
+        "minWords": 600,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": "legado",
+        "approved": true,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente",
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/servicos/manutencao-tv/bigorrilho",
+      "family": "wifi-tv-bairro",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 127,
+        "minWords": 600,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": "legado",
+        "approved": true,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente",
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/servicos/manutencao-tv/boa-vista",
+      "family": "wifi-tv-bairro",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 127,
+        "minWords": 600,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": "legado",
+        "approved": true,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente",
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/servicos/manutencao-tv/boqueirao",
+      "family": "wifi-tv-bairro",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 125,
+        "minWords": 600,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": "legado",
+        "approved": true,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente",
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/servicos/manutencao-tv/cabral",
+      "family": "wifi-tv-bairro",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 125,
+        "minWords": 600,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": "legado",
+        "approved": true,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente",
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/servicos/manutencao-tv/cajuru",
+      "family": "wifi-tv-bairro",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 124,
+        "minWords": 600,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": "legado",
+        "approved": true,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente",
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/servicos/manutencao-tv/centro",
+      "family": "wifi-tv-bairro",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 124,
+        "minWords": 600,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": "legado",
+        "approved": true,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente",
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/servicos/manutencao-tv/cic",
+      "family": "wifi-tv-bairro",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 125,
+        "minWords": 600,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": "legado",
+        "approved": true,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente",
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/servicos/manutencao-tv/cristo-rei",
+      "family": "wifi-tv-bairro",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 125,
+        "minWords": 600,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": "legado",
+        "approved": true,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente",
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/servicos/manutencao-tv/ecoville",
+      "family": "wifi-tv-bairro",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 127,
+        "minWords": 600,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": "legado",
+        "approved": true,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente",
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/servicos/manutencao-tv/jardim-das-americas",
+      "family": "wifi-tv-bairro",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 129,
+        "minWords": 600,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": "legado",
+        "approved": true,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente",
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/servicos/manutencao-tv/portao",
+      "family": "wifi-tv-bairro",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 124,
+        "minWords": 600,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": "legado",
+        "approved": true,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente",
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/servicos/manutencao-tv/reboucas",
+      "family": "wifi-tv-bairro",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 125,
+        "minWords": 600,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": "legado",
+        "approved": true,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente",
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/servicos/manutencao-tv/santa-felicidade",
+      "family": "wifi-tv-bairro",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 125,
+        "minWords": 600,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": "legado",
+        "approved": true,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente",
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/servicos/montagem-de-pc",
+      "family": "servico",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 2442,
+        "minWords": 600,
+        "ok": true,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [],
+      "estado": "publicado"
+    },
+    {
+      "path": "/servicos/recuperacao-de-dados",
+      "family": "servico",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 1070,
+        "minWords": 600,
+        "ok": true,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [],
+      "estado": "publicado"
+    },
+    {
+      "path": "/servicos/redes-e-wifi",
+      "family": "servico",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 2307,
+        "minWords": 600,
+        "ok": true,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [],
+      "estado": "publicado"
+    },
+    {
+      "path": "/servicos/redes-wifi/agua-verde",
+      "family": "wifi-tv-bairro",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 126,
+        "minWords": 600,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": "legado",
+        "approved": true,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente",
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/servicos/redes-wifi/alto-da-xv",
+      "family": "wifi-tv-bairro",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 132,
+        "minWords": 600,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": "legado",
+        "approved": true,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente",
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/servicos/redes-wifi/batel",
+      "family": "wifi-tv-bairro",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 123,
+        "minWords": 600,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": "legado",
+        "approved": true,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente",
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/servicos/redes-wifi/bigorrilho",
+      "family": "wifi-tv-bairro",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 124,
+        "minWords": 600,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": "legado",
+        "approved": true,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente",
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/servicos/redes-wifi/boa-vista",
+      "family": "wifi-tv-bairro",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 127,
+        "minWords": 600,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": "legado",
+        "approved": true,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente",
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/servicos/redes-wifi/boqueirao",
+      "family": "wifi-tv-bairro",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 128,
+        "minWords": 600,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": "legado",
+        "approved": true,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente",
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/servicos/redes-wifi/cabral",
+      "family": "wifi-tv-bairro",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 125,
+        "minWords": 600,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": "legado",
+        "approved": true,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente",
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/servicos/redes-wifi/cajuru",
+      "family": "wifi-tv-bairro",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 123,
+        "minWords": 600,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": "legado",
+        "approved": true,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente",
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/servicos/redes-wifi/centro",
+      "family": "wifi-tv-bairro",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 124,
+        "minWords": 600,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": "legado",
+        "approved": true,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente",
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/servicos/redes-wifi/cic",
+      "family": "wifi-tv-bairro",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 128,
+        "minWords": 600,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": "legado",
+        "approved": true,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente",
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/servicos/redes-wifi/cristo-rei",
+      "family": "wifi-tv-bairro",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 130,
+        "minWords": 600,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": "legado",
+        "approved": true,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente",
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/servicos/redes-wifi/ecoville",
+      "family": "wifi-tv-bairro",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 125,
+        "minWords": 600,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": "legado",
+        "approved": true,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente",
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/servicos/redes-wifi/jardim-das-americas",
+      "family": "wifi-tv-bairro",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 131,
+        "minWords": 600,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": "legado",
+        "approved": true,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente",
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/servicos/redes-wifi/portao",
+      "family": "wifi-tv-bairro",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 128,
+        "minWords": 600,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": "legado",
+        "approved": true,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente",
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/servicos/redes-wifi/reboucas",
+      "family": "wifi-tv-bairro",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 127,
+        "minWords": 600,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": "legado",
+        "approved": true,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente",
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/servicos/redes-wifi/santa-felicidade",
+      "family": "wifi-tv-bairro",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 128,
+        "minWords": 600,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": true,
+        "fotos": 0,
+        "ok": false,
+        "problems": [
+          "0 foto(s) real(is) válida(s) — mínimo 2"
+        ]
+      },
+      "onda": {
+        "week": "legado",
+        "approved": true,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente",
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/servicos/remocao-de-virus",
+      "family": "servico",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 783,
+        "minWords": 600,
+        "ok": true,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [],
+      "estado": "publicado"
+    },
+    {
+      "path": "/servicos/remocao-virus/agua-verde",
+      "family": "servico-bairro",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 238,
+        "minWords": 500,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/servicos/remocao-virus/alto-da-xv",
+      "family": "servico-bairro",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 241,
+        "minWords": 500,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/servicos/remocao-virus/cic",
+      "family": "servico-bairro",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 231,
+        "minWords": 500,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/servicos/remocao-virus/ecoville",
+      "family": "servico-bairro",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 233,
+        "minWords": 500,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/servicos/remocao-virus/jardim-das-americas",
+      "family": "servico-bairro",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 241,
+        "minWords": 500,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/servicos/remocao-virus/reboucas",
+      "family": "servico-bairro",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 231,
+        "minWords": 500,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/servicos/suporte-home-office",
+      "family": "servico",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 1856,
+        "minWords": 600,
+        "ok": true,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [],
+      "estado": "publicado"
+    },
+    {
+      "path": "/servicos/suporte-tecnico-empresarial",
+      "family": "servico",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 1859,
+        "minWords": 600,
+        "ok": true,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [],
+      "estado": "publicado"
+    },
+    {
+      "path": "/servicos/upgrade-ssd-memoria/agua-verde",
+      "family": "servico-bairro",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 249,
+        "minWords": 500,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/servicos/upgrade-ssd-memoria/alto-da-xv",
+      "family": "servico-bairro",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 251,
+        "minWords": 500,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/servicos/upgrade-ssd-memoria/centro",
+      "family": "servico-bairro",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 250,
+        "minWords": 500,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/servicos/upgrade-ssd-memoria/cic",
+      "family": "servico-bairro",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 243,
+        "minWords": 500,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/servicos/upgrade-ssd-memoria/ecoville",
+      "family": "servico-bairro",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 246,
+        "minWords": 500,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/servicos/upgrade-ssd-memoria/jardim-das-americas",
+      "family": "servico-bairro",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 255,
+        "minWords": 500,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/servicos/upgrade-ssd-memoria/portao",
+      "family": "servico-bairro",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 243,
+        "minWords": 500,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/servicos/upgrade-ssd-memoria/reboucas",
+      "family": "servico-bairro",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 245,
+        "minWords": 500,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/servicos/upgrade-ssd-ram",
+      "family": "servico",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 1441,
+        "minWords": 600,
+        "ok": true,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [],
+      "estado": "publicado"
+    },
+    {
+      "path": "/sobre",
+      "family": "institucional",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 732,
+        "minWords": 250,
+        "ok": true,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [],
+      "estado": "publicado"
+    },
+    {
+      "path": "/tecnico-informatica-almirante-tamandare",
+      "family": "local",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 109,
+        "minWords": 450,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/tecnico-informatica-araucaria",
+      "family": "local",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 111,
+        "minWords": 450,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/tecnico-informatica-campo-largo",
+      "family": "local",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 117,
+        "minWords": 450,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/tecnico-informatica-campo-magro",
+      "family": "local",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 112,
+        "minWords": 450,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/tecnico-informatica-colombo",
+      "family": "local",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 115,
+        "minWords": 450,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/tecnico-informatica-curitiba",
+      "family": "local",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 369,
+        "minWords": 450,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/tecnico-informatica-fazenda-rio-grande",
+      "family": "local",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 112,
+        "minWords": 450,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/tecnico-informatica-pinhais",
+      "family": "local",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 114,
+        "minWords": 450,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/tecnico-informatica-piraquara",
+      "family": "local",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 112,
+        "minWords": 450,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/tecnico-informatica-quatro-barras",
+      "family": "local",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 113,
+        "minWords": 450,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente"
+      ],
+      "estado": "publicado-com-pendencia"
+    },
+    {
+      "path": "/tecnico-informatica-sao-jose-pinhais",
+      "family": "local",
+      "noSitemap": true,
+      "originalidade": {
+        "words": 115,
+        "minWords": 450,
+        "ok": false,
+        "reasons": []
+      },
+      "provaVisual": {
+        "avaliada": false,
+        "fotos": null,
+        "ok": null,
+        "problems": []
+      },
+      "onda": {
+        "week": null,
+        "approved": null,
+        "problems": []
+      },
+      "bloqueios": [
+        "originalidade insuficiente"
+      ],
+      "estado": "publicado-com-pendencia"
+    }
+  ]
+}

@@ -6,7 +6,7 @@
   "scripts": {
     "predev": "node scripts/generate-sitemaps.mjs && node scripts/generate-llms.mjs",
     "dev": "vite",
-    "prebuild": "node scripts/generate-sitemaps.mjs && node scripts/generate-llms.mjs && bun scripts/check-seo-basics.ts index.html && node scripts/check-security-findings-baseline.mjs && node scripts/check-ads-txt.mjs && node scripts/check-policy-jsonld.mjs && node scripts/check-telemetry-transparency.mjs && node scripts/check-missing-exports.mjs && node scripts/check-motion-coverage.mjs && node scripts/check-wave-control.mjs && npm run check:types && node scripts/check-media-assets.mjs && node scripts/report-build-gates.mjs",
+    "prebuild": "node scripts/generate-sitemaps.mjs && node scripts/generate-llms.mjs && bun scripts/check-seo-basics.ts index.html && node scripts/check-security-findings-baseline.mjs && node scripts/check-ads-txt.mjs && node scripts/check-policy-jsonld.mjs && node scripts/check-telemetry-transparency.mjs && node scripts/check-missing-exports.mjs && node scripts/check-motion-coverage.mjs && node scripts/check-wave-control.mjs && node scripts/check-parceiros.mjs && npm run check:types && node scripts/check-media-assets.mjs && node scripts/report-build-gates.mjs",
     "check:ads-txt": "node scripts/check-ads-txt.mjs",
     "check:policy-jsonld": "node scripts/check-policy-jsonld.mjs",
     "check:missing-exports": "node scripts/check-missing-exports.mjs",
@@ -46,6 +46,9 @@
     "check:originality": "node scripts/check-originality.mjs dist",
     "check:originality:report": "node scripts/check-originality.mjs dist --report",
     "check:waves": "node scripts/check-wave-control.mjs",
+    "check:parceiros": "node scripts/check-parceiros.mjs",
+    "report:publish-status": "node scripts/generate-publish-status.mjs",
+    "report:index-alerts": "node scripts/monitor-index-alerts.mjs",
     "check:jsonld-refs": "node scripts/check-jsonld-references.mjs",
     "check:sitemap-source": "node scripts/check-sitemap-source.mjs",
     "check:internal-links": "node scripts/check-internal-links.mjs",

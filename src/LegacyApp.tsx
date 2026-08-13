@@ -66,6 +66,9 @@ const AdminOperacao = lazy(() => import("./pages/admin/AdminOperacao"));
 const AdminProvasMonitor = lazy(() => import("./pages/admin/AdminProvasMonitor"));
 const AdminProvasVerticais = lazy(() => import("./pages/admin/AdminProvasVerticais"));
 const AdminConversao = lazy(() => import("./pages/admin/AdminConversao"));
+const AdminPublishStatus = lazy(() => import("./pages/admin/AdminPublishStatus"));
+const ParceirosHub = lazy(() => import("./pages/parceiros/ParceirosHub"));
+const ParceiroPage = lazy(() => import("./pages/parceiros/ParceiroPage"));
 
 const ConsertoImpressoraCuritiba = lazy(() => import("./pages/ConsertoImpressoraCuritiba"));
 const AssistenciaEletrodomesticosInteligentesCuritiba = lazy(() => import("./pages/AssistenciaEletrodomesticosInteligentesCuritiba"));
@@ -1070,6 +1073,11 @@ const App = () => (
             <Route path="/admin/provas-monitor" element={<AdminProvasMonitor />} />
             <Route path="/admin/provas-verticais" element={<AdminProvasVerticais />} />
             <Route path="/admin/conversao" element={<AdminConversao />} />
+            <Route path="/admin/publicacao" element={<AdminPublishStatus />} />
+
+            {/* Rede de parceiros prestadores (fail-closed: noindex sem prova real) */}
+            <Route path="/parceiros" element={<ParceirosHub />} />
+            <Route path="/parceiros/:slug" element={<ParceiroPage />} />
 
             <Route path="/conserto-impressora-curitiba" element={<ConsertoImpressoraCuritiba />} />
             <Route path="/assistencia-eletrodomesticos-inteligentes-curitiba" element={<AssistenciaEletrodomesticosInteligentesCuritiba />} />
