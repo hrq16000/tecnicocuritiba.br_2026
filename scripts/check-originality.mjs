@@ -145,6 +145,10 @@ if (STATIC_MODE) {
   const { spawn } = await import("node:child_process");
   const { chromium } = await import("playwright");
   const port = Number(process.env.ORIGINALITY_PORT || 4187);
+  if (!existsSync(path.join(DIST, "route-manifest.json"))) {
+    const { spawnSync } = await import("node:child_process");
+    spawnSync(process.execPath, ["scripts/generate-route-manifest.mjs", DIST], { stdio: "ignore" });
+  }
   const server = spawn(process.execPath, ["scripts/serve-dist.mjs", String(port), DIST], { stdio: "ignore" });
   const base = `http://127.0.0.1:${port}`;
   const ready = async () => {
@@ -162,7 +166,17 @@ if (STATIC_MODE) {
     console.error("BLOQUEADO: servidor de paridade não subiu para o gate de originalidade.");
     process.exit(REPORT_ONLY ? 0 : 1);
   }
-  const browser = await chromium.launch();
+  let browser;
+  try {
+    browser = await chromium.launch();
+  } catch (err) {
+    server.kill("SIGKILL");
+    console.error(
+      `BLOQUEADO: navegador do Playwright indisponível (${String(err).split("\n")[0]}).\n` +
+        `Rode "npx playwright install --with-deps chromium" ou use --static --report para um relatório aproximado.`,
+    );
+    process.exit(REPORT_ONLY ? 0 : 1);
+  }
   const page = await browser.newPage({ viewport: { width: 1280, height: 1400 } });
   try {
     for (const p of curated) {
