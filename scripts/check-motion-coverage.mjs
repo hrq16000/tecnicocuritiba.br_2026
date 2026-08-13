@@ -28,6 +28,37 @@ const walk = (dir, out = []) => {
   return out;
 };
 
+/**
+ * Extrai tags <img ...> respeitando expressões JSX ({...}, arrow functions,
+ * strings) — um `>` dentro de `=>` ou de um objeto não encerra a tag.
+ */
+const extractImgTags = (src) => {
+  const tags = [];
+  let i = 0;
+  while ((i = src.indexOf("<img", i)) !== -1) {
+    let depth = 0;
+    let quote = "";
+    for (let j = i + 4; j < src.length; j++) {
+      const c = src[j];
+      if (quote) {
+        if (c === quote) quote = "";
+        continue;
+      }
+      if (c === '"' || c === "'" || c === "`") quote = c;
+      else if (c === "{") depth++;
+      else if (c === "}") depth--;
+      else if (c === ">" && depth === 0) {
+        tags.push(src.slice(i, j + 1));
+        i = j + 1;
+        break;
+      }
+      if (j === src.length - 1) i = src.length;
+    }
+    if (i <= src.indexOf("<img", i)) break;
+  }
+  return tags;
+};
+
 const files = walk(SRC);
 const read = (p) => fs.readFileSync(p, "utf8");
 
@@ -61,7 +92,7 @@ for (const abs of files) {
   if (IMG_EXEMPT.has(rel)) continue;
   const src = read(abs);
   if (!src.includes("<img")) continue;
-  const tags = src.match(/<img[\s\S]*?\/?>/g) || [];
+  const tags = extractImgTags(src);
   for (const tag of tags) {
     if (!/\bloading=/.test(tag))
       errors.push(`${rel}: <img> sem atributo loading (lazy/eager) — ${tag.slice(0, 70).replace(/\s+/g, " ")}…`);
