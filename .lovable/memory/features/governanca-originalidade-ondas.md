@@ -36,3 +36,14 @@ Sem relatório presente, o manifesto curado é emitido integralmente.
 
 `docs/template-brief-faq.md` — brief + FAQ único (≥5 perguntas exclusivas) obrigatório
 antes de liberar qualquer nova URL indexável.
+
+## Aprovação de onda em lote
+
+- Registro: `scripts/lib/wave-approvals.json` (fail-closed; ilegível = nada liberado).
+- CLI: `npm run onda:aprovar -- --week=YYYY-MM-DD` (grava só se 100% das URLs
+  passarem em `public/publish-status.json`), `--revogar`, `npm run onda:listar`.
+- `generate-sitemaps.mjs` mantém URLs de onda fora do XML até a liberação em lote.
+- `check-wave-control.mjs`: avisa onda pronta sem liberação; erra se liberada
+  voltar a falhar nos gates.
+- Painel `/admin/publicacao` mostra cada onda com checklist por URL e botão
+  "Aprovar onda em lote" (habilitado só quando tudo passa; copia o comando).

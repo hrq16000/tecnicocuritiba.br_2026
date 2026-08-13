@@ -12,20 +12,34 @@ import { existsSync } from "node:fs";
 import path from "node:path";
 import { ACTIVE_SITEMAPS } from "./lib/curated-urls.mjs";
 import { LEGADO, WAVES, waveStatus } from "./lib/content-waves.mjs";
+import { approvedWeeks } from "./lib/wave-approvals.mjs";
 
 const existsInPublic = (p) => existsSync(path.resolve("public", p.replace(/^\//, "")));
 const curated = new Set(ACTIVE_SITEMAPS.flatMap(([, e]) => e.map((x) => x.path)));
 const wifiTv = [...curated].filter((p) => /^\/servicos\/(redes-wifi|manutencao-tv)\//.test(p));
 
 const status = waveStatus(existsInPublic);
+const liberadas = approvedWeeks();
 const errors = [];
+
+const warnings = [];
 
 for (const wave of status) {
   errors.push(...wave.problems);
+  const liberada = liberadas.has(wave.week);
   if (!wave.approved) {
     for (const p of wave.paths) {
       if (curated.has(p)) errors.push(`onda ${wave.week} não aprovada, mas ${p} já está no sitemap curado (deveria seguir noindex)`);
     }
+  }
+  // Onda aprovada nos gates mas ainda sem liberação em lote: o gerador de
+  // sitemap mantém as URLs fora do XML até `npm run onda:aprovar`.
+  if (wave.approved && !liberada) {
+    warnings.push(`onda ${wave.week}: pronta, aguardando liberação em lote (npm run onda:aprovar -- --week=${wave.week})`);
+  }
+  // Liberada em lote mas com gate quebrado depois: revogue antes de publicar.
+  if (!wave.approved && liberada) {
+    errors.push(`onda ${wave.week} está liberada em wave-approvals.json mas voltou a falhar nos gates — revogue (--revogar) ou corrija`);
   }
 }
 
@@ -36,8 +50,11 @@ for (const p of wifiTv) {
 
 const aprovadas = status.filter((w) => w.approved).length;
 console.log(
-  `ondas Wi-Fi/TV: ${WAVES.length} declarada(s), ${aprovadas} aprovada(s) | ${wifiTv.length} URLs indexáveis (${LEGADO.length} legado)`,
+  `ondas Wi-Fi/TV: ${WAVES.length} declarada(s), ${aprovadas} aprovada(s) nos gates, ${liberadas.size} liberada(s) em lote | ` +
+    `${wifiTv.length} URLs indexáveis (${LEGADO.length} legado)`,
 );
+for (const w of warnings) console.warn(`  · ${w}`);
+
 
 if (errors.length) {
   console.error(`\nBLOQUEADO: ${errors.length} problema(s) no controle de ondas:`);
