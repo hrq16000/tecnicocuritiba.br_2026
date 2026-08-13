@@ -280,6 +280,26 @@ const AdminPublishStatus = () => {
                     </span>
                   </div>
 
+                  {auditPorPath.get(u.path) && (
+                    <ul className="mt-3 space-y-1 text-xs">
+                      {auditPorPath.get(u.path)!.checklist.map((c) => (
+                        <li key={c.id} className="flex items-start gap-1.5">
+                          {c.ok === true ? (
+                            <CheckCircle2 className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emerald-600" aria-hidden="true" />
+                          ) : c.ok === false ? (
+                            <AlertTriangle className="mt-0.5 h-3.5 w-3.5 shrink-0 text-red-600" aria-hidden="true" />
+                          ) : (
+                            <Circle className="mt-0.5 h-3.5 w-3.5 shrink-0 text-muted-foreground" aria-hidden="true" />
+                          )}
+                          <span>
+                            {c.label}
+                            <span className="text-muted-foreground"> — {c.detalhe}</span>
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+
                   {u.bloqueios.length > 0 && (
                     <ul className="mt-3 space-y-1 text-xs text-red-600">
                       {u.bloqueios.map((b) => (
@@ -287,6 +307,7 @@ const AdminPublishStatus = () => {
                       ))}
                     </ul>
                   )}
+
                 </li>
               ))}
               {urls.length === 0 && (
