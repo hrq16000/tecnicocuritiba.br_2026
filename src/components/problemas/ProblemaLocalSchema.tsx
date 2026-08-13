@@ -3,7 +3,6 @@ import { SCHEMA_SLOTS, SLOT_PRIORITY, useJsonLdSlot } from "@/lib/jsonLdSlots";
 import { buildLocalBusinessSchema } from "@/lib/localBusinessJsonLd";
 import { PROBLEMAS_HUB } from "@/lib/problemasHub";
 import { absoluteUrl, siteConfig } from "@/lib/siteConfig";
-import { PRECOS } from "@/lib/precosConfig";
 
 /**
  * Elegibilidade a rich results nas rotas /problemas/*.
@@ -51,7 +50,7 @@ export const ProblemaLocalSchema = () => {
         offers: {
           "@type": "Offer",
           priceCurrency: "BRL",
-          price: String(PRECOS.diagnostico ?? 99.99),
+          price: "99.99",
           availability: "https://schema.org/InStock",
           url: absoluteUrl("/precos"),
         },
