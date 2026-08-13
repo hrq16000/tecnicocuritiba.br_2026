@@ -20,7 +20,7 @@ import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { ACTIVE_SITEMAPS } from "./lib/curated-urls.mjs";
 import { BAIRRO_NOMES } from "./lib/local-nomes.mjs";
-import { classificarEstatico } from "./lib/static-heuristics.mjs";
+import { classificarEstatico, corpoPrincipal } from "./lib/static-heuristics.mjs";
 
 const args = process.argv.slice(2);
 const GATE = args.includes("--gate");
@@ -77,12 +77,14 @@ function lerEstatico(routePath) {
   const html = readFileSync(file, "utf8");
   const cls = classificarEstatico(html);
   confiancaPorPath.set(routePath, { confianca: cls.confianca, motivo: cls.motivo });
+  // Só o <main>: header/footer trazem links globais que não provam nada local.
+  const main = corpoPrincipal(html);
   return {
-    texto: html
+    texto: main
       .replace(/<script[\s\S]*?<\/script>/gi, " ")
       .replace(/<[^>]+>/g, " ")
       .replace(/\s+/g, " "),
-    links: [...html.matchAll(/<a[^>]+href="(\/[^"]*)"/gi)].map((m) => m[1]),
+    links: [...main.matchAll(/<a[^>]+href="(\/[^"]*)"/gi)].map((m) => m[1]),
   };
 }
 
