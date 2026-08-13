@@ -101,6 +101,31 @@ for (const abs of files) {
   }
 }
 
+// 4 — acessibilidade dos estados de carregamento (aria-live + role=status)
+const A11Y_LOADERS = ["src/components/motion/Skeletons.tsx", "src/components/RouteLoader.tsx"];
+for (const rel of A11Y_LOADERS) {
+  const abs = path.join(ROOT, rel);
+  if (!fs.existsSync(abs)) continue;
+  const s = read(abs);
+  const statusCount = (s.match(/role="status"/g) || []).length;
+  const liveCount = (s.match(/aria-live="polite"/g) || []).length;
+  if (statusCount === 0) errors.push(`${rel}: skeleton sem role="status"`);
+  if (liveCount < statusCount)
+    errors.push(`${rel}: ${statusCount - liveCount} região(ões) role="status" sem aria-live="polite"`);
+}
+
+// 5 — CSS global: prefers-reduced-motion + foco visível por teclado
+const cssPath = path.join(ROOT, "src/index.css");
+if (fs.existsSync(cssPath)) {
+  const css = read(cssPath);
+  if (!css.includes("prefers-reduced-motion"))
+    errors.push("src/index.css: sem bloco @media (prefers-reduced-motion: reduce)");
+  if (!css.includes(":focus-visible"))
+    errors.push("src/index.css: sem estilo de foco visível (:focus-visible)");
+} else {
+  errors.push("src/index.css ausente");
+}
+
 if (errors.length) {
   console.error("❌ [motion-coverage] violações encontradas:\n");
   for (const e of errors) console.error(`  • ${e}`);
