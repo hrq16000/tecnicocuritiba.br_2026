@@ -22,8 +22,35 @@ const p75 = (values: number[]) => {
   return s[Math.floor(s.length * 0.75)] ?? s[s.length - 1];
 };
 
+interface SeoPriorityUrl {
+  path: string;
+  indexacao: string;
+  aprovada: boolean;
+  clicks: number;
+  impressions: number;
+  ctr: number | null;
+  position: number | null;
+  score: number;
+  motivos: string[];
+}
+
+interface SeoPriorityPayload {
+  generatedAt: string;
+  janela: { start?: string; end?: string } | null;
+  totals: { urls: number; indexadas: number; semIndexacao: number; comTrafego: number };
+  urls: SeoPriorityUrl[];
+}
+
+const indexBadge = (estado: string) =>
+  estado === "indexada"
+    ? "bg-emerald-500/15 text-emerald-600"
+    : estado === "fora-do-monitoramento"
+      ? "bg-muted text-muted-foreground"
+      : "bg-amber-500/15 text-amber-600";
+
 export default function AdminVitals() {
   const [entries, setEntries] = useState<WebVitalEntry[]>([]);
+  const [seo, setSeo] = useState<SeoPriorityPayload | null>(null);
   const [filterPath, setFilterPath] = useState<string>("");
 
   useEffect(() => {
@@ -35,6 +62,14 @@ export default function AdminVitals() {
       window.removeEventListener("web-vital", onVital);
       window.clearInterval(id);
     };
+  }, []);
+
+  // Indexação + CTR/posição por URL (`npm run report:seo-priority`).
+  useEffect(() => {
+    fetch("/seo-priority.json", { cache: "no-store" })
+      .then((r) => (r.ok ? r.json() : null))
+      .then((j) => j && setSeo(j))
+      .catch(() => undefined);
   }, []);
 
   const paths = useMemo(
@@ -119,6 +154,27 @@ export default function AdminVitals() {
     meta.setAttribute("content", "noindex,nofollow");
   }, []);
 
+  /**
+   * Cruza Core Web Vitals medidos aqui com o impacto real da URL no Google
+   * (status de indexação, cliques, CTR e posição média). Ordena pelo score de
+   * prioridade para atacar primeiro o que trava resultado.
+   */
+  const prioridades = useMemo(() => {
+    if (!seo) return [];
+    const vitalsPorPath = new Map(perPage.map((r) => [r.path, r]));
+    return seo.urls.slice(0, 40).map((u) => {
+      const v = vitalsPorPath.get(u.path);
+      const gargalos = v
+        ? ([
+            v.LCP && ratingOf("LCP", v.LCP) !== "good" ? "LCP" : null,
+            v.INP && ratingOf("INP", v.INP) !== "good" ? "INP" : null,
+            v.CLS && ratingOf("CLS", v.CLS) !== "good" ? "CLS" : null,
+          ].filter(Boolean) as string[])
+        : [];
+      return { ...u, tipo: pageTypeOf(u.path), vitals: v ?? null, gargalos };
+    });
+  }, [seo, perPage]);
+
   return (
     <div className="min-h-screen bg-background px-4 py-10">
       <div className="mx-auto max-w-6xl space-y-6">
@@ -162,6 +218,74 @@ export default function AdminVitals() {
               <div className="text-xs text-muted-foreground">{m.count} amostras</div>
             </Card>
           ))}
+        </section>
+
+        <section>
+          <h2 className="mb-2 text-lg font-semibold">Prioridade SEO — indexação × desempenho no Google</h2>
+          {!seo ? (
+            <p className="rounded-md border border-dashed p-4 text-sm text-muted-foreground">
+              Rode <code>npm run report:seo-priority</code> para cruzar o histórico de Web Vitals com o
+              status de indexação (Search Console) e o CTR/posição de cada URL.
+            </p>
+          ) : (
+            <>
+              <p className="mb-2 text-sm text-muted-foreground">
+                {seo.totals.indexadas} indexada(s) · {seo.totals.semIndexacao} aprovada(s) sem indexação
+                confirmada · {seo.totals.comTrafego} com impressões
+                {seo.janela?.start ? ` · janela ${seo.janela.start} a ${seo.janela.end}` : ""}. Score alto =
+                a URL tem audiência e está travada (posição, CTR ou indexação).
+              </p>
+              <div className="overflow-x-auto rounded-md border">
+                <table className="w-full text-sm">
+                  <thead className="bg-muted/50 text-left">
+                    <tr>
+                      <th className="px-3 py-2">Prioridade</th>
+                      <th className="px-3 py-2">URL</th>
+                      <th className="px-3 py-2">Tipo</th>
+                      <th className="px-3 py-2">Indexação</th>
+                      <th className="px-3 py-2">Impr.</th>
+                      <th className="px-3 py-2">CTR</th>
+                      <th className="px-3 py-2">Posição</th>
+                      <th className="px-3 py-2">LCP</th>
+                      <th className="px-3 py-2">Ação</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {prioridades.map((r) => (
+                      <tr key={r.path} className="border-t align-top">
+                        <td className="px-3 py-2 font-bold">{r.score}</td>
+                        <td className="px-3 py-2 font-mono text-xs">{r.path}</td>
+                        <td className="px-3 py-2 text-xs">{PAGE_TYPE_LABEL[r.tipo]}</td>
+                        <td className="px-3 py-2">
+                          <span className={`rounded-full px-2 py-0.5 text-xs ${indexBadge(r.indexacao)}`}>
+                            {r.indexacao}
+                          </span>
+                        </td>
+                        <td className="px-3 py-2">{r.impressions}</td>
+                        <td className="px-3 py-2">{r.ctr == null ? "—" : `${r.ctr}%`}</td>
+                        <td className="px-3 py-2">{r.position ?? "—"}</td>
+                        <td className={`px-3 py-2 ${r.vitals?.LCP ? ratingColor[ratingOf("LCP", r.vitals.LCP)] : ""}`}>
+                          {r.vitals?.LCP ? `${Math.round(r.vitals.LCP)}ms` : "—"}
+                        </td>
+                        <td className="px-3 py-2 text-xs text-muted-foreground">
+                          {[...r.motivos, ...(r.gargalos.length ? [`corrigir ${r.gargalos.join("/")}`] : [])].join(
+                            " · ",
+                          ) || "manter"}
+                        </td>
+                      </tr>
+                    ))}
+                    {!prioridades.length && (
+                      <tr>
+                        <td colSpan={9} className="px-3 py-4 text-muted-foreground">
+                          Sem dados de Search Console na última execução.
+                        </td>
+                      </tr>
+                    )}
+                  </tbody>
+                </table>
+              </div>
+            </>
+          )}
         </section>
 
         <section>
