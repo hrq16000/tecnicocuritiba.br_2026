@@ -3,7 +3,6 @@ import { MapPin, Route, Wrench, ShieldCheck } from "lucide-react";
 import { localLinksDe } from "@/lib/localLinkMap";
 import { FAIXAS_LOGISTICAS, RAIO_MAXIMO_KM } from "@/lib/logisticaColeta";
 import { getPublishableCases } from "@/lib/technicalCases";
-import { reveal } from "@/lib/motion";
 
 interface ProvaLocalSectionProps {
   /** Caminho canônico da página (ex.: "/servicos/formatacao"). */
@@ -43,7 +42,7 @@ export const ProvaLocalSection = ({ path, servico }: ProvaLocalSectionProps) => 
 
         <div className="mt-8 grid gap-6 md:grid-cols-2">
           {locais.length > 0 && (
-            <div className={`rounded-xl border border-border p-5 ${reveal()}`}>
+            <div className={`rounded-xl border border-border p-5`}>
               <h3 className="flex items-center gap-2 text-base font-heading font-semibold text-foreground">
                 <MapPin className="h-4 w-4 text-[hsl(var(--accent))]" aria-hidden="true" />
                 Locais atendidos
@@ -63,7 +62,7 @@ export const ProvaLocalSection = ({ path, servico }: ProvaLocalSectionProps) => 
             </div>
           )}
 
-          <div className={`rounded-xl border border-border p-5 ${reveal()}`}>
+          <div className={`rounded-xl border border-border p-5`}>
             <h3 className="flex items-center gap-2 text-base font-heading font-semibold text-foreground">
               <Route className="h-4 w-4 text-[hsl(var(--accent))]" aria-hidden="true" />
               Contexto do atendimento
@@ -71,7 +70,7 @@ export const ProvaLocalSection = ({ path, servico }: ProvaLocalSectionProps) => 
             <ul className="mt-3 space-y-3 text-sm text-muted-foreground">
               {FAIXAS_LOGISTICAS.map((f) => (
                 <li key={f.id}>
-                  <span className="font-medium text-foreground">{f.nome}</span> — {f.descricao}
+                  <span className="font-medium text-foreground">{f.nome}</span> — {f.janelas}; coleta em até {f.prazoColetaDias} dia(s) útil(eis). {f.taxaLabel}
                 </li>
               ))}
             </ul>
@@ -91,7 +90,7 @@ export const ProvaLocalSection = ({ path, servico }: ProvaLocalSectionProps) => 
                   <Wrench className="h-4 w-4 text-[hsl(var(--accent))]" aria-hidden="true" />
                   {c.title}
                 </h3>
-                <p className="mt-2 text-sm text-muted-foreground">{c.summary}</p>
+                <p className="mt-2 text-sm text-muted-foreground">{c.observedResult[0] ?? c.confirmedDiagnosis[0]}</p>
               </article>
             ))}
           </div>
