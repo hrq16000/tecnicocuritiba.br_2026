@@ -1,8 +1,9 @@
 import { useEffect, useMemo, useState } from "react";
-import { Loader2, AlertTriangle, CheckCircle2, Circle, Camera, FileText, Copy, MapPin } from "lucide-react";
+import { Loader2, AlertTriangle, CheckCircle2, Circle, Camera, FileText, MapPin, Wrench } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { DiffTrechos } from "@/components/admin/DiffTrechos";
 
 /**
  * Painel interno de status de publicação por URL (rascunho → em prova →
@@ -82,10 +83,17 @@ interface AuditPayload {
 
 interface HashPayload {
   generatedAt: string;
+  regras?: { modo?: string };
   urls: {
     path: string;
     imagensReutilizadas: number;
     textosReutilizados: number;
+    confianca?: string;
+    confiancaMotivo?: string | null;
+    conclusiva?: boolean;
+    status?: "aprovada" | "reprovada" | "pendente";
+    evidencias?: { tipo: string; hash: string; amostra: string; tambemEm: string[] }[];
+    comoResolver?: string[];
     ocorrencias: { tipo: string; amostra: string; tambemEm: string[] }[];
   }[];
 }
@@ -98,8 +106,15 @@ interface MentionPayload {
     mencoes: number;
     bairrosCitados: string[];
     linksLocais: number;
+    linksExemplo?: string[];
     linksFaltando: string[];
     problemas: string[];
+    inconclusivos?: string[];
+    confianca?: string;
+    confiancaMotivo?: string | null;
+    conclusiva?: boolean;
+    status?: "aprovada" | "reprovada" | "pendente";
+    comoResolver?: string[];
     aprovada: boolean;
   }[];
 }
@@ -375,38 +390,74 @@ const AdminPublishStatus = () => {
                   {(() => {
                     const h = hashPorPath.get(u.path);
                     const m = mentionPorPath.get(u.path);
+                    const evidencias = h?.evidencias ?? h?.ocorrencias?.map((o) => ({ ...o, hash: "" })) ?? [];
                     const reuso = (h?.imagensReutilizadas ?? 0) + (h?.textosReutilizados ?? 0);
-                    if (!reuso && (!m || m.aprovada)) return null;
+                    const pendenteHash = h && h.conclusiva === false;
+                    const pendenteLocal = m && m.status === "pendente";
+                    const localFalhou = m && m.status === "reprovada";
+                    if (!reuso && !pendenteHash && !pendenteLocal && !localFalhou) return null;
+
+                    const acoes = [...(h?.comoResolver ?? []), ...(m?.comoResolver ?? [])];
+
                     return (
-                      <div className="mt-3 space-y-2 rounded-lg border border-amber-500/40 bg-amber-500/5 p-3 text-xs">
+                      <div className="mt-3 space-y-3 rounded-lg border border-amber-500/40 bg-amber-500/5 p-3 text-xs">
+                        {/* Evidência do gate de hash */}
                         {reuso > 0 && (
                           <div>
-                            <div className="flex items-center gap-1.5 font-medium text-amber-700">
-                              <Copy className="h-3.5 w-3.5" aria-hidden="true" />
-                              Conteúdo reutilizado: {h!.imagensReutilizadas} imagem(ns) e {h!.textosReutilizados} bloco(s)
+                            <div className="font-medium text-red-600">
+                              Gate de reuso reprovou: {h!.imagensReutilizadas} imagem(ns) e{" "}
+                              {h!.textosReutilizados} bloco(s) repetidos
                             </div>
-                            <ul className="mt-1.5 space-y-1.5">
-                              {h!.ocorrencias.slice(0, 4).map((o, i) => (
-                                <li key={`${o.tipo}-${i}`} className="rounded bg-background/70 p-2">
-                                  <mark className="bg-amber-500/25 px-1">{o.amostra}</mark>
-                                  <div className="mt-1 text-muted-foreground">
-                                    também em {o.tambemEm.join(", ")}
-                                  </div>
-                                </li>
-                              ))}
-                            </ul>
+                            <DiffTrechos path={u.path} ocorrencias={evidencias} />
                           </div>
                         )}
-                        {m && !m.aprovada && (
+
+                        {/* Evidência do gate de relevância local */}
+                        {localFalhou && (
+                          <div>
+                            <div className="flex items-center gap-1.5 font-medium text-red-600">
+                              <MapPin className="h-3.5 w-3.5" aria-hidden="true" />
+                              Gate de relevância local reprovou
+                            </div>
+                            <p className="mt-1 text-muted-foreground">{m!.problemas.join("; ")}</p>
+                            <p className="mt-1">
+                              <span className="text-muted-foreground">bairros encontrados:</span>{" "}
+                              {m!.bairrosCitados.join(", ") || "nenhum"}
+                            </p>
+                            <p>
+                              <span className="text-muted-foreground">links locais encontrados:</span>{" "}
+                              {(m!.linksExemplo ?? []).join(", ") || "nenhum"}
+                            </p>
+                            {m!.linksFaltando.length > 0 && (
+                              <p>
+                                <span className="text-muted-foreground">links do mapa que faltam:</span>{" "}
+                                {m!.linksFaltando.join(", ")}
+                              </p>
+                            )}
+                          </div>
+                        )}
+
+                        {/* Pendências de medição (fail-closed, mas sem reprovar) */}
+                        {(pendenteHash || pendenteLocal) && (
+                          <p className="text-muted-foreground">
+                            <strong>Pendente de medição:</strong>{" "}
+                            {pendenteHash ? h!.confiancaMotivo ?? "leitura estática inconclusiva" : ""}
+                            {pendenteHash && pendenteLocal ? " · " : ""}
+                            {pendenteLocal ? (m!.inconclusivos ?? []).join("; ") : ""}
+                          </p>
+                        )}
+
+                        {acoes.length > 0 && (
                           <div>
                             <div className="flex items-center gap-1.5 font-medium text-amber-700">
-                              <MapPin className="h-3.5 w-3.5" aria-hidden="true" />
-                              Relevância local abaixo do mínimo
+                              <Wrench className="h-3.5 w-3.5" aria-hidden="true" />
+                              O que fazer para esta URL passar no próximo build
                             </div>
-                            <p className="mt-1 text-muted-foreground">
-                              {m.problemas.join("; ")}
-                              {m.linksFaltando.length > 0 && ` · faltam links para ${m.linksFaltando.join(", ")}`}
-                            </p>
+                            <ul className="mt-1 list-disc space-y-1 pl-5 text-muted-foreground">
+                              {acoes.slice(0, 6).map((a, i) => (
+                                <li key={i}>{a}</li>
+                              ))}
+                            </ul>
                           </div>
                         )}
                       </div>
