@@ -84,7 +84,7 @@ export default {
     // fetch(request) preserva host público, método, query, headers, cookies e
     // body — sem hostname inventado, sem risco de recursão/SNI/CORS.
     const mode = env?.ORIGIN_MODE ?? "dns";
-    if (mode === "dns") return fetch(request);
+    if (mode === "dns") return withSecurityHeaders(await fetch(request));
 
     // Modelo alternativo (explícito) — só usar com evidência de que o DNS não serve.
     const origin = env?.LOVABLE_ORIGIN ?? ORIGIN_PLACEHOLDER;
@@ -95,6 +95,7 @@ export default {
     const proxied = new Request(target.toString(), request);
     proxied.headers.set("host", origin);
     proxied.headers.set("x-forwarded-host", url.hostname);
-    return fetch(proxied);
+    return withSecurityHeaders(await fetch(proxied));
+
   },
 };
