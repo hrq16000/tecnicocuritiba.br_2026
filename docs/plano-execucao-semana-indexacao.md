@@ -51,11 +51,11 @@ Cada onda vira um bloco em `scripts/lib/content-waves.mjs` com `week`, `paths`
 
 ```bash
 npm run report:publish-status     # status por URL
-npm run check:real-images         # prova visual (fail-closed)
+npm run check:originality:report         # prova visual (fail-closed)
 npm run check:originality         # corpo + Jaccard (gera content-approval.json)
 npm run check:waves               # cadência e provas mínimas
 npm run onda:aprovar -- --week=YYYY-MM-DD   # libera o lote (só se tudo passar)
-npm run build && npm run indexnow # sitemap regenerado + ping
+npm run build && npm run indexnow:ping # sitemap regenerado + ping
 ```
 
 Painel: `/admin/publicacao` mostra o checklist por URL e habilita o botão
@@ -63,7 +63,7 @@ Painel: `/admin/publicacao` mostra o checklist por URL e habilita o botão
 
 ## Pós-publicação
 
-- `npm run monitor:index-alerts` — alerta URLs aprovadas ainda não indexadas.
+- `npm run report:index-alerts` — alerta URLs aprovadas ainda não indexadas.
 - `npm run report:weekly-seo` — clique/impressão por rota após 7 dias.
 - Regra do baseline: mudanças estruturais só com evidência do Search Console.
 
