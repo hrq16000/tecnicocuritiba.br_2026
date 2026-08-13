@@ -1,6 +1,6 @@
 {
-  "startedAt": "2026-08-13T01:20:34.364Z",
-  "finishedAt": "2026-08-13T01:20:35.617Z",
+  "startedAt": "2026-08-13T02:31:09.957Z",
+  "finishedAt": "2026-08-13T02:31:11.362Z",
   "ok": true,
   "total": 9,
   "passed": 9,
@@ -12,72 +12,72 @@
       "label": "ads.txt e metatag AdSense",
       "status": "ok",
       "detail": "sem pendências",
-      "durationMs": 71,
-      "checkedAt": "2026-08-13T01:20:34.436Z"
+      "durationMs": 73,
+      "checkedAt": "2026-08-13T02:31:10.030Z"
     },
     {
       "id": "policy-jsonld",
       "label": "JSON-LD das políticas",
       "status": "ok",
       "detail": "sem pendências",
-      "durationMs": 73,
-      "checkedAt": "2026-08-13T01:20:34.509Z"
+      "durationMs": 86,
+      "checkedAt": "2026-08-13T02:31:10.116Z"
     },
     {
       "id": "telemetry",
       "label": "Transparência da telemetria",
       "status": "ok",
       "detail": "sem pendências",
-      "durationMs": 66,
-      "checkedAt": "2026-08-13T01:20:34.575Z"
+      "durationMs": 62,
+      "checkedAt": "2026-08-13T02:31:10.178Z"
     },
     {
       "id": "missing-exports",
       "label": "Exports ausentes nas rotas",
       "status": "ok",
       "detail": "sem pendências",
-      "durationMs": 473,
-      "checkedAt": "2026-08-13T01:20:35.048Z"
+      "durationMs": 536,
+      "checkedAt": "2026-08-13T02:31:10.714Z"
     },
     {
       "id": "internal-links",
       "label": "Links internos sem 404",
       "status": "ok",
       "detail": "sem pendências",
-      "durationMs": 175,
-      "checkedAt": "2026-08-13T01:20:35.223Z"
+      "durationMs": 192,
+      "checkedAt": "2026-08-13T02:31:10.906Z"
     },
     {
       "id": "sitemap-source",
       "label": "Sitemap x fonte curada",
       "status": "ok",
       "detail": "sem pendências",
-      "durationMs": 92,
-      "checkedAt": "2026-08-13T01:20:35.315Z"
+      "durationMs": 113,
+      "checkedAt": "2026-08-13T02:31:11.019Z"
     },
     {
       "id": "aggregate-rating",
       "label": "Ausência de aggregateRating fabricado",
       "status": "ok",
       "detail": "sem pendências",
-      "durationMs": 103,
-      "checkedAt": "2026-08-13T01:20:35.418Z"
+      "durationMs": 120,
+      "checkedAt": "2026-08-13T02:31:11.139Z"
     },
     {
       "id": "media-assets",
       "label": "og:image, mídia kit e assets públicos",
       "status": "ok",
       "detail": "sem pendências",
-      "durationMs": 116,
-      "checkedAt": "2026-08-13T01:20:35.534Z"
+      "durationMs": 133,
+      "checkedAt": "2026-08-13T02:31:11.272Z"
     },
     {
       "id": "orphan-pages",
       "label": "Páginas órfãs",
       "status": "ok",
       "detail": "sem pendências",
-      "durationMs": 82,
-      "checkedAt": "2026-08-13T01:20:35.616Z"
+      "durationMs": 90,
+      "checkedAt": "2026-08-13T02:31:11.362Z"
     }
   ]
 }
