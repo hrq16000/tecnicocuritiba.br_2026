@@ -10,6 +10,7 @@
  *   - rejects dangerous CSP tokens (wildcards, http:, unsafe-eval).
  */
 import { readFileSync } from "node:fs";
+import { SECURITY_HEADERS } from "./lib/security-headers.mjs";
 
 const REQUIRED = [
   "Strict-Transport-Security",
@@ -20,6 +21,20 @@ const REQUIRED = [
 ] as const;
 
 const file = readFileSync("public/_headers", "utf8");
+
+// Antidrift: public/_headers deve refletir exatamente a fonte única
+// scripts/lib/security-headers.mjs (nenhuma política paralela por camada).
+const drift = Object.entries(SECURITY_HEADERS as Record<string, string>).filter(
+  ([nome, valor]) => !file.includes(`  ${nome}: ${valor}\n`),
+);
+if (drift.length > 0) {
+  console.error(
+    `[security] public/_headers divergiu da fonte única (scripts/lib/security-headers.mjs): ` +
+      `${drift.map(([n]) => n).join(", ")}. Regenere o bloco /* a partir do módulo.`,
+  );
+  process.exit(1);
+}
+
 
 const missing = REQUIRED.filter((h) => !new RegExp(`^\\s+${h}:`, "m").test(file));
 
