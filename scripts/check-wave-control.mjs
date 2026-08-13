@@ -50,8 +50,11 @@ for (const p of wifiTv) {
 
 const aprovadas = status.filter((w) => w.approved).length;
 console.log(
-  `ondas Wi-Fi/TV: ${WAVES.length} declarada(s), ${aprovadas} aprovada(s) | ${wifiTv.length} URLs indexáveis (${LEGADO.length} legado)`,
+  `ondas Wi-Fi/TV: ${WAVES.length} declarada(s), ${aprovadas} aprovada(s) nos gates, ${liberadas.size} liberada(s) em lote | ` +
+    `${wifiTv.length} URLs indexáveis (${LEGADO.length} legado)`,
 );
+for (const w of warnings) console.warn(`  · ${w}`);
+
 
 if (errors.length) {
   console.error(`\nBLOQUEADO: ${errors.length} problema(s) no controle de ondas:`);
