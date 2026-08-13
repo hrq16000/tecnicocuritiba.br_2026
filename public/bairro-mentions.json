@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-13T02:23:11.742Z",
+  "generatedAt": "2026-08-13T02:23:24.850Z",
   "regras": {
     "MIN_MENCOES": 3,
     "MIN_LINKS": 3,
@@ -8,8 +8,8 @@
   "totals": {
     "avaliadas": 74,
     "aprovadas": 37,
-    "reprovadas": 0,
-    "pendentes": 74
+    "reprovadas": 27,
+    "pendentes": 47
   },
   "urls": [
     {
@@ -18,7 +18,9 @@
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "10680 caracteres e 13 seções no HTML",
       "conclusiva": false,
-      "status": "pendente",
+      "textoConclusivo": true,
+      "reprovaConclusiva": true,
+      "status": "reprovada",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
       ],
@@ -62,6 +64,8 @@
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "15601 caracteres e 6 seções no HTML",
       "conclusiva": false,
+      "textoConclusivo": true,
+      "reprovaConclusiva": false,
       "status": "pendente",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
@@ -111,6 +115,8 @@
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "1612 caracteres e 3 seções no HTML",
       "conclusiva": false,
+      "textoConclusivo": true,
+      "reprovaConclusiva": false,
       "status": "pendente",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
@@ -146,6 +152,8 @@
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "1610 caracteres e 3 seções no HTML",
       "conclusiva": false,
+      "textoConclusivo": true,
+      "reprovaConclusiva": false,
       "status": "pendente",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
@@ -181,6 +189,8 @@
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "1650 caracteres e 3 seções no HTML",
       "conclusiva": false,
+      "textoConclusivo": true,
+      "reprovaConclusiva": false,
       "status": "pendente",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
@@ -216,6 +226,8 @@
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "1600 caracteres e 3 seções no HTML",
       "conclusiva": false,
+      "textoConclusivo": true,
+      "reprovaConclusiva": false,
       "status": "pendente",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
@@ -251,7 +263,9 @@
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "1666 caracteres e 3 seções no HTML",
       "conclusiva": false,
-      "status": "pendente",
+      "textoConclusivo": true,
+      "reprovaConclusiva": true,
+      "status": "reprovada",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
       ],
@@ -287,6 +301,8 @@
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "1620 caracteres e 3 seções no HTML",
       "conclusiva": false,
+      "textoConclusivo": true,
+      "reprovaConclusiva": false,
       "status": "pendente",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
@@ -322,7 +338,9 @@
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "14599 caracteres e 12 seções no HTML",
       "conclusiva": false,
-      "status": "pendente",
+      "textoConclusivo": true,
+      "reprovaConclusiva": true,
+      "status": "reprovada",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
       ],
@@ -366,7 +384,9 @@
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "18902 caracteres e 14 seções no HTML",
       "conclusiva": false,
-      "status": "pendente",
+      "textoConclusivo": true,
+      "reprovaConclusiva": true,
+      "status": "reprovada",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
       ],
@@ -410,6 +430,8 @@
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "8262 caracteres e 9 seções no HTML",
       "conclusiva": false,
+      "textoConclusivo": true,
+      "reprovaConclusiva": false,
       "status": "pendente",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
@@ -459,7 +481,9 @@
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "1648 caracteres e 3 seções no HTML",
       "conclusiva": false,
-      "status": "pendente",
+      "textoConclusivo": true,
+      "reprovaConclusiva": true,
+      "status": "reprovada",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
       ],
@@ -495,7 +519,9 @@
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "1664 caracteres e 3 seções no HTML",
       "conclusiva": false,
-      "status": "pendente",
+      "textoConclusivo": true,
+      "reprovaConclusiva": true,
+      "status": "reprovada",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
       ],
@@ -531,6 +557,8 @@
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "1620 caracteres e 3 seções no HTML",
       "conclusiva": false,
+      "textoConclusivo": true,
+      "reprovaConclusiva": false,
       "status": "pendente",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
@@ -566,7 +594,9 @@
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "1606 caracteres e 3 seções no HTML",
       "conclusiva": false,
-      "status": "pendente",
+      "textoConclusivo": true,
+      "reprovaConclusiva": true,
+      "status": "reprovada",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
       ],
@@ -602,7 +632,9 @@
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "1636 caracteres e 3 seções no HTML",
       "conclusiva": false,
-      "status": "pendente",
+      "textoConclusivo": true,
+      "reprovaConclusiva": true,
+      "status": "reprovada",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
       ],
@@ -638,6 +670,8 @@
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "1695 caracteres e 3 seções no HTML",
       "conclusiva": false,
+      "textoConclusivo": true,
+      "reprovaConclusiva": false,
       "status": "pendente",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
@@ -673,6 +707,8 @@
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "1656 caracteres e 3 seções no HTML",
       "conclusiva": false,
+      "textoConclusivo": true,
+      "reprovaConclusiva": false,
       "status": "pendente",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
@@ -708,7 +744,9 @@
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "8127 caracteres e 9 seções no HTML",
       "conclusiva": false,
-      "status": "pendente",
+      "textoConclusivo": true,
+      "reprovaConclusiva": true,
+      "status": "reprovada",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
       ],
@@ -752,7 +790,9 @@
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "7914 caracteres e 9 seções no HTML",
       "conclusiva": false,
-      "status": "pendente",
+      "textoConclusivo": true,
+      "reprovaConclusiva": true,
+      "status": "reprovada",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
       ],
@@ -796,7 +836,9 @@
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "9607 caracteres e 11 seções no HTML",
       "conclusiva": false,
-      "status": "pendente",
+      "textoConclusivo": true,
+      "reprovaConclusiva": true,
+      "status": "reprovada",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
       ],
@@ -840,6 +882,8 @@
       "confianca": "shell",
       "confiancaMotivo": "HTML traz só o shell (907 caracteres, 2 seções) — medição estática não é conclusiva",
       "conclusiva": false,
+      "textoConclusivo": false,
+      "reprovaConclusiva": false,
       "status": "pendente",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
@@ -876,6 +920,8 @@
       "confianca": "shell",
       "confiancaMotivo": "HTML traz só o shell (894 caracteres, 2 seções) — medição estática não é conclusiva",
       "conclusiva": false,
+      "textoConclusivo": false,
+      "reprovaConclusiva": false,
       "status": "pendente",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
@@ -911,6 +957,8 @@
       "confianca": "shell",
       "confiancaMotivo": "HTML traz só o shell (863 caracteres, 2 seções) — medição estática não é conclusiva",
       "conclusiva": false,
+      "textoConclusivo": false,
+      "reprovaConclusiva": false,
       "status": "pendente",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
@@ -946,6 +994,8 @@
       "confianca": "shell",
       "confiancaMotivo": "HTML traz só o shell (892 caracteres, 2 seções) — medição estática não é conclusiva",
       "conclusiva": false,
+      "textoConclusivo": false,
+      "reprovaConclusiva": false,
       "status": "pendente",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
@@ -981,6 +1031,8 @@
       "confianca": "shell",
       "confiancaMotivo": "HTML traz só o shell (884 caracteres, 2 seções) — medição estática não é conclusiva",
       "conclusiva": false,
+      "textoConclusivo": false,
+      "reprovaConclusiva": false,
       "status": "pendente",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
@@ -1017,6 +1069,8 @@
       "confianca": "shell",
       "confiancaMotivo": "HTML traz só o shell (884 caracteres, 2 seções) — medição estática não é conclusiva",
       "conclusiva": false,
+      "textoConclusivo": false,
+      "reprovaConclusiva": false,
       "status": "pendente",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
@@ -1053,6 +1107,8 @@
       "confianca": "shell",
       "confiancaMotivo": "HTML traz só o shell (867 caracteres, 2 seções) — medição estática não é conclusiva",
       "conclusiva": false,
+      "textoConclusivo": false,
+      "reprovaConclusiva": false,
       "status": "pendente",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
@@ -1088,6 +1144,8 @@
       "confianca": "shell",
       "confiancaMotivo": "HTML traz só o shell (856 caracteres, 2 seções) — medição estática não é conclusiva",
       "conclusiva": false,
+      "textoConclusivo": false,
+      "reprovaConclusiva": false,
       "status": "pendente",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
@@ -1123,6 +1181,8 @@
       "confianca": "shell",
       "confiancaMotivo": "HTML traz só o shell (856 caracteres, 2 seções) — medição estática não é conclusiva",
       "conclusiva": false,
+      "textoConclusivo": false,
+      "reprovaConclusiva": false,
       "status": "pendente",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
@@ -1158,6 +1218,8 @@
       "confianca": "shell",
       "confiancaMotivo": "HTML traz só o shell (852 caracteres, 2 seções) — medição estática não é conclusiva",
       "conclusiva": false,
+      "textoConclusivo": false,
+      "reprovaConclusiva": false,
       "status": "pendente",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
@@ -1193,6 +1255,8 @@
       "confianca": "shell",
       "confiancaMotivo": "HTML traz só o shell (881 caracteres, 2 seções) — medição estática não é conclusiva",
       "conclusiva": false,
+      "textoConclusivo": false,
+      "reprovaConclusiva": false,
       "status": "pendente",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
@@ -1229,6 +1293,8 @@
       "confianca": "shell",
       "confiancaMotivo": "HTML traz só o shell (882 caracteres, 2 seções) — medição estática não é conclusiva",
       "conclusiva": false,
+      "textoConclusivo": false,
+      "reprovaConclusiva": false,
       "status": "pendente",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
@@ -1264,6 +1330,8 @@
       "confianca": "shell",
       "confiancaMotivo": "HTML traz só o shell (926 caracteres, 2 seções) — medição estática não é conclusiva",
       "conclusiva": false,
+      "textoConclusivo": false,
+      "reprovaConclusiva": false,
       "status": "pendente",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
@@ -1300,6 +1368,8 @@
       "confianca": "shell",
       "confiancaMotivo": "HTML traz só o shell (858 caracteres, 2 seções) — medição estática não é conclusiva",
       "conclusiva": false,
+      "textoConclusivo": false,
+      "reprovaConclusiva": false,
       "status": "pendente",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
@@ -1335,6 +1405,8 @@
       "confianca": "shell",
       "confiancaMotivo": "HTML traz só o shell (870 caracteres, 2 seções) — medição estática não é conclusiva",
       "conclusiva": false,
+      "textoConclusivo": false,
+      "reprovaConclusiva": false,
       "status": "pendente",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
@@ -1370,6 +1442,8 @@
       "confianca": "shell",
       "confiancaMotivo": "HTML traz só o shell (919 caracteres, 2 seções) — medição estática não é conclusiva",
       "conclusiva": false,
+      "textoConclusivo": false,
+      "reprovaConclusiva": false,
       "status": "pendente",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
@@ -1406,7 +1480,9 @@
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "16384 caracteres e 14 seções no HTML",
       "conclusiva": false,
-      "status": "pendente",
+      "textoConclusivo": true,
+      "reprovaConclusiva": true,
+      "status": "reprovada",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
       ],
@@ -1454,7 +1530,9 @@
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "6831 caracteres e 8 seções no HTML",
       "conclusiva": false,
-      "status": "pendente",
+      "textoConclusivo": true,
+      "reprovaConclusiva": true,
+      "status": "reprovada",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
       ],
@@ -1504,7 +1582,9 @@
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "15132 caracteres e 15 seções no HTML",
       "conclusiva": false,
-      "status": "pendente",
+      "textoConclusivo": true,
+      "reprovaConclusiva": true,
+      "status": "reprovada",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
       ],
@@ -1548,6 +1628,8 @@
       "confianca": "shell",
       "confiancaMotivo": "HTML traz só o shell (939 caracteres, 2 seções) — medição estática não é conclusiva",
       "conclusiva": false,
+      "textoConclusivo": false,
+      "reprovaConclusiva": false,
       "status": "pendente",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
@@ -1583,6 +1665,8 @@
       "confianca": "shell",
       "confiancaMotivo": "HTML traz só o shell (931 caracteres, 2 seções) — medição estática não é conclusiva",
       "conclusiva": false,
+      "textoConclusivo": false,
+      "reprovaConclusiva": false,
       "status": "pendente",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
@@ -1618,6 +1702,8 @@
       "confianca": "shell",
       "confiancaMotivo": "HTML traz só o shell (914 caracteres, 2 seções) — medição estática não é conclusiva",
       "conclusiva": false,
+      "textoConclusivo": false,
+      "reprovaConclusiva": false,
       "status": "pendente",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
@@ -1654,6 +1740,8 @@
       "confianca": "shell",
       "confiancaMotivo": "HTML traz só o shell (940 caracteres, 2 seções) — medição estática não é conclusiva",
       "conclusiva": false,
+      "textoConclusivo": false,
+      "reprovaConclusiva": false,
       "status": "pendente",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
@@ -1691,6 +1779,8 @@
       "confianca": "shell",
       "confiancaMotivo": "HTML traz só o shell (926 caracteres, 2 seções) — medição estática não é conclusiva",
       "conclusiva": false,
+      "textoConclusivo": false,
+      "reprovaConclusiva": false,
       "status": "pendente",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
@@ -1726,6 +1816,8 @@
       "confianca": "shell",
       "confiancaMotivo": "HTML traz só o shell (931 caracteres, 2 seções) — medição estática não é conclusiva",
       "conclusiva": false,
+      "textoConclusivo": false,
+      "reprovaConclusiva": false,
       "status": "pendente",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
@@ -1761,6 +1853,8 @@
       "confianca": "shell",
       "confiancaMotivo": "HTML traz só o shell (928 caracteres, 2 seções) — medição estática não é conclusiva",
       "conclusiva": false,
+      "textoConclusivo": false,
+      "reprovaConclusiva": false,
       "status": "pendente",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
@@ -1796,6 +1890,8 @@
       "confianca": "shell",
       "confiancaMotivo": "HTML traz só o shell (912 caracteres, 2 seções) — medição estática não é conclusiva",
       "conclusiva": false,
+      "textoConclusivo": false,
+      "reprovaConclusiva": false,
       "status": "pendente",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
@@ -1831,6 +1927,8 @@
       "confianca": "shell",
       "confiancaMotivo": "HTML traz só o shell (922 caracteres, 2 seções) — medição estática não é conclusiva",
       "conclusiva": false,
+      "textoConclusivo": false,
+      "reprovaConclusiva": false,
       "status": "pendente",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
@@ -1867,6 +1965,8 @@
       "confianca": "shell",
       "confiancaMotivo": "HTML traz só o shell (910 caracteres, 2 seções) — medição estática não é conclusiva",
       "conclusiva": false,
+      "textoConclusivo": false,
+      "reprovaConclusiva": false,
       "status": "pendente",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
@@ -1903,6 +2003,8 @@
       "confianca": "shell",
       "confiancaMotivo": "HTML traz só o shell (942 caracteres, 2 seções) — medição estática não é conclusiva",
       "conclusiva": false,
+      "textoConclusivo": false,
+      "reprovaConclusiva": false,
       "status": "pendente",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
@@ -1938,6 +2040,8 @@
       "confianca": "shell",
       "confiancaMotivo": "HTML traz só o shell (927 caracteres, 2 seções) — medição estática não é conclusiva",
       "conclusiva": false,
+      "textoConclusivo": false,
+      "reprovaConclusiva": false,
       "status": "pendente",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
@@ -1973,6 +2077,8 @@
       "confianca": "shell",
       "confiancaMotivo": "HTML traz só o shell (983 caracteres, 2 seções) — medição estática não é conclusiva",
       "conclusiva": false,
+      "textoConclusivo": false,
+      "reprovaConclusiva": false,
       "status": "pendente",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
@@ -2008,6 +2114,8 @@
       "confianca": "shell",
       "confiancaMotivo": "HTML traz só o shell (927 caracteres, 2 seções) — medição estática não é conclusiva",
       "conclusiva": false,
+      "textoConclusivo": false,
+      "reprovaConclusiva": false,
       "status": "pendente",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
@@ -2043,6 +2151,8 @@
       "confianca": "shell",
       "confiancaMotivo": "HTML traz só o shell (953 caracteres, 2 seções) — medição estática não é conclusiva",
       "conclusiva": false,
+      "textoConclusivo": false,
+      "reprovaConclusiva": false,
       "status": "pendente",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
@@ -2078,6 +2188,8 @@
       "confianca": "shell",
       "confiancaMotivo": "HTML traz só o shell (965 caracteres, 2 seções) — medição estática não é conclusiva",
       "conclusiva": false,
+      "textoConclusivo": false,
+      "reprovaConclusiva": false,
       "status": "pendente",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
@@ -2114,7 +2226,9 @@
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "5347 caracteres e 8 seções no HTML",
       "conclusiva": false,
-      "status": "pendente",
+      "textoConclusivo": true,
+      "reprovaConclusiva": true,
+      "status": "reprovada",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
       ],
@@ -2158,7 +2272,9 @@
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "1651 caracteres e 3 seções no HTML",
       "conclusiva": false,
-      "status": "pendente",
+      "textoConclusivo": true,
+      "reprovaConclusiva": true,
+      "status": "reprovada",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
       ],
@@ -2192,7 +2308,9 @@
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "1649 caracteres e 3 seções no HTML",
       "conclusiva": false,
-      "status": "pendente",
+      "textoConclusivo": true,
+      "reprovaConclusiva": true,
+      "status": "reprovada",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
       ],
@@ -2228,7 +2346,9 @@
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "1599 caracteres e 3 seções no HTML",
       "conclusiva": false,
-      "status": "pendente",
+      "textoConclusivo": true,
+      "reprovaConclusiva": true,
+      "status": "reprovada",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
       ],
@@ -2264,7 +2384,9 @@
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "1651 caracteres e 3 seções no HTML",
       "conclusiva": false,
-      "status": "pendente",
+      "textoConclusivo": true,
+      "reprovaConclusiva": true,
+      "status": "reprovada",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
       ],
@@ -2300,6 +2422,8 @@
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "1694 caracteres e 3 seções no HTML",
       "conclusiva": false,
+      "textoConclusivo": true,
+      "reprovaConclusiva": false,
       "status": "pendente",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
@@ -2335,6 +2459,8 @@
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "1635 caracteres e 3 seções no HTML",
       "conclusiva": false,
+      "textoConclusivo": true,
+      "reprovaConclusiva": false,
       "status": "pendente",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
@@ -2370,7 +2496,9 @@
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "11724 caracteres e 10 seções no HTML",
       "conclusiva": false,
-      "status": "pendente",
+      "textoConclusivo": true,
+      "reprovaConclusiva": true,
+      "status": "reprovada",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
       ],
@@ -2414,7 +2542,9 @@
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "12603 caracteres e 12 seções no HTML",
       "conclusiva": false,
-      "status": "pendente",
+      "textoConclusivo": true,
+      "reprovaConclusiva": true,
+      "status": "reprovada",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
       ],
@@ -2458,7 +2588,9 @@
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "1613 caracteres e 3 seções no HTML",
       "conclusiva": false,
-      "status": "pendente",
+      "textoConclusivo": true,
+      "reprovaConclusiva": true,
+      "status": "reprovada",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
       ],
@@ -2494,7 +2626,9 @@
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "1611 caracteres e 3 seções no HTML",
       "conclusiva": false,
-      "status": "pendente",
+      "textoConclusivo": true,
+      "reprovaConclusiva": true,
+      "status": "reprovada",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
       ],
@@ -2530,7 +2664,9 @@
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "1631 caracteres e 3 seções no HTML",
       "conclusiva": false,
-      "status": "pendente",
+      "textoConclusivo": true,
+      "reprovaConclusiva": true,
+      "status": "reprovada",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
       ],
@@ -2566,7 +2702,9 @@
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "1572 caracteres e 3 seções no HTML",
       "conclusiva": false,
-      "status": "pendente",
+      "textoConclusivo": true,
+      "reprovaConclusiva": true,
+      "status": "reprovada",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
       ],
@@ -2602,7 +2740,9 @@
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "1612 caracteres e 3 seções no HTML",
       "conclusiva": false,
-      "status": "pendente",
+      "textoConclusivo": true,
+      "reprovaConclusiva": true,
+      "status": "reprovada",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
       ],
@@ -2638,6 +2778,8 @@
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "1657 caracteres e 3 seções no HTML",
       "conclusiva": false,
+      "textoConclusivo": true,
+      "reprovaConclusiva": false,
       "status": "pendente",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
@@ -2673,7 +2815,9 @@
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "1585 caracteres e 3 seções no HTML",
       "conclusiva": false,
-      "status": "pendente",
+      "textoConclusivo": true,
+      "reprovaConclusiva": true,
+      "status": "reprovada",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
       ],
@@ -2709,6 +2853,8 @@
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "1603 caracteres e 3 seções no HTML",
       "conclusiva": false,
+      "textoConclusivo": true,
+      "reprovaConclusiva": false,
       "status": "pendente",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
@@ -2744,6 +2890,8 @@
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "8824 caracteres e 10 seções no HTML",
       "conclusiva": false,
+      "textoConclusivo": true,
+      "reprovaConclusiva": false,
       "status": "pendente",
       "inconclusivos": [
         "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"

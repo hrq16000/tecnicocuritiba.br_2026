@@ -150,8 +150,8 @@ const urls = alvos.map((p) => {
   }
 
   const conf = confiancaPorPath.get(p)?.confianca ?? "ausente";
-  const conclusiva =
-    (conf === "renderizado" || conf === "estatico-confiavel") && inconclusivos.length === 0;
+  const textoConclusivo = conf === "renderizado" || conf === "estatico-confiavel";
+  const conclusiva = textoConclusivo && inconclusivos.length === 0;
 
   const comoResolver = [];
   if (mencionados.length < MIN_MENCOES)
@@ -175,7 +175,9 @@ const urls = alvos.map((p) => {
     confianca: conf,
     confiancaMotivo: confiancaPorPath.get(p)?.motivo ?? null,
     conclusiva,
-    status: !conclusiva ? "pendente" : problemas.length ? "reprovada" : "aprovada",
+    textoConclusivo,
+    reprovaConclusiva: textoConclusivo && problemas.length > 0,
+    status: textoConclusivo && problemas.length ? "reprovada" : conclusiva ? "aprovada" : "pendente",
     inconclusivos,
     evidencias: {
       bairrosEncontrados: mencionados,
@@ -214,8 +216,10 @@ console.log(
 if (GATE) {
   // Modo heurístico: só reprova URLs com leitura conclusiva (DOM renderizado
   // ou HTML estático com corpo real). Shell-only fica pendente.
-  const pendentes = urls.filter((u) => u.noSitemap && !u.conclusiva);
-  const falhas = urls.filter((u) => u.noSitemap && u.conclusiva && !u.aprovada);
+  const pendentes = urls.filter((u) => u.noSitemap && !u.conclusiva && !u.reprovaConclusiva);
+  // Reprova tudo que já dá para provar (texto pré-renderizado). O que só o DOM
+  // renderizado mede (links do bloco de prova local) fica pendente.
+  const falhas = urls.filter((u) => u.noSitemap && u.reprovaConclusiva);
   if (falhas.length) {
     console.error(`BLOQUEADO: ${falhas.length} página(s) de serviço sem relevância local mínima:`);
     for (const f of falhas.slice(0, 20)) {
