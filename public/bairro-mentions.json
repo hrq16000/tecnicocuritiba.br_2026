@@ -1,0 +1,1347 @@
+{
+  "generatedAt": "2026-08-13T01:33:00.131Z",
+  "regras": {
+    "MIN_MENCOES": 3,
+    "MIN_LINKS": 3,
+    "modo": "estatico"
+  },
+  "totals": {
+    "avaliadas": 74,
+    "aprovadas": 0,
+    "reprovadas": 74
+  },
+  "urls": [
+    {
+      "path": "/servicos/backup-para-empresas",
+      "noSitemap": true,
+      "mencoes": 0,
+      "bairrosCitados": [],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [
+        "/bairros/agua-verde",
+        "/bairros/batel",
+        "/bairros/bigorrilho",
+        "/bairros/boa-vista",
+        "/bairros/boqueirao",
+        "/bairros/cabral"
+      ],
+      "problemas": [
+        "0 bairro(s) citado(s), mínimo 3",
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/conserto-monitor",
+      "noSitemap": true,
+      "mencoes": 3,
+      "bairrosCitados": [
+        "cic",
+        "cristo-rei",
+        "cajuru"
+      ],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [
+        "/bairros/agua-verde",
+        "/bairros/batel",
+        "/bairros/bigorrilho",
+        "/bairros/boa-vista",
+        "/bairros/boqueirao",
+        "/bairros/cabral"
+      ],
+      "problemas": [
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/conserto-pc-notebook/agua-verde",
+      "noSitemap": true,
+      "mencoes": 3,
+      "bairrosCitados": [
+        "agua-verde",
+        "alto-da-xv",
+        "reboucas"
+      ],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [],
+      "problemas": [
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/conserto-pc-notebook/alto-da-xv",
+      "noSitemap": true,
+      "mencoes": 3,
+      "bairrosCitados": [
+        "bigorrilho",
+        "cabral",
+        "alto-da-xv"
+      ],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [],
+      "problemas": [
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/conserto-pc-notebook/centro",
+      "noSitemap": true,
+      "mencoes": 3,
+      "bairrosCitados": [
+        "centro",
+        "ecoville",
+        "alto-da-xv"
+      ],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [],
+      "problemas": [
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/conserto-pc-notebook/ecoville",
+      "noSitemap": true,
+      "mencoes": 3,
+      "bairrosCitados": [
+        "jardim-das-americas",
+        "ecoville",
+        "alto-da-xv"
+      ],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [],
+      "problemas": [
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/conserto-pc-notebook/jardim-das-americas",
+      "noSitemap": true,
+      "mencoes": 2,
+      "bairrosCitados": [
+        "boqueirao",
+        "jardim-das-americas"
+      ],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [],
+      "problemas": [
+        "2 bairro(s) citado(s), mínimo 3",
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/conserto-pc-notebook/reboucas",
+      "noSitemap": true,
+      "mencoes": 3,
+      "bairrosCitados": [
+        "agua-verde",
+        "jardim-das-americas",
+        "reboucas"
+      ],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [],
+      "problemas": [
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/conserto-placa",
+      "noSitemap": true,
+      "mencoes": 0,
+      "bairrosCitados": [],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [
+        "/bairros/agua-verde",
+        "/bairros/batel",
+        "/bairros/bigorrilho",
+        "/bairros/boa-vista",
+        "/bairros/boqueirao",
+        "/bairros/cabral"
+      ],
+      "problemas": [
+        "0 bairro(s) citado(s), mínimo 3",
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/conserto-tv",
+      "noSitemap": true,
+      "mencoes": 0,
+      "bairrosCitados": [],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [
+        "/servicos/manutencao-tv/agua-verde",
+        "/servicos/manutencao-tv/alto-da-xv",
+        "/servicos/manutencao-tv/batel",
+        "/servicos/manutencao-tv/bigorrilho",
+        "/servicos/manutencao-tv/boa-vista",
+        "/servicos/manutencao-tv/boqueirao"
+      ],
+      "problemas": [
+        "0 bairro(s) citado(s), mínimo 3",
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/formatacao",
+      "noSitemap": true,
+      "mencoes": 3,
+      "bairrosCitados": [
+        "ecoville",
+        "alto-da-xv",
+        "reboucas"
+      ],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [
+        "/servicos/formatacao-computador/agua-verde",
+        "/servicos/formatacao-computador/alto-da-xv",
+        "/servicos/formatacao-computador/batel",
+        "/servicos/formatacao-computador/cic",
+        "/servicos/formatacao-computador/ecoville",
+        "/servicos/formatacao-computador/jardim-das-americas"
+      ],
+      "problemas": [
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/formatacao-computador/agua-verde",
+      "noSitemap": true,
+      "mencoes": 2,
+      "bairrosCitados": [
+        "agua-verde",
+        "ecoville"
+      ],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [],
+      "problemas": [
+        "2 bairro(s) citado(s), mínimo 3",
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/formatacao-computador/alto-da-xv",
+      "noSitemap": true,
+      "mencoes": 2,
+      "bairrosCitados": [
+        "santa-felicidade",
+        "alto-da-xv"
+      ],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [],
+      "problemas": [
+        "2 bairro(s) citado(s), mínimo 3",
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/formatacao-computador/batel",
+      "noSitemap": true,
+      "mencoes": 3,
+      "bairrosCitados": [
+        "batel",
+        "ecoville",
+        "alto-da-xv"
+      ],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [],
+      "problemas": [
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/formatacao-computador/cic",
+      "noSitemap": true,
+      "mencoes": 2,
+      "bairrosCitados": [
+        "cic",
+        "ecoville"
+      ],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [],
+      "problemas": [
+        "2 bairro(s) citado(s), mínimo 3",
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/formatacao-computador/ecoville",
+      "noSitemap": true,
+      "mencoes": 2,
+      "bairrosCitados": [
+        "jardim-das-americas",
+        "ecoville"
+      ],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [],
+      "problemas": [
+        "2 bairro(s) citado(s), mínimo 3",
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/formatacao-computador/jardim-das-americas",
+      "noSitemap": true,
+      "mencoes": 3,
+      "bairrosCitados": [
+        "jardim-das-americas",
+        "ecoville",
+        "alto-da-xv"
+      ],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [],
+      "problemas": [
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/formatacao-computador/reboucas",
+      "noSitemap": true,
+      "mencoes": 3,
+      "bairrosCitados": [
+        "jardim-das-americas",
+        "ecoville",
+        "reboucas"
+      ],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [],
+      "problemas": [
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/manutencao-de-computador",
+      "noSitemap": true,
+      "mencoes": 0,
+      "bairrosCitados": [],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [
+        "/servicos/conserto-pc-notebook/agua-verde",
+        "/servicos/conserto-pc-notebook/alto-da-xv",
+        "/servicos/conserto-pc-notebook/centro",
+        "/servicos/conserto-pc-notebook/ecoville",
+        "/servicos/conserto-pc-notebook/jardim-das-americas",
+        "/servicos/conserto-pc-notebook/reboucas"
+      ],
+      "problemas": [
+        "0 bairro(s) citado(s), mínimo 3",
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/manutencao-de-notebook",
+      "noSitemap": true,
+      "mencoes": 0,
+      "bairrosCitados": [],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [
+        "/bairros/agua-verde",
+        "/bairros/batel",
+        "/bairros/bigorrilho",
+        "/bairros/boa-vista",
+        "/bairros/boqueirao",
+        "/bairros/cabral"
+      ],
+      "problemas": [
+        "0 bairro(s) citado(s), mínimo 3",
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/manutencao-preventiva-empresas",
+      "noSitemap": true,
+      "mencoes": 0,
+      "bairrosCitados": [],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [
+        "/bairros/agua-verde",
+        "/bairros/batel",
+        "/bairros/bigorrilho",
+        "/bairros/boa-vista",
+        "/bairros/boqueirao",
+        "/bairros/cabral"
+      ],
+      "problemas": [
+        "0 bairro(s) citado(s), mínimo 3",
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/manutencao-tv/agua-verde",
+      "noSitemap": true,
+      "mencoes": 2,
+      "bairrosCitados": [
+        "agua-verde",
+        "jardim-das-americas"
+      ],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [],
+      "problemas": [
+        "2 bairro(s) citado(s), mínimo 3",
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/manutencao-tv/alto-da-xv",
+      "noSitemap": true,
+      "mencoes": 3,
+      "bairrosCitados": [
+        "santa-felicidade",
+        "boa-vista",
+        "alto-da-xv"
+      ],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [],
+      "problemas": [
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/manutencao-tv/batel",
+      "noSitemap": true,
+      "mencoes": 3,
+      "bairrosCitados": [
+        "batel",
+        "cristo-rei",
+        "boa-vista"
+      ],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [],
+      "problemas": [
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/manutencao-tv/bigorrilho",
+      "noSitemap": true,
+      "mencoes": 3,
+      "bairrosCitados": [
+        "agua-verde",
+        "centro",
+        "bigorrilho"
+      ],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [],
+      "problemas": [
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/manutencao-tv/boa-vista",
+      "noSitemap": true,
+      "mencoes": 2,
+      "bairrosCitados": [
+        "agua-verde",
+        "boa-vista"
+      ],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [],
+      "problemas": [
+        "2 bairro(s) citado(s), mínimo 3",
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/manutencao-tv/boqueirao",
+      "noSitemap": true,
+      "mencoes": 2,
+      "bairrosCitados": [
+        "boqueirao",
+        "alto-da-xv"
+      ],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [],
+      "problemas": [
+        "2 bairro(s) citado(s), mínimo 3",
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/manutencao-tv/cabral",
+      "noSitemap": true,
+      "mencoes": 3,
+      "bairrosCitados": [
+        "agua-verde",
+        "cabral",
+        "jardim-das-americas"
+      ],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [],
+      "problemas": [
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/manutencao-tv/cajuru",
+      "noSitemap": true,
+      "mencoes": 3,
+      "bairrosCitados": [
+        "cajuru",
+        "alto-da-xv",
+        "reboucas"
+      ],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [],
+      "problemas": [
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/manutencao-tv/centro",
+      "noSitemap": true,
+      "mencoes": 3,
+      "bairrosCitados": [
+        "centro",
+        "ecoville",
+        "alto-da-xv"
+      ],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [],
+      "problemas": [
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/manutencao-tv/cic",
+      "noSitemap": true,
+      "mencoes": 3,
+      "bairrosCitados": [
+        "cic",
+        "agua-verde",
+        "jardim-das-americas"
+      ],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [],
+      "problemas": [
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/manutencao-tv/cristo-rei",
+      "noSitemap": true,
+      "mencoes": 2,
+      "bairrosCitados": [
+        "cristo-rei",
+        "cajuru"
+      ],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [],
+      "problemas": [
+        "2 bairro(s) citado(s), mínimo 3",
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/manutencao-tv/ecoville",
+      "noSitemap": true,
+      "mencoes": 3,
+      "bairrosCitados": [
+        "agua-verde",
+        "centro",
+        "ecoville"
+      ],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [],
+      "problemas": [
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/manutencao-tv/jardim-das-americas",
+      "noSitemap": true,
+      "mencoes": 2,
+      "bairrosCitados": [
+        "centro",
+        "jardim-das-americas"
+      ],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [],
+      "problemas": [
+        "2 bairro(s) citado(s), mínimo 3",
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/manutencao-tv/portao",
+      "noSitemap": true,
+      "mencoes": 3,
+      "bairrosCitados": [
+        "portao",
+        "ecoville",
+        "alto-da-xv"
+      ],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [],
+      "problemas": [
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/manutencao-tv/reboucas",
+      "noSitemap": true,
+      "mencoes": 3,
+      "bairrosCitados": [
+        "agua-verde",
+        "portao",
+        "reboucas"
+      ],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [],
+      "problemas": [
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/manutencao-tv/santa-felicidade",
+      "noSitemap": true,
+      "mencoes": 2,
+      "bairrosCitados": [
+        "bigorrilho",
+        "santa-felicidade"
+      ],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [],
+      "problemas": [
+        "2 bairro(s) citado(s), mínimo 3",
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/montagem-de-pc",
+      "noSitemap": true,
+      "mencoes": 1,
+      "bairrosCitados": [
+        "cic"
+      ],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [
+        "/bairros/agua-verde",
+        "/bairros/batel",
+        "/bairros/bigorrilho",
+        "/bairros/boa-vista",
+        "/bairros/boqueirao",
+        "/bairros/cabral"
+      ],
+      "problemas": [
+        "1 bairro(s) citado(s), mínimo 3",
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/recuperacao-de-dados",
+      "noSitemap": true,
+      "mencoes": 2,
+      "bairrosCitados": [
+        "boqueirao",
+        "jardim-das-americas"
+      ],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [
+        "/bairros/agua-verde",
+        "/bairros/batel",
+        "/bairros/bigorrilho",
+        "/bairros/boa-vista",
+        "/bairros/boqueirao",
+        "/bairros/cabral"
+      ],
+      "problemas": [
+        "2 bairro(s) citado(s), mínimo 3",
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/redes-e-wifi",
+      "noSitemap": true,
+      "mencoes": 0,
+      "bairrosCitados": [],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [
+        "/servicos/redes-wifi/agua-verde",
+        "/servicos/redes-wifi/alto-da-xv",
+        "/servicos/redes-wifi/batel",
+        "/servicos/redes-wifi/bigorrilho",
+        "/servicos/redes-wifi/boa-vista",
+        "/servicos/redes-wifi/boqueirao"
+      ],
+      "problemas": [
+        "0 bairro(s) citado(s), mínimo 3",
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/redes-wifi/agua-verde",
+      "noSitemap": true,
+      "mencoes": 3,
+      "bairrosCitados": [
+        "agua-verde",
+        "portao",
+        "bigorrilho"
+      ],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [],
+      "problemas": [
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/redes-wifi/alto-da-xv",
+      "noSitemap": true,
+      "mencoes": 3,
+      "bairrosCitados": [
+        "centro",
+        "alto-da-xv",
+        "reboucas"
+      ],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [],
+      "problemas": [
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/redes-wifi/batel",
+      "noSitemap": true,
+      "mencoes": 2,
+      "bairrosCitados": [
+        "batel",
+        "cajuru"
+      ],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [],
+      "problemas": [
+        "2 bairro(s) citado(s), mínimo 3",
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/redes-wifi/bigorrilho",
+      "noSitemap": true,
+      "mencoes": 4,
+      "bairrosCitados": [
+        "centro",
+        "bigorrilho",
+        "cristo-rei",
+        "cajuru"
+      ],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [],
+      "problemas": [
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/redes-wifi/boa-vista",
+      "noSitemap": true,
+      "mencoes": 3,
+      "bairrosCitados": [
+        "cic",
+        "agua-verde",
+        "boa-vista"
+      ],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [],
+      "problemas": [
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/redes-wifi/boqueirao",
+      "noSitemap": true,
+      "mencoes": 3,
+      "bairrosCitados": [
+        "cic",
+        "centro",
+        "boqueirao"
+      ],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [],
+      "problemas": [
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/redes-wifi/cabral",
+      "noSitemap": true,
+      "mencoes": 3,
+      "bairrosCitados": [
+        "agua-verde",
+        "centro",
+        "cabral"
+      ],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [],
+      "problemas": [
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/redes-wifi/cajuru",
+      "noSitemap": true,
+      "mencoes": 3,
+      "bairrosCitados": [
+        "batel",
+        "centro",
+        "cajuru"
+      ],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [],
+      "problemas": [
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/redes-wifi/centro",
+      "noSitemap": true,
+      "mencoes": 2,
+      "bairrosCitados": [
+        "agua-verde",
+        "centro"
+      ],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [],
+      "problemas": [
+        "2 bairro(s) citado(s), mínimo 3",
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/redes-wifi/cic",
+      "noSitemap": true,
+      "mencoes": 2,
+      "bairrosCitados": [
+        "cic",
+        "centro"
+      ],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [],
+      "problemas": [
+        "2 bairro(s) citado(s), mínimo 3",
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/redes-wifi/cristo-rei",
+      "noSitemap": true,
+      "mencoes": 3,
+      "bairrosCitados": [
+        "agua-verde",
+        "centro",
+        "cristo-rei"
+      ],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [],
+      "problemas": [
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/redes-wifi/ecoville",
+      "noSitemap": true,
+      "mencoes": 3,
+      "bairrosCitados": [
+        "ecoville",
+        "alto-da-xv",
+        "reboucas"
+      ],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [],
+      "problemas": [
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/redes-wifi/jardim-das-americas",
+      "noSitemap": true,
+      "mencoes": 3,
+      "bairrosCitados": [
+        "agua-verde",
+        "centro",
+        "jardim-das-americas"
+      ],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [],
+      "problemas": [
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/redes-wifi/portao",
+      "noSitemap": true,
+      "mencoes": 3,
+      "bairrosCitados": [
+        "portao",
+        "jardim-das-americas",
+        "ecoville"
+      ],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [],
+      "problemas": [
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/redes-wifi/reboucas",
+      "noSitemap": true,
+      "mencoes": 3,
+      "bairrosCitados": [
+        "agua-verde",
+        "jardim-das-americas",
+        "reboucas"
+      ],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [],
+      "problemas": [
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/redes-wifi/santa-felicidade",
+      "noSitemap": true,
+      "mencoes": 2,
+      "bairrosCitados": [
+        "santa-felicidade",
+        "cabral"
+      ],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [],
+      "problemas": [
+        "2 bairro(s) citado(s), mínimo 3",
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/remocao-de-virus",
+      "noSitemap": true,
+      "mencoes": 0,
+      "bairrosCitados": [],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [
+        "/servicos/remocao-virus/agua-verde",
+        "/servicos/remocao-virus/alto-da-xv",
+        "/servicos/remocao-virus/cic",
+        "/servicos/remocao-virus/ecoville",
+        "/servicos/remocao-virus/jardim-das-americas",
+        "/servicos/remocao-virus/reboucas"
+      ],
+      "problemas": [
+        "0 bairro(s) citado(s), mínimo 3",
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/remocao-virus/agua-verde",
+      "noSitemap": true,
+      "mencoes": 1,
+      "bairrosCitados": [
+        "agua-verde"
+      ],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [],
+      "problemas": [
+        "1 bairro(s) citado(s), mínimo 3",
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/remocao-virus/alto-da-xv",
+      "noSitemap": true,
+      "mencoes": 2,
+      "bairrosCitados": [
+        "boqueirao",
+        "alto-da-xv"
+      ],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [],
+      "problemas": [
+        "2 bairro(s) citado(s), mínimo 3",
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/remocao-virus/cic",
+      "noSitemap": true,
+      "mencoes": 2,
+      "bairrosCitados": [
+        "cic",
+        "batel"
+      ],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [],
+      "problemas": [
+        "2 bairro(s) citado(s), mínimo 3",
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/remocao-virus/ecoville",
+      "noSitemap": true,
+      "mencoes": 2,
+      "bairrosCitados": [
+        "santa-felicidade",
+        "ecoville"
+      ],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [],
+      "problemas": [
+        "2 bairro(s) citado(s), mínimo 3",
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/remocao-virus/jardim-das-americas",
+      "noSitemap": true,
+      "mencoes": 3,
+      "bairrosCitados": [
+        "cic",
+        "portao",
+        "jardim-das-americas"
+      ],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [],
+      "problemas": [
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/remocao-virus/reboucas",
+      "noSitemap": true,
+      "mencoes": 3,
+      "bairrosCitados": [
+        "portao",
+        "bigorrilho",
+        "reboucas"
+      ],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [],
+      "problemas": [
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/suporte-home-office",
+      "noSitemap": true,
+      "mencoes": 0,
+      "bairrosCitados": [],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [
+        "/bairros/agua-verde",
+        "/bairros/batel",
+        "/bairros/bigorrilho",
+        "/bairros/boa-vista",
+        "/bairros/boqueirao",
+        "/bairros/cabral"
+      ],
+      "problemas": [
+        "0 bairro(s) citado(s), mínimo 3",
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/suporte-tecnico-empresarial",
+      "noSitemap": true,
+      "mencoes": 0,
+      "bairrosCitados": [],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [
+        "/bairros/agua-verde",
+        "/bairros/batel",
+        "/bairros/bigorrilho",
+        "/bairros/boa-vista",
+        "/bairros/boqueirao",
+        "/bairros/cabral"
+      ],
+      "problemas": [
+        "0 bairro(s) citado(s), mínimo 3",
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/upgrade-ssd-memoria/agua-verde",
+      "noSitemap": true,
+      "mencoes": 2,
+      "bairrosCitados": [
+        "agua-verde",
+        "boa-vista"
+      ],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [],
+      "problemas": [
+        "2 bairro(s) citado(s), mínimo 3",
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/upgrade-ssd-memoria/alto-da-xv",
+      "noSitemap": true,
+      "mencoes": 2,
+      "bairrosCitados": [
+        "alto-da-xv",
+        "reboucas"
+      ],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [],
+      "problemas": [
+        "2 bairro(s) citado(s), mínimo 3",
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/upgrade-ssd-memoria/centro",
+      "noSitemap": true,
+      "mencoes": 2,
+      "bairrosCitados": [
+        "cic",
+        "centro"
+      ],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [],
+      "problemas": [
+        "2 bairro(s) citado(s), mínimo 3",
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/upgrade-ssd-memoria/cic",
+      "noSitemap": true,
+      "mencoes": 2,
+      "bairrosCitados": [
+        "cic",
+        "cabral"
+      ],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [],
+      "problemas": [
+        "2 bairro(s) citado(s), mínimo 3",
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/upgrade-ssd-memoria/ecoville",
+      "noSitemap": true,
+      "mencoes": 2,
+      "bairrosCitados": [
+        "ecoville",
+        "alto-da-xv"
+      ],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [],
+      "problemas": [
+        "2 bairro(s) citado(s), mínimo 3",
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/upgrade-ssd-memoria/jardim-das-americas",
+      "noSitemap": true,
+      "mencoes": 3,
+      "bairrosCitados": [
+        "agua-verde",
+        "centro",
+        "jardim-das-americas"
+      ],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [],
+      "problemas": [
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/upgrade-ssd-memoria/portao",
+      "noSitemap": true,
+      "mencoes": 2,
+      "bairrosCitados": [
+        "batel",
+        "portao"
+      ],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [],
+      "problemas": [
+        "2 bairro(s) citado(s), mínimo 3",
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/upgrade-ssd-memoria/reboucas",
+      "noSitemap": true,
+      "mencoes": 3,
+      "bairrosCitados": [
+        "ecoville",
+        "alto-da-xv",
+        "reboucas"
+      ],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [],
+      "problemas": [
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    },
+    {
+      "path": "/servicos/upgrade-ssd-ram",
+      "noSitemap": true,
+      "mencoes": 3,
+      "bairrosCitados": [
+        "ecoville",
+        "alto-da-xv",
+        "reboucas"
+      ],
+      "linksLocais": 0,
+      "linksExemplo": [],
+      "linksFaltando": [
+        "/servicos/upgrade-ssd-memoria/agua-verde",
+        "/servicos/upgrade-ssd-memoria/alto-da-xv",
+        "/servicos/upgrade-ssd-memoria/centro",
+        "/servicos/upgrade-ssd-memoria/cic",
+        "/servicos/upgrade-ssd-memoria/ecoville",
+        "/servicos/upgrade-ssd-memoria/jardim-das-americas"
+      ],
+      "problemas": [
+        "0 link(s) locais coerentes, mínimo 3"
+      ],
+      "aprovada": false
+    }
+  ]
+}
