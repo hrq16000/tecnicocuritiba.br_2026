@@ -73,6 +73,7 @@ const AdminPublishStatus = () => {
   const [erro, setErro] = useState<string | null>(null);
   const [filtro, setFiltro] = useState<Estado | "todos">("publicado-com-pendencia");
   const [busca, setBusca] = useState("");
+  const [copiada, setCopiada] = useState<string | null>(null);
 
   useEffect(() => {
     document.title = "Status de publicação | Painel interno";
