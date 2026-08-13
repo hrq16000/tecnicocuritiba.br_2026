@@ -333,7 +333,7 @@ const BlogPost = () => {
             {/* Discover-ready hero image: always show large featured image */}
             <div className="max-w-4xl mx-auto mb-10">
               <AspectRatio ratio={16 / 9} className="bg-muted rounded-xl overflow-hidden shadow-2xl">
-                <img loading="eager" fetchPriority="high" decoding="async"
+                <img
                   src={heroImage}
                   srcSet={
                     editorialCover
