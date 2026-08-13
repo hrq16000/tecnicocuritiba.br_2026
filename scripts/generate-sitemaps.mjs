@@ -53,5 +53,8 @@ writeFileSync(resolve("public/sitemap-index.xml"), indexXml);
 // Alias legado.
 writeFileSync(resolve("public/sitemap.xml"), indexXml);
 
-const total = ACTIVE_SITEMAPS.reduce((n, [, e]) => n + e.length, 0);
-console.log(`sitemap curado: index + ${ACTIVE_SITEMAPS.length} sub-sitemaps (${total} urls)`);
+const declaradas = ACTIVE_SITEMAPS.reduce((n, [, e]) => n + e.length, 0);
+const emitidas = ACTIVE_SITEMAPS.reduce((n, [, e]) => n + e.filter((x) => !blocked.has(x.path)).length, 0);
+console.log(
+  `sitemap curado: index + ${ACTIVE_SITEMAPS.length} sub-sitemaps (${emitidas}/${declaradas} urls${blocked.size ? `, ${declaradas - emitidas} bloqueadas por originalidade` : ""})`,
+);
