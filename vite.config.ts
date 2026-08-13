@@ -6,6 +6,7 @@ import { componentTagger } from "lovable-tagger";
 import { imagetools } from "vite-imagetools";
 // @ts-expect-error - JS plugin without types
 import { prerenderCitiesPlugin } from "./scripts/prerender-cities.mjs";
+import { sentryVitePlugin } from "@sentry/vite-plugin";
 
 
 const resolveAppVersion = () => {
@@ -21,6 +22,9 @@ const resolveAppVersion = () => {
   }
 };
 const APP_VERSION = resolveAppVersion();
+const SENTRY_AUTH_TOKEN = process.env.SENTRY_AUTH_TOKEN || "";
+const SENTRY_ORG = process.env.SENTRY_ORG || "";
+const SENTRY_PROJECT = process.env.SENTRY_PROJECT || "";
 const APP_BUILD_TIME = new Date().toISOString();
 const GOOGLE_SITE_VERIFICATION =
   process.env.VITE_GOOGLE_SITE_VERIFICATION || process.env.GOOGLE_SITE_VERIFICATION || "";
@@ -50,6 +54,19 @@ export default defineConfig(({ mode }) => ({
     googleSiteVerificationPlugin(),
     mode === "development" && componentTagger(),
     prerenderCitiesPlugin(),
+    // Upload de source maps para o Sentry apenas quando o CI tem credenciais.
+    // `sourcemaps.filesToDeleteAfterUpload` mantém os .map fora do deploy
+    // público (diagnóstico completo no Sentry, nada exposto ao usuário).
+    SENTRY_AUTH_TOKEN && SENTRY_ORG && SENTRY_PROJECT
+      ? sentryVitePlugin({
+          org: SENTRY_ORG,
+          project: SENTRY_PROJECT,
+          authToken: SENTRY_AUTH_TOKEN,
+          release: { name: APP_VERSION },
+          telemetry: false,
+          sourcemaps: { filesToDeleteAfterUpload: ["dist/**/*.map"] },
+        })
+      : null,
   ].filter(Boolean),
 
   resolve: {
@@ -62,6 +79,8 @@ export default defineConfig(({ mode }) => ({
     __APP_BUILD_TIME__: JSON.stringify(APP_BUILD_TIME),
   },
   build: {
+    // `hidden`: gera .map (para o Sentry) sem referenciar no bundle servido.
+    sourcemap: SENTRY_AUTH_TOKEN ? "hidden" : false,
     chunkSizeWarningLimit: 800,
     rollupOptions: {
       output: {
