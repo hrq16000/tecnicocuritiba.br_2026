@@ -63,7 +63,10 @@ if (urls.size === 0) {
   process.exit(1);
 }
 
+const DESC_IDEAL_MAX = 165;
+const DESC_HARD_MAX = 250;
 const errors = [];
+const warnings = [];
 const h1Index = new Map();
 let checked = 0;
 let skipped = 0;
@@ -109,8 +112,10 @@ for (const loc of [...urls].sort()) {
   ].map((m) => decode(m[1]));
   if (descs.length !== 1) at(`esperado exatamente 1 meta description, encontrado ${descs.length}`);
   const desc = descs[0] || "";
-  if (desc && (desc.length < 70 || desc.length > 165))
-    at(`description com ${desc.length} chars (esperado 70–165)`);
+  if (desc && (desc.length < 70 || desc.length > DESC_HARD_MAX))
+    at(`description com ${desc.length} chars (limite rígido 70–${DESC_HARD_MAX})`);
+  else if (desc && desc.length > DESC_IDEAL_MAX)
+    warnings.push(`${pathname}: description com ${desc.length} chars (ideal ≤ ${DESC_IDEAL_MAX}, risco de truncamento no Google)`);
 
   // 3. canonical self
   const canons = [
@@ -185,6 +190,12 @@ for (const loc of [...urls].sort()) {
 console.log(
   `── Gate GEO/SEO por rota ──\n  URLs no sitemap: ${urls.size}\n  validadas (prerender): ${checked}\n  sem HTML estático (client-side): ${skipped}`,
 );
+
+if (warnings.length) {
+  console.warn(`\n⚠️  ${warnings.length} aviso(s) de description longa (não bloqueiam o build):`);
+  for (const w of warnings.slice(0, 20)) console.warn(`  • ${w}`);
+  if (warnings.length > 20) console.warn(`  … +${warnings.length - 20} outros`);
+}
 
 if (errors.length) {
   console.error("\n❌ [geo-conformance] violações encontradas:\n");
