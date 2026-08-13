@@ -86,15 +86,19 @@ for (const f of arquivos(DIST, [".html"])) {
     registrar(m[1], "connect-src", rel);
 }
 
-// ── 2. JavaScript emitido: literais passados a fetch/EventSource/WebSocket
-for (const f of arquivos(path.join(DIST, "assets"), [".js"])) {
-  const js = readFileSync(f, "utf8");
-  const rel = path.relative(DIST, f);
-  for (const m of js.matchAll(/["'`](https?:\/\/[a-z0-9.-]+\.[a-z]{2,}[^"'`\s]*)["'`]/gi))
-    registrar(m[1], "connect-src", rel);
-  for (const m of js.matchAll(/["'`](wss:\/\/[a-z0-9.-]+[^"'`\s]*)["'`]/gi))
-    registrar(m[1], "connect-src", rel);
+// ── 2. Código-fonte: chamadas de rede reais (fetch / WebSocket / EventSource /
+//    XMLHttpRequest / importScripts). Só o que o navegador de fato conecta —
+//    `<a href>` editorial e citações E-E-A-T não passam pela CSP.
+const CHAMADAS_DE_REDE =
+  /(?:fetch|importScripts)\s*\(\s*["'`](https?:\/\/[^"'`$\s]+)|new\s+(?:WebSocket|EventSource)\s*\(\s*["'`]((?:https?|wss?):\/\/[^"'`$\s]+)|\.open\s*\(\s*["'][A-Z]+["']\s*,\s*["'`](https?:\/\/[^"'`$\s]+)/g;
+
+for (const f of arquivos(path.resolve("src"), [".ts", ".tsx"])) {
+  if (/\.test\.tsx?$/.test(f)) continue;
+  const code = readFileSync(f, "utf8");
+  const rel = path.relative(process.cwd(), f);
+  for (const m of code.matchAll(CHAMADAS_DE_REDE)) registrar(m[1] ?? m[2] ?? m[3], "connect-src", rel);
 }
+
 
 const linhas = [...inventario.entries()].sort(([a], [b]) => a.localeCompare(b));
 const naoAutorizadas = linhas.filter(([o, r]) => !autorizada(o, [...r.diretivas]));
