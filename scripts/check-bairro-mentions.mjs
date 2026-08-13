@@ -152,6 +152,13 @@ console.log(
 );
 
 if (GATE) {
+  if (STATIC_MODE) {
+    console.error(
+      "BLOQUEADO: gate de menções de bairro exige DOM renderizado — o HTML estático deste SPA traz apenas o shell.\n" +
+        'Instale o navegador ("npx playwright install --with-deps chromium") e rode sem --static.',
+    );
+    process.exit(1);
+  }
   const falhas = urls.filter((u) => u.noSitemap && !u.aprovada);
   if (falhas.length) {
     console.error(`BLOQUEADO: ${falhas.length} página(s) de serviço sem relevância local mínima:`);
