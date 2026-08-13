@@ -130,15 +130,25 @@ const urls = alvos.map((p) => {
   const coerentes = esperados.length ? encontrados.filter((h) => esperados.includes(h)) : encontrados;
   const faltando = esperados.filter((h) => !encontrados.includes(h));
 
+  // No HTML estático o bloco de prova local costuma ser hidratado no cliente.
+  // Sem nenhum link interno no HTML, a medição de links é inconclusiva.
+  const totalInternos = (d?.links ?? []).filter((h) => h.startsWith("/")).length;
+  const linksConclusivos = confiancaPorPath.get(p)?.confianca === "renderizado" || totalInternos > 0;
+
   const problemas = [];
+  const inconclusivos = [];
   if (!d) problemas.push("página não renderizou");
   if (mencionados.length < MIN_MENCOES)
     problemas.push(`${mencionados.length} bairro(s) citado(s), mínimo ${MIN_MENCOES}`);
-  if (coerentes.length < MIN_LINKS)
-    problemas.push(`${coerentes.length} link(s) locais coerentes, mínimo ${MIN_LINKS}`);
+  if (coerentes.length < MIN_LINKS) {
+    const msg = `${coerentes.length} link(s) locais coerentes, mínimo ${MIN_LINKS}`;
+    if (linksConclusivos) problemas.push(msg);
+    else inconclusivos.push(`${msg} (links não medidos no HTML estático)`);
+  }
 
   const conf = confiancaPorPath.get(p)?.confianca ?? "ausente";
-  const conclusiva = conf === "renderizado" || conf === "estatico-confiavel";
+  const conclusiva =
+    (conf === "renderizado" || conf === "estatico-confiavel") && inconclusivos.length === 0;
 
   const comoResolver = [];
   if (mencionados.length < MIN_MENCOES)
@@ -163,6 +173,7 @@ const urls = alvos.map((p) => {
     confiancaMotivo: confiancaPorPath.get(p)?.motivo ?? null,
     conclusiva,
     status: !conclusiva ? "pendente" : problemas.length ? "reprovada" : "aprovada",
+    inconclusivos,
     evidencias: {
       bairrosEncontrados: mencionados,
       linksEncontrados: coerentes,
