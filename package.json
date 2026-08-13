@@ -14,7 +14,7 @@
     "check:types": "tsgo --noEmit -p tsconfig.app.json",
     "check:telemetry-transparency": "node scripts/check-telemetry-transparency.mjs",
     "build": "vite build",
-    "postbuild": "bun scripts/check-seo-basics.ts dist/index.html && bun scripts/check-seo-basics.ts --curated dist && node scripts/check-jsonld-references.mjs dist && bun scripts/dump-dynamic-slugs.ts dist/dynamic-slugs.json && node scripts/generate-route-manifest.mjs dist && node scripts/check-soft-404.mjs && node scripts/generate-image-sitemap.mjs dist && node scripts/check-image-sitemap.mjs dist && node scripts/check-originality.mjs dist --static --report",
+    "postbuild": "bun scripts/check-seo-basics.ts dist/index.html && bun scripts/check-seo-basics.ts --curated dist && node scripts/check-jsonld-references.mjs dist && bun scripts/dump-dynamic-slugs.ts dist/dynamic-slugs.json && node scripts/generate-route-manifest.mjs dist && node scripts/check-soft-404.mjs && node scripts/generate-image-sitemap.mjs dist && node scripts/check-image-sitemap.mjs dist && node scripts/check-originality.mjs dist --static --report && node scripts/check-geo-conformance.mjs dist",
     "build:dev": "node scripts/generate-sitemaps.mjs && vite build --mode development",
     "check:seo": "bun scripts/check-seo-basics.ts index.html",
     "check:seo:curated": "bun scripts/check-seo-basics.ts --curated dist",
@@ -180,7 +180,7 @@
     "check:image-alt": "node scripts/check-image-alt.mjs dist",
     "report:faq-parity": "node scripts/report-faq-parity.mjs dist",
     "check:local-perf": "node scripts/check-local-perf.mjs",
-    "check:local-seo": "npm run check:breadcrumb-schema && npm run check:price-schema && npm run check:faq-parity && npm run check:meta-uniqueness && npm run sitemap:images && npm run check:image-sitemap && npm run check:image-credits && npm run report:faq-parity",
+    "check:local-seo": "npm run check:breadcrumb-schema && npm run check:price-schema && npm run check:faq-parity && npm run check:meta-uniqueness && npm run sitemap:images && npm run check:image-sitemap && npm run check:image-credits && npm run report:faq-parity && npm run check:geo-conformance",
     "report:build-gates": "node scripts/report-build-gates.mjs",
     "check:media-assets": "node scripts/check-media-assets.mjs",
     "check:telemetry-governance": "node scripts/check-telemetry-governance.mjs",
@@ -194,7 +194,8 @@
     "check:localbusiness-cluster": "node scripts/check-localbusiness-cluster.mjs dist",
     "test:wa-prefill": "playwright test e2e/whatsapp-prefill.spec.ts",
     "check:sem-balcao": "node scripts/check-sem-balcao.mjs",
-    "check:csp-inventory": "node scripts/check-csp-inventory.mjs"
+    "check:csp-inventory": "node scripts/check-csp-inventory.mjs",
+    "check:geo-conformance": "node scripts/check-geo-conformance.mjs dist"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
