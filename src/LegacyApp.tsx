@@ -88,6 +88,7 @@ const ConsertoVideogameHub = lazy(() => import("./pages/hubs/CategoryLocalTempla
 const ConsertoCelularLocalHub = lazy(() => import("./pages/hubs/CategoryLocalTemplate").then(m => ({ default: m.ConsertoCelularLocalHub })));
 // Hub SEO — Empresa de TI em Curitiba
 const EmpresaDeTiCuritiba = lazy(() => import("./pages/EmpresaDeTiCuritiba"));
+const Empresas = lazy(() => import("./pages/Empresas"));
 
 // Bairros Curitiba
 const Centro = lazy(() => import("./pages/bairros/Centro"));
@@ -574,6 +575,7 @@ const App = () => (
             <Route path="/arrumar-pc/servico/:servico/:cidade" element={<ArrumarPCServicoCidade />} />
             <Route path="/arrumar-pc/:cidade" element={<ArrumarPCCity />} />
             <Route path="/empresa-de-ti-curitiba" element={<EmpresaDeTiCuritiba />} />
+            <Route path="/empresas" element={<Empresas />} />
             <Route path="/precos-e-politicas" element={<PrecosEPoliticas />} />
             <Route path="/valores" element={<PrecosEPoliticas />} />
             

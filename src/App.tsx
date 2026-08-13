@@ -40,6 +40,7 @@ const routeImportMap: Record<string, () => Promise<unknown>> = {
   "/seguranca-dos-dados": () => import("./pages/SegurancaDosDados"),
   "/politica-de-pecas-do-cliente": () => import("./pages/PoliticaPecasCliente"),
   "/empresa-de-ti-curitiba": () => import("./pages/EmpresaDeTiCuritiba"),
+  "/empresas": () => import("./pages/Empresas"),
   "/problemas-reais-e-casos": () => import("./pages/ProblemasReaisCasos"),
   "/problemas": () => import("./pages/problemas/ProblemasHub"),
   "/problemas/notebook-nao-liga": () => import("./pages/problemas/NotebookNaoLiga"),
