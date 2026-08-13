@@ -96,6 +96,34 @@ for (const p of todas) {
   });
 }
 
+// Consolida cada onda com o status real de suas URLs para permitir a
+// aprovação em lote (só liberável quando 100% das URLs passam nos gates).
+const statusPorPath = new Map(urls.map((u) => [u.path, u]));
+const liberacoes = new Map(readApprovals().approvals.map((a) => [a.week, a]));
+
+const ondasDetalhadas = ondas.map((onda) => {
+  const detalhe = onda.paths.map((p) => {
+    const u = statusPorPath.get(p);
+    return {
+      path: p,
+      estado: u?.estado ?? "rascunho",
+      bloqueios: u?.bloqueios ?? ["sem status no relatório"],
+      ok: Boolean(u && u.originalidade.ok === true && u.provaVisual.ok === true && u.bloqueios.length === 0),
+    };
+  });
+  const aprovacao = liberacoes.get(onda.week) ?? null;
+  const todasOk = onda.approved && detalhe.length > 0 && detalhe.every((d) => d.ok);
+  return {
+    ...onda,
+    urls: detalhe,
+    prontasParaLote: detalhe.filter((d) => d.ok).length,
+    podeAprovarEmLote: todasOk && !aprovacao,
+    liberada: Boolean(aprovacao),
+    liberadaEm: aprovacao?.approvedAt ?? null,
+    comando: `npm run onda:aprovar -- --week=${onda.week}`,
+  };
+});
+
 const payload = {
   generatedAt: new Date().toISOString(),
   fontes: {
@@ -104,7 +132,7 @@ const payload = {
     contentApproval: approval ? "presente" : "ausente",
   },
   regras: { WAVE_MIN, WAVE_MAX },
-  ondas,
+  ondas: ondasDetalhadas,
   totals: {
     urls: urls.length,
     noSitemap: urls.filter((u) => u.noSitemap).length,

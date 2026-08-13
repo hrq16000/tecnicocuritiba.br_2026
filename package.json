@@ -48,6 +48,8 @@
     "check:waves": "node scripts/check-wave-control.mjs",
     "check:parceiros": "node scripts/check-parceiros.mjs",
     "report:publish-status": "node scripts/generate-publish-status.mjs",
+    "onda:aprovar": "node scripts/approve-wave.mjs",
+    "onda:listar": "node scripts/approve-wave.mjs --listar",
     "report:index-alerts": "node scripts/monitor-index-alerts.mjs",
     "check:jsonld-refs": "node scripts/check-jsonld-references.mjs",
     "check:sitemap-source": "node scripts/check-sitemap-source.mjs",
