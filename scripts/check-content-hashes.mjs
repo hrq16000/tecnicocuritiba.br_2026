@@ -142,9 +142,28 @@ for (const p of curated) {
   }
 }
 
-const duplicados = [...registro.entries()]
+/**
+ * Blocos presentes em muitas URLs são estruturais (assinatura E-E-A-T, aviso
+ * de logística, selos). Reuso relevante é o que aparece em poucas páginas —
+ * sinal de copiar-e-colar entre URLs concorrentes.
+ */
+const LIMIAR_BOILERPLATE = 10;
+
+const todosDuplicados = [...registro.entries()]
   .filter(([, r]) => r.paths.size > 1)
-  .map(([h, r]) => ({ hash: h, tipo: r.tipo, amostra: r.amostra, paths: [...r.paths].sort() }))
+  .map(([h, r]) => ({
+    hash: h,
+    tipo: r.tipo,
+    amostra: r.amostra,
+    paths: [...r.paths].sort(),
+    boilerplate: r.paths.size >= LIMIAR_BOILERPLATE,
+  }))
+  .sort((a, b) => b.paths.length - a.paths.length);
+
+const boilerplate = todosDuplicados.filter((d) => d.boilerplate);
+const duplicados = todosDuplicados
+  .filter((d) => !d.boilerplate)
+  .map(({ boilerplate: _b, ...d }) => d)
   .sort((a, b) => b.paths.length - a.paths.length);
 
 const porUrl = curated.map((p) => {
@@ -184,7 +203,7 @@ const porUrl = curated.map((p) => {
 mkdirSync("public", { recursive: true });
 const payload = {
   generatedAt: new Date().toISOString(),
-  regras: { MIN_CHARS, modo: STATIC_MODE ? "estatico-heuristico" : "renderizado" },
+  regras: { MIN_CHARS, LIMIAR_BOILERPLATE, modo: STATIC_MODE ? "estatico-heuristico" : "renderizado" },
   totals: {
     urls: curated.length,
     avaliadas: porPagina.size,
@@ -195,6 +214,7 @@ const payload = {
     pendentes: porUrl.filter((u) => !u.conclusiva).length,
   },
   duplicados: duplicados.slice(0, 300),
+  boilerplate: boilerplate.slice(0, 60).map((d) => ({ ...d, paths: d.paths.slice(0, 12), total: d.paths.length })),
   urls: porUrl,
 };
 writeFileSync("public/content-hashes.json", `${JSON.stringify(payload, null, 2)}\n`);
