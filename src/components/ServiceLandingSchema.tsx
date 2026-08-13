@@ -1,5 +1,6 @@
 import { useMemo } from "react";
 import { SCHEMA_SLOTS, SLOT_PRIORITY, useJsonLdSlot } from "@/lib/jsonLdSlots";
+import LocalBusinessJsonLd from "@/components/LocalBusinessJsonLd";
 
 /**
  * JSON-LD por landing de serviço: Service + Offer + FAQPage + WebPage + Speakable.
