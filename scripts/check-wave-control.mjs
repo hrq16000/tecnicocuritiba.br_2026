@@ -22,19 +22,24 @@ const status = waveStatus(existsInPublic);
 const liberadas = approvedWeeks();
 const errors = [];
 
+const warnings = [];
+
 for (const wave of status) {
   errors.push(...wave.problems);
-  const liberada = wave.approved && liberadas.has(wave.week);
-  if (!liberada) {
+  const liberada = liberadas.has(wave.week);
+  if (!wave.approved) {
     for (const p of wave.paths) {
-      if (curated.has(p)) {
-        errors.push(
-          wave.approved
-            ? `onda ${wave.week} passa nos gates mas não foi liberada em lote (npm run onda:aprovar -- --week=${wave.week}); ${p} não pode estar no sitemap`
-            : `onda ${wave.week} não aprovada, mas ${p} já está no sitemap curado (deveria seguir noindex)`,
-        );
-      }
+      if (curated.has(p)) errors.push(`onda ${wave.week} não aprovada, mas ${p} já está no sitemap curado (deveria seguir noindex)`);
     }
+  }
+  // Onda aprovada nos gates mas ainda sem liberação em lote: o gerador de
+  // sitemap mantém as URLs fora do XML até `npm run onda:aprovar`.
+  if (wave.approved && !liberada) {
+    warnings.push(`onda ${wave.week}: pronta, aguardando liberação em lote (npm run onda:aprovar -- --week=${wave.week})`);
+  }
+  // Liberada em lote mas com gate quebrado depois: revogue antes de publicar.
+  if (!wave.approved && liberada) {
+    errors.push(`onda ${wave.week} está liberada em wave-approvals.json mas voltou a falhar nos gates — revogue (--revogar) ou corrija`);
   }
 }
 
