@@ -19,3 +19,4 @@
 - [Hubs SEO Categorias × Local](mem://features/hubs-seo-categorias) — Conserto TV/Som/Videogame/Celular × RMC e bairros
 - [Technical Components](mem://features/technical-components) — Admin panel, routing maps, analytics, PWA, AdSense
 - [Governança de entidade local (4G)](mem://features/governanca-entidade-4g) — SERVICE AREA BUSINESS, proibido publicar endereço/CEP/CNPJ, "desde 1998" é declaração sem documento.
+- [Governança de originalidade e ondas](mem://features/governanca-originalidade-ondas) — Gate Jaccard + corpo mínimo, sitemap por aprovação e ondas Wi-Fi/TV 4–6/semana com prova visual.
