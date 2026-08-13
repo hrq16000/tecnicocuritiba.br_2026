@@ -1,5 +1,6 @@
 import { siteConfig, whatsappLink } from "@/lib/siteConfig";
 import { SCHEMA_SLOTS, SLOT_PRIORITY, useJsonLdSlot } from "@/lib/jsonLdSlots";
+import { InterlinksContextuais } from "@/components/InterlinksContextuais";
 
 const trackFooterWhatsApp = (location: string) =>
   import("@/lib/analytics").then(({ trackCTAClick }) => trackCTAClick("whatsapp", location));
