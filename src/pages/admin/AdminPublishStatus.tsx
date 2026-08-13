@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { Loader2, AlertTriangle, CheckCircle2, Circle, Camera, FileText } from "lucide-react";
+import { Loader2, AlertTriangle, CheckCircle2, Circle, Camera, FileText, Copy, MapPin } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -80,9 +80,35 @@ interface AuditPayload {
   urls: { path: string; checklist: AuditCheck[]; aprovada: boolean }[];
 }
 
+interface HashPayload {
+  generatedAt: string;
+  urls: {
+    path: string;
+    imagensReutilizadas: number;
+    textosReutilizados: number;
+    ocorrencias: { tipo: string; amostra: string; tambemEm: string[] }[];
+  }[];
+}
+
+interface MentionPayload {
+  generatedAt: string;
+  regras: { MIN_MENCOES: number; MIN_LINKS: number };
+  urls: {
+    path: string;
+    mencoes: number;
+    bairrosCitados: string[];
+    linksLocais: number;
+    linksFaltando: string[];
+    problemas: string[];
+    aprovada: boolean;
+  }[];
+}
+
 const AdminPublishStatus = () => {
   const [data, setData] = useState<Payload | null>(null);
   const [audit, setAudit] = useState<AuditPayload | null>(null);
+  const [hashes, setHashes] = useState<HashPayload | null>(null);
+  const [mentions, setMentions] = useState<MentionPayload | null>(null);
   const [erro, setErro] = useState<string | null>(null);
   const [filtro, setFiltro] = useState<Estado | "todos">("publicado-com-pendencia");
   const [busca, setBusca] = useState("");
@@ -91,6 +117,14 @@ const AdminPublishStatus = () => {
   const auditPorPath = useMemo(
     () => new Map((audit?.urls ?? []).map((u) => [u.path, u])),
     [audit],
+  );
+  const hashPorPath = useMemo(
+    () => new Map((hashes?.urls ?? []).map((u) => [u.path, u])),
+    [hashes],
+  );
+  const mentionPorPath = useMemo(
+    () => new Map((mentions?.urls ?? []).map((u) => [u.path, u])),
+    [mentions],
   );
 
 
@@ -113,6 +147,18 @@ const AdminPublishStatus = () => {
     fetch("/url-audit.json", { cache: "no-store" })
       .then((r) => (r.ok ? r.json() : null))
       .then((j) => j && setAudit(j))
+      .catch(() => undefined);
+
+    // Reuso de imagem/texto por hash (`npm run check:hashes`).
+    fetch("/content-hashes.json", { cache: "no-store" })
+      .then((r) => (r.ok ? r.json() : null))
+      .then((j) => j && setHashes(j))
+      .catch(() => undefined);
+
+    // Relevância local das páginas de serviço (`npm run check:bairro-mentions`).
+    fetch("/bairro-mentions.json", { cache: "no-store" })
+      .then((r) => (r.ok ? r.json() : null))
+      .then((j) => j && setMentions(j))
       .catch(() => undefined);
   }, []);
 
@@ -325,6 +371,47 @@ const AdminPublishStatus = () => {
                       ))}
                     </ul>
                   )}
+
+                  {(() => {
+                    const h = hashPorPath.get(u.path);
+                    const m = mentionPorPath.get(u.path);
+                    const reuso = (h?.imagensReutilizadas ?? 0) + (h?.textosReutilizados ?? 0);
+                    if (!reuso && (!m || m.aprovada)) return null;
+                    return (
+                      <div className="mt-3 space-y-2 rounded-lg border border-amber-500/40 bg-amber-500/5 p-3 text-xs">
+                        {reuso > 0 && (
+                          <div>
+                            <div className="flex items-center gap-1.5 font-medium text-amber-700">
+                              <Copy className="h-3.5 w-3.5" aria-hidden="true" />
+                              Conteúdo reutilizado: {h!.imagensReutilizadas} imagem(ns) e {h!.textosReutilizados} bloco(s)
+                            </div>
+                            <ul className="mt-1.5 space-y-1.5">
+                              {h!.ocorrencias.slice(0, 4).map((o, i) => (
+                                <li key={`${o.tipo}-${i}`} className="rounded bg-background/70 p-2">
+                                  <mark className="bg-amber-500/25 px-1">{o.amostra}</mark>
+                                  <div className="mt-1 text-muted-foreground">
+                                    também em {o.tambemEm.join(", ")}
+                                  </div>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+                        {m && !m.aprovada && (
+                          <div>
+                            <div className="flex items-center gap-1.5 font-medium text-amber-700">
+                              <MapPin className="h-3.5 w-3.5" aria-hidden="true" />
+                              Relevância local abaixo do mínimo
+                            </div>
+                            <p className="mt-1 text-muted-foreground">
+                              {m.problemas.join("; ")}
+                              {m.linksFaltando.length > 0 && ` · faltam links para ${m.linksFaltando.join(", ")}`}
+                            </p>
+                          </div>
+                        )}
+                      </div>
+                    );
+                  })()}
 
                   {u.bloqueios.length > 0 && (
                     <ul className="mt-3 space-y-1 text-xs text-red-600">
