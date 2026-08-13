@@ -132,10 +132,11 @@ const urls = alvos.map((p) => {
   const coerentes = esperados.length ? encontrados.filter((h) => esperados.includes(h)) : encontrados;
   const faltando = esperados.filter((h) => !encontrados.includes(h));
 
-  // No HTML estático o bloco de prova local costuma ser hidratado no cliente.
-  // Sem nenhum link interno no HTML, a medição de links é inconclusiva.
-  const totalInternos = (d?.links ?? []).filter((h) => h.startsWith("/")).length;
-  const linksConclusivos = confiancaPorPath.get(p)?.confianca === "renderizado" || totalInternos > 0;
+  // O bloco de prova local (links bairro⇄serviço) é hidratado no cliente:
+  // no HTML estático a contagem de links nunca é conclusiva. As MENÇÕES, sim —
+  // o corpo textual é pré-renderizado. Por isso o modo heurístico avalia texto
+  // e deixa os links pendentes até rodar com DOM renderizado.
+  const linksConclusivos = confiancaPorPath.get(p)?.confianca === "renderizado";
 
   const problemas = [];
   const inconclusivos = [];

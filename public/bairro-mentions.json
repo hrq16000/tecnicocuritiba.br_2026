@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-13T02:22:47.964Z",
+  "generatedAt": "2026-08-13T02:23:11.742Z",
   "regras": {
     "MIN_MENCOES": 3,
     "MIN_LINKS": 3,
@@ -7,9 +7,9 @@
   },
   "totals": {
     "avaliadas": 74,
-    "aprovadas": 0,
-    "reprovadas": 42,
-    "pendentes": 32
+    "aprovadas": 37,
+    "reprovadas": 0,
+    "pendentes": 74
   },
   "urls": [
     {
@@ -17,9 +17,11 @@
       "noSitemap": true,
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "10680 caracteres e 13 seções no HTML",
-      "conclusiva": true,
-      "status": "reprovada",
-      "inconclusivos": [],
+      "conclusiva": false,
+      "status": "pendente",
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [],
         "linksEncontrados": [],
@@ -34,7 +36,8 @@
       },
       "comoResolver": [
         "Citar naturalmente no corpo pelo menos 3 bairros atendidos (hoje: 0) — ex.: casos e logística de coleta em CIC, Batel, Água Verde.",
-        "Incluir os links internos do mapa local que faltam: /bairros/agua-verde, /bairros/batel, /bairros/bigorrilho, /bairros/boa-vista, /bairros/boqueirao, /bairros/cabral."
+        "Incluir os links internos do mapa local que faltam: /bairros/agua-verde, /bairros/batel, /bairros/bigorrilho, /bairros/boa-vista, /bairros/boqueirao, /bairros/cabral.",
+        "Rodar o gate com DOM renderizado (\"npx playwright install --with-deps chromium\") — o HTML estático desta rota traz só o shell."
       ],
       "mencoes": 0,
       "bairrosCitados": [],
@@ -49,8 +52,7 @@
         "/bairros/cabral"
       ],
       "problemas": [
-        "0 bairro(s) citado(s), mínimo 3",
-        "0 link(s) locais coerentes, mínimo 3"
+        "0 bairro(s) citado(s), mínimo 3"
       ],
       "aprovada": false
     },
@@ -59,9 +61,11 @@
       "noSitemap": true,
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "15601 caracteres e 6 seções no HTML",
-      "conclusiva": true,
-      "status": "reprovada",
-      "inconclusivos": [],
+      "conclusiva": false,
+      "status": "pendente",
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [
           "cic",
@@ -79,7 +83,8 @@
         ]
       },
       "comoResolver": [
-        "Incluir os links internos do mapa local que faltam: /bairros/agua-verde, /bairros/batel, /bairros/bigorrilho, /bairros/boa-vista, /bairros/boqueirao, /bairros/cabral."
+        "Incluir os links internos do mapa local que faltam: /bairros/agua-verde, /bairros/batel, /bairros/bigorrilho, /bairros/boa-vista, /bairros/boqueirao, /bairros/cabral.",
+        "Rodar o gate com DOM renderizado (\"npx playwright install --with-deps chromium\") — o HTML estático desta rota traz só o shell."
       ],
       "mencoes": 3,
       "bairrosCitados": [
@@ -97,19 +102,19 @@
         "/bairros/boqueirao",
         "/bairros/cabral"
       ],
-      "problemas": [
-        "0 link(s) locais coerentes, mínimo 3"
-      ],
-      "aprovada": false
+      "problemas": [],
+      "aprovada": true
     },
     {
       "path": "/servicos/conserto-pc-notebook/agua-verde",
       "noSitemap": true,
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "1612 caracteres e 3 seções no HTML",
-      "conclusiva": true,
-      "status": "reprovada",
-      "inconclusivos": [],
+      "conclusiva": false,
+      "status": "pendente",
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [
           "agua-verde",
@@ -120,7 +125,8 @@
         "linksFaltando": []
       },
       "comoResolver": [
-        "Adicionar 3 link(s) para páginas de bairro curadas no bloco de prova local."
+        "Adicionar 3 link(s) para páginas de bairro curadas no bloco de prova local.",
+        "Rodar o gate com DOM renderizado (\"npx playwright install --with-deps chromium\") — o HTML estático desta rota traz só o shell."
       ],
       "mencoes": 3,
       "bairrosCitados": [
@@ -131,19 +137,19 @@
       "linksLocais": 0,
       "linksExemplo": [],
       "linksFaltando": [],
-      "problemas": [
-        "0 link(s) locais coerentes, mínimo 3"
-      ],
-      "aprovada": false
+      "problemas": [],
+      "aprovada": true
     },
     {
       "path": "/servicos/conserto-pc-notebook/alto-da-xv",
       "noSitemap": true,
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "1610 caracteres e 3 seções no HTML",
-      "conclusiva": true,
-      "status": "reprovada",
-      "inconclusivos": [],
+      "conclusiva": false,
+      "status": "pendente",
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [
           "bigorrilho",
@@ -154,7 +160,8 @@
         "linksFaltando": []
       },
       "comoResolver": [
-        "Adicionar 3 link(s) para páginas de bairro curadas no bloco de prova local."
+        "Adicionar 3 link(s) para páginas de bairro curadas no bloco de prova local.",
+        "Rodar o gate com DOM renderizado (\"npx playwright install --with-deps chromium\") — o HTML estático desta rota traz só o shell."
       ],
       "mencoes": 3,
       "bairrosCitados": [
@@ -165,19 +172,19 @@
       "linksLocais": 0,
       "linksExemplo": [],
       "linksFaltando": [],
-      "problemas": [
-        "0 link(s) locais coerentes, mínimo 3"
-      ],
-      "aprovada": false
+      "problemas": [],
+      "aprovada": true
     },
     {
       "path": "/servicos/conserto-pc-notebook/centro",
       "noSitemap": true,
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "1650 caracteres e 3 seções no HTML",
-      "conclusiva": true,
-      "status": "reprovada",
-      "inconclusivos": [],
+      "conclusiva": false,
+      "status": "pendente",
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [
           "centro",
@@ -188,7 +195,8 @@
         "linksFaltando": []
       },
       "comoResolver": [
-        "Adicionar 3 link(s) para páginas de bairro curadas no bloco de prova local."
+        "Adicionar 3 link(s) para páginas de bairro curadas no bloco de prova local.",
+        "Rodar o gate com DOM renderizado (\"npx playwright install --with-deps chromium\") — o HTML estático desta rota traz só o shell."
       ],
       "mencoes": 3,
       "bairrosCitados": [
@@ -199,19 +207,19 @@
       "linksLocais": 0,
       "linksExemplo": [],
       "linksFaltando": [],
-      "problemas": [
-        "0 link(s) locais coerentes, mínimo 3"
-      ],
-      "aprovada": false
+      "problemas": [],
+      "aprovada": true
     },
     {
       "path": "/servicos/conserto-pc-notebook/ecoville",
       "noSitemap": true,
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "1600 caracteres e 3 seções no HTML",
-      "conclusiva": true,
-      "status": "reprovada",
-      "inconclusivos": [],
+      "conclusiva": false,
+      "status": "pendente",
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [
           "jardim-das-americas",
@@ -222,7 +230,8 @@
         "linksFaltando": []
       },
       "comoResolver": [
-        "Adicionar 3 link(s) para páginas de bairro curadas no bloco de prova local."
+        "Adicionar 3 link(s) para páginas de bairro curadas no bloco de prova local.",
+        "Rodar o gate com DOM renderizado (\"npx playwright install --with-deps chromium\") — o HTML estático desta rota traz só o shell."
       ],
       "mencoes": 3,
       "bairrosCitados": [
@@ -233,19 +242,19 @@
       "linksLocais": 0,
       "linksExemplo": [],
       "linksFaltando": [],
-      "problemas": [
-        "0 link(s) locais coerentes, mínimo 3"
-      ],
-      "aprovada": false
+      "problemas": [],
+      "aprovada": true
     },
     {
       "path": "/servicos/conserto-pc-notebook/jardim-das-americas",
       "noSitemap": true,
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "1666 caracteres e 3 seções no HTML",
-      "conclusiva": true,
-      "status": "reprovada",
-      "inconclusivos": [],
+      "conclusiva": false,
+      "status": "pendente",
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [
           "boqueirao",
@@ -256,7 +265,8 @@
       },
       "comoResolver": [
         "Citar naturalmente no corpo pelo menos 3 bairros atendidos (hoje: 2) — ex.: casos e logística de coleta em CIC, Batel, Água Verde.",
-        "Adicionar 3 link(s) para páginas de bairro curadas no bloco de prova local."
+        "Adicionar 3 link(s) para páginas de bairro curadas no bloco de prova local.",
+        "Rodar o gate com DOM renderizado (\"npx playwright install --with-deps chromium\") — o HTML estático desta rota traz só o shell."
       ],
       "mencoes": 2,
       "bairrosCitados": [
@@ -267,8 +277,7 @@
       "linksExemplo": [],
       "linksFaltando": [],
       "problemas": [
-        "2 bairro(s) citado(s), mínimo 3",
-        "0 link(s) locais coerentes, mínimo 3"
+        "2 bairro(s) citado(s), mínimo 3"
       ],
       "aprovada": false
     },
@@ -277,9 +286,11 @@
       "noSitemap": true,
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "1620 caracteres e 3 seções no HTML",
-      "conclusiva": true,
-      "status": "reprovada",
-      "inconclusivos": [],
+      "conclusiva": false,
+      "status": "pendente",
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [
           "agua-verde",
@@ -290,7 +301,8 @@
         "linksFaltando": []
       },
       "comoResolver": [
-        "Adicionar 3 link(s) para páginas de bairro curadas no bloco de prova local."
+        "Adicionar 3 link(s) para páginas de bairro curadas no bloco de prova local.",
+        "Rodar o gate com DOM renderizado (\"npx playwright install --with-deps chromium\") — o HTML estático desta rota traz só o shell."
       ],
       "mencoes": 3,
       "bairrosCitados": [
@@ -301,19 +313,19 @@
       "linksLocais": 0,
       "linksExemplo": [],
       "linksFaltando": [],
-      "problemas": [
-        "0 link(s) locais coerentes, mínimo 3"
-      ],
-      "aprovada": false
+      "problemas": [],
+      "aprovada": true
     },
     {
       "path": "/servicos/conserto-placa",
       "noSitemap": true,
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "14599 caracteres e 12 seções no HTML",
-      "conclusiva": true,
-      "status": "reprovada",
-      "inconclusivos": [],
+      "conclusiva": false,
+      "status": "pendente",
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [],
         "linksEncontrados": [],
@@ -328,7 +340,8 @@
       },
       "comoResolver": [
         "Citar naturalmente no corpo pelo menos 3 bairros atendidos (hoje: 0) — ex.: casos e logística de coleta em CIC, Batel, Água Verde.",
-        "Incluir os links internos do mapa local que faltam: /bairros/agua-verde, /bairros/batel, /bairros/bigorrilho, /bairros/boa-vista, /bairros/boqueirao, /bairros/cabral."
+        "Incluir os links internos do mapa local que faltam: /bairros/agua-verde, /bairros/batel, /bairros/bigorrilho, /bairros/boa-vista, /bairros/boqueirao, /bairros/cabral.",
+        "Rodar o gate com DOM renderizado (\"npx playwright install --with-deps chromium\") — o HTML estático desta rota traz só o shell."
       ],
       "mencoes": 0,
       "bairrosCitados": [],
@@ -343,8 +356,7 @@
         "/bairros/cabral"
       ],
       "problemas": [
-        "0 bairro(s) citado(s), mínimo 3",
-        "0 link(s) locais coerentes, mínimo 3"
+        "0 bairro(s) citado(s), mínimo 3"
       ],
       "aprovada": false
     },
@@ -353,9 +365,11 @@
       "noSitemap": true,
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "18902 caracteres e 14 seções no HTML",
-      "conclusiva": true,
-      "status": "reprovada",
-      "inconclusivos": [],
+      "conclusiva": false,
+      "status": "pendente",
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [],
         "linksEncontrados": [],
@@ -370,7 +384,8 @@
       },
       "comoResolver": [
         "Citar naturalmente no corpo pelo menos 3 bairros atendidos (hoje: 0) — ex.: casos e logística de coleta em CIC, Batel, Água Verde.",
-        "Incluir os links internos do mapa local que faltam: /servicos/manutencao-tv/agua-verde, /servicos/manutencao-tv/alto-da-xv, /servicos/manutencao-tv/batel, /servicos/manutencao-tv/bigorrilho, /servicos/manutencao-tv/boa-vista, /servicos/manutencao-tv/boqueirao."
+        "Incluir os links internos do mapa local que faltam: /servicos/manutencao-tv/agua-verde, /servicos/manutencao-tv/alto-da-xv, /servicos/manutencao-tv/batel, /servicos/manutencao-tv/bigorrilho, /servicos/manutencao-tv/boa-vista, /servicos/manutencao-tv/boqueirao.",
+        "Rodar o gate com DOM renderizado (\"npx playwright install --with-deps chromium\") — o HTML estático desta rota traz só o shell."
       ],
       "mencoes": 0,
       "bairrosCitados": [],
@@ -385,8 +400,7 @@
         "/servicos/manutencao-tv/boqueirao"
       ],
       "problemas": [
-        "0 bairro(s) citado(s), mínimo 3",
-        "0 link(s) locais coerentes, mínimo 3"
+        "0 bairro(s) citado(s), mínimo 3"
       ],
       "aprovada": false
     },
@@ -395,9 +409,11 @@
       "noSitemap": true,
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "8262 caracteres e 9 seções no HTML",
-      "conclusiva": true,
-      "status": "reprovada",
-      "inconclusivos": [],
+      "conclusiva": false,
+      "status": "pendente",
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [
           "ecoville",
@@ -415,7 +431,8 @@
         ]
       },
       "comoResolver": [
-        "Incluir os links internos do mapa local que faltam: /servicos/formatacao-computador/agua-verde, /servicos/formatacao-computador/alto-da-xv, /servicos/formatacao-computador/batel, /servicos/formatacao-computador/cic, /servicos/formatacao-computador/ecoville, /servicos/formatacao-computador/jardim-das-americas."
+        "Incluir os links internos do mapa local que faltam: /servicos/formatacao-computador/agua-verde, /servicos/formatacao-computador/alto-da-xv, /servicos/formatacao-computador/batel, /servicos/formatacao-computador/cic, /servicos/formatacao-computador/ecoville, /servicos/formatacao-computador/jardim-das-americas.",
+        "Rodar o gate com DOM renderizado (\"npx playwright install --with-deps chromium\") — o HTML estático desta rota traz só o shell."
       ],
       "mencoes": 3,
       "bairrosCitados": [
@@ -433,19 +450,19 @@
         "/servicos/formatacao-computador/ecoville",
         "/servicos/formatacao-computador/jardim-das-americas"
       ],
-      "problemas": [
-        "0 link(s) locais coerentes, mínimo 3"
-      ],
-      "aprovada": false
+      "problemas": [],
+      "aprovada": true
     },
     {
       "path": "/servicos/formatacao-computador/agua-verde",
       "noSitemap": true,
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "1648 caracteres e 3 seções no HTML",
-      "conclusiva": true,
-      "status": "reprovada",
-      "inconclusivos": [],
+      "conclusiva": false,
+      "status": "pendente",
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [
           "agua-verde",
@@ -456,7 +473,8 @@
       },
       "comoResolver": [
         "Citar naturalmente no corpo pelo menos 3 bairros atendidos (hoje: 2) — ex.: casos e logística de coleta em CIC, Batel, Água Verde.",
-        "Adicionar 3 link(s) para páginas de bairro curadas no bloco de prova local."
+        "Adicionar 3 link(s) para páginas de bairro curadas no bloco de prova local.",
+        "Rodar o gate com DOM renderizado (\"npx playwright install --with-deps chromium\") — o HTML estático desta rota traz só o shell."
       ],
       "mencoes": 2,
       "bairrosCitados": [
@@ -467,8 +485,7 @@
       "linksExemplo": [],
       "linksFaltando": [],
       "problemas": [
-        "2 bairro(s) citado(s), mínimo 3",
-        "0 link(s) locais coerentes, mínimo 3"
+        "2 bairro(s) citado(s), mínimo 3"
       ],
       "aprovada": false
     },
@@ -477,9 +494,11 @@
       "noSitemap": true,
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "1664 caracteres e 3 seções no HTML",
-      "conclusiva": true,
-      "status": "reprovada",
-      "inconclusivos": [],
+      "conclusiva": false,
+      "status": "pendente",
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [
           "santa-felicidade",
@@ -490,7 +509,8 @@
       },
       "comoResolver": [
         "Citar naturalmente no corpo pelo menos 3 bairros atendidos (hoje: 2) — ex.: casos e logística de coleta em CIC, Batel, Água Verde.",
-        "Adicionar 3 link(s) para páginas de bairro curadas no bloco de prova local."
+        "Adicionar 3 link(s) para páginas de bairro curadas no bloco de prova local.",
+        "Rodar o gate com DOM renderizado (\"npx playwright install --with-deps chromium\") — o HTML estático desta rota traz só o shell."
       ],
       "mencoes": 2,
       "bairrosCitados": [
@@ -501,8 +521,7 @@
       "linksExemplo": [],
       "linksFaltando": [],
       "problemas": [
-        "2 bairro(s) citado(s), mínimo 3",
-        "0 link(s) locais coerentes, mínimo 3"
+        "2 bairro(s) citado(s), mínimo 3"
       ],
       "aprovada": false
     },
@@ -511,9 +530,11 @@
       "noSitemap": true,
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "1620 caracteres e 3 seções no HTML",
-      "conclusiva": true,
-      "status": "reprovada",
-      "inconclusivos": [],
+      "conclusiva": false,
+      "status": "pendente",
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [
           "batel",
@@ -524,7 +545,8 @@
         "linksFaltando": []
       },
       "comoResolver": [
-        "Adicionar 3 link(s) para páginas de bairro curadas no bloco de prova local."
+        "Adicionar 3 link(s) para páginas de bairro curadas no bloco de prova local.",
+        "Rodar o gate com DOM renderizado (\"npx playwright install --with-deps chromium\") — o HTML estático desta rota traz só o shell."
       ],
       "mencoes": 3,
       "bairrosCitados": [
@@ -535,19 +557,19 @@
       "linksLocais": 0,
       "linksExemplo": [],
       "linksFaltando": [],
-      "problemas": [
-        "0 link(s) locais coerentes, mínimo 3"
-      ],
-      "aprovada": false
+      "problemas": [],
+      "aprovada": true
     },
     {
       "path": "/servicos/formatacao-computador/cic",
       "noSitemap": true,
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "1606 caracteres e 3 seções no HTML",
-      "conclusiva": true,
-      "status": "reprovada",
-      "inconclusivos": [],
+      "conclusiva": false,
+      "status": "pendente",
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [
           "cic",
@@ -558,7 +580,8 @@
       },
       "comoResolver": [
         "Citar naturalmente no corpo pelo menos 3 bairros atendidos (hoje: 2) — ex.: casos e logística de coleta em CIC, Batel, Água Verde.",
-        "Adicionar 3 link(s) para páginas de bairro curadas no bloco de prova local."
+        "Adicionar 3 link(s) para páginas de bairro curadas no bloco de prova local.",
+        "Rodar o gate com DOM renderizado (\"npx playwright install --with-deps chromium\") — o HTML estático desta rota traz só o shell."
       ],
       "mencoes": 2,
       "bairrosCitados": [
@@ -569,8 +592,7 @@
       "linksExemplo": [],
       "linksFaltando": [],
       "problemas": [
-        "2 bairro(s) citado(s), mínimo 3",
-        "0 link(s) locais coerentes, mínimo 3"
+        "2 bairro(s) citado(s), mínimo 3"
       ],
       "aprovada": false
     },
@@ -579,9 +601,11 @@
       "noSitemap": true,
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "1636 caracteres e 3 seções no HTML",
-      "conclusiva": true,
-      "status": "reprovada",
-      "inconclusivos": [],
+      "conclusiva": false,
+      "status": "pendente",
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [
           "jardim-das-americas",
@@ -592,7 +616,8 @@
       },
       "comoResolver": [
         "Citar naturalmente no corpo pelo menos 3 bairros atendidos (hoje: 2) — ex.: casos e logística de coleta em CIC, Batel, Água Verde.",
-        "Adicionar 3 link(s) para páginas de bairro curadas no bloco de prova local."
+        "Adicionar 3 link(s) para páginas de bairro curadas no bloco de prova local.",
+        "Rodar o gate com DOM renderizado (\"npx playwright install --with-deps chromium\") — o HTML estático desta rota traz só o shell."
       ],
       "mencoes": 2,
       "bairrosCitados": [
@@ -603,8 +628,7 @@
       "linksExemplo": [],
       "linksFaltando": [],
       "problemas": [
-        "2 bairro(s) citado(s), mínimo 3",
-        "0 link(s) locais coerentes, mínimo 3"
+        "2 bairro(s) citado(s), mínimo 3"
       ],
       "aprovada": false
     },
@@ -613,9 +637,11 @@
       "noSitemap": true,
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "1695 caracteres e 3 seções no HTML",
-      "conclusiva": true,
-      "status": "reprovada",
-      "inconclusivos": [],
+      "conclusiva": false,
+      "status": "pendente",
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [
           "jardim-das-americas",
@@ -626,7 +652,8 @@
         "linksFaltando": []
       },
       "comoResolver": [
-        "Adicionar 3 link(s) para páginas de bairro curadas no bloco de prova local."
+        "Adicionar 3 link(s) para páginas de bairro curadas no bloco de prova local.",
+        "Rodar o gate com DOM renderizado (\"npx playwright install --with-deps chromium\") — o HTML estático desta rota traz só o shell."
       ],
       "mencoes": 3,
       "bairrosCitados": [
@@ -637,19 +664,19 @@
       "linksLocais": 0,
       "linksExemplo": [],
       "linksFaltando": [],
-      "problemas": [
-        "0 link(s) locais coerentes, mínimo 3"
-      ],
-      "aprovada": false
+      "problemas": [],
+      "aprovada": true
     },
     {
       "path": "/servicos/formatacao-computador/reboucas",
       "noSitemap": true,
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "1656 caracteres e 3 seções no HTML",
-      "conclusiva": true,
-      "status": "reprovada",
-      "inconclusivos": [],
+      "conclusiva": false,
+      "status": "pendente",
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [
           "jardim-das-americas",
@@ -660,7 +687,8 @@
         "linksFaltando": []
       },
       "comoResolver": [
-        "Adicionar 3 link(s) para páginas de bairro curadas no bloco de prova local."
+        "Adicionar 3 link(s) para páginas de bairro curadas no bloco de prova local.",
+        "Rodar o gate com DOM renderizado (\"npx playwright install --with-deps chromium\") — o HTML estático desta rota traz só o shell."
       ],
       "mencoes": 3,
       "bairrosCitados": [
@@ -671,19 +699,19 @@
       "linksLocais": 0,
       "linksExemplo": [],
       "linksFaltando": [],
-      "problemas": [
-        "0 link(s) locais coerentes, mínimo 3"
-      ],
-      "aprovada": false
+      "problemas": [],
+      "aprovada": true
     },
     {
       "path": "/servicos/manutencao-de-computador",
       "noSitemap": true,
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "8127 caracteres e 9 seções no HTML",
-      "conclusiva": true,
-      "status": "reprovada",
-      "inconclusivos": [],
+      "conclusiva": false,
+      "status": "pendente",
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [],
         "linksEncontrados": [],
@@ -698,7 +726,8 @@
       },
       "comoResolver": [
         "Citar naturalmente no corpo pelo menos 3 bairros atendidos (hoje: 0) — ex.: casos e logística de coleta em CIC, Batel, Água Verde.",
-        "Incluir os links internos do mapa local que faltam: /servicos/conserto-pc-notebook/agua-verde, /servicos/conserto-pc-notebook/alto-da-xv, /servicos/conserto-pc-notebook/centro, /servicos/conserto-pc-notebook/ecoville, /servicos/conserto-pc-notebook/jardim-das-americas, /servicos/conserto-pc-notebook/reboucas."
+        "Incluir os links internos do mapa local que faltam: /servicos/conserto-pc-notebook/agua-verde, /servicos/conserto-pc-notebook/alto-da-xv, /servicos/conserto-pc-notebook/centro, /servicos/conserto-pc-notebook/ecoville, /servicos/conserto-pc-notebook/jardim-das-americas, /servicos/conserto-pc-notebook/reboucas.",
+        "Rodar o gate com DOM renderizado (\"npx playwright install --with-deps chromium\") — o HTML estático desta rota traz só o shell."
       ],
       "mencoes": 0,
       "bairrosCitados": [],
@@ -713,8 +742,7 @@
         "/servicos/conserto-pc-notebook/reboucas"
       ],
       "problemas": [
-        "0 bairro(s) citado(s), mínimo 3",
-        "0 link(s) locais coerentes, mínimo 3"
+        "0 bairro(s) citado(s), mínimo 3"
       ],
       "aprovada": false
     },
@@ -723,9 +751,11 @@
       "noSitemap": true,
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "7914 caracteres e 9 seções no HTML",
-      "conclusiva": true,
-      "status": "reprovada",
-      "inconclusivos": [],
+      "conclusiva": false,
+      "status": "pendente",
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [],
         "linksEncontrados": [],
@@ -740,7 +770,8 @@
       },
       "comoResolver": [
         "Citar naturalmente no corpo pelo menos 3 bairros atendidos (hoje: 0) — ex.: casos e logística de coleta em CIC, Batel, Água Verde.",
-        "Incluir os links internos do mapa local que faltam: /bairros/agua-verde, /bairros/batel, /bairros/bigorrilho, /bairros/boa-vista, /bairros/boqueirao, /bairros/cabral."
+        "Incluir os links internos do mapa local que faltam: /bairros/agua-verde, /bairros/batel, /bairros/bigorrilho, /bairros/boa-vista, /bairros/boqueirao, /bairros/cabral.",
+        "Rodar o gate com DOM renderizado (\"npx playwright install --with-deps chromium\") — o HTML estático desta rota traz só o shell."
       ],
       "mencoes": 0,
       "bairrosCitados": [],
@@ -755,8 +786,7 @@
         "/bairros/cabral"
       ],
       "problemas": [
-        "0 bairro(s) citado(s), mínimo 3",
-        "0 link(s) locais coerentes, mínimo 3"
+        "0 bairro(s) citado(s), mínimo 3"
       ],
       "aprovada": false
     },
@@ -765,9 +795,11 @@
       "noSitemap": true,
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "9607 caracteres e 11 seções no HTML",
-      "conclusiva": true,
-      "status": "reprovada",
-      "inconclusivos": [],
+      "conclusiva": false,
+      "status": "pendente",
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [],
         "linksEncontrados": [],
@@ -782,7 +814,8 @@
       },
       "comoResolver": [
         "Citar naturalmente no corpo pelo menos 3 bairros atendidos (hoje: 0) — ex.: casos e logística de coleta em CIC, Batel, Água Verde.",
-        "Incluir os links internos do mapa local que faltam: /bairros/agua-verde, /bairros/batel, /bairros/bigorrilho, /bairros/boa-vista, /bairros/boqueirao, /bairros/cabral."
+        "Incluir os links internos do mapa local que faltam: /bairros/agua-verde, /bairros/batel, /bairros/bigorrilho, /bairros/boa-vista, /bairros/boqueirao, /bairros/cabral.",
+        "Rodar o gate com DOM renderizado (\"npx playwright install --with-deps chromium\") — o HTML estático desta rota traz só o shell."
       ],
       "mencoes": 0,
       "bairrosCitados": [],
@@ -797,8 +830,7 @@
         "/bairros/cabral"
       ],
       "problemas": [
-        "0 bairro(s) citado(s), mínimo 3",
-        "0 link(s) locais coerentes, mínimo 3"
+        "0 bairro(s) citado(s), mínimo 3"
       ],
       "aprovada": false
     },
@@ -809,7 +841,9 @@
       "confiancaMotivo": "HTML traz só o shell (907 caracteres, 2 seções) — medição estática não é conclusiva",
       "conclusiva": false,
       "status": "pendente",
-      "inconclusivos": [],
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [
           "agua-verde",
@@ -832,8 +866,7 @@
       "linksExemplo": [],
       "linksFaltando": [],
       "problemas": [
-        "2 bairro(s) citado(s), mínimo 3",
-        "0 link(s) locais coerentes, mínimo 3"
+        "2 bairro(s) citado(s), mínimo 3"
       ],
       "aprovada": false
     },
@@ -844,7 +877,9 @@
       "confiancaMotivo": "HTML traz só o shell (894 caracteres, 2 seções) — medição estática não é conclusiva",
       "conclusiva": false,
       "status": "pendente",
-      "inconclusivos": [],
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [
           "santa-felicidade",
@@ -867,10 +902,8 @@
       "linksLocais": 0,
       "linksExemplo": [],
       "linksFaltando": [],
-      "problemas": [
-        "0 link(s) locais coerentes, mínimo 3"
-      ],
-      "aprovada": false
+      "problemas": [],
+      "aprovada": true
     },
     {
       "path": "/servicos/manutencao-tv/batel",
@@ -879,7 +912,9 @@
       "confiancaMotivo": "HTML traz só o shell (863 caracteres, 2 seções) — medição estática não é conclusiva",
       "conclusiva": false,
       "status": "pendente",
-      "inconclusivos": [],
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [
           "batel",
@@ -902,10 +937,8 @@
       "linksLocais": 0,
       "linksExemplo": [],
       "linksFaltando": [],
-      "problemas": [
-        "0 link(s) locais coerentes, mínimo 3"
-      ],
-      "aprovada": false
+      "problemas": [],
+      "aprovada": true
     },
     {
       "path": "/servicos/manutencao-tv/bigorrilho",
@@ -914,7 +947,9 @@
       "confiancaMotivo": "HTML traz só o shell (892 caracteres, 2 seções) — medição estática não é conclusiva",
       "conclusiva": false,
       "status": "pendente",
-      "inconclusivos": [],
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [
           "agua-verde",
@@ -937,10 +972,8 @@
       "linksLocais": 0,
       "linksExemplo": [],
       "linksFaltando": [],
-      "problemas": [
-        "0 link(s) locais coerentes, mínimo 3"
-      ],
-      "aprovada": false
+      "problemas": [],
+      "aprovada": true
     },
     {
       "path": "/servicos/manutencao-tv/boa-vista",
@@ -949,7 +982,9 @@
       "confiancaMotivo": "HTML traz só o shell (884 caracteres, 2 seções) — medição estática não é conclusiva",
       "conclusiva": false,
       "status": "pendente",
-      "inconclusivos": [],
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [
           "agua-verde",
@@ -972,8 +1007,7 @@
       "linksExemplo": [],
       "linksFaltando": [],
       "problemas": [
-        "2 bairro(s) citado(s), mínimo 3",
-        "0 link(s) locais coerentes, mínimo 3"
+        "2 bairro(s) citado(s), mínimo 3"
       ],
       "aprovada": false
     },
@@ -984,7 +1018,9 @@
       "confiancaMotivo": "HTML traz só o shell (884 caracteres, 2 seções) — medição estática não é conclusiva",
       "conclusiva": false,
       "status": "pendente",
-      "inconclusivos": [],
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [
           "boqueirao",
@@ -1007,8 +1043,7 @@
       "linksExemplo": [],
       "linksFaltando": [],
       "problemas": [
-        "2 bairro(s) citado(s), mínimo 3",
-        "0 link(s) locais coerentes, mínimo 3"
+        "2 bairro(s) citado(s), mínimo 3"
       ],
       "aprovada": false
     },
@@ -1019,7 +1054,9 @@
       "confiancaMotivo": "HTML traz só o shell (867 caracteres, 2 seções) — medição estática não é conclusiva",
       "conclusiva": false,
       "status": "pendente",
-      "inconclusivos": [],
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [
           "agua-verde",
@@ -1042,10 +1079,8 @@
       "linksLocais": 0,
       "linksExemplo": [],
       "linksFaltando": [],
-      "problemas": [
-        "0 link(s) locais coerentes, mínimo 3"
-      ],
-      "aprovada": false
+      "problemas": [],
+      "aprovada": true
     },
     {
       "path": "/servicos/manutencao-tv/cajuru",
@@ -1054,7 +1089,9 @@
       "confiancaMotivo": "HTML traz só o shell (856 caracteres, 2 seções) — medição estática não é conclusiva",
       "conclusiva": false,
       "status": "pendente",
-      "inconclusivos": [],
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [
           "cajuru",
@@ -1077,10 +1114,8 @@
       "linksLocais": 0,
       "linksExemplo": [],
       "linksFaltando": [],
-      "problemas": [
-        "0 link(s) locais coerentes, mínimo 3"
-      ],
-      "aprovada": false
+      "problemas": [],
+      "aprovada": true
     },
     {
       "path": "/servicos/manutencao-tv/centro",
@@ -1089,7 +1124,9 @@
       "confiancaMotivo": "HTML traz só o shell (856 caracteres, 2 seções) — medição estática não é conclusiva",
       "conclusiva": false,
       "status": "pendente",
-      "inconclusivos": [],
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [
           "centro",
@@ -1112,10 +1149,8 @@
       "linksLocais": 0,
       "linksExemplo": [],
       "linksFaltando": [],
-      "problemas": [
-        "0 link(s) locais coerentes, mínimo 3"
-      ],
-      "aprovada": false
+      "problemas": [],
+      "aprovada": true
     },
     {
       "path": "/servicos/manutencao-tv/cic",
@@ -1124,7 +1159,9 @@
       "confiancaMotivo": "HTML traz só o shell (852 caracteres, 2 seções) — medição estática não é conclusiva",
       "conclusiva": false,
       "status": "pendente",
-      "inconclusivos": [],
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [
           "cic",
@@ -1147,10 +1184,8 @@
       "linksLocais": 0,
       "linksExemplo": [],
       "linksFaltando": [],
-      "problemas": [
-        "0 link(s) locais coerentes, mínimo 3"
-      ],
-      "aprovada": false
+      "problemas": [],
+      "aprovada": true
     },
     {
       "path": "/servicos/manutencao-tv/cristo-rei",
@@ -1159,7 +1194,9 @@
       "confiancaMotivo": "HTML traz só o shell (881 caracteres, 2 seções) — medição estática não é conclusiva",
       "conclusiva": false,
       "status": "pendente",
-      "inconclusivos": [],
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [
           "cristo-rei",
@@ -1182,8 +1219,7 @@
       "linksExemplo": [],
       "linksFaltando": [],
       "problemas": [
-        "2 bairro(s) citado(s), mínimo 3",
-        "0 link(s) locais coerentes, mínimo 3"
+        "2 bairro(s) citado(s), mínimo 3"
       ],
       "aprovada": false
     },
@@ -1194,7 +1230,9 @@
       "confiancaMotivo": "HTML traz só o shell (882 caracteres, 2 seções) — medição estática não é conclusiva",
       "conclusiva": false,
       "status": "pendente",
-      "inconclusivos": [],
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [
           "agua-verde",
@@ -1217,10 +1255,8 @@
       "linksLocais": 0,
       "linksExemplo": [],
       "linksFaltando": [],
-      "problemas": [
-        "0 link(s) locais coerentes, mínimo 3"
-      ],
-      "aprovada": false
+      "problemas": [],
+      "aprovada": true
     },
     {
       "path": "/servicos/manutencao-tv/jardim-das-americas",
@@ -1229,7 +1265,9 @@
       "confiancaMotivo": "HTML traz só o shell (926 caracteres, 2 seções) — medição estática não é conclusiva",
       "conclusiva": false,
       "status": "pendente",
-      "inconclusivos": [],
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [
           "centro",
@@ -1252,8 +1290,7 @@
       "linksExemplo": [],
       "linksFaltando": [],
       "problemas": [
-        "2 bairro(s) citado(s), mínimo 3",
-        "0 link(s) locais coerentes, mínimo 3"
+        "2 bairro(s) citado(s), mínimo 3"
       ],
       "aprovada": false
     },
@@ -1264,7 +1301,9 @@
       "confiancaMotivo": "HTML traz só o shell (858 caracteres, 2 seções) — medição estática não é conclusiva",
       "conclusiva": false,
       "status": "pendente",
-      "inconclusivos": [],
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [
           "portao",
@@ -1287,10 +1326,8 @@
       "linksLocais": 0,
       "linksExemplo": [],
       "linksFaltando": [],
-      "problemas": [
-        "0 link(s) locais coerentes, mínimo 3"
-      ],
-      "aprovada": false
+      "problemas": [],
+      "aprovada": true
     },
     {
       "path": "/servicos/manutencao-tv/reboucas",
@@ -1299,7 +1336,9 @@
       "confiancaMotivo": "HTML traz só o shell (870 caracteres, 2 seções) — medição estática não é conclusiva",
       "conclusiva": false,
       "status": "pendente",
-      "inconclusivos": [],
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [
           "agua-verde",
@@ -1322,10 +1361,8 @@
       "linksLocais": 0,
       "linksExemplo": [],
       "linksFaltando": [],
-      "problemas": [
-        "0 link(s) locais coerentes, mínimo 3"
-      ],
-      "aprovada": false
+      "problemas": [],
+      "aprovada": true
     },
     {
       "path": "/servicos/manutencao-tv/santa-felicidade",
@@ -1334,7 +1371,9 @@
       "confiancaMotivo": "HTML traz só o shell (919 caracteres, 2 seções) — medição estática não é conclusiva",
       "conclusiva": false,
       "status": "pendente",
-      "inconclusivos": [],
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [
           "bigorrilho",
@@ -1357,8 +1396,7 @@
       "linksExemplo": [],
       "linksFaltando": [],
       "problemas": [
-        "2 bairro(s) citado(s), mínimo 3",
-        "0 link(s) locais coerentes, mínimo 3"
+        "2 bairro(s) citado(s), mínimo 3"
       ],
       "aprovada": false
     },
@@ -1367,9 +1405,11 @@
       "noSitemap": true,
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "16384 caracteres e 14 seções no HTML",
-      "conclusiva": true,
-      "status": "reprovada",
-      "inconclusivos": [],
+      "conclusiva": false,
+      "status": "pendente",
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [
           "cic"
@@ -1386,7 +1426,8 @@
       },
       "comoResolver": [
         "Citar naturalmente no corpo pelo menos 3 bairros atendidos (hoje: 1) — ex.: casos e logística de coleta em CIC, Batel, Água Verde.",
-        "Incluir os links internos do mapa local que faltam: /bairros/agua-verde, /bairros/batel, /bairros/bigorrilho, /bairros/boa-vista, /bairros/boqueirao, /bairros/cabral."
+        "Incluir os links internos do mapa local que faltam: /bairros/agua-verde, /bairros/batel, /bairros/bigorrilho, /bairros/boa-vista, /bairros/boqueirao, /bairros/cabral.",
+        "Rodar o gate com DOM renderizado (\"npx playwright install --with-deps chromium\") — o HTML estático desta rota traz só o shell."
       ],
       "mencoes": 1,
       "bairrosCitados": [
@@ -1403,8 +1444,7 @@
         "/bairros/cabral"
       ],
       "problemas": [
-        "1 bairro(s) citado(s), mínimo 3",
-        "0 link(s) locais coerentes, mínimo 3"
+        "1 bairro(s) citado(s), mínimo 3"
       ],
       "aprovada": false
     },
@@ -1413,9 +1453,11 @@
       "noSitemap": true,
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "6831 caracteres e 8 seções no HTML",
-      "conclusiva": true,
-      "status": "reprovada",
-      "inconclusivos": [],
+      "conclusiva": false,
+      "status": "pendente",
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [
           "boqueirao",
@@ -1433,7 +1475,8 @@
       },
       "comoResolver": [
         "Citar naturalmente no corpo pelo menos 3 bairros atendidos (hoje: 2) — ex.: casos e logística de coleta em CIC, Batel, Água Verde.",
-        "Incluir os links internos do mapa local que faltam: /bairros/agua-verde, /bairros/batel, /bairros/bigorrilho, /bairros/boa-vista, /bairros/boqueirao, /bairros/cabral."
+        "Incluir os links internos do mapa local que faltam: /bairros/agua-verde, /bairros/batel, /bairros/bigorrilho, /bairros/boa-vista, /bairros/boqueirao, /bairros/cabral.",
+        "Rodar o gate com DOM renderizado (\"npx playwright install --with-deps chromium\") — o HTML estático desta rota traz só o shell."
       ],
       "mencoes": 2,
       "bairrosCitados": [
@@ -1451,8 +1494,7 @@
         "/bairros/cabral"
       ],
       "problemas": [
-        "2 bairro(s) citado(s), mínimo 3",
-        "0 link(s) locais coerentes, mínimo 3"
+        "2 bairro(s) citado(s), mínimo 3"
       ],
       "aprovada": false
     },
@@ -1461,9 +1503,11 @@
       "noSitemap": true,
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "15132 caracteres e 15 seções no HTML",
-      "conclusiva": true,
-      "status": "reprovada",
-      "inconclusivos": [],
+      "conclusiva": false,
+      "status": "pendente",
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [],
         "linksEncontrados": [],
@@ -1478,7 +1522,8 @@
       },
       "comoResolver": [
         "Citar naturalmente no corpo pelo menos 3 bairros atendidos (hoje: 0) — ex.: casos e logística de coleta em CIC, Batel, Água Verde.",
-        "Incluir os links internos do mapa local que faltam: /servicos/redes-wifi/agua-verde, /servicos/redes-wifi/alto-da-xv, /servicos/redes-wifi/batel, /servicos/redes-wifi/bigorrilho, /servicos/redes-wifi/boa-vista, /servicos/redes-wifi/boqueirao."
+        "Incluir os links internos do mapa local que faltam: /servicos/redes-wifi/agua-verde, /servicos/redes-wifi/alto-da-xv, /servicos/redes-wifi/batel, /servicos/redes-wifi/bigorrilho, /servicos/redes-wifi/boa-vista, /servicos/redes-wifi/boqueirao.",
+        "Rodar o gate com DOM renderizado (\"npx playwright install --with-deps chromium\") — o HTML estático desta rota traz só o shell."
       ],
       "mencoes": 0,
       "bairrosCitados": [],
@@ -1493,8 +1538,7 @@
         "/servicos/redes-wifi/boqueirao"
       ],
       "problemas": [
-        "0 bairro(s) citado(s), mínimo 3",
-        "0 link(s) locais coerentes, mínimo 3"
+        "0 bairro(s) citado(s), mínimo 3"
       ],
       "aprovada": false
     },
@@ -1505,7 +1549,9 @@
       "confiancaMotivo": "HTML traz só o shell (939 caracteres, 2 seções) — medição estática não é conclusiva",
       "conclusiva": false,
       "status": "pendente",
-      "inconclusivos": [],
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [
           "agua-verde",
@@ -1528,10 +1574,8 @@
       "linksLocais": 0,
       "linksExemplo": [],
       "linksFaltando": [],
-      "problemas": [
-        "0 link(s) locais coerentes, mínimo 3"
-      ],
-      "aprovada": false
+      "problemas": [],
+      "aprovada": true
     },
     {
       "path": "/servicos/redes-wifi/alto-da-xv",
@@ -1540,7 +1584,9 @@
       "confiancaMotivo": "HTML traz só o shell (931 caracteres, 2 seções) — medição estática não é conclusiva",
       "conclusiva": false,
       "status": "pendente",
-      "inconclusivos": [],
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [
           "centro",
@@ -1563,10 +1609,8 @@
       "linksLocais": 0,
       "linksExemplo": [],
       "linksFaltando": [],
-      "problemas": [
-        "0 link(s) locais coerentes, mínimo 3"
-      ],
-      "aprovada": false
+      "problemas": [],
+      "aprovada": true
     },
     {
       "path": "/servicos/redes-wifi/batel",
@@ -1575,7 +1619,9 @@
       "confiancaMotivo": "HTML traz só o shell (914 caracteres, 2 seções) — medição estática não é conclusiva",
       "conclusiva": false,
       "status": "pendente",
-      "inconclusivos": [],
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [
           "batel",
@@ -1598,8 +1644,7 @@
       "linksExemplo": [],
       "linksFaltando": [],
       "problemas": [
-        "2 bairro(s) citado(s), mínimo 3",
-        "0 link(s) locais coerentes, mínimo 3"
+        "2 bairro(s) citado(s), mínimo 3"
       ],
       "aprovada": false
     },
@@ -1610,7 +1655,9 @@
       "confiancaMotivo": "HTML traz só o shell (940 caracteres, 2 seções) — medição estática não é conclusiva",
       "conclusiva": false,
       "status": "pendente",
-      "inconclusivos": [],
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [
           "centro",
@@ -1635,10 +1682,8 @@
       "linksLocais": 0,
       "linksExemplo": [],
       "linksFaltando": [],
-      "problemas": [
-        "0 link(s) locais coerentes, mínimo 3"
-      ],
-      "aprovada": false
+      "problemas": [],
+      "aprovada": true
     },
     {
       "path": "/servicos/redes-wifi/boa-vista",
@@ -1647,7 +1692,9 @@
       "confiancaMotivo": "HTML traz só o shell (926 caracteres, 2 seções) — medição estática não é conclusiva",
       "conclusiva": false,
       "status": "pendente",
-      "inconclusivos": [],
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [
           "cic",
@@ -1670,10 +1717,8 @@
       "linksLocais": 0,
       "linksExemplo": [],
       "linksFaltando": [],
-      "problemas": [
-        "0 link(s) locais coerentes, mínimo 3"
-      ],
-      "aprovada": false
+      "problemas": [],
+      "aprovada": true
     },
     {
       "path": "/servicos/redes-wifi/boqueirao",
@@ -1682,7 +1727,9 @@
       "confiancaMotivo": "HTML traz só o shell (931 caracteres, 2 seções) — medição estática não é conclusiva",
       "conclusiva": false,
       "status": "pendente",
-      "inconclusivos": [],
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [
           "cic",
@@ -1705,10 +1752,8 @@
       "linksLocais": 0,
       "linksExemplo": [],
       "linksFaltando": [],
-      "problemas": [
-        "0 link(s) locais coerentes, mínimo 3"
-      ],
-      "aprovada": false
+      "problemas": [],
+      "aprovada": true
     },
     {
       "path": "/servicos/redes-wifi/cabral",
@@ -1717,7 +1762,9 @@
       "confiancaMotivo": "HTML traz só o shell (928 caracteres, 2 seções) — medição estática não é conclusiva",
       "conclusiva": false,
       "status": "pendente",
-      "inconclusivos": [],
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [
           "agua-verde",
@@ -1740,10 +1787,8 @@
       "linksLocais": 0,
       "linksExemplo": [],
       "linksFaltando": [],
-      "problemas": [
-        "0 link(s) locais coerentes, mínimo 3"
-      ],
-      "aprovada": false
+      "problemas": [],
+      "aprovada": true
     },
     {
       "path": "/servicos/redes-wifi/cajuru",
@@ -1752,7 +1797,9 @@
       "confiancaMotivo": "HTML traz só o shell (912 caracteres, 2 seções) — medição estática não é conclusiva",
       "conclusiva": false,
       "status": "pendente",
-      "inconclusivos": [],
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [
           "batel",
@@ -1775,10 +1822,8 @@
       "linksLocais": 0,
       "linksExemplo": [],
       "linksFaltando": [],
-      "problemas": [
-        "0 link(s) locais coerentes, mínimo 3"
-      ],
-      "aprovada": false
+      "problemas": [],
+      "aprovada": true
     },
     {
       "path": "/servicos/redes-wifi/centro",
@@ -1787,7 +1832,9 @@
       "confiancaMotivo": "HTML traz só o shell (922 caracteres, 2 seções) — medição estática não é conclusiva",
       "conclusiva": false,
       "status": "pendente",
-      "inconclusivos": [],
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [
           "agua-verde",
@@ -1810,8 +1857,7 @@
       "linksExemplo": [],
       "linksFaltando": [],
       "problemas": [
-        "2 bairro(s) citado(s), mínimo 3",
-        "0 link(s) locais coerentes, mínimo 3"
+        "2 bairro(s) citado(s), mínimo 3"
       ],
       "aprovada": false
     },
@@ -1822,7 +1868,9 @@
       "confiancaMotivo": "HTML traz só o shell (910 caracteres, 2 seções) — medição estática não é conclusiva",
       "conclusiva": false,
       "status": "pendente",
-      "inconclusivos": [],
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [
           "cic",
@@ -1845,8 +1893,7 @@
       "linksExemplo": [],
       "linksFaltando": [],
       "problemas": [
-        "2 bairro(s) citado(s), mínimo 3",
-        "0 link(s) locais coerentes, mínimo 3"
+        "2 bairro(s) citado(s), mínimo 3"
       ],
       "aprovada": false
     },
@@ -1857,7 +1904,9 @@
       "confiancaMotivo": "HTML traz só o shell (942 caracteres, 2 seções) — medição estática não é conclusiva",
       "conclusiva": false,
       "status": "pendente",
-      "inconclusivos": [],
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [
           "agua-verde",
@@ -1880,10 +1929,8 @@
       "linksLocais": 0,
       "linksExemplo": [],
       "linksFaltando": [],
-      "problemas": [
-        "0 link(s) locais coerentes, mínimo 3"
-      ],
-      "aprovada": false
+      "problemas": [],
+      "aprovada": true
     },
     {
       "path": "/servicos/redes-wifi/ecoville",
@@ -1892,7 +1939,9 @@
       "confiancaMotivo": "HTML traz só o shell (927 caracteres, 2 seções) — medição estática não é conclusiva",
       "conclusiva": false,
       "status": "pendente",
-      "inconclusivos": [],
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [
           "ecoville",
@@ -1915,10 +1964,8 @@
       "linksLocais": 0,
       "linksExemplo": [],
       "linksFaltando": [],
-      "problemas": [
-        "0 link(s) locais coerentes, mínimo 3"
-      ],
-      "aprovada": false
+      "problemas": [],
+      "aprovada": true
     },
     {
       "path": "/servicos/redes-wifi/jardim-das-americas",
@@ -1927,7 +1974,9 @@
       "confiancaMotivo": "HTML traz só o shell (983 caracteres, 2 seções) — medição estática não é conclusiva",
       "conclusiva": false,
       "status": "pendente",
-      "inconclusivos": [],
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [
           "agua-verde",
@@ -1950,10 +1999,8 @@
       "linksLocais": 0,
       "linksExemplo": [],
       "linksFaltando": [],
-      "problemas": [
-        "0 link(s) locais coerentes, mínimo 3"
-      ],
-      "aprovada": false
+      "problemas": [],
+      "aprovada": true
     },
     {
       "path": "/servicos/redes-wifi/portao",
@@ -1962,7 +2009,9 @@
       "confiancaMotivo": "HTML traz só o shell (927 caracteres, 2 seções) — medição estática não é conclusiva",
       "conclusiva": false,
       "status": "pendente",
-      "inconclusivos": [],
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [
           "portao",
@@ -1985,10 +2034,8 @@
       "linksLocais": 0,
       "linksExemplo": [],
       "linksFaltando": [],
-      "problemas": [
-        "0 link(s) locais coerentes, mínimo 3"
-      ],
-      "aprovada": false
+      "problemas": [],
+      "aprovada": true
     },
     {
       "path": "/servicos/redes-wifi/reboucas",
@@ -1997,7 +2044,9 @@
       "confiancaMotivo": "HTML traz só o shell (953 caracteres, 2 seções) — medição estática não é conclusiva",
       "conclusiva": false,
       "status": "pendente",
-      "inconclusivos": [],
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [
           "agua-verde",
@@ -2020,10 +2069,8 @@
       "linksLocais": 0,
       "linksExemplo": [],
       "linksFaltando": [],
-      "problemas": [
-        "0 link(s) locais coerentes, mínimo 3"
-      ],
-      "aprovada": false
+      "problemas": [],
+      "aprovada": true
     },
     {
       "path": "/servicos/redes-wifi/santa-felicidade",
@@ -2032,7 +2079,9 @@
       "confiancaMotivo": "HTML traz só o shell (965 caracteres, 2 seções) — medição estática não é conclusiva",
       "conclusiva": false,
       "status": "pendente",
-      "inconclusivos": [],
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [
           "santa-felicidade",
@@ -2055,8 +2104,7 @@
       "linksExemplo": [],
       "linksFaltando": [],
       "problemas": [
-        "2 bairro(s) citado(s), mínimo 3",
-        "0 link(s) locais coerentes, mínimo 3"
+        "2 bairro(s) citado(s), mínimo 3"
       ],
       "aprovada": false
     },
@@ -2065,9 +2113,11 @@
       "noSitemap": true,
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "5347 caracteres e 8 seções no HTML",
-      "conclusiva": true,
-      "status": "reprovada",
-      "inconclusivos": [],
+      "conclusiva": false,
+      "status": "pendente",
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [],
         "linksEncontrados": [],
@@ -2082,7 +2132,8 @@
       },
       "comoResolver": [
         "Citar naturalmente no corpo pelo menos 3 bairros atendidos (hoje: 0) — ex.: casos e logística de coleta em CIC, Batel, Água Verde.",
-        "Incluir os links internos do mapa local que faltam: /servicos/remocao-virus/agua-verde, /servicos/remocao-virus/alto-da-xv, /servicos/remocao-virus/cic, /servicos/remocao-virus/ecoville, /servicos/remocao-virus/jardim-das-americas, /servicos/remocao-virus/reboucas."
+        "Incluir os links internos do mapa local que faltam: /servicos/remocao-virus/agua-verde, /servicos/remocao-virus/alto-da-xv, /servicos/remocao-virus/cic, /servicos/remocao-virus/ecoville, /servicos/remocao-virus/jardim-das-americas, /servicos/remocao-virus/reboucas.",
+        "Rodar o gate com DOM renderizado (\"npx playwright install --with-deps chromium\") — o HTML estático desta rota traz só o shell."
       ],
       "mencoes": 0,
       "bairrosCitados": [],
@@ -2097,8 +2148,7 @@
         "/servicos/remocao-virus/reboucas"
       ],
       "problemas": [
-        "0 bairro(s) citado(s), mínimo 3",
-        "0 link(s) locais coerentes, mínimo 3"
+        "0 bairro(s) citado(s), mínimo 3"
       ],
       "aprovada": false
     },
@@ -2107,9 +2157,11 @@
       "noSitemap": true,
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "1651 caracteres e 3 seções no HTML",
-      "conclusiva": true,
-      "status": "reprovada",
-      "inconclusivos": [],
+      "conclusiva": false,
+      "status": "pendente",
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [
           "agua-verde"
@@ -2119,7 +2171,8 @@
       },
       "comoResolver": [
         "Citar naturalmente no corpo pelo menos 3 bairros atendidos (hoje: 1) — ex.: casos e logística de coleta em CIC, Batel, Água Verde.",
-        "Adicionar 3 link(s) para páginas de bairro curadas no bloco de prova local."
+        "Adicionar 3 link(s) para páginas de bairro curadas no bloco de prova local.",
+        "Rodar o gate com DOM renderizado (\"npx playwright install --with-deps chromium\") — o HTML estático desta rota traz só o shell."
       ],
       "mencoes": 1,
       "bairrosCitados": [
@@ -2129,8 +2182,7 @@
       "linksExemplo": [],
       "linksFaltando": [],
       "problemas": [
-        "1 bairro(s) citado(s), mínimo 3",
-        "0 link(s) locais coerentes, mínimo 3"
+        "1 bairro(s) citado(s), mínimo 3"
       ],
       "aprovada": false
     },
@@ -2139,9 +2191,11 @@
       "noSitemap": true,
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "1649 caracteres e 3 seções no HTML",
-      "conclusiva": true,
-      "status": "reprovada",
-      "inconclusivos": [],
+      "conclusiva": false,
+      "status": "pendente",
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [
           "boqueirao",
@@ -2152,7 +2206,8 @@
       },
       "comoResolver": [
         "Citar naturalmente no corpo pelo menos 3 bairros atendidos (hoje: 2) — ex.: casos e logística de coleta em CIC, Batel, Água Verde.",
-        "Adicionar 3 link(s) para páginas de bairro curadas no bloco de prova local."
+        "Adicionar 3 link(s) para páginas de bairro curadas no bloco de prova local.",
+        "Rodar o gate com DOM renderizado (\"npx playwright install --with-deps chromium\") — o HTML estático desta rota traz só o shell."
       ],
       "mencoes": 2,
       "bairrosCitados": [
@@ -2163,8 +2218,7 @@
       "linksExemplo": [],
       "linksFaltando": [],
       "problemas": [
-        "2 bairro(s) citado(s), mínimo 3",
-        "0 link(s) locais coerentes, mínimo 3"
+        "2 bairro(s) citado(s), mínimo 3"
       ],
       "aprovada": false
     },
@@ -2173,9 +2227,11 @@
       "noSitemap": true,
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "1599 caracteres e 3 seções no HTML",
-      "conclusiva": true,
-      "status": "reprovada",
-      "inconclusivos": [],
+      "conclusiva": false,
+      "status": "pendente",
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [
           "cic",
@@ -2186,7 +2242,8 @@
       },
       "comoResolver": [
         "Citar naturalmente no corpo pelo menos 3 bairros atendidos (hoje: 2) — ex.: casos e logística de coleta em CIC, Batel, Água Verde.",
-        "Adicionar 3 link(s) para páginas de bairro curadas no bloco de prova local."
+        "Adicionar 3 link(s) para páginas de bairro curadas no bloco de prova local.",
+        "Rodar o gate com DOM renderizado (\"npx playwright install --with-deps chromium\") — o HTML estático desta rota traz só o shell."
       ],
       "mencoes": 2,
       "bairrosCitados": [
@@ -2197,8 +2254,7 @@
       "linksExemplo": [],
       "linksFaltando": [],
       "problemas": [
-        "2 bairro(s) citado(s), mínimo 3",
-        "0 link(s) locais coerentes, mínimo 3"
+        "2 bairro(s) citado(s), mínimo 3"
       ],
       "aprovada": false
     },
@@ -2207,9 +2263,11 @@
       "noSitemap": true,
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "1651 caracteres e 3 seções no HTML",
-      "conclusiva": true,
-      "status": "reprovada",
-      "inconclusivos": [],
+      "conclusiva": false,
+      "status": "pendente",
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [
           "santa-felicidade",
@@ -2220,7 +2278,8 @@
       },
       "comoResolver": [
         "Citar naturalmente no corpo pelo menos 3 bairros atendidos (hoje: 2) — ex.: casos e logística de coleta em CIC, Batel, Água Verde.",
-        "Adicionar 3 link(s) para páginas de bairro curadas no bloco de prova local."
+        "Adicionar 3 link(s) para páginas de bairro curadas no bloco de prova local.",
+        "Rodar o gate com DOM renderizado (\"npx playwright install --with-deps chromium\") — o HTML estático desta rota traz só o shell."
       ],
       "mencoes": 2,
       "bairrosCitados": [
@@ -2231,8 +2290,7 @@
       "linksExemplo": [],
       "linksFaltando": [],
       "problemas": [
-        "2 bairro(s) citado(s), mínimo 3",
-        "0 link(s) locais coerentes, mínimo 3"
+        "2 bairro(s) citado(s), mínimo 3"
       ],
       "aprovada": false
     },
@@ -2241,9 +2299,11 @@
       "noSitemap": true,
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "1694 caracteres e 3 seções no HTML",
-      "conclusiva": true,
-      "status": "reprovada",
-      "inconclusivos": [],
+      "conclusiva": false,
+      "status": "pendente",
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [
           "cic",
@@ -2254,7 +2314,8 @@
         "linksFaltando": []
       },
       "comoResolver": [
-        "Adicionar 3 link(s) para páginas de bairro curadas no bloco de prova local."
+        "Adicionar 3 link(s) para páginas de bairro curadas no bloco de prova local.",
+        "Rodar o gate com DOM renderizado (\"npx playwright install --with-deps chromium\") — o HTML estático desta rota traz só o shell."
       ],
       "mencoes": 3,
       "bairrosCitados": [
@@ -2265,19 +2326,19 @@
       "linksLocais": 0,
       "linksExemplo": [],
       "linksFaltando": [],
-      "problemas": [
-        "0 link(s) locais coerentes, mínimo 3"
-      ],
-      "aprovada": false
+      "problemas": [],
+      "aprovada": true
     },
     {
       "path": "/servicos/remocao-virus/reboucas",
       "noSitemap": true,
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "1635 caracteres e 3 seções no HTML",
-      "conclusiva": true,
-      "status": "reprovada",
-      "inconclusivos": [],
+      "conclusiva": false,
+      "status": "pendente",
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [
           "portao",
@@ -2288,7 +2349,8 @@
         "linksFaltando": []
       },
       "comoResolver": [
-        "Adicionar 3 link(s) para páginas de bairro curadas no bloco de prova local."
+        "Adicionar 3 link(s) para páginas de bairro curadas no bloco de prova local.",
+        "Rodar o gate com DOM renderizado (\"npx playwright install --with-deps chromium\") — o HTML estático desta rota traz só o shell."
       ],
       "mencoes": 3,
       "bairrosCitados": [
@@ -2299,19 +2361,19 @@
       "linksLocais": 0,
       "linksExemplo": [],
       "linksFaltando": [],
-      "problemas": [
-        "0 link(s) locais coerentes, mínimo 3"
-      ],
-      "aprovada": false
+      "problemas": [],
+      "aprovada": true
     },
     {
       "path": "/servicos/suporte-home-office",
       "noSitemap": true,
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "11724 caracteres e 10 seções no HTML",
-      "conclusiva": true,
-      "status": "reprovada",
-      "inconclusivos": [],
+      "conclusiva": false,
+      "status": "pendente",
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [],
         "linksEncontrados": [],
@@ -2326,7 +2388,8 @@
       },
       "comoResolver": [
         "Citar naturalmente no corpo pelo menos 3 bairros atendidos (hoje: 0) — ex.: casos e logística de coleta em CIC, Batel, Água Verde.",
-        "Incluir os links internos do mapa local que faltam: /bairros/agua-verde, /bairros/batel, /bairros/bigorrilho, /bairros/boa-vista, /bairros/boqueirao, /bairros/cabral."
+        "Incluir os links internos do mapa local que faltam: /bairros/agua-verde, /bairros/batel, /bairros/bigorrilho, /bairros/boa-vista, /bairros/boqueirao, /bairros/cabral.",
+        "Rodar o gate com DOM renderizado (\"npx playwright install --with-deps chromium\") — o HTML estático desta rota traz só o shell."
       ],
       "mencoes": 0,
       "bairrosCitados": [],
@@ -2341,8 +2404,7 @@
         "/bairros/cabral"
       ],
       "problemas": [
-        "0 bairro(s) citado(s), mínimo 3",
-        "0 link(s) locais coerentes, mínimo 3"
+        "0 bairro(s) citado(s), mínimo 3"
       ],
       "aprovada": false
     },
@@ -2351,9 +2413,11 @@
       "noSitemap": true,
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "12603 caracteres e 12 seções no HTML",
-      "conclusiva": true,
-      "status": "reprovada",
-      "inconclusivos": [],
+      "conclusiva": false,
+      "status": "pendente",
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [],
         "linksEncontrados": [],
@@ -2368,7 +2432,8 @@
       },
       "comoResolver": [
         "Citar naturalmente no corpo pelo menos 3 bairros atendidos (hoje: 0) — ex.: casos e logística de coleta em CIC, Batel, Água Verde.",
-        "Incluir os links internos do mapa local que faltam: /bairros/agua-verde, /bairros/batel, /bairros/bigorrilho, /bairros/boa-vista, /bairros/boqueirao, /bairros/cabral."
+        "Incluir os links internos do mapa local que faltam: /bairros/agua-verde, /bairros/batel, /bairros/bigorrilho, /bairros/boa-vista, /bairros/boqueirao, /bairros/cabral.",
+        "Rodar o gate com DOM renderizado (\"npx playwright install --with-deps chromium\") — o HTML estático desta rota traz só o shell."
       ],
       "mencoes": 0,
       "bairrosCitados": [],
@@ -2383,8 +2448,7 @@
         "/bairros/cabral"
       ],
       "problemas": [
-        "0 bairro(s) citado(s), mínimo 3",
-        "0 link(s) locais coerentes, mínimo 3"
+        "0 bairro(s) citado(s), mínimo 3"
       ],
       "aprovada": false
     },
@@ -2393,9 +2457,11 @@
       "noSitemap": true,
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "1613 caracteres e 3 seções no HTML",
-      "conclusiva": true,
-      "status": "reprovada",
-      "inconclusivos": [],
+      "conclusiva": false,
+      "status": "pendente",
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [
           "agua-verde",
@@ -2406,7 +2472,8 @@
       },
       "comoResolver": [
         "Citar naturalmente no corpo pelo menos 3 bairros atendidos (hoje: 2) — ex.: casos e logística de coleta em CIC, Batel, Água Verde.",
-        "Adicionar 3 link(s) para páginas de bairro curadas no bloco de prova local."
+        "Adicionar 3 link(s) para páginas de bairro curadas no bloco de prova local.",
+        "Rodar o gate com DOM renderizado (\"npx playwright install --with-deps chromium\") — o HTML estático desta rota traz só o shell."
       ],
       "mencoes": 2,
       "bairrosCitados": [
@@ -2417,8 +2484,7 @@
       "linksExemplo": [],
       "linksFaltando": [],
       "problemas": [
-        "2 bairro(s) citado(s), mínimo 3",
-        "0 link(s) locais coerentes, mínimo 3"
+        "2 bairro(s) citado(s), mínimo 3"
       ],
       "aprovada": false
     },
@@ -2427,9 +2493,11 @@
       "noSitemap": true,
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "1611 caracteres e 3 seções no HTML",
-      "conclusiva": true,
-      "status": "reprovada",
-      "inconclusivos": [],
+      "conclusiva": false,
+      "status": "pendente",
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [
           "alto-da-xv",
@@ -2440,7 +2508,8 @@
       },
       "comoResolver": [
         "Citar naturalmente no corpo pelo menos 3 bairros atendidos (hoje: 2) — ex.: casos e logística de coleta em CIC, Batel, Água Verde.",
-        "Adicionar 3 link(s) para páginas de bairro curadas no bloco de prova local."
+        "Adicionar 3 link(s) para páginas de bairro curadas no bloco de prova local.",
+        "Rodar o gate com DOM renderizado (\"npx playwright install --with-deps chromium\") — o HTML estático desta rota traz só o shell."
       ],
       "mencoes": 2,
       "bairrosCitados": [
@@ -2451,8 +2520,7 @@
       "linksExemplo": [],
       "linksFaltando": [],
       "problemas": [
-        "2 bairro(s) citado(s), mínimo 3",
-        "0 link(s) locais coerentes, mínimo 3"
+        "2 bairro(s) citado(s), mínimo 3"
       ],
       "aprovada": false
     },
@@ -2461,9 +2529,11 @@
       "noSitemap": true,
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "1631 caracteres e 3 seções no HTML",
-      "conclusiva": true,
-      "status": "reprovada",
-      "inconclusivos": [],
+      "conclusiva": false,
+      "status": "pendente",
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [
           "cic",
@@ -2474,7 +2544,8 @@
       },
       "comoResolver": [
         "Citar naturalmente no corpo pelo menos 3 bairros atendidos (hoje: 2) — ex.: casos e logística de coleta em CIC, Batel, Água Verde.",
-        "Adicionar 3 link(s) para páginas de bairro curadas no bloco de prova local."
+        "Adicionar 3 link(s) para páginas de bairro curadas no bloco de prova local.",
+        "Rodar o gate com DOM renderizado (\"npx playwright install --with-deps chromium\") — o HTML estático desta rota traz só o shell."
       ],
       "mencoes": 2,
       "bairrosCitados": [
@@ -2485,8 +2556,7 @@
       "linksExemplo": [],
       "linksFaltando": [],
       "problemas": [
-        "2 bairro(s) citado(s), mínimo 3",
-        "0 link(s) locais coerentes, mínimo 3"
+        "2 bairro(s) citado(s), mínimo 3"
       ],
       "aprovada": false
     },
@@ -2495,9 +2565,11 @@
       "noSitemap": true,
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "1572 caracteres e 3 seções no HTML",
-      "conclusiva": true,
-      "status": "reprovada",
-      "inconclusivos": [],
+      "conclusiva": false,
+      "status": "pendente",
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [
           "cic",
@@ -2508,7 +2580,8 @@
       },
       "comoResolver": [
         "Citar naturalmente no corpo pelo menos 3 bairros atendidos (hoje: 2) — ex.: casos e logística de coleta em CIC, Batel, Água Verde.",
-        "Adicionar 3 link(s) para páginas de bairro curadas no bloco de prova local."
+        "Adicionar 3 link(s) para páginas de bairro curadas no bloco de prova local.",
+        "Rodar o gate com DOM renderizado (\"npx playwright install --with-deps chromium\") — o HTML estático desta rota traz só o shell."
       ],
       "mencoes": 2,
       "bairrosCitados": [
@@ -2519,8 +2592,7 @@
       "linksExemplo": [],
       "linksFaltando": [],
       "problemas": [
-        "2 bairro(s) citado(s), mínimo 3",
-        "0 link(s) locais coerentes, mínimo 3"
+        "2 bairro(s) citado(s), mínimo 3"
       ],
       "aprovada": false
     },
@@ -2529,9 +2601,11 @@
       "noSitemap": true,
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "1612 caracteres e 3 seções no HTML",
-      "conclusiva": true,
-      "status": "reprovada",
-      "inconclusivos": [],
+      "conclusiva": false,
+      "status": "pendente",
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [
           "ecoville",
@@ -2542,7 +2616,8 @@
       },
       "comoResolver": [
         "Citar naturalmente no corpo pelo menos 3 bairros atendidos (hoje: 2) — ex.: casos e logística de coleta em CIC, Batel, Água Verde.",
-        "Adicionar 3 link(s) para páginas de bairro curadas no bloco de prova local."
+        "Adicionar 3 link(s) para páginas de bairro curadas no bloco de prova local.",
+        "Rodar o gate com DOM renderizado (\"npx playwright install --with-deps chromium\") — o HTML estático desta rota traz só o shell."
       ],
       "mencoes": 2,
       "bairrosCitados": [
@@ -2553,8 +2628,7 @@
       "linksExemplo": [],
       "linksFaltando": [],
       "problemas": [
-        "2 bairro(s) citado(s), mínimo 3",
-        "0 link(s) locais coerentes, mínimo 3"
+        "2 bairro(s) citado(s), mínimo 3"
       ],
       "aprovada": false
     },
@@ -2563,9 +2637,11 @@
       "noSitemap": true,
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "1657 caracteres e 3 seções no HTML",
-      "conclusiva": true,
-      "status": "reprovada",
-      "inconclusivos": [],
+      "conclusiva": false,
+      "status": "pendente",
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [
           "agua-verde",
@@ -2576,7 +2652,8 @@
         "linksFaltando": []
       },
       "comoResolver": [
-        "Adicionar 3 link(s) para páginas de bairro curadas no bloco de prova local."
+        "Adicionar 3 link(s) para páginas de bairro curadas no bloco de prova local.",
+        "Rodar o gate com DOM renderizado (\"npx playwright install --with-deps chromium\") — o HTML estático desta rota traz só o shell."
       ],
       "mencoes": 3,
       "bairrosCitados": [
@@ -2587,19 +2664,19 @@
       "linksLocais": 0,
       "linksExemplo": [],
       "linksFaltando": [],
-      "problemas": [
-        "0 link(s) locais coerentes, mínimo 3"
-      ],
-      "aprovada": false
+      "problemas": [],
+      "aprovada": true
     },
     {
       "path": "/servicos/upgrade-ssd-memoria/portao",
       "noSitemap": true,
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "1585 caracteres e 3 seções no HTML",
-      "conclusiva": true,
-      "status": "reprovada",
-      "inconclusivos": [],
+      "conclusiva": false,
+      "status": "pendente",
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [
           "batel",
@@ -2610,7 +2687,8 @@
       },
       "comoResolver": [
         "Citar naturalmente no corpo pelo menos 3 bairros atendidos (hoje: 2) — ex.: casos e logística de coleta em CIC, Batel, Água Verde.",
-        "Adicionar 3 link(s) para páginas de bairro curadas no bloco de prova local."
+        "Adicionar 3 link(s) para páginas de bairro curadas no bloco de prova local.",
+        "Rodar o gate com DOM renderizado (\"npx playwright install --with-deps chromium\") — o HTML estático desta rota traz só o shell."
       ],
       "mencoes": 2,
       "bairrosCitados": [
@@ -2621,8 +2699,7 @@
       "linksExemplo": [],
       "linksFaltando": [],
       "problemas": [
-        "2 bairro(s) citado(s), mínimo 3",
-        "0 link(s) locais coerentes, mínimo 3"
+        "2 bairro(s) citado(s), mínimo 3"
       ],
       "aprovada": false
     },
@@ -2631,9 +2708,11 @@
       "noSitemap": true,
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "1603 caracteres e 3 seções no HTML",
-      "conclusiva": true,
-      "status": "reprovada",
-      "inconclusivos": [],
+      "conclusiva": false,
+      "status": "pendente",
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [
           "ecoville",
@@ -2644,7 +2723,8 @@
         "linksFaltando": []
       },
       "comoResolver": [
-        "Adicionar 3 link(s) para páginas de bairro curadas no bloco de prova local."
+        "Adicionar 3 link(s) para páginas de bairro curadas no bloco de prova local.",
+        "Rodar o gate com DOM renderizado (\"npx playwright install --with-deps chromium\") — o HTML estático desta rota traz só o shell."
       ],
       "mencoes": 3,
       "bairrosCitados": [
@@ -2655,19 +2735,19 @@
       "linksLocais": 0,
       "linksExemplo": [],
       "linksFaltando": [],
-      "problemas": [
-        "0 link(s) locais coerentes, mínimo 3"
-      ],
-      "aprovada": false
+      "problemas": [],
+      "aprovada": true
     },
     {
       "path": "/servicos/upgrade-ssd-ram",
       "noSitemap": true,
       "confianca": "estatico-confiavel",
       "confiancaMotivo": "8824 caracteres e 10 seções no HTML",
-      "conclusiva": true,
-      "status": "reprovada",
-      "inconclusivos": [],
+      "conclusiva": false,
+      "status": "pendente",
+      "inconclusivos": [
+        "0 link(s) locais coerentes, mínimo 3 (links não medidos no HTML estático)"
+      ],
       "evidencias": {
         "bairrosEncontrados": [
           "ecoville",
@@ -2685,7 +2765,8 @@
         ]
       },
       "comoResolver": [
-        "Incluir os links internos do mapa local que faltam: /servicos/upgrade-ssd-memoria/agua-verde, /servicos/upgrade-ssd-memoria/alto-da-xv, /servicos/upgrade-ssd-memoria/centro, /servicos/upgrade-ssd-memoria/cic, /servicos/upgrade-ssd-memoria/ecoville, /servicos/upgrade-ssd-memoria/jardim-das-americas."
+        "Incluir os links internos do mapa local que faltam: /servicos/upgrade-ssd-memoria/agua-verde, /servicos/upgrade-ssd-memoria/alto-da-xv, /servicos/upgrade-ssd-memoria/centro, /servicos/upgrade-ssd-memoria/cic, /servicos/upgrade-ssd-memoria/ecoville, /servicos/upgrade-ssd-memoria/jardim-das-americas.",
+        "Rodar o gate com DOM renderizado (\"npx playwright install --with-deps chromium\") — o HTML estático desta rota traz só o shell."
       ],
       "mencoes": 3,
       "bairrosCitados": [
@@ -2703,10 +2784,8 @@
         "/servicos/upgrade-ssd-memoria/ecoville",
         "/servicos/upgrade-ssd-memoria/jardim-das-americas"
       ],
-      "problemas": [
-        "0 link(s) locais coerentes, mínimo 3"
-      ],
-      "aprovada": false
+      "problemas": [],
+      "aprovada": true
     }
   ]
 }
