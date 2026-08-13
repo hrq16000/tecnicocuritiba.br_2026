@@ -17,6 +17,7 @@ import { existsSync, readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import path from "node:path";
 import { ACTIVE_SITEMAPS } from "./lib/curated-urls.mjs";
 import { LEGADO, WAVES, WAVE_MAX, WAVE_MIN, waveStatus } from "./lib/content-waves.mjs";
+import { readApprovals } from "./lib/wave-approvals.mjs";
 
 const readJson = (p) => (existsSync(p) ? JSON.parse(readFileSync(p, "utf8")) : null);
 
