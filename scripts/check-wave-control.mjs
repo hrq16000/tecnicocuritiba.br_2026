@@ -12,6 +12,7 @@ import { existsSync } from "node:fs";
 import path from "node:path";
 import { ACTIVE_SITEMAPS } from "./lib/curated-urls.mjs";
 import { LEGADO, WAVES, waveStatus } from "./lib/content-waves.mjs";
+import { approvedWeeks } from "./lib/wave-approvals.mjs";
 
 const existsInPublic = (p) => existsSync(path.resolve("public", p.replace(/^\//, "")));
 const curated = new Set(ACTIVE_SITEMAPS.flatMap(([, e]) => e.map((x) => x.path)));

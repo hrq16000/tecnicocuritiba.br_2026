@@ -5,6 +5,8 @@
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { ACTIVE_SITEMAPS, BASE_URL, EMPTY_SITEMAPS } from "./lib/curated-urls.mjs";
+import { WAVES } from "./lib/content-waves.mjs";
+import { approvedWeeks } from "./lib/wave-approvals.mjs";
 import { lastmodFor } from "./lib/lastmod.mjs";
 
 // Só entra no sitemap URL aprovada no check de originalidade
@@ -19,6 +21,14 @@ if (existsSync(APPROVAL_FILE)) {
   } catch {
     console.warn("aviso: reports/content-approval.json ilegível — sitemap gerado sem filtro de originalidade.");
   }
+}
+
+// URL declarada em onda só entra no sitemap depois da aprovação em lote
+// (scripts/lib/wave-approvals.json, via `npm run onda:aprovar`).
+const liberadas = approvedWeeks();
+for (const wave of WAVES) {
+  if (liberadas.has(wave.week)) continue;
+  for (const p of wave.paths) blocked.add(p);
 }
 
 function buildUrlset(entries) {
