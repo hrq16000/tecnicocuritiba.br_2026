@@ -19,13 +19,21 @@ const curated = new Set(ACTIVE_SITEMAPS.flatMap(([, e]) => e.map((x) => x.path))
 const wifiTv = [...curated].filter((p) => /^\/servicos\/(redes-wifi|manutencao-tv)\//.test(p));
 
 const status = waveStatus(existsInPublic);
+const liberadas = approvedWeeks();
 const errors = [];
 
 for (const wave of status) {
   errors.push(...wave.problems);
-  if (!wave.approved) {
+  const liberada = wave.approved && liberadas.has(wave.week);
+  if (!liberada) {
     for (const p of wave.paths) {
-      if (curated.has(p)) errors.push(`onda ${wave.week} não aprovada, mas ${p} já está no sitemap curado (deveria seguir noindex)`);
+      if (curated.has(p)) {
+        errors.push(
+          wave.approved
+            ? `onda ${wave.week} passa nos gates mas não foi liberada em lote (npm run onda:aprovar -- --week=${wave.week}); ${p} não pode estar no sitemap`
+            : `onda ${wave.week} não aprovada, mas ${p} já está no sitemap curado (deveria seguir noindex)`,
+        );
+      }
     }
   }
 }
