@@ -1,0 +1,514 @@
+{
+  "generatedAt": "2026-08-13T01:19:04.799Z",
+  "regras": {
+    "MINIMO_TOTAL": 3,
+    "secoes": [
+      {
+        "id": "contexto-local",
+        "titulo": "Contexto do bairro",
+        "minimo": 1,
+        "exigencia": "Rua, referência ou fachada reconhecível do bairro atendido (foto própria, sem banco de imagem)."
+      },
+      {
+        "id": "atendimento",
+        "titulo": "Atendimento em campo",
+        "minimo": 1,
+        "exigencia": "Coleta, entrega ou visita técnica realizada no bairro, com equipamento e contexto visíveis."
+      },
+      {
+        "id": "bancada",
+        "titulo": "Bancada",
+        "minimo": 1,
+        "exigencia": "Equipamento do atendimento em bancada, com instrumentação real visível."
+      }
+    ]
+  },
+  "totals": {
+    "bairros": 12,
+    "completos": 0,
+    "pendentes": 12,
+    "semAvaliacao": 0
+  },
+  "fila": [
+    {
+      "path": "/bairros/agua-verde",
+      "slug": "agua-verde",
+      "nome": "Água Verde",
+      "noSitemap": true,
+      "onda": null,
+      "fotosValidas": 0,
+      "minimoTotal": 3,
+      "secoes": [
+        {
+          "id": "contexto-local",
+          "titulo": "Contexto do bairro",
+          "minimo": 1,
+          "exigencia": "Rua, referência ou fachada reconhecível do bairro atendido (foto própria, sem banco de imagem).",
+          "cobertas": 0,
+          "ok": false
+        },
+        {
+          "id": "atendimento",
+          "titulo": "Atendimento em campo",
+          "minimo": 1,
+          "exigencia": "Coleta, entrega ou visita técnica realizada no bairro, com equipamento e contexto visíveis.",
+          "cobertas": 0,
+          "ok": false
+        },
+        {
+          "id": "bancada",
+          "titulo": "Bancada",
+          "minimo": 1,
+          "exigencia": "Equipamento do atendimento em bancada, com instrumentação real visível.",
+          "cobertas": 0,
+          "ok": false
+        }
+      ],
+      "problemasGate": [
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "status": "pendente",
+      "liberavel": false
+    },
+    {
+      "path": "/bairros/batel",
+      "slug": "batel",
+      "nome": "Batel",
+      "noSitemap": true,
+      "onda": null,
+      "fotosValidas": 0,
+      "minimoTotal": 3,
+      "secoes": [
+        {
+          "id": "contexto-local",
+          "titulo": "Contexto do bairro",
+          "minimo": 1,
+          "exigencia": "Rua, referência ou fachada reconhecível do bairro atendido (foto própria, sem banco de imagem).",
+          "cobertas": 0,
+          "ok": false
+        },
+        {
+          "id": "atendimento",
+          "titulo": "Atendimento em campo",
+          "minimo": 1,
+          "exigencia": "Coleta, entrega ou visita técnica realizada no bairro, com equipamento e contexto visíveis.",
+          "cobertas": 0,
+          "ok": false
+        },
+        {
+          "id": "bancada",
+          "titulo": "Bancada",
+          "minimo": 1,
+          "exigencia": "Equipamento do atendimento em bancada, com instrumentação real visível.",
+          "cobertas": 0,
+          "ok": false
+        }
+      ],
+      "problemasGate": [
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "status": "pendente",
+      "liberavel": false
+    },
+    {
+      "path": "/bairros/bigorrilho",
+      "slug": "bigorrilho",
+      "nome": "Bigorrilho",
+      "noSitemap": true,
+      "onda": null,
+      "fotosValidas": 0,
+      "minimoTotal": 3,
+      "secoes": [
+        {
+          "id": "contexto-local",
+          "titulo": "Contexto do bairro",
+          "minimo": 1,
+          "exigencia": "Rua, referência ou fachada reconhecível do bairro atendido (foto própria, sem banco de imagem).",
+          "cobertas": 0,
+          "ok": false
+        },
+        {
+          "id": "atendimento",
+          "titulo": "Atendimento em campo",
+          "minimo": 1,
+          "exigencia": "Coleta, entrega ou visita técnica realizada no bairro, com equipamento e contexto visíveis.",
+          "cobertas": 0,
+          "ok": false
+        },
+        {
+          "id": "bancada",
+          "titulo": "Bancada",
+          "minimo": 1,
+          "exigencia": "Equipamento do atendimento em bancada, com instrumentação real visível.",
+          "cobertas": 0,
+          "ok": false
+        }
+      ],
+      "problemasGate": [
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "status": "pendente",
+      "liberavel": false
+    },
+    {
+      "path": "/bairros/boa-vista",
+      "slug": "boa-vista",
+      "nome": "Boa Vista",
+      "noSitemap": true,
+      "onda": null,
+      "fotosValidas": 0,
+      "minimoTotal": 3,
+      "secoes": [
+        {
+          "id": "contexto-local",
+          "titulo": "Contexto do bairro",
+          "minimo": 1,
+          "exigencia": "Rua, referência ou fachada reconhecível do bairro atendido (foto própria, sem banco de imagem).",
+          "cobertas": 0,
+          "ok": false
+        },
+        {
+          "id": "atendimento",
+          "titulo": "Atendimento em campo",
+          "minimo": 1,
+          "exigencia": "Coleta, entrega ou visita técnica realizada no bairro, com equipamento e contexto visíveis.",
+          "cobertas": 0,
+          "ok": false
+        },
+        {
+          "id": "bancada",
+          "titulo": "Bancada",
+          "minimo": 1,
+          "exigencia": "Equipamento do atendimento em bancada, com instrumentação real visível.",
+          "cobertas": 0,
+          "ok": false
+        }
+      ],
+      "problemasGate": [
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "status": "pendente",
+      "liberavel": false
+    },
+    {
+      "path": "/bairros/boqueirao",
+      "slug": "boqueirao",
+      "nome": "Boqueirão",
+      "noSitemap": true,
+      "onda": null,
+      "fotosValidas": 0,
+      "minimoTotal": 3,
+      "secoes": [
+        {
+          "id": "contexto-local",
+          "titulo": "Contexto do bairro",
+          "minimo": 1,
+          "exigencia": "Rua, referência ou fachada reconhecível do bairro atendido (foto própria, sem banco de imagem).",
+          "cobertas": 0,
+          "ok": false
+        },
+        {
+          "id": "atendimento",
+          "titulo": "Atendimento em campo",
+          "minimo": 1,
+          "exigencia": "Coleta, entrega ou visita técnica realizada no bairro, com equipamento e contexto visíveis.",
+          "cobertas": 0,
+          "ok": false
+        },
+        {
+          "id": "bancada",
+          "titulo": "Bancada",
+          "minimo": 1,
+          "exigencia": "Equipamento do atendimento em bancada, com instrumentação real visível.",
+          "cobertas": 0,
+          "ok": false
+        }
+      ],
+      "problemasGate": [
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "status": "pendente",
+      "liberavel": false
+    },
+    {
+      "path": "/bairros/cabral",
+      "slug": "cabral",
+      "nome": "Cabral",
+      "noSitemap": true,
+      "onda": null,
+      "fotosValidas": 0,
+      "minimoTotal": 3,
+      "secoes": [
+        {
+          "id": "contexto-local",
+          "titulo": "Contexto do bairro",
+          "minimo": 1,
+          "exigencia": "Rua, referência ou fachada reconhecível do bairro atendido (foto própria, sem banco de imagem).",
+          "cobertas": 0,
+          "ok": false
+        },
+        {
+          "id": "atendimento",
+          "titulo": "Atendimento em campo",
+          "minimo": 1,
+          "exigencia": "Coleta, entrega ou visita técnica realizada no bairro, com equipamento e contexto visíveis.",
+          "cobertas": 0,
+          "ok": false
+        },
+        {
+          "id": "bancada",
+          "titulo": "Bancada",
+          "minimo": 1,
+          "exigencia": "Equipamento do atendimento em bancada, com instrumentação real visível.",
+          "cobertas": 0,
+          "ok": false
+        }
+      ],
+      "problemasGate": [
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "status": "pendente",
+      "liberavel": false
+    },
+    {
+      "path": "/bairros/cajuru",
+      "slug": "cajuru",
+      "nome": "Cajuru",
+      "noSitemap": true,
+      "onda": null,
+      "fotosValidas": 0,
+      "minimoTotal": 3,
+      "secoes": [
+        {
+          "id": "contexto-local",
+          "titulo": "Contexto do bairro",
+          "minimo": 1,
+          "exigencia": "Rua, referência ou fachada reconhecível do bairro atendido (foto própria, sem banco de imagem).",
+          "cobertas": 0,
+          "ok": false
+        },
+        {
+          "id": "atendimento",
+          "titulo": "Atendimento em campo",
+          "minimo": 1,
+          "exigencia": "Coleta, entrega ou visita técnica realizada no bairro, com equipamento e contexto visíveis.",
+          "cobertas": 0,
+          "ok": false
+        },
+        {
+          "id": "bancada",
+          "titulo": "Bancada",
+          "minimo": 1,
+          "exigencia": "Equipamento do atendimento em bancada, com instrumentação real visível.",
+          "cobertas": 0,
+          "ok": false
+        }
+      ],
+      "problemasGate": [
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "status": "pendente",
+      "liberavel": false
+    },
+    {
+      "path": "/bairros/centro",
+      "slug": "centro",
+      "nome": "Centro",
+      "noSitemap": true,
+      "onda": null,
+      "fotosValidas": 0,
+      "minimoTotal": 3,
+      "secoes": [
+        {
+          "id": "contexto-local",
+          "titulo": "Contexto do bairro",
+          "minimo": 1,
+          "exigencia": "Rua, referência ou fachada reconhecível do bairro atendido (foto própria, sem banco de imagem).",
+          "cobertas": 0,
+          "ok": false
+        },
+        {
+          "id": "atendimento",
+          "titulo": "Atendimento em campo",
+          "minimo": 1,
+          "exigencia": "Coleta, entrega ou visita técnica realizada no bairro, com equipamento e contexto visíveis.",
+          "cobertas": 0,
+          "ok": false
+        },
+        {
+          "id": "bancada",
+          "titulo": "Bancada",
+          "minimo": 1,
+          "exigencia": "Equipamento do atendimento em bancada, com instrumentação real visível.",
+          "cobertas": 0,
+          "ok": false
+        }
+      ],
+      "problemasGate": [
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "status": "pendente",
+      "liberavel": false
+    },
+    {
+      "path": "/bairros/cic",
+      "slug": "cic",
+      "nome": "CIC",
+      "noSitemap": true,
+      "onda": null,
+      "fotosValidas": 0,
+      "minimoTotal": 3,
+      "secoes": [
+        {
+          "id": "contexto-local",
+          "titulo": "Contexto do bairro",
+          "minimo": 1,
+          "exigencia": "Rua, referência ou fachada reconhecível do bairro atendido (foto própria, sem banco de imagem).",
+          "cobertas": 0,
+          "ok": false
+        },
+        {
+          "id": "atendimento",
+          "titulo": "Atendimento em campo",
+          "minimo": 1,
+          "exigencia": "Coleta, entrega ou visita técnica realizada no bairro, com equipamento e contexto visíveis.",
+          "cobertas": 0,
+          "ok": false
+        },
+        {
+          "id": "bancada",
+          "titulo": "Bancada",
+          "minimo": 1,
+          "exigencia": "Equipamento do atendimento em bancada, com instrumentação real visível.",
+          "cobertas": 0,
+          "ok": false
+        }
+      ],
+      "problemasGate": [
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "status": "pendente",
+      "liberavel": false
+    },
+    {
+      "path": "/bairros/cristo-rei",
+      "slug": "cristo-rei",
+      "nome": "Cristo Rei",
+      "noSitemap": true,
+      "onda": null,
+      "fotosValidas": 0,
+      "minimoTotal": 3,
+      "secoes": [
+        {
+          "id": "contexto-local",
+          "titulo": "Contexto do bairro",
+          "minimo": 1,
+          "exigencia": "Rua, referência ou fachada reconhecível do bairro atendido (foto própria, sem banco de imagem).",
+          "cobertas": 0,
+          "ok": false
+        },
+        {
+          "id": "atendimento",
+          "titulo": "Atendimento em campo",
+          "minimo": 1,
+          "exigencia": "Coleta, entrega ou visita técnica realizada no bairro, com equipamento e contexto visíveis.",
+          "cobertas": 0,
+          "ok": false
+        },
+        {
+          "id": "bancada",
+          "titulo": "Bancada",
+          "minimo": 1,
+          "exigencia": "Equipamento do atendimento em bancada, com instrumentação real visível.",
+          "cobertas": 0,
+          "ok": false
+        }
+      ],
+      "problemasGate": [
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "status": "pendente",
+      "liberavel": false
+    },
+    {
+      "path": "/bairros/portao",
+      "slug": "portao",
+      "nome": "Portão",
+      "noSitemap": true,
+      "onda": null,
+      "fotosValidas": 0,
+      "minimoTotal": 3,
+      "secoes": [
+        {
+          "id": "contexto-local",
+          "titulo": "Contexto do bairro",
+          "minimo": 1,
+          "exigencia": "Rua, referência ou fachada reconhecível do bairro atendido (foto própria, sem banco de imagem).",
+          "cobertas": 0,
+          "ok": false
+        },
+        {
+          "id": "atendimento",
+          "titulo": "Atendimento em campo",
+          "minimo": 1,
+          "exigencia": "Coleta, entrega ou visita técnica realizada no bairro, com equipamento e contexto visíveis.",
+          "cobertas": 0,
+          "ok": false
+        },
+        {
+          "id": "bancada",
+          "titulo": "Bancada",
+          "minimo": 1,
+          "exigencia": "Equipamento do atendimento em bancada, com instrumentação real visível.",
+          "cobertas": 0,
+          "ok": false
+        }
+      ],
+      "problemasGate": [
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "status": "pendente",
+      "liberavel": false
+    },
+    {
+      "path": "/bairros/santa-felicidade",
+      "slug": "santa-felicidade",
+      "nome": "Santa Felicidade",
+      "noSitemap": true,
+      "onda": null,
+      "fotosValidas": 0,
+      "minimoTotal": 3,
+      "secoes": [
+        {
+          "id": "contexto-local",
+          "titulo": "Contexto do bairro",
+          "minimo": 1,
+          "exigencia": "Rua, referência ou fachada reconhecível do bairro atendido (foto própria, sem banco de imagem).",
+          "cobertas": 0,
+          "ok": false
+        },
+        {
+          "id": "atendimento",
+          "titulo": "Atendimento em campo",
+          "minimo": 1,
+          "exigencia": "Coleta, entrega ou visita técnica realizada no bairro, com equipamento e contexto visíveis.",
+          "cobertas": 0,
+          "ok": false
+        },
+        {
+          "id": "bancada",
+          "titulo": "Bancada",
+          "minimo": 1,
+          "exigencia": "Equipamento do atendimento em bancada, com instrumentação real visível.",
+          "cobertas": 0,
+          "ok": false
+        }
+      ],
+      "problemasGate": [
+        "0 foto(s) real(is) válida(s) — mínimo 2"
+      ],
+      "status": "pendente",
+      "liberavel": false
+    }
+  ]
+}

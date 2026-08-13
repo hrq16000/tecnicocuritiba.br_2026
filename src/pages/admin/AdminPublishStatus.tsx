@@ -68,12 +68,31 @@ const badge = (estado: Estado) => {
   return map[estado];
 };
 
+interface AuditCheck {
+  id: string;
+  label: string;
+  ok: boolean | null;
+  detalhe: string;
+}
+
+interface AuditPayload {
+  generatedAt: string;
+  urls: { path: string; checklist: AuditCheck[]; aprovada: boolean }[];
+}
+
 const AdminPublishStatus = () => {
   const [data, setData] = useState<Payload | null>(null);
+  const [audit, setAudit] = useState<AuditPayload | null>(null);
   const [erro, setErro] = useState<string | null>(null);
   const [filtro, setFiltro] = useState<Estado | "todos">("publicado-com-pendencia");
   const [busca, setBusca] = useState("");
   const [copiada, setCopiada] = useState<string | null>(null);
+
+  const auditPorPath = useMemo(
+    () => new Map((audit?.urls ?? []).map((u) => [u.path, u])),
+    [audit],
+  );
+
 
   useEffect(() => {
     document.title = "Status de publicação | Painel interno";
@@ -89,7 +108,14 @@ const AdminPublishStatus = () => {
       .then((r) => (r.ok ? r.json() : Promise.reject(new Error(`HTTP ${r.status}`))))
       .then(setData)
       .catch(() => setErro("publish-status.json ainda não foi gerado. Rode `npm run report:publish-status`."));
+
+    // Auditoria detalhada por URL (opcional: só aparece depois de `npm run audit:urls`).
+    fetch("/url-audit.json", { cache: "no-store" })
+      .then((r) => (r.ok ? r.json() : null))
+      .then((j) => j && setAudit(j))
+      .catch(() => undefined);
   }, []);
+
 
   const urls = useMemo(() => {
     if (!data) return [];
@@ -280,6 +306,26 @@ const AdminPublishStatus = () => {
                     </span>
                   </div>
 
+                  {auditPorPath.get(u.path) && (
+                    <ul className="mt-3 space-y-1 text-xs">
+                      {auditPorPath.get(u.path)!.checklist.map((c) => (
+                        <li key={c.id} className="flex items-start gap-1.5">
+                          {c.ok === true ? (
+                            <CheckCircle2 className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emerald-600" aria-hidden="true" />
+                          ) : c.ok === false ? (
+                            <AlertTriangle className="mt-0.5 h-3.5 w-3.5 shrink-0 text-red-600" aria-hidden="true" />
+                          ) : (
+                            <Circle className="mt-0.5 h-3.5 w-3.5 shrink-0 text-muted-foreground" aria-hidden="true" />
+                          )}
+                          <span>
+                            {c.label}
+                            <span className="text-muted-foreground"> — {c.detalhe}</span>
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+
                   {u.bloqueios.length > 0 && (
                     <ul className="mt-3 space-y-1 text-xs text-red-600">
                       {u.bloqueios.map((b) => (
@@ -287,6 +333,7 @@ const AdminPublishStatus = () => {
                       ))}
                     </ul>
                   )}
+
                 </li>
               ))}
               {urls.length === 0 && (

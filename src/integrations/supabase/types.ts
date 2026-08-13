@@ -14,6 +14,45 @@ export type Database = {
   }
   public: {
     Tables: {
+      bairro_photo_proofs: {
+        Row: {
+          aprovada: boolean
+          bairro_slug: string
+          created_at: string
+          id: string
+          legenda: string | null
+          observacoes: string | null
+          route_path: string
+          secao: string
+          storage_path: string
+          uploaded_by: string | null
+        }
+        Insert: {
+          aprovada?: boolean
+          bairro_slug: string
+          created_at?: string
+          id?: string
+          legenda?: string | null
+          observacoes?: string | null
+          route_path: string
+          secao: string
+          storage_path: string
+          uploaded_by?: string | null
+        }
+        Update: {
+          aprovada?: boolean
+          bairro_slug?: string
+          created_at?: string
+          id?: string
+          legenda?: string | null
+          observacoes?: string | null
+          route_path?: string
+          secao?: string
+          storage_path?: string
+          uploaded_by?: string | null
+        }
+        Relationships: []
+      }
       click_events: {
         Row: {
           attribution_channel: string | null

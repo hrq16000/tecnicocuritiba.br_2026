@@ -13,6 +13,8 @@ import { PageTableOfContents } from "@/components/ui/PageTableOfContents";
 import { TrustStrip } from "@/components/TrustStrip";
 import { EditorialCallout } from "@/components/servico/EditorialCallout";
 import { InlineTriageCTA } from "@/components/servico/InlineTriageCTA";
+import { ProvaLocalSection } from "@/components/servico/ProvaLocalSection";
+
 import type { ServicoCaixa } from "@/lib/servicoVisual3q";
 import {
   EMPRESARIAL_SERVICO_HERO,
@@ -542,10 +544,10 @@ export const ServicoLandingLayout = ({ data }: { data: ServicoLandingData }) => 
           </div>
         </section>
       )}
-
-
+      <ProvaLocalSection path={`/servicos/${data.path}`} servico={data.serviceName} />
 
       <InterlinkingBlock />
+
       </main>
       <Footer />
     </div>
