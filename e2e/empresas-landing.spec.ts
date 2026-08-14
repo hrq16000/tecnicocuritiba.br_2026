@@ -66,7 +66,7 @@ test("formulário monta a mensagem empresarial e dispara os eventos do funil", a
 
   const wa = (await gaEvents(page)).find((e) => e.name === "wa_click")!;
   expect(wa.params.cta_location).toBe("empresas_formulario");
-  expect(wa.params.prioridade).toBe("parada");
+  expect(wa.params.prioridade).toBe("parado");
   expect(erros).toEqual([]);
 });
 
