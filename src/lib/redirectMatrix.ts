@@ -76,7 +76,9 @@ export const REDIRECT_MATRIX: RedirectRule[] = [
   // ── Aliases de intenção PJ (empresa / corporativo) ──────────
   { from: "/pessoa-juridica", to: "/empresa-de-ti-curitiba", motivo: "alias-pj" },
   { from: "/para-empresas", to: "/empresa-de-ti-curitiba", motivo: "alias-pj" },
-  { from: "/empresas", to: "/empresa-de-ti-curitiba", motivo: "alias-pj" },
+  // /empresas deixou de ser alias: passou a servir a landing B2B (noindex) com
+  // formulário de triagem empresarial. Os aliases /para-empresas e /ti-para-empresas
+  // continuam apontando para a página institucional indexável.
   { from: "/ti-para-empresas", to: "/empresa-de-ti-curitiba", motivo: "alias-pj" },
   { from: "/suporte-corporativo", to: "/empresa-de-ti-curitiba", motivo: "alias-pj" },
 ];

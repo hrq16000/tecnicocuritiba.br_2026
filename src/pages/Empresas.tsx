@@ -4,6 +4,7 @@ import { PageSEO } from "@/components/PageSEO";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import { EmpresasSchema } from "@/components/EmpresasSchema";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -52,6 +53,31 @@ const ETAPAS = [
   "Qualquer adicional só acontece com autorização explícita da empresa.",
   "Conclusão com registro do que foi feito e orientações de prevenção.",
 ];
+
+/** Fonte única das perguntas: o texto visível e o FAQPage saem daqui. */
+const FAQS = [
+  {
+    question: "Vocês atendem empresas em Curitiba e Região Metropolitana?",
+    answer:
+      "Sim. Atendemos empresas em Curitiba e na Região Metropolitana, incluindo São José dos Pinhais, Pinhais, Colombo, Araucária e Campo Largo. A modalidade (remoto, no local ou coleta) é definida na triagem pelo WhatsApp, conforme o problema e a urgência informados no formulário.",
+  },
+  {
+    question: "Como funciona o atendimento quando a operação está parada?",
+    answer:
+      "Solicitações marcadas como operação parada entram primeiro na fila de triagem. Fazemos a checagem inicial por WhatsApp para tentar restabelecer o essencial no mesmo dia e, quando é necessário atendimento presencial, o escopo e as condições são informados antes do deslocamento.",
+  },
+  {
+    question: "É possível contratar suporte recorrente para a empresa?",
+    answer:
+      "Sim. Depois do primeiro atendimento é possível combinar acompanhamento recorrente com manutenção preventiva, revisão de rede e rotina de backup. A periodicidade é definida caso a caso, sempre com escopo e valores informados por escrito antes de iniciar.",
+  },
+  {
+    question: "Como são informados os valores do atendimento empresarial?",
+    answer:
+      "O valor é informado antes da execução, a partir do diagnóstico. Nada é executado sem autorização explícita da empresa e qualquer adicional identificado durante o serviço volta para aprovação antes de continuar.",
+  },
+] as const;
+
 
 const Empresas = () => {
   const [empresa, setEmpresa] = useState("");
@@ -122,6 +148,7 @@ const Empresas = () => {
           { name: "Empresas", path: PATH },
         ]}
       />
+      <EmpresasSchema path={PATH} faqs={FAQS} />
       <Header />
       <main>
         <section className="bg-card border-b border-border">
@@ -326,7 +353,31 @@ const Empresas = () => {
             </div>
           </section>
         </AnimatedSection>
+
+        <AnimatedSection>
+          <section id="faq-empresas" className="py-12 md:py-16 bg-card border-t border-border">
+            <div className="container mx-auto max-w-3xl">
+              <h2 className="text-2xl md:text-3xl font-heading font-bold text-primary mb-6">
+                Perguntas frequentes sobre atendimento empresarial
+              </h2>
+              <div className="space-y-4">
+                {FAQS.map((faq) => (
+                  <details
+                    key={faq.question}
+                    className="rounded-xl border border-border bg-background p-4"
+                  >
+                    <summary className="cursor-pointer font-semibold text-primary">
+                      {faq.question}
+                    </summary>
+                    <p className="mt-3 text-sm text-muted-foreground">{faq.answer}</p>
+                  </details>
+                ))}
+              </div>
+            </div>
+          </section>
+        </AnimatedSection>
       </main>
+
       <Footer />
     </div>
   );

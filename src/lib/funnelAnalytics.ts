@@ -16,6 +16,9 @@ import {
 } from "./trackingTaxonomy";
 import { supabase } from "@/integrations/supabase/client";
 import { recordCtaSpan } from "./observability/otel";
+import { ensureLeadId, isDuplicateBurst } from "./leadDedup";
+import { gtagReportConversion } from "./analytics";
+
 
 
 type GtagFn = (...args: unknown[]) => void;
@@ -440,19 +443,52 @@ function persistClickEvent(eventType: string, location: string, ctx: { modalidad
   });
 }
 
-export const trackWaClick = (location: string, extra: Record<string, unknown> = {}) => {
+/**
+ * Clique de conversão (WhatsApp/ligação) com deduplicação por sessão:
+ *   • burst <1,2s do mesmo CTA é ignorado por completo;
+ *   • `lead_id` é o MESMO de `trackCTAClick` (fonte única em leadDedup);
+ *   • `generate_lead` + conversão do Google Ads disparam só no primeiro
+ *     clique da sessão — repetições continuam medidas como wa_click.
+ */
+const trackConversionClick = (
+  kind: "whatsapp" | "phone",
+  eventName: "wa_click" | "call_click",
+  location: string,
+  extra: Record<string, unknown>,
+) => {
+  if (isDuplicateBurst(`funnel:${eventName}:${location}`)) return;
   const ctx = readTriageFallback();
-  track("wa_click", { cta_location: location, customer_type: resolveCustomerType(), ...ctx, ...extra });
-  recordCtaSpan("cta.click.whatsapp", { "app.cta_location": location });
-  persistClickEvent("wa_click", location, ctx, extra);
+  const { leadId, isNew } = ensureLeadId(kind);
+  const payload = {
+    cta_location: location,
+    customer_type: resolveCustomerType(),
+    lead_id: leadId,
+    ...ctx,
+    ...extra,
+  };
+  track(eventName, payload);
+  recordCtaSpan(kind === "whatsapp" ? "cta.click.whatsapp" : "cta.click.call", {
+    "app.cta_location": location,
+  });
+  if (isNew) {
+    track("generate_lead", {
+      ...payload,
+      currency: "BRL",
+      value: 1,
+      method: kind,
+      transaction_id: leadId,
+    });
+    gtagReportConversion();
+  }
+  persistClickEvent(eventName, location, ctx, { ...extra, lead_id: leadId });
 };
 
-export const trackCallClick = (location: string, extra: Record<string, unknown> = {}) => {
-  const ctx = readTriageFallback();
-  track("call_click", { cta_location: location, customer_type: resolveCustomerType(), ...ctx, ...extra });
-  recordCtaSpan("cta.click.call", { "app.cta_location": location });
-  persistClickEvent("call_click", location, ctx, extra);
-};
+export const trackWaClick = (location: string, extra: Record<string, unknown> = {}) =>
+  trackConversionClick("whatsapp", "wa_click", location, extra);
+
+export const trackCallClick = (location: string, extra: Record<string, unknown> = {}) =>
+  trackConversionClick("phone", "call_click", location, extra);
+
 
 /**
  * Submit efetivo do modal "Agendar agora" (Agendar → WhatsApp). Complementa
