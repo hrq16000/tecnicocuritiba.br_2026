@@ -1,0 +1,72 @@
+name: jsonld-daily
+
+# Validação diária de JSON-LD (Service, FAQPage, LocalBusiness) nas rotas
+# comerciais. Quando um schema fica inválido, abre PR automático com o
+# relatório e as correções que os geradores conseguirem aplicar.
+on:
+  schedule:
+    - cron: "20 7 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+
+      - name: Build estático
+        run: npm run build
+
+      - name: Validar JSON-LD (Service/FAQPage/LocalBusiness)
+        id: jsonld
+        continue-on-error: true
+        run: |
+          set -o pipefail
+          npm run check:comercial-seo 2>&1 | tee reports/jsonld-daily.log
+          npm run validate:jsonld 2>&1 | tee -a reports/jsonld-daily.log
+
+      - name: Regenerar artefatos derivados
+        if: steps.jsonld.outcome == 'failure'
+        run: |
+          node scripts/generate-sitemaps.mjs || true
+          node scripts/report-sitemap-inclusions.mjs || true
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: jsonld-daily
+          path: |
+            reports/comercial-onda2-seo.md
+            reports/comercial-onda2-seo.json
+            reports/jsonld-daily.log
+
+      - name: Abrir PR automático com correções
+        if: steps.jsonld.outcome == 'failure'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: fix/jsonld-daily
+          title: "fix(seo): schema estruturado inválido detectado na validação diária"
+          commit-message: "fix(seo): corrigir schema estruturado detectado na validação diária"
+          body: |
+            A validação diária encontrou schema inválido ou ausente nas rotas comerciais.
+
+            - Relatório: `reports/comercial-onda2-seo.md`
+            - Log completo: artefato `jsonld-daily` desta execução.
+
+            Revise as páginas listadas antes do merge.
+          add-paths: |
+            reports/
+            public/
+
+      - name: Falhar o job quando houver schema inválido
+        if: steps.jsonld.outcome == 'failure'
+        run: exit 1

@@ -22,6 +22,10 @@ const ALERT = process.argv.includes("--alert");
 const SAVE = process.argv.includes("--save");
 const BASELINE = "reports/gsc-indexing-baseline.json";
 const INDEXED = new Set(["PASS"]);
+// Alvo mínimo de cobertura (%) — abaixo disso o job falha com --alert.
+const TARGET = Number(
+  process.argv.find((a) => a.startsWith("--target="))?.split("=")[1] ?? process.env.GSC_COVERAGE_TARGET ?? 80,
+);
 
 const urls = priorityUrls();
 mkdirSync("reports", { recursive: true });
@@ -55,6 +59,7 @@ const report = {
   site,
   coverage: Number(coverage.toFixed(1)),
   previousCoverage: prevCoverage,
+  target: TARGET,
   total: results.length,
   indexed: results.filter((r) => r.indexed).length,
   regressions: regressions.map((r) => r.path),
@@ -96,8 +101,14 @@ if (SAVE || !previous) {
   console.log(`Baseline gravado em ${BASELINE}.`);
 }
 
-if (regressions.length && ALERT) {
-  console.error(`\n✖ ALERTA: ${regressions.length} URL(s) prioritária(s) perderam indexação.`);
+const abaixoDoAlvo = report.coverage < TARGET;
+if (abaixoDoAlvo) {
+  console.error(`\n✖ Cobertura ${report.coverage}% abaixo do alvo de ${TARGET}%.`);
+}
+if ((regressions.length || abaixoDoAlvo) && ALERT) {
+  if (regressions.length) {
+    console.error(`✖ ALERTA: ${regressions.length} URL(s) prioritária(s) perderam indexação.`);
+  }
   process.exit(1);
 }
-console.log("✔ Monitoramento de indexação concluído.");
+console.log(`✔ Monitoramento de indexação concluído (alvo ${TARGET}%).`);
