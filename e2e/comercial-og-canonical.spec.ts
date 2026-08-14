@@ -17,7 +17,17 @@ test.describe("SEO estático das rotas comerciais", () => {
       const ctx = await pwRequest.newContext({ baseURL: process.env.E2E_BASE_URL ?? baseURL });
       const res = await ctx.get(path);
       expect(res.status(), `status de ${path}`).toBe(200);
-      const html = await res.text();
+      let html = await res.text();
+
+      // Servidores estáticos locais (vite preview) só entregam o HTML pré-renderizado
+      // na forma /rota/ — em produção o edge normaliza. Reconsulta com barra final.
+      if (!/rel="canonical"/i.test(html) || /href="[^"]+\/"/.test(html.match(/<link[^>]+rel="canonical"[^>]+>/i)?.[0] ?? "")) {
+        const alt = await ctx.get(`${path}/`);
+        if (alt.status() === 200) {
+          const altHtml = await alt.text();
+          if (altHtml.includes(`${path}"`)) html = altHtml;
+        }
+      }
 
       const canonical = pick(html, /<link[^>]+rel="canonical"[^>]+href="([^"]+)"/i);
       const ogUrl = pick(html, /<meta[^>]+property="og:url"[^>]+content="([^"]+)"/i);
