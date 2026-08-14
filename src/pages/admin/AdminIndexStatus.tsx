@@ -174,13 +174,51 @@ export default function AdminIndexStatus() {
                         {r.sinais.fotosReais ?? "—"} foto(s) real(is) ·{" "}
                         {r.sinais.imagensSuspeitas ?? 0} imagem(ns) suspeita(s) · HTTP {r.sinais.statusHttp ?? "—"}
                       </p>
-                      {r.motivos.length > 0 && (
-                        <ul className="mt-2 space-y-1 text-sm text-destructive">
-                          {r.motivos.map((m) => (
-                            <li key={m}>• {m}</li>
+                      {(r.evidencias?.length ?? 0) > 0 ? (
+                        <ul className="mt-2 space-y-2 text-sm">
+                          {r.evidencias!.map((ev, i) => (
+                            <li key={`${ev.categoria}-${i}`} className="rounded-lg border border-destructive/30 bg-destructive/5 p-2">
+                              <p className="text-destructive">
+                                <span className="font-medium uppercase tracking-wide text-xs">{ev.categoria}</span> — {ev.motivo}
+                              </p>
+                              {ev.detalhe && <p className="mt-1 text-xs text-muted-foreground">{ev.detalhe}</p>}
+                              {(ev.semelhantes?.length ?? 0) > 0 && (
+                                <ul className="mt-1 space-y-0.5 text-xs text-muted-foreground">
+                                  {ev.semelhantes!.map((s) => (
+                                    <li key={s.similarA}>
+                                      trecho semelhante a{" "}
+                                      <a className="underline" href={s.similarA} target="_blank" rel="noreferrer">
+                                        {s.similarA}
+                                      </a>{" "}
+                                      · Jaccard {s.jaccard.toFixed(3)}
+                                      {s.max ? ` (máx. ${s.max})` : ""}
+                                    </li>
+                                  ))}
+                                </ul>
+                              )}
+                              {ev.artefato && (
+                                <a
+                                  className="mt-1 inline-flex items-center gap-1 text-xs text-primary underline"
+                                  href={ev.artefato}
+                                  target="_blank"
+                                  rel="noreferrer"
+                                >
+                                  <FileJson className="h-3 w-3" /> abrir artefato do relatório
+                                </a>
+                              )}
+                            </li>
                           ))}
                         </ul>
+                      ) : (
+                        r.motivos.length > 0 && (
+                          <ul className="mt-2 space-y-1 text-sm text-destructive">
+                            {r.motivos.map((m) => (
+                              <li key={m}>• {m}</li>
+                            ))}
+                          </ul>
+                        )
                       )}
+
                     </div>
                   </div>
                 </li>
