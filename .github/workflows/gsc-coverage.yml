@@ -1,0 +1,76 @@
+name: gsc-coverage
+
+# Monitoramento diário da cobertura de indexação no Google Search Console.
+# Falha (e avisa) quando a cobertura das URLs prioritárias cai abaixo do alvo
+# ou quando alguma URL indexada deixa de ser indexada.
+on:
+  schedule:
+    - cron: "40 8 * * *"
+  workflow_dispatch:
+    inputs:
+      target:
+        description: "Cobertura mínima aceita (%)"
+        default: "80"
+
+permissions:
+  contents: read
+  issues: write
+
+env:
+  LOVABLE_API_KEY: ${{ secrets.LOVABLE_API_KEY }}
+  GOOGLE_SEARCH_CONSOLE_API_KEY: ${{ secrets.GOOGLE_SEARCH_CONSOLE_API_KEY }}
+  GSC_SITE_URL: ${{ vars.GSC_SITE_URL }}
+
+jobs:
+  coverage:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+
+      - name: Cobertura de indexação (GSC)
+        id: gsc
+        continue-on-error: true
+        run: node scripts/monitor-gsc-indexing.mjs --alert --target=${{ github.event.inputs.target || '80' }}
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: gsc-indexing
+          path: |
+            reports/gsc-indexing.md
+            reports/gsc-indexing.json
+
+      - name: Alerta no Slack
+        if: steps.gsc.outcome == 'failure' && env.SLACK_WEBHOOK_URL != ''
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: |
+          COB=$(node -e "console.log(require('./reports/gsc-indexing.json').coverage)")
+          curl -sS -X POST -H 'Content-type: application/json' \
+            --data "{\"text\":\"⚠️ Cobertura de indexação em ${COB}% (abaixo do alvo). Relatório: ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}\"}" \
+            "$SLACK_WEBHOOK_URL"
+
+      - name: Abrir issue de acompanhamento
+        if: steps.gsc.outcome == 'failure'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const md = fs.existsSync('reports/gsc-indexing.md')
+              ? fs.readFileSync('reports/gsc-indexing.md', 'utf8').slice(0, 60000)
+              : 'Relatório indisponível.';
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `Cobertura de indexação abaixo do alvo (${new Date().toISOString().slice(0,10)})`,
+              body: `${md}\n\nArtefato: ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`,
+            });
+
+      - name: Falhar o job
+        if: steps.gsc.outcome == 'failure'
+        run: exit 1
