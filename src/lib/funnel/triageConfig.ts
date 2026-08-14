@@ -295,7 +295,7 @@ export const BUSINESS_FIELDS: Record<string, Field> = {
     type: "text",
     required: false,
     placeholder: "Ex.: Padaria Central",
-    helper: "Não pedimos CNPJ nem razão social.",
+    helper: "Não pedimos documentos nem dados fiscais da empresa.",
   },
   intent: {
     id: "biz-intent",

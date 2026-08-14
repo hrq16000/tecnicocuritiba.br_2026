@@ -69,6 +69,7 @@ const AdminProvasVerticais = lazy(() => import("./pages/admin/AdminProvasVertica
 const AdminConversao = lazy(() => import("./pages/admin/AdminConversao"));
 const AdminPublishStatus = lazy(() => import("./pages/admin/AdminPublishStatus"));
 const AdminFotosBairros = lazy(() => import("./pages/admin/AdminFotosBairros"));
+const AdminIndexStatus = lazy(() => import("./pages/admin/AdminIndexStatus"));
 const ParceirosHub = lazy(() => import("./pages/parceiros/ParceirosHub"));
 const ParceiroPage = lazy(() => import("./pages/parceiros/ParceiroPage"));
 
@@ -1080,6 +1081,7 @@ const App = () => (
             <Route path="/admin/conversao" element={<AdminConversao />} />
             <Route path="/admin/publicacao" element={<AdminPublishStatus />} />
             <Route path="/admin/fotos-bairros" element={<AdminFotosBairros />} />
+            <Route path="/admin/indexacao" element={<AdminIndexStatus />} />
 
             {/* Rede de parceiros prestadores (fail-closed: noindex sem prova real) */}
             <Route path="/parceiros" element={<ParceirosHub />} />

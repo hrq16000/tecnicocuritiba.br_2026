@@ -209,7 +209,14 @@
     "monitor:rich-results": "node scripts/monitor-rich-results.mjs",
     "report:crawl-metrics": "node scripts/report-crawl-metrics.mjs",
     "report:seo-changelog": "node scripts/report-seo-changelog.mjs dist",
-    "report:seo-changelog:save": "node scripts/report-seo-changelog.mjs dist --save"
+    "report:seo-changelog:save": "node scripts/report-seo-changelog.mjs dist --save",
+    "check:ai-images": "node scripts/check-ai-images.mjs dist",
+    "check:ai-images:report": "node scripts/check-ai-images.mjs dist --report",
+    "check:route-diff": "node scripts/check-route-differentiation.mjs dist",
+    "check:route-diff:report": "node scripts/check-route-differentiation.mjs dist --report",
+    "report:route-gates": "node scripts/generate-route-gate-status.mjs",
+    "indexing:request": "node scripts/request-indexing.mjs",
+    "check:cnpj-dom": "node scripts/check-cnpj-dom.mjs dist"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
