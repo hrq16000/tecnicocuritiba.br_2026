@@ -75,9 +75,13 @@ for (const file of html) {
   const meta = metadataText(src);
   if (hit(meta)) findings.push({ file, camada: "metadados", snippet: snippetOf(meta) });
 }
+// Nos assets, só um CNPJ real (formatado) é bloqueante: a palavra "cnpj" pode
+// aparecer legitimamente em listas de campos sanitizados de PII no bundle.
 for (const file of assets) {
   const src = readFileSync(file, "utf8");
-  if (hit(src)) findings.push({ file, camada: "asset", snippet: snippetOf(src) });
+  if (FORMATADO.test(src) || CAMPO_FISCAL.test(src)) {
+    findings.push({ file, camada: "asset", snippet: snippetOf(src) });
+  }
 }
 
 if (findings.length) {
