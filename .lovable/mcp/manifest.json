@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "sdk_version": "0.26.2",
+  "path": "/mcp",
+  "auth": {
+    "type": "none"
+  },
+  "mcp": {
+    "server": {
+      "name": "tecnico-curitiba-br",
+      "version": "0.1.0",
+      "title": "Tecnico.Curitiba.br"
+    },
+    "tools": [
+      {
+        "name": "validate_seo",
+        "title": "Validar SEO técnico de uma rota",
+        "description": "Verifica, no HTML público de uma rota do site, o status HTTP, title, meta description, robots, canonical único e self-referente, og:url e presença de H1 único.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": true
+        },
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "path": {
+              "type": "string",
+              "description": "Caminho público da rota, ex.: /servicos/conserto-monitor"
+            }
+          },
+          "required": [
+            "path"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "validate_jsonld",
+        "title": "Validar JSON-LD de uma rota",
+        "description": "Extrai todos os blocos JSON-LD do HTML público de uma rota, reporta erros de parse, lista os @type encontrados e alerta sobre rating/review inventados ou blocos duplicados.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": true
+        },
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "path": {
+              "type": "string",
+              "description": "Caminho público da rota, ex.: /problemas/computador-nao-liga"
+            },
+            "tiposEsperados": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Tipos schema.org que devem existir, ex.: ['FAQPage','Service']"
+            }
+          },
+          "required": [
+            "path"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "check_geo_conformance",
+        "title": "Checar conformidade GEO de rotas",
+        "description": "Audita rotas públicas quanto à conformidade GEO: H1 único, title/description dentro dos limites, canonical e og:url self-referentes, robots indexável, JSON-LD válido e corpo de texto suficiente já no HTML pré-hidratação.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": true
+        },
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "paths": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Rotas públicas a auditar, ex.: ['/', '/servicos']"
+            },
+            "minPalavras": {
+              "type": "number",
+              "description": "Mínimo de palavras no HTML estático (padrão 300)"
+            }
+          },
+          "required": [
+            "paths"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        },
+        "outputSchema": null
+      }
+    ]
+  }
+}
