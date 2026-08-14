@@ -203,7 +203,13 @@
     "check:comercial-seo:prod": "node scripts/check-comercial-seo.mjs --base=https://tecnico.curitiba.br",
     "check:hub-links": "node scripts/check-hub-empresarial-links.mjs",
     "report:sitemap-inclusions": "node scripts/report-sitemap-inclusions.mjs",
-    "report:ci-dashboard": "node scripts/report-ci-dashboard.mjs"
+    "report:ci-dashboard": "node scripts/report-ci-dashboard.mjs",
+    "check:redirects:curated": "node scripts/check-curated-redirects.mjs",
+    "check:redirects:curated:report": "node scripts/check-curated-redirects.mjs --report",
+    "monitor:rich-results": "node scripts/monitor-rich-results.mjs",
+    "report:crawl-metrics": "node scripts/report-crawl-metrics.mjs",
+    "report:seo-changelog": "node scripts/report-seo-changelog.mjs dist",
+    "report:seo-changelog:save": "node scripts/report-seo-changelog.mjs dist --save"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",

@@ -82,6 +82,38 @@ export async function inspectUrl(siteUrl, inspectionUrl) {
   };
 }
 
+/**
+ * Inspeção completa (leitura): estado de índice + Rich Results detectados.
+ * `richResults` traz, por tipo (FAQ, LocalBusiness, Service…), a contagem de
+ * itens detectados e de itens com erro/aviso — base do monitoramento diário.
+ */
+export async function inspectRichResults(siteUrl, inspectionUrl) {
+  const data = await gsc("/v1/urlInspection/index:inspect", {
+    method: "POST",
+    body: JSON.stringify({ inspectionUrl, siteUrl }),
+  });
+  const result = data?.inspectionResult ?? {};
+  const idx = result.indexStatusResult ?? {};
+  const rich = result.richResultsResult ?? {};
+  const tipos = {};
+  for (const item of rich.detectedItems ?? []) {
+    const nome = item.richResultType ?? "desconhecido";
+    const itens = item.items ?? [];
+    tipos[nome] = {
+      detectados: itens.length,
+      comErro: itens.filter((i) => (i.issues ?? []).some((x) => x.severity === "ERROR")).length,
+      comAviso: itens.filter((i) => (i.issues ?? []).some((x) => x.severity === "WARNING")).length,
+    };
+  }
+  return {
+    verdict: idx.verdict ?? "UNKNOWN",
+    coverageState: idx.coverageState ?? "unknown",
+    lastCrawlTime: idx.lastCrawlTime ?? null,
+    richVerdict: rich.verdict ?? "UNKNOWN",
+    tipos,
+  };
+}
+
 export async function searchAnalytics(siteUrl, body) {
   const data = await gsc(
     `/webmasters/v3/sites/${encodeURIComponent(siteUrl)}/searchAnalytics/query`,

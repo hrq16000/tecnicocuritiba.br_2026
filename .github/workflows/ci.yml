@@ -95,6 +95,27 @@ jobs:
         run: npm run report:faq-parity
 
 
+      - name: SEO estático das rotas comerciais (canonical/og:url/og:site_name)
+        run: |
+          npx vite preview --port 4325 --strictPort &
+          for i in $(seq 1 60); do curl -sf -o /dev/null http://localhost:4325/ && break; sleep 1; done
+          E2E_BASE_URL=http://localhost:4325 npx playwright test --config=playwright.ci.config.ts e2e/comercial-og-canonical.spec.ts --reporter=line
+      - name: Changelog de SEO do build (headings, metadados, structured data)
+        run: npm run report:seo-changelog
+      - name: Upload changelog de SEO
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: seo-changelog
+          path: |
+            reports/seo-changelog.md
+            reports/seo-changelog.json
+      # Rede: valida as rotas curadas em produção (301/308, cadeias, 404, loops)
+      # antes de promover o build. Só roda em push na main.
+      - name: Gate de redirects das rotas curadas (produção)
+        if: github.event_name == 'push'
+        run: npm run check:redirects:curated
+
       - name: Paridade de analytics (GA4 x click_events x relatorio)
         run: npm run check:analytics-parity
       - name: Interlinking local gate (mãe ⇄ bairros/cidades)
