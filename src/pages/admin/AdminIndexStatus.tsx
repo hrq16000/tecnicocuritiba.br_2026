@@ -14,10 +14,27 @@ import { Button } from "@/components/ui/button";
  * Rota interna: noindex, sem link público.
  */
 
+interface Semelhante {
+  fonte: string;
+  similarA: string;
+  jaccard: number;
+  max: number | null;
+}
+
+interface Evidencia {
+  categoria: string;
+  motivo: string;
+  detalhe: string | null;
+  artefato: string | null;
+  semelhantes?: Semelhante[];
+}
+
 interface Rota {
   path: string;
   apta: boolean;
   motivos: string[];
+  evidencias?: Evidencia[];
+  semelhantes?: Semelhante[];
   sinais: {
     palavras: number | null;
     minPalavras: number | null;
@@ -31,9 +48,11 @@ interface Rota {
 interface Payload {
   generatedAt: string;
   fontes: Record<string, string | null>;
+  artefatos?: Record<string, string>;
   totals: { rotas: number; aptas: number; bloqueadas: number };
   rotas: Rota[];
 }
+
 
 type Filtro = "todas" | "aptas" | "bloqueadas";
 
