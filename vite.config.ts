@@ -6,6 +6,8 @@ import { componentTagger } from "lovable-tagger";
 import { imagetools } from "vite-imagetools";
 // @ts-expect-error - JS plugin without types
 import { prerenderCitiesPlugin } from "./scripts/prerender-cities.mjs";
+import { mcpPlugin } from "@lovable.dev/mcp-js/stacks/supabase/vite";
+
 import { sentryVitePlugin } from "@sentry/vite-plugin";
 
 
@@ -54,6 +56,8 @@ export default defineConfig(({ mode }) => ({
     googleSiteVerificationPlugin(),
     mode === "development" && componentTagger(),
     prerenderCitiesPlugin(),
+    mcpPlugin(),
+
     // Upload de source maps para o Sentry apenas quando o CI tem credenciais.
     // `sourcemaps.filesToDeleteAfterUpload` mantém os .map fora do deploy
     // público (diagnóstico completo no Sentry, nada exposto ao usuário).
