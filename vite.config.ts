@@ -6,6 +6,8 @@ import { componentTagger } from "lovable-tagger";
 import { imagetools } from "vite-imagetools";
 // @ts-expect-error - JS plugin without types
 import { prerenderCitiesPlugin } from "./scripts/prerender-cities.mjs";
+import { mcpPlugin } from "@lovable.dev/mcp-js/stacks/supabase/vite";
+
 import { sentryVitePlugin } from "@sentry/vite-plugin";
 
 
