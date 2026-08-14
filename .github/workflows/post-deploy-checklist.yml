@@ -1,0 +1,75 @@
+# Checklist automatizado de pós-deploy (robots, sitemaps, canonical/og:url,
+# CTAs e erros de console) contra a URL publicada.
+#
+# Disparos:
+#   • manual (workflow_dispatch, com base configurável)
+#   • repository_dispatch com event_type = site-published (após cada release)
+#   • diário às 09:10 UTC como rede de segurança
+name: Pós-deploy — checklist de release
+
+on:
+  workflow_dispatch:
+    inputs:
+      base:
+        description: "URL base a validar"
+        type: string
+        default: "https://tecnico.curitiba.br"
+      console:
+        description: "Também verificar erros de console (Playwright)"
+        type: boolean
+        default: true
+  repository_dispatch:
+    types: [site-published]
+  schedule:
+    - cron: "10 9 * * *"
+
+concurrency:
+  group: post-deploy-checklist
+  cancel-in-progress: true
+
+jobs:
+  checklist:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Instalar dependências
+        run: npm ci --legacy-peer-deps
+
+      - name: Instalar Chromium (verificação de console)
+        if: ${{ github.event_name != 'workflow_dispatch' || inputs.console }}
+        run: npx playwright install --with-deps chromium
+
+      - name: Rodar checklist pós-deploy
+        id: run
+        run: |
+          BASE="${{ inputs.base || 'https://tecnico.curitiba.br' }}"
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.console }}" != "true" ]; then
+            node scripts/checklist-post-deploy.mjs --base="$BASE"
+          else
+            node scripts/checklist-post-deploy.mjs --base="$BASE" --console
+          fi
+
+      - name: Publicar relatório como artefato
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: post-deploy-checklist-${{ github.run_number }}
+          path: reports/post-deploy-checklist.md
+          if-no-files-found: error
+          retention-days: 90
+
+      - name: Resumo no job
+        if: always()
+        run: |
+          {
+            echo "## Checklist pós-deploy"
+            echo ""
+            cat reports/post-deploy-checklist.md
+          } >> "$GITHUB_STEP_SUMMARY"

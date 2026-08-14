@@ -53,12 +53,14 @@ describe("trackCTAClick — dedup de lead por sessão", () => {
     expect(ids.size).toBe(2); // ids distintos por tipo de CTA
   });
 
-  it("chatbot NUNCA dispara generate_lead (apenas engajamento)", () => {
+  it("chatbot NUNCA dispara generate_lead e cliques em rajada não duplicam cta_click", () => {
     trackCTAClick("chatbot", "widget");
-    trackCTAClick("chatbot", "widget");
+    trackCTAClick("chatbot", "widget"); // rajada <1,2s no mesmo CTA → descartado
+    trackCTAClick("chatbot", "rodape");
     expect(eventsOf("generate_lead")).toHaveLength(0);
     expect(eventsOf("cta_click")).toHaveLength(2);
   });
+
 
   it("persiste o lead_id em sessionStorage para deduplicar entre reloads da SPA", () => {
     trackCTAClick("whatsapp", "hero");

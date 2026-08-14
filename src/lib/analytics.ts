@@ -1,4 +1,6 @@
 import { GA4_EVENTS, normalizeTrackingLabel, routeTypeFromPath, viewportBucket } from '@/lib/trackingTaxonomy';
+import { ensureLeadId, isDuplicateBurst } from '@/lib/leadDedup';
+
 
 
 // Google Analytics & Ads tracking utilities — no UI imports here to keep the first load lean.
@@ -60,29 +62,18 @@ const getDeviceContext = () => {
   return { device, viewport_width: w, viewport_bucket: viewportBucket(w) };
 };
 
-// Lead dedup: gera/persiste um ID por sessão por tipo de CTA para evitar
-// múltiplos `generate_lead` na mesma sessão (clicar 2x no WhatsApp = 1 lead).
-const LEAD_KEY = 'lead_dedup_v1';
-type LeadMap = Partial<Record<'whatsapp' | 'phone' | 'chatbot', string>>;
-const readLeadMap = (): LeadMap => {
-  try { return JSON.parse(sessionStorage.getItem(LEAD_KEY) || '{}') as LeadMap; } catch { return {}; }
-};
-const writeLeadMap = (m: LeadMap) => {
-  try { sessionStorage.setItem(LEAD_KEY, JSON.stringify(m)); } catch { /* noop */ }
-};
-const ensureLeadId = (ctaType: 'whatsapp' | 'phone' | 'chatbot'): { leadId: string; isNew: boolean } => {
-  const map = readLeadMap();
-  if (map[ctaType]) return { leadId: map[ctaType]!, isNew: false };
-  const leadId = `lead_${Date.now().toString(36)}_${Math.random().toString(36).slice(2, 8)}`;
-  map[ctaType] = leadId;
-  writeLeadMap(map);
-  return { leadId, isNew: true };
-};
+// Lead dedup: fonte única em @/lib/leadDedup — 1 lead_id por sessão × tipo de
+// CTA, compartilhado com funnelAnalytics para que GA4 e Ads nunca contem duas
+// conversões pelo mesmo clique.
+
 
 // Track CTA clicks for conversions
 export const trackCTAClick = (ctaType: 'whatsapp' | 'phone' | 'chatbot', rawLocation: string) => {
   // Padroniza o rótulo: sem acento, snake_case — relatórios GA4/Ads consistentes.
   const location = normalizeTrackingLabel(rawLocation);
+  // Descarta o mesmo clique repetido em <1,2s (bubbling / re-render / duplo clique).
+  if (isDuplicateBurst(`cta:${ctaType}:${location}`)) return;
+
   if (typeof window !== 'undefined') {
     window.__lastCtaType = ctaType;
     window.__lastCtaLocation = location;
