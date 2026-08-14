@@ -32,6 +32,7 @@
     "test:validate-jsonld": "node scripts/validate-jsonld-static.test.mjs",
     "lh:desktop": "lhci autorun --config=lighthouserc.json",
     "lh:mobile": "lhci autorun --config=lighthouserc.mobile.json",
+    "lh:empresas": "lhci autorun --config=lighthouserc.empresas.json",
     "lh:all": "npm run build && npm run lh:desktop && npm run lh:mobile && npm run perf:budgets",
     "perf:budgets": "node scripts/check-performance-budgets.mjs",
     "perf:report": "node scripts/report-lighthouse-summary.mjs",

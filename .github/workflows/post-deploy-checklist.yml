@@ -57,6 +57,7 @@ jobs:
           fi
 
       - name: Publicar relatório como artefato
+        id: artefato
         if: always()
         uses: actions/upload-artifact@v4
         with:
@@ -73,3 +74,86 @@ jobs:
             echo ""
             cat reports/post-deploy-checklist.md
           } >> "$GITHUB_STEP_SUMMARY"
+
+      # ── Alertas em caso de falha ──────────────────────────────────
+      # Slack: configure o secret SLACK_WEBHOOK_URL (Incoming Webhook).
+      # E-mail: configure SMTP_SERVER/SMTP_PORT/SMTP_USER/SMTP_PASS/ALERT_EMAIL_TO.
+      # Sem os secrets, o passo é ignorado e a issue automática cobre o alerta.
+      - name: Extrair falhas do relatório
+        id: falhas
+        if: failure()
+        run: |
+          FALHAS=$(sed -n '/^## Falhas/,/^## Avisos/p' reports/post-deploy-checklist.md | sed '$d')
+          {
+            echo "resumo<<EOF"
+            echo "$FALHAS"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Alerta no Slack
+        if: failure() && env.SLACK_WEBHOOK_URL != ''
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          ARTEFATO: ${{ steps.artefato.outputs.artifact-url }}
+          RESUMO: ${{ steps.falhas.outputs.resumo }}
+        run: |
+          node -e '
+            const url = process.env.SLACK_WEBHOOK_URL;
+            const texto = [
+              ":rotating_light: *Checklist pós-deploy falhou* — ${{ github.repository }}",
+              process.env.RESUMO || "",
+              `<${process.env.ARTEFATO}|Baixar reports/post-deploy-checklist.md>`,
+              `<${process.env.GITHUB_SERVER_URL}/${process.env.GITHUB_REPOSITORY}/actions/runs/${process.env.GITHUB_RUN_ID}|Ver execução>`,
+            ].join("\n");
+            fetch(url, {
+              method: "POST",
+              headers: { "content-type": "application/json" },
+              body: JSON.stringify({ text: texto }),
+            }).then((r) => console.log("slack:", r.status));
+          '
+
+      - name: Alerta por e-mail
+        if: failure() && env.SMTP_SERVER != ''
+        env:
+          SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: ${{ secrets.SMTP_SERVER }}
+          server_port: ${{ secrets.SMTP_PORT }}
+          username: ${{ secrets.SMTP_USER }}
+          password: ${{ secrets.SMTP_PASS }}
+          subject: "[tecnico.curitiba.br] Checklist pós-deploy falhou (run #${{ github.run_number }})"
+          to: ${{ secrets.ALERT_EMAIL_TO }}
+          from: Monitoramento Técnico em Curitiba <${{ secrets.SMTP_USER }}>
+          body: |
+            O checklist pós-deploy identificou falhas.
+
+            ${{ steps.falhas.outputs.resumo }}
+
+            Relatório (artefato): ${{ steps.artefato.outputs.artifact-url }}
+            Execução: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+      - name: Abrir/atualizar issue de alerta
+        if: failure()
+        uses: actions/github-script@v7
+        env:
+          ARTEFATO: ${{ steps.artefato.outputs.artifact-url }}
+          RESUMO: ${{ steps.falhas.outputs.resumo }}
+        with:
+          script: |
+            const titulo = "Checklist pós-deploy com falhas";
+            const corpo = [
+              `Execução: ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`,
+              `Relatório: ${process.env.ARTEFATO}`,
+              "",
+              process.env.RESUMO || "",
+            ].join("\n");
+            const { data: abertas } = await github.rest.issues.listForRepo({
+              ...context.repo, state: "open", labels: "post-deploy",
+            });
+            const existente = abertas.find((i) => i.title === titulo);
+            if (existente) {
+              await github.rest.issues.createComment({ ...context.repo, issue_number: existente.number, body: corpo });
+            } else {
+              await github.rest.issues.create({ ...context.repo, title: titulo, body: corpo, labels: ["post-deploy"] });
+            }

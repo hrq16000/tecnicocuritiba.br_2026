@@ -1,0 +1,54 @@
+# Lighthouse CI da landing /empresas.
+#
+# Bloqueia merges quando performance, acessibilidade ou SEO caem abaixo dos
+# limites de lighthouserc.empresas.json. O status de JSON-LD (Service + FAQPage)
+# é validado pelos specs Playwright de /empresas, executados no mesmo job — o
+# JSON-LD é injetado na hidratação e o Lighthouse não o audita de forma dura.
+name: lighthouse-empresas
+
+on:
+  workflow_dispatch:
+  pull_request:
+  push:
+    branches: [main]
+
+concurrency:
+  group: lighthouse-empresas-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - name: Instalar dependências
+        run: npm ci --legacy-peer-deps
+
+      - name: Build
+        run: npm run build
+
+      - name: Instalar Chromium (Playwright)
+        run: npx playwright install --with-deps chromium
+
+      - name: JSON-LD, CTAs e dedupe da /empresas (E2E)
+        run: npx playwright test e2e/empresas-landing.spec.ts e2e/empresas-mobile-ctas.spec.ts
+
+      - name: Lighthouse CI (/empresas, mobile)
+        run: npx --yes @lhci/cli@0.14.x autorun --config=lighthouserc.empresas.json
+
+      - name: Publicar relatórios
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lighthouse-empresas-${{ github.run_number }}
+          path: |
+            .lighthouseci-empresas
+            playwright-report
+          if-no-files-found: ignore
+          retention-days: 30

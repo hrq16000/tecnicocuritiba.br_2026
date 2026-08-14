@@ -1,0 +1,48 @@
+{
+  "ci": {
+    "collect": {
+      "url": ["http://localhost:4173/empresas"],
+      "startServerCommand": "npm run preview -- --port 4173",
+      "startServerReadyPattern": "Local:",
+      "numberOfRuns": 3,
+      "settings": {
+        "preset": "mobile",
+        "formFactor": "mobile",
+        "screenEmulation": {
+          "mobile": true,
+          "width": 412,
+          "height": 915,
+          "deviceScaleFactor": 1.75,
+          "disabled": false
+        },
+        "throttling": {
+          "rttMs": 150,
+          "throughputKbps": 1638.4,
+          "cpuSlowdownMultiplier": 4
+        }
+      }
+    },
+    "assert": {
+      "assertions": {
+        "categories:performance": ["error", { "minScore": 0.75 }],
+        "categories:accessibility": ["error", { "minScore": 0.9 }],
+        "categories:seo": ["error", { "minScore": 0.9 }],
+        "categories:best-practices": ["warn", { "minScore": 0.9 }],
+        "structured-data": "off",
+        "document-title": ["error", { "minScore": 1 }],
+        "meta-description": ["error", { "minScore": 1 }],
+        "html-has-lang": ["error", { "minScore": 1 }],
+        "color-contrast": ["error", { "minScore": 1 }],
+        "heading-order": ["warn", { "minScore": 1 }],
+        "largest-contentful-paint": ["error", { "maxNumericValue": 3500 }],
+        "cumulative-layout-shift": ["error", { "maxNumericValue": 0.1 }],
+        "total-blocking-time": ["warn", { "maxNumericValue": 400 }],
+        "server-response-time": ["error", { "maxNumericValue": 800 }]
+      }
+    },
+    "upload": {
+      "target": "filesystem",
+      "outputDir": "./.lighthouseci-empresas"
+    }
+  }
+}
