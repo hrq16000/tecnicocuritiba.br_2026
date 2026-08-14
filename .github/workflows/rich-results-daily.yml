@@ -1,0 +1,71 @@
+name: rich-results-daily
+
+# Monitoramento diário de Rich Results (FAQPage, LocalBusiness, Service) nas
+# URLs comerciais curadas. Alerta quando um tipo some, cai ou passa a ter erros.
+on:
+  schedule:
+    - cron: "10 9 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+env:
+  LOVABLE_API_KEY: ${{ secrets.LOVABLE_API_KEY }}
+  GOOGLE_SEARCH_CONSOLE_API_KEY: ${{ secrets.GOOGLE_SEARCH_CONSOLE_API_KEY }}
+  GSC_SITE_URL: ${{ vars.GSC_SITE_URL }}
+
+jobs:
+  rich-results:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+
+      - name: Rich Results (GSC)
+        id: rich
+        continue-on-error: true
+        run: node scripts/monitor-rich-results.mjs --alert --save
+
+      - name: Métricas de rastreamento e descoberta
+        continue-on-error: true
+        run: node scripts/report-crawl-metrics.mjs --env=producao --branch=${{ github.ref_name }} --commit=${{ github.sha }} --limit=80
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: rich-results
+          path: |
+            reports/rich-results.*
+            reports/crawl-metrics*.json
+            reports/crawl-metrics.md
+
+      - name: Abrir issue em queda de Rich Results
+        if: steps.rich.outcome == 'failure'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const corpo = fs.existsSync('reports/rich-results.md')
+              ? fs.readFileSync('reports/rich-results.md', 'utf8').slice(0, 60000)
+              : 'Relatório indisponível.';
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `Queda de Rich Results detectada (${new Date().toISOString().slice(0, 10)})`,
+              body: corpo,
+              labels: ['seo', 'rich-results'],
+            });
+
+      - name: Alerta no Slack
+        if: steps.rich.outcome == 'failure' && env.SLACK_WEBHOOK_URL != ''
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: |
+          node -e "const f=require('fs');const r=JSON.parse(f.readFileSync('reports/rich-results.json','utf8'));const t='Rich Results: '+r.quedas.length+' queda(s) — '+r.quedas.slice(0,5).join(' | ');f.writeFileSync('slack.json',JSON.stringify({text:t}))"
+          curl -sS -X POST -H 'Content-type: application/json' --data @slack.json "$SLACK_WEBHOOK_URL"
