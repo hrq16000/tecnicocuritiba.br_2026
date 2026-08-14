@@ -1,4 +1,3 @@
-import { Link, useLocation } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import { interlinksDe } from "@/lib/interlinksGerados";
 import { trackInternalLink } from "@/lib/analytics";
@@ -13,7 +12,8 @@ import { trackInternalLink } from "@/lib/analytics";
  * (`non_interaction: true`), sem interferir na contagem de conversões.
  */
 export const InterlinksContextuais = () => {
-  const { pathname } = useLocation();
+  // Sem dependência de Router: a home é renderizada fora do <BrowserRouter>.
+  const pathname = typeof window !== "undefined" ? window.location.pathname : "/";
   const links = interlinksDe(pathname);
 
   if (links.length < 2) return null;
@@ -27,14 +27,14 @@ export const InterlinksContextuais = () => {
         <ul className="grid gap-2 sm:grid-cols-2">
           {links.map((link) => (
             <li key={link.href}>
-              <Link
-                to={link.href}
+              <a
+                href={link.href}
                 onClick={() => trackInternalLink(link.href, "interlinks-contextuais")}
                 className="group flex items-start gap-2 rounded-lg px-3 py-2 text-sm text-white/85 transition-colors hover:bg-white/5 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent min-h-11"
               >
                 <ArrowUpRight className="mt-0.5 h-4 w-4 shrink-0 text-accent transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 <span>{link.anchor}</span>
-              </Link>
+              </a>
             </li>
           ))}
         </ul>

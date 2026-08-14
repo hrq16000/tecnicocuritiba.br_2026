@@ -1,0 +1,2620 @@
+{
+  "generatedAt": "2026-08-14T14:42:43.924Z",
+  "fontes": {
+    "originality": "2026-08-14T14:20:44.206Z",
+    "realImages": null,
+    "aiImages": "2026-08-14T14:42:31.244Z",
+    "differentiation": "2026-08-14T14:42:31.687Z",
+    "redirects": "2026-08-14T14:20:11.433Z"
+  },
+  "totals": {
+    "rotas": 161,
+    "aptas": 67,
+    "bloqueadas": 94
+  },
+  "rotas": [
+    {
+      "path": "/",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 95 palavras (mín. 250)"
+      ],
+      "sinais": {
+        "palavras": 95,
+        "minPalavras": 250,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": 200,
+        "title": "Técnico em Curitiba | Assistência Técnica e Suporte Local"
+      }
+    },
+    {
+      "path": "/anuncie",
+      "apta": true,
+      "motivos": [],
+      "sinais": {
+        "palavras": null,
+        "minPalavras": null,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": 200,
+        "title": null
+      }
+    },
+    {
+      "path": "/areas-atendidas",
+      "apta": true,
+      "motivos": [],
+      "sinais": {
+        "palavras": 538,
+        "minPalavras": 250,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Áreas Atendidas em Curitiba e Região | Bairros e Cidades"
+      }
+    },
+    {
+      "path": "/atendimento-domicilio",
+      "apta": true,
+      "motivos": [],
+      "sinais": {
+        "palavras": 717,
+        "minPalavras": 250,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Atendimento de Informática em Domicílio em Curitiba"
+      }
+    },
+    {
+      "path": "/atendimento-remoto",
+      "apta": true,
+      "motivos": [],
+      "sinais": {
+        "palavras": 1504,
+        "minPalavras": 250,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Suporte Remoto de Informática em Curitiba | Online"
+      }
+    },
+    {
+      "path": "/bairros/agua-verde",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 108 palavras (mín. 450)",
+        "diferenciação: corpo 61% similar a /bairros/batel",
+        "diferenciação: corpo 62% similar a /bairros/centro",
+        "diferenciação: corpo 57% similar a /bairros/portao"
+      ],
+      "sinais": {
+        "palavras": 108,
+        "minPalavras": 450,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Técnico de Informática no Água Verde | Notebook e PC"
+      }
+    },
+    {
+      "path": "/bairros/batel",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 106 palavras (mín. 450)",
+        "diferenciação: corpo 61% similar a /bairros/agua-verde",
+        "diferenciação: corpo 60% similar a /bairros/centro",
+        "diferenciação: corpo 57% similar a /bairros/portao"
+      ],
+      "sinais": {
+        "palavras": 106,
+        "minPalavras": 450,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Técnico de Informática no Batel (Curitiba) | Notebook e PC"
+      }
+    },
+    {
+      "path": "/bairros/bigorrilho",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 108 palavras (mín. 450)",
+        "diferenciação: corpo 56% similar a /bairros/cristo-rei"
+      ],
+      "sinais": {
+        "palavras": 108,
+        "minPalavras": 450,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Técnico de Informática no Bigorrilho (Curitiba) | Notebook e PC"
+      }
+    },
+    {
+      "path": "/bairros/boa-vista",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 110 palavras (mín. 450)"
+      ],
+      "sinais": {
+        "palavras": 110,
+        "minPalavras": 450,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Técnico de Informática no Boa Vista (Curitiba) | PC e Notebook"
+      }
+    },
+    {
+      "path": "/bairros/boqueirao",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 109 palavras (mín. 450)"
+      ],
+      "sinais": {
+        "palavras": 109,
+        "minPalavras": 450,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Técnico de Informática no Boqueirão (Curitiba) | PC e Notebook"
+      }
+    },
+    {
+      "path": "/bairros/cabral",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 107 palavras (mín. 450)",
+        "diferenciação: corpo 60% similar a /bairros/centro"
+      ],
+      "sinais": {
+        "palavras": 107,
+        "minPalavras": 450,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Técnico de Informática no Cabral (Curitiba) | Notebook e PC"
+      }
+    },
+    {
+      "path": "/bairros/cajuru",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 108 palavras (mín. 450)"
+      ],
+      "sinais": {
+        "palavras": 108,
+        "minPalavras": 450,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Técnico de Informática no Cajuru (Curitiba) | PC e Notebook"
+      }
+    },
+    {
+      "path": "/bairros/centro",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 109 palavras (mín. 450)",
+        "diferenciação: corpo 62% similar a /bairros/agua-verde",
+        "diferenciação: corpo 60% similar a /bairros/batel",
+        "diferenciação: corpo 60% similar a /bairros/cabral",
+        "diferenciação: corpo 56% similar a /bairros/cic"
+      ],
+      "sinais": {
+        "palavras": 109,
+        "minPalavras": 450,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Técnico de Informática no Centro de Curitiba | Notebook e PC"
+      }
+    },
+    {
+      "path": "/bairros/cic",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 108 palavras (mín. 450)",
+        "diferenciação: corpo 56% similar a /bairros/centro"
+      ],
+      "sinais": {
+        "palavras": 108,
+        "minPalavras": 450,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Técnico de Informática no CIC (Curitiba) | Notebook e PC"
+      }
+    },
+    {
+      "path": "/bairros/cristo-rei",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 110 palavras (mín. 450)",
+        "diferenciação: corpo 56% similar a /bairros/bigorrilho",
+        "diferenciação: corpo 59% similar a /bairros/portao"
+      ],
+      "sinais": {
+        "palavras": 110,
+        "minPalavras": 450,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Técnico de Informática no Cristo Rei (Curitiba) | Notebook e PC"
+      }
+    },
+    {
+      "path": "/bairros/portao",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 108 palavras (mín. 450)",
+        "diferenciação: corpo 57% similar a /bairros/agua-verde",
+        "diferenciação: corpo 57% similar a /bairros/batel",
+        "diferenciação: corpo 59% similar a /bairros/cristo-rei"
+      ],
+      "sinais": {
+        "palavras": 108,
+        "minPalavras": 450,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Técnico de Informática no Portão (Curitiba) | Notebook e PC"
+      }
+    },
+    {
+      "path": "/bairros/santa-felicidade",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 108 palavras (mín. 450)"
+      ],
+      "sinais": {
+        "palavras": 108,
+        "minPalavras": 450,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Técnico de Informática em Santa Felicidade | Curitiba"
+      }
+    },
+    {
+      "path": "/blog",
+      "apta": true,
+      "motivos": [],
+      "sinais": {
+        "palavras": 299,
+        "minPalavras": 250,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Guias de Informática | Técnico em Curitiba"
+      }
+    },
+    {
+      "path": "/blog/backup-como-proteger-seus-arquivos",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 203 palavras (mín. 800)"
+      ],
+      "sinais": {
+        "palavras": 203,
+        "minPalavras": 800,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Como evitar perder arquivos: guia de backup preventivo"
+      }
+    },
+    {
+      "path": "/blog/como-escolher-uma-workstation",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 207 palavras (mín. 800)"
+      ],
+      "sinais": {
+        "palavras": 207,
+        "minPalavras": 800,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Como escolher uma workstation: checklist de requisitos"
+      }
+    },
+    {
+      "path": "/blog/como-melhorar-sinal-wifi-em-casa",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 193 palavras (mín. 800)"
+      ],
+      "sinais": {
+        "palavras": 193,
+        "minPalavras": 800,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Wi-Fi caindo ou com sinal fraco: como diagnosticar"
+      }
+    },
+    {
+      "path": "/blog/como-saber-se-pc-tem-virus-malware",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 194 palavras (mín. 800)"
+      ],
+      "sinais": {
+        "palavras": 194,
+        "minPalavras": 800,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Como saber se o computador está com vírus ou malware"
+      }
+    },
+    {
+      "path": "/blog/notebook-superaquecendo-o-que-fazer",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 209 palavras (mín. 800)"
+      ],
+      "sinais": {
+        "palavras": 209,
+        "minPalavras": 800,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Notebook superaquecendo: sinais, prevenção e o que fazer"
+      }
+    },
+    {
+      "path": "/blog/organizacao-de-ti-para-pequenos-escritorios",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 244 palavras (mín. 800)"
+      ],
+      "sinais": {
+        "palavras": 244,
+        "minPalavras": 800,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Organização de TI para pequenos escritórios: o guia prático"
+      }
+    },
+    {
+      "path": "/blog/quando-trocar-hd-por-ssd",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 202 palavras (mín. 800)"
+      ],
+      "sinais": {
+        "palavras": 202,
+        "minPalavras": 800,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Vale a pena trocar o HD por SSD? Como avaliar o upgrade"
+      }
+    },
+    {
+      "path": "/coleta-e-entrega",
+      "apta": true,
+      "motivos": [],
+      "sinais": {
+        "palavras": 882,
+        "minPalavras": 250,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Coleta e Entrega de Computador e Notebook em Curitiba"
+      }
+    },
+    {
+      "path": "/como-funciona",
+      "apta": true,
+      "motivos": [],
+      "sinais": {
+        "palavras": 826,
+        "minPalavras": 250,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": 200,
+        "title": "Como Funciona o Atendimento Técnico em Curitiba"
+      }
+    },
+    {
+      "path": "/contato",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 98 palavras (mín. 250)"
+      ],
+      "sinais": {
+        "palavras": 98,
+        "minPalavras": 250,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": 200,
+        "title": "Contato Técnico Curitiba | Atendimento a partir de R$ 99,99"
+      }
+    },
+    {
+      "path": "/diagnostico-tecnico",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 89 palavras (mín. 250)"
+      ],
+      "sinais": {
+        "palavras": 89,
+        "minPalavras": 250,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Diagnóstico Técnico de Computador e Notebook em Curitiba"
+      }
+    },
+    {
+      "path": "/empresa-de-ti-curitiba",
+      "apta": true,
+      "motivos": [],
+      "sinais": {
+        "palavras": 711,
+        "minPalavras": 250,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Empresa de TI em Curitiba | Soluções para Pequenas Empresas"
+      }
+    },
+    {
+      "path": "/equipamentos-atendidos",
+      "apta": true,
+      "motivos": [],
+      "sinais": {
+        "palavras": 884,
+        "minPalavras": 250,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Equipamentos Atendidos | Técnico em Curitiba"
+      }
+    },
+    {
+      "path": "/faq",
+      "apta": true,
+      "motivos": [],
+      "sinais": {
+        "palavras": 418,
+        "minPalavras": 250,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": 200,
+        "title": "FAQ Técnico Curitiba | Preço, Prazo e Garantia"
+      }
+    },
+    {
+      "path": "/guia-tecnico-informatica",
+      "apta": true,
+      "motivos": [],
+      "sinais": {
+        "palavras": 993,
+        "minPalavras": 250,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Guia Técnico: Manutenção de PC e Notebook Passo a Passo"
+      }
+    },
+    {
+      "path": "/politica-de-pecas-do-cliente",
+      "apta": true,
+      "motivos": [],
+      "sinais": {
+        "palavras": 699,
+        "minPalavras": 250,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Política de Peças do Cliente | Montagem em Curitiba"
+      }
+    },
+    {
+      "path": "/precos-e-politicas",
+      "apta": true,
+      "motivos": [],
+      "sinais": {
+        "palavras": 1524,
+        "minPalavras": 250,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": 200,
+        "title": "Preços e Políticas | Técnico em Curitiba"
+      }
+    },
+    {
+      "path": "/problemas",
+      "apta": true,
+      "motivos": [],
+      "sinais": {
+        "palavras": 817,
+        "minPalavras": 250,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Problemas de Computador, Notebook e TV | Curitiba"
+      }
+    },
+    {
+      "path": "/problemas/computador-desliga-sozinho",
+      "apta": true,
+      "motivos": [],
+      "sinais": {
+        "palavras": 1011,
+        "minPalavras": 800,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Computador Desliga Sozinho? Diagnóstico em Curitiba"
+      }
+    },
+    {
+      "path": "/problemas/computador-fazendo-barulho",
+      "apta": true,
+      "motivos": [],
+      "sinais": {
+        "palavras": 1083,
+        "minPalavras": 800,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Computador Fazendo Barulho: Como Identificar a Origem | Curitiba"
+      }
+    },
+    {
+      "path": "/problemas/computador-lento",
+      "apta": true,
+      "motivos": [],
+      "sinais": {
+        "palavras": 1012,
+        "minPalavras": 800,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Computador Lento? Diagnóstico Técnico em Curitiba"
+      }
+    },
+    {
+      "path": "/problemas/computador-nao-liga",
+      "apta": true,
+      "motivos": [],
+      "sinais": {
+        "palavras": 1078,
+        "minPalavras": 800,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Computador de Mesa Não Liga: Diagnóstico Real | Curitiba"
+      }
+    },
+    {
+      "path": "/problemas/computador-sem-som",
+      "apta": true,
+      "motivos": [],
+      "sinais": {
+        "palavras": 883,
+        "minPalavras": 800,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Computador Sem Som: Como Resolver | Curitiba"
+      }
+    },
+    {
+      "path": "/problemas/computador-travando",
+      "apta": true,
+      "motivos": [],
+      "sinais": {
+        "palavras": 949,
+        "minPalavras": 800,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Computador Travando: Causas e Conserto | Curitiba"
+      }
+    },
+    {
+      "path": "/problemas/dobradica-do-notebook-quebrada",
+      "apta": true,
+      "motivos": [],
+      "sinais": {
+        "palavras": 911,
+        "minPalavras": 800,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Dobradiça do Notebook Quebrada: Conserto | Curitiba"
+      }
+    },
+    {
+      "path": "/problemas/hd-nao-reconhecido",
+      "apta": true,
+      "motivos": [],
+      "sinais": {
+        "palavras": 1083,
+        "minPalavras": 800,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "HD ou SSD Não é Reconhecido: O Que Fazer | Curitiba"
+      }
+    },
+    {
+      "path": "/problemas/impressora-nao-imprime",
+      "apta": true,
+      "motivos": [],
+      "sinais": {
+        "palavras": 1008,
+        "minPalavras": 800,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Impressora Não Imprime: Causas e Solução | Curitiba"
+      }
+    },
+    {
+      "path": "/problemas/monitor-sem-sinal",
+      "apta": true,
+      "motivos": [],
+      "sinais": {
+        "palavras": 1039,
+        "minPalavras": 800,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Monitor Sem Sinal: Causas e Solução | Curitiba"
+      }
+    },
+    {
+      "path": "/problemas/mouse-nao-funciona",
+      "apta": true,
+      "motivos": [],
+      "sinais": {
+        "palavras": 844,
+        "minPalavras": 800,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Mouse Não Funciona: Como Resolver | Curitiba"
+      }
+    },
+    {
+      "path": "/problemas/notebook-com-tela-preta",
+      "apta": true,
+      "motivos": [],
+      "sinais": {
+        "palavras": 1116,
+        "minPalavras": 800,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Notebook com Tela Preta mas Ligado: O Que Fazer | Curitiba"
+      }
+    },
+    {
+      "path": "/problemas/notebook-desligando-sozinho",
+      "apta": true,
+      "motivos": [],
+      "sinais": {
+        "palavras": 876,
+        "minPalavras": 800,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Notebook Desligando Sozinho: Causas | Curitiba"
+      }
+    },
+    {
+      "path": "/problemas/notebook-lento",
+      "apta": true,
+      "motivos": [],
+      "sinais": {
+        "palavras": 1036,
+        "minPalavras": 800,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Notebook Lento: Causas Reais e Solução | Curitiba"
+      }
+    },
+    {
+      "path": "/problemas/notebook-molhado",
+      "apta": true,
+      "motivos": [],
+      "sinais": {
+        "palavras": 1086,
+        "minPalavras": 800,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Notebook Molhado? O Que Fazer nas Primeiras Horas | Curitiba"
+      }
+    },
+    {
+      "path": "/problemas/notebook-nao-carrega-bateria",
+      "apta": true,
+      "motivos": [],
+      "sinais": {
+        "palavras": 992,
+        "minPalavras": 800,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Notebook Não Carrega a Bateria? Diagnóstico em Curitiba"
+      }
+    },
+    {
+      "path": "/problemas/notebook-nao-conecta-no-wifi",
+      "apta": true,
+      "motivos": [],
+      "sinais": {
+        "palavras": 847,
+        "minPalavras": 800,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Notebook Não Conecta no Wi-Fi: Como Resolver | Curitiba"
+      }
+    },
+    {
+      "path": "/problemas/notebook-nao-liga",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 724 palavras (mín. 800)"
+      ],
+      "sinais": {
+        "palavras": 724,
+        "minPalavras": 800,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Notebook Não Liga? Assistência Técnica em Curitiba"
+      }
+    },
+    {
+      "path": "/problemas/notebook-superaquecendo",
+      "apta": true,
+      "motivos": [],
+      "sinais": {
+        "palavras": 1001,
+        "minPalavras": 800,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Notebook Superaquecendo? Diagnóstico Técnico em Curitiba"
+      }
+    },
+    {
+      "path": "/problemas/pen-drive-nao-reconhecido",
+      "apta": true,
+      "motivos": [],
+      "sinais": {
+        "palavras": 898,
+        "minPalavras": 800,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Pen Drive Não Reconhecido: O Que Fazer | Curitiba"
+      }
+    },
+    {
+      "path": "/problemas/teclado-de-notebook-nao-funciona",
+      "apta": true,
+      "motivos": [],
+      "sinais": {
+        "palavras": 1007,
+        "minPalavras": 800,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Teclado do Notebook Não Funciona: Causas e Troca | Curitiba"
+      }
+    },
+    {
+      "path": "/problemas/tela-azul-windows",
+      "apta": true,
+      "motivos": [],
+      "sinais": {
+        "palavras": 1014,
+        "minPalavras": 800,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Tela Azul no Windows? Diagnóstico Técnico em Curitiba"
+      }
+    },
+    {
+      "path": "/problemas/tela-de-notebook-quebrada",
+      "apta": true,
+      "motivos": [],
+      "sinais": {
+        "palavras": 1074,
+        "minPalavras": 800,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Tela de Notebook Quebrada: Troca, Custo e Riscos | Curitiba"
+      }
+    },
+    {
+      "path": "/problemas/tela-do-computador-piscando",
+      "apta": true,
+      "motivos": [],
+      "sinais": {
+        "palavras": 819,
+        "minPalavras": 800,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Tela do Computador Piscando: O Que Fazer | Curitiba"
+      }
+    },
+    {
+      "path": "/problemas/touchpad-nao-funciona",
+      "apta": true,
+      "motivos": [],
+      "sinais": {
+        "palavras": 914,
+        "minPalavras": 800,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Touchpad Não Funciona no Notebook | Curitiba"
+      }
+    },
+    {
+      "path": "/problemas/tv-com-imagem-escura",
+      "apta": true,
+      "motivos": [],
+      "sinais": {
+        "palavras": 857,
+        "minPalavras": 800,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "TV com Imagem Escura: Causas e Conserto | Curitiba"
+      }
+    },
+    {
+      "path": "/problemas/tv-com-linhas-na-tela",
+      "apta": true,
+      "motivos": [],
+      "sinais": {
+        "palavras": 1094,
+        "minPalavras": 800,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "TV com Linhas na Tela: Tem Conserto? | Curitiba"
+      }
+    },
+    {
+      "path": "/problemas/tv-com-som-sem-imagem",
+      "apta": true,
+      "motivos": [],
+      "sinais": {
+        "palavras": 1091,
+        "minPalavras": 800,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "TV com Som e Sem Imagem? Diagnóstico em Curitiba"
+      }
+    },
+    {
+      "path": "/problemas/tv-desligando-sozinha",
+      "apta": true,
+      "motivos": [],
+      "sinais": {
+        "palavras": 1066,
+        "minPalavras": 800,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "TV Desligando Sozinha: Causas e Conserto | Curitiba"
+      }
+    },
+    {
+      "path": "/problemas/tv-nao-conecta-no-wifi",
+      "apta": true,
+      "motivos": [],
+      "sinais": {
+        "palavras": 925,
+        "minPalavras": 800,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "TV Não Conecta no Wi-Fi: O Que Fazer | Curitiba"
+      }
+    },
+    {
+      "path": "/problemas/tv-nao-liga",
+      "apta": true,
+      "motivos": [],
+      "sinais": {
+        "palavras": 960,
+        "minPalavras": 800,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "TV Não Liga? Diagnóstico Técnico de TV em Curitiba"
+      }
+    },
+    {
+      "path": "/problemas/tv-sem-som",
+      "apta": true,
+      "motivos": [],
+      "sinais": {
+        "palavras": 990,
+        "minPalavras": 800,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "TV Sem Som: Causas, Testes e Conserto | Curitiba"
+      }
+    },
+    {
+      "path": "/problemas/tv-travando",
+      "apta": true,
+      "motivos": [],
+      "sinais": {
+        "palavras": 876,
+        "minPalavras": 800,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "TV Travando ou Muito Lenta: O Que Fazer | Curitiba"
+      }
+    },
+    {
+      "path": "/problemas/webcam-nao-funciona",
+      "apta": true,
+      "motivos": [],
+      "sinais": {
+        "palavras": 869,
+        "minPalavras": 800,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Webcam Não Funciona: Causas e Solução | Curitiba"
+      }
+    },
+    {
+      "path": "/problemas/wifi-caindo-toda-hora",
+      "apta": true,
+      "motivos": [],
+      "sinais": {
+        "palavras": 1022,
+        "minPalavras": 800,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Wi-Fi Caindo Toda Hora? Diagnóstico de Rede em Curitiba"
+      }
+    },
+    {
+      "path": "/problemas/windows-nao-inicia",
+      "apta": true,
+      "motivos": [],
+      "sinais": {
+        "palavras": 878,
+        "minPalavras": 800,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Windows Não Inicia: Como Recuperar o Sistema | Curitiba"
+      }
+    },
+    {
+      "path": "/quando-nao-compensa",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 88 palavras (mín. 250)"
+      ],
+      "sinais": {
+        "palavras": 88,
+        "minPalavras": 250,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Quando NÃO Compensa Reparar | Guia Técnico - Curitiba"
+      }
+    },
+    {
+      "path": "/seguranca-dos-dados",
+      "apta": true,
+      "motivos": [],
+      "sinais": {
+        "palavras": 1504,
+        "minPalavras": 250,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Segurança dos Dados na Assistência Técnica | Curitiba"
+      }
+    },
+    {
+      "path": "/servicos",
+      "apta": true,
+      "motivos": [],
+      "sinais": {
+        "palavras": 395,
+        "minPalavras": 250,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": 200,
+        "title": "Serviços de Informática em Curitiba | PC e Notebook"
+      }
+    },
+    {
+      "path": "/servicos/backup-para-empresas",
+      "apta": true,
+      "motivos": [],
+      "sinais": {
+        "palavras": 1620,
+        "minPalavras": 600,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Backup para Empresas em Curitiba | Proteção de Arquivos"
+      }
+    },
+    {
+      "path": "/servicos/conserto-monitor",
+      "apta": true,
+      "motivos": [],
+      "sinais": {
+        "palavras": 2618,
+        "minPalavras": 600,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Conserto de Monitor em Curitiba | Bancada, Coleta e Entrega"
+      }
+    },
+    {
+      "path": "/servicos/conserto-pc-notebook/agua-verde",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 241 palavras (mín. 500)",
+        "diferenciação: corpo 70% similar a /servicos/conserto-pc-notebook/alto-da-xv",
+        "diferenciação: corpo 71% similar a /servicos/conserto-pc-notebook/centro",
+        "diferenciação: corpo 69% similar a /servicos/conserto-pc-notebook/ecoville",
+        "diferenciação: corpo 69% similar a /servicos/conserto-pc-notebook/jardim-das-americas",
+        "diferenciação: corpo 68% similar a /servicos/conserto-pc-notebook/reboucas"
+      ],
+      "sinais": {
+        "palavras": 241,
+        "minPalavras": 500,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Conserto de PC e Notebook — Água Verde, Curitiba"
+      }
+    },
+    {
+      "path": "/servicos/conserto-pc-notebook/alto-da-xv",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 244 palavras (mín. 500)",
+        "diferenciação: corpo 70% similar a /servicos/conserto-pc-notebook/agua-verde",
+        "diferenciação: corpo 70% similar a /servicos/conserto-pc-notebook/centro",
+        "diferenciação: corpo 70% similar a /servicos/conserto-pc-notebook/ecoville",
+        "diferenciação: corpo 68% similar a /servicos/conserto-pc-notebook/jardim-das-americas",
+        "diferenciação: corpo 67% similar a /servicos/conserto-pc-notebook/reboucas"
+      ],
+      "sinais": {
+        "palavras": 244,
+        "minPalavras": 500,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Conserto de PC e Notebook — Alto da XV, Curitiba"
+      }
+    },
+    {
+      "path": "/servicos/conserto-pc-notebook/centro",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 245 palavras (mín. 500)",
+        "diferenciação: corpo 71% similar a /servicos/conserto-pc-notebook/agua-verde",
+        "diferenciação: corpo 70% similar a /servicos/conserto-pc-notebook/alto-da-xv",
+        "diferenciação: corpo 69% similar a /servicos/conserto-pc-notebook/ecoville",
+        "diferenciação: corpo 68% similar a /servicos/conserto-pc-notebook/jardim-das-americas",
+        "diferenciação: corpo 67% similar a /servicos/conserto-pc-notebook/reboucas"
+      ],
+      "sinais": {
+        "palavras": 245,
+        "minPalavras": 500,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Conserto de PC e Notebook — Centro de Curitiba"
+      }
+    },
+    {
+      "path": "/servicos/conserto-pc-notebook/ecoville",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 239 palavras (mín. 500)",
+        "diferenciação: corpo 69% similar a /servicos/conserto-pc-notebook/agua-verde",
+        "diferenciação: corpo 70% similar a /servicos/conserto-pc-notebook/alto-da-xv",
+        "diferenciação: corpo 69% similar a /servicos/conserto-pc-notebook/centro",
+        "diferenciação: corpo 71% similar a /servicos/conserto-pc-notebook/jardim-das-americas",
+        "diferenciação: corpo 70% similar a /servicos/conserto-pc-notebook/reboucas"
+      ],
+      "sinais": {
+        "palavras": 239,
+        "minPalavras": 500,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Conserto de PC e Notebook — Ecoville, Curitiba"
+      }
+    },
+    {
+      "path": "/servicos/conserto-pc-notebook/jardim-das-americas",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 244 palavras (mín. 500)",
+        "diferenciação: corpo 69% similar a /servicos/conserto-pc-notebook/agua-verde",
+        "diferenciação: corpo 68% similar a /servicos/conserto-pc-notebook/alto-da-xv",
+        "diferenciação: corpo 68% similar a /servicos/conserto-pc-notebook/centro",
+        "diferenciação: corpo 71% similar a /servicos/conserto-pc-notebook/ecoville",
+        "diferenciação: corpo 68% similar a /servicos/conserto-pc-notebook/reboucas"
+      ],
+      "sinais": {
+        "palavras": 244,
+        "minPalavras": 500,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Conserto de PC e Notebook — Jardim das Américas, Curitiba"
+      }
+    },
+    {
+      "path": "/servicos/conserto-pc-notebook/reboucas",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 238 palavras (mín. 500)",
+        "diferenciação: corpo 68% similar a /servicos/conserto-pc-notebook/agua-verde",
+        "diferenciação: corpo 67% similar a /servicos/conserto-pc-notebook/alto-da-xv",
+        "diferenciação: corpo 67% similar a /servicos/conserto-pc-notebook/centro",
+        "diferenciação: corpo 70% similar a /servicos/conserto-pc-notebook/ecoville",
+        "diferenciação: corpo 68% similar a /servicos/conserto-pc-notebook/jardim-das-americas"
+      ],
+      "sinais": {
+        "palavras": 238,
+        "minPalavras": 500,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Conserto de PC e Notebook — Rebouças, Curitiba"
+      }
+    },
+    {
+      "path": "/servicos/conserto-placa",
+      "apta": true,
+      "motivos": [],
+      "sinais": {
+        "palavras": 2331,
+        "minPalavras": 600,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Reparo de Placa Eletrônica em Curitiba | Nível de Componente"
+      }
+    },
+    {
+      "path": "/servicos/conserto-tv",
+      "apta": true,
+      "motivos": [],
+      "sinais": {
+        "palavras": 3112,
+        "minPalavras": 600,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Conserto de TV e Smart TV em Curitiba | Bancada e Coleta"
+      }
+    },
+    {
+      "path": "/servicos/formatacao",
+      "apta": true,
+      "motivos": [],
+      "sinais": {
+        "palavras": 1263,
+        "minPalavras": 600,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Formatação de PC e Notebook em Curitiba | Windows"
+      }
+    },
+    {
+      "path": "/servicos/formatacao-computador/agua-verde",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 243 palavras (mín. 500)",
+        "diferenciação: corpo 70% similar a /servicos/formatacao-computador/alto-da-xv",
+        "diferenciação: corpo 72% similar a /servicos/formatacao-computador/batel",
+        "diferenciação: corpo 79% similar a /servicos/formatacao-computador/cic",
+        "diferenciação: corpo 68% similar a /servicos/formatacao-computador/ecoville",
+        "diferenciação: corpo 66% similar a /servicos/formatacao-computador/jardim-das-americas",
+        "diferenciação: corpo 69% similar a /servicos/formatacao-computador/reboucas"
+      ],
+      "sinais": {
+        "palavras": 243,
+        "minPalavras": 500,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Formatação de Computador — Água Verde, Curitiba"
+      }
+    },
+    {
+      "path": "/servicos/formatacao-computador/alto-da-xv",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 250 palavras (mín. 500)",
+        "diferenciação: corpo 70% similar a /servicos/formatacao-computador/agua-verde",
+        "diferenciação: corpo 69% similar a /servicos/formatacao-computador/batel",
+        "diferenciação: corpo 71% similar a /servicos/formatacao-computador/cic",
+        "diferenciação: corpo 66% similar a /servicos/formatacao-computador/ecoville",
+        "diferenciação: corpo 64% similar a /servicos/formatacao-computador/jardim-das-americas",
+        "diferenciação: corpo 67% similar a /servicos/formatacao-computador/reboucas"
+      ],
+      "sinais": {
+        "palavras": 250,
+        "minPalavras": 500,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Formatação de Computador — Alto da XV, Curitiba"
+      }
+    },
+    {
+      "path": "/servicos/formatacao-computador/batel",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 240 palavras (mín. 500)",
+        "diferenciação: corpo 72% similar a /servicos/formatacao-computador/agua-verde",
+        "diferenciação: corpo 69% similar a /servicos/formatacao-computador/alto-da-xv",
+        "diferenciação: corpo 73% similar a /servicos/formatacao-computador/cic",
+        "diferenciação: corpo 70% similar a /servicos/formatacao-computador/ecoville",
+        "diferenciação: corpo 66% similar a /servicos/formatacao-computador/jardim-das-americas",
+        "diferenciação: corpo 69% similar a /servicos/formatacao-computador/reboucas"
+      ],
+      "sinais": {
+        "palavras": 240,
+        "minPalavras": 500,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Formatação de Computador — Batel, Curitiba"
+      }
+    },
+    {
+      "path": "/servicos/formatacao-computador/cic",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 238 palavras (mín. 500)",
+        "diferenciação: corpo 79% similar a /servicos/formatacao-computador/agua-verde",
+        "diferenciação: corpo 71% similar a /servicos/formatacao-computador/alto-da-xv",
+        "diferenciação: corpo 73% similar a /servicos/formatacao-computador/batel",
+        "diferenciação: corpo 69% similar a /servicos/formatacao-computador/ecoville",
+        "diferenciação: corpo 67% similar a /servicos/formatacao-computador/jardim-das-americas",
+        "diferenciação: corpo 70% similar a /servicos/formatacao-computador/reboucas"
+      ],
+      "sinais": {
+        "palavras": 238,
+        "minPalavras": 500,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Formatação de Computador — CIC, Curitiba"
+      }
+    },
+    {
+      "path": "/servicos/formatacao-computador/ecoville",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 241 palavras (mín. 500)",
+        "diferenciação: corpo 68% similar a /servicos/formatacao-computador/agua-verde",
+        "diferenciação: corpo 66% similar a /servicos/formatacao-computador/alto-da-xv",
+        "diferenciação: corpo 70% similar a /servicos/formatacao-computador/batel",
+        "diferenciação: corpo 69% similar a /servicos/formatacao-computador/cic",
+        "diferenciação: corpo 68% similar a /servicos/formatacao-computador/jardim-das-americas",
+        "diferenciação: corpo 74% similar a /servicos/formatacao-computador/reboucas"
+      ],
+      "sinais": {
+        "palavras": 241,
+        "minPalavras": 500,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Formatação de Computador — Ecoville, Curitiba"
+      }
+    },
+    {
+      "path": "/servicos/formatacao-computador/jardim-das-americas",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 251 palavras (mín. 500)",
+        "diferenciação: corpo 66% similar a /servicos/formatacao-computador/agua-verde",
+        "diferenciação: corpo 64% similar a /servicos/formatacao-computador/alto-da-xv",
+        "diferenciação: corpo 66% similar a /servicos/formatacao-computador/batel",
+        "diferenciação: corpo 67% similar a /servicos/formatacao-computador/cic",
+        "diferenciação: corpo 68% similar a /servicos/formatacao-computador/ecoville",
+        "diferenciação: corpo 72% similar a /servicos/formatacao-computador/reboucas"
+      ],
+      "sinais": {
+        "palavras": 251,
+        "minPalavras": 500,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Formatação de Computador — Jardim das Américas, Curitiba"
+      }
+    },
+    {
+      "path": "/servicos/formatacao-computador/reboucas",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 241 palavras (mín. 500)",
+        "diferenciação: corpo 69% similar a /servicos/formatacao-computador/agua-verde",
+        "diferenciação: corpo 67% similar a /servicos/formatacao-computador/alto-da-xv",
+        "diferenciação: corpo 69% similar a /servicos/formatacao-computador/batel",
+        "diferenciação: corpo 70% similar a /servicos/formatacao-computador/cic",
+        "diferenciação: corpo 74% similar a /servicos/formatacao-computador/ecoville",
+        "diferenciação: corpo 72% similar a /servicos/formatacao-computador/jardim-das-americas"
+      ],
+      "sinais": {
+        "palavras": 241,
+        "minPalavras": 500,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Formatação de Computador — Rebouças, Curitiba"
+      }
+    },
+    {
+      "path": "/servicos/manutencao-de-computador",
+      "apta": true,
+      "motivos": [],
+      "sinais": {
+        "palavras": 1255,
+        "minPalavras": 600,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Assistência Técnica de Computador em Curitiba | PC"
+      }
+    },
+    {
+      "path": "/servicos/manutencao-de-notebook",
+      "apta": true,
+      "motivos": [],
+      "sinais": {
+        "palavras": 1238,
+        "minPalavras": 600,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Assistência Técnica de Notebook em Curitiba | Diagnóstico"
+      }
+    },
+    {
+      "path": "/servicos/manutencao-preventiva-empresas",
+      "apta": true,
+      "motivos": [],
+      "sinais": {
+        "palavras": 1433,
+        "minPalavras": 600,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Manutenção Preventiva de Computadores em Curitiba | Empresas"
+      }
+    },
+    {
+      "path": "/servicos/manutencao-tv/agua-verde",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 129 palavras (mín. 600)",
+        "diferenciação: corpo 56% similar a /servicos/manutencao-tv/cabral",
+        "diferenciação: corpo 56% similar a /servicos/manutencao-tv/cic"
+      ],
+      "sinais": {
+        "palavras": 129,
+        "minPalavras": 600,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Conserto de Smart TV no Água Verde | Curitiba"
+      }
+    },
+    {
+      "path": "/servicos/manutencao-tv/alto-da-xv",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 131 palavras (mín. 600)",
+        "diferenciação: corpo 55% similar a /servicos/manutencao-tv/batel",
+        "diferenciação: corpo 59% similar a /servicos/manutencao-tv/boqueirao"
+      ],
+      "sinais": {
+        "palavras": 131,
+        "minPalavras": 600,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Conserto de Smart TV no Alto da XV | Curitiba"
+      }
+    },
+    {
+      "path": "/servicos/manutencao-tv/batel",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 123 palavras (mín. 600)",
+        "diferenciação: corpo 55% similar a /servicos/manutencao-tv/alto-da-xv",
+        "diferenciação: corpo 56% similar a /servicos/manutencao-tv/boa-vista"
+      ],
+      "sinais": {
+        "palavras": 123,
+        "minPalavras": 600,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Conserto de Smart TV no Batel | Curitiba"
+      }
+    },
+    {
+      "path": "/servicos/manutencao-tv/bigorrilho",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 127 palavras (mín. 600)",
+        "diferenciação: corpo 70% similar a /servicos/manutencao-tv/ecoville",
+        "diferenciação: corpo 60% similar a /servicos/manutencao-tv/reboucas"
+      ],
+      "sinais": {
+        "palavras": 127,
+        "minPalavras": 600,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Conserto de Smart TV no Bigorrilho | Curitiba"
+      }
+    },
+    {
+      "path": "/servicos/manutencao-tv/boa-vista",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 127 palavras (mín. 600)",
+        "diferenciação: corpo 56% similar a /servicos/manutencao-tv/batel",
+        "diferenciação: corpo 55% similar a /servicos/manutencao-tv/boqueirao",
+        "diferenciação: corpo 55% similar a /servicos/manutencao-tv/cristo-rei",
+        "diferenciação: corpo 55% similar a /servicos/manutencao-tv/santa-felicidade"
+      ],
+      "sinais": {
+        "palavras": 127,
+        "minPalavras": 600,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Conserto de Smart TV no Boa Vista | Curitiba"
+      }
+    },
+    {
+      "path": "/servicos/manutencao-tv/boqueirao",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 125 palavras (mín. 600)",
+        "diferenciação: corpo 59% similar a /servicos/manutencao-tv/alto-da-xv",
+        "diferenciação: corpo 55% similar a /servicos/manutencao-tv/boa-vista",
+        "diferenciação: corpo 56% similar a /servicos/manutencao-tv/cristo-rei",
+        "diferenciação: corpo 55% similar a /servicos/manutencao-tv/jardim-das-americas",
+        "diferenciação: corpo 56% similar a /servicos/manutencao-tv/santa-felicidade"
+      ],
+      "sinais": {
+        "palavras": 125,
+        "minPalavras": 600,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Conserto de Smart TV no Boqueirão | Curitiba"
+      }
+    },
+    {
+      "path": "/servicos/manutencao-tv/cabral",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 125 palavras (mín. 600)",
+        "diferenciação: corpo 56% similar a /servicos/manutencao-tv/agua-verde",
+        "diferenciação: corpo 56% similar a /servicos/manutencao-tv/cajuru",
+        "diferenciação: corpo 56% similar a /servicos/manutencao-tv/centro",
+        "diferenciação: corpo 70% similar a /servicos/manutencao-tv/cic"
+      ],
+      "sinais": {
+        "palavras": 125,
+        "minPalavras": 600,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Conserto de Smart TV no Cabral | Curitiba"
+      }
+    },
+    {
+      "path": "/servicos/manutencao-tv/cajuru",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 124 palavras (mín. 600)",
+        "diferenciação: corpo 56% similar a /servicos/manutencao-tv/cabral",
+        "diferenciação: corpo 60% similar a /servicos/manutencao-tv/centro",
+        "diferenciação: corpo 56% similar a /servicos/manutencao-tv/cic"
+      ],
+      "sinais": {
+        "palavras": 124,
+        "minPalavras": 600,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Conserto de Smart TV no Cajuru | Curitiba"
+      }
+    },
+    {
+      "path": "/servicos/manutencao-tv/centro",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 124 palavras (mín. 600)",
+        "diferenciação: corpo 56% similar a /servicos/manutencao-tv/cabral",
+        "diferenciação: corpo 60% similar a /servicos/manutencao-tv/cajuru",
+        "diferenciação: corpo 56% similar a /servicos/manutencao-tv/cic"
+      ],
+      "sinais": {
+        "palavras": 124,
+        "minPalavras": 600,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Conserto de Smart TV no Centro | Curitiba"
+      }
+    },
+    {
+      "path": "/servicos/manutencao-tv/cic",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 125 palavras (mín. 600)",
+        "diferenciação: corpo 56% similar a /servicos/manutencao-tv/agua-verde",
+        "diferenciação: corpo 70% similar a /servicos/manutencao-tv/cabral",
+        "diferenciação: corpo 56% similar a /servicos/manutencao-tv/cajuru",
+        "diferenciação: corpo 56% similar a /servicos/manutencao-tv/centro"
+      ],
+      "sinais": {
+        "palavras": 125,
+        "minPalavras": 600,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Conserto de Smart TV no CIC | Curitiba"
+      }
+    },
+    {
+      "path": "/servicos/manutencao-tv/cristo-rei",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 125 palavras (mín. 600)",
+        "diferenciação: corpo 55% similar a /servicos/manutencao-tv/boa-vista",
+        "diferenciação: corpo 56% similar a /servicos/manutencao-tv/boqueirao",
+        "diferenciação: corpo 55% similar a /servicos/manutencao-tv/jardim-das-americas",
+        "diferenciação: corpo 56% similar a /servicos/manutencao-tv/santa-felicidade"
+      ],
+      "sinais": {
+        "palavras": 125,
+        "minPalavras": 600,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Conserto de Smart TV no Cristo Rei | Curitiba"
+      }
+    },
+    {
+      "path": "/servicos/manutencao-tv/ecoville",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 127 palavras (mín. 600)",
+        "diferenciação: corpo 70% similar a /servicos/manutencao-tv/bigorrilho",
+        "diferenciação: corpo 60% similar a /servicos/manutencao-tv/reboucas"
+      ],
+      "sinais": {
+        "palavras": 127,
+        "minPalavras": 600,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Conserto de Smart TV no Ecoville | Curitiba"
+      }
+    },
+    {
+      "path": "/servicos/manutencao-tv/jardim-das-americas",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 129 palavras (mín. 600)",
+        "diferenciação: corpo 55% similar a /servicos/manutencao-tv/boqueirao",
+        "diferenciação: corpo 55% similar a /servicos/manutencao-tv/cristo-rei",
+        "diferenciação: corpo 55% similar a /servicos/manutencao-tv/santa-felicidade"
+      ],
+      "sinais": {
+        "palavras": 129,
+        "minPalavras": 600,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Conserto de Smart TV no Jardim das Américas | Curitiba"
+      }
+    },
+    {
+      "path": "/servicos/manutencao-tv/portao",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 124 palavras (mín. 600)"
+      ],
+      "sinais": {
+        "palavras": 124,
+        "minPalavras": 600,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Conserto de Smart TV no Portão | Curitiba"
+      }
+    },
+    {
+      "path": "/servicos/manutencao-tv/reboucas",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 125 palavras (mín. 600)",
+        "diferenciação: corpo 60% similar a /servicos/manutencao-tv/bigorrilho",
+        "diferenciação: corpo 60% similar a /servicos/manutencao-tv/ecoville"
+      ],
+      "sinais": {
+        "palavras": 125,
+        "minPalavras": 600,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Conserto de Smart TV no Rebouças | Curitiba"
+      }
+    },
+    {
+      "path": "/servicos/manutencao-tv/santa-felicidade",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 125 palavras (mín. 600)",
+        "diferenciação: corpo 55% similar a /servicos/manutencao-tv/boa-vista",
+        "diferenciação: corpo 56% similar a /servicos/manutencao-tv/boqueirao",
+        "diferenciação: corpo 56% similar a /servicos/manutencao-tv/cristo-rei",
+        "diferenciação: corpo 55% similar a /servicos/manutencao-tv/jardim-das-americas"
+      ],
+      "sinais": {
+        "palavras": 125,
+        "minPalavras": 600,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Conserto de Smart TV no Santa Felicidade | Curitiba"
+      }
+    },
+    {
+      "path": "/servicos/montagem-de-pc",
+      "apta": true,
+      "motivos": [],
+      "sinais": {
+        "palavras": 2442,
+        "minPalavras": 600,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Montagem de PC e PC Gamer em Curitiba | Testes Inclusos"
+      }
+    },
+    {
+      "path": "/servicos/recuperacao-de-dados",
+      "apta": true,
+      "motivos": [],
+      "sinais": {
+        "palavras": 1070,
+        "minPalavras": 600,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Recuperação de Dados em Curitiba | HD, SSD e Pendrive"
+      }
+    },
+    {
+      "path": "/servicos/redes-e-wifi",
+      "apta": true,
+      "motivos": [],
+      "sinais": {
+        "palavras": 2307,
+        "minPalavras": 600,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Configuração de Redes e Wi-Fi em Curitiba | Roteadores"
+      }
+    },
+    {
+      "path": "/servicos/redes-wifi/agua-verde",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 126 palavras (mín. 600)",
+        "diferenciação: corpo 60% similar a /servicos/redes-wifi/bigorrilho",
+        "diferenciação: corpo 60% similar a /servicos/redes-wifi/boa-vista",
+        "diferenciação: corpo 58% similar a /servicos/redes-wifi/cabral",
+        "diferenciação: corpo 58% similar a /servicos/redes-wifi/cajuru",
+        "diferenciação: corpo 59% similar a /servicos/redes-wifi/centro",
+        "diferenciação: corpo 58% similar a /servicos/redes-wifi/ecoville",
+        "diferenciação: corpo 61% similar a /servicos/redes-wifi/jardim-das-americas",
+        "diferenciação: corpo 57% similar a /servicos/redes-wifi/reboucas",
+        "diferenciação: corpo 58% similar a /servicos/redes-wifi/santa-felicidade"
+      ],
+      "sinais": {
+        "palavras": 126,
+        "minPalavras": 600,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Configuração de Wi-Fi no Água Verde | Curitiba"
+      }
+    },
+    {
+      "path": "/servicos/redes-wifi/alto-da-xv",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 132 palavras (mín. 600)",
+        "diferenciação: corpo 55% similar a /servicos/redes-wifi/cristo-rei",
+        "diferenciação: corpo 57% similar a /servicos/redes-wifi/ecoville"
+      ],
+      "sinais": {
+        "palavras": 132,
+        "minPalavras": 600,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Configuração de Wi-Fi no Alto da XV | Curitiba"
+      }
+    },
+    {
+      "path": "/servicos/redes-wifi/batel",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 123 palavras (mín. 600)",
+        "diferenciação: corpo 56% similar a /servicos/redes-wifi/bigorrilho",
+        "diferenciação: corpo 56% similar a /servicos/redes-wifi/cajuru",
+        "diferenciação: corpo 62% similar a /servicos/redes-wifi/centro",
+        "diferenciação: corpo 58% similar a /servicos/redes-wifi/cic"
+      ],
+      "sinais": {
+        "palavras": 123,
+        "minPalavras": 600,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Configuração de Wi-Fi no Batel | Curitiba"
+      }
+    },
+    {
+      "path": "/servicos/redes-wifi/bigorrilho",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 124 palavras (mín. 600)",
+        "diferenciação: corpo 60% similar a /servicos/redes-wifi/agua-verde",
+        "diferenciação: corpo 56% similar a /servicos/redes-wifi/batel",
+        "diferenciação: corpo 58% similar a /servicos/redes-wifi/boa-vista",
+        "diferenciação: corpo 56% similar a /servicos/redes-wifi/cabral",
+        "diferenciação: corpo 61% similar a /servicos/redes-wifi/cajuru",
+        "diferenciação: corpo 55% similar a /servicos/redes-wifi/centro",
+        "diferenciação: corpo 56% similar a /servicos/redes-wifi/cristo-rei",
+        "diferenciação: corpo 59% similar a /servicos/redes-wifi/ecoville",
+        "diferenciação: corpo 57% similar a /servicos/redes-wifi/jardim-das-americas",
+        "diferenciação: corpo 58% similar a /servicos/redes-wifi/santa-felicidade"
+      ],
+      "sinais": {
+        "palavras": 124,
+        "minPalavras": 600,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Configuração de Wi-Fi no Bigorrilho | Curitiba"
+      }
+    },
+    {
+      "path": "/servicos/redes-wifi/boa-vista",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 127 palavras (mín. 600)",
+        "diferenciação: corpo 60% similar a /servicos/redes-wifi/agua-verde",
+        "diferenciação: corpo 58% similar a /servicos/redes-wifi/bigorrilho",
+        "diferenciação: corpo 58% similar a /servicos/redes-wifi/cabral",
+        "diferenciação: corpo 58% similar a /servicos/redes-wifi/cajuru",
+        "diferenciação: corpo 58% similar a /servicos/redes-wifi/ecoville",
+        "diferenciação: corpo 57% similar a /servicos/redes-wifi/jardim-das-americas",
+        "diferenciação: corpo 58% similar a /servicos/redes-wifi/santa-felicidade"
+      ],
+      "sinais": {
+        "palavras": 127,
+        "minPalavras": 600,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Configuração de Wi-Fi no Boa Vista | Curitiba"
+      }
+    },
+    {
+      "path": "/servicos/redes-wifi/boqueirao",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 128 palavras (mín. 600)",
+        "diferenciação: corpo 67% similar a /servicos/redes-wifi/cic",
+        "diferenciação: corpo 58% similar a /servicos/redes-wifi/portao"
+      ],
+      "sinais": {
+        "palavras": 128,
+        "minPalavras": 600,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Configuração de Wi-Fi no Boqueirão | Curitiba"
+      }
+    },
+    {
+      "path": "/servicos/redes-wifi/cabral",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 125 palavras (mín. 600)",
+        "diferenciação: corpo 58% similar a /servicos/redes-wifi/agua-verde",
+        "diferenciação: corpo 56% similar a /servicos/redes-wifi/bigorrilho",
+        "diferenciação: corpo 58% similar a /servicos/redes-wifi/boa-vista",
+        "diferenciação: corpo 55% similar a /servicos/redes-wifi/cajuru",
+        "diferenciação: corpo 58% similar a /servicos/redes-wifi/centro",
+        "diferenciação: corpo 59% similar a /servicos/redes-wifi/jardim-das-americas"
+      ],
+      "sinais": {
+        "palavras": 125,
+        "minPalavras": 600,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Configuração de Wi-Fi no Cabral | Curitiba"
+      }
+    },
+    {
+      "path": "/servicos/redes-wifi/cajuru",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 123 palavras (mín. 600)",
+        "diferenciação: corpo 58% similar a /servicos/redes-wifi/agua-verde",
+        "diferenciação: corpo 56% similar a /servicos/redes-wifi/batel",
+        "diferenciação: corpo 61% similar a /servicos/redes-wifi/bigorrilho",
+        "diferenciação: corpo 58% similar a /servicos/redes-wifi/boa-vista",
+        "diferenciação: corpo 55% similar a /servicos/redes-wifi/cabral",
+        "diferenciação: corpo 58% similar a /servicos/redes-wifi/centro",
+        "diferenciação: corpo 59% similar a /servicos/redes-wifi/ecoville",
+        "diferenciação: corpo 59% similar a /servicos/redes-wifi/jardim-das-americas",
+        "diferenciação: corpo 59% similar a /servicos/redes-wifi/santa-felicidade"
+      ],
+      "sinais": {
+        "palavras": 123,
+        "minPalavras": 600,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Configuração de Wi-Fi no Cajuru | Curitiba"
+      }
+    },
+    {
+      "path": "/servicos/redes-wifi/centro",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 124 palavras (mín. 600)",
+        "diferenciação: corpo 59% similar a /servicos/redes-wifi/agua-verde",
+        "diferenciação: corpo 62% similar a /servicos/redes-wifi/batel",
+        "diferenciação: corpo 55% similar a /servicos/redes-wifi/bigorrilho",
+        "diferenciação: corpo 58% similar a /servicos/redes-wifi/cabral",
+        "diferenciação: corpo 58% similar a /servicos/redes-wifi/cajuru",
+        "diferenciação: corpo 59% similar a /servicos/redes-wifi/cic",
+        "diferenciação: corpo 55% similar a /servicos/redes-wifi/ecoville",
+        "diferenciação: corpo 65% similar a /servicos/redes-wifi/jardim-das-americas",
+        "diferenciação: corpo 55% similar a /servicos/redes-wifi/santa-felicidade"
+      ],
+      "sinais": {
+        "palavras": 124,
+        "minPalavras": 600,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Configuração de Wi-Fi no Centro | Curitiba"
+      }
+    },
+    {
+      "path": "/servicos/redes-wifi/cic",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 128 palavras (mín. 600)",
+        "diferenciação: corpo 58% similar a /servicos/redes-wifi/batel",
+        "diferenciação: corpo 67% similar a /servicos/redes-wifi/boqueirao",
+        "diferenciação: corpo 59% similar a /servicos/redes-wifi/centro"
+      ],
+      "sinais": {
+        "palavras": 128,
+        "minPalavras": 600,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Configuração de Wi-Fi no CIC | Curitiba"
+      }
+    },
+    {
+      "path": "/servicos/redes-wifi/cristo-rei",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 130 palavras (mín. 600)",
+        "diferenciação: corpo 55% similar a /servicos/redes-wifi/alto-da-xv",
+        "diferenciação: corpo 56% similar a /servicos/redes-wifi/bigorrilho"
+      ],
+      "sinais": {
+        "palavras": 130,
+        "minPalavras": 600,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Configuração de Wi-Fi no Cristo Rei | Curitiba"
+      }
+    },
+    {
+      "path": "/servicos/redes-wifi/ecoville",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 125 palavras (mín. 600)",
+        "diferenciação: corpo 58% similar a /servicos/redes-wifi/agua-verde",
+        "diferenciação: corpo 57% similar a /servicos/redes-wifi/alto-da-xv",
+        "diferenciação: corpo 59% similar a /servicos/redes-wifi/bigorrilho",
+        "diferenciação: corpo 58% similar a /servicos/redes-wifi/boa-vista",
+        "diferenciação: corpo 59% similar a /servicos/redes-wifi/cajuru",
+        "diferenciação: corpo 55% similar a /servicos/redes-wifi/centro",
+        "diferenciação: corpo 57% similar a /servicos/redes-wifi/jardim-das-americas",
+        "diferenciação: corpo 58% similar a /servicos/redes-wifi/santa-felicidade"
+      ],
+      "sinais": {
+        "palavras": 125,
+        "minPalavras": 600,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Configuração de Wi-Fi no Ecoville | Curitiba"
+      }
+    },
+    {
+      "path": "/servicos/redes-wifi/jardim-das-americas",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 131 palavras (mín. 600)",
+        "diferenciação: corpo 61% similar a /servicos/redes-wifi/agua-verde",
+        "diferenciação: corpo 57% similar a /servicos/redes-wifi/bigorrilho",
+        "diferenciação: corpo 57% similar a /servicos/redes-wifi/boa-vista",
+        "diferenciação: corpo 59% similar a /servicos/redes-wifi/cabral",
+        "diferenciação: corpo 59% similar a /servicos/redes-wifi/cajuru",
+        "diferenciação: corpo 65% similar a /servicos/redes-wifi/centro",
+        "diferenciação: corpo 57% similar a /servicos/redes-wifi/ecoville",
+        "diferenciação: corpo 57% similar a /servicos/redes-wifi/santa-felicidade"
+      ],
+      "sinais": {
+        "palavras": 131,
+        "minPalavras": 600,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Configuração de Wi-Fi no Jardim das Américas | Curitiba"
+      }
+    },
+    {
+      "path": "/servicos/redes-wifi/portao",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 128 palavras (mín. 600)",
+        "diferenciação: corpo 58% similar a /servicos/redes-wifi/boqueirao"
+      ],
+      "sinais": {
+        "palavras": 128,
+        "minPalavras": 600,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Configuração de Wi-Fi no Portão | Curitiba"
+      }
+    },
+    {
+      "path": "/servicos/redes-wifi/reboucas",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 127 palavras (mín. 600)",
+        "diferenciação: corpo 57% similar a /servicos/redes-wifi/agua-verde"
+      ],
+      "sinais": {
+        "palavras": 127,
+        "minPalavras": 600,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Configuração de Wi-Fi no Rebouças | Curitiba"
+      }
+    },
+    {
+      "path": "/servicos/redes-wifi/santa-felicidade",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 128 palavras (mín. 600)",
+        "diferenciação: corpo 58% similar a /servicos/redes-wifi/agua-verde",
+        "diferenciação: corpo 58% similar a /servicos/redes-wifi/bigorrilho",
+        "diferenciação: corpo 58% similar a /servicos/redes-wifi/boa-vista",
+        "diferenciação: corpo 59% similar a /servicos/redes-wifi/cajuru",
+        "diferenciação: corpo 55% similar a /servicos/redes-wifi/centro",
+        "diferenciação: corpo 58% similar a /servicos/redes-wifi/ecoville",
+        "diferenciação: corpo 57% similar a /servicos/redes-wifi/jardim-das-americas"
+      ],
+      "sinais": {
+        "palavras": 128,
+        "minPalavras": 600,
+        "fotosReais": null,
+        "imagensSuspeitas": 0,
+        "statusHttp": null,
+        "title": "Configuração de Wi-Fi no Santa Felicidade | Curitiba"
+      }
+    },
+    {
+      "path": "/servicos/remocao-de-virus",
+      "apta": true,
+      "motivos": [],
+      "sinais": {
+        "palavras": 783,
+        "minPalavras": 600,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Remoção de Vírus e Malware em Curitiba | PC e Notebook"
+      }
+    },
+    {
+      "path": "/servicos/remocao-virus/agua-verde",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 238 palavras (mín. 500)",
+        "diferenciação: corpo 70% similar a /servicos/remocao-virus/alto-da-xv",
+        "diferenciação: corpo 72% similar a /servicos/remocao-virus/cic",
+        "diferenciação: corpo 72% similar a /servicos/remocao-virus/ecoville",
+        "diferenciação: corpo 68% similar a /servicos/remocao-virus/jardim-das-americas",
+        "diferenciação: corpo 70% similar a /servicos/remocao-virus/reboucas"
+      ],
+      "sinais": {
+        "palavras": 238,
+        "minPalavras": 500,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Remoção de Vírus e Malware — Água Verde, Curitiba"
+      }
+    },
+    {
+      "path": "/servicos/remocao-virus/alto-da-xv",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 241 palavras (mín. 500)",
+        "diferenciação: corpo 70% similar a /servicos/remocao-virus/agua-verde",
+        "diferenciação: corpo 72% similar a /servicos/remocao-virus/cic",
+        "diferenciação: corpo 71% similar a /servicos/remocao-virus/ecoville",
+        "diferenciação: corpo 68% similar a /servicos/remocao-virus/jardim-das-americas",
+        "diferenciação: corpo 70% similar a /servicos/remocao-virus/reboucas"
+      ],
+      "sinais": {
+        "palavras": 241,
+        "minPalavras": 500,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Remoção de Vírus e Malware — Alto da XV, Curitiba"
+      }
+    },
+    {
+      "path": "/servicos/remocao-virus/cic",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 231 palavras (mín. 500)",
+        "diferenciação: corpo 72% similar a /servicos/remocao-virus/agua-verde",
+        "diferenciação: corpo 72% similar a /servicos/remocao-virus/alto-da-xv",
+        "diferenciação: corpo 73% similar a /servicos/remocao-virus/ecoville",
+        "diferenciação: corpo 70% similar a /servicos/remocao-virus/jardim-das-americas",
+        "diferenciação: corpo 72% similar a /servicos/remocao-virus/reboucas"
+      ],
+      "sinais": {
+        "palavras": 231,
+        "minPalavras": 500,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Remoção de Vírus e Malware — CIC, Curitiba"
+      }
+    },
+    {
+      "path": "/servicos/remocao-virus/ecoville",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 233 palavras (mín. 500)",
+        "diferenciação: corpo 72% similar a /servicos/remocao-virus/agua-verde",
+        "diferenciação: corpo 71% similar a /servicos/remocao-virus/alto-da-xv",
+        "diferenciação: corpo 73% similar a /servicos/remocao-virus/cic",
+        "diferenciação: corpo 69% similar a /servicos/remocao-virus/jardim-das-americas",
+        "diferenciação: corpo 71% similar a /servicos/remocao-virus/reboucas"
+      ],
+      "sinais": {
+        "palavras": 233,
+        "minPalavras": 500,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Remoção de Vírus e Malware — Ecoville, Curitiba"
+      }
+    },
+    {
+      "path": "/servicos/remocao-virus/jardim-das-americas",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 241 palavras (mín. 500)",
+        "diferenciação: corpo 68% similar a /servicos/remocao-virus/agua-verde",
+        "diferenciação: corpo 68% similar a /servicos/remocao-virus/alto-da-xv",
+        "diferenciação: corpo 70% similar a /servicos/remocao-virus/cic",
+        "diferenciação: corpo 69% similar a /servicos/remocao-virus/ecoville",
+        "diferenciação: corpo 72% similar a /servicos/remocao-virus/reboucas"
+      ],
+      "sinais": {
+        "palavras": 241,
+        "minPalavras": 500,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Remoção de Vírus e Malware — Jardim das Américas, Curitiba"
+      }
+    },
+    {
+      "path": "/servicos/remocao-virus/reboucas",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 231 palavras (mín. 500)",
+        "diferenciação: corpo 70% similar a /servicos/remocao-virus/agua-verde",
+        "diferenciação: corpo 70% similar a /servicos/remocao-virus/alto-da-xv",
+        "diferenciação: corpo 72% similar a /servicos/remocao-virus/cic",
+        "diferenciação: corpo 71% similar a /servicos/remocao-virus/ecoville",
+        "diferenciação: corpo 72% similar a /servicos/remocao-virus/jardim-das-americas"
+      ],
+      "sinais": {
+        "palavras": 231,
+        "minPalavras": 500,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Remoção de Vírus e Malware — Rebouças, Curitiba"
+      }
+    },
+    {
+      "path": "/servicos/suporte-home-office",
+      "apta": true,
+      "motivos": [],
+      "sinais": {
+        "palavras": 1856,
+        "minPalavras": 600,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Suporte Técnico para Home Office em Curitiba"
+      }
+    },
+    {
+      "path": "/servicos/suporte-tecnico-empresarial",
+      "apta": true,
+      "motivos": [],
+      "sinais": {
+        "palavras": 1859,
+        "minPalavras": 600,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Suporte Técnico para Empresas em Curitiba | Informática"
+      }
+    },
+    {
+      "path": "/servicos/upgrade-ssd-memoria/agua-verde",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 249 palavras (mín. 500)",
+        "diferenciação: corpo 74% similar a /servicos/upgrade-ssd-memoria/alto-da-xv",
+        "diferenciação: corpo 74% similar a /servicos/upgrade-ssd-memoria/centro",
+        "diferenciação: corpo 76% similar a /servicos/upgrade-ssd-memoria/cic",
+        "diferenciação: corpo 71% similar a /servicos/upgrade-ssd-memoria/ecoville",
+        "diferenciação: corpo 69% similar a /servicos/upgrade-ssd-memoria/jardim-das-americas",
+        "diferenciação: corpo 76% similar a /servicos/upgrade-ssd-memoria/portao",
+        "diferenciação: corpo 73% similar a /servicos/upgrade-ssd-memoria/reboucas"
+      ],
+      "sinais": {
+        "palavras": 249,
+        "minPalavras": 500,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Upgrade de SSD e Memória — Água Verde, Curitiba"
+      }
+    },
+    {
+      "path": "/servicos/upgrade-ssd-memoria/alto-da-xv",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 251 palavras (mín. 500)",
+        "diferenciação: corpo 74% similar a /servicos/upgrade-ssd-memoria/agua-verde",
+        "diferenciação: corpo 73% similar a /servicos/upgrade-ssd-memoria/centro",
+        "diferenciação: corpo 75% similar a /servicos/upgrade-ssd-memoria/cic",
+        "diferenciação: corpo 70% similar a /servicos/upgrade-ssd-memoria/ecoville",
+        "diferenciação: corpo 68% similar a /servicos/upgrade-ssd-memoria/jardim-das-americas",
+        "diferenciação: corpo 75% similar a /servicos/upgrade-ssd-memoria/portao",
+        "diferenciação: corpo 73% similar a /servicos/upgrade-ssd-memoria/reboucas"
+      ],
+      "sinais": {
+        "palavras": 251,
+        "minPalavras": 500,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Upgrade de SSD e Memória — Alto da XV, Curitiba"
+      }
+    },
+    {
+      "path": "/servicos/upgrade-ssd-memoria/centro",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 250 palavras (mín. 500)",
+        "diferenciação: corpo 74% similar a /servicos/upgrade-ssd-memoria/agua-verde",
+        "diferenciação: corpo 73% similar a /servicos/upgrade-ssd-memoria/alto-da-xv",
+        "diferenciação: corpo 76% similar a /servicos/upgrade-ssd-memoria/cic",
+        "diferenciação: corpo 71% similar a /servicos/upgrade-ssd-memoria/ecoville",
+        "diferenciação: corpo 69% similar a /servicos/upgrade-ssd-memoria/jardim-das-americas",
+        "diferenciação: corpo 76% similar a /servicos/upgrade-ssd-memoria/portao",
+        "diferenciação: corpo 73% similar a /servicos/upgrade-ssd-memoria/reboucas"
+      ],
+      "sinais": {
+        "palavras": 250,
+        "minPalavras": 500,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Upgrade de SSD e Memória — Centro de Curitiba"
+      }
+    },
+    {
+      "path": "/servicos/upgrade-ssd-memoria/cic",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 243 palavras (mín. 500)",
+        "diferenciação: corpo 76% similar a /servicos/upgrade-ssd-memoria/agua-verde",
+        "diferenciação: corpo 75% similar a /servicos/upgrade-ssd-memoria/alto-da-xv",
+        "diferenciação: corpo 76% similar a /servicos/upgrade-ssd-memoria/centro",
+        "diferenciação: corpo 72% similar a /servicos/upgrade-ssd-memoria/ecoville",
+        "diferenciação: corpo 70% similar a /servicos/upgrade-ssd-memoria/jardim-das-americas",
+        "diferenciação: corpo 78% similar a /servicos/upgrade-ssd-memoria/portao",
+        "diferenciação: corpo 75% similar a /servicos/upgrade-ssd-memoria/reboucas"
+      ],
+      "sinais": {
+        "palavras": 243,
+        "minPalavras": 500,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Upgrade de SSD e Memória — CIC, Curitiba"
+      }
+    },
+    {
+      "path": "/servicos/upgrade-ssd-memoria/ecoville",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 246 palavras (mín. 500)",
+        "diferenciação: corpo 71% similar a /servicos/upgrade-ssd-memoria/agua-verde",
+        "diferenciação: corpo 70% similar a /servicos/upgrade-ssd-memoria/alto-da-xv",
+        "diferenciação: corpo 71% similar a /servicos/upgrade-ssd-memoria/centro",
+        "diferenciação: corpo 72% similar a /servicos/upgrade-ssd-memoria/cic",
+        "diferenciação: corpo 70% similar a /servicos/upgrade-ssd-memoria/jardim-das-americas",
+        "diferenciação: corpo 72% similar a /servicos/upgrade-ssd-memoria/portao",
+        "diferenciação: corpo 72% similar a /servicos/upgrade-ssd-memoria/reboucas"
+      ],
+      "sinais": {
+        "palavras": 246,
+        "minPalavras": 500,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Upgrade de SSD e Memória — Ecoville, Curitiba"
+      }
+    },
+    {
+      "path": "/servicos/upgrade-ssd-memoria/jardim-das-americas",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 255 palavras (mín. 500)",
+        "diferenciação: corpo 69% similar a /servicos/upgrade-ssd-memoria/agua-verde",
+        "diferenciação: corpo 68% similar a /servicos/upgrade-ssd-memoria/alto-da-xv",
+        "diferenciação: corpo 69% similar a /servicos/upgrade-ssd-memoria/centro",
+        "diferenciação: corpo 70% similar a /servicos/upgrade-ssd-memoria/cic",
+        "diferenciação: corpo 70% similar a /servicos/upgrade-ssd-memoria/ecoville",
+        "diferenciação: corpo 70% similar a /servicos/upgrade-ssd-memoria/portao",
+        "diferenciação: corpo 71% similar a /servicos/upgrade-ssd-memoria/reboucas"
+      ],
+      "sinais": {
+        "palavras": 255,
+        "minPalavras": 500,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Upgrade de SSD e Memória — Jardim das Américas, Curitiba"
+      }
+    },
+    {
+      "path": "/servicos/upgrade-ssd-memoria/portao",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 243 palavras (mín. 500)",
+        "diferenciação: corpo 76% similar a /servicos/upgrade-ssd-memoria/agua-verde",
+        "diferenciação: corpo 75% similar a /servicos/upgrade-ssd-memoria/alto-da-xv",
+        "diferenciação: corpo 76% similar a /servicos/upgrade-ssd-memoria/centro",
+        "diferenciação: corpo 78% similar a /servicos/upgrade-ssd-memoria/cic",
+        "diferenciação: corpo 72% similar a /servicos/upgrade-ssd-memoria/ecoville",
+        "diferenciação: corpo 70% similar a /servicos/upgrade-ssd-memoria/jardim-das-americas",
+        "diferenciação: corpo 75% similar a /servicos/upgrade-ssd-memoria/reboucas"
+      ],
+      "sinais": {
+        "palavras": 243,
+        "minPalavras": 500,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Upgrade de SSD e Memória — Portão, Curitiba"
+      }
+    },
+    {
+      "path": "/servicos/upgrade-ssd-memoria/reboucas",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 245 palavras (mín. 500)",
+        "diferenciação: corpo 73% similar a /servicos/upgrade-ssd-memoria/agua-verde",
+        "diferenciação: corpo 73% similar a /servicos/upgrade-ssd-memoria/alto-da-xv",
+        "diferenciação: corpo 73% similar a /servicos/upgrade-ssd-memoria/centro",
+        "diferenciação: corpo 75% similar a /servicos/upgrade-ssd-memoria/cic",
+        "diferenciação: corpo 72% similar a /servicos/upgrade-ssd-memoria/ecoville",
+        "diferenciação: corpo 71% similar a /servicos/upgrade-ssd-memoria/jardim-das-americas",
+        "diferenciação: corpo 75% similar a /servicos/upgrade-ssd-memoria/portao"
+      ],
+      "sinais": {
+        "palavras": 245,
+        "minPalavras": 500,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Upgrade de SSD e Memória — Rebouças, Curitiba"
+      }
+    },
+    {
+      "path": "/servicos/upgrade-ssd-ram",
+      "apta": true,
+      "motivos": [],
+      "sinais": {
+        "palavras": 1441,
+        "minPalavras": 600,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Instalação de SSD e Upgrade de Memória em Curitiba"
+      }
+    },
+    {
+      "path": "/sobre",
+      "apta": true,
+      "motivos": [],
+      "sinais": {
+        "palavras": 732,
+        "minPalavras": 250,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": 200,
+        "title": "Sobre o Técnico em Curitiba | PC, Notebook e Redes"
+      }
+    },
+    {
+      "path": "/tecnico-informatica-almirante-tamandare",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 121 palavras (mín. 450)",
+        "diferenciação: corpo 59% similar a /tecnico-informatica-colombo",
+        "diferenciação: corpo 58% similar a /tecnico-informatica-sao-jose-pinhais"
+      ],
+      "sinais": {
+        "palavras": 121,
+        "minPalavras": 450,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Técnico em Almirante Tamandaré | Notebook e PC"
+      }
+    },
+    {
+      "path": "/tecnico-informatica-araucaria",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 123 palavras (mín. 450)",
+        "diferenciação: corpo 62% similar a /tecnico-informatica-campo-largo"
+      ],
+      "sinais": {
+        "palavras": 123,
+        "minPalavras": 450,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Técnico em Araucária para Notebook, PC e Empresas"
+      }
+    },
+    {
+      "path": "/tecnico-informatica-campo-largo",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 129 palavras (mín. 450)",
+        "diferenciação: corpo 62% similar a /tecnico-informatica-araucaria",
+        "diferenciação: corpo 65% similar a /tecnico-informatica-pinhais"
+      ],
+      "sinais": {
+        "palavras": 129,
+        "minPalavras": 450,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Técnico em Campo Largo para Notebook, PC e Redes"
+      }
+    },
+    {
+      "path": "/tecnico-informatica-campo-magro",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 124 palavras (mín. 450)"
+      ],
+      "sinais": {
+        "palavras": 124,
+        "minPalavras": 450,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Técnico em Campo Magro para Notebook, PC e Wi-Fi"
+      }
+    },
+    {
+      "path": "/tecnico-informatica-colombo",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 127 palavras (mín. 450)",
+        "diferenciação: corpo 59% similar a /tecnico-informatica-almirante-tamandare",
+        "diferenciação: corpo 57% similar a /tecnico-informatica-pinhais",
+        "diferenciação: corpo 56% similar a /tecnico-informatica-sao-jose-pinhais"
+      ],
+      "sinais": {
+        "palavras": 127,
+        "minPalavras": 450,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Técnico em Colombo para Notebook, PC e Informática"
+      }
+    },
+    {
+      "path": "/tecnico-informatica-curitiba",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 369 palavras (mín. 450)"
+      ],
+      "sinais": {
+        "palavras": 369,
+        "minPalavras": 450,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Técnico de Informática em Curitiba | PC e Notebook"
+      }
+    },
+    {
+      "path": "/tecnico-informatica-fazenda-rio-grande",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 124 palavras (mín. 450)"
+      ],
+      "sinais": {
+        "palavras": 124,
+        "minPalavras": 450,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Técnico em Fazenda Rio Grande | PC, Notebook e Rede"
+      }
+    },
+    {
+      "path": "/tecnico-informatica-pinhais",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 126 palavras (mín. 450)",
+        "diferenciação: corpo 65% similar a /tecnico-informatica-campo-largo",
+        "diferenciação: corpo 57% similar a /tecnico-informatica-colombo"
+      ],
+      "sinais": {
+        "palavras": 126,
+        "minPalavras": 450,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Técnico em Pinhais para Notebook, PC e Redes"
+      }
+    },
+    {
+      "path": "/tecnico-informatica-piraquara",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 124 palavras (mín. 450)"
+      ],
+      "sinais": {
+        "palavras": 124,
+        "minPalavras": 450,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Técnico em Piraquara para Notebook, PC e Internet"
+      }
+    },
+    {
+      "path": "/tecnico-informatica-quatro-barras",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 125 palavras (mín. 450)"
+      ],
+      "sinais": {
+        "palavras": 125,
+        "minPalavras": 450,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Técnico em Quatro Barras para PC, Notebook e Redes"
+      }
+    },
+    {
+      "path": "/tecnico-informatica-sao-jose-pinhais",
+      "apta": false,
+      "motivos": [
+        "originalidade: corpo com 127 palavras (mín. 450)",
+        "diferenciação: corpo 58% similar a /tecnico-informatica-almirante-tamandare",
+        "diferenciação: corpo 56% similar a /tecnico-informatica-colombo"
+      ],
+      "sinais": {
+        "palavras": 127,
+        "minPalavras": 450,
+        "fotosReais": null,
+        "imagensSuspeitas": null,
+        "statusHttp": null,
+        "title": "Técnico em São José dos Pinhais para Notebook e PC"
+      }
+    }
+  ]
+}
