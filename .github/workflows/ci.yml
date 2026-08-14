@@ -99,7 +99,7 @@ jobs:
         run: |
           npx vite preview --port 4325 --strictPort &
           for i in $(seq 1 60); do curl -sf -o /dev/null http://localhost:4325/ && break; sleep 1; done
-          E2E_BASE_URL=http://localhost:4325 npx playwright test e2e/comercial-og-canonical.spec.ts --reporter=line
+          E2E_BASE_URL=http://localhost:4325 npx playwright test --config=playwright.ci.config.ts e2e/comercial-og-canonical.spec.ts --reporter=line
       - name: Changelog de SEO do build (headings, metadados, structured data)
         run: npm run report:seo-changelog
       - name: Upload changelog de SEO
