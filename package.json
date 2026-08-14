@@ -195,7 +195,9 @@
     "test:wa-prefill": "playwright test e2e/whatsapp-prefill.spec.ts",
     "check:sem-balcao": "node scripts/check-sem-balcao.mjs",
     "check:csp-inventory": "node scripts/check-csp-inventory.mjs",
-    "check:geo-conformance": "node scripts/check-geo-conformance.mjs dist"
+    "check:geo-conformance": "node scripts/check-geo-conformance.mjs dist",
+    "check:post-deploy": "node scripts/checklist-post-deploy.mjs",
+    "check:post-deploy:console": "node scripts/checklist-post-deploy.mjs --console"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
