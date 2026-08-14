@@ -216,7 +216,8 @@
     "check:route-diff:report": "node scripts/check-route-differentiation.mjs dist --report",
     "report:route-gates": "node scripts/generate-route-gate-status.mjs",
     "indexing:request": "node scripts/request-indexing.mjs",
-    "check:cnpj-dom": "node scripts/check-cnpj-dom.mjs dist"
+    "check:cnpj-dom": "node scripts/check-cnpj-dom.mjs dist",
+    "test:e2e:cta": "playwright test e2e/cta-numero-oculto.spec.ts --config playwright.ci.config.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
