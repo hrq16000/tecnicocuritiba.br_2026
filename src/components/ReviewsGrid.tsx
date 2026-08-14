@@ -1,5 +1,5 @@
 import { SkeletonCardGrid } from "@/components/motion/Skeletons";
-import { useEffect, useState } from "react";
+import { forwardRef, useEffect, useState } from "react";
 import { Star, MessageCircle, ShieldCheck, Truck, BadgeCheck, Clock } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useAggregateRating } from "@/hooks/useAggregateRating";
@@ -45,7 +45,7 @@ const openFunnel = (location: string, message?: string) => {
  * — apenas comunica garantias reais e verificáveis do atendimento.
  */
 const TrustProofFallback = forwardRef<
-  HTMLDivElement,
+  HTMLElement,
   { title: string; city?: string; whatsappCta: boolean }
 >(({ title, city, whatsappCta }, ref) => {
   const signals = [
@@ -72,7 +72,7 @@ const TrustProofFallback = forwardRef<
   ];
 
   return (
-    <section className="py-12 px-4 min-h-[560px] md:min-h-[440px] content-visibility-auto">
+    <section ref={ref} className="py-12 px-4 min-h-[560px] md:min-h-[440px] content-visibility-auto">
       <div className="max-w-6xl mx-auto">
         <header className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-bold mb-3 text-foreground">
@@ -121,7 +121,8 @@ const TrustProofFallback = forwardRef<
       </div>
     </section>
   );
-};
+});
+TrustProofFallback.displayName = "TrustProofFallback";
 
 export const ReviewsGrid = ({
   filter = {},
