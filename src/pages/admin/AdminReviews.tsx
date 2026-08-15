@@ -260,10 +260,10 @@ const AdminReviews = () => {
       service_closed_at: form.service_closed_at || null,
     };
     if (editingId) {
-      const { error } = await supabase.from("reviews").update(payload).eq("id", editingId);
+      const { error } = await supabase.from("reviews").update(payload as never).eq("id", editingId);
       if (error) return toast({ title: "Erro", description: error.message, variant: "destructive" });
     } else {
-      const { error } = await supabase.from("reviews").insert(payload);
+      const { error } = await supabase.from("reviews").insert(payload as never);
       if (error) return toast({ title: "Erro", description: error.message, variant: "destructive" });
     }
     setDialogOpen(false);
