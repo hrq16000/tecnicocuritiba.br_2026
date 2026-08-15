@@ -84,10 +84,17 @@ const missing = [];
 const stale = [];
 let written = 0;
 
+const dynamic = [];
+
 for (const route of CURATED_ROUTES) {
   const id = route.path.replace(/\/$/, "") || "/";
   const file = index.get(id);
-  if (!file) { missing.push(route.path); continue; }
+  if (!file) {
+    // Rotas cobertas por segmentos dinâmicos (ex.: /servicos/$servico/$cidade)
+    // recebem o head a partir do mapa gerado abaixo.
+    dynamic.push(route);
+    continue;
+  }
   const src = readFileSync(file, "utf8");
   const next = apply(src, route);
   if (!next) { missing.push(`${route.path} (createFileRoute não reconhecido)`); continue; }
@@ -95,6 +102,32 @@ for (const route of CURATED_ROUTES) {
   if (CHECK) { stale.push(route.path); continue; }
   writeFileSync(file, next);
   written += 1;
+}
+
+// Mapa para rotas dinâmicas.
+const generated = `/* eslint-disable */
+// GERADO por scripts/inject-route-head.mjs — não editar à mão.
+import type { RouteHeadInput } from "@/lib/seo/routeHead";
+
+export const CURATED_DYNAMIC_HEAD: Record<string, RouteHeadInput> = ${JSON.stringify(
+  Object.fromEntries(
+    dynamic.map((r) => {
+      const faq = normalizeFaq(r.faq);
+      return [
+        r.path,
+        { path: r.path, title: r.title, description: r.description, ...(faq.length ? { faq } : {}) },
+      ];
+    }),
+  ),
+  null,
+  2,
+)};
+`;
+const generatedPath = join(ROOT, "src/lib/seo/curatedDynamicHead.generated.ts");
+const current = (() => { try { return readFileSync(generatedPath, "utf8"); } catch { return ""; } })();
+if (current !== generated) {
+  if (CHECK) stale.push("src/lib/seo/curatedDynamicHead.generated.ts");
+  else writeFileSync(generatedPath, generated);
 }
 
 if (missing.length) {
@@ -108,4 +141,7 @@ if (CHECK && stale.length) {
 }
 if (missing.length) process.exit(1);
 
-console.log(`[route-head] ok — ${CURATED_ROUTES.length} rotas curadas, ${written} arquivo(s) atualizado(s)`);
+console.log(
+  `[route-head] ok — ${CURATED_ROUTES.length} rotas curadas (${dynamic.length} dinâmicas), ${written} arquivo(s) atualizado(s)`,
+);
+
