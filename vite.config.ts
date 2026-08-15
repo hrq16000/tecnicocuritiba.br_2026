@@ -8,21 +8,6 @@ import { execSync } from "node:child_process";
 import { imagetools } from "vite-imagetools";
 import { mcpPlugin } from "@lovable.dev/mcp-js/stacks/supabase/vite";
 import { sentryVitePlugin } from "@sentry/vite-plugin";
-import { CURATED_ROUTES } from "./scripts/curated-routes-meta.mjs";
-
-/**
- * Prerender estático: raiz + rotas comerciais (serviços, cidades e bairros).
- * Garante HTML com title/description/H1/OG mesmo sem JS, e artefatos em dist
- * para os gates de SEO do postbuild.
- */
-const PRERENDER_PATHS: string[] = Array.from(
-  new Set<string>([
-    "/",
-    ...(CURATED_ROUTES as Array<{ path?: string } | null>)
-      .map((r) => r?.path)
-      .filter((p): p is string => typeof p === "string"),
-  ]),
-);
 
 const resolveAppVersion = () => {
   if (process.env.APP_VERSION) return process.env.APP_VERSION;
@@ -48,8 +33,6 @@ export default defineConfig({
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
     server: { entry: "server" },
-    prerender: { enabled: true, concurrency: 4, failOnError: false, crawlLinks: false },
-    pages: PRERENDER_PATHS.map((path) => ({ path, prerender: { enabled: true } })),
   },
   vite: {
     plugins: [
@@ -67,11 +50,6 @@ export default defineConfig({
           })
         : null,
     ].filter(Boolean),
-    environments: {
-      // O nitro reescreve dist/server; manter a saída SSR do Vite em outro
-      // diretório preserva o `server.js` que o prerender do TanStack importa.
-      server: { build: { outDir: "dist/_ssr" } },
-    },
     define: {
       __APP_VERSION__: JSON.stringify(APP_VERSION),
       __APP_BUILD_TIME__: JSON.stringify(APP_BUILD_TIME),
