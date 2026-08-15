@@ -8,6 +8,28 @@ import { execSync } from "node:child_process";
 import { imagetools } from "vite-imagetools";
 import { mcpPlugin } from "@lovable.dev/mcp-js/stacks/supabase/vite";
 import { sentryVitePlugin } from "@sentry/vite-plugin";
+import { CURATED_PATHS } from "./scripts/lib/curated-urls.mjs";
+
+/**
+ * Prerender estático: raiz + rotas comerciais (serviços, cidades e bairros).
+ * Garante HTML com title/description/H1/OG mesmo sem JS, e artefatos em dist
+ * para os gates de SEO do postbuild.
+ */
+const PRERENDER_PATHS = Array.from(
+  new Set([
+    "/",
+    ...CURATED_PATHS.filter(
+      (p: string) =>
+        p.startsWith("/servicos") ||
+        p.startsWith("/tecnico-informatica") ||
+        p.startsWith("/bairros") ||
+        p.startsWith("/problemas") ||
+        p === "/precos" ||
+        p === "/precos-e-politicas" ||
+        p === "/empresa-de-ti-curitiba",
+    ),
+  ]),
+);
 
 const resolveAppVersion = () => {
   if (process.env.APP_VERSION) return process.env.APP_VERSION;
@@ -32,6 +54,8 @@ export default defineConfig({
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
     server: { entry: "server" },
+    prerender: { enabled: true, concurrency: 4, failOnError: false, crawlLinks: false },
+    pages: PRERENDER_PATHS.map((path) => ({ path, prerender: { enabled: true } })),
   },
   vite: {
     plugins: [
