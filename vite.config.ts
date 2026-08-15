@@ -21,6 +21,7 @@ const resolveAppVersion = () => {
     return `b${Date.now().toString(36)}`;
   }
 };
+
 const APP_VERSION = resolveAppVersion();
 const APP_BUILD_TIME = new Date().toISOString();
 const SENTRY_AUTH_TOKEN = process.env.SENTRY_AUTH_TOKEN || "";
