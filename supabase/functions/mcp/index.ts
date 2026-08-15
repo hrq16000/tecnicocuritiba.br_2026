@@ -7,7 +7,7 @@ import { defineMcp } from "npm:@lovable.dev/mcp-js@0.26.2";
 
 // src/lib/mcp/tools/validate-seo.ts
 import { defineTool } from "npm:@lovable.dev/mcp-js@0.26.2";
-import { z } from "npm:zod@^3.25.76";
+import { z } from "npm:zod@^3.24.2";
 
 // src/lib/mcp/lib/fetchPage.ts
 var SITE = "https://tecnico.curitiba.br";
@@ -119,7 +119,7 @@ var validate_seo_default = defineTool({
 
 // src/lib/mcp/tools/validate-jsonld.ts
 import { defineTool as defineTool2 } from "npm:@lovable.dev/mcp-js@0.26.2";
-import { z as z2 } from "npm:zod@^3.25.76";
+import { z as z2 } from "npm:zod@^3.24.2";
 var validate_jsonld_default = defineTool2({
   name: "validate_jsonld",
   title: "Validar JSON-LD de uma rota",
@@ -168,7 +168,7 @@ Problemas:
 
 // src/lib/mcp/tools/check-geo-conformance.ts
 import { defineTool as defineTool3 } from "npm:@lovable.dev/mcp-js@0.26.2";
-import { z as z3 } from "npm:zod@^3.25.76";
+import { z as z3 } from "npm:zod@^3.24.2";
 var check_geo_conformance_default = defineTool3({
   name: "check_geo_conformance",
   title: "Checar conformidade GEO de rotas",
