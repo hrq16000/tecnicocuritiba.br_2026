@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { Pause, Play, ChevronLeft, ChevronRight } from "lucide-react";
 import { siteConfig, whatsappLink } from "@/lib/siteConfig";
 import { HERO_SLIDES, shuffleSlides } from "./heroSlides";
@@ -40,7 +40,12 @@ const AUTOPLAY_MS = 6500;
  * Respeita prefers-reduced-motion (sem autoplay; controles manuais seguem ativos).
  */
 export const HeroPremium = () => {
-  const slides = useMemo(() => shuffleSlides(HERO_SLIDES), []);
+  // SSR-safe: a ordem inicial é determinística (evita hydration mismatch);
+  // o embaralhamento só acontece depois da hidratação, no cliente.
+  const [slides, setSlides] = useState<typeof HERO_SLIDES[number][]>(() => [...HERO_SLIDES]);
+  useEffect(() => {
+    setSlides(shuffleSlides(HERO_SLIDES));
+  }, []);
   const [active, setActive] = useState(0);
   const [reduceMotion, setReduceMotion] = useState(false);
   const [paused, setPaused] = useState(false);
