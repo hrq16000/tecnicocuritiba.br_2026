@@ -1,4 +1,4 @@
-import { useParams, Navigate } from "react-router-dom";
+import { useParams, Navigate } from "@/lib/router-compat";
 import { ArrumarPCCityTemplate } from "./ArrumarPCCityTemplate";
 import { cities } from "./cities";
 

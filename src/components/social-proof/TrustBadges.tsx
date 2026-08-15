@@ -70,7 +70,7 @@ export const TrustBadges = ({ variant = "card", className }: TrustBadgeProps) =>
           className={cn(
             "flex flex-col items-center text-center p-4 rounded-xl border",
             badge.highlight
-              ? "bg-accent/10 border-accent/40 shadow-sm"
+              ? "bg-accent/10 border-accent/40 shadow-xs"
               : "bg-muted/50 border-border/50",
           )}
         >
@@ -96,7 +96,7 @@ export const RatingBadge = ({ className }: { className?: string }) => {
   return (
     <div
       className={cn(
-        "inline-flex items-center gap-2 px-4 py-2 bg-card border border-border rounded-lg shadow-sm",
+        "inline-flex items-center gap-2 px-4 py-2 bg-card border border-border rounded-lg shadow-xs",
         className
       )}
     >

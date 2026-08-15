@@ -30,7 +30,7 @@ const FORMATOS = [
 const PERIODOS = ["Teste de 15 dias", "1 mês", "3 meses", "6 meses ou mais", "A definir"];
 
 const FIELD_CLASS =
-  "mt-2 w-full min-h-12 rounded-lg border border-border bg-background px-3 text-base text-foreground outline-none transition-colors focus:border-accent";
+  "mt-2 w-full min-h-12 rounded-lg border border-border bg-background px-3 text-base text-foreground outline-hidden transition-colors focus:border-accent";
 
 const LABEL_CLASS = "block text-sm font-semibold text-foreground";
 const HINT_CLASS = "mt-1 text-xs text-muted-foreground";

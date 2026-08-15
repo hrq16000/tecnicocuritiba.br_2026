@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { AlertTriangle, ArrowRight, CheckCircle2, MessageCircle, Search, ShieldCheck } from "lucide-react";
 import { ChecklistPdfCard } from "@/components/problemas/ChecklistPdfCard";
 import { DIAGNOSTICO_CHECKLISTS } from "@/lib/diagnosticoChecklists";

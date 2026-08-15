@@ -1,5 +1,5 @@
 import { lazy, Suspense } from "react";
-import { useParams } from "react-router-dom";
+import { useParams } from "@/lib/router-compat";
 import { ServicoBairroTemplate } from "./ServicoBairroTemplate";
 import { buildServicoBairroData } from "@/lib/servicoBairroFactory";
 

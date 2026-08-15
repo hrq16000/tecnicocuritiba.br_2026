@@ -57,7 +57,7 @@ export const HeroSection = () => {
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-heading font-bold text-white leading-[1.15] mb-5 md:mb-6 tracking-tight motion-safe:opacity-0 motion-safe:animate-[heroFadeUp_0.7s_ease-out_0.2s_forwards]">
               Técnico de Informática
               <br />
-              <span className="text-accent drop-shadow-sm">em Curitiba</span>
+              <span className="text-accent drop-shadow-xs">em Curitiba</span>
               <span className="block text-xl sm:text-2xl md:text-3xl font-semibold text-white/90 mt-2 tracking-normal drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)] min-h-[1.5em] break-words">
                 e Região Metropolitana
               </span>
@@ -72,7 +72,7 @@ export const HeroSection = () => {
             {/* Trust signals */}
             <div className="flex flex-wrap justify-center lg:justify-start gap-2.5 mb-6 opacity-0 animate-[heroFadeUp_0.5s_ease-out_0.45s_forwards]">
               {trustSignals.map((signal, index) => (
-                <div key={index} className="flex items-center gap-1.5 bg-white/[0.07] backdrop-blur-sm border border-white/[0.08] rounded-full px-3 py-1.5 hover:bg-white/[0.12] hover:border-white/[0.15] transition-all duration-300 hover:scale-105">
+                <div key={index} className="flex items-center gap-1.5 bg-white/[0.07] backdrop-blur-xs border border-white/[0.08] rounded-full px-3 py-1.5 hover:bg-white/[0.12] hover:border-white/[0.15] transition-all duration-300 hover:scale-105">
                   <signal.icon className="h-3.5 w-3.5 text-accent" />
                   <span className="text-white/95 text-[13px] drop-shadow-[0_1px_1px_rgba(0,0,0,0.3)]">{signal.text}</span>
                 </div>

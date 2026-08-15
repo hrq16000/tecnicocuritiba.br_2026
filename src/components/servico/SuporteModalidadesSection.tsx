@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { CheckCircle2, Repeat, ShieldAlert, Wrench } from "lucide-react";
 
 /**

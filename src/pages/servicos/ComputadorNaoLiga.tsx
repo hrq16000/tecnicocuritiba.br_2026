@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { PageSEO } from "@/components/PageSEO";
 import { RealImageSection } from "@/components/RealImageSection";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { Power, CheckCircle, AlertCircle, MessageCircle, ArrowRight, Wrench, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";

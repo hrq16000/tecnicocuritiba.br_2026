@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { PageSEO } from "@/components/PageSEO";
 import { PoliticaAtendimentoBlock } from "@/components/PoliticaAtendimentoBlock";
 import { IMAGES } from "@/lib/images";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { InterlinkingBlock } from "@/components/InterlinkingBlock";
@@ -167,7 +167,7 @@ const ComoFunciona = () => {
                 {resumoItems.map((item, i) => {
                   const Icon = item.icon;
                   return (
-                    <div key={i} className="bg-background rounded-xl p-5 text-center shadow-sm hover:shadow-md hover:-translate-y-1 transition-all stagger-item" style={{ animationDelay: `${i * 100}ms` }}>
+                    <div key={i} className="bg-background rounded-xl p-5 text-center shadow-xs hover:shadow-md hover:-translate-y-1 transition-all stagger-item" style={{ animationDelay: `${i * 100}ms` }}>
                       <div className="bg-primary rounded-lg p-3 w-fit mx-auto mb-3">
                         <Icon className="h-6 w-6 text-primary-foreground" />
                       </div>
@@ -281,7 +281,7 @@ const ComoFunciona = () => {
               </h2>
               <div className="grid md:grid-cols-2 gap-4">
                 {inclusosItems.map((item, i) => (
-                  <div key={i} className="flex items-start gap-3 bg-secondary rounded-lg p-4 hover:-translate-y-0.5 hover:shadow-sm transition-all stagger-item" style={{ animationDelay: `${i * 80}ms` }}>
+                  <div key={i} className="flex items-start gap-3 bg-secondary rounded-lg p-4 hover:-translate-y-0.5 hover:shadow-xs transition-all stagger-item" style={{ animationDelay: `${i * 80}ms` }}>
                     <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
                     <div>
                       <h3 className="font-semibold text-primary">{item.title}</h3>
@@ -306,7 +306,7 @@ const ComoFunciona = () => {
               </p>
               <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
                 {fatoresPreco.map((fator, i) => (
-                  <div key={i} className="bg-background rounded-xl p-5 flex items-start gap-3 hover:-translate-y-0.5 hover:shadow-sm transition-all stagger-item" style={{ animationDelay: `${i * 80}ms` }}>
+                  <div key={i} className="bg-background rounded-xl p-5 flex items-start gap-3 hover:-translate-y-0.5 hover:shadow-xs transition-all stagger-item" style={{ animationDelay: `${i * 80}ms` }}>
                     <AlertCircle className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
                     <div>
                       <h3 className="font-semibold text-primary text-sm">{fator.title}</h3>

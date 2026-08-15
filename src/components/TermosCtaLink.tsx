@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 
 /**
  * Link curto de transparência exibido junto aos CTAs principais.

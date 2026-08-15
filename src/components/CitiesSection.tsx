@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { MapPin, ArrowRight, Building2, Home, Sparkles, ShieldCheck, Clock, MessageCircle } from "lucide-react";
 
 

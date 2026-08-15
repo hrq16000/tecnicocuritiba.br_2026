@@ -33,7 +33,7 @@ export const PageTableOfContents = ({
           <li key={item.id}>
             <a
               href={`#${item.id}`}
-              className="inline-flex min-h-11 items-center gap-2 rounded-md px-1 text-sm font-medium text-foreground transition-colors hover:text-[hsl(var(--accent))] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+              className="inline-flex min-h-11 items-center gap-2 rounded-md px-1 text-sm font-medium text-foreground transition-colors hover:text-[hsl(var(--accent))] focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
             >
               <span className="text-[hsl(var(--accent))]" aria-hidden="true">
                 ▸

@@ -1,6 +1,6 @@
 import { upsertCanonical } from "@/lib/canonicalUrl";
 import { useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link } from "@/lib/router-compat";
 import { 
   CheckCircle, Clock, Shield, MessageCircle, 
   MapPin, Star, ChevronDown, AlertTriangle, Zap
@@ -129,7 +129,7 @@ const ServicoCidadePage = () => {
             </p>
 
             {isSemVisita && (
-              <div className="bg-white/10 backdrop-blur-sm border border-white/10 rounded-xl p-4 mb-6 max-w-lg mx-auto">
+              <div className="bg-white/10 backdrop-blur-xs border border-white/10 rounded-xl p-4 mb-6 max-w-lg mx-auto">
                 <div className="flex items-center gap-2 text-accent mb-2">
                   <AlertTriangle className="h-5 w-5" />
                   <span className="font-bold text-sm">IMPORTANTE</span>
@@ -145,7 +145,7 @@ const ServicoCidadePage = () => {
                 ? [["✓ Sem compromisso"], ["✓ Todas as marcas"], ["✓ Garantia"]]
                 : [["✓ Conforme agenda"], ["✓ Sem sair de casa"], ["✓ atendimento sem compromisso"]]
               ).map(([text], i) => (
-                <span key={i} className="bg-white/10 backdrop-blur-sm border border-white/10 text-white px-4 py-2 rounded-lg text-sm font-medium">{text}</span>
+                <span key={i} className="bg-white/10 backdrop-blur-xs border border-white/10 text-white px-4 py-2 rounded-lg text-sm font-medium">{text}</span>
               ))}
             </div>
 

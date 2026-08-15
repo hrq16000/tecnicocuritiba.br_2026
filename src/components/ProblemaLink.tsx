@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Link, type LinkProps } from "react-router-dom";
+import { Link, type LinkProps } from "@/lib/router-compat";
 
 /**
  * Wrapper de <Link> que pré-carrega o chunk de `problemaPagesData` quando o

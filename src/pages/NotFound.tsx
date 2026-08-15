@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation } from "@/lib/router-compat";
 import { useEffect } from "react";
 
 const TITLE_404 = "Página não encontrada | Técnico Curitiba";

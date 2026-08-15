@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { ArrowRight } from "lucide-react";
 import { articlesForPilar } from "@/lib/editorialClusters";
 import { isEditorialApproved } from "@/lib/blogEditorialRegistry";

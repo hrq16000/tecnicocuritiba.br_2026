@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { PageSEO } from "@/components/PageSEO";
 import { RealImageSection } from "@/components/RealImageSection";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { Gauge, CheckCircle, AlertCircle, MessageCircle, ArrowRight, Clock, Shield, Wrench } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
@@ -71,7 +71,7 @@ const ComputadorLento = () => {
               <Button size="lg" variant="cta" onClick={handleWhatsApp}>
                 <MessageCircle className="mr-2 h-5 w-5" /> Meu PC Está Lento
               </Button>
-              <Button size="lg" variant="outline" className="text-white border-white/40 bg-white/10 hover:bg-white/20 hover:border-white/60 font-semibold backdrop-blur-sm" asChild>
+              <Button size="lg" variant="outline" className="text-white border-white/40 bg-white/10 hover:bg-white/20 hover:border-white/60 font-semibold backdrop-blur-xs" asChild>
                 <Link to="/valores">Ver Preços</Link>
               </Button>
             </div>

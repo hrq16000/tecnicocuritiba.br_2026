@@ -100,7 +100,7 @@ export const ExitIntentPopup = () => {
     <>
       {/* Backdrop */}
       <div
-        className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 animate-in fade-in duration-300"
+        className="fixed inset-0 bg-black/60 backdrop-blur-xs z-50 animate-in fade-in duration-300"
         onClick={handleClose}
         aria-hidden="true"
       />

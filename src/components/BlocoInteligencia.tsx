@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { IMAGES } from "@/lib/images";
 import { 
   AlertTriangle, 
@@ -35,7 +35,7 @@ export const BlocoInteligencia = ({ compact = false }: BlocoInteligenciaProps) =
 
         <div className="grid md:grid-cols-2 gap-6 mb-8">
           {/* Card 1: Diagnóstico vs Execução */}
-          <div className="bg-card rounded-xl p-6 border border-border shadow-sm">
+          <div className="bg-card rounded-xl p-6 border border-border shadow-xs">
             <div className="flex items-center gap-3 mb-3">
               <Search className="w-6 h-6 text-primary flex-shrink-0" />
               <h3 className="font-semibold text-lg text-foreground">Diagnóstico ≠ Execução</h3>
@@ -47,7 +47,7 @@ export const BlocoInteligencia = ({ compact = false }: BlocoInteligenciaProps) =
           </div>
 
           {/* Card 2: Por que diagnóstico é pago */}
-          <div className="bg-card rounded-xl p-6 border border-border shadow-sm">
+          <div className="bg-card rounded-xl p-6 border border-border shadow-xs">
             <div className="flex items-center gap-3 mb-3">
               <CircleDollarSign className="w-6 h-6 text-primary flex-shrink-0" />
               <h3 className="font-semibold text-lg text-foreground">Por Que o Diagnóstico Tem Custo?</h3>
@@ -60,7 +60,7 @@ export const BlocoInteligencia = ({ compact = false }: BlocoInteligenciaProps) =
           </div>
 
           {/* Card 3: Problemas simples viram complexos */}
-          <div className="bg-card rounded-xl p-6 border border-border shadow-sm">
+          <div className="bg-card rounded-xl p-6 border border-border shadow-xs">
             <div className="flex items-center gap-3 mb-3">
               <AlertTriangle className="w-6 h-6 text-destructive flex-shrink-0" />
               <h3 className="font-semibold text-lg text-foreground">Problemas Simples Viram Complexos</h3>
@@ -73,7 +73,7 @@ export const BlocoInteligencia = ({ compact = false }: BlocoInteligenciaProps) =
           </div>
 
           {/* Card 4: Riscos de uso inadequado */}
-          <div className="bg-card rounded-xl p-6 border border-border shadow-sm">
+          <div className="bg-card rounded-xl p-6 border border-border shadow-xs">
             <div className="flex items-center gap-3 mb-3">
               <ShieldCheck className="w-6 h-6 text-primary flex-shrink-0" />
               <h3 className="font-semibold text-lg text-foreground">Risco de Danos por Uso Inadequado</h3>
@@ -87,7 +87,7 @@ export const BlocoInteligencia = ({ compact = false }: BlocoInteligenciaProps) =
         </div>
 
         {!compact && (
-          <div className="bg-card rounded-xl p-6 border-2 border-primary/20 shadow-sm">
+          <div className="bg-card rounded-xl p-6 border-2 border-primary/20 shadow-xs">
             <div className="flex items-center gap-3 mb-3">
               <TrendingDown className="w-6 h-6 text-primary flex-shrink-0" />
               <h3 className="font-semibold text-lg text-foreground">Quando Compensa Reparar vs Trocar?</h3>

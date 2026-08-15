@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { Link, useSearchParams } from "react-router-dom";
+import { Link, useSearchParams } from "@/lib/router-compat";
 import { Helmet } from "react-helmet";
 import { useCanonical } from "@/lib/canonicalUrl";
 import { ArrowLeft, MessageCircle, CalendarCheck, CheckCircle2 } from "lucide-react";

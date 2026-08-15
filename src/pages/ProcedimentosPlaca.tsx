@@ -3,7 +3,7 @@ import { Footer } from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { PageSEO } from "@/components/PageSEO";
 import { AnimatedSection } from "@/components/AnimatedSection";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Cpu, Flame, RefreshCw, Smartphone, Zap, Wrench, MessageCircle } from "lucide-react";
 import { useEffect } from "react";

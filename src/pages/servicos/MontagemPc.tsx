@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { PageSEO } from "@/components/PageSEO";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { Monitor, CheckCircle, Cpu, Gamepad2, Briefcase, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";

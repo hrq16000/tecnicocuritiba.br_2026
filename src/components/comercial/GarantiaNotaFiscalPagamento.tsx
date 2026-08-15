@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { ShieldCheck, FileText, CreditCard } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { GARANTIA, NOTA_FISCAL, PAGAMENTO } from "@/lib/politicaComercial";

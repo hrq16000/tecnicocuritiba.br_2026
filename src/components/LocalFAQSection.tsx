@@ -65,7 +65,7 @@ export const LocalFAQSection = ({ title, faqs }: LocalFAQSectionProps) => {
               <AccordionItem 
                 key={idx} 
                 value={`item-${idx}`}
-                className="bg-secondary rounded-lg border-none stagger-item hover:shadow-sm transition-shadow"
+                className="bg-secondary rounded-lg border-none stagger-item hover:shadow-xs transition-shadow"
                 style={{ animationDelay: `${idx * 80}ms` }}
               >
                 <AccordionTrigger className="px-5 py-4 text-left font-semibold text-foreground hover:text-accent hover:no-underline">

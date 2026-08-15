@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link } from "@/lib/router-compat";
 import { PageSEO } from "@/components/PageSEO";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -90,7 +90,7 @@ const MarcaPage = () => {
                     </Button>
                   </a>
                   <Link to="/servicos">
-                    <Button variant="outline" className="gap-2 rounded-full px-8 py-6 text-base border-white/40 text-white bg-white/10 hover:bg-white/20 hover:border-white/60 font-semibold backdrop-blur-sm">
+                    <Button variant="outline" className="gap-2 rounded-full px-8 py-6 text-base border-white/40 text-white bg-white/10 hover:bg-white/20 hover:border-white/60 font-semibold backdrop-blur-xs">
                       Ver Serviços <ArrowRight className="h-4 w-4" />
                     </Button>
                   </Link>

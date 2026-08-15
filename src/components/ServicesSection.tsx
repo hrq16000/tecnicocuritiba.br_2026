@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { useMemo } from "react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import {
@@ -229,7 +229,7 @@ export const ServicesSection = () => {
                 )}
 
                 <div className="flex items-start gap-3 mb-3">
-                  <div className="bg-primary rounded-xl p-3 flex-shrink-0 group-hover:bg-accent group-hover:scale-110 transition-all duration-300 shadow-sm">
+                  <div className="bg-primary rounded-xl p-3 flex-shrink-0 group-hover:bg-accent group-hover:scale-110 transition-all duration-300 shadow-xs">
                     <Icon className="h-5 w-5 text-primary-foreground" />
                   </div>
                   <div className="min-w-0">

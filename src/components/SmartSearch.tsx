@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, useMemo } from "react";
 import { Search, X, MapPin, Wrench, FileText, ArrowRight } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "@/lib/router-compat";
 
 interface SearchItem {
   title: string;
@@ -261,7 +261,7 @@ export const SmartSearch = ({ isOpen, onClose }: SmartSearchProps) => {
 
   return (
     <div className="fixed inset-0 z-[100] flex items-start justify-center pt-[15vh]" onClick={onClose}>
-      <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
+      <div className="absolute inset-0 bg-black/60 backdrop-blur-xs" />
       <div
         className="relative w-full max-w-xl mx-4 bg-background rounded-2xl shadow-2xl border border-border overflow-hidden animate-in fade-in zoom-in-95 duration-200"
         onClick={(e) => e.stopPropagation()}
@@ -275,7 +275,7 @@ export const SmartSearch = ({ isOpen, onClose }: SmartSearchProps) => {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Buscar serviço, bairro ou cidade..."
-            className="flex-1 bg-transparent text-foreground text-base outline-none placeholder:text-muted-foreground"
+            className="flex-1 bg-transparent text-foreground text-base outline-hidden placeholder:text-muted-foreground"
             autoComplete="off"
           />
           <kbd className="hidden sm:inline-flex items-center gap-1 px-2 py-0.5 bg-muted text-muted-foreground text-xs rounded-md border border-border">

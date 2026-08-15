@@ -3,7 +3,7 @@ import { PageSEO } from "@/components/PageSEO";
 import { SCHEMA_SLOTS, SLOT_PRIORITY, useJsonLdSlot } from "@/lib/jsonLdSlots";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { IMAGES } from "@/lib/images";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { Header } from "@/components/Header";
 import { BenefitsGrid } from "@/components/BenefitsGrid";
 import { TrustSection } from "@/components/TrustSection";
@@ -200,7 +200,7 @@ export const BairroTemplate = ({ data }: BairroTemplateProps) => {
               </div>
 
               {/* Glass card pricing */}
-              <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm border border-white/10 rounded-xl px-5 py-3 reveal-text" data-reveal-delay="300">
+              <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-xs border border-white/10 rounded-xl px-5 py-3 reveal-text" data-reveal-delay="300">
                 <Zap className="h-5 w-5 text-accent" />
                 <p className="text-white/90 text-sm">
                   Serviços a partir de <strong className="text-accent">R$ 99,99</strong> • Atendimento hoje mesmo
@@ -281,7 +281,7 @@ export const BairroTemplate = ({ data }: BairroTemplateProps) => {
                   </div>
                   {/* Sticky sidebar with glass effect */}
                   <div className="lg:col-span-2">
-                    <div className="bg-secondary/80 backdrop-blur-sm rounded-xl p-6 sticky top-24 border border-border shadow-[var(--shadow-lg)]">
+                    <div className="bg-secondary/80 backdrop-blur-xs rounded-xl p-6 sticky top-24 border border-border shadow-[var(--shadow-lg)]">
                       <h3 className="text-xl font-bold text-foreground mb-4 flex items-center gap-2">
                         <Wrench className="h-5 w-5 text-accent" />
                         Serviços em {data.nome}
@@ -355,7 +355,7 @@ export const BairroTemplate = ({ data }: BairroTemplateProps) => {
                 </div>
 
                 {/* Problems grid with gradient border cards */}
-                <div className="bg-secondary/50 backdrop-blur-sm rounded-xl p-6 md:p-8 mb-8 border border-border relative overflow-hidden">
+                <div className="bg-secondary/50 backdrop-blur-xs rounded-xl p-6 md:p-8 mb-8 border border-border relative overflow-hidden">
                   <div className="absolute top-0 right-0 w-32 h-32 bg-accent/5 rounded-full blur-3xl pointer-events-none" />
                   <h3 className="text-xl font-bold text-foreground mb-4 flex items-center gap-2 relative z-10">
                     <Shield className="h-5 w-5 text-accent" />

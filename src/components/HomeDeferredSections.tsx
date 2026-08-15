@@ -1,5 +1,5 @@
 import { lazy, Suspense } from "react";
-import { BrowserRouter, useInRouterContext } from "react-router-dom";
+
 import { PageSEO } from "@/components/PageSEO";
 import { JsonLdSchema } from "@/components/JsonLdSchema";
 import { LazyOnVisible } from "@/components/LazyOnVisible";
@@ -77,8 +77,8 @@ const DeferredContent = () => (
 );
 
 export const HomeDeferredSections = () => {
-  const inRouter = useInRouterContext();
-  return inRouter ? <DeferredContent /> : <BrowserRouter><DeferredContent /></BrowserRouter>;
+  // TanStack Start: toda a árvore já renderiza dentro do router.
+  return <DeferredContent />;
 };
 
 export default HomeDeferredSections;

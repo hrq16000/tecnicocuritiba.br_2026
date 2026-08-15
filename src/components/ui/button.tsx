@@ -9,7 +9,7 @@ const buttonVariants = cva(
   // WhatsApp") estouravam a viewport de 360px por causa do `whitespace-nowrap`
   // + padding fixo. Agora o texto quebra e o botão nunca ultrapassa o container;
   // a partir de sm: volta a ficar em linha única.
-  "inline-flex max-w-full items-center justify-center gap-2 text-balance text-center whitespace-normal sm:whitespace-nowrap rounded-lg text-sm font-semibold ring-offset-background transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex max-w-full items-center justify-center gap-2 text-balance text-center whitespace-normal sm:whitespace-nowrap rounded-lg text-sm font-semibold ring-offset-background transition-all duration-200 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
 
   {
     variants: {

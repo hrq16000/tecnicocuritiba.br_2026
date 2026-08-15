@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { ArrowRight, CheckCircle2, MessageCircle, RotateCcw } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {

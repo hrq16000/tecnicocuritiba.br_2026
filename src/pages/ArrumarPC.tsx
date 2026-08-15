@@ -18,7 +18,7 @@ import {
   MapPin,
   CreditCard,
 } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 
 const WHATSAPP_NUMBER = "5541997086380";
 const WHATSAPP_MSG =
@@ -235,7 +235,7 @@ const ArrumarPC = () => {
               {comoFunciona.map((step) => (
                 <li
                   key={step.n}
-                  className="relative p-6 rounded-2xl bg-card border border-border shadow-sm"
+                  className="relative p-6 rounded-2xl bg-card border border-border shadow-xs"
                 >
                   <div className="absolute -top-4 -left-2 w-10 h-10 rounded-full bg-accent text-accent-foreground font-bold flex items-center justify-center shadow-md">
                     {step.n}
