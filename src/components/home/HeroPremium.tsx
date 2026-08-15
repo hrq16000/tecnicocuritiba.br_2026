@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { Pause, Play, ChevronLeft, ChevronRight } from "lucide-react";
 import { siteConfig, whatsappLink } from "@/lib/siteConfig";
 import { HERO_SLIDES, shuffleSlides } from "./heroSlides";
