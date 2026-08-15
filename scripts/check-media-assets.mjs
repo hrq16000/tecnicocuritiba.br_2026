@@ -21,13 +21,14 @@ if (!defaultOg) errors.push("DEFAULT_OG_IMAGE não encontrado em src/components/
 else if (!existsSync(publicPath(defaultOg))) errors.push(`og:image padrão ausente em public/: ${defaultOg}`);
 else info.push(`og:image padrão OK: ${defaultOg}`);
 
-// 2) og:image do index.html (fallback para crawlers sem JS)
-const html = readFileSync("index.html", "utf8");
+// 2) og:image do documento raiz (TanStack Start: head() da rota __root)
+const ROOT_DOC = existsSync("index.html") ? "index.html" : "src/routes/__root.tsx";
+const html = readFileSync(ROOT_DOC, "utf8");
 for (const m of html.matchAll(/<meta[^>]+(?:property|name)=["'](?:og:image|og:image:secure_url|twitter:image)["'][^>]*content=["']([^"']+)["']/gi)) {
   const url = m[1];
   if (/^https?:\/\//.test(url) && !url.includes("tecnico.curitiba.br")) continue; // externo
-  if (!existsSync(publicPath(url))) errors.push(`index.html referencia imagem inexistente: ${url}`);
-  else info.push(`index.html og/twitter image OK: ${url}`);
+  if (!existsSync(publicPath(url))) errors.push(`${ROOT_DOC} referencia imagem inexistente: ${url}`);
+  else info.push(`${ROOT_DOC} og/twitter image OK: ${url}`);
 }
 
 // 3) Mídia kit em PDF
@@ -52,7 +53,7 @@ const walk = (dir) => {
   }
 };
 walk("src");
-files.push("index.html");
+if (existsSync("index.html")) files.push("index.html");
 
 const missing = new Set();
 for (const file of files) {
