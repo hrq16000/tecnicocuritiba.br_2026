@@ -77,8 +77,8 @@ const DeferredContent = () => (
 );
 
 export const HomeDeferredSections = () => {
-  const inRouter = useInRouterContext();
-  return inRouter ? <DeferredContent /> : <BrowserRouter><DeferredContent /></BrowserRouter>;
+  // TanStack Start: toda a árvore já renderiza dentro do router.
+  return <DeferredContent />;
 };
 
 export default HomeDeferredSections;
