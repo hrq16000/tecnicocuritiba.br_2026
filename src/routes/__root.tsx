@@ -124,6 +124,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "preload", as: "image", href: "/logo.webp", type: "image/webp", fetchPriority: "high" },
       { rel: "dns-prefetch", href: "https://www.googletagmanager.com" },
       { rel: "dns-prefetch", href: "https://www.google-analytics.com" },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Sora:wght@400;500;600;700&display=swap",
+      },
       { rel: "preload", as: "font", type: "font/woff2", href: "/fonts/montserrat-var.woff2", crossOrigin: "anonymous" },
       { rel: "preload", as: "font", type: "font/woff2", href: "/fonts/poppins-700.woff2", crossOrigin: "anonymous" },
       { rel: "apple-touch-icon", sizes: "192x192", href: "/apple-touch-icon-20260624.png" },
