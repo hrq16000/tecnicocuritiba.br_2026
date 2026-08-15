@@ -598,7 +598,45 @@ export type Database = {
       }
     }
     Views: {
-      [_ in never]: never
+      reviews_public: {
+        Row: {
+          author_name: string | null
+          author_photo_url: string | null
+          city: string | null
+          comment: string | null
+          created_at: string | null
+          id: string | null
+          neighborhood: string | null
+          rating: number | null
+          review_date: string | null
+          service_slug: string | null
+        }
+        Insert: {
+          author_name?: string | null
+          author_photo_url?: string | null
+          city?: string | null
+          comment?: string | null
+          created_at?: string | null
+          id?: string | null
+          neighborhood?: string | null
+          rating?: number | null
+          review_date?: string | null
+          service_slug?: string | null
+        }
+        Update: {
+          author_name?: string | null
+          author_photo_url?: string | null
+          city?: string | null
+          comment?: string | null
+          created_at?: string | null
+          id?: string | null
+          neighborhood?: string | null
+          rating?: number | null
+          review_date?: string | null
+          service_slug?: string | null
+        }
+        Relationships: []
+      }
     }
     Functions: {
       consolidate_click_events: {
