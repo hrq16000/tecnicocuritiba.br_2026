@@ -33,10 +33,10 @@ export const CSP_DIRECTIVES = {
   // Fotos reais servidas do próprio domínio + bancos externos citados nos
   // créditos (images.unsplash.com) + data:/blob: de previews e canvas.
   "img-src": ["'self'", "data:", "blob:", "https:"],
-  // Fontes locais (self) e data: — o projeto não usa Google Fonts.
-  "font-src": ["'self'", "data:"],
+  // Fontes locais (self), data: e Google Fonts (Rajdhani/Sora).
+  "font-src": ["'self'", "data:", "https://fonts.gstatic.com"],
   // Tailwind/shadcn injetam estilo inline em runtime (motion, skeletons).
-  "style-src": ["'self'", "'unsafe-inline'"],
+  "style-src": ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
   // GTM/GA/Ads são os únicos scripts de terceiros carregados.
   // 'unsafe-inline' permanece nesta rodada: o bootstrap do GTM e o shell
   // crítico dependem dele; remover exige nonce/hash (fora de escopo).
