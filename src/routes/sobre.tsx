@@ -10,26 +10,5 @@ export const Route = createFileRoute("/sobre")({
     "description": "Conheça o Técnico em Curitiba: foco em informática, notebook, PC, redes e suporte empresarial em Curitiba e região, com diagnóstico honesto e valor transparente."
   }),
   /* seo:auto-end */
-  /* seo:auto-start */
-  head: () => seoHead({
-    "path": "/sobre",
-    "title": "Sobre o Técnico em Curitiba | PC, Notebook e Redes",
-    "description": "Conheça o Técnico em Curitiba: foco em informática, notebook, PC, redes e suporte empresarial em Curitiba e região, com diagnóstico honesto e valor transparente."
-  }),
-  /* seo:auto-end */
-  /* seo:auto-start */
-  head: () => seoHead({
-    "path": "/sobre",
-    "title": "Sobre o Técnico em Curitiba | PC, Notebook e Redes",
-    "description": "Conheça o Técnico em Curitiba: foco em informática, notebook, PC, redes e suporte empresarial em Curitiba e região, com diagnóstico honesto e valor transparente."
-  }),
-  /* seo:auto-end */
-  /* seo:auto-start */
-  head: () => seoHead({
-    "path": "/sobre",
-    "title": "Sobre o Técnico em Curitiba | PC, Notebook e Redes",
-    "description": "Conheça o Técnico em Curitiba: foco em informática, notebook, PC, redes e suporte empresarial em Curitiba e região, com diagnóstico honesto e valor transparente."
-  }),
-  /* seo:auto-end */
   component: Sobre,
 });

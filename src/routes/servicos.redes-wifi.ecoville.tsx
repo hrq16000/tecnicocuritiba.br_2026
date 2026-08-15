@@ -10,26 +10,5 @@ export const Route = createFileRoute("/servicos/redes-wifi/ecoville")({
     "description": "Instalação e configuração de Wi-Fi, mesh e roteadores no Ecoville, Curitiba. Atendimento presencial, valor do atendimento pelo WhatsApp e valor mínimo de R$ 99,99."
   }),
   /* seo:auto-end */
-  /* seo:auto-start */
-  head: () => seoHead({
-    "path": "/servicos/redes-wifi/ecoville",
-    "title": "Configuração de Wi-Fi no Ecoville | Curitiba",
-    "description": "Instalação e configuração de Wi-Fi, mesh e roteadores no Ecoville, Curitiba. Atendimento presencial, valor do atendimento pelo WhatsApp e valor mínimo de R$ 99,99."
-  }),
-  /* seo:auto-end */
-  /* seo:auto-start */
-  head: () => seoHead({
-    "path": "/servicos/redes-wifi/ecoville",
-    "title": "Configuração de Wi-Fi no Ecoville | Curitiba",
-    "description": "Instalação e configuração de Wi-Fi, mesh e roteadores no Ecoville, Curitiba. Atendimento presencial, valor do atendimento pelo WhatsApp e valor mínimo de R$ 99,99."
-  }),
-  /* seo:auto-end */
-  /* seo:auto-start */
-  head: () => seoHead({
-    "path": "/servicos/redes-wifi/ecoville",
-    "title": "Configuração de Wi-Fi no Ecoville | Curitiba",
-    "description": "Instalação e configuração de Wi-Fi, mesh e roteadores no Ecoville, Curitiba. Atendimento presencial, valor do atendimento pelo WhatsApp e valor mínimo de R$ 99,99."
-  }),
-  /* seo:auto-end */
   component: RedesWifiEcoville,
 });

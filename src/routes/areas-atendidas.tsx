@@ -10,26 +10,5 @@ export const Route = createFileRoute("/areas-atendidas")({
     "description": "Bairros de Curitiba e cidades da região metropolitana atendidas pelo Técnico em Curitiba, com a modalidade indicada em cada caso: no local, remoto ou coleta para bancada."
   }),
   /* seo:auto-end */
-  /* seo:auto-start */
-  head: () => seoHead({
-    "path": "/areas-atendidas",
-    "title": "Áreas Atendidas em Curitiba e Região | Bairros e Cidades",
-    "description": "Bairros de Curitiba e cidades da região metropolitana atendidas pelo Técnico em Curitiba, com a modalidade indicada em cada caso: no local, remoto ou coleta para bancada."
-  }),
-  /* seo:auto-end */
-  /* seo:auto-start */
-  head: () => seoHead({
-    "path": "/areas-atendidas",
-    "title": "Áreas Atendidas em Curitiba e Região | Bairros e Cidades",
-    "description": "Bairros de Curitiba e cidades da região metropolitana atendidas pelo Técnico em Curitiba, com a modalidade indicada em cada caso: no local, remoto ou coleta para bancada."
-  }),
-  /* seo:auto-end */
-  /* seo:auto-start */
-  head: () => seoHead({
-    "path": "/areas-atendidas",
-    "title": "Áreas Atendidas em Curitiba e Região | Bairros e Cidades",
-    "description": "Bairros de Curitiba e cidades da região metropolitana atendidas pelo Técnico em Curitiba, com a modalidade indicada em cada caso: no local, remoto ou coleta para bancada."
-  }),
-  /* seo:auto-end */
   component: AreasAtendidas,
 });

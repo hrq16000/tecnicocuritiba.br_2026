@@ -10,26 +10,5 @@ export const Route = createFileRoute("/servicos/manutencao-tv/reboucas")({
     "description": "Reparo e troca de tela de Smart TV LED/LCD no Rebouças, Curitiba. Diagnóstico em bancada, coleta e entrega, valor do atendimento pelo WhatsApp."
   }),
   /* seo:auto-end */
-  /* seo:auto-start */
-  head: () => seoHead({
-    "path": "/servicos/manutencao-tv/reboucas",
-    "title": "Conserto de Smart TV no Rebouças | Curitiba",
-    "description": "Reparo e troca de tela de Smart TV LED/LCD no Rebouças, Curitiba. Diagnóstico em bancada, coleta e entrega, valor do atendimento pelo WhatsApp."
-  }),
-  /* seo:auto-end */
-  /* seo:auto-start */
-  head: () => seoHead({
-    "path": "/servicos/manutencao-tv/reboucas",
-    "title": "Conserto de Smart TV no Rebouças | Curitiba",
-    "description": "Reparo e troca de tela de Smart TV LED/LCD no Rebouças, Curitiba. Diagnóstico em bancada, coleta e entrega, valor do atendimento pelo WhatsApp."
-  }),
-  /* seo:auto-end */
-  /* seo:auto-start */
-  head: () => seoHead({
-    "path": "/servicos/manutencao-tv/reboucas",
-    "title": "Conserto de Smart TV no Rebouças | Curitiba",
-    "description": "Reparo e troca de tela de Smart TV LED/LCD no Rebouças, Curitiba. Diagnóstico em bancada, coleta e entrega, valor do atendimento pelo WhatsApp."
-  }),
-  /* seo:auto-end */
   component: ManutencaoTvReboucas,
 });

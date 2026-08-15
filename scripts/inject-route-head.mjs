@@ -65,7 +65,8 @@ const block = (route) => {
 function apply(src, route) {
   let out = src;
   // Remove bloco anterior.
-  const re = new RegExp(`${START.trim()}[\\s\\S]*?${END.trim()}\\n?`, "");
+  const esc = (v) => v.trim().replace(/[.*+?^${}()|[\]\\/]/g, "\\$&");
+  const re = new RegExp(`[ \\t]*${esc(START)}[\\s\\S]*?${esc(END)}\\n?`, "g");
   out = out.replace(re, "");
   if (!out.includes('from "@/lib/seo/routeHead"')) {
     out = out.replace(

@@ -10,26 +10,5 @@ export const Route = createFileRoute("/diagnostico-tecnico")({
     "description": "Diagnóstico técnico para identificar falhas em computadores e notebooks, avaliar a viabilidade do serviço e orientar o valor."
   }),
   /* seo:auto-end */
-  /* seo:auto-start */
-  head: () => seoHead({
-    "path": "/diagnostico-tecnico",
-    "title": "Diagnóstico Técnico de Computador e Notebook em Curitiba",
-    "description": "Diagnóstico técnico para identificar falhas em computadores e notebooks, avaliar a viabilidade do serviço e orientar o valor."
-  }),
-  /* seo:auto-end */
-  /* seo:auto-start */
-  head: () => seoHead({
-    "path": "/diagnostico-tecnico",
-    "title": "Diagnóstico Técnico de Computador e Notebook em Curitiba",
-    "description": "Diagnóstico técnico para identificar falhas em computadores e notebooks, avaliar a viabilidade do serviço e orientar o valor."
-  }),
-  /* seo:auto-end */
-  /* seo:auto-start */
-  head: () => seoHead({
-    "path": "/diagnostico-tecnico",
-    "title": "Diagnóstico Técnico de Computador e Notebook em Curitiba",
-    "description": "Diagnóstico técnico para identificar falhas em computadores e notebooks, avaliar a viabilidade do serviço e orientar o valor."
-  }),
-  /* seo:auto-end */
   component: DiagnosticoTecnico,
 });

@@ -10,26 +10,5 @@ export const Route = createFileRoute("/bairros/cic")({
     "description": "Técnico de informática no CIC, Curitiba: conserto de notebook, manutenção de computador, formatação e suporte para empresas. Diagnóstico a partir de R$ 99,99. Via WhatsApp."
   }),
   /* seo:auto-end */
-  /* seo:auto-start */
-  head: () => seoHead({
-    "path": "/bairros/cic",
-    "title": "Técnico de Informática no CIC (Curitiba) | Notebook e PC",
-    "description": "Técnico de informática no CIC, Curitiba: conserto de notebook, manutenção de computador, formatação e suporte para empresas. Diagnóstico a partir de R$ 99,99. Via WhatsApp."
-  }),
-  /* seo:auto-end */
-  /* seo:auto-start */
-  head: () => seoHead({
-    "path": "/bairros/cic",
-    "title": "Técnico de Informática no CIC (Curitiba) | Notebook e PC",
-    "description": "Técnico de informática no CIC, Curitiba: conserto de notebook, manutenção de computador, formatação e suporte para empresas. Diagnóstico a partir de R$ 99,99. Via WhatsApp."
-  }),
-  /* seo:auto-end */
-  /* seo:auto-start */
-  head: () => seoHead({
-    "path": "/bairros/cic",
-    "title": "Técnico de Informática no CIC (Curitiba) | Notebook e PC",
-    "description": "Técnico de informática no CIC, Curitiba: conserto de notebook, manutenção de computador, formatação e suporte para empresas. Diagnóstico a partir de R$ 99,99. Via WhatsApp."
-  }),
-  /* seo:auto-end */
   component: CIC,
 });

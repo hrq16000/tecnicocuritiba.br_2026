@@ -10,26 +10,5 @@ export const Route = createFileRoute("/servicos/redes-wifi/cic")({
     "description": "Instalação e configuração de Wi-Fi, mesh e roteadores no CIC, Curitiba. Atendimento presencial, valor do atendimento pelo WhatsApp e valor mínimo de R$ 99,99."
   }),
   /* seo:auto-end */
-  /* seo:auto-start */
-  head: () => seoHead({
-    "path": "/servicos/redes-wifi/cic",
-    "title": "Configuração de Wi-Fi no CIC | Curitiba",
-    "description": "Instalação e configuração de Wi-Fi, mesh e roteadores no CIC, Curitiba. Atendimento presencial, valor do atendimento pelo WhatsApp e valor mínimo de R$ 99,99."
-  }),
-  /* seo:auto-end */
-  /* seo:auto-start */
-  head: () => seoHead({
-    "path": "/servicos/redes-wifi/cic",
-    "title": "Configuração de Wi-Fi no CIC | Curitiba",
-    "description": "Instalação e configuração de Wi-Fi, mesh e roteadores no CIC, Curitiba. Atendimento presencial, valor do atendimento pelo WhatsApp e valor mínimo de R$ 99,99."
-  }),
-  /* seo:auto-end */
-  /* seo:auto-start */
-  head: () => seoHead({
-    "path": "/servicos/redes-wifi/cic",
-    "title": "Configuração de Wi-Fi no CIC | Curitiba",
-    "description": "Instalação e configuração de Wi-Fi, mesh e roteadores no CIC, Curitiba. Atendimento presencial, valor do atendimento pelo WhatsApp e valor mínimo de R$ 99,99."
-  }),
-  /* seo:auto-end */
   component: RedesWifiCIC,
 });
