@@ -250,9 +250,9 @@ const AdminFunnel = () => {
         doc.addPage();
         y = 40;
       }
-      doc.setFont(undefined, "bold");
+      doc.setFont("helvetica", "bold");
       doc.text(header, 40, y);
-      doc.setFont(undefined, "normal");
+      doc.setFont("helvetica", "normal");
       doc.text(lines, 40, y + 14);
       y += blockHeight;
     });

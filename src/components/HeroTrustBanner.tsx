@@ -59,7 +59,7 @@ export const HeroTrustBanner = ({ city }: HeroTrustBannerProps) => {
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
   const { data: agg } = useAggregateRating({ city });
-  const timer = useRef<ReturnType<typeof setInterval>>();
+  const timer = useRef<ReturnType<typeof setInterval> | undefined>(undefined);
 
   useEffect(() => {
     let cancelled = false;
