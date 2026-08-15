@@ -115,15 +115,17 @@ for (const rel of A11Y_LOADERS) {
 }
 
 // 5 — CSS global: prefers-reduced-motion + foco visível por teclado
-const cssPath = path.join(ROOT, "src/index.css");
+const cssPath = ["src/styles.css", "src/index.css"]
+  .map((rel) => path.join(ROOT, rel))
+  .find((abs) => fs.existsSync(abs)) ?? path.join(ROOT, "src/styles.css");
 if (fs.existsSync(cssPath)) {
   const css = read(cssPath);
   if (!css.includes("prefers-reduced-motion"))
-    errors.push("src/index.css: sem bloco @media (prefers-reduced-motion: reduce)");
+    errors.push("CSS global: sem bloco @media (prefers-reduced-motion: reduce)");
   if (!css.includes(":focus-visible"))
-    errors.push("src/index.css: sem estilo de foco visível (:focus-visible)");
+    errors.push("CSS global: sem estilo de foco visível (:focus-visible)");
 } else {
-  errors.push("src/index.css ausente");
+  errors.push("CSS global (src/styles.css) ausente");
 }
 
 if (errors.length) {

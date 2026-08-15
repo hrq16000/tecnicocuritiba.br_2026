@@ -40,13 +40,19 @@ results.push({
   detail: EXPECTED_LINE,
 });
 
+// Em produção lê o HTML servido; localmente lê o head() da rota raiz (TanStack Start).
 const html = base
   ? await fetchText("/")
-  : { status: 200, body: readFileSync("index.html", "utf8") };
-const metaOk = new RegExp(
-  `<meta[^>]+name=["']google-adsense-account["'][^>]+content=["']ca-${PUBLISHER}["']`,
-  "i",
-).test(html.body);
+  : { status: 200, body: readFileSync("src/routes/__root.tsx", "utf8") };
+const metaOk = base
+  ? new RegExp(
+      `<meta[^>]+name=["']google-adsense-account["'][^>]+content=["']ca-${PUBLISHER}["']`,
+      "i",
+    ).test(html.body)
+  : new RegExp(
+      `name:\\s*["']google-adsense-account["'][\\s\\S]{0,80}?content:\\s*["']ca-${PUBLISHER}["']`,
+      "i",
+    ).test(html.body);
 results.push({ check: "metatag google-adsense-account", ok: metaOk, detail: `ca-${PUBLISHER}` });
 
 const failed = results.filter((r) => !r.ok);
