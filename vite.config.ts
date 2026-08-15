@@ -67,6 +67,11 @@ export default defineConfig({
           })
         : null,
     ].filter(Boolean),
+    environments: {
+      // O nitro reescreve dist/server; manter a saída SSR do Vite em outro
+      // diretório preserva o `server.js` que o prerender do TanStack importa.
+      server: { build: { outDir: "dist/_ssr" } },
+    },
     define: {
       __APP_VERSION__: JSON.stringify(APP_VERSION),
       __APP_BUILD_TIME__: JSON.stringify(APP_BUILD_TIME),
