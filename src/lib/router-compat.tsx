@@ -191,3 +191,12 @@ export const NavLink = forwardRef<HTMLAnchorElement, NavLinkProps>(function NavL
     </Link>
   );
 });
+
+// ---------- react-router-dom compat aliases ----------
+
+export type LinkProps = LinkCompatProps;
+
+/** Test-only shim: TanStack Start always renders inside its own router. */
+export function MemoryRouter({ children }: { children?: ReactNode; initialEntries?: string[] }) {
+  return <>{children}</>;
+}
