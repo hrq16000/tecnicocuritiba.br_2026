@@ -74,6 +74,7 @@
     "check:aggregate-rating": "node scripts/check-aggregate-rating.mjs",
     "check:recurring-language": "node scripts/check-recurring-language.mjs",
     "check:public-data-exposure": "node scripts/check-public-data-exposure.mjs",
+    "check:anon-access": "node scripts/check-anon-data-access.mjs",
     "check:security-findings": "node scripts/check-security-findings-baseline.mjs",
     "check:security-headers": "node scripts/check-security-headers.mjs",
     "check:security-headers:file": "bun scripts/check-security-headers.ts",
