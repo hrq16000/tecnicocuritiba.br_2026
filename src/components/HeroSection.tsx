@@ -57,7 +57,7 @@ export const HeroSection = () => {
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-heading font-bold text-white leading-[1.15] mb-5 md:mb-6 tracking-tight motion-safe:opacity-0 motion-safe:animate-[heroFadeUp_0.7s_ease-out_0.2s_forwards]">
               Técnico de Informática
               <br />
-              <span className="text-accent drop-shadow-sm">em Curitiba</span>
+              <span className="text-accent drop-shadow-xs">em Curitiba</span>
               <span className="block text-xl sm:text-2xl md:text-3xl font-semibold text-white/90 mt-2 tracking-normal drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)] min-h-[1.5em] break-words">
                 e Região Metropolitana
               </span>
