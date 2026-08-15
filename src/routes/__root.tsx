@@ -140,7 +140,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     return (
       <div style={{ minHeight: "100vh", display: "grid", placeItems: "center", padding: 24, fontFamily: "Montserrat, sans-serif" }}>
         <div style={{ textAlign: "center", maxWidth: 480 }}>
-          <img src="/logo.webp" alt="Técnico Curitiba" width={240} height={78} style={{ maxWidth: "60vw", height: "auto" }} />
+          <img src="/logo.webp" alt="Técnico Curitiba" loading="eager" decoding="async" width={240} height={78} style={{ maxWidth: "60vw", height: "auto" }} />
           <h1 style={{ fontSize: "1.4rem", margin: "16px 0 8px" }}>Algo deu errado por aqui</h1>
           <p style={{ margin: "0 0 16px", opacity: 0.85 }}>
             Recarregue a página ou fale direto com a gente pelo WhatsApp.
