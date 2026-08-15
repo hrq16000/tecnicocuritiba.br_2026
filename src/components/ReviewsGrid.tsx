@@ -145,12 +145,10 @@ export const ReviewsGrid = ({
     (async () => {
       setLoading(true);
       let q = supabase
-        .from("reviews")
+        .from("reviews_public")
         .select(
           "id, author_name, author_photo_url, rating, comment, service_slug, city, neighborhood, review_date",
         )
-        .eq("verified", true)
-        .eq("published", true)
         .order("review_date", { ascending: false })
         .limit(limit);
       if (filter.service) q = q.eq("service_slug", filter.service);

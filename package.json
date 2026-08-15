@@ -6,7 +6,7 @@
   "scripts": {
     "predev": "node scripts/generate-sitemaps.mjs && node scripts/generate-llms.mjs",
     "dev": "vite dev",
-    "prebuild": "node scripts/inject-route-head.mjs && node scripts/generate-sitemaps.mjs && node scripts/generate-llms.mjs && node scripts/check-security-findings-baseline.mjs && node scripts/check-ads-txt.mjs && node scripts/check-policy-jsonld.mjs && node scripts/check-telemetry-transparency.mjs && node scripts/check-missing-exports.mjs && node scripts/check-motion-coverage.mjs && node scripts/check-wave-control.mjs && node scripts/check-parceiros.mjs && node scripts/generate-local-linkmap.mjs --check && npm run check:types && node scripts/check-media-assets.mjs && node scripts/report-build-gates.mjs && node scripts/check-hub-empresarial-links.mjs",
+    "prebuild": "node scripts/inject-route-head.mjs && node scripts/generate-sitemaps.mjs && node scripts/generate-llms.mjs && node scripts/check-security-findings-baseline.mjs && node scripts/check-anon-data-access.mjs && node scripts/check-ads-txt.mjs && node scripts/check-policy-jsonld.mjs && node scripts/check-telemetry-transparency.mjs && node scripts/check-missing-exports.mjs && node scripts/check-motion-coverage.mjs && node scripts/check-wave-control.mjs && node scripts/check-parceiros.mjs && node scripts/generate-local-linkmap.mjs --check && npm run check:types && node scripts/check-media-assets.mjs && node scripts/report-build-gates.mjs && node scripts/check-hub-empresarial-links.mjs",
     "check:ads-txt": "node scripts/check-ads-txt.mjs",
     "check:policy-jsonld": "node scripts/check-policy-jsonld.mjs",
     "check:missing-exports": "node scripts/check-missing-exports.mjs",
@@ -74,6 +74,7 @@
     "check:aggregate-rating": "node scripts/check-aggregate-rating.mjs",
     "check:recurring-language": "node scripts/check-recurring-language.mjs",
     "check:public-data-exposure": "node scripts/check-public-data-exposure.mjs",
+    "check:anon-access": "node scripts/check-anon-data-access.mjs",
     "check:security-findings": "node scripts/check-security-findings-baseline.mjs",
     "check:security-headers": "node scripts/check-security-headers.mjs",
     "check:security-headers:file": "bun scripts/check-security-headers.ts",

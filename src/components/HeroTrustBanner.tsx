@@ -65,10 +65,8 @@ export const HeroTrustBanner = ({ city }: HeroTrustBannerProps) => {
     let cancelled = false;
     (async () => {
       let q = supabase
-        .from("reviews")
+        .from("reviews_public")
         .select("author_name, rating, comment, city, neighborhood")
-        .eq("verified", true)
-        .eq("published", true)
         .not("comment", "is", null)
         .order("review_date", { ascending: false })
         .limit(6);
