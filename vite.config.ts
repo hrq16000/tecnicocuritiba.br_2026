@@ -8,41 +8,17 @@ import { execSync } from "node:child_process";
 import { imagetools } from "vite-imagetools";
 import { mcpPlugin } from "@lovable.dev/mcp-js/stacks/supabase/vite";
 import { sentryVitePlugin } from "@sentry/vite-plugin";
-import { CURATED_PATHS } from "./scripts/lib/curated-urls.mjs";
+import { CURATED_ROUTES } from "./scripts/curated-routes-meta.mjs";
 
 /**
  * Prerender estático: raiz + rotas comerciais (serviços, cidades e bairros).
  * Garante HTML com title/description/H1/OG mesmo sem JS, e artefatos em dist
  * para os gates de SEO do postbuild.
  */
-const PRERENDER_PATHS = Array.from(
-  new Set([
-    "/",
-    ...CURATED_PATHS.filter(
-      (p: string) =>
-        p.startsWith("/servicos") ||
-        p.startsWith("/tecnico-informatica") ||
-        p.startsWith("/bairros") ||
-        p.startsWith("/problemas") ||
-        p === "/precos" ||
-        p === "/precos-e-politicas" ||
-        p === "/empresa-de-ti-curitiba",
-    ),
-  ]),
+const PRERENDER_PATHS: string[] = Array.from(
+  new Set<string>(["/", ...CURATED_ROUTES.map((r: { path: string }) => r.path)]),
 );
 
-const resolveAppVersion = () => {
-  if (process.env.APP_VERSION) return process.env.APP_VERSION;
-  if (process.env.VERCEL_GIT_COMMIT_SHA) return process.env.VERCEL_GIT_COMMIT_SHA.slice(0, 7);
-  if (process.env.COMMIT_REF) return process.env.COMMIT_REF.slice(0, 7);
-  try {
-    return execSync("git rev-parse --short HEAD", { stdio: ["ignore", "pipe", "ignore"] })
-      .toString()
-      .trim();
-  } catch {
-    return `b${Date.now().toString(36)}`;
-  }
-};
 const APP_VERSION = resolveAppVersion();
 const APP_BUILD_TIME = new Date().toISOString();
 const SENTRY_AUTH_TOKEN = process.env.SENTRY_AUTH_TOKEN || "";
