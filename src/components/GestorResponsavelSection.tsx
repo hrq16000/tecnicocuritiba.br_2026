@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { ShieldCheck, MapPin, Wrench, BadgeCheck } from "lucide-react";
 import { GESTOR, hasPersonAuthority } from "@/lib/gestorResponsavel";
 import { siteConfig } from "@/lib/siteConfig";

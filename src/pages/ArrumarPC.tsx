@@ -18,7 +18,7 @@ import {
   MapPin,
   CreditCard,
 } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 
 const WHATSAPP_NUMBER = "5541997086380";
 const WHATSAPP_MSG =

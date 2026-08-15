@@ -1,6 +1,6 @@
 import { SkeletonCardGrid } from "@/components/motion/Skeletons";
 import { useEffect, useMemo, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { Star, ShieldCheck, MessageCircle } from "lucide-react";
 import { PageSEO } from "@/components/PageSEO";
 import { Header } from "@/components/Header";

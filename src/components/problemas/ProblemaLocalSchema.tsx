@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+import { useLocation } from "@/lib/router-compat";
 import { SCHEMA_SLOTS, SLOT_PRIORITY, useJsonLdSlot } from "@/lib/jsonLdSlots";
 import { buildLocalBusinessSchema } from "@/lib/localBusinessJsonLd";
 import { PROBLEMAS_HUB } from "@/lib/problemasHub";

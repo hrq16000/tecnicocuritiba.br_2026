@@ -1,6 +1,6 @@
 import { upsertCanonical } from "@/lib/canonicalUrl";
 import { useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link } from "@/lib/router-compat";
 import { 
   CheckCircle, Clock, Shield, MessageCircle, 
   MapPin, Star, ChevronDown, AlertTriangle, Zap

@@ -7,7 +7,7 @@ import {
   REGRA_SEM_BALCAO,
   VALOR_COLETA_MINIMO_LABEL,
 } from "@/lib/precosConfig";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 
 /**
  * Bloco padronizado de política de atendimento (fonte única em precosConfig).

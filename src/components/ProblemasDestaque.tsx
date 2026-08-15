@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { AlertTriangle, ArrowRight } from "lucide-react";
 import { problemaSummaries } from "@/lib/problemaSummaries";
 

@@ -1,5 +1,6 @@
 import { lazy, Suspense } from "react";
-import { BrowserRouter, useInRouterContext } from "react-router-dom";
+import { useInRouterContext } from "@/lib/router-compat";
+const BrowserRouter = ({ children }: { children?: React.ReactNode }) => <>{children}</>;
 import { PageSEO } from "@/components/PageSEO";
 import { JsonLdSchema } from "@/components/JsonLdSchema";
 import { LazyOnVisible } from "@/components/LazyOnVisible";

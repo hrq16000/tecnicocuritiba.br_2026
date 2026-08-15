@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { Monitor, Network, ShieldCheck, Headset, ArrowRight } from "lucide-react";
 
 /**

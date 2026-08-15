@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { Package, Clock, Wrench, ShieldCheck } from "lucide-react";
 import {
   COLETA_TAXA_MINIMA_LABEL,

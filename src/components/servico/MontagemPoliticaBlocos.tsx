@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { CheckCircle2, ShieldCheck, Cpu, PackageCheck } from "lucide-react";
 import {
   PECAS_DO_CLIENTE,

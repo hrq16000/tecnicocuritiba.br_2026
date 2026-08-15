@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { AlertTriangle, Building2, CheckCircle2, ClipboardList, ShieldAlert } from "lucide-react";
 
 /**

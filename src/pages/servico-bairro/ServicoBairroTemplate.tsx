@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { PageSEO } from "@/components/PageSEO";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { IMAGES } from "@/lib/images";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { 
   CheckCircle, Clock, Shield, ArrowRight, MessageCircle, 
   MapPin, Star, Award, Users, Zap

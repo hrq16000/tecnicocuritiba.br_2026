@@ -1,5 +1,5 @@
 import { useEffect, type ReactNode } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { CheckCircle, ArrowRight } from "lucide-react";
 import { PageSEO } from "@/components/PageSEO";
 import { ServiceLandingSchema, type ServiceFaq } from "@/components/ServiceLandingSchema";

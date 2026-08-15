@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { EditorialReferences } from "@/components/BlogPostFAQ";
 import windowsKb5074105Image from "@/assets/blog/windows-11-kb5074105-update.jpg";
 

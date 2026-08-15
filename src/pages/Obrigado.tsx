@@ -1,6 +1,6 @@
 import { upsertCanonical } from "@/lib/canonicalUrl";
 import { useEffect, useMemo, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { CheckCircle2, MessageCircle, Clock, MapPin, Wrench, Truck, Monitor, ArrowRight } from "lucide-react";
 import { FastHeader } from "@/components/FastHeader";
 import { Footer } from "@/components/Footer";

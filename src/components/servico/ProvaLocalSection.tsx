@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { MapPin, Route, Wrench, ShieldCheck } from "lucide-react";
 import { localLinksDe } from "@/lib/localLinkMap";
 import { FAIXAS_LOGISTICAS, RAIO_MAXIMO_KM } from "@/lib/logisticaColeta";

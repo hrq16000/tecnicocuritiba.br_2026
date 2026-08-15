@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { ArrowRight, CheckCircle, Info } from "lucide-react";
 import { blocos3T, type Secao3T } from "@/lib/blocos3t";
 

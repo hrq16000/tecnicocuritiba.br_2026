@@ -1,8 +1,8 @@
 import { SkeletonBlock, SkeletonText } from "@/components/motion/Skeletons";
 import { useEffect, useState } from "react";
 import { AnimatedSection } from "@/components/AnimatedSection";
-import { useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { useParams } from "@/lib/router-compat";
+import { Link } from "@/lib/router-compat";
 import { AlertCircle, MessageCircle, ArrowRight, CheckCircle, Wrench, Shield, Search, TrendingDown, Microscope, Zap, ThermometerSun, Cpu, ClipboardCheck, Truck, ClipboardList } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";

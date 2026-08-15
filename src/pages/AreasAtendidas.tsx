@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { MapPin, Building2, Home, Truck, MonitorSmartphone, MessageCircle } from "lucide-react";
 import { PageSEO } from "@/components/PageSEO";
 import { LocalBusinessJsonLd } from "@/components/LocalBusinessJsonLd";

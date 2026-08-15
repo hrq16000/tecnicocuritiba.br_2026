@@ -3,7 +3,7 @@ import { PageSEO } from "@/components/PageSEO";
 import { RealImageSection } from "@/components/RealImageSection";
 import { PrecoVisitaTecnica } from "@/components/PrecoVisitaTecnica";
 import { ServiceGallery } from "@/components/gallery/ServiceGallery";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { Tv, CheckCircle, AlertCircle, MessageCircle, ArrowRight, Clock } from "lucide-react";
 import { COLETA_TAXA_MINIMA_LABEL, PRAZO_LONGO, DIAGNOSTICO_VALOR_LABEL } from "@/lib/coletaConfig";
 import { Button } from "@/components/ui/button";

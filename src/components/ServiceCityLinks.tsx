@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { MapPin, Briefcase, ChevronDown } from "lucide-react";
 import { SERVICOS, CIDADES, getServico, getCidade } from "@/lib/servicoCidadeData";
 

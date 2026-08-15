@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { useMemo } from "react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import {

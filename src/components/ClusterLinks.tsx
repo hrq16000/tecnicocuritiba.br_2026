@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router-compat";
 import { buildCluster, type ClusterOptions } from "@/lib/seoCluster";
 
 interface Props extends ClusterOptions {
