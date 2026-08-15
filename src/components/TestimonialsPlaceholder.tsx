@@ -54,7 +54,7 @@ export const TestimonialsPlaceholder = ({ items = [] as Testimonial[] }) => {
           {differentials.map(({ icon: Icon, title, desc }) => (
             <div
               key={title}
-              className="bg-secondary/60 border border-border/40 rounded-xl p-5 hover:shadow-sm transition-shadow"
+              className="bg-secondary/60 border border-border/40 rounded-xl p-5 hover:shadow-xs transition-shadow"
             >
               <Icon className="h-6 w-6 text-primary mb-3" aria-hidden="true" />
               <h3 className="font-semibold text-foreground mb-1 text-base">{title}</h3>

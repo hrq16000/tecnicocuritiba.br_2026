@@ -89,7 +89,7 @@ const TrustProofFallback = forwardRef<
           {signals.map((s) => (
             <article
               key={s.title}
-              className="rounded-xl border border-border bg-card p-5 shadow-sm text-center"
+              className="rounded-xl border border-border bg-card p-5 shadow-xs text-center"
             >
               <div className="w-11 h-11 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3">
                 <s.icon className="w-5 h-5 text-primary" aria-hidden="true" />
@@ -215,7 +215,7 @@ export const ReviewsGrid = ({
             {reviews.map((r) => (
               <article
                 key={r.id}
-                className="rounded-xl border border-border bg-card p-5 shadow-sm hover:shadow-md transition-shadow"
+                className="rounded-xl border border-border bg-card p-5 shadow-xs hover:shadow-md transition-shadow"
               >
                 <div className="flex items-center gap-3 mb-3">
                   {r.author_photo_url ? (

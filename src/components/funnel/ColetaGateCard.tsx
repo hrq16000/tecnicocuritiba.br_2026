@@ -93,7 +93,7 @@ export const ColetaGateCard = ({ bairro, value, onChange }: Props) => {
           id="faixa-coleta"
           value={faixaId}
           onChange={(e) => setFaixaId(e.target.value)}
-          className="mt-1 min-h-11 w-full rounded-lg border border-border bg-background px-3 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+          className="mt-1 min-h-11 w-full rounded-lg border border-border bg-background px-3 text-sm focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-ring"
         >
           <option value="">Selecione a faixa da sua região</option>
           {FAIXAS_LOGISTICAS.map((f) => (

@@ -67,7 +67,7 @@ export const ComoFuncionaFluxo = () => {
             return (
               <li
                 key={s.id}
-                className="relative flex flex-col rounded-2xl border border-border bg-card p-5 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md"
+                className="relative flex flex-col rounded-2xl border border-border bg-card p-5 shadow-xs transition-all hover:-translate-y-0.5 hover:shadow-md"
               >
                 <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-accent/15 text-accent">
                   <Icon className="h-5 w-5" aria-hidden="true" />

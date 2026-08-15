@@ -188,7 +188,7 @@ const SejaParceiro = () => {
               ].map((item, i) => (
                 <AnimatedSection key={i} delay={120 * i}>
                   <div className="glass-card gradient-border rounded-xl p-6 text-center hover:-translate-y-2 transition-all duration-300 group">
-                    <div className="bg-accent text-accent-foreground rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg mx-auto mb-3 shadow-sm group-hover:scale-110 group-hover:shadow-[0_0_20px_hsl(var(--accent)/0.4)] transition-all duration-300">
+                    <div className="bg-accent text-accent-foreground rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg mx-auto mb-3 shadow-xs group-hover:scale-110 group-hover:shadow-[0_0_20px_hsl(var(--accent)/0.4)] transition-all duration-300">
                       {item.step}
                     </div>
                     <h3 className="font-bold text-foreground mb-2 group-hover:text-accent transition-colors">{item.title}</h3>

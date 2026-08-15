@@ -60,7 +60,7 @@ export const TriageField = forwardRef<HTMLDivElement, Props>(
                     onChange(o.value);
                     onSelect?.(o.value);
                   }}
-                  className={`min-h-11 text-left px-3 py-2.5 rounded-lg border text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring ${
+                  className={`min-h-11 text-left px-3 py-2.5 rounded-lg border text-sm transition-colors focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-ring ${
                     active
                       ? "border-primary bg-primary/10 font-medium"
                       : "border-border bg-card hover:border-primary/60"
@@ -95,7 +95,7 @@ export const TriageField = forwardRef<HTMLDivElement, Props>(
                     onChange(o.value);
                     onSelect?.(o.value);
                   }}
-                  className={`min-h-9 px-3 py-1.5 rounded-full text-xs font-medium border transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring ${
+                  className={`min-h-9 px-3 py-1.5 rounded-full text-xs font-medium border transition-colors focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-ring ${
                     active
                       ? "border-primary bg-primary text-primary-foreground"
                       : "border-border bg-card hover:border-primary/60"
@@ -127,7 +127,7 @@ export const TriageField = forwardRef<HTMLDivElement, Props>(
                     onChange(joined);
                     onSelect?.(joined);
                   }}
-                  className={`min-h-11 text-left px-3 py-2.5 rounded-lg border text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring ${
+                  className={`min-h-11 text-left px-3 py-2.5 rounded-lg border text-sm transition-colors focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-ring ${
                     active
                       ? "border-primary bg-primary/10 font-medium"
                       : "border-border bg-card hover:border-primary/60"

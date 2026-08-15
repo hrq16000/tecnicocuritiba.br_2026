@@ -59,7 +59,7 @@ export const ProvasVisuaisMonitor = () => (
           const alt = IMAGES[`${prova.imageKey}Alt` as keyof typeof IMAGES] as string;
           const credit = creditFor(src);
           return (
-            <figure key={prova.etapa} className="rounded-xl bg-background p-3 shadow-sm">
+            <figure key={prova.etapa} className="rounded-xl bg-background p-3 shadow-xs">
               <img
                 src={src}
                 alt={`${prova.etapa} — ${alt}`}

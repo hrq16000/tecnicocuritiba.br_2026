@@ -133,7 +133,7 @@ const Blog = () => {
           <div className="container mx-auto px-4">
             {!hasApproved ? (
               <AnimatedSection>
-                <div className="max-w-2xl mx-auto text-center rounded-2xl border border-border bg-card p-8 md:p-12 shadow-sm">
+                <div className="max-w-2xl mx-auto text-center rounded-2xl border border-border bg-card p-8 md:p-12 shadow-xs">
                   <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-accent/10 mb-6">
                     <Clock className="h-7 w-7 text-accent" />
                   </div>

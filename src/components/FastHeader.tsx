@@ -155,7 +155,7 @@ export const FastHeader = () => {
             <a
               key={item.href}
               href={item.href}
-              className="group inline-flex items-center gap-1.5 rounded-md px-3 py-2 text-foreground/80 transition-colors hover:bg-accent/10 hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+              className="group inline-flex items-center gap-1.5 rounded-md px-3 py-2 text-foreground/80 transition-colors hover:bg-accent/10 hover:text-accent focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
             >
               <item.icon
                 className="h-4 w-4 text-accent/70 transition-transform duration-200 group-hover:scale-110 group-hover:text-accent"
@@ -177,7 +177,7 @@ export const FastHeader = () => {
             data-cta-location="header_agendar"
             data-wa-source="whatsapp_cta"
             aria-label="Iniciar atendimento"
-            className="inline-flex min-h-10 items-center justify-center rounded-md bg-accent px-4 text-sm font-bold text-accent-foreground shadow-sm transition-transform hover:scale-[1.02]"
+            className="inline-flex min-h-10 items-center justify-center rounded-md bg-accent px-4 text-sm font-bold text-accent-foreground shadow-xs transition-transform hover:scale-[1.02]"
           >
             <span className="sm:hidden">Atender</span>
             <span className="hidden sm:inline">Iniciar atendimento</span>
@@ -193,7 +193,7 @@ export const FastHeader = () => {
               aria-expanded={menuOpen}
               aria-haspopup="menu"
               aria-controls="site-menu"
-              className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-border bg-background text-foreground transition-colors hover:bg-accent/10 hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-border bg-background text-foreground transition-colors hover:bg-accent/10 hover:text-accent focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
             >
               {menuOpen ? (
                 <X className="h-5 w-5" strokeWidth={2.2} aria-hidden="true" />
@@ -222,7 +222,7 @@ export const FastHeader = () => {
                       role="menuitem"
                       onClick={() => setMenuOpen(false)}
                       style={{ animationDelay: `${i * 35}ms` }}
-                      className="menu-item group flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-foreground/85 transition-colors hover:bg-accent/10 hover:text-accent focus-visible:bg-accent/10 focus-visible:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-accent"
+                      className="menu-item group flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-foreground/85 transition-colors hover:bg-accent/10 hover:text-accent focus-visible:bg-accent/10 focus-visible:text-accent focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-accent"
                     >
                       <span className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-accent/10 text-accent transition-transform duration-200 group-hover:scale-110">
                         <item.icon className="h-[18px] w-[18px]" strokeWidth={2} aria-hidden="true" />

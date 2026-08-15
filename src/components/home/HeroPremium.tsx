@@ -158,13 +158,13 @@ export const HeroPremium = () => {
               onClick={trackHero}
               data-cta-location="hero_primary"
               data-wa-source="whatsapp_cta"
-              className="inline-flex min-h-14 items-center justify-center gap-2 rounded-lg bg-[hsl(var(--accent))] px-7 text-base font-bold text-accent-foreground shadow-[0_14px_34px_-10px_hsl(var(--accent)/0.6)] transition-transform hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[hsl(var(--hero-bg))]"
+              className="inline-flex min-h-14 items-center justify-center gap-2 rounded-lg bg-[hsl(var(--accent))] px-7 text-base font-bold text-accent-foreground shadow-[0_14px_34px_-10px_hsl(var(--accent)/0.6)] transition-transform hover:scale-[1.02] focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[hsl(var(--hero-bg))]"
             >
               Iniciar atendimento
             </a>
             <a
               href="/servicos"
-              className="inline-flex min-h-14 items-center justify-center gap-2 rounded-lg border border-white/25 bg-white/5 px-7 text-base font-semibold text-white transition-colors hover:bg-white/12 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[hsl(var(--hero-bg))]"
+              className="inline-flex min-h-14 items-center justify-center gap-2 rounded-lg border border-white/25 bg-white/5 px-7 text-base font-semibold text-white transition-colors hover:bg-white/12 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[hsl(var(--hero-bg))]"
             >
               Ver serviços
             </a>
@@ -183,7 +183,7 @@ export const HeroPremium = () => {
 
                   <a
                     href={s.to}
-                    className="inline-flex items-center rounded-full border border-white/20 bg-white/[0.06] px-3.5 py-1.5 text-[13px] font-medium text-white/90 transition-colors hover:border-[hsl(var(--accent))] hover:bg-white/12 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+                    className="inline-flex items-center rounded-full border border-white/20 bg-white/[0.06] px-3.5 py-1.5 text-[13px] font-medium text-white/90 transition-colors hover:border-[hsl(var(--accent))] hover:bg-white/12 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-white"
                   >
                     {s.label}
                   </a>
@@ -192,7 +192,7 @@ export const HeroPremium = () => {
               <li>
                 <a
                   href="/servicos"
-                  className="inline-flex items-center rounded-full border border-[hsl(var(--accent))]/50 bg-[hsl(var(--accent))]/15 px-3.5 py-1.5 text-[13px] font-semibold text-white transition-colors hover:bg-[hsl(var(--accent))]/25 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+                  className="inline-flex items-center rounded-full border border-[hsl(var(--accent))]/50 bg-[hsl(var(--accent))]/15 px-3.5 py-1.5 text-[13px] font-semibold text-white transition-colors hover:bg-[hsl(var(--accent))]/25 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-white"
                 >
                   Ver todos os serviços →
                 </a>
@@ -203,7 +203,7 @@ export const HeroPremium = () => {
           <p className="mt-4 text-sm text-white/80">
             <a
               href="/tecnico-informatica-curitiba"
-              className="font-medium text-[hsl(var(--accent))] underline-offset-4 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+              className="font-medium text-[hsl(var(--accent))] underline-offset-4 hover:underline focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-white"
             >
               Conheça o atendimento técnico em Curitiba
             </a>
@@ -235,7 +235,7 @@ export const HeroPremium = () => {
             <span
               key={activeCaption}
               aria-live="polite"
-              className="hero-caption inline-flex items-center gap-2 rounded-full border border-white/15 bg-black/45 px-3.5 py-1.5 text-xs font-medium text-white backdrop-blur-sm sm:text-[13px]"
+              className="hero-caption inline-flex items-center gap-2 rounded-full border border-white/15 bg-black/45 px-3.5 py-1.5 text-xs font-medium text-white backdrop-blur-xs sm:text-[13px]"
             >
               <span className="h-1.5 w-1.5 rounded-full bg-[hsl(var(--accent))]" aria-hidden="true" />
               {activeCaption}
@@ -250,7 +250,7 @@ export const HeroPremium = () => {
                 onClick={() => setPaused((p) => !p)}
                 aria-label={paused ? "Retomar apresentação de slides" : "Pausar apresentação de slides"}
                 aria-pressed={paused}
-                className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 bg-black/40 text-white backdrop-blur-sm transition-colors hover:bg-black/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+                className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 bg-black/40 text-white backdrop-blur-xs transition-colors hover:bg-black/60 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-white"
               >
                 {paused ? <Play className="h-4 w-4" aria-hidden="true" /> : <Pause className="h-4 w-4" aria-hidden="true" />}
               </button>
@@ -262,7 +262,7 @@ export const HeroPremium = () => {
                   type="button"
                   onClick={() => go(-1)}
                   aria-label="Slide anterior"
-                  className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 bg-black/40 text-white backdrop-blur-sm transition-colors hover:bg-black/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+                  className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 bg-black/40 text-white backdrop-blur-xs transition-colors hover:bg-black/60 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-white"
                 >
                   <ChevronLeft className="h-5 w-5" aria-hidden="true" />
                 </button>
@@ -277,7 +277,7 @@ export const HeroPremium = () => {
                       aria-label={`Ver ${slide.place}`}
                       aria-selected={i === active}
                       onClick={() => goTo(i)}
-                      className={`h-1.5 rounded-full transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white ${
+                      className={`h-1.5 rounded-full transition-all duration-300 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-white ${
                         i === active ? "w-6 bg-[hsl(var(--accent))]" : "w-1.5 bg-white/50 hover:bg-white/80"
                       }`}
                     />
@@ -288,7 +288,7 @@ export const HeroPremium = () => {
                   type="button"
                   onClick={() => go(1)}
                   aria-label="Próximo slide"
-                  className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 bg-black/40 text-white backdrop-blur-sm transition-colors hover:bg-black/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+                  className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 bg-black/40 text-white backdrop-blur-xs transition-colors hover:bg-black/60 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-white"
                 >
                   <ChevronRight className="h-5 w-5" aria-hidden="true" />
                 </button>

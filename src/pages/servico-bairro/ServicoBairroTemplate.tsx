@@ -208,15 +208,15 @@ export const ServicoBairroTemplate = ({ data }: { data: ServicoBairroData }) => 
 
             {/* Trust indicators with glass cards */}
             <div className="flex flex-wrap justify-center gap-3 mb-8 reveal-text" data-reveal-delay="200">
-              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/10 px-4 py-2 rounded-lg">
+              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-xs border border-white/10 px-4 py-2 rounded-lg">
                 <Star className="h-4 w-4 text-accent fill-accent" />
                 <span className="text-white text-sm font-medium">Atendimento local direto</span>
               </div>
-              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/10 px-4 py-2 rounded-lg">
+              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-xs border border-white/10 px-4 py-2 rounded-lg">
                 <Clock className="h-4 w-4 text-accent" />
                 <span className="text-white text-sm">{data.tempoAtendimento}</span>
               </div>
-              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/10 px-4 py-2 rounded-lg">
+              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-xs border border-white/10 px-4 py-2 rounded-lg">
                 <Shield className="h-4 w-4 text-accent" />
                 <span className="text-white text-sm">Garantia inclusa</span>
               </div>
@@ -231,7 +231,7 @@ export const ServicoBairroTemplate = ({ data }: { data: ServicoBairroData }) => 
 
             {/* Prévia da mensagem que será enviada (transparência + contexto) */}
             <div
-              className="mt-6 max-w-2xl mx-auto text-left bg-white/10 backdrop-blur-sm border border-white/15 rounded-xl p-4"
+              className="mt-6 max-w-2xl mx-auto text-left bg-white/10 backdrop-blur-xs border border-white/15 rounded-xl p-4"
               data-testid="wa-message-preview"
             >
               <p className="text-white/70 text-xs uppercase tracking-wide mb-2">
@@ -292,7 +292,7 @@ export const ServicoBairroTemplate = ({ data }: { data: ServicoBairroData }) => 
               </div>
               
               {/* Location tags with stagger */}
-              <div className="mt-8 p-6 bg-secondary/50 backdrop-blur-sm rounded-xl border border-border">
+              <div className="mt-8 p-6 bg-secondary/50 backdrop-blur-xs rounded-xl border border-border">
                 <h3 className="font-bold text-foreground mb-4 flex items-center gap-2">
                   <MapPin className="h-5 w-5 text-accent" />
                   Atendemos perto de:

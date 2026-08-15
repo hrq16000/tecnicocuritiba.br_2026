@@ -72,7 +72,7 @@ export const HeroSection = () => {
             {/* Trust signals */}
             <div className="flex flex-wrap justify-center lg:justify-start gap-2.5 mb-6 opacity-0 animate-[heroFadeUp_0.5s_ease-out_0.45s_forwards]">
               {trustSignals.map((signal, index) => (
-                <div key={index} className="flex items-center gap-1.5 bg-white/[0.07] backdrop-blur-sm border border-white/[0.08] rounded-full px-3 py-1.5 hover:bg-white/[0.12] hover:border-white/[0.15] transition-all duration-300 hover:scale-105">
+                <div key={index} className="flex items-center gap-1.5 bg-white/[0.07] backdrop-blur-xs border border-white/[0.08] rounded-full px-3 py-1.5 hover:bg-white/[0.12] hover:border-white/[0.15] transition-all duration-300 hover:scale-105">
                   <signal.icon className="h-3.5 w-3.5 text-accent" />
                   <span className="text-white/95 text-[13px] drop-shadow-[0_1px_1px_rgba(0,0,0,0.3)]">{signal.text}</span>
                 </div>

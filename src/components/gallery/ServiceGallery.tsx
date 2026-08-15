@@ -58,7 +58,7 @@ export const ServiceGallery = memo(function ServiceGallery({
               return (
                 <figure
                   key={img.src}
-                  className="rounded-xl overflow-hidden bg-background border border-border shadow-sm hover:shadow-md transition-shadow"
+                  className="rounded-xl overflow-hidden bg-background border border-border shadow-xs hover:shadow-md transition-shadow"
                 >
                   {/* Wrapper com aspect-ratio fixo evita CLS enquanto a imagem carrega,
                       mesmo antes do <img loading="lazy" decoding="async"> ter dimensões pintadas pelo browser. */}

@@ -141,7 +141,7 @@ const CFTVPage = () => {
                 { icon: Moon, title: "Noites inseguras", desc: "Barulhos durante a madrugada e nenhuma visibilidade do que acontece do lado de fora. A escuridão é aliada dos invasores." },
                 { icon: Lock, title: "Comércio vulnerável", desc: "Funcionários, estoque, caixa — tudo exposto. Sem vigilância, qualquer incidente vira prejuízo sem provas." },
               ].map((item, i) => (
-                <div key={i} className="bg-background rounded-xl p-6 border border-destructive/10 shadow-sm">
+                <div key={i} className="bg-background rounded-xl p-6 border border-destructive/10 shadow-xs">
                   <div className="bg-destructive/10 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
                     <item.icon className="h-6 w-6 text-destructive" />
                   </div>

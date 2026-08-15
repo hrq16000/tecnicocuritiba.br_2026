@@ -245,7 +245,7 @@ export const CoverageMapSection = () => {
                   className="w-full h-full"
                 />
               </div>
-              <div className="absolute bottom-4 left-4 right-4 bg-background/95 backdrop-blur-sm rounded-lg p-3 shadow-md border border-border">
+              <div className="absolute bottom-4 left-4 right-4 bg-background/95 backdrop-blur-xs rounded-lg p-3 shadow-md border border-border">
                 <div className="flex items-center gap-2 text-sm">
                   <div className="flex items-center gap-1.5">
                     <span className="relative flex h-3 w-3">
@@ -329,7 +329,7 @@ export const CoverageMapSection = () => {
                       <div
                         className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition-all duration-500 ${
                           isActive
-                            ? "bg-accent text-accent-foreground shadow-sm"
+                            ? "bg-accent text-accent-foreground shadow-xs"
                             : "bg-muted text-foreground"
                         }`}
                       >

@@ -64,10 +64,10 @@ export const TrustSection = () => {
             return (
               <div 
                 key={index}
-                className="text-center bg-white/[0.06] backdrop-blur-sm border border-white/[0.08] rounded-xl p-4 md:p-5 hover:bg-white/[0.12] hover:border-white/[0.18] transition-all duration-300 hover:-translate-y-2 hover:scale-[1.06] shimmer hover-streak slide-up-stagger group"
+                className="text-center bg-white/[0.06] backdrop-blur-xs border border-white/[0.08] rounded-xl p-4 md:p-5 hover:bg-white/[0.12] hover:border-white/[0.18] transition-all duration-300 hover:-translate-y-2 hover:scale-[1.06] shimmer hover-streak slide-up-stagger group"
                 style={{ animationDelay: `${index * 70}ms` }}
               >
-                <div className="inline-flex items-center justify-center bg-accent/90 rounded-xl p-2.5 mb-3 shadow-sm relative group-hover:shadow-[0_0_20px_hsl(var(--accent)/0.4)] transition-shadow duration-300">
+                <div className="inline-flex items-center justify-center bg-accent/90 rounded-xl p-2.5 mb-3 shadow-xs relative group-hover:shadow-[0_0_20px_hsl(var(--accent)/0.4)] transition-shadow duration-300">
                   <Icon className="h-5 w-5 md:h-5 md:w-5 text-white icon-bounce" />
                 </div>
                 <h3 className="font-heading font-bold text-white text-sm md:text-[15px] mb-1">

@@ -57,7 +57,7 @@ export const TopOfferBanner = () => {
               onClick={openFunnel}
               data-wa-medium="top_banner"
               data-cta-location="top_banner"
-              className="inline-flex flex-shrink-0 items-center gap-1 rounded-full bg-white px-3 py-1 font-extrabold text-[hsl(var(--whatsapp))] shadow-sm transition-transform hover:scale-105"
+              className="inline-flex flex-shrink-0 items-center gap-1 rounded-full bg-white px-3 py-1 font-extrabold text-[hsl(var(--whatsapp))] shadow-xs transition-transform hover:scale-105"
             >
               Chamar agora <span aria-hidden="true">→</span>
             </a>
