@@ -16,8 +16,26 @@ import { CURATED_ROUTES } from "./scripts/curated-routes-meta.mjs";
  * para os gates de SEO do postbuild.
  */
 const PRERENDER_PATHS: string[] = Array.from(
-  new Set<string>(["/", ...CURATED_ROUTES.map((r: { path: string }) => r.path)]),
+  new Set<string>([
+    "/",
+    ...(CURATED_ROUTES as Array<{ path?: string } | null>)
+      .map((r) => r?.path)
+      .filter((p): p is string => typeof p === "string"),
+  ]),
 );
+
+const resolveAppVersion = () => {
+  if (process.env.APP_VERSION) return process.env.APP_VERSION;
+  if (process.env.VERCEL_GIT_COMMIT_SHA) return process.env.VERCEL_GIT_COMMIT_SHA.slice(0, 7);
+  if (process.env.COMMIT_REF) return process.env.COMMIT_REF.slice(0, 7);
+  try {
+    return execSync("git rev-parse --short HEAD", { stdio: ["ignore", "pipe", "ignore"] })
+      .toString()
+      .trim();
+  } catch {
+    return `b${Date.now().toString(36)}`;
+  }
+};
 
 const APP_VERSION = resolveAppVersion();
 const APP_BUILD_TIME = new Date().toISOString();
