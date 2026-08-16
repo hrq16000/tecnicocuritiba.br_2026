@@ -155,7 +155,7 @@ export const BairroLocalLayout = ({ data }: { data: BairroLocalData }) => {
 
         {/* Prova visual real do bairro (fotos da operação, nunca geradas por IA) */}
         {fotos.length > 0 && (
-          <section className="border-y border-border/60 bg-secondary/40 py-12 md:py-16">
+          <section className="cv-section border-y border-border/60 bg-secondary/40 py-12 md:py-16">
             <div className="container mx-auto">
               <h2 className="text-2xl font-heading font-bold text-foreground md:text-3xl">
                 Atendimentos reais {data.nomeLocativo}
@@ -166,6 +166,8 @@ export const BairroLocalLayout = ({ data }: { data: BairroLocalData }) => {
                     <img
                       src={foto.src}
                       alt={foto.alt}
+                      width={640}
+                      height={448}
                       loading="lazy"
                       decoding="async"
                       className="h-56 w-full object-cover"
@@ -179,7 +181,7 @@ export const BairroLocalLayout = ({ data }: { data: BairroLocalData }) => {
         )}
 
         {/* Serviços prioritários no bairro */}
-        <section className="border-y border-border/60 bg-secondary/40 py-12 md:py-16">
+        <section className="cv-section border-y border-border/60 bg-secondary/40 py-12 md:py-16">
           <div className="container mx-auto">
             <h2 className="text-2xl font-heading font-bold text-foreground md:text-3xl">
               Serviços mais procurados {data.nomeLocativo}
@@ -209,7 +211,7 @@ export const BairroLocalLayout = ({ data }: { data: BairroLocalData }) => {
         </section>
 
         {/* Quando no local × quando bancada */}
-        <section className="py-12 md:py-16">
+        <section className="cv-section py-12 md:py-16">
           <div className="container mx-auto grid gap-6 lg:grid-cols-2">
             <div className="rounded-2xl border border-border bg-card p-6">
               <Home className="h-8 w-8 text-accent" />
@@ -243,7 +245,7 @@ export const BairroLocalLayout = ({ data }: { data: BairroLocalData }) => {
         </section>
 
         {/* Formas de atendimento */}
-        <section className="border-y border-border/60 bg-secondary/40 py-12 md:py-16">
+        <section className="cv-section border-y border-border/60 bg-secondary/40 py-12 md:py-16">
           <div className="container mx-auto">
             <h2 className="text-2xl font-heading font-bold text-foreground md:text-3xl">
               Formas de atendimento
@@ -270,7 +272,7 @@ export const BairroLocalLayout = ({ data }: { data: BairroLocalData }) => {
         </section>
 
         {/* Preços + página-mãe Curitiba */}
-        <section className="py-12 md:py-16">
+        <section className="cv-section py-12 md:py-16">
           <div className="container mx-auto grid gap-6 lg:grid-cols-2">
             <div className="rounded-2xl border border-border bg-card p-6">
               <ShieldCheck className="h-8 w-8 text-accent" />
@@ -299,7 +301,7 @@ export const BairroLocalLayout = ({ data }: { data: BairroLocalData }) => {
         </section>
 
         {/* FAQ local */}
-        <section className="border-t border-border/60 bg-secondary/40 py-12 md:py-16">
+        <section className="cv-section border-t border-border/60 bg-secondary/40 py-12 md:py-16">
           <div className="container mx-auto max-w-3xl">
             <h2 className="text-2xl font-heading font-bold text-foreground md:text-3xl">
               Perguntas frequentes — {data.nome}

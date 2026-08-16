@@ -1867,3 +1867,11 @@ body[data-triage-open="1"] .wa-pulse {
     box-shadow: none !important;
   }
 }
+
+/* Perf: seções abaixo da dobra só renderizam quando entram em viewport.
+   Reduz custo de layout/paint inicial (LCP/INP) sem alterar o layout —
+   contain-intrinsic-size reserva altura e evita CLS ao aproximar do viewport. */
+@utility cv-section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 640px;
+}
