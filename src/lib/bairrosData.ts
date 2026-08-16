@@ -1085,6 +1085,330 @@ export const BAIRROS: Record<string, BairroLocalData> = {
       { question: "Quanto custa o atendimento no Capão Raso?", answer: "A partir de R$ 99,99 quando aplicável. O valor final depende do serviço e de peças, sempre apresentado e aprovado antes da execução." },
     ],
   },
+
+  // ── SÍTIO CERCADO ───────────────────────────────────────────
+  "sitio-cercado": {
+    slug: "sitio-cercado",
+    nome: "Sítio Cercado",
+    nomeLocativo: "no Sítio Cercado",
+    cidade: "Curitiba",
+    areaName: "Sítio Cercado, Curitiba",
+    metaTitle: "Técnico de Informática no Sítio Cercado (Curitiba) | PC e Notebook",
+    metaDescription:
+      "Técnico de informática no Sítio Cercado, Curitiba: formatação com backup, remoção de vírus, troca de SSD e conserto de notebook. A partir de R$ 99,99. Via WhatsApp.",
+    h1: "Técnico de Informática no Sítio Cercado – Curitiba",
+    subtitulo:
+      "Atendimento para famílias, estudantes e pequenos comércios do Sítio Cercado, com triagem pelo WhatsApp e valor informado só depois do diagnóstico.",
+    whatsappMessage:
+      "Olá! Preciso de um técnico de informática no Sítio Cercado, em Curitiba. Pode me orientar?",
+    introducaoLocal: [
+      "O Sítio Cercado é um dos bairros mais populosos de Curitiba e isso muda o perfil dos chamados que recebemos de lá. A maior parte das casas tem um único computador compartilhado entre trabalho, tarefa escolar e entretenimento, então cada hora parada pesa. O pedido mais comum não é troca de máquina: é fazer o equipamento existente voltar a ser utilizável sem gasto desnecessário.",
+      "As ruas internas do bairro, entre a Avenida Izaac Ferreira da Cruz e o eixo do Ganchinho, concentram muitos sobrados e casas geminadas. Nesses imóveis o roteador quase sempre fica na sala, junto da entrada do provedor, e o segundo andar recebe sinal fraco. Antes de sugerir compra de repetidor, medimos a queda de sinal cômodo a cômodo, porque em boa parte das vezes reposicionar o roteador e trocar o canal de transmissão já resolve.",
+      "Também vemos muito notebook de uso escolar com disco mecânico original de fábrica, sistema cheio de programas que iniciam junto com o Windows e sem qualquer rotina de backup. Nesses casos a combinação de SSD, limpeza física e reinstalação limpa costuma devolver a máquina a um patamar bem acima do que o dono esperava.",
+      "O primeiro contato é sempre pelo WhatsApp. Você descreve o sintoma, recebe orientação inicial e, quando é preciso avaliação técnica, combinamos a modalidade: no local, remoto ou coleta para bancada — definida pelo tipo de problema, nunca prometida antes de entender o caso.",
+    ],
+    operacaoLocal: [
+      "Triagem pelo WhatsApp com descrição do sintoma antes de qualquer deslocamento",
+      "Diagnóstico técnico antes de informar valor",
+      "Execução somente após aprovação por escrito",
+      "Horário combinado, incluindo fim de tarde para quem trabalha fora",
+    ],
+    atendimentoLocal: [
+      "Formatação com backup dos arquivos pessoais",
+      "Remoção de vírus, adware e sequestro de navegador",
+      "Instalação de SSD e ampliação de memória em notebook de estudo",
+      "Ajuste de roteador e cobertura de Wi-Fi em sobrado",
+    ],
+    coletaBancada: [
+      "Notebook que não liga ou não carrega a bateria",
+      "Tela trincada, dobradiça quebrada ou carcaça solta",
+      "Computador com sinal de curto após queda de energia",
+    ],
+    servicosPrioritarios: [
+      "/servicos/formatacao",
+      "/servicos/remocao-de-virus",
+      "/servicos/upgrade-ssd-ram",
+      "/servicos/manutencao-de-notebook",
+      "/servicos/redes-e-wifi",
+    ],
+    faqLocal: [
+      { question: "Vale a pena consertar um notebook antigo do Sítio Cercado ou comprar outro?", answer: "Depende do diagnóstico. Se a placa está saudável e o gargalo é disco mecânico, memória curta ou sistema comprometido, o reparo custa muito menos que um aparelho novo. Quando a placa exige reparo caro, dizemos isso com clareza e você decide." },
+      { question: "Consigo atendimento fora do horário comercial?", answer: "Combinamos horário na triagem, incluindo fim de tarde. Não prometemos horário antes de confirmar a agenda do dia." },
+      { question: "Meus arquivos e fotos se perdem na formatação?", answer: "Não, quando o disco está legível. Fazemos o backup antes, você confere o que foi salvo e só então reinstalamos o sistema." },
+      { question: "O Wi-Fi não sobe para o segundo andar. Preciso de repetidor?", answer: "Nem sempre. Medimos o sinal em cada cômodo e testamos reposicionamento e troca de canal antes de indicar qualquer equipamento extra." },
+      { question: "Atendem pequenos comércios do bairro?", answer: "Sim. Trabalhamos com computador de caixa, impressora fiscal e rede da loja, com horário combinado para não parar o movimento." },
+    ],
+  },
+
+  // ── FAZENDINHA ──────────────────────────────────────────────
+  fazendinha: {
+    slug: "fazendinha",
+    nome: "Fazendinha",
+    nomeLocativo: "na Fazendinha",
+    cidade: "Curitiba",
+    areaName: "Fazendinha, Curitiba",
+    metaTitle: "Técnico de Informática na Fazendinha (Curitiba) | Notebook e PC",
+    metaDescription:
+      "Técnico de informática na Fazendinha, Curitiba: conserto de notebook, formatação, limpeza interna e configuração de Wi-Fi. A partir de R$ 99,99. Atendimento via WhatsApp.",
+    h1: "Técnico de Informática na Fazendinha – Curitiba",
+    subtitulo:
+      "Suporte técnico para moradores e comércio da Fazendinha, com diagnóstico antes do orçamento e aprovação por escrito.",
+    whatsappMessage:
+      "Olá! Preciso de um técnico de informática na Fazendinha, em Curitiba. Pode me orientar?",
+    introducaoLocal: [
+      "A Fazendinha combina um miolo residencial antigo com um comércio de bairro ativo em torno da Avenida Winston Churchill e da Rua Carlos Klemtz. Essa mistura aparece nos chamados: de manhã costumam ser lojas e escritórios pequenos com computador de atendimento travando; à tarde, moradores com notebook lento ou impressora que parou de ser reconhecida.",
+      "Muitas residências da Fazendinha são casas térreas com edícula ou puxado nos fundos, e é exatamente ali que o Wi-Fi falha. Como a parede entre a casa principal e o fundo costuma ser de alvenaria dupla, o sinal chega, mas com taxa baixa demais para videochamada. Nesse cenário avaliamos cabeamento curto ou ponto de acesso adicional em vez de empilhar repetidores.",
+      "Outro padrão frequente é o computador de mesa montado há anos, com fonte genérica e ventoinha ruidosa. Antes de indicar troca, medimos temperatura sob carga, revisamos alimentação e conferimos a saúde do disco — muita máquina considerada 'perdida' volta a rodar bem com SSD, limpeza e sistema reinstalado.",
+      "O atendimento começa pelo WhatsApp: você conta o sintoma, recebe as primeiras orientações e definimos juntos se o caso é para atendimento no local, remoto ou coleta para bancada. Valor só depois do diagnóstico, sempre aprovado por você antes da execução.",
+    ],
+    operacaoLocal: [
+      "Triagem pelo WhatsApp com descrição do sintoma e do uso do equipamento",
+      "Diagnóstico técnico antes de qualquer valor",
+      "Aprovação por escrito antes da execução",
+      "Agenda combinada para comércio fora do pico de movimento",
+    ],
+    atendimentoLocal: [
+      "Limpeza interna, troca de pasta térmica e revisão de ventoinhas",
+      "Formatação com backup e reinstalação de programas de trabalho",
+      "Instalação e configuração de impressora em rede",
+      "Ajuste de Wi-Fi para casa com edícula ou puxado nos fundos",
+    ],
+    coletaBancada: [
+      "Desktop que desliga sozinho sob carga",
+      "Notebook com carcaça, dobradiça ou conector danificado",
+      "Recuperação de dados de disco com falha de leitura",
+    ],
+    servicosPrioritarios: [
+      "/servicos/manutencao-de-computador",
+      "/servicos/formatacao",
+      "/servicos/redes-e-wifi",
+      "/servicos/upgrade-ssd-ram",
+      "/servicos/remocao-de-virus",
+    ],
+    faqLocal: [
+      { question: "O computador da minha loja na Fazendinha trava no horário de pico. Dá para resolver no local?", answer: "Na maioria das vezes sim: limpeza, revisão térmica, troca de disco e ajuste do sistema são feitos no próprio balcão. Só levamos para bancada quando há suspeita de falha elétrica na placa." },
+      { question: "Vocês configuram impressora compartilhada?", answer: "Sim. Instalamos e compartilhamos impressora na rede local, incluindo o caso comum de cada computador enxergar a impressora com nome diferente." },
+      { question: "Tenho edícula nos fundos sem sinal. Repetidor resolve?", answer: "Depende da estrutura. Onde há parede dupla, repetidor entrega sinal fraco. Costuma ser mais estável um cabo curto até um ponto de acesso no fundo — avaliamos antes de indicar." },
+      { question: "Qual o valor do atendimento na Fazendinha?", answer: "A partir de R$ 99,99 quando aplicável. O valor final depende do serviço e das peças, apresentado antes da execução." },
+      { question: "Preciso levar o equipamento em algum lugar?", answer: "Não. Não temos balcão de atendimento ao público: quando o caso exige bancada, combinamos coleta e devolução." },
+    ],
+  },
+
+  // ── CAMPO COMPRIDO ──────────────────────────────────────────
+  "campo-comprido": {
+    slug: "campo-comprido",
+    nome: "Campo Comprido",
+    nomeLocativo: "no Campo Comprido",
+    cidade: "Curitiba",
+    areaName: "Campo Comprido, Curitiba",
+    metaTitle: "Técnico de Informática no Campo Comprido (Curitiba) | PC e Notebook",
+    metaDescription:
+      "Técnico de informática no Campo Comprido, Curitiba: suporte a home office, formatação, upgrade de SSD e rede Wi-Fi em condomínio. A partir de R$ 99,99. Via WhatsApp.",
+    h1: "Técnico de Informática no Campo Comprido – Curitiba",
+    subtitulo:
+      "Atendimento para condomínios, home office e escritórios do Campo Comprido, com diagnóstico antes do orçamento.",
+    whatsappMessage:
+      "Olá! Preciso de um técnico de informática no Campo Comprido, em Curitiba. Pode me orientar?",
+    introducaoLocal: [
+      "O Campo Comprido concentra condomínios verticais recentes ao longo da Avenida Manoel Ribas e da Rua Eduardo Sprada, e essa verticalização define o tipo de chamado. A maioria dos pedidos vem de quem trabalha em casa e precisa de estabilidade: videochamada sem queda, VPN da empresa funcionando e backup automático dos arquivos de trabalho.",
+      "Apartamento em prédio novo tem um problema específico de rede: dezenas de redes Wi-Fi disputando os mesmos canais na faixa de 2,4 GHz. O sintoma clássico é internet 'rápida no teste de velocidade' e péssima na reunião. Nesses casos separamos as faixas de 2,4 e 5 GHz, ajustamos canal e potência e testamos a estabilidade em uso real, não só no medidor.",
+      "Também atendemos muito notebook corporativo trazido para casa, com disco criptografado e políticas da empresa. Aqui a regra é clara: só mexemos no que o usuário tem autorização para alterar, e qualquer intervenção que dependa do TI da empresa é sinalizada antes.",
+      "O contato é pelo WhatsApp. Descrevendo o sintoma e o modelo do equipamento já conseguimos indicar se o caso resolve em atendimento remoto, se compensa visita no local ou se será necessária coleta para bancada.",
+    ],
+    operacaoLocal: [
+      "Triagem pelo WhatsApp com sintoma, modelo e tipo de uso",
+      "Diagnóstico antes de informar valor",
+      "Aprovação por escrito antes de qualquer execução",
+      "Horário combinado com portaria quando o condomínio exige autorização",
+    ],
+    atendimentoLocal: [
+      "Estabilização de Wi-Fi em apartamento com interferência de canais",
+      "Configuração de home office: videochamada, VPN e backup automático",
+      "Instalação de SSD NVMe e ampliação de memória",
+      "Formatação com backup e reinstalação dos programas de trabalho",
+    ],
+    coletaBancada: [
+      "Notebook que superaquece e desliga em reunião",
+      "Falha de vídeo ou tela sem imagem com máquina ligada",
+      "Suspeita de defeito na placa após oscilação elétrica",
+    ],
+    servicosPrioritarios: [
+      "/servicos/redes-e-wifi",
+      "/servicos/upgrade-ssd-ram",
+      "/servicos/formatacao",
+      "/servicos/manutencao-de-notebook",
+      "/servicos/remocao-de-virus",
+    ],
+    faqLocal: [
+      { question: "Minha internet cai só nas videochamadas. É problema do provedor?", answer: "Nem sempre. Em prédios do Campo Comprido a causa mais comum é disputa de canal no Wi-Fi. Testamos a rede em uso real, separamos as faixas e só então avaliamos se o problema é do link do provedor." },
+      { question: "Vocês atendem dentro de condomínio?", answer: "Sim. Combinamos horário e autorização na portaria durante a triagem, para evitar espera no acesso." },
+      { question: "Dá para configurar backup automático do trabalho?", answer: "Sim. Configuramos backup em nuvem e/ou disco externo com rotina automática e testamos a restauração de um arquivo para comprovar que está funcionando." },
+      { question: "Meu notebook é da empresa. Vocês mexem?", answer: "Só no que você tem autorização para alterar. Quando a mudança depende do TI da empresa, avisamos antes de qualquer intervenção." },
+      { question: "Quanto custa o atendimento no Campo Comprido?", answer: "A partir de R$ 99,99 quando aplicável, com valor final apresentado após o diagnóstico e aprovado por você." },
+    ],
+  },
+
+  // ── MERCÊS ──────────────────────────────────────────────────
+  merces: {
+    slug: "merces",
+    nome: "Mercês",
+    nomeLocativo: "nas Mercês",
+    cidade: "Curitiba",
+    areaName: "Mercês, Curitiba",
+    metaTitle: "Técnico de Informática nas Mercês (Curitiba) | Notebook e PC",
+    metaDescription:
+      "Técnico de informática nas Mercês, Curitiba: conserto de notebook, formatação com backup, recuperação de arquivos e Wi-Fi. A partir de R$ 99,99. Atendimento via WhatsApp.",
+    h1: "Técnico de Informática nas Mercês – Curitiba",
+    subtitulo:
+      "Atendimento para residências, consultórios e escritórios das Mercês, com valor informado só depois do diagnóstico.",
+    whatsappMessage:
+      "Olá! Preciso de um técnico de informática nas Mercês, em Curitiba. Pode me orientar?",
+    introducaoLocal: [
+      "As Mercês são um bairro tradicional da região central de Curitiba, com casas antigas de alvenaria robusta convivendo com prédios de poucos andares e uma boa concentração de consultórios e escritórios profissionais. Essa característica muda o que é urgente por lá: perder acesso a um sistema de agenda ou a uma pasta de documentos costuma ser mais crítico do que a lentidão do computador em si.",
+      "Nas casas mais antigas do bairro, com paredes espessas e pé-direito alto, o Wi-Fi enfrenta obstáculos físicos reais. Já vimos muita instalação com três repetidores em série entregando menos que um único ponto de acesso bem posicionado. Nosso trabalho começa medindo, não vendendo equipamento.",
+      "Em consultórios, a preocupação principal é integridade e sigilo dos arquivos. Configuramos backup com rotina automática, revisamos permissões de compartilhamento na rede e ajustamos o antivírus para não conflitar com o sistema de gestão usado no atendimento.",
+      "Todo atendimento começa pela triagem no WhatsApp: sintoma, tipo de equipamento e o quanto ele é crítico para a sua rotina. A partir daí definimos se resolve remoto, se vale visita no local ou se o caso exige coleta para bancada.",
+    ],
+    operacaoLocal: [
+      "Triagem pelo WhatsApp com nível de urgência e criticidade do equipamento",
+      "Diagnóstico técnico antes de informar valor",
+      "Aprovação por escrito antes da execução",
+      "Atendimento em consultório com horário fora da agenda de pacientes",
+    ],
+    atendimentoLocal: [
+      "Backup automático e verificação de restauração dos arquivos",
+      "Formatação com preservação de documentos e sistemas de gestão",
+      "Revisão de compartilhamento de pastas e permissões na rede",
+      "Reestruturação de Wi-Fi em casa antiga com paredes espessas",
+    ],
+    coletaBancada: [
+      "Disco com falha de leitura e necessidade de recuperação de dados",
+      "Notebook com dano físico em tela, teclado ou conector",
+      "Equipamento que não conclui a inicialização do sistema",
+    ],
+    servicosPrioritarios: [
+      "/servicos/formatacao",
+      "/servicos/recuperacao-de-dados",
+      "/servicos/redes-e-wifi",
+      "/servicos/manutencao-de-notebook",
+      "/servicos/upgrade-ssd-ram",
+    ],
+    faqLocal: [
+      { question: "Consigo recuperar arquivos de um disco que parou de abrir?", answer: "Em muitos casos sim, quando a falha é lógica ou o disco ainda é reconhecido. Avaliamos antes e informamos com honestidade a chance real de recuperação, sem cobrar promessa de resultado." },
+      { question: "Atendem consultórios sem parar o atendimento?", answer: "Sim. Combinamos janela de horário fora da agenda de pacientes e priorizamos o que pode ser feito sem derrubar o sistema em uso." },
+      { question: "Tenho três repetidores e o Wi-Fi continua ruim. Por quê?", answer: "Repetidores em série dividem a banda e aumentam a latência. Medimos o sinal e normalmente substituímos o arranjo por um ponto de acesso bem posicionado, com cabo quando possível." },
+      { question: "Vocês configuram backup automático?", answer: "Sim, em nuvem e/ou disco externo, com rotina programada e teste de restauração para comprovar que os arquivos voltam." },
+      { question: "Quanto custa o atendimento nas Mercês?", answer: "A partir de R$ 99,99 quando aplicável. O valor final sai após o diagnóstico e só é executado com sua aprovação." },
+    ],
+  },
+
+  // ── JUVEVÊ ──────────────────────────────────────────────────
+  juveve: {
+    slug: "juveve",
+    nome: "Juvevê",
+    nomeLocativo: "no Juvevê",
+    cidade: "Curitiba",
+    areaName: "Juvevê, Curitiba",
+    metaTitle: "Técnico de Informática no Juvevê (Curitiba) | Notebook e PC",
+    metaDescription:
+      "Técnico de informática no Juvevê, Curitiba: suporte a home office, formatação, upgrade de SSD, Wi-Fi e conserto de notebook. A partir de R$ 99,99. Via WhatsApp.",
+    h1: "Técnico de Informática no Juvevê – Curitiba",
+    subtitulo:
+      "Atendimento para apartamentos, home office e escritórios do Juvevê, com diagnóstico antes do orçamento.",
+    whatsappMessage:
+      "Olá! Preciso de um técnico de informática no Juvevê, em Curitiba. Pode me orientar?",
+    introducaoLocal: [
+      "O Juvevê é um bairro predominantemente vertical, com prédios residenciais em torno da Praça da Espanha e do eixo da Avenida João Gualberto. O perfil de chamado reflete isso: profissionais liberais e famílias que dependem de um notebook para trabalhar em casa e não toleram equipamento fora do ar por dias.",
+      "A queixa mais comum é lentidão progressiva em notebooks de linha intermediária com quatro a oito anos de uso. Quase sempre a soma é a mesma: disco mecânico ou SSD saturado, memória insuficiente para o número de abas e programas abertos, e refrigeração comprometida por acúmulo de poeira. Tratamos os três pontos juntos, porque resolver só um deixa o usuário com a impressão de que 'não adiantou nada'.",
+      "Em apartamentos do Juvevê também é frequente o problema de rede em imóveis com hall, escritório e quarto em extremidades opostas: o roteador entregue pelo provedor fica na entrada e o cômodo de trabalho recebe o pior sinal. Medimos a cobertura antes de indicar qualquer equipamento adicional.",
+      "A triagem é feita pelo WhatsApp: descrevendo o sintoma, o modelo e a rotina de uso, já conseguimos apontar se o caso resolve remoto, no local ou com coleta para bancada, e qual o próximo passo.",
+    ],
+    operacaoLocal: [
+      "Triagem pelo WhatsApp com sintoma, modelo e rotina de uso",
+      "Diagnóstico técnico antes de qualquer valor",
+      "Execução apenas após aprovação por escrito",
+      "Horário combinado com a portaria do prédio quando necessário",
+    ],
+    atendimentoLocal: [
+      "Upgrade de SSD e memória em notebook de trabalho",
+      "Limpeza interna e troca de pasta térmica",
+      "Formatação com backup e reinstalação dos programas usados no dia a dia",
+      "Ajuste de Wi-Fi para o cômodo usado como escritório",
+    ],
+    coletaBancada: [
+      "Notebook que não liga ou reinicia sozinho",
+      "Tela sem imagem, com listras ou com mancha após impacto",
+      "Conector de energia solto ou que esquenta demais",
+    ],
+    servicosPrioritarios: [
+      "/servicos/upgrade-ssd-ram",
+      "/servicos/manutencao-de-notebook",
+      "/servicos/formatacao",
+      "/servicos/redes-e-wifi",
+      "/servicos/remocao-de-virus",
+    ],
+    faqLocal: [
+      { question: "Meu notebook ficou lento depois de anos de uso. SSD resolve?", answer: "Ajuda muito, mas raramente sozinho. Avaliamos disco, memória e refrigeração juntos: trocar só o disco em uma máquina que superaquece devolve pouco ganho percebido." },
+      { question: "Quanto tempo leva um upgrade de SSD?", answer: "Quando é feito no local e a máquina permite acesso simples, costuma ser resolvido na mesma visita, incluindo migração dos seus dados. Casos com carcaça complexa vão para bancada." },
+      { question: "Vocês atendem em apartamento com portaria?", answer: "Sim. Só pedimos que a autorização de acesso seja combinada antes, no horário definido na triagem." },
+      { question: "Dá para melhorar o Wi-Fi no escritório do apartamento?", answer: "Sim. Medimos a cobertura no cômodo de trabalho, ajustamos faixa e canal e, se ainda faltar sinal, indicamos a solução mais estável para a planta do imóvel." },
+      { question: "Qual o valor do atendimento no Juvevê?", answer: "A partir de R$ 99,99 quando aplicável, com valor final informado após o diagnóstico e aprovado antes da execução." },
+    ],
+  },
+
+  // ── SEMINÁRIO ───────────────────────────────────────────────
+  seminario: {
+    slug: "seminario",
+    nome: "Seminário",
+    nomeLocativo: "no Seminário",
+    cidade: "Curitiba",
+    areaName: "Seminário, Curitiba",
+    metaTitle: "Técnico de Informática no Seminário (Curitiba) | Notebook e PC",
+    metaDescription:
+      "Técnico de informática no Seminário, Curitiba: formatação, remoção de vírus, upgrade de SSD, Wi-Fi e conserto de notebook. A partir de R$ 99,99. Via WhatsApp.",
+    h1: "Técnico de Informática no Seminário – Curitiba",
+    subtitulo:
+      "Atendimento para moradores, estudantes e escritórios do Seminário, com triagem pelo WhatsApp e orçamento após diagnóstico.",
+    whatsappMessage:
+      "Olá! Preciso de um técnico de informática no Seminário, em Curitiba. Pode me orientar?",
+    introducaoLocal: [
+      "O Seminário é um bairro residencial arborizado entre o Campo Comprido e o Bigorrilho, com forte presença de estudantes e profissionais que trabalham em casa parte da semana. Os chamados que chegam dali costumam ter prazo curto: a máquina precisa voltar antes da próxima entrega, prova ou reunião.",
+      "Uma parte relevante dos atendimentos envolve máquinas usadas para estudo e produção — edição de documentos pesados, planilhas grandes, aulas gravadas. Nessas situações, o gargalo raramente é o processador: é memória curta e disco lotado. Medimos o uso real antes de recomendar qualquer peça, para não empurrar upgrade que não muda a experiência.",
+      "Nas casas e sobrados do bairro, o padrão de rede é o roteador na sala e o quarto de estudos no fundo do corredor. Como as paredes internas são de alvenaria, a queda de sinal é previsível. Fazemos a medição por cômodo e mostramos o resultado antes de propor solução.",
+      "O ponto de partida é o WhatsApp: sintoma, prazo e tipo de uso. Com isso definimos se o caso é remoto, no local ou coleta para bancada — e informamos valor somente depois de entender tecnicamente o problema.",
+    ],
+    operacaoLocal: [
+      "Triagem pelo WhatsApp com sintoma, prazo e tipo de uso",
+      "Diagnóstico antes de informar valor",
+      "Aprovação por escrito antes da execução",
+      "Prioridade combinada quando há prazo acadêmico ou de trabalho",
+    ],
+    atendimentoLocal: [
+      "Ampliação de memória e troca de SSD para uso acadêmico e profissional",
+      "Formatação com backup de projetos e trabalhos",
+      "Remoção de vírus e limpeza de extensões maliciosas do navegador",
+      "Medição e ajuste de Wi-Fi no quarto usado como estudo",
+    ],
+    coletaBancada: [
+      "Notebook que trava na inicialização do sistema",
+      "Teclado com teclas sem resposta ou após derramamento de líquido",
+      "Falha intermitente de energia no conector de carga",
+    ],
+    servicosPrioritarios: [
+      "/servicos/upgrade-ssd-ram",
+      "/servicos/formatacao",
+      "/servicos/remocao-de-virus",
+      "/servicos/manutencao-de-notebook",
+      "/servicos/redes-e-wifi",
+    ],
+    faqLocal: [
+      { question: "Preciso do notebook para uma entrega esta semana. Dá para priorizar?", answer: "Informe o prazo na triagem. Priorizamos o que é possível dentro da agenda real do dia e dizemos com antecedência se o prazo não é viável." },
+      { question: "Mais memória ou SSD: o que resolve meu caso?", answer: "Medimos o uso real da máquina antes de indicar. Planilhas grandes e muitas abas pedem memória; lentidão para abrir sistema e programas pede SSD. Muitas vezes o ganho vem da combinação." },
+      { question: "Meus trabalhos ficam salvos na formatação?", answer: "Sim, quando o disco está legível. Fazemos backup, você confere os arquivos e só depois reinstalamos o sistema." },
+      { question: "O Wi-Fi cai no quarto do fundo durante aula online. Como resolvem?", answer: "Medimos o sinal no cômodo em uso, ajustamos faixa e canal do roteador e, se necessário, indicamos ponto de acesso adicional — mostrando a medição antes e depois." },
+      { question: "Quanto custa o atendimento no Seminário?", answer: "A partir de R$ 99,99 quando aplicável. O valor final depende do serviço e das peças, sempre aprovado por você antes." },
+    ],
+  },
 };
 
 
