@@ -2646,9 +2646,9 @@ docker run -d --name db --network minha-rede postgres
           <ul className="mb-0">
             <li><Link to="/servicos/manutencao-de-notebook" className="text-accent">Manutenção de notebook: limpeza interna e avaliação térmica</Link></li>
             <li><Link to="/servicos/manutencao-de-computador" className="text-accent">Manutenção de computador de mesa</Link></li>
-            <li><Link to="/problemas/computador-lento" className="text-accent">Quando a lentidão vem do calor: investigar o sintoma</Link></li>
+            <li><Link to="/diagnostico-tecnico" className="text-accent">Quando a lentidão vem do calor: como é o diagnóstico</Link></li>
             <li><Link to="/atendimento-domicilio" className="text-accent">Atendimento técnico no endereço</Link></li>
-            <li><Link to="/como-funciona" className="text-accent">Como funciona o atendimento, do diagnóstico à entrega</Link></li>
+            <li><Link to="/precos-e-politicas" className="text-accent">Preços e políticas: o que é combinado antes do serviço</Link></li>
           </ul>
         </div>
       </>
