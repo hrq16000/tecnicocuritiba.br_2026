@@ -151,8 +151,8 @@ export const HeroPremium = () => {
           </h1>
 
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-white/90 drop-shadow-[0_1px_8px_hsl(var(--hero-bg)/0.7)] md:text-lg">
-            Escolha o serviço que precisa, entenda como funciona o atendimento e envie as
-            informações pelo WhatsApp para iniciar a triagem.
+            Descreva o equipamento e o sintoma pelo WhatsApp: a triagem é feita pelo próprio técnico,
+            e você só aprova o serviço depois de saber o que será feito e quanto custa.
           </p>
 
           <div className="mt-5 flex flex-col gap-3 sm:flex-row">
@@ -163,9 +163,10 @@ export const HeroPremium = () => {
               onClick={trackHero}
               data-cta-location="hero_primary"
               data-wa-source="whatsapp_cta"
-              className="inline-flex min-h-14 items-center justify-center gap-2 rounded-lg bg-[hsl(var(--accent))] px-7 text-base font-bold text-accent-foreground shadow-[0_14px_34px_-10px_hsl(var(--accent)/0.6)] transition-transform hover:scale-[1.02] focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[hsl(var(--hero-bg))]"
+              className="inline-flex min-h-14 flex-col items-center justify-center rounded-lg bg-[hsl(var(--accent))] px-7 text-base font-bold text-accent-foreground shadow-[0_14px_34px_-10px_hsl(var(--accent)/0.6)] transition-transform hover:scale-[1.02] focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[hsl(var(--hero-bg))]"
             >
-              Iniciar atendimento
+              Descrever meu problema agora
+              <span className="text-[11px] font-semibold opacity-80">Leva menos de 1 minuto</span>
             </a>
             <a
               href="/servicos"
@@ -176,8 +177,10 @@ export const HeroPremium = () => {
           </div>
 
           <p className="mt-4 text-sm text-white/80">
-            Atendimento em Curitiba e região • Diagnóstico a partir de {siteConfig.minPriceLabel} • Sem promessa falsa
+            Curitiba e região • Diagnóstico a partir de {siteConfig.minPriceLabel} • Você aprova o
+            valor antes de qualquer reparo
           </p>
+
 
           <nav className="mt-6" aria-label="Serviços de informática">
             <ul className="flex flex-wrap gap-2">
