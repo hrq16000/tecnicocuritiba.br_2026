@@ -158,6 +158,7 @@ import { Route as BairrosCampoLargoRoseiraSjpRouteImport } from './routes/bairro
 import { Route as BairrosCampoPequenoRouteImport } from './routes/bairros.campo-pequeno'
 import { Route as BairrosCampoTenenteAtRouteImport } from './routes/bairros.campo-tenente-at'
 import { Route as BairrosCapaoDaImbuiaRouteImport } from './routes/bairros.capao-da-imbuia'
+import { Route as BairrosCapaoRasoRouteImport } from './routes/bairros.capao-raso'
 import { Route as BairrosCapelaVelhaRouteImport } from './routes/bairros.capela-velha'
 import { Route as BairrosCentroRouteImport } from './routes/bairros.centro'
 import { Route as BairrosCentroAlmiranteTamandareRouteImport } from './routes/bairros.centro-almirante-tamandare'
@@ -1265,6 +1266,11 @@ const BairrosCampoTenenteAtRoute = BairrosCampoTenenteAtRouteImport.update({
 const BairrosCapaoDaImbuiaRoute = BairrosCapaoDaImbuiaRouteImport.update({
   id: '/bairros/capao-da-imbuia',
   path: '/bairros/capao-da-imbuia',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BairrosCapaoRasoRoute = BairrosCapaoRasoRouteImport.update({
+  id: '/bairros/capao-raso',
+  path: '/bairros/capao-raso',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BairrosCapelaVelhaRoute = BairrosCapelaVelhaRouteImport.update({
@@ -3239,6 +3245,7 @@ export interface FileRoutesByFullPath {
   '/bairros/campo-pequeno': typeof BairrosCampoPequenoRoute
   '/bairros/campo-tenente-at': typeof BairrosCampoTenenteAtRoute
   '/bairros/capao-da-imbuia': typeof BairrosCapaoDaImbuiaRoute
+  '/bairros/capao-raso': typeof BairrosCapaoRasoRoute
   '/bairros/capela-velha': typeof BairrosCapelaVelhaRoute
   '/bairros/centro': typeof BairrosCentroRoute
   '/bairros/centro-almirante-tamandare': typeof BairrosCentroAlmiranteTamandareRoute
@@ -3722,6 +3729,7 @@ export interface FileRoutesByTo {
   '/bairros/campo-pequeno': typeof BairrosCampoPequenoRoute
   '/bairros/campo-tenente-at': typeof BairrosCampoTenenteAtRoute
   '/bairros/capao-da-imbuia': typeof BairrosCapaoDaImbuiaRoute
+  '/bairros/capao-raso': typeof BairrosCapaoRasoRoute
   '/bairros/capela-velha': typeof BairrosCapelaVelhaRoute
   '/bairros/centro': typeof BairrosCentroRoute
   '/bairros/centro-almirante-tamandare': typeof BairrosCentroAlmiranteTamandareRoute
@@ -4206,6 +4214,7 @@ export interface FileRoutesById {
   '/bairros/campo-pequeno': typeof BairrosCampoPequenoRoute
   '/bairros/campo-tenente-at': typeof BairrosCampoTenenteAtRoute
   '/bairros/capao-da-imbuia': typeof BairrosCapaoDaImbuiaRoute
+  '/bairros/capao-raso': typeof BairrosCapaoRasoRoute
   '/bairros/capela-velha': typeof BairrosCapelaVelhaRoute
   '/bairros/centro': typeof BairrosCentroRoute
   '/bairros/centro-almirante-tamandare': typeof BairrosCentroAlmiranteTamandareRoute
@@ -4691,6 +4700,7 @@ export interface FileRouteTypes {
     | '/bairros/campo-pequeno'
     | '/bairros/campo-tenente-at'
     | '/bairros/capao-da-imbuia'
+    | '/bairros/capao-raso'
     | '/bairros/capela-velha'
     | '/bairros/centro'
     | '/bairros/centro-almirante-tamandare'
@@ -5174,6 +5184,7 @@ export interface FileRouteTypes {
     | '/bairros/campo-pequeno'
     | '/bairros/campo-tenente-at'
     | '/bairros/capao-da-imbuia'
+    | '/bairros/capao-raso'
     | '/bairros/capela-velha'
     | '/bairros/centro'
     | '/bairros/centro-almirante-tamandare'
@@ -5657,6 +5668,7 @@ export interface FileRouteTypes {
     | '/bairros/campo-pequeno'
     | '/bairros/campo-tenente-at'
     | '/bairros/capao-da-imbuia'
+    | '/bairros/capao-raso'
     | '/bairros/capela-velha'
     | '/bairros/centro'
     | '/bairros/centro-almirante-tamandare'
@@ -6141,6 +6153,7 @@ export interface RootRouteChildren {
   BairrosCampoPequenoRoute: typeof BairrosCampoPequenoRoute
   BairrosCampoTenenteAtRoute: typeof BairrosCampoTenenteAtRoute
   BairrosCapaoDaImbuiaRoute: typeof BairrosCapaoDaImbuiaRoute
+  BairrosCapaoRasoRoute: typeof BairrosCapaoRasoRoute
   BairrosCapelaVelhaRoute: typeof BairrosCapelaVelhaRoute
   BairrosCentroRoute: typeof BairrosCentroRoute
   BairrosCentroAlmiranteTamandareRoute: typeof BairrosCentroAlmiranteTamandareRoute
@@ -7520,6 +7533,13 @@ declare module '@tanstack/react-router' {
       path: '/bairros/capao-da-imbuia'
       fullPath: '/bairros/capao-da-imbuia'
       preLoaderRoute: typeof BairrosCapaoDaImbuiaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/bairros/capao-raso': {
+      id: '/bairros/capao-raso'
+      path: '/bairros/capao-raso'
+      fullPath: '/bairros/capao-raso'
+      preLoaderRoute: typeof BairrosCapaoRasoRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/bairros/capela-velha': {
@@ -10003,6 +10023,7 @@ const rootRouteChildren: RootRouteChildren = {
   BairrosCampoPequenoRoute: BairrosCampoPequenoRoute,
   BairrosCampoTenenteAtRoute: BairrosCampoTenenteAtRoute,
   BairrosCapaoDaImbuiaRoute: BairrosCapaoDaImbuiaRoute,
+  BairrosCapaoRasoRoute: BairrosCapaoRasoRoute,
   BairrosCapelaVelhaRoute: BairrosCapelaVelhaRoute,
   BairrosCentroRoute: BairrosCentroRoute,
   BairrosCentroAlmiranteTamandareRoute: BairrosCentroAlmiranteTamandareRoute,
