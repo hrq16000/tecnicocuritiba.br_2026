@@ -550,6 +550,26 @@ const BASE_ROUTES = [
     "description": "Técnico de informática no Rebouças, Curitiba: suporte a escritórios, manutenção de computador, formatação e rede. A partir de R$ 99,99. Atendimento via WhatsApp."
   },
   {
+    "path": "/bairros/hauer",
+    "title": "Técnico de Informática no Hauer (Curitiba) | Notebook e PC",
+    "description": "Técnico de informática no Hauer, Curitiba: conserto de notebook, formatação com backup, remoção de vírus e rede Wi-Fi. A partir de R$ 99,99. Atendimento via WhatsApp."
+  },
+  {
+    "path": "/bairros/pinheirinho",
+    "title": "Técnico de Informática no Pinheirinho (Curitiba) | PC e Notebook",
+    "description": "Técnico de informática no Pinheirinho, Curitiba: manutenção de computador, conserto de notebook, formatação e Wi-Fi. A partir de R$ 99,99. Atendimento via WhatsApp."
+  },
+  {
+    "path": "/bairros/bacacheri",
+    "title": "Técnico de Informática no Bacacheri (Curitiba) | Notebook e PC",
+    "description": "Técnico de informática no Bacacheri, Curitiba: conserto de notebook, manutenção de computador, formatação e rede Wi-Fi. A partir de R$ 99,99. Atendimento via WhatsApp."
+  },
+  {
+    "path": "/bairros/capao-raso",
+    "title": "Técnico de Informática no Capão Raso (Curitiba) | PC e Notebook",
+    "description": "Técnico de informática no Capão Raso, Curitiba: conserto de notebook, formatação com backup, remoção de vírus e upgrade de SSD. A partir de R$ 99,99. Via WhatsApp."
+  },
+  {
     "path": "/bairros/boqueirao",
     "title": "Técnico de Informática no Boqueirão (Curitiba) | PC e Notebook",
     "description": "Técnico de informática no Boqueirão, Curitiba: conserto de PC e notebook, formatação com backup, upgrade de SSD e Wi-Fi. A partir de R$ 99,99. Atendimento via WhatsApp."
