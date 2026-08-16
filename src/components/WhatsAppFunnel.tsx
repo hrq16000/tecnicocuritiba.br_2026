@@ -21,6 +21,8 @@ import {
   trackFunnelBusinessProfile,
   setFunnelBranchContext,
   trackWaClick,
+  trackCallClick,
+
   trackAgendamentoDeepLinkClick,
   trackTriageAutoOpen,
   trackTriagePreset,
