@@ -530,6 +530,26 @@ const BASE_ROUTES = [
     "description": "Técnico de informática no Cajuru, Curitiba: conserto de notebook e PC, formatação com backup, remoção de vírus e Wi-Fi. A partir de R$ 99,99. Atendimento via WhatsApp."
   },
   {
+    "path": "/bairros/xaxim",
+    "title": "Técnico de Informática no Xaxim (Curitiba) | Notebook e PC",
+    "description": "Técnico de informática no Xaxim, Curitiba: conserto de notebook, formatação com backup, remoção de vírus e Wi-Fi em casa. A partir de R$ 99,99. Atendimento via WhatsApp."
+  },
+  {
+    "path": "/bairros/novo-mundo",
+    "title": "Técnico de Informática no Novo Mundo (Curitiba) | PC e Notebook",
+    "description": "Técnico de informática no Novo Mundo, Curitiba: manutenção de computador, conserto de notebook, upgrade de SSD e rede para comércio. A partir de R$ 99,99. Via WhatsApp."
+  },
+  {
+    "path": "/bairros/uberaba",
+    "title": "Técnico de Informática no Uberaba (Curitiba) | Notebook e PC",
+    "description": "Técnico de informática no Uberaba, Curitiba: conserto de notebook, formatação, remoção de vírus e Wi-Fi para home office. A partir de R$ 99,99. Atendimento via WhatsApp."
+  },
+  {
+    "path": "/bairros/reboucas",
+    "title": "Técnico de Informática no Rebouças (Curitiba) | Empresas e PC",
+    "description": "Técnico de informática no Rebouças, Curitiba: suporte a escritórios, manutenção de computador, formatação e rede. A partir de R$ 99,99. Atendimento via WhatsApp."
+  },
+  {
     "path": "/bairros/boqueirao",
     "title": "Técnico de Informática no Boqueirão (Curitiba) | PC e Notebook",
     "description": "Técnico de informática no Boqueirão, Curitiba: conserto de PC e notebook, formatação com backup, upgrade de SSD e Wi-Fi. A partir de R$ 99,99. Atendimento via WhatsApp."
