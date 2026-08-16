@@ -75,12 +75,10 @@ const FIRST_WAVE_APPROVED_AT = "2026-08-06";
 // Rodada 3O — onda educacional empresarial: dois conteúdos já existentes no
 // acervo (nenhuma rota nova) promovidos após revisão técnica, capa própria e
 // interlinking de entrada. Limite total de artigos indexáveis: 7.
+// Rodada de curadoria (2026-08-16): cinco guias voltaram para revisão editorial
+// para compor a fila-piloto de 8 conteúdos in_review. Permanecem indexáveis
+// apenas os dois conteúdos empresariais da onda 3O.
 const FIRST_WAVE_SLUGS = [
-  "quando-trocar-hd-por-ssd",
-  "como-saber-se-pc-tem-virus-malware",
-  "backup-como-proteger-seus-arquivos",
-  "como-melhorar-sinal-wifi-em-casa",
-  "notebook-superaquecendo-o-que-fazer",
   "organizacao-de-ti-para-pequenos-escritorios",
   "como-escolher-uma-workstation",
 ] as const;
@@ -131,6 +129,13 @@ export const EDITORIAL_PILOT_SLUGS = [
   // de sintoma /problemas/notebook-nao-liga e /problemas/computador-lento.
   "notebook-nao-liga-o-que-fazer",
   "computador-lento-causas-solucoes",
+  // Curadoria 2026-08-16: despromovidos dos indexados para fechar a fila
+  // piloto em exatamente 8 conteúdos in_review (noindex, fora do sitemap).
+  "quando-trocar-hd-por-ssd",
+  "como-saber-se-pc-tem-virus-malware",
+  "backup-como-proteger-seus-arquivos",
+  "como-melhorar-sinal-wifi-em-casa",
+  "notebook-superaquecendo-o-que-fazer",
 ] as const;
 
 
