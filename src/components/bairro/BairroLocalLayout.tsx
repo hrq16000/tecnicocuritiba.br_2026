@@ -18,6 +18,7 @@ import { trackPageView, trackCTAClick } from "@/lib/analytics";
 import { MODALIDADES_ATENDIMENTO } from "@/lib/cidadesData";
 import { servicoByPath, type BairroLocalData } from "@/lib/bairrosData";
 import { SCHEMA_SLOTS, SLOT_PRIORITY, useJsonLdSlot } from "@/lib/jsonLdSlots";
+import { bairroPhotos, bairroIndexavel } from "@/lib/bairroPhotos";
 
 const CTA_CLASS =
   "inline-flex min-h-14 items-center justify-center gap-2 rounded-lg bg-accent px-7 text-base font-bold text-accent-foreground shadow-[0_14px_34px_-10px_hsl(var(--accent)/0.6)] transition-transform hover:scale-[1.02]";
@@ -74,6 +75,7 @@ export const BairroLocalLayout = ({ data }: { data: BairroLocalData }) => {
         title={data.metaTitle}
         description={data.metaDescription}
         path={path}
+        noindex={!bairroIndexavel(data.slug)}
         breadcrumbs={[
           { name: "Início", path: "/" },
           { name: "Técnico em Curitiba", path: CURITIBA_PATH },
