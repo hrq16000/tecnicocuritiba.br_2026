@@ -26,6 +26,8 @@ export interface RouteHeadInput {
   localBusiness?: boolean;
   ogImage?: string;
   ogType?: "website" | "article";
+  /** Bloqueia indexação (usado pelo gate de prova visual real). */
+  noindex?: boolean;
 }
 
 const jsonLd = (key: string, schema: unknown) => ({
@@ -43,6 +45,7 @@ export function seoHead({
   localBusiness = true,
   ogImage = siteConfig.defaultOgImage,
   ogType = "website",
+  noindex = false,
 }: RouteHeadInput) {
   const url = absoluteUrl(path);
 
@@ -82,6 +85,7 @@ export function seoHead({
       { name: "twitter:title", content: title },
       { name: "twitter:description", content: description },
       { name: "twitter:image", content: ogImage },
+      { name: "robots", content: noindex ? "noindex, follow" : "index, follow" },
     ],
     links: [{ rel: "canonical", href: url }],
     scripts,
