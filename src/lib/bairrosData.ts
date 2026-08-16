@@ -661,6 +661,214 @@ export const BAIRROS: Record<string, BairroLocalData> = {
       { question: "Qual o valor do atendimento no Boqueirão?", answer: "A partir de R$ 99,99 quando aplicável. O valor final depende do equipamento, do deslocamento, da complexidade e de eventuais peças, sempre aprovado antes." },
     ],
   },
+
+  // ── XAXIM ───────────────────────────────────────────────────
+  xaxim: {
+    slug: "xaxim",
+    nome: "Xaxim",
+    nomeLocativo: "no Xaxim",
+    cidade: "Curitiba",
+    areaName: "Xaxim, Curitiba",
+    metaTitle: "Técnico de Informática no Xaxim (Curitiba) | Notebook e PC",
+    metaDescription:
+      "Técnico de informática no Xaxim, Curitiba: conserto de notebook, formatação com backup, remoção de vírus e Wi-Fi em casa. A partir de R$ 99,99. Atendimento via WhatsApp.",
+    h1: "Técnico de Informática no Xaxim – Curitiba",
+    subtitulo:
+      "Atendimento a moradores e prestadores autônomos do Xaxim, com triagem pelo WhatsApp e diagnóstico antes de qualquer valor.",
+    whatsappMessage:
+      "Olá! Preciso de um técnico de informática no Xaxim, em Curitiba. Pode me orientar?",
+    introducaoLocal: [
+      "O Xaxim é um bairro de ocupação consolidada no sul de Curitiba, com predomínio de casas térreas, sobrados e pequenos condomínios ao longo da Francisco Derosso e das ruas que ligam ao Capão Raso e ao Pinheirinho. É uma região de famílias com filhos em idade escolar e de muitos profissionais autônomos que trabalham de casa — costureiras, corretores, motoristas de aplicativo, professores particulares.",
+      "Esse perfil define o tipo de chamado que recebemos: computador antigo que ficou lento demais para as tarefas da escola, notebook de trabalho com bateria e aquecimento comprometidos, e roteador entregue pela operadora que não cobre a casa inteira quando duas ou três pessoas usam a internet ao mesmo tempo. Tudo começa pela conversa no WhatsApp, com o sintoma descrito em detalhe.",
+      "A partir da descrição decidimos o caminho: alguns casos são resolvidos remotamente no mesmo dia, outros pedem visita ao seu endereço e uma parte exige bancada, quando o equipamento precisa de teste prolongado ou abertura. Nada é executado antes de você aprovar o valor.",
+    ],
+    operacaoLocal: [
+      "Triagem pelo WhatsApp identificando se é lentidão, falha de hardware ou rede",
+      "Diagnóstico técnico antes de indicar peça ou serviço",
+      "Prioridade para equipamentos usados em estudo e trabalho em casa",
+      "Valor sempre informado e aprovado antes da execução",
+    ],
+    atendimentoLocal: [
+      "Formatação com backup dos arquivos escolares e de trabalho",
+      "Troca de HD por SSD em computador que demora a iniciar",
+      "Cobertura de Wi-Fi em sobrado e casa com laje",
+      "Remoção de vírus e limpeza de extensões de navegador",
+    ],
+    coletaBancada: [
+      "Notebook que aquece muito e desliga sozinho",
+      "Tela trincada, dobradiça solta ou teclado que falha",
+      "Computador que não dá vídeo e precisa de teste peça a peça",
+    ],
+    servicosPrioritarios: [
+      "/servicos/manutencao-de-notebook",
+      "/servicos/formatacao",
+      "/servicos/upgrade-ssd-ram",
+      "/servicos/redes-e-wifi",
+      "/servicos/remocao-de-virus",
+    ],
+    faqLocal: [
+      { question: "O Wi-Fi cai quando todos usam ao mesmo tempo. Tem solução?", answer: "Geralmente sim. Medimos o sinal nos cômodos usados, verificamos interferência de canal e o limite do aparelho da operadora, e só então indicamos reposicionamento, ponto extra por cabo ou mesh." },
+      { question: "Vale a pena consertar um notebook antigo do Xaxim?", answer: "Depende do estado da placa, da tela e do custo da peça. Fazemos o diagnóstico e dizemos com clareza quando o reparo compensa e quando o dinheiro é melhor aplicado em outro equipamento." },
+      { question: "Vocês atendem à noite ou no fim de semana?", answer: "Trabalhamos por agendamento e ajustamos a janela conforme a agenda disponível. Informe na triagem o melhor horário e confirmamos o que é possível." },
+      { question: "Quanto custa o atendimento no Xaxim?", answer: "A partir de R$ 99,99 quando aplicável. O valor final depende do equipamento, da complexidade e de eventuais peças, sempre aprovado por você antes." },
+    ],
+  },
+
+  // ── NOVO MUNDO ──────────────────────────────────────────────
+  "novo-mundo": {
+    slug: "novo-mundo",
+    nome: "Novo Mundo",
+    nomeLocativo: "no Novo Mundo",
+    cidade: "Curitiba",
+    areaName: "Novo Mundo, Curitiba",
+    metaTitle: "Técnico de Informática no Novo Mundo (Curitiba) | PC e Notebook",
+    metaDescription:
+      "Técnico de informática no Novo Mundo, Curitiba: manutenção de computador, conserto de notebook, upgrade de SSD e rede para comércio. A partir de R$ 99,99. Via WhatsApp.",
+    h1: "Técnico de Informática no Novo Mundo – Curitiba",
+    subtitulo:
+      "Suporte a residências e ao comércio de rua do Novo Mundo, com triagem pelo WhatsApp e valor apresentado só depois do diagnóstico.",
+    whatsappMessage:
+      "Olá! Preciso de um técnico de informática no Novo Mundo, em Curitiba. Pode me orientar?",
+    introducaoLocal: [
+      "O Novo Mundo é um dos bairros mais populosos da cidade e concentra um comércio de rua vigoroso na Nossa Senhora da Luz e nas vias que cortam a região até o Portão e a Fazendinha. Lojas de material de construção, clínicas pequenas, escritórios de contabilidade e serviços de bairro convivem com quadras inteiramente residenciais.",
+      "Essa convivência aparece na nossa fila de atendimentos: metade dos chamados vem de casas — máquina que engasga, sistema desatualizado, arquivos sem backup — e metade de estabelecimentos que dependem de um computador para emitir documento fiscal, imprimir orçamento e manter o sistema do balcão de pé.",
+      "O ponto de partida é sempre o WhatsApp. Com o relato do sintoma, apontamos o que dá para tentar por conta, o que exige visita e o que precisa ir para bancada. O valor entra depois do diagnóstico, nunca antes.",
+    ],
+    operacaoLocal: [
+      "Triagem que separa uso doméstico de máquina crítica do comércio",
+      "Backup verificado antes de reinstalar sistema de trabalho",
+      "Diagnóstico técnico antes de qualquer orçamento",
+      "Execução apenas com aprovação prévia do valor",
+    ],
+    atendimentoLocal: [
+      "Manutenção de computador de mesa usado o dia inteiro",
+      "Upgrade de SSD e memória para reduzir tempo de espera",
+      "Configuração de impressora e compartilhamento de pastas",
+      "Ajuste de rede cabeada e Wi-Fi em loja e escritório",
+    ],
+    coletaBancada: [
+      "Fonte queimada ou placa com marca de oscilação de energia",
+      "Notebook com falha intermitente que só aparece após horas ligado",
+      "Disco com erro de leitura e necessidade de recuperação de dados",
+    ],
+    servicosPrioritarios: [
+      "/servicos/manutencao-de-computador",
+      "/servicos/upgrade-ssd-ram",
+      "/servicos/suporte-tecnico-empresarial",
+      "/servicos/recuperacao-de-dados",
+      "/servicos/formatacao",
+    ],
+    faqLocal: [
+      { question: "Atendem lojas e escritórios no Novo Mundo?", answer: "Sim, com suporte pontual ou acompanhamento recorrente: computador do balcão, impressora, rede e rotina de backup. Combinamos a janela de atendimento para reduzir o impacto no expediente." },
+      { question: "O computador demora muito para abrir o sistema. É vírus?", answer: "Nem sempre. Disco mecânico saturado, memória insuficiente e programas em segundo plano explicam boa parte dos casos. O diagnóstico distingue causa de software e de hardware antes de qualquer troca." },
+      { question: "Perdi arquivos importantes. Ainda dá para recuperar?", answer: "Em muitos casos sim, desde que o equipamento pare de ser usado imediatamente. Avaliamos o disco e informamos a chance real de recuperação antes de iniciar." },
+      { question: "Como é cobrado o serviço no Novo Mundo?", answer: "A partir de R$ 99,99 quando aplicável, com o valor final definido após o diagnóstico e aprovado por você antes da execução." },
+    ],
+  },
+
+  // ── UBERABA ─────────────────────────────────────────────────
+  uberaba: {
+    slug: "uberaba",
+    nome: "Uberaba",
+    nomeLocativo: "no Uberaba",
+    cidade: "Curitiba",
+    areaName: "Uberaba, Curitiba",
+    metaTitle: "Técnico de Informática no Uberaba (Curitiba) | Notebook e PC",
+    metaDescription:
+      "Técnico de informática no Uberaba, Curitiba: conserto de notebook, formatação, remoção de vírus e Wi-Fi para home office. A partir de R$ 99,99. Atendimento via WhatsApp.",
+    h1: "Técnico de Informática no Uberaba – Curitiba",
+    subtitulo:
+      "Atendimento a famílias e quem trabalha de casa no Uberaba, com triagem pelo WhatsApp e diagnóstico antes de informar preço.",
+    whatsappMessage:
+      "Olá! Preciso de um técnico de informática no Uberaba, em Curitiba. Pode me orientar?",
+    introducaoLocal: [
+      "O Uberaba é um bairro extenso do leste de Curitiba, com bolsões residenciais que vão das proximidades do Jardim das Américas até a divisa com o Cajuru e o Prado Velho. Nos últimos anos ganhou muitos condomínios verticais, e com eles um público que trabalha em casa em regime híbrido e depende de conexão estável e máquina rápida para reuniões diárias.",
+      "Os chamados mais frequentes refletem isso: microfone e câmera que somem em chamada, notebook que não segura a bateria depois de anos de uso, sistema travando durante o expediente e Wi-Fi instável em apartamento com muitas redes vizinhas concorrendo pelo mesmo canal.",
+      "Começamos pelo WhatsApp para entender rotina, urgência e o equipamento envolvido. Casos de configuração costumam sair por atendimento remoto no mesmo dia; falhas físicas seguem para visita ou coleta, com aprovação de valor antes de qualquer serviço.",
+    ],
+    operacaoLocal: [
+      "Triagem pelo WhatsApp com atenção a horário de reunião e expediente",
+      "Atendimento remoto quando o problema é de configuração",
+      "Diagnóstico técnico antes de indicar troca de componente",
+      "Valor apresentado e aprovado antes da execução",
+    ],
+    atendimentoLocal: [
+      "Ajuste de câmera, áudio e periféricos para home office",
+      "Formatação com backup e reinstalação de programas de trabalho",
+      "Estabilização de Wi-Fi em apartamento com muitas redes por perto",
+      "Limpeza de vírus e recuperação de contas e senhas do sistema",
+    ],
+    coletaBancada: [
+      "Bateria inchada ou notebook que só funciona na tomada",
+      "Teclado com teclas travadas por líquido derramado",
+      "Equipamento que reinicia sozinho e precisa de teste em bancada",
+    ],
+    servicosPrioritarios: [
+      "/servicos/manutencao-de-notebook",
+      "/servicos/redes-e-wifi",
+      "/servicos/formatacao",
+      "/servicos/remocao-de-virus",
+      "/servicos/manutencao-de-computador",
+    ],
+    faqLocal: [
+      { question: "Trabalho em casa e não posso ficar sem o notebook. Como fica?", answer: "Diga isso na triagem. Priorizamos o que pode ser resolvido remotamente ou no seu endereço e, quando a coleta é inevitável, alinhamos prazo antes de retirar o equipamento." },
+      { question: "A internet do apartamento oscila nas chamadas. É o provedor?", answer: "Pode ser, mas em prédios o mais comum é disputa de canal com dezenas de redes vizinhas. Medimos e ajustamos canal, banda e posição do roteador antes de sugerir trocar de plano ou aparelho." },
+      { question: "Vocês instalam programas e configuram e-mail corporativo?", answer: "Sim, incluindo pacote de escritório, VPN, impressoras e contas de e-mail, com atenção às licenças que você já possui." },
+      { question: "Qual o valor do serviço no Uberaba?", answer: "A partir de R$ 99,99 quando aplicável. O valor final é definido após o diagnóstico e depende do equipamento, da complexidade e de peças, sempre aprovado antes." },
+    ],
+  },
+
+  // ── REBOUÇAS ────────────────────────────────────────────────
+  reboucas: {
+    slug: "reboucas",
+    nome: "Rebouças",
+    nomeLocativo: "no Rebouças",
+    cidade: "Curitiba",
+    areaName: "Rebouças, Curitiba",
+    metaTitle: "Técnico de Informática no Rebouças (Curitiba) | Empresas e PC",
+    metaDescription:
+      "Técnico de informática no Rebouças, Curitiba: suporte a escritórios, manutenção de computador, formatação e rede. A partir de R$ 99,99. Atendimento via WhatsApp.",
+    h1: "Técnico de Informática no Rebouças – Curitiba",
+    subtitulo:
+      "Suporte técnico a escritórios, coworkings e moradores do Rebouças, com triagem pelo WhatsApp e valor só depois do diagnóstico.",
+    whatsappMessage:
+      "Olá! Preciso de um técnico de informática no Rebouças, em Curitiba. Pode me orientar?",
+    introducaoLocal: [
+      "O Rebouças é o bairro onde galpões antigos viraram escritórios, estúdios e coworkings, ao lado de prédios residenciais e do fluxo intenso da região da Estação. Essa vocação de trabalho aparece na demanda: equipes pequenas com cinco a vinte estações, empresas de serviço que rodam sistemas na nuvem e profissionais criativos com máquinas exigentes em edição e renderização.",
+      "Nesse contexto, a conversa técnica muda de foco. Não se trata só de consertar um equipamento, mas de manter a operação em pé: estação que não pode parar, backup que precisa existir de fato, rede que suporta videochamada e transferência de arquivos grandes simultaneamente.",
+      "A triagem começa pelo WhatsApp, com descrição do parque de máquinas e da urgência. A partir dela definimos atendimento remoto, visita ao escritório ou coleta para bancada, sempre com diagnóstico antes do valor e execução só após aprovação.",
+    ],
+    operacaoLocal: [
+      "Triagem pelo WhatsApp com levantamento das máquinas envolvidas",
+      "Atendimento planejado para reduzir parada de equipe",
+      "Diagnóstico antes de indicar upgrade ou substituição",
+      "Orçamento aprovado por escrito antes de executar",
+    ],
+    atendimentoLocal: [
+      "Suporte a estações de trabalho e periféricos de escritório",
+      "Upgrade de SSD e memória para edição e planilhas pesadas",
+      "Organização de rede, cabeamento lógico e Wi-Fi corporativo",
+      "Rotina de backup e checagem de restauração dos arquivos",
+    ],
+    coletaBancada: [
+      "Estação que desliga sob carga alta de processamento",
+      "Fonte ou placa-mãe com falha após pico de energia",
+      "Disco de projeto com erro e necessidade de recuperação",
+    ],
+    servicosPrioritarios: [
+      "/servicos/suporte-tecnico-empresarial",
+      "/servicos/manutencao-de-computador",
+      "/servicos/upgrade-ssd-ram",
+      "/servicos/recuperacao-de-dados",
+      "/servicos/redes-e-wifi",
+    ],
+    faqLocal: [
+      { question: "Vocês dão suporte a escritórios pequenos no Rebouças?", answer: "Sim. Atendemos equipes enxutas com chamados pontuais ou acompanhamento periódico, cobrindo estações, rede, impressoras e rotina de backup." },
+      { question: "Dá para melhorar uma máquina de edição sem trocar tudo?", answer: "Frequentemente sim. Avaliamos gargalo real — disco, memória, refrigeração ou processador — e indicamos o upgrade que traz ganho perceptível, evitando gasto desnecessário." },
+      { question: "Como funciona o backup para empresa?", answer: "Definimos o que precisa ser copiado, com que frequência e para onde, e testamos a restauração. Backup que nunca foi restaurado não é backup confiável." },
+      { question: "Quanto custa o atendimento no Rebouças?", answer: "A partir de R$ 99,99 quando aplicável. O valor final depende do número de equipamentos, da complexidade e de peças, sempre aprovado antes da execução." },
+    ],
+  },
 };
 
 
