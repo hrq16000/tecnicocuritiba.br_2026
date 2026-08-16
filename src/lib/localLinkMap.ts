@@ -185,6 +185,20 @@ export const SERVICOS_POR_BAIRRO: Record<string, LocalLink[]> = {
       "anchor": "redes e Wi-Fi para quem está no Cajuru"
     }
   ],
+  "/bairros/campo-comprido": [
+    {
+      "href": "/servicos/manutencao-de-computador",
+      "anchor": "manutenção de computador para quem está no Campo Comprido"
+    },
+    {
+      "href": "/servicos/formatacao",
+      "anchor": "formatação de computador para quem está no Campo Comprido"
+    },
+    {
+      "href": "/servicos/redes-e-wifi",
+      "anchor": "redes e Wi-Fi para quem está no Campo Comprido"
+    }
+  ],
   "/bairros/capao-raso": [
     {
       "href": "/servicos/manutencao-de-computador",
@@ -273,6 +287,20 @@ export const SERVICOS_POR_BAIRRO: Record<string, LocalLink[]> = {
       "anchor": "redes e Wi-Fi para quem está no Cristo Rei"
     }
   ],
+  "/bairros/fazendinha": [
+    {
+      "href": "/servicos/manutencao-de-computador",
+      "anchor": "manutenção de computador para quem está no Fazendinha"
+    },
+    {
+      "href": "/servicos/formatacao",
+      "anchor": "formatação de computador para quem está no Fazendinha"
+    },
+    {
+      "href": "/servicos/redes-e-wifi",
+      "anchor": "redes e Wi-Fi para quem está no Fazendinha"
+    }
+  ],
   "/bairros/hauer": [
     {
       "href": "/servicos/manutencao-de-computador",
@@ -285,6 +313,34 @@ export const SERVICOS_POR_BAIRRO: Record<string, LocalLink[]> = {
     {
       "href": "/servicos/redes-e-wifi",
       "anchor": "redes e Wi-Fi para quem está no Hauer"
+    }
+  ],
+  "/bairros/juveve": [
+    {
+      "href": "/servicos/manutencao-de-computador",
+      "anchor": "manutenção de computador para quem está no Juveve"
+    },
+    {
+      "href": "/servicos/formatacao",
+      "anchor": "formatação de computador para quem está no Juveve"
+    },
+    {
+      "href": "/servicos/redes-e-wifi",
+      "anchor": "redes e Wi-Fi para quem está no Juveve"
+    }
+  ],
+  "/bairros/merces": [
+    {
+      "href": "/servicos/manutencao-de-computador",
+      "anchor": "manutenção de computador para quem está no Merces"
+    },
+    {
+      "href": "/servicos/formatacao",
+      "anchor": "formatação de computador para quem está no Merces"
+    },
+    {
+      "href": "/servicos/redes-e-wifi",
+      "anchor": "redes e Wi-Fi para quem está no Merces"
     }
   ],
   "/bairros/novo-mundo": [
@@ -387,6 +443,34 @@ export const SERVICOS_POR_BAIRRO: Record<string, LocalLink[]> = {
     {
       "href": "/servicos/redes-e-wifi",
       "anchor": "redes e Wi-Fi para quem está em Santa Felicidade"
+    }
+  ],
+  "/bairros/seminario": [
+    {
+      "href": "/servicos/manutencao-de-computador",
+      "anchor": "manutenção de computador para quem está no Seminario"
+    },
+    {
+      "href": "/servicos/formatacao",
+      "anchor": "formatação de computador para quem está no Seminario"
+    },
+    {
+      "href": "/servicos/redes-e-wifi",
+      "anchor": "redes e Wi-Fi para quem está no Seminario"
+    }
+  ],
+  "/bairros/sitio-cercado": [
+    {
+      "href": "/servicos/manutencao-de-computador",
+      "anchor": "manutenção de computador para quem está no Sitio Cercado"
+    },
+    {
+      "href": "/servicos/formatacao",
+      "anchor": "formatação de computador para quem está no Sitio Cercado"
+    },
+    {
+      "href": "/servicos/redes-e-wifi",
+      "anchor": "redes e Wi-Fi para quem está no Sitio Cercado"
     }
   ],
   "/bairros/uberaba": [

@@ -100,6 +100,12 @@ export const BAIRROS = [
   "/bairros/pinheirinho",
   "/bairros/bacacheri",
   "/bairros/capao-raso",
+  "/bairros/sitio-cercado",
+  "/bairros/fazendinha",
+  "/bairros/campo-comprido",
+  "/bairros/merces",
+  "/bairros/juveve",
+  "/bairros/seminario",
 ].map((path) => ({ path, changefreq: "monthly", priority: "0.65" }));
 
 /**

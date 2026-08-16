@@ -928,6 +928,168 @@ const BASE_ROUTES = [
     ]
   },
   {
+    "path": "/bairros/sitio-cercado",
+    "title": "Técnico de Informática no Sítio Cercado (Curitiba) | PC e Notebook",
+    "description": "Técnico de informática no Sítio Cercado, Curitiba: formatação com backup, remoção de vírus, troca de SSD e conserto de notebook. A partir de R$ 99,99. Via WhatsApp.",
+    "faq": [
+      {
+        "question": "Vale a pena consertar um notebook antigo do Sítio Cercado ou comprar outro?",
+        "answer": "Depende do diagnóstico. Se a placa está saudável e o gargalo é disco mecânico, memória curta ou sistema comprometido, o reparo custa muito menos que um aparelho novo. Quando a placa exige reparo caro, dizemos isso com clareza e você decide."
+      },
+      {
+        "question": "Consigo atendimento fora do horário comercial?",
+        "answer": "Combinamos horário na triagem, incluindo fim de tarde. Não prometemos horário antes de confirmar a agenda do dia."
+      },
+      {
+        "question": "Meus arquivos e fotos se perdem na formatação?",
+        "answer": "Não, quando o disco está legível. Fazemos o backup antes, você confere o que foi salvo e só então reinstalamos o sistema."
+      },
+      {
+        "question": "O Wi-Fi não sobe para o segundo andar. Preciso de repetidor?",
+        "answer": "Nem sempre. Medimos o sinal em cada cômodo e testamos reposicionamento e troca de canal antes de indicar qualquer equipamento extra."
+      },
+      {
+        "question": "Atendem pequenos comércios do bairro?",
+        "answer": "Sim. Trabalhamos com computador de caixa, impressora fiscal e rede da loja, com horário combinado para não parar o movimento."
+      }
+    ]
+  },
+  {
+    "path": "/bairros/fazendinha",
+    "title": "Técnico de Informática na Fazendinha (Curitiba) | Notebook e PC",
+    "description": "Técnico de informática na Fazendinha, Curitiba: conserto de notebook, formatação, limpeza interna e configuração de Wi-Fi. A partir de R$ 99,99. Atendimento via WhatsApp.",
+    "faq": [
+      {
+        "question": "O computador da minha loja na Fazendinha trava no horário de pico. Dá para resolver no local?",
+        "answer": "Na maioria das vezes sim: limpeza, revisão térmica, troca de disco e ajuste do sistema são feitos no próprio balcão. Só levamos para bancada quando há suspeita de falha elétrica na placa."
+      },
+      {
+        "question": "Vocês configuram impressora compartilhada?",
+        "answer": "Sim. Instalamos e compartilhamos impressora na rede local, incluindo o caso comum de cada computador enxergar a impressora com nome diferente."
+      },
+      {
+        "question": "Tenho edícula nos fundos sem sinal. Repetidor resolve?",
+        "answer": "Depende da estrutura. Onde há parede dupla, repetidor entrega sinal fraco. Costuma ser mais estável um cabo curto até um ponto de acesso no fundo — avaliamos antes de indicar."
+      },
+      {
+        "question": "Qual o valor do atendimento na Fazendinha?",
+        "answer": "A partir de R$ 99,99 quando aplicável. O valor final depende do serviço e das peças, apresentado antes da execução."
+      },
+      {
+        "question": "Preciso levar o equipamento em algum lugar?",
+        "answer": "Não. Não temos balcão de atendimento ao público: quando o caso exige bancada, combinamos coleta e devolução."
+      }
+    ]
+  },
+  {
+    "path": "/bairros/campo-comprido",
+    "title": "Técnico de Informática no Campo Comprido (Curitiba) | PC e Notebook",
+    "description": "Técnico de informática no Campo Comprido, Curitiba: suporte a home office, formatação, upgrade de SSD e rede Wi-Fi em condomínio. A partir de R$ 99,99. Via WhatsApp.",
+    "faq": [
+      {
+        "question": "Minha internet cai só nas videochamadas. É problema do provedor?",
+        "answer": "Nem sempre. Em prédios do Campo Comprido a causa mais comum é disputa de canal no Wi-Fi. Testamos a rede em uso real, separamos as faixas e só então avaliamos se o problema é do link do provedor."
+      },
+      {
+        "question": "Vocês atendem dentro de condomínio?",
+        "answer": "Sim. Combinamos horário e autorização na portaria durante a triagem, para evitar espera no acesso."
+      },
+      {
+        "question": "Dá para configurar backup automático do trabalho?",
+        "answer": "Sim. Configuramos backup em nuvem e/ou disco externo com rotina automática e testamos a restauração de um arquivo para comprovar que está funcionando."
+      },
+      {
+        "question": "Meu notebook é da empresa. Vocês mexem?",
+        "answer": "Só no que você tem autorização para alterar. Quando a mudança depende do TI da empresa, avisamos antes de qualquer intervenção."
+      },
+      {
+        "question": "Quanto custa o atendimento no Campo Comprido?",
+        "answer": "A partir de R$ 99,99 quando aplicável, com valor final apresentado após o diagnóstico e aprovado por você."
+      }
+    ]
+  },
+  {
+    "path": "/bairros/merces",
+    "title": "Técnico de Informática nas Mercês (Curitiba) | Notebook e PC",
+    "description": "Técnico de informática nas Mercês, Curitiba: conserto de notebook, formatação com backup, recuperação de arquivos e Wi-Fi. A partir de R$ 99,99. Atendimento via WhatsApp.",
+    "faq": [
+      {
+        "question": "Consigo recuperar arquivos de um disco que parou de abrir?",
+        "answer": "Em muitos casos sim, quando a falha é lógica ou o disco ainda é reconhecido. Avaliamos antes e informamos com honestidade a chance real de recuperação, sem cobrar promessa de resultado."
+      },
+      {
+        "question": "Atendem consultórios sem parar o atendimento?",
+        "answer": "Sim. Combinamos janela de horário fora da agenda de pacientes e priorizamos o que pode ser feito sem derrubar o sistema em uso."
+      },
+      {
+        "question": "Tenho três repetidores e o Wi-Fi continua ruim. Por quê?",
+        "answer": "Repetidores em série dividem a banda e aumentam a latência. Medimos o sinal e normalmente substituímos o arranjo por um ponto de acesso bem posicionado, com cabo quando possível."
+      },
+      {
+        "question": "Vocês configuram backup automático?",
+        "answer": "Sim, em nuvem e/ou disco externo, com rotina programada e teste de restauração para comprovar que os arquivos voltam."
+      },
+      {
+        "question": "Quanto custa o atendimento nas Mercês?",
+        "answer": "A partir de R$ 99,99 quando aplicável. O valor final sai após o diagnóstico e só é executado com sua aprovação."
+      }
+    ]
+  },
+  {
+    "path": "/bairros/juveve",
+    "title": "Técnico de Informática no Juvevê (Curitiba) | Notebook e PC",
+    "description": "Técnico de informática no Juvevê, Curitiba: suporte a home office, formatação, upgrade de SSD, Wi-Fi e conserto de notebook. A partir de R$ 99,99. Via WhatsApp.",
+    "faq": [
+      {
+        "question": "Meu notebook ficou lento depois de anos de uso. SSD resolve?",
+        "answer": "Ajuda muito, mas raramente sozinho. Avaliamos disco, memória e refrigeração juntos: trocar só o disco em uma máquina que superaquece devolve pouco ganho percebido."
+      },
+      {
+        "question": "Quanto tempo leva um upgrade de SSD?",
+        "answer": "Quando é feito no local e a máquina permite acesso simples, costuma ser resolvido na mesma visita, incluindo migração dos seus dados. Casos com carcaça complexa vão para bancada."
+      },
+      {
+        "question": "Vocês atendem em apartamento com portaria?",
+        "answer": "Sim. Só pedimos que a autorização de acesso seja combinada antes, no horário definido na triagem."
+      },
+      {
+        "question": "Dá para melhorar o Wi-Fi no escritório do apartamento?",
+        "answer": "Sim. Medimos a cobertura no cômodo de trabalho, ajustamos faixa e canal e, se ainda faltar sinal, indicamos a solução mais estável para a planta do imóvel."
+      },
+      {
+        "question": "Qual o valor do atendimento no Juvevê?",
+        "answer": "A partir de R$ 99,99 quando aplicável, com valor final informado após o diagnóstico e aprovado antes da execução."
+      }
+    ]
+  },
+  {
+    "path": "/bairros/seminario",
+    "title": "Técnico de Informática no Seminário (Curitiba) | Notebook e PC",
+    "description": "Técnico de informática no Seminário, Curitiba: formatação, remoção de vírus, upgrade de SSD, Wi-Fi e conserto de notebook. A partir de R$ 99,99. Via WhatsApp.",
+    "faq": [
+      {
+        "question": "Preciso do notebook para uma entrega esta semana. Dá para priorizar?",
+        "answer": "Informe o prazo na triagem. Priorizamos o que é possível dentro da agenda real do dia e dizemos com antecedência se o prazo não é viável."
+      },
+      {
+        "question": "Mais memória ou SSD: o que resolve meu caso?",
+        "answer": "Medimos o uso real da máquina antes de indicar. Planilhas grandes e muitas abas pedem memória; lentidão para abrir sistema e programas pede SSD. Muitas vezes o ganho vem da combinação."
+      },
+      {
+        "question": "Meus trabalhos ficam salvos na formatação?",
+        "answer": "Sim, quando o disco está legível. Fazemos backup, você confere os arquivos e só depois reinstalamos o sistema."
+      },
+      {
+        "question": "O Wi-Fi cai no quarto do fundo durante aula online. Como resolvem?",
+        "answer": "Medimos o sinal no cômodo em uso, ajustamos faixa e canal do roteador e, se necessário, indicamos ponto de acesso adicional — mostrando a medição antes e depois."
+      },
+      {
+        "question": "Quanto custa o atendimento no Seminário?",
+        "answer": "A partir de R$ 99,99 quando aplicável. O valor final depende do serviço e das peças, sempre aprovado por você antes."
+      }
+    ]
+  },
+  {
     "path": "/bairros/boqueirao",
     "title": "Técnico de Informática no Boqueirão (Curitiba) | PC e Notebook",
     "description": "Técnico de informática no Boqueirão, Curitiba: conserto de PC e notebook, formatação com backup, upgrade de SSD e Wi-Fi. A partir de R$ 99,99. Atendimento via WhatsApp.",

@@ -45,6 +45,12 @@ export const BAIRROS_SEM_FOTO_APROVADOS = [
   "pinheirinho",
   "bacacheri",
   "capao-raso",
+  "sitio-cercado",
+  "fazendinha",
+  "campo-comprido",
+  "merces",
+  "juveve",
+  "seminario",
 ] as const;
 
 export const bairroPhotos = (slug: string): BairroPhoto[] =>
