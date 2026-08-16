@@ -33,6 +33,8 @@ export const BairroLocalLayout = ({ data }: { data: BairroLocalData }) => {
     trackPageView(path, data.h1);
   }, [path, data.h1]);
 
+  const fotos = bairroPhotos(data.slug);
+
   const handleCta = (location: string) => trackCTAClick("whatsapp", location);
 
   const servicos = data.servicosPrioritarios
@@ -117,7 +119,7 @@ export const BairroLocalLayout = ({ data }: { data: BairroLocalData }) => {
                   className={CTA_CLASS}
                 >
                   <MessageCircle className="h-5 w-5" />
-                  Iniciar atendimento
+                  Técnico disponível {data.nomeLocativo}
                 </a>
               </div>
             </div>
@@ -150,6 +152,31 @@ export const BairroLocalLayout = ({ data }: { data: BairroLocalData }) => {
             </aside>
           </div>
         </section>
+
+        {/* Prova visual real do bairro (fotos da operação, nunca geradas por IA) */}
+        {fotos.length > 0 && (
+          <section className="border-y border-border/60 bg-secondary/40 py-12 md:py-16">
+            <div className="container mx-auto">
+              <h2 className="text-2xl font-heading font-bold text-foreground md:text-3xl">
+                Atendimentos reais {data.nomeLocativo}
+              </h2>
+              <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {fotos.map((foto) => (
+                  <figure key={foto.src} className="overflow-hidden rounded-xl border border-border bg-card">
+                    <img
+                      src={foto.src}
+                      alt={foto.alt}
+                      loading="lazy"
+                      decoding="async"
+                      className="h-56 w-full object-cover"
+                    />
+                    <figcaption className="p-3 text-xs text-muted-foreground">{foto.alt}</figcaption>
+                  </figure>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* Serviços prioritários no bairro */}
         <section className="border-y border-border/60 bg-secondary/40 py-12 md:py-16">
@@ -312,7 +339,7 @@ export const BairroLocalLayout = ({ data }: { data: BairroLocalData }) => {
                   className={CTA_CLASS}
                 >
                   <MessageCircle className="h-5 w-5" />
-                  Iniciar atendimento
+                  Solicitar atendimento {data.nomeLocativo}
                 </a>
               </div>
             </div>
