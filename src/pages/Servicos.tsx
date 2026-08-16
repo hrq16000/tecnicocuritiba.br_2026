@@ -214,26 +214,45 @@ const Servicos = () => {
             {CARDS.map(({ slug, icon: Icon, blurb }) => {
               const data = SERVICOS_CORE[slug];
               return (
-                <Link
+                <div
                   key={slug}
-                  to={`/servicos/${slug}`}
                   className="group flex flex-col rounded-xl border border-border bg-card p-6 transition-colors hover:border-[hsl(var(--accent))]"
                 >
                   <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-lg bg-[hsl(var(--accent))]/10 text-[hsl(var(--accent))]">
                     <Icon className="h-6 w-6" />
                   </div>
                   <h3 className="font-heading text-lg font-bold text-foreground group-hover:text-[hsl(var(--accent))]">
-                    {data.serviceName}
+                    <Link to={`/servicos/${slug}`} className="focus-visible:underline">
+                      {data.serviceName}
+                    </Link>
                   </h3>
                   <p className="mt-2 flex-1 text-sm text-muted-foreground">{blurb}</p>
-                  <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[hsl(var(--accent))]">
-                    Ver serviço
-                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-                  </span>
-                </Link>
+                  <div className="mt-4 flex flex-wrap items-center gap-3">
+                    <a
+                      href={whatsappLink(
+                        `Olá! Preciso de ${data.serviceName.toLowerCase()} em Curitiba. Pode me ajudar?`,
+                      )}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => trackCTAClick("whatsapp", `servicos_card_${slug}`)}
+                      data-cta-location={`servicos_card_${slug}`}
+                      className="inline-flex min-h-11 items-center justify-center rounded-lg bg-[hsl(var(--accent))] px-4 text-sm font-bold text-accent-foreground transition-transform hover:scale-[1.02]"
+                    >
+                      Falar sobre este serviço
+                    </a>
+                    <Link
+                      to={`/servicos/${slug}`}
+                      className="inline-flex items-center gap-1.5 text-sm font-semibold text-[hsl(var(--accent))] hover:underline"
+                    >
+                      Ver detalhes
+                      <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                    </Link>
+                  </div>
+                </div>
               );
             })}
           </div>
+
         </div>
       </section>
 
