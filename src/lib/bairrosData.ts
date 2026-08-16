@@ -869,6 +869,222 @@ export const BAIRROS: Record<string, BairroLocalData> = {
       { question: "Quanto custa o atendimento no Rebouças?", answer: "A partir de R$ 99,99 quando aplicável. O valor final depende do número de equipamentos, da complexidade e de peças, sempre aprovado antes da execução." },
     ],
   },
+
+  // ── HAUER ───────────────────────────────────────────────────
+  hauer: {
+    slug: "hauer",
+    nome: "Hauer",
+    nomeLocativo: "no Hauer",
+    cidade: "Curitiba",
+    areaName: "Hauer, Curitiba",
+    metaTitle: "Técnico de Informática no Hauer (Curitiba) | Notebook e PC",
+    metaDescription:
+      "Técnico de informática no Hauer, Curitiba: conserto de notebook, formatação com backup, remoção de vírus e rede Wi-Fi. A partir de R$ 99,99. Atendimento via WhatsApp.",
+    h1: "Técnico de Informática no Hauer – Curitiba",
+    subtitulo:
+      "Atendimento para moradores e comércios do Hauer, com triagem pelo WhatsApp e valor informado só depois do diagnóstico.",
+    whatsappMessage:
+      "Olá! Preciso de um técnico de informática no Hauer, em Curitiba. Pode me orientar?",
+    introducaoLocal: [
+      "O Hauer é um bairro de ocupação consolidada no sul de Curitiba, com ruas residenciais tranquilas e um eixo comercial forte ao longo da Avenida Marechal Floriano Peixoto. Essa combinação cria dois perfis bem distintos de chamado: a família que usa um único notebook para estudo, trabalho remoto e streaming, e o comércio de rua que depende de um computador de frente de caixa que não pode ficar parado no meio do expediente.",
+      "Boa parte dos casos que chegam do Hauer envolve máquinas que já passaram dos cinco anos de uso e nunca receberam limpeza interna nem troca de pasta térmica. O sintoma típico é o mesmo: o computador liga normalmente, funciona nos primeiros minutos e vai perdendo velocidade conforme esquenta, até travar ou reiniciar sozinho. Em muitos desses casos o equipamento não precisa ser substituído — precisa de manutenção térmica, disco SSD e sistema reinstalado corretamente.",
+      "Também recebemos bastante chamado de rede. Sobrados e casas com laje no Hauer costumam sofrer com o roteador instalado num canto da sala, deixando quartos dos fundos e área de serviço sem sinal utilizável. Antes de vender repetidor, medimos onde o sinal cai de fato e avaliamos se reposicionar o equipamento já resolve.",
+      "O contato começa sempre pelo WhatsApp: você descreve o sintoma, recebe as primeiras orientações e, quando faz sentido, combinamos a avaliação. A modalidade — no local, remoto ou coleta para bancada — é definida pelo tipo de problema, nunca prometida antes de entender o caso.",
+    ],
+    operacaoLocal: [
+      "Triagem pelo WhatsApp com descrição do sintoma e do uso da máquina",
+      "Diagnóstico técnico antes de informar qualquer valor",
+      "Execução somente depois da sua aprovação por escrito",
+      "Horário combinado para não parar o comércio no pico de movimento",
+    ],
+    atendimentoLocal: [
+      "Formatação com backup e reinstalação do sistema",
+      "Limpeza interna, troca de pasta térmica e revisão de refrigeração",
+      "Instalação de SSD e ampliação de memória",
+      "Configuração de roteador e cobertura de Wi-Fi em casa ou na loja",
+    ],
+    coletaBancada: [
+      "Notebook que não liga ou desliga sozinho durante o uso",
+      "Troca de tela, dobradiça ou conector de energia",
+      "Suspeita de falha na placa-mãe após oscilação de energia",
+    ],
+    servicosPrioritarios: [
+      "/servicos/manutencao-de-notebook",
+      "/servicos/formatacao",
+      "/servicos/remocao-de-virus",
+      "/servicos/upgrade-ssd-ram",
+      "/servicos/redes-e-wifi",
+    ],
+    faqLocal: [
+      { question: "Vocês atendem no Hauer no mesmo dia?", answer: "Depende da agenda e do tipo de problema. Na triagem pelo WhatsApp informamos o primeiro horário realmente disponível, sem prometer prazo que não conseguimos cumprir." },
+      { question: "Meu computador esquenta e trava. Precisa trocar?", answer: "Na maioria dos casos, não. Superaquecimento costuma vir de dissipador entupido e pasta térmica ressecada. Fazemos a limpeza, medimos temperatura sob carga e só indicamos peça se o problema persistir." },
+      { question: "Atendem comércio na Marechal Floriano?", answer: "Sim. Trabalhamos com estações de frente de caixa, impressora e rede da loja, combinando horário fora do pico para reduzir o impacto no atendimento ao cliente." },
+      { question: "O Wi-Fi não chega nos quartos dos fundos. Tem solução?", answer: "Sim. Medimos o sinal ponto a ponto, avaliamos reposicionamento do roteador e, se realmente for necessário, indicamos repetidor ou ponto de acesso adicional com cabeamento." },
+      { question: "Quanto custa o atendimento no Hauer?", answer: "A partir de R$ 99,99 quando aplicável. O valor final depende do serviço e de eventuais peças, sempre apresentado e aprovado antes da execução." },
+    ],
+  },
+
+  // ── PINHEIRINHO ─────────────────────────────────────────────
+  pinheirinho: {
+    slug: "pinheirinho",
+    nome: "Pinheirinho",
+    nomeLocativo: "no Pinheirinho",
+    cidade: "Curitiba",
+    areaName: "Pinheirinho, Curitiba",
+    metaTitle: "Técnico de Informática no Pinheirinho (Curitiba) | PC e Notebook",
+    metaDescription:
+      "Técnico de informática no Pinheirinho, Curitiba: manutenção de computador, conserto de notebook, formatação e Wi-Fi. A partir de R$ 99,99. Atendimento via WhatsApp.",
+    h1: "Técnico de Informática no Pinheirinho – Curitiba",
+    subtitulo:
+      "Suporte técnico para moradores, estudantes e pequenos negócios do Pinheirinho, com diagnóstico antes do valor.",
+    whatsappMessage:
+      "Olá! Preciso de um técnico de informática no Pinheirinho, em Curitiba. Pode me orientar?",
+    introducaoLocal: [
+      "O Pinheirinho é um dos bairros mais populosos do sul de Curitiba e concentra um fluxo enorme de pessoas em torno do terminal e do eixo da Winston Churchill. Essa densidade se traduz em uma demanda técnica bem específica: muita máquina compartilhada por família inteira, notebook usado por estudante durante o dia e por adulto em home office à noite, e computadores de pequenos negócios de rua que rodam sistema de vendas o expediente todo.",
+      "Máquina compartilhada é máquina que acumula problema. É comum chegar do Pinheirinho um notebook com dezenas de programas instalados por pessoas diferentes, extensões de navegador desconhecidas, antivírus duplicado e disco cheio de arquivos duplicados. Nesses casos o serviço correto não é apenas 'formatar': é fazer backup organizado, reinstalar o sistema limpo, devolver os arquivos separados por usuário e deixar o equipamento com rotina de atualização que o dono consiga manter sozinho.",
+      "Outro chamado recorrente no bairro é o de pop-up e propaganda invasiva no navegador, geralmente vindo de instalador baixado de site pirata. Tratamos como remoção de malware de verdade: identificamos o que está persistindo no sistema, removemos, revisamos navegadores e orientamos sobre a origem para o problema não voltar em duas semanas.",
+      "Tudo começa pelo WhatsApp. Você conta o que está acontecendo, recebe orientação inicial e definimos junto se o caso resolve remoto, se compensa visita ou se o equipamento precisa ir para bancada.",
+    ],
+    operacaoLocal: [
+      "Triagem pelo WhatsApp antes de agendar qualquer visita",
+      "Backup dos arquivos combinado antes de qualquer formatação",
+      "Diagnóstico primeiro, valor depois, execução só com aprovação",
+      "Orientação de uso ao final para o problema não se repetir",
+    ],
+    atendimentoLocal: [
+      "Formatação com backup e organização dos arquivos por usuário",
+      "Remoção de vírus, pop-ups e sequestro de navegador",
+      "Instalação de SSD para acelerar máquina antiga",
+      "Configuração de Wi-Fi e senha da rede doméstica",
+    ],
+    coletaBancada: [
+      "Notebook que não dá vídeo ou não passa da tela inicial",
+      "Teclado, bateria ou carcaça danificados por queda",
+      "Disco com ruído ou falha de leitura exigindo tentativa de recuperação",
+    ],
+    servicosPrioritarios: [
+      "/servicos/formatacao",
+      "/servicos/remocao-de-virus",
+      "/servicos/manutencao-de-computador",
+      "/servicos/upgrade-ssd-ram",
+      "/servicos/recuperacao-de-dados",
+    ],
+    faqLocal: [
+      { question: "Formatar apaga meus arquivos e fotos?", answer: "Não, quando o backup é feito antes. Combinamos o que precisa ser salvo, copiamos os dados, reinstalamos o sistema e devolvemos os arquivos organizados na máquina." },
+      { question: "Meu notebook está cheio de propaganda abrindo sozinha. É vírus?", answer: "Normalmente é adware instalado junto com algum programa baixado fora da loja oficial. Fazemos a remoção, limpamos os navegadores e mostramos de onde veio para evitar reincidência." },
+      { question: "Vale a pena colocar SSD num computador antigo?", answer: "Na maioria das vezes sim. Em máquinas com disco mecânico, a troca por SSD costuma ser o upgrade com maior ganho percebido por real investido. Avaliamos antes se a máquina comporta." },
+      { question: "Atendem pequenos negócios no Pinheirinho?", answer: "Sim. Atendemos comércios de rua com computador de vendas, impressora e rede, com horário combinado para não travar o atendimento." },
+      { question: "Qual o valor do serviço no Pinheirinho?", answer: "A partir de R$ 99,99 quando aplicável. O total depende do serviço executado e de peças, sempre aprovado por você antes de começarmos." },
+    ],
+  },
+
+  // ── BACACHERI ───────────────────────────────────────────────
+  bacacheri: {
+    slug: "bacacheri",
+    nome: "Bacacheri",
+    nomeLocativo: "no Bacacheri",
+    cidade: "Curitiba",
+    areaName: "Bacacheri, Curitiba",
+    metaTitle: "Técnico de Informática no Bacacheri (Curitiba) | Notebook e PC",
+    metaDescription:
+      "Técnico de informática no Bacacheri, Curitiba: conserto de notebook, manutenção de computador, formatação e rede Wi-Fi. A partir de R$ 99,99. Atendimento via WhatsApp.",
+    h1: "Técnico de Informática no Bacacheri – Curitiba",
+    subtitulo:
+      "Atendimento a domicílio e por coleta no Bacacheri, com triagem pelo WhatsApp e orçamento aprovado antes da execução.",
+    whatsappMessage:
+      "Olá! Preciso de um técnico de informática no Bacacheri, em Curitiba. Pode me orientar?",
+    introducaoLocal: [
+      "O Bacacheri tem um perfil residencial marcado por casas de terreno amplo, arborização densa e vias largas na região da Erasto Gaertner. Esse desenho urbano tem um efeito prático que aparece direto nos chamados: casa grande com um único roteador entregue pela operadora significa cômodo dos fundos, escritório em anexo e edícula sem sinal decente de Wi-Fi. É um dos bairros em que mais avaliamos cobertura de rede antes de qualquer outra coisa.",
+      "O segundo grupo de chamados vem de home office consolidado. Muitos moradores trabalham em casa em período integral e usam a mesma máquina para videochamada, planilha pesada e arquivo em nuvem. Quando essa máquina começa a travar, o prejuízo é imediato — por isso priorizamos diagnóstico rápido e, quando possível, deixamos o equipamento operacional no mesmo atendimento, adiando só o que exige bancada.",
+      "Também é comum no bairro o computador de mesa montado há anos, que ainda tem uma boa base de hardware mas roda com disco mecânico e memória insuficiente para o uso atual. Nesses casos, medimos o gargalo real antes de sugerir compra: muitas vezes SSD, memória e limpeza térmica devolvem a máquina a um patamar de uso confortável por uma fração do custo de trocar tudo.",
+      "O caminho é sempre o mesmo: WhatsApp para triagem, diagnóstico técnico, valor apresentado por escrito e execução só depois da sua aprovação.",
+    ],
+    operacaoLocal: [
+      "Triagem pelo WhatsApp com foco em impacto no trabalho e urgência",
+      "Medição real da cobertura de Wi-Fi antes de indicar equipamento",
+      "Diagnóstico antes do valor, sempre",
+      "Coleta e entrega quando o reparo exige bancada",
+    ],
+    atendimentoLocal: [
+      "Diagnóstico de lentidão e travamento em desktop e notebook",
+      "Upgrade de SSD e memória para home office",
+      "Cobertura de Wi-Fi em casas grandes e escritório anexo",
+      "Configuração de backup em nuvem e organização de arquivos",
+    ],
+    coletaBancada: [
+      "Desktop que não liga ou reinicia sob carga",
+      "Notebook com tela quebrada ou dobradiça rompida",
+      "Fonte ou placa com sinal de dano após queda de energia",
+    ],
+    servicosPrioritarios: [
+      "/servicos/redes-e-wifi",
+      "/servicos/manutencao-de-computador",
+      "/servicos/upgrade-ssd-ram",
+      "/servicos/manutencao-de-notebook",
+      "/servicos/formatacao",
+    ],
+    faqLocal: [
+      { question: "Minha casa é grande e o Wi-Fi não chega nos fundos. O que fazem?", answer: "Medimos a intensidade do sinal nos cômodos críticos, avaliamos reposicionamento do roteador e, quando necessário, indicamos ponto de acesso adicional ou repetidor com posicionamento correto — não apenas um aparelho a mais na tomada." },
+      { question: "Trabalho em casa e não posso ficar sem o computador. Como funciona?", answer: "Priorizamos deixar a máquina operacional no atendimento e separamos para bancada apenas o que exige desmontagem. Combinamos previamente o tempo estimado de indisponibilidade." },
+      { question: "Meu PC de mesa é antigo. Compensa consertar?", answer: "Avaliamos o hardware atual e o uso pretendido. Se a base ainda for adequada, SSD, memória e limpeza térmica costumam resolver. Se não for, dizemos com clareza que a substituição é a melhor escolha." },
+      { question: "Vocês fazem coleta no Bacacheri?", answer: "Sim, para os casos que exigem bancada. A coleta é combinada na triagem e o equipamento é devolvido após o reparo aprovado." },
+      { question: "Quanto custa o atendimento no Bacacheri?", answer: "A partir de R$ 99,99 quando aplicável. O valor final depende do serviço e de peças, informado e aprovado antes da execução." },
+    ],
+  },
+
+  // ── CAPÃO RASO ──────────────────────────────────────────────
+  "capao-raso": {
+    slug: "capao-raso",
+    nome: "Capão Raso",
+    nomeLocativo: "no Capão Raso",
+    cidade: "Curitiba",
+    areaName: "Capão Raso, Curitiba",
+    metaTitle: "Técnico de Informática no Capão Raso (Curitiba) | PC e Notebook",
+    metaDescription:
+      "Técnico de informática no Capão Raso, Curitiba: conserto de notebook, formatação com backup, remoção de vírus e upgrade de SSD. A partir de R$ 99,99. Via WhatsApp.",
+    h1: "Técnico de Informática no Capão Raso – Curitiba",
+    subtitulo:
+      "Atendimento técnico para casas, apartamentos e comércios do Capão Raso, com triagem pelo WhatsApp e valor só depois do diagnóstico.",
+    whatsappMessage:
+      "Olá! Preciso de um técnico de informática no Capão Raso, em Curitiba. Pode me orientar?",
+    introducaoLocal: [
+      "O Capão Raso cresceu em torno do terminal e da Avenida Republica Argentina, misturando prédios residenciais, casas antigas e um comércio de bairro bastante ativo. O resultado é um parque de equipamentos heterogêneo: notebooks de estudante, desktops de família comprados há muitos anos e computadores de loja rodando sistema de vendas o dia inteiro, todos com necessidades de manutenção diferentes.",
+      "Em apartamento, o chamado mais frequente é de rede: roteador da operadora instalado na entrada, paredes de concreto e sinal que morre no quarto onde a pessoa realmente trabalha. Em casa, o cenário muda para máquina antiga com disco mecânico, sistema desatualizado e inicialização que leva minutos. São problemas distintos e cada um pede uma abordagem própria — por isso a triagem detalhada antes do agendamento faz diferença.",
+      "No comércio local, o ponto crítico é continuidade. Um computador de caixa parado significa venda perdida, então trabalhamos com horário combinado, diagnóstico objetivo e, quando o reparo é longo, alternativa provisória para o negócio não travar. Também revisamos backup: muitos comércios pequenos guardam anos de registro em uma única máquina, sem qualquer cópia.",
+      "O atendimento começa no WhatsApp, com descrição do sintoma e do uso. A partir daí definimos se resolve remoto, se vale visita ou se o equipamento precisa ir para bancada, sempre com valor aprovado antes da execução.",
+    ],
+    operacaoLocal: [
+      "Triagem pelo WhatsApp com sintoma, modelo e tipo de uso",
+      "Agendamento em horário que não interrompa o comércio",
+      "Diagnóstico técnico antes de qualquer valor",
+      "Revisão de backup antes de intervenções que apagam dados",
+    ],
+    atendimentoLocal: [
+      "Formatação com backup e reinstalação de programas essenciais",
+      "Remoção de vírus e limpeza de navegadores",
+      "Instalação de SSD e ampliação de memória",
+      "Configuração de rede Wi-Fi em apartamento e loja",
+    ],
+    coletaBancada: [
+      "Notebook que não liga, não carrega ou perde imagem",
+      "Troca de tela, teclado ou conector de carga",
+      "Tentativa de recuperação de dados em disco com falha",
+    ],
+    servicosPrioritarios: [
+      "/servicos/formatacao",
+      "/servicos/manutencao-de-notebook",
+      "/servicos/remocao-de-virus",
+      "/servicos/upgrade-ssd-ram",
+      "/servicos/redes-e-wifi",
+    ],
+    faqLocal: [
+      { question: "O Wi-Fi do meu apartamento no Capão Raso é fraco no quarto. Dá para resolver?", answer: "Sim. Verificamos canal, posicionamento e interferência de redes vizinhas — em prédio, é comum o problema ser congestionamento de canal, e não falta de aparelho." },
+      { question: "Meu computador demora minutos para ligar. O que costuma ser?", answer: "Na maior parte dos casos é disco mecânico somado a programas iniciando junto com o sistema. Migração para SSD e limpeza de inicialização mudam completamente a experiência de uso." },
+      { question: "Atendem loja com sistema de vendas?", answer: "Sim. Combinamos horário de menor movimento, avaliamos o computador de caixa, a impressora e a rede, e orientamos sobre backup dos registros." },
+      { question: "Vocês tentam recuperar arquivos de HD com defeito?", answer: "Fazemos a tentativa em bancada e informamos as chances antes. Recuperação de dados nunca tem garantia de sucesso — o que garantimos é transparência sobre o que é possível." },
+      { question: "Quanto custa o atendimento no Capão Raso?", answer: "A partir de R$ 99,99 quando aplicável. O valor final depende do serviço e de peças, sempre apresentado e aprovado antes da execução." },
+    ],
+  },
 };
 
 

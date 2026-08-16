@@ -14,6 +14,26 @@ import { readFileSync, writeFileSync, readdirSync } from "node:fs";
 import { resolve, join } from "node:path";
 import { CURATED_ROUTES } from "./curated-routes-meta.mjs";
 
+/**
+ * Gate de prova visual real: bairro sem foto real e sem aprovação explícita em
+ * `src/lib/bairroPhotos.ts` recebe `noindex` automaticamente no build.
+ */
+const photosSrc = readFileSync(resolve(import.meta.dirname, "../src/lib/bairroPhotos.ts"), "utf8");
+const comFoto = new Set(
+  [...photosSrc.matchAll(/BAIRRO_PHOTOS[^=]*=\s*\{([\s\S]*?)\n\};/g)]
+    .flatMap((m) => [...m[1].matchAll(/"?([a-z0-9-]+)"?:\s*\[/g)].map((x) => x[1])),
+);
+const aprovadosSemFoto = new Set(
+  [...(/BAIRROS_SEM_FOTO_APROVADOS\s*=\s*\[([\s\S]*?)\]/.exec(photosSrc)?.[1] ?? "")
+    .matchAll(/"([a-z0-9-]+)"/g)].map((m) => m[1]),
+);
+
+function bairroNoindex(path) {
+  const m = /^\/bairros\/([a-z0-9-]+)$/.exec(path);
+  if (!m) return false;
+  return !comFoto.has(m[1]) && !aprovadosSemFoto.has(m[1]);
+}
+
 const CHECK = process.argv.includes("--check");
 const ROOT = resolve(import.meta.dirname, "..");
 const ROUTES_DIR = join(ROOT, "src/routes");
@@ -54,6 +74,7 @@ const block = (route) => {
     title: route.title,
     description: route.description,
     ...(faq.length ? { faq } : {}),
+    ...(bairroNoindex(route.path) ? { noindex: true } : {}),
   };
   return [
     START,

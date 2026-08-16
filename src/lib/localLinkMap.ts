@@ -35,6 +35,20 @@ export const SERVICOS_POR_BAIRRO: Record<string, LocalLink[]> = {
       "anchor": "upgrade de SSD e memória no Água Verde"
     }
   ],
+  "/bairros/bacacheri": [
+    {
+      "href": "/servicos/manutencao-de-computador",
+      "anchor": "manutenção de computador para quem está no Bacacheri"
+    },
+    {
+      "href": "/servicos/formatacao",
+      "anchor": "formatação de computador para quem está no Bacacheri"
+    },
+    {
+      "href": "/servicos/redes-e-wifi",
+      "anchor": "redes e Wi-Fi para quem está no Bacacheri"
+    }
+  ],
   "/bairros/batel": [
     {
       "href": "/servicos/formatacao-computador/batel",
@@ -171,6 +185,20 @@ export const SERVICOS_POR_BAIRRO: Record<string, LocalLink[]> = {
       "anchor": "redes e Wi-Fi para quem está no Cajuru"
     }
   ],
+  "/bairros/capao-raso": [
+    {
+      "href": "/servicos/manutencao-de-computador",
+      "anchor": "manutenção de computador para quem está no Capao Raso"
+    },
+    {
+      "href": "/servicos/formatacao",
+      "anchor": "formatação de computador para quem está no Capao Raso"
+    },
+    {
+      "href": "/servicos/redes-e-wifi",
+      "anchor": "redes e Wi-Fi para quem está no Capao Raso"
+    }
+  ],
   "/bairros/centro": [
     {
       "href": "/servicos/conserto-pc-notebook/centro",
@@ -245,6 +273,20 @@ export const SERVICOS_POR_BAIRRO: Record<string, LocalLink[]> = {
       "anchor": "redes e Wi-Fi para quem está no Cristo Rei"
     }
   ],
+  "/bairros/hauer": [
+    {
+      "href": "/servicos/manutencao-de-computador",
+      "anchor": "manutenção de computador para quem está no Hauer"
+    },
+    {
+      "href": "/servicos/formatacao",
+      "anchor": "formatação de computador para quem está no Hauer"
+    },
+    {
+      "href": "/servicos/redes-e-wifi",
+      "anchor": "redes e Wi-Fi para quem está no Hauer"
+    }
+  ],
   "/bairros/novo-mundo": [
     {
       "href": "/servicos/manutencao-de-computador",
@@ -257,6 +299,20 @@ export const SERVICOS_POR_BAIRRO: Record<string, LocalLink[]> = {
     {
       "href": "/servicos/redes-e-wifi",
       "anchor": "redes e Wi-Fi para quem está no Novo Mundo"
+    }
+  ],
+  "/bairros/pinheirinho": [
+    {
+      "href": "/servicos/manutencao-de-computador",
+      "anchor": "manutenção de computador para quem está no Pinheirinho"
+    },
+    {
+      "href": "/servicos/formatacao",
+      "anchor": "formatação de computador para quem está no Pinheirinho"
+    },
+    {
+      "href": "/servicos/redes-e-wifi",
+      "anchor": "redes e Wi-Fi para quem está no Pinheirinho"
     }
   ],
   "/bairros/portao": [
@@ -371,6 +427,10 @@ export const BAIRROS_POR_SERVICO: Record<string, LocalLink[]> = {
       "anchor": "atendimento técnico no Água Verde"
     },
     {
+      "href": "/bairros/bacacheri",
+      "anchor": "atendimento técnico no Bacacheri"
+    },
+    {
       "href": "/bairros/batel",
       "anchor": "atendimento técnico no Batel"
     },
@@ -385,10 +445,6 @@ export const BAIRROS_POR_SERVICO: Record<string, LocalLink[]> = {
     {
       "href": "/bairros/boqueirao",
       "anchor": "atendimento técnico no Boqueirão"
-    },
-    {
-      "href": "/bairros/cabral",
-      "anchor": "atendimento técnico no Cabral"
     }
   ],
   "/servicos/conserto-monitor": [
@@ -397,6 +453,10 @@ export const BAIRROS_POR_SERVICO: Record<string, LocalLink[]> = {
       "anchor": "atendimento técnico no Água Verde"
     },
     {
+      "href": "/bairros/bacacheri",
+      "anchor": "atendimento técnico no Bacacheri"
+    },
+    {
       "href": "/bairros/batel",
       "anchor": "atendimento técnico no Batel"
     },
@@ -411,10 +471,6 @@ export const BAIRROS_POR_SERVICO: Record<string, LocalLink[]> = {
     {
       "href": "/bairros/boqueirao",
       "anchor": "atendimento técnico no Boqueirão"
-    },
-    {
-      "href": "/bairros/cabral",
-      "anchor": "atendimento técnico no Cabral"
     }
   ],
   "/servicos/conserto-placa": [
@@ -423,6 +479,10 @@ export const BAIRROS_POR_SERVICO: Record<string, LocalLink[]> = {
       "anchor": "atendimento técnico no Água Verde"
     },
     {
+      "href": "/bairros/bacacheri",
+      "anchor": "atendimento técnico no Bacacheri"
+    },
+    {
       "href": "/bairros/batel",
       "anchor": "atendimento técnico no Batel"
     },
@@ -437,10 +497,6 @@ export const BAIRROS_POR_SERVICO: Record<string, LocalLink[]> = {
     {
       "href": "/bairros/boqueirao",
       "anchor": "atendimento técnico no Boqueirão"
-    },
-    {
-      "href": "/bairros/cabral",
-      "anchor": "atendimento técnico no Cabral"
     }
   ],
   "/servicos/conserto-tv": [
@@ -527,6 +583,10 @@ export const BAIRROS_POR_SERVICO: Record<string, LocalLink[]> = {
       "anchor": "atendimento técnico no Água Verde"
     },
     {
+      "href": "/bairros/bacacheri",
+      "anchor": "atendimento técnico no Bacacheri"
+    },
+    {
       "href": "/bairros/batel",
       "anchor": "atendimento técnico no Batel"
     },
@@ -541,10 +601,6 @@ export const BAIRROS_POR_SERVICO: Record<string, LocalLink[]> = {
     {
       "href": "/bairros/boqueirao",
       "anchor": "atendimento técnico no Boqueirão"
-    },
-    {
-      "href": "/bairros/cabral",
-      "anchor": "atendimento técnico no Cabral"
     }
   ],
   "/servicos/manutencao-preventiva-empresas": [
@@ -553,6 +609,10 @@ export const BAIRROS_POR_SERVICO: Record<string, LocalLink[]> = {
       "anchor": "atendimento técnico no Água Verde"
     },
     {
+      "href": "/bairros/bacacheri",
+      "anchor": "atendimento técnico no Bacacheri"
+    },
+    {
       "href": "/bairros/batel",
       "anchor": "atendimento técnico no Batel"
     },
@@ -567,10 +627,6 @@ export const BAIRROS_POR_SERVICO: Record<string, LocalLink[]> = {
     {
       "href": "/bairros/boqueirao",
       "anchor": "atendimento técnico no Boqueirão"
-    },
-    {
-      "href": "/bairros/cabral",
-      "anchor": "atendimento técnico no Cabral"
     }
   ],
   "/servicos/montagem-de-pc": [
@@ -579,6 +635,10 @@ export const BAIRROS_POR_SERVICO: Record<string, LocalLink[]> = {
       "anchor": "atendimento técnico no Água Verde"
     },
     {
+      "href": "/bairros/bacacheri",
+      "anchor": "atendimento técnico no Bacacheri"
+    },
+    {
       "href": "/bairros/batel",
       "anchor": "atendimento técnico no Batel"
     },
@@ -593,10 +653,6 @@ export const BAIRROS_POR_SERVICO: Record<string, LocalLink[]> = {
     {
       "href": "/bairros/boqueirao",
       "anchor": "atendimento técnico no Boqueirão"
-    },
-    {
-      "href": "/bairros/cabral",
-      "anchor": "atendimento técnico no Cabral"
     }
   ],
   "/servicos/recuperacao-de-dados": [
@@ -605,6 +661,10 @@ export const BAIRROS_POR_SERVICO: Record<string, LocalLink[]> = {
       "anchor": "atendimento técnico no Água Verde"
     },
     {
+      "href": "/bairros/bacacheri",
+      "anchor": "atendimento técnico no Bacacheri"
+    },
+    {
       "href": "/bairros/batel",
       "anchor": "atendimento técnico no Batel"
     },
@@ -619,10 +679,6 @@ export const BAIRROS_POR_SERVICO: Record<string, LocalLink[]> = {
     {
       "href": "/bairros/boqueirao",
       "anchor": "atendimento técnico no Boqueirão"
-    },
-    {
-      "href": "/bairros/cabral",
-      "anchor": "atendimento técnico no Cabral"
     }
   ],
   "/servicos/redes-e-wifi": [
@@ -683,6 +739,10 @@ export const BAIRROS_POR_SERVICO: Record<string, LocalLink[]> = {
       "anchor": "atendimento técnico no Água Verde"
     },
     {
+      "href": "/bairros/bacacheri",
+      "anchor": "atendimento técnico no Bacacheri"
+    },
+    {
       "href": "/bairros/batel",
       "anchor": "atendimento técnico no Batel"
     },
@@ -697,10 +757,6 @@ export const BAIRROS_POR_SERVICO: Record<string, LocalLink[]> = {
     {
       "href": "/bairros/boqueirao",
       "anchor": "atendimento técnico no Boqueirão"
-    },
-    {
-      "href": "/bairros/cabral",
-      "anchor": "atendimento técnico no Cabral"
     }
   ],
   "/servicos/suporte-tecnico-empresarial": [
@@ -709,6 +765,10 @@ export const BAIRROS_POR_SERVICO: Record<string, LocalLink[]> = {
       "anchor": "atendimento técnico no Água Verde"
     },
     {
+      "href": "/bairros/bacacheri",
+      "anchor": "atendimento técnico no Bacacheri"
+    },
+    {
       "href": "/bairros/batel",
       "anchor": "atendimento técnico no Batel"
     },
@@ -723,10 +783,6 @@ export const BAIRROS_POR_SERVICO: Record<string, LocalLink[]> = {
     {
       "href": "/bairros/boqueirao",
       "anchor": "atendimento técnico no Boqueirão"
-    },
-    {
-      "href": "/bairros/cabral",
-      "anchor": "atendimento técnico no Cabral"
     }
   ],
   "/servicos/upgrade-ssd-ram": [

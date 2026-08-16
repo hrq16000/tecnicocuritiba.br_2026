@@ -477,82 +477,478 @@ const BASE_ROUTES = [
   {
     "path": "/bairros/cic",
     "title": "Técnico de Informática no CIC (Curitiba) | Notebook e PC",
-    "description": "Técnico de informática no CIC, Curitiba: conserto de notebook, manutenção de computador, formatação e suporte para empresas. Diagnóstico a partir de R$ 99,99. Via WhatsApp."
+    "description": "Técnico de informática no CIC, Curitiba: conserto de notebook, manutenção de computador, formatação e suporte para empresas. Diagnóstico a partir de R$ 99,99. Via WhatsApp.",
+    "faq": [
+      {
+        "question": "Vocês atendem empresas e comércios no CIC?",
+        "answer": "Sim. Como o CIC concentra muitas operações, damos suporte pontual ou recorrente sob consulta a estações de trabalho, rede e rotinas de backup. A avaliação começa pelo WhatsApp."
+      },
+      {
+        "question": "O atendimento no CIC é no local ou por coleta?",
+        "answer": "Depende do problema. Casos como formatação, upgrade e configuração de rede costumam ser resolvidos no local; reparos de bancada seguem por coleta e entrega, sempre com sua aprovação."
+      },
+      {
+        "question": "Quanto custa o diagnóstico no CIC?",
+        "answer": "A partir de R$ 99,99 quando aplicável. O valor final depende do equipamento, do deslocamento, da complexidade e de eventuais peças — e nada é executado sem aprovação."
+      },
+      {
+        "question": "Vale mais a pena consertar ou trocar o computador?",
+        "answer": "Em muitos casos, um upgrade de SSD e memória resolve a lentidão por um custo menor que a troca. Avaliamos o equipamento e explicamos com clareza antes de indicar qualquer caminho."
+      }
+    ]
   },
   {
     "path": "/bairros/batel",
     "title": "Técnico de Informática no Batel (Curitiba) | Notebook e PC",
-    "description": "Técnico de informática no Batel, Curitiba: conserto de notebook, manutenção de computador, formatação e upgrade de SSD. Diagnóstico a partir de R$ 99,99. Via WhatsApp."
+    "description": "Técnico de informática no Batel, Curitiba: conserto de notebook, manutenção de computador, formatação e upgrade de SSD. Diagnóstico a partir de R$ 99,99. Via WhatsApp.",
+    "faq": [
+      {
+        "question": "Fazem suporte para home office no Batel?",
+        "answer": "Sim. Ajustamos desempenho, organizamos programas e melhoramos a estabilidade do Wi-Fi para reuniões online. A avaliação do que é necessário é feita após a triagem pelo WhatsApp."
+      },
+      {
+        "question": "Atendem apartamentos e prédios no Batel?",
+        "answer": "Sim, atendemos residências e pequenos escritórios. Em prédios, basta liberar o acesso na portaria no horário combinado. A modalidade depende do tipo de serviço."
+      },
+      {
+        "question": "Meu notebook está lento — precisa trocar?",
+        "answer": "Nem sempre. Muitas vezes um upgrade de SSD e memória, somado a uma limpeza, devolve a agilidade. Avaliamos antes de indicar troca e explicamos o ganho realista."
+      },
+      {
+        "question": "Qual o valor do atendimento no Batel?",
+        "answer": "O diagnóstico começa em R$ 99,99 quando aplicável. O valor final depende do equipamento, da complexidade e de eventuais peças, sempre aprovado por você antes."
+      }
+    ]
   },
   {
     "path": "/bairros/agua-verde",
     "title": "Técnico de Informática no Água Verde | Notebook e PC",
-    "description": "Técnico de informática no Água Verde, Curitiba: conserto de notebook, manutenção de computador, formatação e upgrade de SSD. Diagnóstico a partir de R$ 99,99. Via WhatsApp."
+    "description": "Técnico de informática no Água Verde, Curitiba: conserto de notebook, manutenção de computador, formatação e upgrade de SSD. Diagnóstico a partir de R$ 99,99. Via WhatsApp.",
+    "faq": [
+      {
+        "question": "Vocês fazem upgrade de SSD no Água Verde?",
+        "answer": "Sim, é um dos serviços mais pedidos no bairro. A troca por SSD com aumento de memória costuma trazer ganho perceptível em máquinas antigas, avaliado caso a caso."
+      },
+      {
+        "question": "Formatam com backup dos meus arquivos?",
+        "answer": "Sim. Sempre que possível, fazemos o backup dos arquivos antes de reinstalar o Windows e devolvemos a máquina com drivers, antivírus e programas essenciais já configurados."
+      },
+      {
+        "question": "Conseguem recuperar arquivos apagados?",
+        "answer": "Fazemos a tentativa de recuperação de dados. Não há garantia, pois o resultado depende do estado físico e lógico da mídia — e explicamos as chances antes de iniciar."
+      },
+      {
+        "question": "O atendimento é a domicílio no Água Verde?",
+        "answer": "Pode ser a domicílio ou por coleta e entrega, conforme o serviço. Reparos de bancada seguem para a oficina; a definição acontece após a triagem pelo WhatsApp."
+      }
+    ]
   },
   {
     "path": "/bairros/centro",
     "title": "Técnico de Informática no Centro de Curitiba | Notebook e PC",
-    "description": "Técnico de informática no Centro de Curitiba: conserto de notebook, manutenção de computador, formatação e suporte para escritórios. Diagnóstico a partir de R$ 99,99. Via WhatsApp."
+    "description": "Técnico de informática no Centro de Curitiba: conserto de notebook, manutenção de computador, formatação e suporte para escritórios. Diagnóstico a partir de R$ 99,99. Via WhatsApp.",
+    "faq": [
+      {
+        "question": "Atendem escritórios e lojas no Centro de Curitiba?",
+        "answer": "Sim. Boa parte da demanda no Centro é comercial: PCs de balcão, escritórios e consultórios. Fazemos suporte pontual ou recorrente sob consulta, começando pela triagem no WhatsApp."
+      },
+      {
+        "question": "Vocês têm loja física no Centro?",
+        "answer": "Não trabalhamos com loja de balcão. O atendimento é combinado por WhatsApp e realizado a domicílio, remotamente ou por coleta e entrega, conforme o tipo de serviço."
+      },
+      {
+        "question": "Dá para reduzir o tempo de parada da empresa?",
+        "answer": "Esse é o foco no Centro: triagem rápida e diagnóstico objetivo. Casos simples costumam ser resolvidos no local; quando é preciso bancada, informamos o prazo antes de retirar o equipamento."
+      },
+      {
+        "question": "Qual o valor da avaliação no Centro?",
+        "answer": "A partir de R$ 99,99 quando aplicável. O valor final depende do equipamento, da complexidade e de eventuais peças, e é sempre aprovado por você antes."
+      }
+    ]
   },
   {
     "path": "/bairros/portao",
     "title": "Técnico de Informática no Portão (Curitiba) | Notebook e PC",
-    "description": "Técnico de informática no Portão, Curitiba: conserto de notebook, manutenção de computador, formatação e upgrade de SSD. Atendimento a domicílio a partir de R$ 99,99. Via WhatsApp."
+    "description": "Técnico de informática no Portão, Curitiba: conserto de notebook, manutenção de computador, formatação e upgrade de SSD. Atendimento a domicílio a partir de R$ 99,99. Via WhatsApp.",
+    "faq": [
+      {
+        "question": "Atendem o comércio do Portão?",
+        "answer": "Sim. Damos suporte ao PC do balcão, à impressora e à rede de pequenos comércios, com foco em reduzir o tempo de parada. A avaliação começa pela triagem no WhatsApp."
+      },
+      {
+        "question": "O Wi-Fi não cobre a casa toda — vocês resolvem?",
+        "answer": "Avaliamos o posicionamento do roteador e a necessidade de repetidor ou sistema mesh para melhorar a cobertura. A indicação depende do tamanho do imóvel e da estrutura."
+      },
+      {
+        "question": "Recebi um aviso pedindo pagamento para liberar o PC. É golpe?",
+        "answer": "Quase sempre é golpe. Não pague nada antes de uma avaliação. Fale conosco pelo WhatsApp que verificamos o caso com segurança antes de qualquer serviço."
+      },
+      {
+        "question": "Qual o valor do atendimento no Portão?",
+        "answer": "A partir de R$ 99,99 quando aplicável. O valor final depende do equipamento, do deslocamento, da complexidade e de eventuais peças, sempre aprovado por você antes."
+      }
+    ]
   },
   {
     "path": "/bairros/bigorrilho",
     "title": "Técnico de Informática no Bigorrilho (Curitiba) | Notebook e PC",
-    "description": "Técnico de informática no Bigorrilho e Champagnat, Curitiba: conserto de notebook, formatação, upgrade de SSD e Wi-Fi em apartamento. Diagnóstico a partir de R$ 99,99. Via WhatsApp."
+    "description": "Técnico de informática no Bigorrilho e Champagnat, Curitiba: conserto de notebook, formatação, upgrade de SSD e Wi-Fi em apartamento. Diagnóstico a partir de R$ 99,99. Via WhatsApp.",
+    "faq": [
+      {
+        "question": "Vocês atendem apartamento no Bigorrilho?",
+        "answer": "Sim, é o perfil mais comum na região. Combinamos o horário pelo WhatsApp e o acesso é liberado na portaria. Serviços de software, rede e upgrades costumam ser resolvidos no próprio apartamento."
+      },
+      {
+        "question": "O Wi-Fi cai no quarto que virei escritório. Tem solução?",
+        "answer": "Na maioria dos apartamentos compridos o problema é posicionamento e canal do roteador, não velocidade contratada. Avaliamos a cobertura no local e indicamos ajuste, repetidor ou mesh conforme a planta."
+      },
+      {
+        "question": "Preciso levar o notebook até algum endereço?",
+        "answer": "Não. Não temos balcão ao público: ou o serviço é feito no seu endereço, ou fazemos coleta e entrega quando o caso exige bancada."
+      },
+      {
+        "question": "Quanto custa o atendimento no Bigorrilho?",
+        "answer": "O diagnóstico começa em R$ 99,99 quando aplicável. O valor final depende do equipamento, da complexidade e de eventuais peças, e é sempre aprovado por você antes da execução."
+      }
+    ]
   },
   {
     "path": "/bairros/santa-felicidade",
     "title": "Técnico de Informática em Santa Felicidade | Curitiba",
-    "description": "Técnico de informática em Santa Felicidade, Curitiba: conserto de PC e notebook, formatação, Wi-Fi em casa grande e suporte a comércio. A partir de R$ 99,99. Via WhatsApp."
+    "description": "Técnico de informática em Santa Felicidade, Curitiba: conserto de PC e notebook, formatação, Wi-Fi em casa grande e suporte a comércio. A partir de R$ 99,99. Via WhatsApp.",
+    "faq": [
+      {
+        "question": "O Wi-Fi não chega aos fundos da casa. Como resolvem?",
+        "answer": "Em casas grandes o ponto de partida é medir o sinal ambiente por ambiente. A partir disso indicamos reposicionamento, troca de canal, cabeamento até um segundo ponto ou sistema mesh — sem prometer solução antes de medir."
+      },
+      {
+        "question": "Atendem restaurantes e lojas de Santa Felicidade?",
+        "answer": "Sim. Damos suporte pontual ou combinado ao computador do caixa, à impressora de comanda e à rede do estabelecimento, com foco em reduzir o tempo de parada."
+      },
+      {
+        "question": "Posso levar o equipamento até vocês?",
+        "answer": "Não trabalhamos com balcão ao público. Quando o caso exige bancada, fazemos coleta e entrega no seu endereço, com sua aprovação antes de qualquer serviço."
+      },
+      {
+        "question": "Qual o valor do atendimento em Santa Felicidade?",
+        "answer": "A partir de R$ 99,99 quando aplicável. O valor final depende do equipamento, do deslocamento, da complexidade e de eventuais peças, sempre informado e aprovado antes."
+      }
+    ]
   },
   {
     "path": "/bairros/cabral",
     "title": "Técnico de Informática no Cabral (Curitiba) | Notebook e PC",
-    "description": "Técnico de informática no Cabral, Curitiba: conserto de notebook, formatação, upgrade de SSD e suporte a consultórios e escritórios. A partir de R$ 99,99. Via WhatsApp."
+    "description": "Técnico de informática no Cabral, Curitiba: conserto de notebook, formatação, upgrade de SSD e suporte a consultórios e escritórios. A partir de R$ 99,99. Via WhatsApp.",
+    "faq": [
+      {
+        "question": "Atendem consultórios e escritórios no Cabral?",
+        "answer": "Sim. Trabalhamos com janela de horário combinada para não interromper o atendimento, e a formatação de máquina de trabalho só acontece após backup e conferência de acessos e licenças."
+      },
+      {
+        "question": "Vocês fazem backup antes de formatar?",
+        "answer": "Sempre que o disco permite leitura, o backup dos dados é a primeira etapa e é conferido com você antes de qualquer reinstalação. Se o disco estiver com falha, isso é informado antes de prosseguir."
+      },
+      {
+        "question": "Preciso levar o equipamento em alguma loja?",
+        "answer": "Não. Não temos balcão ao público: o serviço é feito no seu endereço ou o equipamento é coletado e devolvido quando o caso exige bancada."
+      },
+      {
+        "question": "Qual o valor do atendimento no Cabral?",
+        "answer": "O diagnóstico começa em R$ 99,99 quando aplicável. O valor final depende do equipamento, da complexidade e de eventuais peças, sempre aprovado por você antes."
+      }
+    ]
   },
   {
     "path": "/bairros/cristo-rei",
     "title": "Técnico de Informática no Cristo Rei (Curitiba) | Notebook e PC",
-    "description": "Técnico de informática no Cristo Rei, Curitiba: conserto de notebook, formatação, upgrade de SSD e Wi-Fi para estudantes e famílias. A partir de R$ 99,99. Via WhatsApp."
+    "description": "Técnico de informática no Cristo Rei, Curitiba: conserto de notebook, formatação, upgrade de SSD e Wi-Fi para estudantes e famílias. A partir de R$ 99,99. Via WhatsApp.",
+    "faq": [
+      {
+        "question": "Meu notebook travou e tenho trabalho para entregar. Dá para priorizar?",
+        "answer": "Informe o prazo já na triagem pelo WhatsApp. Quando o caso permite, priorizamos o acesso aos arquivos primeiro — mesmo que o reparo completo leve mais tempo depois."
+      },
+      {
+        "question": "Vale a pena consertar um computador antigo no Cristo Rei?",
+        "answer": "Depende do equipamento. Em muitos casos SSD e memória devolvem a agilidade por um custo bem menor que a troca; em outros, o reparo não se paga. Explicamos os dois cenários antes de você decidir."
+      },
+      {
+        "question": "Atendem repúblicas e apartamentos de estudante?",
+        "answer": "Sim. Serviços de software, rede e upgrade costumam ser feitos no próprio endereço. Casos de bancada seguem por coleta e entrega, com aprovação prévia."
+      },
+      {
+        "question": "Qual o valor do atendimento no Cristo Rei?",
+        "answer": "A partir de R$ 99,99 quando aplicável. O valor final depende do equipamento, da complexidade e de eventuais peças, sempre aprovado antes da execução."
+      }
+    ]
   },
   {
     "path": "/bairros/boa-vista",
     "title": "Técnico de Informática no Boa Vista (Curitiba) | PC e Notebook",
-    "description": "Técnico de informática no Boa Vista, Curitiba: conserto de computador e notebook, formatação com backup, upgrade de SSD e Wi-Fi. A partir de R$ 99,99. Via WhatsApp."
+    "description": "Técnico de informática no Boa Vista, Curitiba: conserto de computador e notebook, formatação com backup, upgrade de SSD e Wi-Fi. A partir de R$ 99,99. Via WhatsApp.",
+    "faq": [
+      {
+        "question": "Meu computador ficou muito lento. Precisa trocar?",
+        "answer": "Na maioria dos casos do bairro, não. Computador com disco mecânico costuma voltar a responder bem com SSD, memória e limpeza do sistema. Só indicamos troca quando o reparo não se paga — e explicamos o porquê."
+      },
+      {
+        "question": "Vocês fazem backup das fotos antes de formatar?",
+        "answer": "Sim, sempre que o disco permite leitura. O backup é a primeira etapa e é conferido com você antes de qualquer reinstalação."
+      },
+      {
+        "question": "Preciso levar o equipamento até vocês?",
+        "answer": "Não. Não temos balcão ao público: o serviço é feito no seu endereço ou fazemos coleta e entrega quando o caso exige bancada."
+      },
+      {
+        "question": "Qual o valor do atendimento no Boa Vista?",
+        "answer": "A partir de R$ 99,99 quando aplicável. O valor final depende do equipamento, da complexidade e de eventuais peças, sempre aprovado por você antes da execução."
+      }
+    ]
   },
   {
     "path": "/bairros/cajuru",
     "title": "Técnico de Informática no Cajuru (Curitiba) | PC e Notebook",
-    "description": "Técnico de informática no Cajuru, Curitiba: conserto de notebook e PC, formatação com backup, remoção de vírus e Wi-Fi. A partir de R$ 99,99. Atendimento via WhatsApp."
+    "description": "Técnico de informática no Cajuru, Curitiba: conserto de notebook e PC, formatação com backup, remoção de vírus e Wi-Fi. A partir de R$ 99,99. Atendimento via WhatsApp.",
+    "faq": [
+      {
+        "question": "Atendem comércio pequeno no Cajuru?",
+        "answer": "Sim. Damos suporte pontual ao PC do caixa, à impressora de cupom e à rede do estabelecimento, com foco em reduzir o tempo em que o atendimento fica parado."
+      },
+      {
+        "question": "O Wi-Fi não cobre a casa toda. O que fazer?",
+        "answer": "Em casas com muitos cômodos e paredes espessas, medimos o sinal ambiente por ambiente antes de indicar solução: pode ser reposicionamento, troca de canal, cabo até um segundo ponto ou mesh."
+      },
+      {
+        "question": "Posso levar o equipamento até vocês?",
+        "answer": "Não trabalhamos com balcão ao público. Atendemos no seu endereço ou fazemos coleta e entrega quando o serviço exige bancada."
+      },
+      {
+        "question": "Quanto custa o atendimento no Cajuru?",
+        "answer": "O diagnóstico começa em R$ 99,99 quando aplicável. O valor final depende do equipamento, da complexidade e de eventuais peças, sempre informado e aprovado antes."
+      }
+    ]
   },
   {
     "path": "/bairros/xaxim",
     "title": "Técnico de Informática no Xaxim (Curitiba) | Notebook e PC",
-    "description": "Técnico de informática no Xaxim, Curitiba: conserto de notebook, formatação com backup, remoção de vírus e Wi-Fi em casa. A partir de R$ 99,99. Atendimento via WhatsApp."
+    "description": "Técnico de informática no Xaxim, Curitiba: conserto de notebook, formatação com backup, remoção de vírus e Wi-Fi em casa. A partir de R$ 99,99. Atendimento via WhatsApp.",
+    "faq": [
+      {
+        "question": "O Wi-Fi cai quando todos usam ao mesmo tempo. Tem solução?",
+        "answer": "Geralmente sim. Medimos o sinal nos cômodos usados, verificamos interferência de canal e o limite do aparelho da operadora, e só então indicamos reposicionamento, ponto extra por cabo ou mesh."
+      },
+      {
+        "question": "Vale a pena consertar um notebook antigo do Xaxim?",
+        "answer": "Depende do estado da placa, da tela e do custo da peça. Fazemos o diagnóstico e dizemos com clareza quando o reparo compensa e quando o dinheiro é melhor aplicado em outro equipamento."
+      },
+      {
+        "question": "Vocês atendem à noite ou no fim de semana?",
+        "answer": "Trabalhamos por agendamento e ajustamos a janela conforme a agenda disponível. Informe na triagem o melhor horário e confirmamos o que é possível."
+      },
+      {
+        "question": "Quanto custa o atendimento no Xaxim?",
+        "answer": "A partir de R$ 99,99 quando aplicável. O valor final depende do equipamento, da complexidade e de eventuais peças, sempre aprovado por você antes."
+      }
+    ]
   },
   {
     "path": "/bairros/novo-mundo",
     "title": "Técnico de Informática no Novo Mundo (Curitiba) | PC e Notebook",
-    "description": "Técnico de informática no Novo Mundo, Curitiba: manutenção de computador, conserto de notebook, upgrade de SSD e rede para comércio. A partir de R$ 99,99. Via WhatsApp."
+    "description": "Técnico de informática no Novo Mundo, Curitiba: manutenção de computador, conserto de notebook, upgrade de SSD e rede para comércio. A partir de R$ 99,99. Via WhatsApp.",
+    "faq": [
+      {
+        "question": "Atendem lojas e escritórios no Novo Mundo?",
+        "answer": "Sim, com suporte pontual ou acompanhamento recorrente: computador do balcão, impressora, rede e rotina de backup. Combinamos a janela de atendimento para reduzir o impacto no expediente."
+      },
+      {
+        "question": "O computador demora muito para abrir o sistema. É vírus?",
+        "answer": "Nem sempre. Disco mecânico saturado, memória insuficiente e programas em segundo plano explicam boa parte dos casos. O diagnóstico distingue causa de software e de hardware antes de qualquer troca."
+      },
+      {
+        "question": "Perdi arquivos importantes. Ainda dá para recuperar?",
+        "answer": "Em muitos casos sim, desde que o equipamento pare de ser usado imediatamente. Avaliamos o disco e informamos a chance real de recuperação antes de iniciar."
+      },
+      {
+        "question": "Como é cobrado o serviço no Novo Mundo?",
+        "answer": "A partir de R$ 99,99 quando aplicável, com o valor final definido após o diagnóstico e aprovado por você antes da execução."
+      }
+    ]
   },
   {
     "path": "/bairros/uberaba",
     "title": "Técnico de Informática no Uberaba (Curitiba) | Notebook e PC",
-    "description": "Técnico de informática no Uberaba, Curitiba: conserto de notebook, formatação, remoção de vírus e Wi-Fi para home office. A partir de R$ 99,99. Atendimento via WhatsApp."
+    "description": "Técnico de informática no Uberaba, Curitiba: conserto de notebook, formatação, remoção de vírus e Wi-Fi para home office. A partir de R$ 99,99. Atendimento via WhatsApp.",
+    "faq": [
+      {
+        "question": "Trabalho em casa e não posso ficar sem o notebook. Como fica?",
+        "answer": "Diga isso na triagem. Priorizamos o que pode ser resolvido remotamente ou no seu endereço e, quando a coleta é inevitável, alinhamos prazo antes de retirar o equipamento."
+      },
+      {
+        "question": "A internet do apartamento oscila nas chamadas. É o provedor?",
+        "answer": "Pode ser, mas em prédios o mais comum é disputa de canal com dezenas de redes vizinhas. Medimos e ajustamos canal, banda e posição do roteador antes de sugerir trocar de plano ou aparelho."
+      },
+      {
+        "question": "Vocês instalam programas e configuram e-mail corporativo?",
+        "answer": "Sim, incluindo pacote de escritório, VPN, impressoras e contas de e-mail, com atenção às licenças que você já possui."
+      },
+      {
+        "question": "Qual o valor do serviço no Uberaba?",
+        "answer": "A partir de R$ 99,99 quando aplicável. O valor final é definido após o diagnóstico e depende do equipamento, da complexidade e de peças, sempre aprovado antes."
+      }
+    ]
   },
   {
     "path": "/bairros/reboucas",
     "title": "Técnico de Informática no Rebouças (Curitiba) | Empresas e PC",
-    "description": "Técnico de informática no Rebouças, Curitiba: suporte a escritórios, manutenção de computador, formatação e rede. A partir de R$ 99,99. Atendimento via WhatsApp."
+    "description": "Técnico de informática no Rebouças, Curitiba: suporte a escritórios, manutenção de computador, formatação e rede. A partir de R$ 99,99. Atendimento via WhatsApp.",
+    "faq": [
+      {
+        "question": "Vocês dão suporte a escritórios pequenos no Rebouças?",
+        "answer": "Sim. Atendemos equipes enxutas com chamados pontuais ou acompanhamento periódico, cobrindo estações, rede, impressoras e rotina de backup."
+      },
+      {
+        "question": "Dá para melhorar uma máquina de edição sem trocar tudo?",
+        "answer": "Frequentemente sim. Avaliamos gargalo real — disco, memória, refrigeração ou processador — e indicamos o upgrade que traz ganho perceptível, evitando gasto desnecessário."
+      },
+      {
+        "question": "Como funciona o backup para empresa?",
+        "answer": "Definimos o que precisa ser copiado, com que frequência e para onde, e testamos a restauração. Backup que nunca foi restaurado não é backup confiável."
+      },
+      {
+        "question": "Quanto custa o atendimento no Rebouças?",
+        "answer": "A partir de R$ 99,99 quando aplicável. O valor final depende do número de equipamentos, da complexidade e de peças, sempre aprovado antes da execução."
+      }
+    ]
+  },
+  {
+    "path": "/bairros/hauer",
+    "title": "Técnico de Informática no Hauer (Curitiba) | Notebook e PC",
+    "description": "Técnico de informática no Hauer, Curitiba: conserto de notebook, formatação com backup, remoção de vírus e rede Wi-Fi. A partir de R$ 99,99. Atendimento via WhatsApp.",
+    "faq": [
+      {
+        "question": "Vocês atendem no Hauer no mesmo dia?",
+        "answer": "Depende da agenda e do tipo de problema. Na triagem pelo WhatsApp informamos o primeiro horário realmente disponível, sem prometer prazo que não conseguimos cumprir."
+      },
+      {
+        "question": "Meu computador esquenta e trava. Precisa trocar?",
+        "answer": "Na maioria dos casos, não. Superaquecimento costuma vir de dissipador entupido e pasta térmica ressecada. Fazemos a limpeza, medimos temperatura sob carga e só indicamos peça se o problema persistir."
+      },
+      {
+        "question": "Atendem comércio na Marechal Floriano?",
+        "answer": "Sim. Trabalhamos com estações de frente de caixa, impressora e rede da loja, combinando horário fora do pico para reduzir o impacto no atendimento ao cliente."
+      },
+      {
+        "question": "O Wi-Fi não chega nos quartos dos fundos. Tem solução?",
+        "answer": "Sim. Medimos o sinal ponto a ponto, avaliamos reposicionamento do roteador e, se realmente for necessário, indicamos repetidor ou ponto de acesso adicional com cabeamento."
+      },
+      {
+        "question": "Quanto custa o atendimento no Hauer?",
+        "answer": "A partir de R$ 99,99 quando aplicável. O valor final depende do serviço e de eventuais peças, sempre apresentado e aprovado antes da execução."
+      }
+    ]
+  },
+  {
+    "path": "/bairros/pinheirinho",
+    "title": "Técnico de Informática no Pinheirinho (Curitiba) | PC e Notebook",
+    "description": "Técnico de informática no Pinheirinho, Curitiba: manutenção de computador, conserto de notebook, formatação e Wi-Fi. A partir de R$ 99,99. Atendimento via WhatsApp.",
+    "faq": [
+      {
+        "question": "Formatar apaga meus arquivos e fotos?",
+        "answer": "Não, quando o backup é feito antes. Combinamos o que precisa ser salvo, copiamos os dados, reinstalamos o sistema e devolvemos os arquivos organizados na máquina."
+      },
+      {
+        "question": "Meu notebook está cheio de propaganda abrindo sozinha. É vírus?",
+        "answer": "Normalmente é adware instalado junto com algum programa baixado fora da loja oficial. Fazemos a remoção, limpamos os navegadores e mostramos de onde veio para evitar reincidência."
+      },
+      {
+        "question": "Vale a pena colocar SSD num computador antigo?",
+        "answer": "Na maioria das vezes sim. Em máquinas com disco mecânico, a troca por SSD costuma ser o upgrade com maior ganho percebido por real investido. Avaliamos antes se a máquina comporta."
+      },
+      {
+        "question": "Atendem pequenos negócios no Pinheirinho?",
+        "answer": "Sim. Atendemos comércios de rua com computador de vendas, impressora e rede, com horário combinado para não travar o atendimento."
+      },
+      {
+        "question": "Qual o valor do serviço no Pinheirinho?",
+        "answer": "A partir de R$ 99,99 quando aplicável. O total depende do serviço executado e de peças, sempre aprovado por você antes de começarmos."
+      }
+    ]
+  },
+  {
+    "path": "/bairros/bacacheri",
+    "title": "Técnico de Informática no Bacacheri (Curitiba) | Notebook e PC",
+    "description": "Técnico de informática no Bacacheri, Curitiba: conserto de notebook, manutenção de computador, formatação e rede Wi-Fi. A partir de R$ 99,99. Atendimento via WhatsApp.",
+    "faq": [
+      {
+        "question": "Minha casa é grande e o Wi-Fi não chega nos fundos. O que fazem?",
+        "answer": "Medimos a intensidade do sinal nos cômodos críticos, avaliamos reposicionamento do roteador e, quando necessário, indicamos ponto de acesso adicional ou repetidor com posicionamento correto — não apenas um aparelho a mais na tomada."
+      },
+      {
+        "question": "Trabalho em casa e não posso ficar sem o computador. Como funciona?",
+        "answer": "Priorizamos deixar a máquina operacional no atendimento e separamos para bancada apenas o que exige desmontagem. Combinamos previamente o tempo estimado de indisponibilidade."
+      },
+      {
+        "question": "Meu PC de mesa é antigo. Compensa consertar?",
+        "answer": "Avaliamos o hardware atual e o uso pretendido. Se a base ainda for adequada, SSD, memória e limpeza térmica costumam resolver. Se não for, dizemos com clareza que a substituição é a melhor escolha."
+      },
+      {
+        "question": "Vocês fazem coleta no Bacacheri?",
+        "answer": "Sim, para os casos que exigem bancada. A coleta é combinada na triagem e o equipamento é devolvido após o reparo aprovado."
+      },
+      {
+        "question": "Quanto custa o atendimento no Bacacheri?",
+        "answer": "A partir de R$ 99,99 quando aplicável. O valor final depende do serviço e de peças, informado e aprovado antes da execução."
+      }
+    ]
+  },
+  {
+    "path": "/bairros/capao-raso",
+    "title": "Técnico de Informática no Capão Raso (Curitiba) | PC e Notebook",
+    "description": "Técnico de informática no Capão Raso, Curitiba: conserto de notebook, formatação com backup, remoção de vírus e upgrade de SSD. A partir de R$ 99,99. Via WhatsApp.",
+    "faq": [
+      {
+        "question": "O Wi-Fi do meu apartamento no Capão Raso é fraco no quarto. Dá para resolver?",
+        "answer": "Sim. Verificamos canal, posicionamento e interferência de redes vizinhas — em prédio, é comum o problema ser congestionamento de canal, e não falta de aparelho."
+      },
+      {
+        "question": "Meu computador demora minutos para ligar. O que costuma ser?",
+        "answer": "Na maior parte dos casos é disco mecânico somado a programas iniciando junto com o sistema. Migração para SSD e limpeza de inicialização mudam completamente a experiência de uso."
+      },
+      {
+        "question": "Atendem loja com sistema de vendas?",
+        "answer": "Sim. Combinamos horário de menor movimento, avaliamos o computador de caixa, a impressora e a rede, e orientamos sobre backup dos registros."
+      },
+      {
+        "question": "Vocês tentam recuperar arquivos de HD com defeito?",
+        "answer": "Fazemos a tentativa em bancada e informamos as chances antes. Recuperação de dados nunca tem garantia de sucesso — o que garantimos é transparência sobre o que é possível."
+      },
+      {
+        "question": "Quanto custa o atendimento no Capão Raso?",
+        "answer": "A partir de R$ 99,99 quando aplicável. O valor final depende do serviço e de peças, sempre apresentado e aprovado antes da execução."
+      }
+    ]
   },
   {
     "path": "/bairros/boqueirao",
     "title": "Técnico de Informática no Boqueirão (Curitiba) | PC e Notebook",
-    "description": "Técnico de informática no Boqueirão, Curitiba: conserto de PC e notebook, formatação com backup, upgrade de SSD e Wi-Fi. A partir de R$ 99,99. Atendimento via WhatsApp."
+    "description": "Técnico de informática no Boqueirão, Curitiba: conserto de PC e notebook, formatação com backup, upgrade de SSD e Wi-Fi. A partir de R$ 99,99. Atendimento via WhatsApp.",
+    "faq": [
+      {
+        "question": "Meu PC emite nota e não pode parar. Como funciona?",
+        "answer": "Informe isso na triagem. Fazemos backup e conferimos acessos e licenças antes de mexer no sistema, e combinamos a janela de atendimento para reduzir o tempo de parada."
+      },
+      {
+        "question": "Vale trocar o HD por SSD em máquina antiga?",
+        "answer": "Na maior parte dos casos sim: é a mudança que mais devolve agilidade por um custo baixo. Avaliamos o equipamento antes e dizemos com clareza quando o investimento não compensa."
+      },
+      {
+        "question": "Preciso levar o equipamento a algum endereço?",
+        "answer": "Não. Não temos balcão ao público: atendemos no seu endereço ou fazemos coleta e entrega quando o caso exige bancada."
+      },
+      {
+        "question": "Qual o valor do atendimento no Boqueirão?",
+        "answer": "A partir de R$ 99,99 quando aplicável. O valor final depende do equipamento, do deslocamento, da complexidade e de eventuais peças, sempre aprovado antes."
+      }
+    ]
   },
   {
     "path": "/atendimento-domicilio",

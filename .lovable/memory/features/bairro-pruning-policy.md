@@ -4,10 +4,11 @@ description: Bairros-âncora indexáveis de Curitiba, critérios de promoção e
 type: feature
 ---
 
-## Bairros-âncora indexáveis (16, atualizado 2026-08-16)
+## Bairros-âncora indexáveis (20, atualizado 2026-08-16)
 
 cic, batel, agua-verde, centro, portao, bigorrilho, santa-felicidade, cabral,
-cristo-rei, boa-vista, cajuru, boqueirao, **xaxim, novo-mundo, uberaba, reboucas**.
+cristo-rei, boa-vista, cajuru, boqueirao, **xaxim, novo-mundo, uberaba, reboucas**,
+**hauer, pinheirinho, bacacheri, capao-raso**.
 
 Todos usam `BairroLocalLayout` + entrada curada em `src/lib/bairrosData.ts`
 (introdução local, operação, atendimento, coleta/bancada, FAQ exclusiva).
@@ -21,5 +22,9 @@ Todos usam `BairroLocalLayout` + entrada curada em `src/lib/bairrosData.ts`
 - **Imagens reais não são pré-requisito para indexar bairro** (autorizado pelo
   usuário em 2026-08-16); o gate `check:real-images` continua valendo para as
   demais famílias sensíveis (Wi-Fi/TV, /problemas).
+- Gate de prova visual: `src/lib/bairroPhotos.ts` é a fonte única. Bairro sem foto
+  real e fora de `BAIRROS_SEM_FOTO_APROVADOS` recebe `noindex` automático no build
+  (`scripts/inject-route-head.mjs` + `PageSEO`). Nunca usar imagem gerada por IA.
+- FAQPage SSR de todos os bairros vem de `scripts/curated-routes-meta.mjs` (campo `faq`).
 - Promoção em ondas de 4–6 páginas; após promover, rodar
   `inject-route-head`, `generate-sitemaps`, `generate-local-linkmap`.

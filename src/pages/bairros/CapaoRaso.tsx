@@ -1,6 +1,6 @@
 import { BairroLocalLayout } from "@/components/bairro/BairroLocalLayout";
 import { BAIRROS } from "@/lib/bairrosData";
 
-const Bacacheri = () => <BairroLocalLayout data={BAIRROS["bacacheri"]} />;
+const CapaoRaso = () => <BairroLocalLayout data={BAIRROS["capao-raso"]} />;
 
-export default Bacacheri;
+export default CapaoRaso;
