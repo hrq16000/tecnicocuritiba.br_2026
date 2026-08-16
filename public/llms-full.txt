@@ -220,6 +220,10 @@ Demais municípios da Região Metropolitana são avaliados sob consulta pelo Wha
 - [Técnico de Informática no Novo Mundo (Curitiba) | PC e Notebook](https://tecnico.curitiba.br/bairros/novo-mundo)
 - [Técnico de Informática no Uberaba (Curitiba) | Notebook e PC](https://tecnico.curitiba.br/bairros/uberaba)
 - [Técnico de Informática no Rebouças (Curitiba) | Empresas e PC](https://tecnico.curitiba.br/bairros/reboucas)
+- [Técnico de Informática no Hauer (Curitiba) | Notebook e PC](https://tecnico.curitiba.br/bairros/hauer)
+- [Técnico de Informática no Pinheirinho (Curitiba) | PC e Notebook](https://tecnico.curitiba.br/bairros/pinheirinho)
+- [Técnico de Informática no Bacacheri (Curitiba) | Notebook e PC](https://tecnico.curitiba.br/bairros/bacacheri)
+- [Técnico de Informática no Capão Raso (Curitiba) | PC e Notebook](https://tecnico.curitiba.br/bairros/capao-raso)
 - [Técnico de Informática no Boqueirão (Curitiba) | PC e Notebook](https://tecnico.curitiba.br/bairros/boqueirao)
 
 ## Problemas comuns diagnosticados
