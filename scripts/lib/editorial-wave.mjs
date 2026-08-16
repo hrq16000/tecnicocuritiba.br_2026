@@ -16,51 +16,6 @@
  */
 
 export const EDITORIAL_WAVE = [
-  {
-    slug: "quando-trocar-hd-por-ssd",
-    approvedAt: "2026-08-06",
-    pilar: "/servicos/upgrade-ssd-ram",
-    pilarLabel: "Upgrade de SSD e memória",
-    apoio: "/quando-nao-compensa",
-    apoioLabel: "Quando o reparo não compensa",
-    cover: "/blog/quando-trocar-hd-por-ssd.jpg",
-  },
-  {
-    slug: "como-saber-se-pc-tem-virus-malware",
-    approvedAt: "2026-08-06",
-    pilar: "/servicos/remocao-de-virus",
-    pilarLabel: "Remoção de vírus e malware",
-    apoio: "/servicos/formatacao",
-    apoioLabel: "Formatação e instalação do sistema",
-    cover: "/blog/como-saber-se-pc-tem-virus-malware.jpg",
-  },
-  {
-    slug: "backup-como-proteger-seus-arquivos",
-    approvedAt: "2026-08-06",
-    pilar: "/servicos/recuperacao-de-dados",
-    pilarLabel: "Recuperação de dados",
-    apoio: "/diagnostico-tecnico",
-    apoioLabel: "Como funciona o diagnóstico técnico",
-    cover: "/blog/backup-como-proteger-seus-arquivos.jpg",
-  },
-  {
-    slug: "como-melhorar-sinal-wifi-em-casa",
-    approvedAt: "2026-08-06",
-    pilar: "/servicos/redes-e-wifi",
-    pilarLabel: "Redes e Wi-Fi",
-    apoio: "/atendimento-domicilio",
-    apoioLabel: "Atendimento técnico no endereço",
-    cover: "/blog/como-melhorar-sinal-wifi-em-casa.jpg",
-  },
-  {
-    slug: "notebook-superaquecendo-o-que-fazer",
-    approvedAt: "2026-08-06",
-    pilar: "/servicos/manutencao-de-notebook",
-    pilarLabel: "Manutenção de notebook em Curitiba",
-    apoio: "/atendimento-domicilio",
-    apoioLabel: "Atendimento técnico no endereço",
-    cover: "/blog/notebook-superaquecendo-o-que-fazer.jpg",
-  },
   // ── Rodada 3O — onda educacional empresarial (2 conteúdos, 0 rotas novas).
   {
     slug: "organizacao-de-ti-para-pequenos-escritorios",
