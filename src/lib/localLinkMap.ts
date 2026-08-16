@@ -245,6 +245,20 @@ export const SERVICOS_POR_BAIRRO: Record<string, LocalLink[]> = {
       "anchor": "redes e Wi-Fi para quem está no Cristo Rei"
     }
   ],
+  "/bairros/novo-mundo": [
+    {
+      "href": "/servicos/manutencao-de-computador",
+      "anchor": "manutenção de computador para quem está no Novo Mundo"
+    },
+    {
+      "href": "/servicos/formatacao",
+      "anchor": "formatação de computador para quem está no Novo Mundo"
+    },
+    {
+      "href": "/servicos/redes-e-wifi",
+      "anchor": "redes e Wi-Fi para quem está no Novo Mundo"
+    }
+  ],
   "/bairros/portao": [
     {
       "href": "/servicos/manutencao-tv/portao",
@@ -271,6 +285,32 @@ export const SERVICOS_POR_BAIRRO: Record<string, LocalLink[]> = {
       "anchor": "redes e Wi-Fi para quem está no Portão"
     }
   ],
+  "/bairros/reboucas": [
+    {
+      "href": "/servicos/conserto-pc-notebook/reboucas",
+      "anchor": "conserto de PC e notebook no Rebouças"
+    },
+    {
+      "href": "/servicos/formatacao-computador/reboucas",
+      "anchor": "formatação de computador no Rebouças"
+    },
+    {
+      "href": "/servicos/manutencao-tv/reboucas",
+      "anchor": "manutenção de Smart TV no Rebouças"
+    },
+    {
+      "href": "/servicos/redes-wifi/reboucas",
+      "anchor": "instalação e ajuste de Wi-Fi no Rebouças"
+    },
+    {
+      "href": "/servicos/remocao-virus/reboucas",
+      "anchor": "remoção de vírus no Rebouças"
+    },
+    {
+      "href": "/servicos/upgrade-ssd-memoria/reboucas",
+      "anchor": "upgrade de SSD e memória no Rebouças"
+    }
+  ],
   "/bairros/santa-felicidade": [
     {
       "href": "/servicos/manutencao-tv/santa-felicidade",
@@ -291,6 +331,34 @@ export const SERVICOS_POR_BAIRRO: Record<string, LocalLink[]> = {
     {
       "href": "/servicos/redes-e-wifi",
       "anchor": "redes e Wi-Fi para quem está em Santa Felicidade"
+    }
+  ],
+  "/bairros/uberaba": [
+    {
+      "href": "/servicos/manutencao-de-computador",
+      "anchor": "manutenção de computador para quem está no Uberaba"
+    },
+    {
+      "href": "/servicos/formatacao",
+      "anchor": "formatação de computador para quem está no Uberaba"
+    },
+    {
+      "href": "/servicos/redes-e-wifi",
+      "anchor": "redes e Wi-Fi para quem está no Uberaba"
+    }
+  ],
+  "/bairros/xaxim": [
+    {
+      "href": "/servicos/manutencao-de-computador",
+      "anchor": "manutenção de computador para quem está no Xaxim"
+    },
+    {
+      "href": "/servicos/formatacao",
+      "anchor": "formatação de computador para quem está no Xaxim"
+    },
+    {
+      "href": "/servicos/redes-e-wifi",
+      "anchor": "redes e Wi-Fi para quem está no Xaxim"
     }
   ]
 };
