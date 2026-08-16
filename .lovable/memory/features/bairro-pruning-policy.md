@@ -4,11 +4,12 @@ description: Bairros-âncora indexáveis de Curitiba, critérios de promoção e
 type: feature
 ---
 
-## Bairros-âncora indexáveis (20, atualizado 2026-08-16)
+## Bairros-âncora indexáveis (26, atualizado 2026-08-16)
 
 cic, batel, agua-verde, centro, portao, bigorrilho, santa-felicidade, cabral,
 cristo-rei, boa-vista, cajuru, boqueirao, **xaxim, novo-mundo, uberaba, reboucas**,
-**hauer, pinheirinho, bacacheri, capao-raso**.
+**hauer, pinheirinho, bacacheri, capao-raso**,
+**sitio-cercado, fazendinha, campo-comprido, merces, juveve, seminario**.
 
 Todos usam `BairroLocalLayout` + entrada curada em `src/lib/bairrosData.ts`
 (introdução local, operação, atendimento, coleta/bancada, FAQ exclusiva).
