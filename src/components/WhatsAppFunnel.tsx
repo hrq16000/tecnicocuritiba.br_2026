@@ -21,6 +21,8 @@ import {
   trackFunnelBusinessProfile,
   setFunnelBranchContext,
   trackWaClick,
+  trackCallClick,
+
   trackAgendamentoDeepLinkClick,
   trackTriageAutoOpen,
   trackTriagePreset,
@@ -415,7 +417,15 @@ export const WhatsAppFunnel = () => {
       const a = target?.closest("a") as HTMLAnchorElement | null;
       if (!a) return;
       const href = a.getAttribute("href");
+      // Cliques em telefone (quando existirem) também entram no rastreamento.
+      if (href?.startsWith("tel:")) {
+        const telLoc =
+          a.closest<HTMLElement>("[data-cta-location]")?.dataset.ctaLocation ?? "tel_link";
+        trackCallClick(telLoc, { path: window.location.pathname });
+        return;
+      }
       if (!isWhatsAppHref(href)) return;
+
       if (a.dataset.funnelSkip === "1") return;
       e.preventDefault();
       e.stopPropagation();
