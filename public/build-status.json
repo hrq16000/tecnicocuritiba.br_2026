@@ -1,6 +1,6 @@
 {
-  "startedAt": "2026-08-15T19:18:11.887Z",
-  "finishedAt": "2026-08-15T19:18:13.733Z",
+  "startedAt": "2026-08-16T01:39:43.517Z",
+  "finishedAt": "2026-08-16T01:39:45.137Z",
   "ok": false,
   "total": 9,
   "passed": 6,
@@ -12,72 +12,72 @@
       "label": "ads.txt e metatag AdSense",
       "status": "ok",
       "detail": "sem pendências",
-      "durationMs": 106,
-      "checkedAt": "2026-08-15T19:18:11.993Z"
+      "durationMs": 71,
+      "checkedAt": "2026-08-16T01:39:43.588Z"
     },
     {
       "id": "policy-jsonld",
       "label": "JSON-LD das políticas",
       "status": "ok",
       "detail": "sem pendências",
-      "durationMs": 93,
-      "checkedAt": "2026-08-15T19:18:12.086Z"
+      "durationMs": 69,
+      "checkedAt": "2026-08-16T01:39:43.657Z"
     },
     {
       "id": "telemetry",
       "label": "Transparência da telemetria",
       "status": "ok",
       "detail": "sem pendências",
-      "durationMs": 85,
-      "checkedAt": "2026-08-15T19:18:12.171Z"
+      "durationMs": 75,
+      "checkedAt": "2026-08-16T01:39:43.732Z"
     },
     {
       "id": "missing-exports",
       "label": "Exports ausentes nas rotas",
       "status": "ok",
       "detail": "sem pendências",
-      "durationMs": 773,
-      "checkedAt": "2026-08-15T19:18:12.944Z"
+      "durationMs": 710,
+      "checkedAt": "2026-08-16T01:39:44.442Z"
     },
     {
       "id": "internal-links",
       "label": "Links internos sem 404",
       "status": "fail",
       "detail": "  - link interno quebrado → /apple-touch-icon-20260624.png (em src/routes/__root.tsx)",
-      "durationMs": 234,
-      "checkedAt": "2026-08-15T19:18:13.178Z"
+      "durationMs": 227,
+      "checkedAt": "2026-08-16T01:39:44.669Z"
     },
     {
       "id": "sitemap-source",
       "label": "Sitemap x fonte curada",
       "status": "fail",
       "detail": "  ✗ [sitemap-editorial.xml] URL sem rota correspondente (404): /blog/como-escolher-uma-workstation",
-      "durationMs": 117,
-      "checkedAt": "2026-08-15T19:18:13.295Z"
+      "durationMs": 123,
+      "checkedAt": "2026-08-16T01:39:44.792Z"
     },
     {
       "id": "aggregate-rating",
       "label": "Ausência de aggregateRating fabricado",
       "status": "ok",
       "detail": "sem pendências",
-      "durationMs": 129,
-      "checkedAt": "2026-08-15T19:18:13.424Z"
+      "durationMs": 112,
+      "checkedAt": "2026-08-16T01:39:44.904Z"
     },
     {
       "id": "media-assets",
       "label": "og:image, mídia kit e assets públicos",
       "status": "ok",
       "detail": "sem pendências",
-      "durationMs": 199,
-      "checkedAt": "2026-08-15T19:18:13.623Z"
+      "durationMs": 158,
+      "checkedAt": "2026-08-16T01:39:45.062Z"
     },
     {
       "id": "orphan-pages",
       "label": "Páginas órfãs",
       "status": "fail",
       "detail": "      esperado: montar na rota canônica ou remover o arquivo",
-      "durationMs": 110,
-      "checkedAt": "2026-08-15T19:18:13.733Z"
+      "durationMs": 75,
+      "checkedAt": "2026-08-16T01:39:45.137Z"
     }
   ]
 }

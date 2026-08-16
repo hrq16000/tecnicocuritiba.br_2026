@@ -84,6 +84,10 @@ não estão inclusas e o valor final só é confirmado após diagnóstico e apro
 - [Técnico de Informática no Cristo Rei (Curitiba) | Notebook e PC](https://tecnico.curitiba.br/bairros/cristo-rei)
 - [Técnico de Informática no Boa Vista (Curitiba) | PC e Notebook](https://tecnico.curitiba.br/bairros/boa-vista)
 - [Técnico de Informática no Cajuru (Curitiba) | PC e Notebook](https://tecnico.curitiba.br/bairros/cajuru)
+- [Técnico de Informática no Xaxim (Curitiba) | Notebook e PC](https://tecnico.curitiba.br/bairros/xaxim)
+- [Técnico de Informática no Novo Mundo (Curitiba) | PC e Notebook](https://tecnico.curitiba.br/bairros/novo-mundo)
+- [Técnico de Informática no Uberaba (Curitiba) | Notebook e PC](https://tecnico.curitiba.br/bairros/uberaba)
+- [Técnico de Informática no Rebouças (Curitiba) | Empresas e PC](https://tecnico.curitiba.br/bairros/reboucas)
 - [Técnico de Informática no Boqueirão (Curitiba) | PC e Notebook](https://tecnico.curitiba.br/bairros/boqueirao)
 
 ## Problemas comuns
