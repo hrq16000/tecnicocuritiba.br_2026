@@ -1,33 +1,45 @@
 import { Link } from "@/lib/router-compat";
 import { MapPin } from "lucide-react";
+import { bairroPathPorNome } from "@/lib/bairroLinks";
 
+/**
+ * Bairros exibidos na home. A existência de página é resolvida em
+ * `bairroPathPorNome` a partir de `src/lib/bairrosData.ts` — a lista aqui é só
+ * de exibição, então nenhum bairro publicado fica sem link de entrada.
+ */
 const neighborhoods = [
-  { name: "Centro", slug: "centro", hasPage: true },
-  { name: "Batel", slug: "batel", hasPage: true },
-  { name: "Água Verde", slug: "agua-verde", hasPage: false },
-  { name: "Portão", slug: "portao", hasPage: true },
-  { name: "Bigorrilho", slug: "bigorrilho", hasPage: false },
-  { name: "Mercês", slug: "merces", hasPage: false },
-  { name: "Campina do Siqueira", slug: "campina-do-siqueira", hasPage: false },
-  { name: "Santa Felicidade", slug: "santa-felicidade", hasPage: true },
-  { name: "Boa Vista", slug: "boa-vista", hasPage: false },
-  { name: "Juvevê", slug: "juveve", hasPage: false },
-  { name: "Alto da XV", slug: "alto-da-xv", hasPage: false },
-  { name: "Cabral", slug: "cabral", hasPage: false },
-  { name: "Cristo Rei", slug: "cristo-rei", hasPage: false },
-  { name: "Jardim das Américas", slug: "jardim-das-americas", hasPage: false },
-  { name: "Cajuru", slug: "cajuru", hasPage: false },
-  { name: "Uberaba", slug: "uberaba", hasPage: false },
-  { name: "Pinheirinho", slug: "pinheirinho", hasPage: false },
-  { name: "Xaxim", slug: "xaxim", hasPage: false },
-  { name: "Boqueirão", slug: "boqueirao", hasPage: false },
-  { name: "Hauer", slug: "hauer", hasPage: false },
-  { name: "Bacacheri", slug: "bacacheri", hasPage: false },
-  { name: "Tingui", slug: "tingui", hasPage: false },
-  { name: "Atuba", slug: "atuba", hasPage: false },
-  { name: "Campo Comprido", slug: "campo-comprido", hasPage: true },
-  { name: "CIC", slug: "cic", hasPage: true },
-];
+  "Centro",
+  "Batel",
+  "Água Verde",
+  "Portão",
+  "Bigorrilho",
+  "Mercês",
+  "Campina do Siqueira",
+  "Santa Felicidade",
+  "Boa Vista",
+  "Juvevê",
+  "Alto da XV",
+  "Cabral",
+  "Cristo Rei",
+  "Jardim das Américas",
+  "Cajuru",
+  "Uberaba",
+  "Pinheirinho",
+  "Xaxim",
+  "Boqueirão",
+  "Hauer",
+  "Bacacheri",
+  "Rebouças",
+  "Novo Mundo",
+  "Capão Raso",
+  "Sítio Cercado",
+  "Fazendinha",
+  "Seminário",
+  "Juvevê",
+  "Campo Comprido",
+  "CIC",
+].filter((nome, i, arr) => arr.indexOf(nome) === i);
+
 
 export const NeighborhoodsSection = () => {
   return (
