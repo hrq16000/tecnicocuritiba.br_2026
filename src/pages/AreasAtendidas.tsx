@@ -218,9 +218,10 @@ const AreasAtendidas = () => {
                           {to ? (
                             <Link
                               to={to}
+                              aria-label={`Técnico de informática em ${b}, Curitiba`}
                               className="inline-flex rounded-full border border-accent/40 bg-accent/10 px-3 py-1 text-sm font-semibold text-accent"
                             >
-                              Técnico de informática {b}
+                              {b}
                             </Link>
                           ) : (
                             <span className="inline-flex rounded-full border border-border px-3 py-1 text-sm text-muted-foreground">
