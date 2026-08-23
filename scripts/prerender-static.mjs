@@ -26,8 +26,14 @@ if (!existsSync(SERVER)) {
 
 const handler = (await import(pathToFileURL(SERVER).href)).default;
 
+// Artigos aprovados entram no sitemap editorial; sem prerender eles ficariam
+// sem HTML servido (risco de soft-404 para o crawler).
 const paths = Array.from(
-  new Set(["/", ...CURATED_ROUTES.map((r) => r?.path).filter((p) => typeof p === "string")]),
+  new Set([
+    "/",
+    ...CURATED_ROUTES.map((r) => r?.path).filter((p) => typeof p === "string"),
+    ...EDITORIAL_WAVE_SLUGS.map((slug) => `/blog/${slug}`),
+  ]),
 );
 
 const outFile = (path) =>
