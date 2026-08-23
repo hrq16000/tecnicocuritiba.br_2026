@@ -109,8 +109,7 @@ export const HeroPremium = () => {
               width={1920}
               height={1088}
               loading={i === 0 ? "eager" : "lazy"}
-              // @ts-ignore - fetchpriority é atributo HTML válido
-              fetchpriority={i === 0 ? "high" : "low"}
+              fetchPriority={i === 0 ? "high" : "low"}
               decoding="async"
               className={`hero-photo absolute inset-0 h-full w-full object-cover transition-opacity duration-[1200ms] ease-in-out ${
                 i === active ? "opacity-100" : "opacity-0"

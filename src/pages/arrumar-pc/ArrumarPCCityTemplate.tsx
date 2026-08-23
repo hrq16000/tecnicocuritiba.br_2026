@@ -160,7 +160,7 @@ export const ArrumarPCCityTemplate = ({ data }: { data: CityData }) => {
             // @ts-expect-error - react-helmet passes attrs through
             imagesrcset={heroSet.webpSrcset || heroSet.jpgSrcset}
             imagesizes={heroSet.sizes}
-            fetchpriority="high"
+            fetchPriority="high"
           />
         )}
       </Helmet>

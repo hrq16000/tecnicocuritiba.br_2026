@@ -144,8 +144,7 @@ export const FastHeader = () => {
             width="304"
             height="71"
             decoding="sync"
-            // @ts-ignore - fetchpriority is a valid HTML attribute
-            fetchpriority="high"
+            fetchPriority="high"
             className="h-11 w-auto object-scale-down transition-[height] duration-200 sm:h-12 md:h-14 [html[data-scrolled='1']_&]:h-9 [html[data-scrolled='1']_&]:md:h-10"
           />
         </a>
