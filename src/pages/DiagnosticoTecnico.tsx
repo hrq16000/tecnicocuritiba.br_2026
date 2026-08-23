@@ -38,22 +38,6 @@ const DiagnosticoTecnico = () => {
   return (
     <div className="min-h-screen bg-background">
       <PageSEO title="Diagnóstico Técnico de Computador e Notebook em Curitiba" description="Diagnóstico técnico para identificar falhas em computadores e notebooks, avaliar a viabilidade do serviço e orientar o valor do atendimento." path="/diagnostico-tecnico" breadcrumbs={[{ name: "Início", path: "/" }, { name: "Diagnóstico Técnico", path: "/diagnostico-tecnico" }]} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        mainEntity: faqItems.map(f => ({
-          "@type": "Question", name: f.q,
-          acceptedAnswer: { "@type": "Answer", text: f.a },
-        })),
-      })}} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Início", item: "https://tecnico.curitiba.br/" },
-          { "@type": "ListItem", position: 2, name: "Diagnóstico Técnico", item: "https://tecnico.curitiba.br/diagnostico-tecnico" },
-        ],
-      })}} />
       <JsonLdSchema />
       <Header />
       <Breadcrumbs items={[{ label: "Diagnóstico Técnico" }]} />

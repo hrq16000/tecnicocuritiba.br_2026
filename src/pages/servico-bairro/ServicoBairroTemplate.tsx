@@ -143,24 +143,14 @@ export const ServicoBairroTemplate = ({ data }: { data: ServicoBairroData }) => 
     url: canonical,
   };
 
-  // ── FAQPage específico da página (usa apenas o data.faq real da rota)
-  const faqLd = data.faq.length
-    ? {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "@id": `${canonical}#faq`,
-        mainEntity: data.faq.map((f) => ({
-          "@type": "Question",
-          name: f.pergunta,
-          acceptedAnswer: { "@type": "Answer", text: f.resposta },
-        })),
-      }
-    : null;
+  // FAQPage é emitido uma única vez pelo head estático da rota (seoHead),
+  // por isso não entra neste grafo — evita FAQPage duplicado no HTML servido.
 
   const jsonLdGraph = {
     "@context": "https://schema.org",
-    "@graph": [localBusinessLd, serviceLd, ...(faqLd ? [faqLd] : [])],
+    "@graph": [localBusinessLd, serviceLd],
   };
+
 
 
   return (

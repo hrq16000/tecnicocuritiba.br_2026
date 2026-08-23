@@ -37,6 +37,41 @@ const jsonLd = (key: string, schema: unknown) => ({
   children: JSON.stringify(schema),
 });
 
+/** Título curto (sem sufixo de marca) para nomes de entidade. */
+const shortTitle = (title: string) => title.split(/\s[|—–]\s/)[0].trim();
+
+/** Hubs que realmente respondem 200 — só eles podem virar nó intermediário. */
+const HUB_PATHS: Record<string, string> = {
+  "/servicos": "Serviços",
+  "/problemas": "Problemas",
+  "/blog": "Blog",
+  "/empresas": "Empresas",
+};
+
+interface Crumb {
+  name: string;
+  path: string;
+}
+
+/** Trilha derivada do path real (Início > hub existente > página atual). */
+function buildBreadcrumbs(path: string, title: string): Crumb[] {
+  if (path === "/") return [];
+  const segments = path.split("/").filter(Boolean);
+  const crumbs: Crumb[] = [{ name: "Início", path: "/" }];
+  let acc = "";
+  segments.forEach((seg, i) => {
+    acc += `/${seg}`;
+    if (i === segments.length - 1) {
+      crumbs.push({ name: shortTitle(title), path: acc });
+    } else if (HUB_PATHS[acc]) {
+      crumbs.push({ name: HUB_PATHS[acc], path: acc });
+    }
+  });
+  return crumbs;
+}
+
+
+
 export function seoHead({
   path,
   title,
@@ -71,6 +106,62 @@ export function seoHead({
       }),
     );
   }
+
+  // BreadcrumbList — derivado do próprio path (dados reais da árvore de URLs).
+  const crumbs = buildBreadcrumbs(path, title);
+  if (crumbs.length > 1) {
+    scripts.push(
+      jsonLd("breadcrumb", {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "@id": `${url}#breadcrumb`,
+        itemListElement: crumbs.map((c, i) => ({
+          "@type": "ListItem",
+          position: i + 1,
+          name: c.name,
+          item: absoluteUrl(c.path),
+        })),
+      }),
+    );
+  }
+
+  // Service — apenas em rotas de serviço; sem preço inventado (o componente
+  // client-side sobrescreve o slot com a oferta real quando existir).
+  if (path.startsWith("/servicos/")) {
+    scripts.push(
+      jsonLd("service", {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "@id": `${url}#service`,
+        name: shortTitle(title),
+        description,
+        category: "Assistência Técnica de Informática",
+        serviceType: shortTitle(title),
+        url,
+        provider: { "@id": `${siteConfig.baseUrl}/#organization` },
+        areaServed: siteConfig.serviceArea.map((name) => ({ "@type": "City", name })),
+      }),
+    );
+  }
+
+  // Article — artigos editoriais aprovados (ogType article em /blog/*).
+  if (ogType === "article" && path.startsWith("/blog/") && !noindex) {
+    scripts.push(
+      jsonLd("article", {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "@id": `${url}#article`,
+        headline: shortTitle(title),
+        description,
+        inLanguage: "pt-BR",
+        mainEntityOfPage: url,
+        image: ogImage,
+        author: { "@id": `${siteConfig.baseUrl}/#organization` },
+        publisher: { "@id": `${siteConfig.baseUrl}/#organization` },
+      }),
+    );
+  }
+
 
   return {
     meta: [
