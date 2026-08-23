@@ -18,6 +18,10 @@
 import { existsSync, readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { createSign } from "node:crypto";
 import { BASE_URL } from "./lib/curated-urls.mjs";
+import { exitIfLocalMode } from "./lib/local-mode.mjs";
+
+// Ambiente local/offline: nao chama servicos externos.
+exitIfLocalMode("IndexNow + Google Indexing API", "solicitacao de recrawl");
 
 const args = process.argv.slice(2);
 const FORCE = args.includes("--force");
