@@ -42,7 +42,7 @@ const serverPolicy = readFileSync("src/lib/securityHeaders.ts", "utf8");
 const serverDrift: string[] = [];
 for (const [nome, valor] of Object.entries(CSP_DIRECTIVES as Record<string, string[]>)) {
   const linha = `"${nome}": [${valor.map((v) => `"${v}"`).join(", ")}]`;
-  const compacto = serverPolicy.replace(/\s+/g, " ").replace(/,\s*\]/g, "]");
+  const compacto = serverPolicy.replace(/\s+/g, " ").replace(/,\s*\]/g, "]").replace(/\[ /g, "[").replace(/ \]/g, "]");
   if (!compacto.includes(linha)) serverDrift.push(`csp:${nome}`);
 }
 if (!serverPolicy.includes((SECURITY_HEADERS as Record<string, string>)["Permissions-Policy"]))
