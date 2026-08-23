@@ -37,6 +37,46 @@ const jsonLd = (key: string, schema: unknown) => ({
   children: JSON.stringify(schema),
 });
 
+/** Título curto (sem sufixo de marca) para nomes de entidade. */
+const shortTitle = (title: string) => title.split(/\s[|—–]\s/)[0].trim();
+
+const SEGMENT_LABELS: Record<string, string> = {
+  servicos: "Serviços",
+  bairros: "Bairros",
+  problemas: "Problemas",
+  blog: "Blog",
+  precos: "Preços",
+  empresas: "Empresas",
+};
+
+const prettify = (slug: string) =>
+  slug
+    .split("-")
+    .map((w) => (w.length <= 2 ? w : w.charAt(0).toUpperCase() + w.slice(1)))
+    .join(" ");
+
+interface Crumb {
+  name: string;
+  path: string;
+}
+
+/** Trilha derivada do path real (Home > seções > página atual). */
+function buildBreadcrumbs(path: string, title: string): Crumb[] {
+  const segments = path.split("/").filter(Boolean);
+  const crumbs: Crumb[] = [{ name: "Início", path: "/" }];
+  let acc = "";
+  segments.forEach((seg, i) => {
+    acc += `/${seg}`;
+    const isLast = i === segments.length - 1;
+    crumbs.push({
+      name: isLast ? shortTitle(title) : (SEGMENT_LABELS[seg] ?? prettify(seg)),
+      path: acc,
+    });
+  });
+  return crumbs;
+}
+
+
 export function seoHead({
   path,
   title,
