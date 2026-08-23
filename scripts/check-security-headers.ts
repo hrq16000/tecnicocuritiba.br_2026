@@ -10,7 +10,7 @@
  *   - rejects dangerous CSP tokens (wildcards, http:, unsafe-eval).
  */
 import { readFileSync } from "node:fs";
-import { SECURITY_HEADERS } from "./lib/security-headers.mjs";
+import { CSP_DIRECTIVES, SECURITY_HEADERS } from "./lib/security-headers.mjs";
 
 const REQUIRED = [
   "Strict-Transport-Security",
@@ -35,6 +35,36 @@ if (drift.length > 0) {
   process.exit(1);
 }
 
+
+// Antidrift 2: src/lib/securityHeaders.ts (política aplicada por src/server.ts)
+// precisa espelhar a CSP e o Permissions-Policy da fonte única.
+const serverPolicy = readFileSync("src/lib/securityHeaders.ts", "utf8");
+const serverDrift: string[] = [];
+const compacto = serverPolicy
+  .replace(/\s+/g, " ")
+  .replace(/,\s*\]/g, "]")
+  .replace(/\[ /g, "[")
+  .replace(/ \]/g, "]");
+for (const [nome, valores] of Object.entries(CSP_DIRECTIVES as Record<string, string[]>)) {
+  if (!compacto.includes(`"${nome}": [`)) {
+    serverDrift.push(`csp:${nome}`);
+    continue;
+  }
+  // Valores podem estar como literal ou via constante (SUPABASE/SUPABASE_WS).
+  const faltando = valores.filter(
+    (v) => !compacto.includes(`"${v}"`) && !serverPolicy.includes(`"${v}"`),
+  );
+  if (faltando.length) serverDrift.push(`csp:${nome}`);
+}
+if (!serverPolicy.includes((SECURITY_HEADERS as Record<string, string>)["Permissions-Policy"]))
+  serverDrift.push("Permissions-Policy");
+if (!serverPolicy.includes('"X-Frame-Options": "DENY"')) serverDrift.push("X-Frame-Options");
+if (serverDrift.length > 0) {
+  console.error(
+    `[security] src/lib/securityHeaders.ts divergiu da fonte única: ${serverDrift.join(", ")}.`,
+  );
+  process.exit(1);
+}
 
 const missing = REQUIRED.filter((h) => !new RegExp(`^\\s+${h}:`, "m").test(file));
 
