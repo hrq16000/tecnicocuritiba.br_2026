@@ -18,7 +18,8 @@
 import { readFileSync, existsSync, writeFileSync, mkdirSync, readdirSync } from "node:fs";
 import path from "node:path";
 
-const DIST = path.resolve(process.argv[2] || "dist");
+const GATE = process.argv.includes("--gate");
+const DIST = path.resolve(process.argv.slice(2).find((a) => !a.startsWith("--")) || "dist");
 const CLIENT = existsSync(path.join(DIST, "client")) ? path.join(DIST, "client") : DIST;
 const CANONICAL = "https://tecnico.curitiba.br";
 
@@ -30,6 +31,7 @@ for (const f of readdirSync(sitemapDir).filter((f) => /^sitemap.*\.xml$/.test(f)
   const xml = readFileSync(path.join(sitemapDir, f), "utf8");
   for (const m of xml.matchAll(/<loc>([^<]+)<\/loc>/g)) {
     const p = m[1].trim().replace(CANONICAL, "") || "/";
+    if (p.endsWith(".xml")) continue; // índice de sitemaps, não é página
     urls.add(p.replace(/\/$/, "") || "/");
   }
 }
@@ -202,6 +204,17 @@ const md = [
   ),
 ].join("\n");
 writeFileSync("reports/internal-graph.md", `${md}\n`);
+
+if (GATE) {
+  const bloqueios = [];
+  if (orfas.length) bloqueios.push(`${orfas.length} URL(s) sem nenhum link interno: ${orfas.join(", ")}`);
+  if (semAlcance.length)
+    bloqueios.push(`${semAlcance.length} URL(s) inalcançável(is) a partir da home: ${semAlcance.join(", ")}`);
+  if (bloqueios.length) {
+    console.error(`[internal-graph] BLOQUEADO:\n  · ${bloqueios.join("\n  · ")}`);
+    process.exit(1);
+  }
+}
 
 console.log(
   `[internal-graph] ${all.length} URLs · órfãs=${orfas.length} · órfãs contextuais=${orfasCtx.length} · sub-linkadas=${sub.length} · inalcançáveis=${semAlcance.length}`,
