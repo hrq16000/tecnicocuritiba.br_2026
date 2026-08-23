@@ -58,11 +58,24 @@ Deno.serve(async (req) => {
     });
   }
 
+  // Ambiente local (supabase start): não chama a internet, apenas simula sucesso.
+  const isLocal = (Deno.env.get("SUPABASE_URL") ?? "").includes("127.0.0.1")
+    || (Deno.env.get("SUPABASE_URL") ?? "").includes("localhost")
+    || Deno.env.get("LOCAL_DEV") === "1";
+  if (isLocal) {
+    console.log(`[local-mode] IndexNow: ${urlList.length} URL(s) — sucesso simulado, nada enviado.`);
+    return new Response(
+      JSON.stringify({ ok: true, mocked: true, submitted: urlList.length, host: HOST }),
+      { headers: { ...corsHeaders, "Content-Type": "application/json" } },
+    );
+  }
+
   // IndexNow caps at 10,000 URLs per request. We chunk by 1,000 to be safe.
   const chunks: string[][] = [];
   for (let i = 0; i < urlList.length; i += 1000) chunks.push(urlList.slice(i, i + 1000));
 
   const results: Array<{ status: number; count: number }> = [];
+
   for (const chunk of chunks) {
     try {
       const r = await fetch(ENDPOINT, {
