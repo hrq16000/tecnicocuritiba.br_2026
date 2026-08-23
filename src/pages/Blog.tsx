@@ -224,6 +224,103 @@ const Blog = () => {
           </div>
         </section>
 
+        {/* ═══════════ PARA QUE SERVEM OS GUIAS ═══════════ */}
+        <section className="py-14 bg-background">
+          <div className="container mx-auto px-4">
+            <AnimatedSection>
+              <div className="max-w-3xl mx-auto space-y-5 text-foreground/90 leading-relaxed">
+                <h2 className="text-2xl md:text-3xl font-heading font-bold text-foreground">
+                  Para que servem estes guias
+                </h2>
+                <p>
+                  Cada guia nasce de uma dúvida que aparece repetidamente no atendimento em
+                  Curitiba: se vale a pena consertar ou trocar um equipamento, o que muda de
+                  verdade ao instalar um SSD, como reduzir o risco de perder arquivos, quando
+                  a formatação resolve e quando ela só empurra o problema para a frente. Em vez
+                  de responder o mesmo assunto por mensagem, escrevemos o raciocínio completo,
+                  com os critérios que usamos na bancada.
+                </p>
+                <p>
+                  O texto é escrito por quem executa o serviço, revisado antes de publicar e
+                  atualizado apenas quando há mudança material — não trocamos a data para
+                  simular conteúdo novo. Quando um guia cita um limite (peça sem reposição,
+                  reparo que não compensa, garantia que não cobre determinada falha), esse
+                  limite fica escrito, mesmo quando não favorece a venda do serviço.
+                </p>
+                <h3 className="text-xl font-heading font-semibold text-foreground pt-2">
+                  Como usar junto com o diagnóstico
+                </h3>
+                <p>
+                  Guia não substitui diagnóstico. O material aqui ajuda a entender o cenário e
+                  a chegar na conversa com as perguntas certas; a definição do reparo depende de
+                  ver o equipamento, os sintomas reais e o histórico de uso. Se o seu caso já
+                  tem sintoma claro, o caminho mais rápido é partir do sintoma e não do artigo.
+                </p>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-accent shrink-0 mt-0.5" />
+                    <span>
+                      Sintoma definido (lentidão, travamento, não liga, Wi-Fi caindo):
+                      comece pelo{" "}
+                      <Link to="/problemas" className="text-accent font-medium hover:underline">
+                        hub de problemas
+                      </Link>
+                      , que separa cada falha por causa provável.
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-accent shrink-0 mt-0.5" />
+                    <span>
+                      Precisa de preço e prazo antes de decidir: veja a tabela em{" "}
+                      <Link to="/precos" className="text-accent font-medium hover:underline">
+                        preços
+                      </Link>{" "}
+                      e a explicação de{" "}
+                      <Link to="/como-funciona" className="text-accent font-medium hover:underline">
+                        como funciona o atendimento
+                      </Link>
+                      .
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-accent shrink-0 mt-0.5" />
+                    <span>
+                      Equipamento parado de empresa ou home office: a página de{" "}
+                      <Link to="/empresas" className="text-accent font-medium hover:underline">
+                        atendimento para empresas
+                      </Link>{" "}
+                      descreve prioridade, coleta e continuidade de trabalho.
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-accent shrink-0 mt-0.5" />
+                    <span>
+                      Quer saber onde atendemos: a lista de{" "}
+                      <Link to="/areas-atendidas" className="text-accent font-medium hover:underline">
+                        áreas atendidas
+                      </Link>{" "}
+                      mostra bairros de Curitiba e cidades da região metropolitana com coleta
+                      e entrega.
+                    </span>
+                  </li>
+                </ul>
+                <h3 className="text-xl font-heading font-semibold text-foreground pt-2">
+                  Ritmo de publicação
+                </h3>
+                <p>
+                  Publicamos poucos guias por vez, de propósito. Preferimos um material longo,
+                  específico e verificável a uma lista extensa de textos rasos — inclusive
+                  porque cada publicação passa por checagem de autoria, de fontes e de origem
+                  das imagens antes de entrar no ar. Guias que ainda não passaram por essa
+                  revisão simplesmente não aparecem nesta página.
+                </p>
+              </div>
+            </AnimatedSection>
+          </div>
+        </section>
+
+
+
         {/* ═══════════ POLÍTICA EDITORIAL ═══════════ */}
         <section className="py-14 bg-muted/30 border-y border-border">
           <div className="container mx-auto px-4">
