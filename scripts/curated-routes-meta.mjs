@@ -2003,7 +2003,7 @@ const BASE_ROUTES = [
 {
   "path": "/problemas/monitor-sem-sinal",
   "title": "Monitor Sem Sinal: Causas e Solução | Curitiba",
-  "description": "Monitor mostra \"sem sinal\" com o computador ligado? Veja como separar cabo, entrada errada, placa de vídeo e falha do próprio monitor com testes gratuitos antes de.",
+  "description": "Monitor mostra \"sem sinal\" com o computador ligado? Veja como separar cabo, entrada errada, placa de vídeo e falha do próprio monitor antes de gastar.",
   "h1": "Monitor sem sinal: cabo, entrada errada, placa de vídeo ou falha do monitor",
   "subtitulo": "A mensagem de sem sinal quase nunca diz onde está o defeito: ela apenas informa que nenhuma imagem chegou até a entrada selecionada.",
   "blocos": [
