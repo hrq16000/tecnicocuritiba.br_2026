@@ -7,7 +7,7 @@ export const Route = createFileRoute("/problemas/teclado-de-notebook-nao-funcion
   head: () => seoHead({
     "path": "/problemas/teclado-de-notebook-nao-funciona",
     "title": "Teclado do Notebook Não Funciona: Causas e Troca | Curitiba",
-    "description": "Teclas que não respondem, teclado morto ou digitando sozinho? Entenda quando é software, cabo flat, líquido ou placa, o que a troca resolve e como funciona a.",
+    "description": "Teclas que não respondem, teclado morto ou digitando sozinho? Entenda quando é software, cabo flat, líquido ou placa, o que a troca resolve e como funciona.",
     "faq": [
       {
         "question": "Como saber se é o teclado ou o sistema?",

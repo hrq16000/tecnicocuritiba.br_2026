@@ -7,7 +7,7 @@ export const Route = createFileRoute("/problemas/tv-com-som-sem-imagem")({
   head: () => seoHead({
     "path": "/problemas/tv-com-som-sem-imagem",
     "title": "TV com Som e Sem Imagem? Diagnóstico em Curitiba",
-    "description": "Televisor com som normal e tela apagada: entenda a diferença entre falha de backlight, de placa de fonte e de painel, quais testes indicam cada caso e quando o.",
+    "description": "Televisor com som normal e tela apagada: entenda a diferença entre falha de backlight, de placa de fonte e de painel, quais testes indicam cada caso e quando.",
     "faq": [
       {
         "question": "Som funcionando e tela apagada significa que a TV tem conserto?",

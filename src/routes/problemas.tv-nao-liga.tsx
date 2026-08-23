@@ -7,7 +7,7 @@ export const Route = createFileRoute("/problemas/tv-nao-liga")({
   head: () => seoHead({
     "path": "/problemas/tv-nao-liga",
     "title": "TV Não Liga? Diagnóstico Técnico de TV em Curitiba",
-    "description": "TV que não liga, com LED piscando, som sem imagem ou desligando sozinha: entenda o que é fonte, placa principal, backlight ou painel, o que verificar antes do.",
+    "description": "TV que não liga, com LED piscando, som sem imagem ou desligando sozinha: entenda o que é fonte, placa principal, backlight ou painel, o que verificar.",
     "faq": [
       {
         "question": "TV que não liga tem conserto?",

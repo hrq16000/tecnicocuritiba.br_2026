@@ -7,7 +7,7 @@ export const Route = createFileRoute("/problemas/wifi-caindo-toda-hora")({
   head: () => seoHead({
     "path": "/problemas/wifi-caindo-toda-hora",
     "title": "Wi-Fi Caindo Toda Hora? Diagnóstico de Rede em Curitiba",
-    "description": "Wi-Fi que cai toda hora, sinal que some em um cômodo ou internet lenta só à noite: entenda a diferença entre falha do provedor, do roteador e da cobertura, o que.",
+    "description": "Wi-Fi que cai toda hora, sinal que some em um cômodo ou internet lenta só à noite: entenda a diferença entre falha do provedor, do roteador e da cobertura.",
     "faq": [
       {
         "question": "Wi-Fi caindo é sempre culpa do provedor?",

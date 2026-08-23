@@ -7,7 +7,7 @@ export const Route = createFileRoute("/problemas/computador-fazendo-barulho")({
   head: () => seoHead({
     "path": "/problemas/computador-fazendo-barulho",
     "title": "Computador Fazendo Barulho: Como Identificar a Origem | Curitiba",
-    "description": "PC barulhento, ventoinha rugindo, estalo ou zumbido? Entenda como separar cooler, fonte, disco rígido e ruído elétrico antes de trocar peça, e como funciona a.",
+    "description": "PC barulhento, ventoinha rugindo, estalo ou zumbido? Entenda como separar cooler, fonte, disco rígido e ruído elétrico antes de trocar peça, e como funciona.",
     "faq": [
       {
         "question": "Computador barulhento sempre significa defeito?",

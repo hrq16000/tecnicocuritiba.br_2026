@@ -7,7 +7,7 @@ export const Route = createFileRoute("/problemas/tela-azul-windows")({
   head: () => seoHead({
     "path": "/problemas/tela-azul-windows",
     "title": "Tela Azul no Windows? Diagnóstico Técnico em Curitiba",
-    "description": "Tela azul recorrente no Windows: o que o código de erro indica, quais causas são de memória, disco, driver ou temperatura, o que anotar antes do atendimento e.",
+    "description": "Tela azul recorrente no Windows: o que o código de erro indica, quais causas são de memória, disco, driver ou temperatura, o que anotar antes do atendimento.",
     "faq": [
       {
         "question": "Tela azul no Windows sempre significa defeito de hardware?",

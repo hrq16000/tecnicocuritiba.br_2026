@@ -7,7 +7,7 @@ export const Route = createFileRoute("/problemas/computador-lento")({
   head: () => seoHead({
     "path": "/problemas/computador-lento",
     "title": "Computador Lento? Diagnóstico Técnico em Curitiba",
-    "description": "Computador ou notebook lento para ligar e abrir programas? Veja os sintomas, as causas possíveis, quando SSD ou memória resolvem, quando formatar e quando trocar o.",
+    "description": "Computador ou notebook lento para ligar e abrir programas? Veja os sintomas, as causas possíveis, quando SSD ou memória resolvem, quando formatar e quando trocar.",
     "faq": [
       {
         "question": "Por que o computador fica lento com o tempo?",

@@ -7,7 +7,7 @@ export const Route = createFileRoute("/problemas/impressora-nao-imprime")({
   head: () => seoHead({
     "path": "/problemas/impressora-nao-imprime",
     "title": "Impressora Não Imprime: Causas e Solução | Curitiba",
-    "description": "Impressora aparece como offline, aceita o trabalho e não imprime ou sai página em branco? Veja como separar fila travada, driver, rede Wi-Fi e falha mecânica antes.",
+    "description": "Impressora aparece como offline, aceita o trabalho e não imprime ou sai página em branco? Veja como separar fila travada, driver, rede Wi-Fi e falha mecânica.",
     "faq": [
       {
         "question": "Minha impressora aparece como offline mesmo estando ligada. O que é isso?",

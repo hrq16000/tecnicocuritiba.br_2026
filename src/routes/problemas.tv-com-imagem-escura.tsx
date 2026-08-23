@@ -7,7 +7,7 @@ export const Route = createFileRoute("/problemas/tv-com-imagem-escura")({
   head: () => seoHead({
     "path": "/problemas/tv-com-imagem-escura",
     "title": "TV com Imagem Escura: Causas e Conserto | Curitiba",
-    "description": "TV com imagem escura, som normal e tela quase apagada? Veja como separar backlight queimado, placa de fonte, ajuste de brilho e falha do painel antes de trocar o.",
+    "description": "TV com imagem escura, som normal e tela quase apagada? Veja como separar backlight queimado, placa de fonte, ajuste de brilho e falha do painel antes de trocar.",
     "faq": [
       {
         "question": "Minha TV está com a imagem muito escura. É o painel?",
