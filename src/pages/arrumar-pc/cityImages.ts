@@ -1,19 +1,19 @@
 // Per-city OG and hero image mapping for /arrumar-pc/:cidade pages.
 // Uses Vite's eager glob so we get hashed asset URLs without 40+ explicit imports.
 
-const ogModules = import.meta.glob("@/assets/og-arrumar-pc-*.jpg", {
+const ogModules = import.meta.glob("../../assets/og-arrumar-pc-*.jpg", {
   eager: true,
   import: "default",
 }) as Record<string, string>;
 
 // Hero variants: hero-arrumar-pc-<slug>.jpg (original) and
 // hero-arrumar-pc-<slug>-<width>.{webp,jpg} (responsive variants)
-const heroJpgModules = import.meta.glob("@/assets/hero-arrumar-pc-*.jpg", {
+const heroJpgModules = import.meta.glob("../../assets/hero-arrumar-pc-*.jpg", {
   eager: true,
   import: "default",
 }) as Record<string, string>;
 
-const heroWebpModules = import.meta.glob("@/assets/hero-arrumar-pc-*.webp", {
+const heroWebpModules = import.meta.glob("../../assets/hero-arrumar-pc-*.webp", {
   eager: true,
   import: "default",
 }) as Record<string, string>;

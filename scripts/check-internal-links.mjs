@@ -18,44 +18,18 @@
  */
 import { readFileSync, readdirSync, statSync, existsSync } from "node:fs";
 import { join, extname } from "node:path";
+import { tanstackRouteIndex } from "./lib/tanstack-routes.mjs";
 
 const ROOT = process.cwd();
 const CANONICAL = "https://tecnico.curitiba.br";
 const STRICT = process.argv.includes("--strict");
 
 // ── 1. Rotas declaradas ──────────────────────────────────────────────────────
-const routerFiles = ["src/LegacyApp.tsx", "src/App.tsx"].filter((f) => {
-  try { statSync(join(ROOT, f)); return true; } catch { return false; }
-});
-
-const staticRoutes = new Set(["/"]);
-const dynamicRoutes = [];
-
-for (const file of routerFiles) {
-  const src = readFileSync(join(ROOT, file), "utf8");
-  for (const m of src.matchAll(/<Route\s+[^>]*path=(?:"([^"]+)"|\{`([^`]+)`\})/g)) {
-    const raw = (m[1] ?? m[2] ?? "").trim();
-    if (!raw || raw === "*") continue;
-    const path = raw.startsWith("/") ? raw : `/${raw}`;
-    if (path.includes(":") || path.includes("*")) {
-      dynamicRoutes.push(
-        new RegExp(
-          "^" +
-            path
-              .replace(/[.+?^${}()|[\]\\]/g, "\\$&")
-              .replace(/:[A-Za-z0-9_]+/g, "[^/]+")
-              .replace(/\*/g, ".*") +
-            "/?$",
-        ),
-      );
-    } else {
-      staticRoutes.add(path.replace(/\/$/, "") || "/");
-    }
-  }
-}
+const { staticRoutes, dynamicRoutes } = tanstackRouteIndex(ROOT);
 
 const isKnownRoute = (path) => {
   const clean = (path.split("#")[0].split("?")[0].replace(/\/$/, "") || "/");
+  if (existsSync(join(ROOT, "public", clean.replace(/^\//, "")))) return true;
   if (staticRoutes.has(clean)) return true;
   return dynamicRoutes.some((re) => re.test(clean));
 };
@@ -82,7 +56,7 @@ const walk = (dir) => {
     const st = statSync(full);
     if (st.isDirectory()) { walk(full); continue; }
     if (!SRC_EXT.has(extname(entry))) continue;
-    if (/\.(test|spec)\.tsx?$/.test(entry)) continue;
+    if (/\.(test|spec)\.tsx?$/.test(entry) || entry.endsWith(".gen.ts")) continue;
     const code = readFileSync(full, "utf8");
     const rel = full.replace(`${ROOT}/`, "");
     for (const m of code.matchAll(/(?:to|href)=["'](\/[^"'`{}\s]*)["']/g)) {

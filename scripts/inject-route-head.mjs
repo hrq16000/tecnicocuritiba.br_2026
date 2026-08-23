@@ -89,7 +89,7 @@ function apply(src, route) {
   let out = src;
   // Remove bloco anterior.
   const esc = (v) => v.trim().replace(/[.*+?^${}()|[\]\\/]/g, "\\$&");
-  const re = new RegExp(`[ \\t]*${esc(START)}[\\s\\S]*?${esc(END)}\\n?`, "g");
+  const re = new RegExp(`[ \\t]*${esc(START)}[\\s\\S]*?${esc(END)}(?:\\r?\\n){1,2}`, "g");
   out = out.replace(re, "");
   if (!out.includes('from "@/lib/seo/routeHead"')) {
     out = out.replace(
@@ -97,10 +97,12 @@ function apply(src, route) {
       `$1import { seoHead } from "@/lib/seo/routeHead";\n`,
     );
   }
-  const anchor = out.match(/createFileRoute\([^)]*\)\(\{\n/);
+  const anchor = out.match(/createFileRoute\([^)]*\)\(\{\r?\n/);
   if (!anchor) return null;
   const at = out.indexOf(anchor[0]) + anchor[0].length;
-  return `${out.slice(0, at)}${block(route)}\n${out.slice(at)}`;
+  const eol = src.includes("\r\n") ? "\r\n" : "\n";
+  const insertion = `${block(route)}\n`.replace(/\n/g, eol);
+  return `${out.slice(0, at)}${insertion}${out.slice(at)}`;
 }
 
 const index = routeFileIndex();
@@ -149,7 +151,7 @@ export const CURATED_DYNAMIC_HEAD: Record<string, RouteHeadInput> = ${JSON.strin
 `;
 const generatedPath = join(ROOT, "src/lib/seo/curatedDynamicHead.generated.ts");
 const current = (() => { try { return readFileSync(generatedPath, "utf8"); } catch { return ""; } })();
-if (current !== generated) {
+if (current.replace(/\r\n/g, "\n") !== generated) {
   if (CHECK) stale.push("src/lib/seo/curatedDynamicHead.generated.ts");
   else writeFileSync(generatedPath, generated);
 }

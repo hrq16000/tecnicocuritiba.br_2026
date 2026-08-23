@@ -26,6 +26,7 @@ import {
   EMPTY_SITEMAPS,
   SERVICO_BAIRRO,
 } from "./lib/curated-urls.mjs";
+import { tanstackRouteIndex } from "./lib/tanstack-routes.mjs";
 
 const ROOT = process.cwd();
 const failures = [];
@@ -35,33 +36,7 @@ const note = (m) => console.log(`  ✓ ${m}`);
 console.log("── check:sitemap-source ──");
 
 // ── 1. Rotas declaradas no roteador ─────────────────────────────────────────
-const routerFiles = ["src/LegacyApp.tsx", "src/App.tsx"].filter((f) => {
-  try { statSync(join(ROOT, f)); return true; } catch { return false; }
-});
-const staticRoutes = new Set(["/"]);
-const dynamicRoutes = [];
-for (const file of routerFiles) {
-  const src = readFileSync(join(ROOT, file), "utf8");
-  for (const m of src.matchAll(/<Route\s+[^>]*path=(?:"([^"]+)"|\{`([^`]+)`\})/g)) {
-    const raw = (m[1] ?? m[2] ?? "").trim();
-    if (!raw || raw === "*") continue;
-    const p = (raw.startsWith("/") ? raw : `/${raw}`).replace(/\/$/, "") || "/";
-    if (p.includes(":") || p.includes("*")) {
-      dynamicRoutes.push(
-        new RegExp(
-          "^" +
-            p
-              .replace(/[.+?^${}()|[\]\\]/g, "\\$&")
-              .replace(/:[A-Za-z0-9_]+/g, "[^/]+")
-              .replace(/\*/g, ".*") +
-            "$",
-        ),
-      );
-    } else {
-      staticRoutes.add(p);
-    }
-  }
-}
+const { staticRoutes, dynamicRoutes } = tanstackRouteIndex(ROOT);
 const hasRoute = (p) => staticRoutes.has(p) || dynamicRoutes.some((re) => re.test(p));
 
 // ── 2. Redirects / aliases ──────────────────────────────────────────────────
