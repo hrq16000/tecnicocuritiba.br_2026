@@ -226,7 +226,16 @@
     "indexing:request": "node scripts/request-indexing.mjs",
     "check:cnpj-dom": "node scripts/check-cnpj-dom.mjs dist",
     "test:e2e:cta": "playwright test e2e/cta-numero-oculto.spec.ts --config playwright.ci.config.ts",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "check:local-env": "node scripts/check-local-env.mjs",
+    "supabase:start": "supabase start",
+    "supabase:stop": "supabase stop",
+    "supabase:status": "supabase status",
+    "db:reset": "supabase db reset",
+    "db:diff": "supabase db diff -f",
+    "functions:serve": "supabase functions serve --env-file .env.local",
+    "functions:serve:debug": "supabase functions serve --env-file .env.local --inspect-mode brk",
+    "dev:local": "node scripts/check-local-env.mjs && vite dev"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
