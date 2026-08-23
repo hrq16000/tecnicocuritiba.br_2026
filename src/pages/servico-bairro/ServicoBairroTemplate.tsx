@@ -100,9 +100,6 @@ export const ServicoBairroTemplate = ({ data }: { data: ServicoBairroData }) => 
   };
 
 
-  // Preço numérico normalizado (aceita "R$ 99,99" ou "R$ 299,99")
-  const priceNumeric = data.precoBase.replace(/[^\d,]/g, "").replace(",", ".");
-
   // LocalBusiness, Service e BreadcrumbList são emitidos uma única vez pelo
   // head estático da rota (seoHead / inject-route-head). Emitir o grafo aqui
   // duplicava LocalBusiness e o @id `#service` no HTML servido.
