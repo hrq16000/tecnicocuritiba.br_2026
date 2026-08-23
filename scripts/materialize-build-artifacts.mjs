@@ -14,6 +14,11 @@ const targetServer = resolve(root, "dist/server");
 const targetClient = resolve(root, "dist/client");
 
 if (!existsSync(sourceServer) || !existsSync(sourcePublic)) {
+  // Builds recentes do Nitro já emitem direto em dist/{server,client}.
+  if (existsSync(targetServer) && existsSync(targetClient)) {
+    console.log("[build-artifacts] dist/{server,client} já emitidos pelo build; nada a espelhar.");
+    process.exit(0);
+  }
   console.error("[build-artifacts] .output incompleto; rode `vite build` antes dos gates pós-build.");
   process.exit(1);
 }
