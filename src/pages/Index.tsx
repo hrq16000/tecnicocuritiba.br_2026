@@ -41,20 +41,11 @@ const Index = () => {
       <main>
         <HeroPremium />
         <TrustStrip />
-
-
-        <LazyOnVisible minHeight="900px" rootMargin="-200px 0px">
-          <Suspense fallback={<SectionFallback height="900px" />}>
-            <HomeSections />
-          </Suspense>
-        </LazyOnVisible>
+        <HomeSections />
       </main>
 
-      <LazyOnVisible minHeight="400px" rootMargin="-100px 0px">
-        <Suspense fallback={<SectionFallback height="400px" />}>
-          <Footer />
-        </Suspense>
-      </LazyOnVisible>
+      <Footer />
+
     </div>
   );
 };
