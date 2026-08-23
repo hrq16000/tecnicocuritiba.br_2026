@@ -2938,8 +2938,21 @@ const BASE_ROUTES = [
     "path": "/quando-nao-compensa",
     "title": "Quando NÃO Compensa Reparar | Guia Técnico - Curitiba",
     "description": "Guia completo sobre quando compensa e quando NÃO compensa reparar computadores, notebooks, TVs e outros equipamentos. Dicas de um técnico profissional em Curitiba."
+  },
+  {
+    "path": "/blog",
+    "title": "Blog Técnico | Manutenção e Suporte de Informática",
+    "description": "Artigos técnicos revisados sobre manutenção de computadores, notebooks, redes e organização de TI, escritos pela operação que atende Curitiba e região.",
+    "localBusiness": false
+  },
+  {
+    "path": "/anuncie",
+    "title": "Anuncie no Técnico em Curitiba | Mídia Kit",
+    "description": "Espaços de divulgação para marcas e prestadores locais no portal Técnico em Curitiba. Formatos, critérios editoriais e como solicitar o mídia kit.",
+    "localBusiness": false
   }
 ];
+
 
 // Landings serviço × bairro: metadados espelhados de servicoBairroFactory.ts
 // (H1 e FAQ reais), garantindo paridade entre HTML estático e hidratação.
