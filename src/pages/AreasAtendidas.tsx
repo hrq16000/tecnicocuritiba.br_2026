@@ -20,7 +20,7 @@ const DESCRIPTION =
 const REGIONAIS = [
   {
     nome: "Centro e região central",
-    bairros: ["Centro", "Centro Cívico", "Alto da Glória", "Alto da XV", "São Francisco", "Rebouças", "Prado Velho"],
+    bairros: ["Centro", "Centro Cívico", "Alto da Glória", "Alto da XV", "Batel", "São Francisco", "Rebouças", "Prado Velho"],
     perfil: "Escritórios, consultórios e comércio: atendimento com hora marcada para não parar o expediente.",
   },
   {
