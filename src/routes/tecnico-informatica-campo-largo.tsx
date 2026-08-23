@@ -7,7 +7,7 @@ export const Route = createFileRoute("/tecnico-informatica-campo-largo")({
   head: () => seoHead({
     "path": "/tecnico-informatica-campo-largo",
     "title": "Técnico em Campo Largo para Notebook, PC e Redes",
-    "description": "Técnico de informática em Campo Largo: formatação, conserto de notebook e PC, upgrade de SSD, remoção de vírus, redes e suporte empresarial. Atendimento a domicílio ou coleta via WhatsApp."
+    "description": "Técnico de informática em Campo Largo: formatação, conserto de notebook e PC, upgrade de SSD, remoção de vírus, redes e suporte empresarial."
   }),
   /* seo:auto-end */
   component: TecnicoInformaticaCampoLargo,

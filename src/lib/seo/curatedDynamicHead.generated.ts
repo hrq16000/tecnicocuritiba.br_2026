@@ -6,7 +6,7 @@ export const CURATED_DYNAMIC_HEAD: Record<string, RouteHeadInput> = {
   "/servicos/formatacao-computador/cic": {
     "path": "/servicos/formatacao-computador/cic",
     "title": "Formatação de Computador — CIC, Curitiba",
-    "description": "Formatação de Computador no CIC, em Curitiba. Triagem por WhatsApp, atendimento agendado e condições por escrito. Visita de inspeção a partir de R$ 99,99.",
+    "description": "Formatação de Computador no CIC, Curitiba. Triagem por WhatsApp, agendamento e condições por escrito. Visita a partir de R$ 99,99.",
     "faq": [
       {
         "question": "Meus arquivos ficam salvos ao formatar no CIC?",
@@ -29,7 +29,7 @@ export const CURATED_DYNAMIC_HEAD: Record<string, RouteHeadInput> = {
   "/servicos/formatacao-computador/batel": {
     "path": "/servicos/formatacao-computador/batel",
     "title": "Formatação de Computador — Batel, Curitiba",
-    "description": "Formatação de Computador no Batel, em Curitiba. Triagem por WhatsApp, atendimento agendado e condições por escrito. Visita de inspeção a partir de R$ 99,99.",
+    "description": "Formatação de Computador no Batel, Curitiba. Triagem por WhatsApp, agendamento e condições por escrito. Visita a partir de R$ 99,99.",
     "faq": [
       {
         "question": "Meus arquivos ficam salvos ao formatar no Batel?",
@@ -52,7 +52,7 @@ export const CURATED_DYNAMIC_HEAD: Record<string, RouteHeadInput> = {
   "/servicos/formatacao-computador/agua-verde": {
     "path": "/servicos/formatacao-computador/agua-verde",
     "title": "Formatação de Computador — Água Verde, Curitiba",
-    "description": "Formatação de Computador no Água Verde, em Curitiba. Triagem por WhatsApp, atendimento agendado e condições por escrito. Visita de inspeção a partir de R$ 99,99.",
+    "description": "Formatação de Computador no Água Verde, Curitiba. Triagem por WhatsApp, agendamento e condições por escrito. Visita a partir de R$ 99,99.",
     "faq": [
       {
         "question": "Meus arquivos ficam salvos ao formatar no Água Verde?",
@@ -75,7 +75,7 @@ export const CURATED_DYNAMIC_HEAD: Record<string, RouteHeadInput> = {
   "/servicos/formatacao-computador/jardim-das-americas": {
     "path": "/servicos/formatacao-computador/jardim-das-americas",
     "title": "Formatação de Computador — Jardim das Américas, Curitiba",
-    "description": "Formatação de Computador no Jardim das Américas, em Curitiba. Triagem por WhatsApp, atendimento agendado e condições por escrito. Visita de inspeção a partir de R$ 99,99.",
+    "description": "Formatação de Computador no Jardim das Américas, Curitiba. Triagem por WhatsApp, agendamento e condições por escrito. Visita a partir de R$ 99,99.",
     "faq": [
       {
         "question": "Meus arquivos ficam salvos ao formatar no Jardim das Américas?",
@@ -98,7 +98,7 @@ export const CURATED_DYNAMIC_HEAD: Record<string, RouteHeadInput> = {
   "/servicos/formatacao-computador/ecoville": {
     "path": "/servicos/formatacao-computador/ecoville",
     "title": "Formatação de Computador — Ecoville, Curitiba",
-    "description": "Formatação de Computador no Ecoville, em Curitiba. Triagem por WhatsApp, atendimento agendado e condições por escrito. Visita de inspeção a partir de R$ 99,99.",
+    "description": "Formatação de Computador no Ecoville, Curitiba. Triagem por WhatsApp, agendamento e condições por escrito. Visita a partir de R$ 99,99.",
     "faq": [
       {
         "question": "Meus arquivos ficam salvos ao formatar no Ecoville?",
@@ -121,7 +121,7 @@ export const CURATED_DYNAMIC_HEAD: Record<string, RouteHeadInput> = {
   "/servicos/formatacao-computador/alto-da-xv": {
     "path": "/servicos/formatacao-computador/alto-da-xv",
     "title": "Formatação de Computador — Alto da XV, Curitiba",
-    "description": "Formatação de Computador no Alto da XV, em Curitiba. Triagem por WhatsApp, atendimento agendado e condições por escrito. Visita de inspeção a partir de R$ 99,99.",
+    "description": "Formatação de Computador no Alto da XV, Curitiba. Triagem por WhatsApp, agendamento e condições por escrito. Visita a partir de R$ 99,99.",
     "faq": [
       {
         "question": "Meus arquivos ficam salvos ao formatar no Alto da XV?",
@@ -144,7 +144,7 @@ export const CURATED_DYNAMIC_HEAD: Record<string, RouteHeadInput> = {
   "/servicos/formatacao-computador/reboucas": {
     "path": "/servicos/formatacao-computador/reboucas",
     "title": "Formatação de Computador — Rebouças, Curitiba",
-    "description": "Formatação de Computador no Rebouças, em Curitiba. Triagem por WhatsApp, atendimento agendado e condições por escrito. Visita de inspeção a partir de R$ 99,99.",
+    "description": "Formatação de Computador no Rebouças, Curitiba. Triagem por WhatsApp, agendamento e condições por escrito. Visita a partir de R$ 99,99.",
     "faq": [
       {
         "question": "Meus arquivos ficam salvos ao formatar no Rebouças?",
@@ -167,7 +167,7 @@ export const CURATED_DYNAMIC_HEAD: Record<string, RouteHeadInput> = {
   "/servicos/remocao-virus/cic": {
     "path": "/servicos/remocao-virus/cic",
     "title": "Remoção de Vírus e Malware — CIC, Curitiba",
-    "description": "Remoção de Vírus e Malware no CIC, em Curitiba. Triagem por WhatsApp, atendimento agendado e condições por escrito. Visita de inspeção a partir de R$ 99,99.",
+    "description": "Remoção de Vírus e Malware no CIC, Curitiba. Triagem por WhatsApp, agendamento e condições por escrito. Visita a partir de R$ 99,99.",
     "faq": [
       {
         "question": "Preciso formatar para remover vírus no CIC?",
@@ -190,7 +190,7 @@ export const CURATED_DYNAMIC_HEAD: Record<string, RouteHeadInput> = {
   "/servicos/remocao-virus/agua-verde": {
     "path": "/servicos/remocao-virus/agua-verde",
     "title": "Remoção de Vírus e Malware — Água Verde, Curitiba",
-    "description": "Remoção de Vírus e Malware no Água Verde, em Curitiba. Triagem por WhatsApp, atendimento agendado e condições por escrito. Visita de inspeção a partir de R$ 99,99.",
+    "description": "Remoção de Vírus e Malware no Água Verde, Curitiba. Triagem por WhatsApp, agendamento e condições por escrito. Visita a partir de R$ 99,99.",
     "faq": [
       {
         "question": "Preciso formatar para remover vírus no Água Verde?",
@@ -213,7 +213,7 @@ export const CURATED_DYNAMIC_HEAD: Record<string, RouteHeadInput> = {
   "/servicos/remocao-virus/jardim-das-americas": {
     "path": "/servicos/remocao-virus/jardim-das-americas",
     "title": "Remoção de Vírus e Malware — Jardim das Américas, Curitiba",
-    "description": "Remoção de Vírus e Malware no Jardim das Américas, em Curitiba. Triagem por WhatsApp, atendimento agendado e condições por escrito. Visita de inspeção a partir de R$ 99,99.",
+    "description": "Remoção de Vírus e Malware no Jardim das Américas, Curitiba. Triagem por WhatsApp, agendamento e condições por escrito. Visita a partir de R$ 99,99.",
     "faq": [
       {
         "question": "Preciso formatar para remover vírus no Jardim das Américas?",
@@ -236,7 +236,7 @@ export const CURATED_DYNAMIC_HEAD: Record<string, RouteHeadInput> = {
   "/servicos/remocao-virus/ecoville": {
     "path": "/servicos/remocao-virus/ecoville",
     "title": "Remoção de Vírus e Malware — Ecoville, Curitiba",
-    "description": "Remoção de Vírus e Malware no Ecoville, em Curitiba. Triagem por WhatsApp, atendimento agendado e condições por escrito. Visita de inspeção a partir de R$ 99,99.",
+    "description": "Remoção de Vírus e Malware no Ecoville, Curitiba. Triagem por WhatsApp, agendamento e condições por escrito. Visita a partir de R$ 99,99.",
     "faq": [
       {
         "question": "Preciso formatar para remover vírus no Ecoville?",
@@ -259,7 +259,7 @@ export const CURATED_DYNAMIC_HEAD: Record<string, RouteHeadInput> = {
   "/servicos/remocao-virus/alto-da-xv": {
     "path": "/servicos/remocao-virus/alto-da-xv",
     "title": "Remoção de Vírus e Malware — Alto da XV, Curitiba",
-    "description": "Remoção de Vírus e Malware no Alto da XV, em Curitiba. Triagem por WhatsApp, atendimento agendado e condições por escrito. Visita de inspeção a partir de R$ 99,99.",
+    "description": "Remoção de Vírus e Malware no Alto da XV, Curitiba. Triagem por WhatsApp, agendamento e condições por escrito. Visita a partir de R$ 99,99.",
     "faq": [
       {
         "question": "Preciso formatar para remover vírus no Alto da XV?",
@@ -282,7 +282,7 @@ export const CURATED_DYNAMIC_HEAD: Record<string, RouteHeadInput> = {
   "/servicos/remocao-virus/reboucas": {
     "path": "/servicos/remocao-virus/reboucas",
     "title": "Remoção de Vírus e Malware — Rebouças, Curitiba",
-    "description": "Remoção de Vírus e Malware no Rebouças, em Curitiba. Triagem por WhatsApp, atendimento agendado e condições por escrito. Visita de inspeção a partir de R$ 99,99.",
+    "description": "Remoção de Vírus e Malware no Rebouças, Curitiba. Triagem por WhatsApp, agendamento e condições por escrito. Visita a partir de R$ 99,99.",
     "faq": [
       {
         "question": "Preciso formatar para remover vírus no Rebouças?",
@@ -305,7 +305,7 @@ export const CURATED_DYNAMIC_HEAD: Record<string, RouteHeadInput> = {
   "/servicos/conserto-pc-notebook/centro": {
     "path": "/servicos/conserto-pc-notebook/centro",
     "title": "Conserto de PC e Notebook — Centro de Curitiba",
-    "description": "Conserto de PC e Notebook no Centro de Curitiba, em Curitiba. Triagem por WhatsApp, atendimento agendado e condições por escrito. Visita de inspeção a partir de R$ 99,99.",
+    "description": "Conserto de PC e Notebook no Centro de Curitiba, Curitiba. Triagem por WhatsApp, agendamento e condições por escrito. Visita a partir de R$ 99,99.",
     "faq": [
       {
         "question": "Vocês consertam notebook de qualquer marca no Centro de Curitiba?",
@@ -328,7 +328,7 @@ export const CURATED_DYNAMIC_HEAD: Record<string, RouteHeadInput> = {
   "/servicos/conserto-pc-notebook/agua-verde": {
     "path": "/servicos/conserto-pc-notebook/agua-verde",
     "title": "Conserto de PC e Notebook — Água Verde, Curitiba",
-    "description": "Conserto de PC e Notebook no Água Verde, em Curitiba. Triagem por WhatsApp, atendimento agendado e condições por escrito. Visita de inspeção a partir de R$ 99,99.",
+    "description": "Conserto de PC e Notebook no Água Verde, Curitiba. Triagem por WhatsApp, agendamento e condições por escrito. Visita a partir de R$ 99,99.",
     "faq": [
       {
         "question": "Vocês consertam notebook de qualquer marca no Água Verde?",
@@ -351,7 +351,7 @@ export const CURATED_DYNAMIC_HEAD: Record<string, RouteHeadInput> = {
   "/servicos/conserto-pc-notebook/jardim-das-americas": {
     "path": "/servicos/conserto-pc-notebook/jardim-das-americas",
     "title": "Conserto de PC e Notebook — Jardim das Américas, Curitiba",
-    "description": "Conserto de PC e Notebook no Jardim das Américas, em Curitiba. Triagem por WhatsApp, atendimento agendado e condições por escrito. Visita de inspeção a partir de R$ 99,99.",
+    "description": "Conserto de PC e Notebook no Jardim das Américas, Curitiba. Triagem por WhatsApp, agendamento e condições por escrito. Visita a partir de R$ 99,99.",
     "faq": [
       {
         "question": "Vocês consertam notebook de qualquer marca no Jardim das Américas?",
@@ -374,7 +374,7 @@ export const CURATED_DYNAMIC_HEAD: Record<string, RouteHeadInput> = {
   "/servicos/conserto-pc-notebook/ecoville": {
     "path": "/servicos/conserto-pc-notebook/ecoville",
     "title": "Conserto de PC e Notebook — Ecoville, Curitiba",
-    "description": "Conserto de PC e Notebook no Ecoville, em Curitiba. Triagem por WhatsApp, atendimento agendado e condições por escrito. Visita de inspeção a partir de R$ 99,99.",
+    "description": "Conserto de PC e Notebook no Ecoville, Curitiba. Triagem por WhatsApp, agendamento e condições por escrito. Visita a partir de R$ 99,99.",
     "faq": [
       {
         "question": "Vocês consertam notebook de qualquer marca no Ecoville?",
@@ -397,7 +397,7 @@ export const CURATED_DYNAMIC_HEAD: Record<string, RouteHeadInput> = {
   "/servicos/conserto-pc-notebook/alto-da-xv": {
     "path": "/servicos/conserto-pc-notebook/alto-da-xv",
     "title": "Conserto de PC e Notebook — Alto da XV, Curitiba",
-    "description": "Conserto de PC e Notebook no Alto da XV, em Curitiba. Triagem por WhatsApp, atendimento agendado e condições por escrito. Visita de inspeção a partir de R$ 99,99.",
+    "description": "Conserto de PC e Notebook no Alto da XV, Curitiba. Triagem por WhatsApp, agendamento e condições por escrito. Visita a partir de R$ 99,99.",
     "faq": [
       {
         "question": "Vocês consertam notebook de qualquer marca no Alto da XV?",
@@ -420,7 +420,7 @@ export const CURATED_DYNAMIC_HEAD: Record<string, RouteHeadInput> = {
   "/servicos/conserto-pc-notebook/reboucas": {
     "path": "/servicos/conserto-pc-notebook/reboucas",
     "title": "Conserto de PC e Notebook — Rebouças, Curitiba",
-    "description": "Conserto de PC e Notebook no Rebouças, em Curitiba. Triagem por WhatsApp, atendimento agendado e condições por escrito. Visita de inspeção a partir de R$ 99,99.",
+    "description": "Conserto de PC e Notebook no Rebouças, Curitiba. Triagem por WhatsApp, agendamento e condições por escrito. Visita a partir de R$ 99,99.",
     "faq": [
       {
         "question": "Vocês consertam notebook de qualquer marca no Rebouças?",
@@ -443,7 +443,7 @@ export const CURATED_DYNAMIC_HEAD: Record<string, RouteHeadInput> = {
   "/servicos/upgrade-ssd-memoria/cic": {
     "path": "/servicos/upgrade-ssd-memoria/cic",
     "title": "Upgrade de SSD e Memória — CIC, Curitiba",
-    "description": "Upgrade de SSD e Memória no CIC, em Curitiba. Triagem por WhatsApp, atendimento agendado e condições por escrito. Visita de inspeção a partir de R$ 99,99.",
+    "description": "Upgrade de SSD e Memória no CIC, Curitiba. Triagem por WhatsApp, agendamento e condições por escrito. Visita a partir de R$ 99,99.",
     "faq": [
       {
         "question": "Vocês levam as peças no atendimento no CIC?",
@@ -466,7 +466,7 @@ export const CURATED_DYNAMIC_HEAD: Record<string, RouteHeadInput> = {
   "/servicos/upgrade-ssd-memoria/centro": {
     "path": "/servicos/upgrade-ssd-memoria/centro",
     "title": "Upgrade de SSD e Memória — Centro de Curitiba",
-    "description": "Upgrade de SSD e Memória no Centro de Curitiba, em Curitiba. Triagem por WhatsApp, atendimento agendado e condições por escrito. Visita de inspeção a partir de R$ 99,99.",
+    "description": "Upgrade de SSD e Memória no Centro de Curitiba, Curitiba. Triagem por WhatsApp, agendamento e condições por escrito. Visita a partir de R$ 99,99.",
     "faq": [
       {
         "question": "Vocês levam as peças no atendimento no Centro de Curitiba?",
@@ -489,7 +489,7 @@ export const CURATED_DYNAMIC_HEAD: Record<string, RouteHeadInput> = {
   "/servicos/upgrade-ssd-memoria/agua-verde": {
     "path": "/servicos/upgrade-ssd-memoria/agua-verde",
     "title": "Upgrade de SSD e Memória — Água Verde, Curitiba",
-    "description": "Upgrade de SSD e Memória no Água Verde, em Curitiba. Triagem por WhatsApp, atendimento agendado e condições por escrito. Visita de inspeção a partir de R$ 99,99.",
+    "description": "Upgrade de SSD e Memória no Água Verde, Curitiba. Triagem por WhatsApp, agendamento e condições por escrito. Visita a partir de R$ 99,99.",
     "faq": [
       {
         "question": "Vocês levam as peças no atendimento no Água Verde?",
@@ -512,7 +512,7 @@ export const CURATED_DYNAMIC_HEAD: Record<string, RouteHeadInput> = {
   "/servicos/upgrade-ssd-memoria/portao": {
     "path": "/servicos/upgrade-ssd-memoria/portao",
     "title": "Upgrade de SSD e Memória — Portão, Curitiba",
-    "description": "Upgrade de SSD e Memória no Portão, em Curitiba. Triagem por WhatsApp, atendimento agendado e condições por escrito. Visita de inspeção a partir de R$ 99,99.",
+    "description": "Upgrade de SSD e Memória no Portão, Curitiba. Triagem por WhatsApp, agendamento e condições por escrito. Visita a partir de R$ 99,99.",
     "faq": [
       {
         "question": "Vocês levam as peças no atendimento no Portão?",
@@ -535,7 +535,7 @@ export const CURATED_DYNAMIC_HEAD: Record<string, RouteHeadInput> = {
   "/servicos/upgrade-ssd-memoria/jardim-das-americas": {
     "path": "/servicos/upgrade-ssd-memoria/jardim-das-americas",
     "title": "Upgrade de SSD e Memória — Jardim das Américas, Curitiba",
-    "description": "Upgrade de SSD e Memória no Jardim das Américas, em Curitiba. Triagem por WhatsApp, atendimento agendado e condições por escrito. Visita de inspeção a partir de R$ 99,99.",
+    "description": "Upgrade de SSD e Memória no Jardim das Américas, Curitiba. Triagem por WhatsApp, agendamento e condições por escrito. Visita a partir de R$ 99,99.",
     "faq": [
       {
         "question": "Vocês levam as peças no atendimento no Jardim das Américas?",
@@ -558,7 +558,7 @@ export const CURATED_DYNAMIC_HEAD: Record<string, RouteHeadInput> = {
   "/servicos/upgrade-ssd-memoria/ecoville": {
     "path": "/servicos/upgrade-ssd-memoria/ecoville",
     "title": "Upgrade de SSD e Memória — Ecoville, Curitiba",
-    "description": "Upgrade de SSD e Memória no Ecoville, em Curitiba. Triagem por WhatsApp, atendimento agendado e condições por escrito. Visita de inspeção a partir de R$ 99,99.",
+    "description": "Upgrade de SSD e Memória no Ecoville, Curitiba. Triagem por WhatsApp, agendamento e condições por escrito. Visita a partir de R$ 99,99.",
     "faq": [
       {
         "question": "Vocês levam as peças no atendimento no Ecoville?",
@@ -581,7 +581,7 @@ export const CURATED_DYNAMIC_HEAD: Record<string, RouteHeadInput> = {
   "/servicos/upgrade-ssd-memoria/alto-da-xv": {
     "path": "/servicos/upgrade-ssd-memoria/alto-da-xv",
     "title": "Upgrade de SSD e Memória — Alto da XV, Curitiba",
-    "description": "Upgrade de SSD e Memória no Alto da XV, em Curitiba. Triagem por WhatsApp, atendimento agendado e condições por escrito. Visita de inspeção a partir de R$ 99,99.",
+    "description": "Upgrade de SSD e Memória no Alto da XV, Curitiba. Triagem por WhatsApp, agendamento e condições por escrito. Visita a partir de R$ 99,99.",
     "faq": [
       {
         "question": "Vocês levam as peças no atendimento no Alto da XV?",
@@ -604,7 +604,7 @@ export const CURATED_DYNAMIC_HEAD: Record<string, RouteHeadInput> = {
   "/servicos/upgrade-ssd-memoria/reboucas": {
     "path": "/servicos/upgrade-ssd-memoria/reboucas",
     "title": "Upgrade de SSD e Memória — Rebouças, Curitiba",
-    "description": "Upgrade de SSD e Memória no Rebouças, em Curitiba. Triagem por WhatsApp, atendimento agendado e condições por escrito. Visita de inspeção a partir de R$ 99,99.",
+    "description": "Upgrade de SSD e Memória no Rebouças, Curitiba. Triagem por WhatsApp, agendamento e condições por escrito. Visita a partir de R$ 99,99.",
     "faq": [
       {
         "question": "Vocês levam as peças no atendimento no Rebouças?",

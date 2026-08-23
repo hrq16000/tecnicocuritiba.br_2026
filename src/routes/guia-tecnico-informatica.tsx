@@ -7,7 +7,7 @@ export const Route = createFileRoute("/guia-tecnico-informatica")({
   head: () => seoHead({
     "path": "/guia-tecnico-informatica",
     "title": "Guia Técnico: Manutenção de PC e Notebook Passo a Passo",
-    "description": "Guia completo de manutenção de computador e notebook: como identificar a família da falha, o que verificar antes de chamar o técnico, quando o upgrade compensa e como é feito o diagnóstico.",
+    "description": "Guia completo de manutenção de computador e notebook: como identificar a família da falha, o que verificar antes de chamar o técnico, quando o upgrade compensa.",
     "faq": [
       {
         "question": "Como sei se o problema é de hardware ou de software?",

@@ -7,7 +7,7 @@ export const Route = createFileRoute("/politica-de-pecas-do-cliente")({
   head: () => seoHead({
     "path": "/politica-de-pecas-do-cliente",
     "title": "Política de Peças do Cliente | Montagem em Curitiba",
-    "description": "Regras claras para peças fornecidas pelo cliente em Curitiba: compatibilidade, procedência, integridade no recebimento, prazo de troca, garantia da peça x garantia da mão de obra e valor declarado do equipamento."
+    "description": "Regras claras para peças fornecidas pelo cliente em Curitiba: compatibilidade, procedência, integridade no recebimento, prazo de troca, garantia da peça x garantia."
   }),
   /* seo:auto-end */
   component: PoliticaPecasCliente,

@@ -7,7 +7,7 @@ export const Route = createFileRoute("/tecnico-informatica-quatro-barras")({
   head: () => seoHead({
     "path": "/tecnico-informatica-quatro-barras",
     "title": "Técnico em Quatro Barras para PC, Notebook e Redes",
-    "description": "Técnico de informática em Quatro Barras: conserto de notebook e PC, formatação, upgrade de SSD, redes e suporte a pequenas empresas. Visita agendada ou coleta via WhatsApp."
+    "description": "Técnico de informática em Quatro Barras: conserto de notebook e PC, formatação, upgrade de SSD, redes e suporte a pequenas empresas."
   }),
   /* seo:auto-end */
   component: TecnicoInformaticaQuatroBarras,

@@ -7,7 +7,7 @@ export const Route = createFileRoute("/bairros/cajuru")({
   head: () => seoHead({
     "path": "/bairros/cajuru",
     "title": "Técnico de Informática no Cajuru (Curitiba) | PC e Notebook",
-    "description": "Técnico de informática no Cajuru, Curitiba: conserto de notebook e PC, formatação com backup, remoção de vírus e Wi-Fi. A partir de R$ 99,99. Atendimento via WhatsApp.",
+    "description": "Técnico de informática no Cajuru, Curitiba: conserto de notebook e PC, formatação com backup, remoção de vírus e Wi-Fi. A partir de R$ 99,99.",
     "faq": [
       {
         "question": "Atendem comércio pequeno no Cajuru?",

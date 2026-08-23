@@ -7,7 +7,7 @@ export const Route = createFileRoute("/problemas/touchpad-nao-funciona")({
   head: () => seoHead({
     "path": "/problemas/touchpad-nao-funciona",
     "title": "Touchpad Não Funciona no Notebook | Curitiba",
-    "description": "Touchpad do notebook parou de responder, funciona pela metade ou só o clique falhou? Veja como separar atalho desativado, driver, cabo flat solto e falha física antes de orçar, com avaliação técnica em Curitiba.",
+    "description": "Touchpad do notebook parou de responder, funciona pela metade ou só o clique falhou? Veja como separar atalho desativado, driver, cabo flat solto e falha física.",
     "faq": [
       {
         "question": "O touchpad parou do nada. É defeito de fábrica?",

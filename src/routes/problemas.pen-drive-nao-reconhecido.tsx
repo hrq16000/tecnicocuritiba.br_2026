@@ -7,7 +7,7 @@ export const Route = createFileRoute("/problemas/pen-drive-nao-reconhecido")({
   head: () => seoHead({
     "path": "/problemas/pen-drive-nao-reconhecido",
     "title": "Pen Drive Não Reconhecido: O Que Fazer | Curitiba",
-    "description": "Pen drive não aparece no computador, pede formatação ou some do nada? Veja como separar porta USB, letra de unidade, tabela de partição corrompida e falha física antes de perder os arquivos, com avaliação em Curitiba.",
+    "description": "Pen drive não aparece no computador, pede formatação ou some do nada? Veja como separar porta USB, letra de unidade, tabela de partição corrompida e falha física.",
     "faq": [
       {
         "question": "O Windows pede para formatar o pen drive. Posso aceitar?",

@@ -295,7 +295,7 @@ export function buildWifiBairroData(bairroSlug: string): ServicoBairroData {
   const narrativa = b.narrativaLocal ? ` ${b.narrativaLocal}` : "";
   return {
     metaTitle: `Configuração de Wi-Fi no ${b.nome} | Curitiba`,
-    metaDescription: `Instalação e configuração de Wi-Fi, mesh e roteadores no ${b.nome}, Curitiba. Atendimento presencial, valor do atendimento pelo WhatsApp e valor mínimo de R$ 99,99.`,
+    metaDescription: `Wi-Fi, mesh e roteadores no ${b.nome}, Curitiba. Instalação e configuração presencial, com valor combinado pelo WhatsApp a partir de R$ 99,99.`,
     servico: "Configuração de Wi-Fi",
     servicoSlug: "redes-wifi",
     bairro: b.nome,

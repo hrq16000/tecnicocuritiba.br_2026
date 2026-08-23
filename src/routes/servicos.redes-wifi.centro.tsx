@@ -7,7 +7,7 @@ export const Route = createFileRoute("/servicos/redes-wifi/centro")({
   head: () => seoHead({
     "path": "/servicos/redes-wifi/centro",
     "title": "Configuração de Wi-Fi no Centro | Curitiba",
-    "description": "Instalação e configuração de Wi-Fi, mesh e roteadores no Centro, Curitiba. Atendimento presencial, valor do atendimento pelo WhatsApp e valor mínimo de R$ 99,99."
+    "description": "Wi-Fi, mesh e roteadores no Centro, Curitiba. Instalação e configuração presencial, com valor combinado pelo WhatsApp a partir de R$ 99,99."
   }),
   /* seo:auto-end */
   component: RedesWifiCentro,

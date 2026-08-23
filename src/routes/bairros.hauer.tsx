@@ -7,7 +7,7 @@ export const Route = createFileRoute("/bairros/hauer")({
   head: () => seoHead({
     "path": "/bairros/hauer",
     "title": "Técnico de Informática no Hauer (Curitiba) | Notebook e PC",
-    "description": "Técnico de informática no Hauer, Curitiba: conserto de notebook, formatação com backup, remoção de vírus e rede Wi-Fi. A partir de R$ 99,99. Atendimento via WhatsApp.",
+    "description": "Técnico de informática no Hauer, Curitiba: conserto de notebook, formatação com backup, remoção de vírus e rede Wi-Fi. A partir de R$ 99,99.",
     "faq": [
       {
         "question": "Vocês atendem no Hauer no mesmo dia?",

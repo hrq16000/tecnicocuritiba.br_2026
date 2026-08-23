@@ -7,7 +7,7 @@ export const Route = createFileRoute("/servicos/redes-e-wifi")({
   head: () => seoHead({
     "path": "/servicos/redes-e-wifi",
     "title": "Configuração de Redes e Wi-Fi em Curitiba | Roteadores",
-    "description": "Configuração de redes e Wi-Fi em Curitiba: internet instável, roteador, repetidor, cabeamento e rede empresarial. Cobertura melhor em casa e no trabalho. Via WhatsApp.",
+    "description": "Configuração de redes e Wi-Fi em Curitiba: internet instável, roteador, repetidor, cabeamento e rede empresarial. Cobertura melhor em casa e no trabalho.",
     "faq": [
       {
         "question": "Meu Wi-Fi não pega em todos os cômodos, o que fazer?",

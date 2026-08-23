@@ -7,7 +7,7 @@ export const Route = createFileRoute("/equipamentos-atendidos")({
   head: () => seoHead({
     "path": "/equipamentos-atendidos",
     "title": "Equipamentos Atendidos | Técnico em Curitiba",
-    "description": "Notebooks, desktops, PC gamer, All in One, estações de trabalho, equipamentos de home office, redes e armazenamento: o que atendemos em Curitiba, os limites e a modalidade indicada.",
+    "description": "Notebooks, desktops, PC gamer, All in One, estações de trabalho, equipamentos de home office, redes e armazenamento: o que atendemos em Curitiba, os limites.",
     "faq": [
       {
         "question": "Vocês atendem qualquer marca de notebook e computador?",

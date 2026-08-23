@@ -7,7 +7,7 @@ export const Route = createFileRoute("/problemas/tv-sem-som")({
   head: () => seoHead({
     "path": "/problemas/tv-sem-som",
     "title": "TV Sem Som: Causas, Testes e Conserto | Curitiba",
-    "description": "TV com imagem normal e sem áudio, som chiado ou saída de fone mudo? Veja como separar configuração de saída, falha do amplificador de áudio e alto-falante rompido antes de orçar, com avaliação por coleta em Curitiba.",
+    "description": "TV com imagem normal e sem áudio, som chiado ou saída de fone mudo? Veja como separar configuração de saída, falha do amplificador de áudio e alto-falante rompido.",
     "faq": [
       {
         "question": "Minha TV está com imagem e sem som. Isso tem conserto?",

@@ -7,7 +7,7 @@ export const Route = createFileRoute("/servicos/manutencao-de-notebook")({
   head: () => seoHead({
     "path": "/servicos/manutencao-de-notebook",
     "title": "Assistência Técnica de Notebook em Curitiba | Diagnóstico",
-    "description": "Assistência técnica de notebook em Curitiba: lentidão, aquecimento, tela, teclado, bateria e limpeza interna. Todas as marcas. Diagnóstico antes de informar o valor via WhatsApp.",
+    "description": "Assistência técnica de notebook em Curitiba: lentidão, aquecimento, tela, teclado, bateria e limpeza interna. Todas as marcas.",
     "faq": [
       {
         "question": "Meu notebook esquenta muito, tem solução?",

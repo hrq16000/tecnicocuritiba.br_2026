@@ -7,7 +7,7 @@ export const Route = createFileRoute("/bairros/novo-mundo")({
   head: () => seoHead({
     "path": "/bairros/novo-mundo",
     "title": "Técnico de Informática no Novo Mundo (Curitiba) | PC e Notebook",
-    "description": "Técnico de informática no Novo Mundo, Curitiba: manutenção de computador, conserto de notebook, upgrade de SSD e rede para comércio. A partir de R$ 99,99. Via WhatsApp.",
+    "description": "Técnico de informática no Novo Mundo, Curitiba: manutenção de computador, conserto de notebook, upgrade de SSD e rede para comércio. A partir de R$ 99,99.",
     "faq": [
       {
         "question": "Atendem lojas e escritórios no Novo Mundo?",

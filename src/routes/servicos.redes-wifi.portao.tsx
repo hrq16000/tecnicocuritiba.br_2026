@@ -7,7 +7,7 @@ export const Route = createFileRoute("/servicos/redes-wifi/portao")({
   head: () => seoHead({
     "path": "/servicos/redes-wifi/portao",
     "title": "Configuração de Wi-Fi no Portão | Curitiba",
-    "description": "Instalação e configuração de Wi-Fi, mesh e roteadores no Portão, Curitiba. Atendimento presencial, valor do atendimento pelo WhatsApp e valor mínimo de R$ 99,99."
+    "description": "Wi-Fi, mesh e roteadores no Portão, Curitiba. Instalação e configuração presencial, com valor combinado pelo WhatsApp a partir de R$ 99,99."
   }),
   /* seo:auto-end */
   component: RedesWifiPortao,

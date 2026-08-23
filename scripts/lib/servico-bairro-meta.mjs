@@ -70,7 +70,7 @@ export function servicoBairroMeta(path) {
     path,
     // Espelha src/lib/servicoBairroFactory.ts: título curto para não truncar na SERP.
     title: `${servico.nome} — ${bairro.nome}${bairro.nome.includes("Curitiba") ? "" : ", Curitiba"}`,
-    description: `${servico.nome} no ${bairro.nome}, em Curitiba. Triagem por WhatsApp, atendimento agendado e condições por escrito. Visita de inspeção a partir de R$ 99,99.`,
+    description: `${servico.nome} no ${bairro.nome}, Curitiba. Triagem por WhatsApp, agendamento e condições por escrito. Visita a partir de R$ 99,99.`,
     h1: servico.h1Tpl.replace("${b}", bairro.nome),
     subtitulo: servico.subtitulo,
     faq: servico.faq.map((f) => ({

@@ -7,7 +7,7 @@ export const Route = createFileRoute("/tecnico-informatica-colombo")({
   head: () => seoHead({
     "path": "/tecnico-informatica-colombo",
     "title": "Técnico em Colombo para Notebook, PC e Informática",
-    "description": "Técnico de informática em Colombo: formatação, conserto de notebook e PC, upgrade de SSD, remoção de vírus, redes e suporte empresarial. Atendimento a domicílio ou coleta via WhatsApp."
+    "description": "Técnico de informática em Colombo: formatação, conserto de notebook e PC, upgrade de SSD, remoção de vírus, redes e suporte empresarial."
   }),
   /* seo:auto-end */
   component: TecnicoInformaticaColombo,

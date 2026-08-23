@@ -7,7 +7,7 @@ export const Route = createFileRoute("/problemas/notebook-molhado")({
   head: () => seoHead({
     "path": "/problemas/notebook-molhado",
     "title": "Notebook Molhado? O Que Fazer nas Primeiras Horas | Curitiba",
-    "description": "Derramou líquido no notebook? Entenda por que ligar o aparelho piora o quadro, o que fazer nas primeiras horas, como funciona a limpeza de placa e em que casos o reparo deixa de compensar. Coleta em Curitiba.",
+    "description": "Derramou líquido no notebook? Entenda por que ligar o aparelho piora o quadro, o que fazer nas primeiras horas, como funciona a limpeza de placa e em que casos.",
     "faq": [
       {
         "question": "Derramei líquido e o notebook continua ligando. Preciso fazer alguma coisa?",

@@ -7,7 +7,7 @@ export const Route = createFileRoute("/problemas/notebook-lento")({
   head: () => seoHead({
     "path": "/problemas/notebook-lento",
     "title": "Notebook Lento: Causas Reais e Solução | Curitiba",
-    "description": "Notebook demorando para ligar, travando ao abrir programas ou lento só na bateria? Veja como separar disco mecânico, memória insuficiente, calor e software antes de trocar de aparelho, com avaliação técnica em Curitiba.",
+    "description": "Notebook demorando para ligar, travando ao abrir programas ou lento só na bateria? Veja como separar disco mecânico, memória insuficiente, calor e software.",
     "faq": [
       {
         "question": "Meu notebook ficou muito lento. Vale a pena consertar ou é melhor comprar outro?",

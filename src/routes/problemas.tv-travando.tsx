@@ -7,7 +7,7 @@ export const Route = createFileRoute("/problemas/tv-travando")({
   head: () => seoHead({
     "path": "/problemas/tv-travando",
     "title": "TV Travando ou Muito Lenta: O Que Fazer | Curitiba",
-    "description": "Smart TV travando, aplicativo congelando ou controle demorando para responder? Veja como separar memória cheia, aplicativo desatualizado, rede saturada e falha de placa antes de trocar a televisão, com avaliação técnica em Curitiba.",
+    "description": "Smart TV travando, aplicativo congelando ou controle demorando para responder? Veja como separar memória cheia, aplicativo desatualizado, rede saturada e falha.",
     "faq": [
       {
         "question": "Minha smart TV travando significa que ela está no fim da vida útil?",

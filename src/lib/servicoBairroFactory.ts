@@ -319,7 +319,7 @@ export function buildServicoBairroData(
     // já aparece no domínio e no og:site_name, e "Curitiba" só é acrescentado
     // quando o nome do bairro ainda não o contém.
     metaTitle: `${servico.nome} — ${bairro.nome}${bairro.nome.includes("Curitiba") ? "" : ", Curitiba"}`,
-    metaDescription: `${servico.nome} no ${bairro.nome}, em Curitiba. Triagem por WhatsApp, atendimento agendado e condições por escrito. Visita de inspeção a partir de R$ 99,99.`,
+    metaDescription: `${servico.nome} no ${bairro.nome}, Curitiba. Triagem por WhatsApp, agendamento e condições por escrito. Visita a partir de R$ 99,99.`,
     servico: servico.nome,
     servicoSlug: servico.slug,
     bairro: bairro.nome,

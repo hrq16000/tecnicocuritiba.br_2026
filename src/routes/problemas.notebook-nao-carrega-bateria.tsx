@@ -7,7 +7,7 @@ export const Route = createFileRoute("/problemas/notebook-nao-carrega-bateria")(
   head: () => seoHead({
     "path": "/problemas/notebook-nao-carrega-bateria",
     "title": "Notebook Não Carrega a Bateria? Diagnóstico em Curitiba",
-    "description": "Notebook conectado à tomada mas sem carregar, parado em uma porcentagem fixa ou funcionando só no cabo: entenda o que é bateria, carregador, conector de energia ou placa, e o que verificar antes do atendimento.",
+    "description": "Notebook conectado à tomada mas sem carregar, parado em uma porcentagem fixa ou funcionando só no cabo: entenda o que é bateria, carregador, conector de energia.",
     "faq": [
       {
         "question": "Notebook que só funciona na tomada tem conserto?",

@@ -7,7 +7,7 @@ export const Route = createFileRoute("/bairros/fazendinha")({
   head: () => seoHead({
     "path": "/bairros/fazendinha",
     "title": "Técnico de Informática na Fazendinha (Curitiba) | Notebook e PC",
-    "description": "Técnico de informática na Fazendinha, Curitiba: conserto de notebook, formatação, limpeza interna e configuração de Wi-Fi. A partir de R$ 99,99. Atendimento via WhatsApp.",
+    "description": "Técnico de informática na Fazendinha, Curitiba: conserto de notebook, formatação, limpeza interna e configuração de Wi-Fi. A partir de R$ 99,99.",
     "faq": [
       {
         "question": "O computador da minha loja na Fazendinha trava no horário de pico. Dá para resolver no local?",

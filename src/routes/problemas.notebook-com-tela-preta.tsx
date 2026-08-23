@@ -7,7 +7,7 @@ export const Route = createFileRoute("/problemas/notebook-com-tela-preta")({
   head: () => seoHead({
     "path": "/problemas/notebook-com-tela-preta",
     "title": "Notebook com Tela Preta mas Ligado: O Que Fazer | Curitiba",
-    "description": "Notebook liga, ventoinha gira e teclado acende, mas a tela fica preta? Entenda como separar iluminação da tela, cabo interno, vídeo da placa e sistema travado antes de trocar peça, com avaliação por coleta em Curitiba.",
+    "description": "Notebook liga, ventoinha gira e teclado acende, mas a tela fica preta? Entenda como separar iluminação da tela, cabo interno, vídeo da placa e sistema travado.",
     "faq": [
       {
         "question": "Meu notebook liga mas a tela fica preta. É a tela ou a placa?",

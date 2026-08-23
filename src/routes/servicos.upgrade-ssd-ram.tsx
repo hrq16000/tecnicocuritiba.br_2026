@@ -7,7 +7,7 @@ export const Route = createFileRoute("/servicos/upgrade-ssd-ram")({
   head: () => seoHead({
     "path": "/servicos/upgrade-ssd-ram",
     "title": "Instalação de SSD e Upgrade de Memória em Curitiba",
-    "description": "Instalação de SSD e upgrade de memória RAM em Curitiba com avaliação de compatibilidade, clonagem e backup. Ganho real de desempenho, sem promessa de milagre. Via WhatsApp.",
+    "description": "Instalação de SSD e upgrade de memória RAM em Curitiba com avaliação de compatibilidade, clonagem e backup. Ganho real de desempenho, sem promessa de milagre.",
     "faq": [
       {
         "question": "SSD deixa qualquer computador rápido?",

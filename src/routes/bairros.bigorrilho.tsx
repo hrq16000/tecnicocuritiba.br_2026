@@ -7,7 +7,7 @@ export const Route = createFileRoute("/bairros/bigorrilho")({
   head: () => seoHead({
     "path": "/bairros/bigorrilho",
     "title": "Técnico de Informática no Bigorrilho (Curitiba) | Notebook e PC",
-    "description": "Técnico de informática no Bigorrilho e Champagnat, Curitiba: conserto de notebook, formatação, upgrade de SSD e Wi-Fi em apartamento. Diagnóstico a partir de R$ 99,99. Via WhatsApp.",
+    "description": "Técnico de informática no Bigorrilho e Champagnat, Curitiba: conserto de notebook, formatação, upgrade de SSD e Wi-Fi em apartamento.",
     "faq": [
       {
         "question": "Vocês atendem apartamento no Bigorrilho?",

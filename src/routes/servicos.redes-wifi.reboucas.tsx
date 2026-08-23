@@ -7,7 +7,7 @@ export const Route = createFileRoute("/servicos/redes-wifi/reboucas")({
   head: () => seoHead({
     "path": "/servicos/redes-wifi/reboucas",
     "title": "Configuração de Wi-Fi no Rebouças | Curitiba",
-    "description": "Instalação e configuração de Wi-Fi, mesh e roteadores no Rebouças, Curitiba. Atendimento presencial, valor do atendimento pelo WhatsApp e valor mínimo de R$ 99,99."
+    "description": "Wi-Fi, mesh e roteadores no Rebouças, Curitiba. Instalação e configuração presencial, com valor combinado pelo WhatsApp a partir de R$ 99,99."
   }),
   /* seo:auto-end */
   component: RedesWifiReboucas,

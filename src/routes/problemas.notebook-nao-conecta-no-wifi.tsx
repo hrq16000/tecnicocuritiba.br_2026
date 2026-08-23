@@ -7,7 +7,7 @@ export const Route = createFileRoute("/problemas/notebook-nao-conecta-no-wifi")(
   head: () => seoHead({
     "path": "/problemas/notebook-nao-conecta-no-wifi",
     "title": "Notebook Não Conecta no Wi-Fi: Como Resolver | Curitiba",
-    "description": "Notebook não conecta no Wi-Fi, não encontra a rede ou conecta sem internet? Veja como separar driver, placa de rede desativada, antena solta e falha do roteador antes de trocar peça, com avaliação técnica em Curitiba.",
+    "description": "Notebook não conecta no Wi-Fi, não encontra a rede ou conecta sem internet? Veja como separar driver, placa de rede desativada, antena solta e falha do roteador.",
     "faq": [
       {
         "question": "Meu notebook não encontra nenhuma rede Wi-Fi. O que pode ser?",

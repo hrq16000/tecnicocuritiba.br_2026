@@ -59,17 +59,17 @@ const BASE_ROUTES = [
   {
     "path": "/servicos/manutencao-de-notebook",
     "title": "Assistência Técnica de Notebook em Curitiba | Diagnóstico",
-    "description": "Assistência técnica de notebook em Curitiba: lentidão, aquecimento, tela, teclado, bateria e limpeza interna. Todas as marcas. Diagnóstico antes de informar o valor via WhatsApp."
+    "description": "Assistência técnica de notebook em Curitiba: lentidão, aquecimento, tela, teclado, bateria e limpeza interna. Todas as marcas."
   },
   {
     "path": "/servicos/manutencao-de-computador",
     "title": "Assistência Técnica de Computador em Curitiba | PC",
-    "description": "Assistência técnica de computador em Curitiba: travamentos, fonte, memória, HD/SSD e placa-mãe. Casa e empresa. Diagnóstico honesto antes de informar o valor via WhatsApp."
+    "description": "Assistência técnica de computador em Curitiba: travamentos, fonte, memória, HD/SSD e placa-mãe. Casa e empresa."
   },
   {
     "path": "/servicos/upgrade-ssd-ram",
     "title": "Instalação de SSD e Upgrade de Memória em Curitiba",
-    "description": "Instalação de SSD e upgrade de memória RAM em Curitiba com avaliação de compatibilidade, clonagem e backup. Ganho real de desempenho, sem promessa de milagre. Via WhatsApp."
+    "description": "Instalação de SSD e upgrade de memória RAM em Curitiba com avaliação de compatibilidade, clonagem e backup. Ganho real de desempenho, sem promessa de milagre."
   },
   {
     "path": "/servicos/remocao-de-virus",
@@ -79,12 +79,12 @@ const BASE_ROUTES = [
   {
     "path": "/servicos/recuperacao-de-dados",
     "title": "Recuperação de Dados em Curitiba | HD, SSD e Pendrive",
-    "description": "Recuperação de dados em Curitiba de HD, SSD, pendrive e cartão. Exclusão acidental, sistema que não inicia e falhas. Avaliação primeiro — recuperação não é garantida."
+    "description": "Recuperação de dados em Curitiba de HD, SSD, pendrive e cartão. Exclusão acidental, sistema que não inicia e falhas."
   },
   {
     "path": "/servicos/redes-e-wifi",
     "title": "Configuração de Redes e Wi-Fi em Curitiba | Roteadores",
-    "description": "Configuração de redes e Wi-Fi em Curitiba: internet instável, roteador, repetidor, cabeamento e rede empresarial. Cobertura melhor em casa e no trabalho. Via WhatsApp."
+    "description": "Configuração de redes e Wi-Fi em Curitiba: internet instável, roteador, repetidor, cabeamento e rede empresarial. Cobertura melhor em casa e no trabalho."
   },
   {
     "path": "/servicos/suporte-tecnico-empresarial",
@@ -94,32 +94,32 @@ const BASE_ROUTES = [
   {
     "path": "/servicos/manutencao-preventiva-empresas",
     "title": "Manutenção Preventiva de Computadores em Curitiba | Empresas",
-    "description": "Manutenção preventiva de computadores para empresas em Curitiba: inventário, inspeção, armazenamento, atualizações e relatório de riscos priorizado, sem promessa de zero falhas."
+    "description": "Manutenção preventiva de computadores para empresas em Curitiba: inventário, inspeção, armazenamento, atualizações e relatório de riscos priorizado, sem promessa."
   },
   {
     "path": "/servicos/backup-para-empresas",
     "title": "Backup para Empresas em Curitiba | Proteção de Arquivos",
-    "description": "Backup para empresas em Curitiba: avaliação do que existe hoje, cópia local, cópia externa, nuvem, retenção, versionamento e teste de restauração. Sem promessa de proteção absoluta."
+    "description": "Backup para empresas em Curitiba: avaliação do que existe hoje, cópia local, cópia externa, nuvem, retenção, versionamento e teste de restauração."
   },
   {
     "path": "/servicos/conserto-tv",
     "title": "Conserto de TV e Smart TV em Curitiba | Bancada e Coleta",
-    "description": "Conserto de TV LED, LCD e Smart TV em Curitiba: avaliação em bancada, reparo em nível de componente quando viável, coleta e entrega. Critérios de aceite e recusa informados antes."
+    "description": "Conserto de TV LED, LCD e Smart TV em Curitiba: avaliação em bancada, reparo em nível de componente quando viável, coleta e entrega."
   },
   {
     "path": "/servicos/conserto-placa",
     "title": "Reparo de Placa Eletrônica em Curitiba | Nível de Componente",
-    "description": "Reparo de placa-mãe de notebook, placa de PC e placa de TV em Curitiba: avaliação em bancada, reparo em nível de componente, retrabalho de BGA quando viável, coleta e entrega."
+    "description": "Reparo de placa-mãe de notebook, placa de PC e placa de TV em Curitiba: avaliação em bancada, reparo em nível de componente, retrabalho de BGA quando viável, coleta."
   },
   {
     "path": "/servicos/conserto-monitor",
     "title": "Conserto de Monitor em Curitiba | Bancada, Coleta e Entrega",
-    "description": "Conserto de monitor em Curitiba: avaliação em bancada, reparo de fonte, placa e backlight quando viável, coleta e entrega. Não fazemos troca de painel — critério informado antes."
+    "description": "Conserto de monitor em Curitiba: avaliação em bancada, reparo de fonte, placa e backlight quando viável, coleta e entrega."
   },
   {
     "path": "/servicos/montagem-de-pc",
     "title": "Montagem de PC e PC Gamer em Curitiba | Testes Inclusos",
-    "description": "Montagem e configuração de computadores em Curitiba: verificação de compatibilidade, instalação dos componentes, BIOS, sistema, drivers e testes antes da entrega. Peças do cliente aceitas.",
+    "description": "Montagem e configuração de computadores em Curitiba: verificação de compatibilidade, instalação dos componentes, BIOS, sistema, drivers e testes antes da entrega.",
     "blocos": [
       {
         "titulo": "Peças fornecidas pelo cliente: compatibilidade, procedência e troca",
@@ -152,12 +152,12 @@ const BASE_ROUTES = [
   {
     "path": "/servicos/suporte-home-office",
     "title": "Suporte Técnico para Home Office em Curitiba",
-    "description": "Suporte técnico para quem trabalha em casa em Curitiba: computador lento, Wi-Fi instável, câmera e microfone em reuniões, e-mail, arquivos e preparação do posto de trabalho."
+    "description": "Suporte técnico para quem trabalha em casa em Curitiba: computador lento, Wi-Fi instável, câmera e microfone em reuniões, e-mail, arquivos e preparação do posto."
   },
   {
     "path": "/politica-de-pecas-do-cliente",
     "title": "Política de Peças do Cliente | Montagem em Curitiba",
-    "description": "Regras claras para peças fornecidas pelo cliente em Curitiba: compatibilidade, procedência, integridade no recebimento, prazo de troca, garantia da peça x garantia da mão de obra e valor declarado do equipamento.",
+    "description": "Regras claras para peças fornecidas pelo cliente em Curitiba: compatibilidade, procedência, integridade no recebimento, prazo de troca, garantia da peça x garantia.",
     "blocos": [
       {
         "titulo": "Compatibilidade conferida antes da montagem",
@@ -199,7 +199,7 @@ const BASE_ROUTES = [
   {
     "path": "/seguranca-dos-dados",
     "title": "Segurança dos Dados na Assistência Técnica | Curitiba",
-    "description": "Como arquivos, senhas e acessos são tratados durante a assistência técnica em Curitiba: autorização, acesso mínimo, backup prévio, cópias temporárias, limites e responsabilidades.",
+    "description": "Como arquivos, senhas e acessos são tratados durante a assistência técnica em Curitiba: autorização, acesso mínimo, backup prévio, cópias temporárias, limites.",
     "blocos": [
       {
         "titulo": "Compromisso de acesso mínimo",
@@ -316,7 +316,7 @@ const BASE_ROUTES = [
   {
     "path": "/como-funciona",
     "title": "Como Funciona o Atendimento Técnico em Curitiba",
-    "description": "Entenda como funciona o atendimento técnico de informática em Curitiba e região. Passo a passo completo: solicitação via WhatsApp, diagnóstico, execução e garantia. Técnico a domicílio no mesmo dia.",
+    "description": "Entenda como funciona o atendimento técnico de informática em Curitiba e região. Passo a passo completo: solicitação via WhatsApp, diagnóstico, execução e garantia.",
     "blocos": [
       {
         "titulo": "1. Triagem inicial pelo WhatsApp",
@@ -422,52 +422,52 @@ const BASE_ROUTES = [
   {
     "path": "/tecnico-informatica-sao-jose-pinhais",
     "title": "Técnico em São José dos Pinhais para Notebook e PC",
-    "description": "Técnico de informática em São José dos Pinhais: formatação, conserto de notebook e PC, upgrade de SSD, redes e suporte a empresas. Atendimento a domicílio ou coleta via WhatsApp."
+    "description": "Técnico de informática em São José dos Pinhais: formatação, conserto de notebook e PC, upgrade de SSD, redes e suporte a empresas."
   },
   {
     "path": "/tecnico-informatica-pinhais",
     "title": "Técnico em Pinhais para Notebook, PC e Redes",
-    "description": "Técnico de informática em Pinhais: formatação, conserto de notebook e PC, upgrade de SSD, remoção de vírus, redes e suporte empresarial. Atendimento a domicílio ou coleta via WhatsApp."
+    "description": "Técnico de informática em Pinhais: formatação, conserto de notebook e PC, upgrade de SSD, remoção de vírus, redes e suporte empresarial."
   },
   {
     "path": "/tecnico-informatica-colombo",
     "title": "Técnico em Colombo para Notebook, PC e Informática",
-    "description": "Técnico de informática em Colombo: formatação, conserto de notebook e PC, upgrade de SSD, remoção de vírus, redes e suporte empresarial. Atendimento a domicílio ou coleta via WhatsApp."
+    "description": "Técnico de informática em Colombo: formatação, conserto de notebook e PC, upgrade de SSD, remoção de vírus, redes e suporte empresarial."
   },
   {
     "path": "/tecnico-informatica-araucaria",
     "title": "Técnico em Araucária para Notebook, PC e Empresas",
-    "description": "Técnico de informática em Araucária: formatação, conserto de notebook e PC, upgrade de SSD, redes e suporte empresarial. Atendimento a domicílio ou coleta via WhatsApp."
+    "description": "Técnico de informática em Araucária: formatação, conserto de notebook e PC, upgrade de SSD, redes e suporte empresarial."
   },
   {
     "path": "/tecnico-informatica-campo-largo",
     "title": "Técnico em Campo Largo para Notebook, PC e Redes",
-    "description": "Técnico de informática em Campo Largo: formatação, conserto de notebook e PC, upgrade de SSD, remoção de vírus, redes e suporte empresarial. Atendimento a domicílio ou coleta via WhatsApp."
+    "description": "Técnico de informática em Campo Largo: formatação, conserto de notebook e PC, upgrade de SSD, remoção de vírus, redes e suporte empresarial."
   },
   {
     "path": "/tecnico-informatica-piraquara",
     "title": "Técnico em Piraquara para Notebook, PC e Internet",
-    "description": "Técnico de informática em Piraquara: formatação, conserto de notebook e PC, upgrade de SSD, remoção de vírus e Wi-Fi. Atendimento a domicílio ou coleta combinada por WhatsApp."
+    "description": "Técnico de informática em Piraquara: formatação, conserto de notebook e PC, upgrade de SSD, remoção de vírus e Wi-Fi."
   },
   {
     "path": "/tecnico-informatica-quatro-barras",
     "title": "Técnico em Quatro Barras para PC, Notebook e Redes",
-    "description": "Técnico de informática em Quatro Barras: conserto de notebook e PC, formatação, upgrade de SSD, redes e suporte a pequenas empresas. Visita agendada ou coleta via WhatsApp."
+    "description": "Técnico de informática em Quatro Barras: conserto de notebook e PC, formatação, upgrade de SSD, redes e suporte a pequenas empresas."
   },
   {
     "path": "/tecnico-informatica-campo-magro",
     "title": "Técnico em Campo Magro para Notebook, PC e Wi-Fi",
-    "description": "Técnico de informática em Campo Magro: conserto de notebook e PC, formatação, upgrade de SSD, remoção de vírus e Wi-Fi em chácaras e casas. Atendimento combinado por WhatsApp."
+    "description": "Técnico de informática em Campo Magro: conserto de notebook e PC, formatação, upgrade de SSD, remoção de vírus e Wi-Fi em chácaras e casas."
   },
   {
     "path": "/tecnico-informatica-almirante-tamandare",
     "title": "Técnico em Almirante Tamandaré | Notebook e PC",
-    "description": "Técnico de informática em Almirante Tamandaré: formatação, conserto de notebook e PC, upgrade de SSD, remoção de vírus e redes. Visita agendada ou coleta via WhatsApp."
+    "description": "Técnico de informática em Almirante Tamandaré: formatação, conserto de notebook e PC, upgrade de SSD, remoção de vírus e redes."
   },
   {
     "path": "/tecnico-informatica-fazenda-rio-grande",
     "title": "Técnico em Fazenda Rio Grande | PC, Notebook e Rede",
-    "description": "Técnico de informática em Fazenda Rio Grande: conserto de notebook e PC, formatação, upgrade de SSD, remoção de vírus e redes. Atendimento agendado ou coleta via WhatsApp."
+    "description": "Técnico de informática em Fazenda Rio Grande: conserto de notebook e PC, formatação, upgrade de SSD, remoção de vírus e redes."
   },
   {
     "path": "/empresa-de-ti-curitiba",
@@ -477,7 +477,7 @@ const BASE_ROUTES = [
   {
     "path": "/bairros/cic",
     "title": "Técnico de Informática no CIC (Curitiba) | Notebook e PC",
-    "description": "Técnico de informática no CIC, Curitiba: conserto de notebook, manutenção de computador, formatação e suporte para empresas. Diagnóstico a partir de R$ 99,99. Via WhatsApp.",
+    "description": "Técnico de informática no CIC, Curitiba: conserto de notebook, manutenção de computador, formatação e suporte para empresas. Diagnóstico a partir de R$ 99,99.",
     "faq": [
       {
         "question": "Vocês atendem empresas e comércios no CIC?",
@@ -500,7 +500,7 @@ const BASE_ROUTES = [
   {
     "path": "/bairros/batel",
     "title": "Técnico de Informática no Batel (Curitiba) | Notebook e PC",
-    "description": "Técnico de informática no Batel, Curitiba: conserto de notebook, manutenção de computador, formatação e upgrade de SSD. Diagnóstico a partir de R$ 99,99. Via WhatsApp.",
+    "description": "Técnico de informática no Batel, Curitiba: conserto de notebook, manutenção de computador, formatação e upgrade de SSD. Diagnóstico a partir de R$ 99,99.",
     "faq": [
       {
         "question": "Fazem suporte para home office no Batel?",
@@ -523,7 +523,7 @@ const BASE_ROUTES = [
   {
     "path": "/bairros/agua-verde",
     "title": "Técnico de Informática no Água Verde | Notebook e PC",
-    "description": "Técnico de informática no Água Verde, Curitiba: conserto de notebook, manutenção de computador, formatação e upgrade de SSD. Diagnóstico a partir de R$ 99,99. Via WhatsApp.",
+    "description": "Técnico de informática no Água Verde, Curitiba: conserto de notebook, manutenção de computador, formatação e upgrade de SSD. Diagnóstico a partir de R$ 99,99.",
     "faq": [
       {
         "question": "Vocês fazem upgrade de SSD no Água Verde?",
@@ -546,7 +546,7 @@ const BASE_ROUTES = [
   {
     "path": "/bairros/centro",
     "title": "Técnico de Informática no Centro de Curitiba | Notebook e PC",
-    "description": "Técnico de informática no Centro de Curitiba: conserto de notebook, manutenção de computador, formatação e suporte para escritórios. Diagnóstico a partir de R$ 99,99. Via WhatsApp.",
+    "description": "Técnico de informática no Centro de Curitiba: conserto de notebook, manutenção de computador, formatação e suporte para escritórios.",
     "faq": [
       {
         "question": "Atendem escritórios e lojas no Centro de Curitiba?",
@@ -569,7 +569,7 @@ const BASE_ROUTES = [
   {
     "path": "/bairros/portao",
     "title": "Técnico de Informática no Portão (Curitiba) | Notebook e PC",
-    "description": "Técnico de informática no Portão, Curitiba: conserto de notebook, manutenção de computador, formatação e upgrade de SSD. Atendimento a domicílio a partir de R$ 99,99. Via WhatsApp.",
+    "description": "Técnico de informática no Portão, Curitiba: conserto de notebook, manutenção de computador, formatação e upgrade de SSD.",
     "faq": [
       {
         "question": "Atendem o comércio do Portão?",
@@ -592,7 +592,7 @@ const BASE_ROUTES = [
   {
     "path": "/bairros/bigorrilho",
     "title": "Técnico de Informática no Bigorrilho (Curitiba) | Notebook e PC",
-    "description": "Técnico de informática no Bigorrilho e Champagnat, Curitiba: conserto de notebook, formatação, upgrade de SSD e Wi-Fi em apartamento. Diagnóstico a partir de R$ 99,99. Via WhatsApp.",
+    "description": "Técnico de informática no Bigorrilho e Champagnat, Curitiba: conserto de notebook, formatação, upgrade de SSD e Wi-Fi em apartamento.",
     "faq": [
       {
         "question": "Vocês atendem apartamento no Bigorrilho?",
@@ -615,7 +615,7 @@ const BASE_ROUTES = [
   {
     "path": "/bairros/santa-felicidade",
     "title": "Técnico de Informática em Santa Felicidade | Curitiba",
-    "description": "Técnico de informática em Santa Felicidade, Curitiba: conserto de PC e notebook, formatação, Wi-Fi em casa grande e suporte a comércio. A partir de R$ 99,99. Via WhatsApp.",
+    "description": "Técnico de informática em Santa Felicidade, Curitiba: conserto de PC e notebook, formatação, Wi-Fi em casa grande e suporte a comércio. A partir de R$ 99,99.",
     "faq": [
       {
         "question": "O Wi-Fi não chega aos fundos da casa. Como resolvem?",
@@ -638,7 +638,7 @@ const BASE_ROUTES = [
   {
     "path": "/bairros/cabral",
     "title": "Técnico de Informática no Cabral (Curitiba) | Notebook e PC",
-    "description": "Técnico de informática no Cabral, Curitiba: conserto de notebook, formatação, upgrade de SSD e suporte a consultórios e escritórios. A partir de R$ 99,99. Via WhatsApp.",
+    "description": "Técnico de informática no Cabral, Curitiba: conserto de notebook, formatação, upgrade de SSD e suporte a consultórios e escritórios. A partir de R$ 99,99.",
     "faq": [
       {
         "question": "Atendem consultórios e escritórios no Cabral?",
@@ -661,7 +661,7 @@ const BASE_ROUTES = [
   {
     "path": "/bairros/cristo-rei",
     "title": "Técnico de Informática no Cristo Rei (Curitiba) | Notebook e PC",
-    "description": "Técnico de informática no Cristo Rei, Curitiba: conserto de notebook, formatação, upgrade de SSD e Wi-Fi para estudantes e famílias. A partir de R$ 99,99. Via WhatsApp.",
+    "description": "Técnico de informática no Cristo Rei, Curitiba: conserto de notebook, formatação, upgrade de SSD e Wi-Fi para estudantes e famílias. A partir de R$ 99,99.",
     "faq": [
       {
         "question": "Meu notebook travou e tenho trabalho para entregar. Dá para priorizar?",
@@ -707,7 +707,7 @@ const BASE_ROUTES = [
   {
     "path": "/bairros/cajuru",
     "title": "Técnico de Informática no Cajuru (Curitiba) | PC e Notebook",
-    "description": "Técnico de informática no Cajuru, Curitiba: conserto de notebook e PC, formatação com backup, remoção de vírus e Wi-Fi. A partir de R$ 99,99. Atendimento via WhatsApp.",
+    "description": "Técnico de informática no Cajuru, Curitiba: conserto de notebook e PC, formatação com backup, remoção de vírus e Wi-Fi. A partir de R$ 99,99.",
     "faq": [
       {
         "question": "Atendem comércio pequeno no Cajuru?",
@@ -730,7 +730,7 @@ const BASE_ROUTES = [
   {
     "path": "/bairros/xaxim",
     "title": "Técnico de Informática no Xaxim (Curitiba) | Notebook e PC",
-    "description": "Técnico de informática no Xaxim, Curitiba: conserto de notebook, formatação com backup, remoção de vírus e Wi-Fi em casa. A partir de R$ 99,99. Atendimento via WhatsApp.",
+    "description": "Técnico de informática no Xaxim, Curitiba: conserto de notebook, formatação com backup, remoção de vírus e Wi-Fi em casa. A partir de R$ 99,99.",
     "faq": [
       {
         "question": "O Wi-Fi cai quando todos usam ao mesmo tempo. Tem solução?",
@@ -753,7 +753,7 @@ const BASE_ROUTES = [
   {
     "path": "/bairros/novo-mundo",
     "title": "Técnico de Informática no Novo Mundo (Curitiba) | PC e Notebook",
-    "description": "Técnico de informática no Novo Mundo, Curitiba: manutenção de computador, conserto de notebook, upgrade de SSD e rede para comércio. A partir de R$ 99,99. Via WhatsApp.",
+    "description": "Técnico de informática no Novo Mundo, Curitiba: manutenção de computador, conserto de notebook, upgrade de SSD e rede para comércio. A partir de R$ 99,99.",
     "faq": [
       {
         "question": "Atendem lojas e escritórios no Novo Mundo?",
@@ -776,7 +776,7 @@ const BASE_ROUTES = [
   {
     "path": "/bairros/uberaba",
     "title": "Técnico de Informática no Uberaba (Curitiba) | Notebook e PC",
-    "description": "Técnico de informática no Uberaba, Curitiba: conserto de notebook, formatação, remoção de vírus e Wi-Fi para home office. A partir de R$ 99,99. Atendimento via WhatsApp.",
+    "description": "Técnico de informática no Uberaba, Curitiba: conserto de notebook, formatação, remoção de vírus e Wi-Fi para home office. A partir de R$ 99,99.",
     "faq": [
       {
         "question": "Trabalho em casa e não posso ficar sem o notebook. Como fica?",
@@ -822,7 +822,7 @@ const BASE_ROUTES = [
   {
     "path": "/bairros/hauer",
     "title": "Técnico de Informática no Hauer (Curitiba) | Notebook e PC",
-    "description": "Técnico de informática no Hauer, Curitiba: conserto de notebook, formatação com backup, remoção de vírus e rede Wi-Fi. A partir de R$ 99,99. Atendimento via WhatsApp.",
+    "description": "Técnico de informática no Hauer, Curitiba: conserto de notebook, formatação com backup, remoção de vírus e rede Wi-Fi. A partir de R$ 99,99.",
     "faq": [
       {
         "question": "Vocês atendem no Hauer no mesmo dia?",
@@ -876,7 +876,7 @@ const BASE_ROUTES = [
   {
     "path": "/bairros/bacacheri",
     "title": "Técnico de Informática no Bacacheri (Curitiba) | Notebook e PC",
-    "description": "Técnico de informática no Bacacheri, Curitiba: conserto de notebook, manutenção de computador, formatação e rede Wi-Fi. A partir de R$ 99,99. Atendimento via WhatsApp.",
+    "description": "Técnico de informática no Bacacheri, Curitiba: conserto de notebook, manutenção de computador, formatação e rede Wi-Fi. A partir de R$ 99,99.",
     "faq": [
       {
         "question": "Minha casa é grande e o Wi-Fi não chega nos fundos. O que fazem?",
@@ -957,7 +957,7 @@ const BASE_ROUTES = [
   {
     "path": "/bairros/fazendinha",
     "title": "Técnico de Informática na Fazendinha (Curitiba) | Notebook e PC",
-    "description": "Técnico de informática na Fazendinha, Curitiba: conserto de notebook, formatação, limpeza interna e configuração de Wi-Fi. A partir de R$ 99,99. Atendimento via WhatsApp.",
+    "description": "Técnico de informática na Fazendinha, Curitiba: conserto de notebook, formatação, limpeza interna e configuração de Wi-Fi. A partir de R$ 99,99.",
     "faq": [
       {
         "question": "O computador da minha loja na Fazendinha trava no horário de pico. Dá para resolver no local?",
@@ -1011,7 +1011,7 @@ const BASE_ROUTES = [
   {
     "path": "/bairros/merces",
     "title": "Técnico de Informática nas Mercês (Curitiba) | Notebook e PC",
-    "description": "Técnico de informática nas Mercês, Curitiba: conserto de notebook, formatação com backup, recuperação de arquivos e Wi-Fi. A partir de R$ 99,99. Atendimento via WhatsApp.",
+    "description": "Técnico de informática nas Mercês, Curitiba: conserto de notebook, formatação com backup, recuperação de arquivos e Wi-Fi. A partir de R$ 99,99.",
     "faq": [
       {
         "question": "Consigo recuperar arquivos de um disco que parou de abrir?",
@@ -1092,7 +1092,7 @@ const BASE_ROUTES = [
   {
     "path": "/bairros/boqueirao",
     "title": "Técnico de Informática no Boqueirão (Curitiba) | PC e Notebook",
-    "description": "Técnico de informática no Boqueirão, Curitiba: conserto de PC e notebook, formatação com backup, upgrade de SSD e Wi-Fi. A partir de R$ 99,99. Atendimento via WhatsApp.",
+    "description": "Técnico de informática no Boqueirão, Curitiba: conserto de PC e notebook, formatação com backup, upgrade de SSD e Wi-Fi. A partir de R$ 99,99.",
     "faq": [
       {
         "question": "Meu PC emite nota e não pode parar. Como funciona?",
@@ -1183,7 +1183,7 @@ const BASE_ROUTES = [
     "path": "/atendimento-remoto",
     "title": "Suporte Remoto de Informática em Curitiba | Online",
     "h1": "Suporte remoto de informática para residências e empresas",
-    "description": "Suporte remoto de informática em Curitiba para configurações, sistema, programas, e-mail, impressora já conectada, orientação e home office — com autorização e acompanhamento.",
+    "description": "Suporte remoto de informática em Curitiba para configurações, sistema, programas, e-mail, impressora já conectada, orientação e home office — com autorização.",
     "blocos": [
       {
         "titulo": "O que é atendimento remoto",
@@ -1331,7 +1331,7 @@ const BASE_ROUTES = [
   {
     "path": "/areas-atendidas",
     "title": "Áreas Atendidas em Curitiba e Região | Bairros e Cidades",
-    "description": "Bairros de Curitiba e cidades da região metropolitana atendidas pelo Técnico em Curitiba, com a modalidade indicada em cada caso: no local, remoto ou coleta para bancada.",
+    "description": "Bairros de Curitiba e cidades da região metropolitana atendidas pelo Técnico em Curitiba, com a modalidade indicada em cada caso: no local, remoto ou coleta.",
     "blocos": [
       {
         "titulo": "O que esta página resolve",
@@ -1367,7 +1367,7 @@ const BASE_ROUTES = [
   {
     "path": "/equipamentos-atendidos",
     "title": "Equipamentos Atendidos | Técnico em Curitiba",
-    "description": "Notebooks, desktops, PC gamer, All in One, estações de trabalho, equipamentos de home office, redes e armazenamento: o que atendemos em Curitiba, os limites e a modalidade indicada.",
+    "description": "Notebooks, desktops, PC gamer, All in One, estações de trabalho, equipamentos de home office, redes e armazenamento: o que atendemos em Curitiba, os limites.",
     "blocos": [
       {
         "titulo": "Como usar esta página",
@@ -1435,7 +1435,7 @@ const BASE_ROUTES = [
   {
     "path": "/guia-tecnico-informatica",
     "title": "Guia Técnico: Manutenção de PC e Notebook Passo a Passo",
-    "description": "Guia completo de manutenção de computador e notebook: como identificar a família da falha, o que verificar antes de chamar o técnico, quando o upgrade compensa e como é feito o diagnóstico.",
+    "description": "Guia completo de manutenção de computador e notebook: como identificar a família da falha, o que verificar antes de chamar o técnico, quando o upgrade compensa.",
     "h1": "Guia técnico de informática: manutenção de PC e notebook",
     "subtitulo": "Como separar as famílias de falha de um computador ou notebook, o que verificar antes do atendimento, quando o upgrade muda o desempenho e quando o reparo deixa de compensar.",
     "blocos": [
@@ -1511,7 +1511,7 @@ const BASE_ROUTES = [
   {
     "path": "/problemas/computador-lento",
     "title": "Computador Lento? Diagnóstico Técnico em Curitiba",
-    "description": "Computador ou notebook lento para ligar e abrir programas? Veja os sintomas, as causas possíveis, quando SSD ou memória resolvem, quando formatar e quando trocar o equipamento.",
+    "description": "Computador ou notebook lento para ligar e abrir programas? Veja os sintomas, as causas possíveis, quando SSD ou memória resolvem, quando formatar e quando trocar.",
     "h1": "Computador lento: sintomas, causas possíveis e o que realmente resolve",
     "subtitulo": "Lentidão quase nunca tem uma causa única: armazenamento, memória, temperatura e software se manifestam de formas diferentes e exigem soluções diferentes.",
     "blocos": [
@@ -1542,7 +1542,7 @@ const BASE_ROUTES = [
   {
     "path": "/problemas/tela-azul-windows",
     "title": "Tela Azul no Windows? Diagnóstico Técnico em Curitiba",
-    "description": "Tela azul recorrente no Windows: o que o código de erro indica, quais causas são de memória, disco, driver ou temperatura, o que anotar antes do atendimento e quando formatar não resolve.",
+    "description": "Tela azul recorrente no Windows: o que o código de erro indica, quais causas são de memória, disco, driver ou temperatura, o que anotar antes do atendimento.",
     "h1": "Tela azul no Windows: o que o código indica e como o diagnóstico é feito",
     "subtitulo": "Tela azul não é um defeito: é o sistema interrompendo a execução para evitar dano maior. O que importa é o que provocou a interrupção — memória, disco, driver, temperatura ou alimentação.",
     "blocos": [
@@ -1580,7 +1580,7 @@ const BASE_ROUTES = [
   {
     "path": "/problemas/notebook-superaquecendo",
     "title": "Notebook Superaquecendo? Diagnóstico Técnico em Curitiba",
-    "description": "Notebook esquentando, com cooler acelerado ou desligando sozinho: entenda o que é temperatura normal, quais causas são de poeira, pasta térmica, uso ou falha elétrica, e o que fazer antes do atendimento.",
+    "description": "Notebook esquentando, com cooler acelerado ou desligando sozinho: entenda o que é temperatura normal, quais causas são de poeira, pasta térmica, uso ou falha.",
     "h1": "Notebook superaquecendo: o que investigar antes de trocar qualquer peça",
     "subtitulo": "Notebook quente não é necessariamente notebook com defeito. O que importa é se ele sustenta o esforço sem perder desempenho e sem desligar.",
     "blocos": [
@@ -1618,7 +1618,7 @@ const BASE_ROUTES = [
   {
     "path": "/problemas/notebook-nao-carrega-bateria",
     "title": "Notebook Não Carrega a Bateria? Diagnóstico em Curitiba",
-    "description": "Notebook conectado à tomada mas sem carregar, parado em uma porcentagem fixa ou funcionando só no cabo: entenda o que é bateria, carregador, conector de energia ou placa, e o que verificar antes do atendimento.",
+    "description": "Notebook conectado à tomada mas sem carregar, parado em uma porcentagem fixa ou funcionando só no cabo: entenda o que é bateria, carregador, conector de energia.",
     "h1": "Notebook não carrega a bateria: como separar bateria, carregador e placa",
     "subtitulo": "Entre a tomada e a célula existem cabo, fonte, conector, circuito de carga e controlador. Cada etapa falha de um jeito diferente e produz o mesmo sintoma visível: a porcentagem que não sobe.",
     "blocos": [
@@ -1656,7 +1656,7 @@ const BASE_ROUTES = [
   {
     "path": "/problemas/tv-nao-liga",
     "title": "TV Não Liga? Diagnóstico Técnico de TV em Curitiba",
-    "description": "TV que não liga, com LED piscando, som sem imagem ou desligando sozinha: entenda o que é fonte, placa principal, backlight ou painel, o que verificar antes do atendimento e quando o reparo não compensa.",
+    "description": "TV que não liga, com LED piscando, som sem imagem ou desligando sozinha: entenda o que é fonte, placa principal, backlight ou painel, o que verificar.",
     "h1": "TV não liga: como separar fonte, placa, iluminação e painel",
     "subtitulo": "Em uma TV, \"não liga\" descreve pelo menos quatro situações diferentes, e cada uma leva a um custo e a um desfecho distintos.",
     "blocos": [
@@ -1695,7 +1695,7 @@ const BASE_ROUTES = [
   {
     "path": "/problemas/computador-desliga-sozinho",
     "title": "Computador Desliga Sozinho? Diagnóstico em Curitiba",
-    "description": "Computador ou notebook que desliga sozinho, reinicia do nada ou apaga durante jogos: entenda a diferença entre temperatura, fonte, energia e software, o que observar antes do atendimento e como é feito o diagnóstico.",
+    "description": "Computador ou notebook que desliga sozinho, reinicia do nada ou apaga durante jogos: entenda a diferença entre temperatura, fonte, energia e software.",
     "h1": "Computador desliga sozinho: temperatura, fonte, energia ou software",
     "subtitulo": "O jeito como o equipamento apaga já separa quatro grupos de causa, e tratar tudo como superaquecimento é o que mais gera troca de peça desnecessária.",
     "blocos": [
@@ -1733,7 +1733,7 @@ const BASE_ROUTES = [
   {
     "path": "/problemas/wifi-caindo-toda-hora",
     "title": "Wi-Fi Caindo Toda Hora? Diagnóstico de Rede em Curitiba",
-    "description": "Wi-Fi que cai toda hora, sinal que some em um cômodo ou internet lenta só à noite: entenda a diferença entre falha do provedor, do roteador e da cobertura, o que testar antes e como é feito o diagnóstico de rede em Curitiba.",
+    "description": "Wi-Fi que cai toda hora, sinal que some em um cômodo ou internet lenta só à noite: entenda a diferença entre falha do provedor, do roteador e da cobertura.",
     "h1": "Wi-Fi caindo toda hora: provedor, roteador ou cobertura",
     "subtitulo": "A causa mais comum de rede instável não é defeito do provedor nem do roteador, e sim cobertura mal distribuída dentro do imóvel.",
     "blocos": [
@@ -1772,7 +1772,7 @@ const BASE_ROUTES = [
   {
     "path": "/problemas/tv-com-som-sem-imagem",
     "title": "TV com Som e Sem Imagem? Diagnóstico em Curitiba",
-    "description": "Televisor com som normal e tela apagada: entenda a diferença entre falha de backlight, de placa de fonte e de painel, quais testes indicam cada caso e quando o reparo realmente compensa em Curitiba.",
+    "description": "Televisor com som normal e tela apagada: entenda a diferença entre falha de backlight, de placa de fonte e de painel, quais testes indicam cada caso e quando.",
     "h1": "TV com som e sem imagem: iluminação, alimentação ou painel",
     "subtitulo": "Televisor que reproduz áudio com a tela apagada quase sempre continua gerando imagem: o que parou foi a iluminação por trás do painel.",
     "blocos": [
@@ -1811,7 +1811,7 @@ const BASE_ROUTES = [
   {
     "path": "/problemas/notebook-molhado",
     "title": "Notebook Molhado? O Que Fazer nas Primeiras Horas | Curitiba",
-    "description": "Derramou líquido no notebook? Entenda por que ligar o aparelho piora o quadro, o que fazer nas primeiras horas, como funciona a limpeza de placa e em que casos o reparo deixa de compensar. Coleta em Curitiba.",
+    "description": "Derramou líquido no notebook? Entenda por que ligar o aparelho piora o quadro, o que fazer nas primeiras horas, como funciona a limpeza de placa e em que casos.",
     "h1": "Notebook molhado: o que fazer nas primeiras horas",
     "subtitulo": "Em aparelho que recebeu líquido, o desfecho é decidido nas primeiras horas — e as três atitudes mais comuns são justamente as que agravam o dano.",
     "blocos": [
@@ -1850,7 +1850,7 @@ const BASE_ROUTES = [
   {
     "path": "/problemas/tela-de-notebook-quebrada",
     "title": "Tela de Notebook Quebrada: Troca, Custo e Riscos | Curitiba",
-    "description": "Tela trincada, com manchas ou linhas? Entenda a diferença entre painel danificado, cabo flat e placa de vídeo, o que a troca resolve, o que não resolve e como funciona a coleta em Curitiba.",
+    "description": "Tela trincada, com manchas ou linhas? Entenda a diferença entre painel danificado, cabo flat e placa de vídeo, o que a troca resolve, o que não resolve.",
     "h1": "Tela de notebook quebrada: quando trocar e quando não é a tela",
     "subtitulo": "Nem toda falha de imagem é painel quebrado. Um teste com monitor externo separa três cenários com custos muito diferentes: painel, cabo flat e circuito de vídeo.",
     "blocos": [
@@ -1889,7 +1889,7 @@ const BASE_ROUTES = [
 {
   "path": "/problemas/notebook-com-tela-preta",
   "title": "Notebook com Tela Preta mas Ligado: O Que Fazer | Curitiba",
-  "description": "Notebook liga, ventoinha gira e teclado acende, mas a tela fica preta? Entenda como separar iluminação da tela, cabo interno, vídeo da placa e sistema travado antes de trocar peça, com avaliação por coleta em Curitiba.",
+  "description": "Notebook liga, ventoinha gira e teclado acende, mas a tela fica preta? Entenda como separar iluminação da tela, cabo interno, vídeo da placa e sistema travado.",
   "h1": "Notebook com tela preta: como descobrir se é a tela, o cabo ou a placa",
   "subtitulo": "O aparelho liga e responde, mas a tela continua escura. Dois testes caseiros separam três causas com custos completamente diferentes.",
   "blocos": [
@@ -1927,7 +1927,7 @@ const BASE_ROUTES = [
 {
   "path": "/problemas/tv-sem-som",
   "title": "TV Sem Som: Causas, Testes e Conserto | Curitiba",
-  "description": "TV com imagem normal e sem áudio, som chiado ou saída de fone mudo? Veja como separar configuração de saída, falha do amplificador de áudio e alto-falante rompido antes de orçar, com avaliação por coleta em Curitiba.",
+  "description": "TV com imagem normal e sem áudio, som chiado ou saída de fone mudo? Veja como separar configuração de saída, falha do amplificador de áudio e alto-falante rompido.",
   "h1": "TV sem som: ajuste de saída, amplificador de áudio ou alto-falante rompido",
   "subtitulo": "Televisor com imagem normal e nenhum áudio tem três origens bem distintas, e elas se separam com testes gratuitos feitos em poucos minutos.",
   "blocos": [
@@ -1965,7 +1965,7 @@ const BASE_ROUTES = [
 {
   "path": "/problemas/impressora-nao-imprime",
   "title": "Impressora Não Imprime: Causas e Solução | Curitiba",
-  "description": "Impressora aparece como offline, aceita o trabalho e não imprime ou sai página em branco? Veja como separar fila travada, driver, rede Wi-Fi e falha mecânica antes de gastar com cartucho ou aparelho novo em Curitiba.",
+  "description": "Impressora aparece como offline, aceita o trabalho e não imprime ou sai página em branco? Veja como separar fila travada, driver, rede Wi-Fi e falha mecânica.",
   "h1": "Impressora não imprime: fila travada, driver, rede ou falha mecânica",
   "subtitulo": "A maior parte das impressoras que pararam de funcionar está intacta: o que falhou foi a fila, o driver ou o endereço na rede.",
   "blocos": [
@@ -2003,7 +2003,7 @@ const BASE_ROUTES = [
 {
   "path": "/problemas/monitor-sem-sinal",
   "title": "Monitor Sem Sinal: Causas e Solução | Curitiba",
-  "description": "Monitor mostra \"sem sinal\" com o computador ligado? Veja como separar cabo, entrada errada, placa de vídeo e falha do próprio monitor com testes gratuitos antes de orçar, com avaliação técnica em Curitiba.",
+  "description": "Monitor mostra \"sem sinal\" com o computador ligado? Veja como separar cabo, entrada errada, placa de vídeo e falha do próprio monitor antes de gastar.",
   "h1": "Monitor sem sinal: cabo, entrada errada, placa de vídeo ou falha do monitor",
   "subtitulo": "A mensagem de sem sinal quase nunca diz onde está o defeito: ela apenas informa que nenhuma imagem chegou até a entrada selecionada.",
   "blocos": [
@@ -2041,7 +2041,7 @@ const BASE_ROUTES = [
 {
   "path": "/problemas/notebook-lento",
   "title": "Notebook Lento: Causas Reais e Solução | Curitiba",
-  "description": "Notebook demorando para ligar, travando ao abrir programas ou lento só na bateria? Veja como separar disco mecânico, memória insuficiente, calor e software antes de trocar de aparelho, com avaliação técnica em Curitiba.",
+  "description": "Notebook demorando para ligar, travando ao abrir programas ou lento só na bateria? Veja como separar disco mecânico, memória insuficiente, calor e software.",
   "h1": "Notebook lento: disco mecânico, memória curta, calor ou software acumulado",
   "subtitulo": "Lentidão tem quatro origens bem diferentes, e cada uma tem um custo próprio: identificar a sua evita gastar com peça, formatação ou aparelho novo.",
   "blocos": [
@@ -2079,7 +2079,7 @@ const BASE_ROUTES = [
 {
   "path": "/problemas/notebook-desligando-sozinho",
   "title": "Notebook Desligando Sozinho: Causas | Curitiba",
-  "description": "Notebook desligando sozinho do nada, só em jogos ou quando tira da tomada? Veja como separar superaquecimento, bateria em fim de vida, carregador fraco e falha de placa antes de gastar, com avaliação técnica em Curitiba.",
+  "description": "Notebook desligando sozinho do nada, só em jogos ou quando tira da tomada? Veja como separar superaquecimento, bateria em fim de vida, carregador fraco e falha.",
   "h1": "Notebook desligando sozinho: temperatura, bateria, carregador ou placa",
   "subtitulo": "O momento em que o notebook desliga é o dado mais valioso do diagnóstico e separa problema térmico de bateria e de falha elétrica.",
   "blocos": [
@@ -2117,7 +2117,7 @@ const BASE_ROUTES = [
 {
   "path": "/problemas/pen-drive-nao-reconhecido",
   "title": "Pen Drive Não Reconhecido: O Que Fazer | Curitiba",
-  "description": "Pen drive não aparece no computador, pede formatação ou some do nada? Veja como separar porta USB, letra de unidade, tabela de partição corrompida e falha física antes de perder os arquivos, com avaliação em Curitiba.",
+  "description": "Pen drive não aparece no computador, pede formatação ou some do nada? Veja como separar porta USB, letra de unidade, tabela de partição corrompida e falha física.",
   "h1": "Pen drive não reconhecido: porta USB, partição corrompida ou falha física",
   "subtitulo": "A prioridade aqui não é o dispositivo, é o conteúdo: cada tentativa desnecessária consome parte da chance de recuperar os arquivos.",
   "blocos": [
@@ -2155,7 +2155,7 @@ const BASE_ROUTES = [
 {
   "path": "/problemas/dobradica-do-notebook-quebrada",
   "title": "Dobradiça do Notebook Quebrada: Conserto | Curitiba",
-  "description": "Dobradiça do notebook quebrada, carcaça estufando ou tampa que não para em pé? Veja como avaliar o dano na estrutura, o risco para o cabo de vídeo e o que realmente resolve, com avaliação técnica em Curitiba.",
+  "description": "Dobradiça do notebook quebrada, carcaça estufando ou tampa que não para em pé? Veja como avaliar o dano na estrutura, o risco para o cabo de vídeo e o que realmente.",
   "h1": "Dobradiça do notebook quebrada: carcaça, cabo de vídeo e reparo estrutural",
   "subtitulo": "Dobradiça solta raramente fica igual: ela evolui para carcaça estufada, moldura descolando e cabo de vídeo pinçado.",
   "blocos": [
@@ -2193,7 +2193,7 @@ const BASE_ROUTES = [
 {
   "path": "/problemas/tela-do-computador-piscando",
   "title": "Tela do Computador Piscando: O Que Fazer | Curitiba",
-  "description": "Tela piscando, imagem tremendo ou monitor apagando por instantes? Veja como separar cabo, taxa de atualização, driver de vídeo, fonte do monitor e falha na placa antes de comprar peça, com avaliação técnica em Curitiba.",
+  "description": "Tela piscando, imagem tremendo ou monitor apagando por instantes? Veja como separar cabo, taxa de atualização, driver de vídeo, fonte do monitor e falha na placa.",
   "h1": "Tela do computador piscando: cabo, driver, monitor ou placa de vídeo",
   "subtitulo": "Piscar de imagem tem quatro origens possíveis, e três delas custam pouco para descartar.",
   "blocos": [
@@ -2231,7 +2231,7 @@ const BASE_ROUTES = [
 {
   "path": "/problemas/notebook-nao-conecta-no-wifi",
   "title": "Notebook Não Conecta no Wi-Fi: Como Resolver | Curitiba",
-  "description": "Notebook não conecta no Wi-Fi, não encontra a rede ou conecta sem internet? Veja como separar driver, placa de rede desativada, antena solta e falha do roteador antes de trocar peça, com avaliação técnica em Curitiba.",
+  "description": "Notebook não conecta no Wi-Fi, não encontra a rede ou conecta sem internet? Veja como separar driver, placa de rede desativada, antena solta e falha do roteador.",
   "h1": "Notebook não conecta no Wi-Fi: driver, adaptador, antena ou roteador",
   "subtitulo": "Antes de trocar placa ou comprar adaptador, descubra se a falha está no notebook ou na rede.",
   "blocos": [
@@ -2269,7 +2269,7 @@ const BASE_ROUTES = [
 {
   "path": "/problemas/webcam-nao-funciona",
   "title": "Webcam Não Funciona: Causas e Solução | Curitiba",
-  "description": "Webcam do notebook sem imagem, tela preta na reunião ou câmera não encontrada pelo sistema? Veja como separar permissão do sistema, driver, cabo flat e falha do módulo antes de comprar câmera externa, com avaliação técnica em Curitiba.",
+  "description": "Webcam do notebook sem imagem, tela preta na reunião ou câmera não encontrada pelo sistema? Veja como separar permissão do sistema, driver, cabo flat e falha.",
   "h1": "Webcam não funciona: permissão, driver, cabo flat ou módulo",
   "subtitulo": "Tela preta na reunião raramente é câmera queimada.",
   "blocos": [
@@ -2306,7 +2306,7 @@ const BASE_ROUTES = [
   {
     "path": "/problemas",
     "title": "Problemas de Computador, Notebook e TV | Curitiba",
-    "description": "Índice de sintomas atendidos em Curitiba: computador lento, tela azul, Wi-Fi caindo, notebook que não liga e smart TV com defeito. Cada página explica causas prováveis, testes seguros e o que resolve, com avaliação técnica e coleta no endereço.",
+    "description": "Índice de sintomas atendidos em Curitiba: computador lento, tela azul, Wi-Fi caindo, notebook que não liga e smart TV com defeito.",
     "h1": "Problemas atendidos: encontre o seu sintoma antes de gastar",
     "subtitulo": "Páginas de sintoma escritas a partir dos atendimentos reais da bancada.",
     "blocos": [
@@ -2369,7 +2369,7 @@ const BASE_ROUTES = [
 {
   "path": "/problemas/tv-nao-conecta-no-wifi",
   "title": "TV Não Conecta no Wi-Fi: O Que Fazer | Curitiba",
-  "description": "Smart TV não conecta no Wi-Fi, some da lista de redes ou cai no meio do filme? Veja como separar cobertura do roteador, faixa de 5 GHz, sistema da TV e módulo sem fio em falha antes de trocar o aparelho, com avaliação técnica em Curitiba.",
+  "description": "Smart TV não conecta no Wi-Fi, some da lista de redes ou cai no meio do filme? Veja como separar cobertura do roteador, faixa de 5 GHz, sistema da TV e módulo.",
   "h1": "TV não conecta no Wi-Fi: cobertura, faixa, sistema ou módulo",
   "subtitulo": "Três testes gratuitos separam problema de rede de falha do aparelho.",
   "blocos": [
@@ -2407,7 +2407,7 @@ const BASE_ROUTES = [
 {
   "path": "/problemas/windows-nao-inicia",
   "title": "Windows Não Inicia: Como Recuperar o Sistema | Curitiba",
-  "description": "Windows travado no logo, reparo automático em loop ou mensagem de disco de inicialização não encontrado? Veja como separar falha de sistema, disco com setor ruim e configuração de BIOS antes de formatar, com avaliação técnica em Curitiba.",
+  "description": "Windows travado no logo, reparo automático em loop ou mensagem de disco de inicialização não encontrado? Veja como separar falha de sistema, disco com setor ruim.",
   "h1": "Windows não inicia: sistema, disco ou configuração de boot",
   "subtitulo": "Computador que liga mas não carrega o sistema quase nunca precisa de formatação imediata.",
   "blocos": [
@@ -2445,7 +2445,7 @@ const BASE_ROUTES = [
 {
   "path": "/problemas/tv-com-imagem-escura",
   "title": "TV com Imagem Escura: Causas e Conserto | Curitiba",
-  "description": "TV com imagem escura, som normal e tela quase apagada? Veja como separar backlight queimado, placa de fonte, ajuste de brilho e falha do painel antes de trocar o aparelho, com avaliação técnica em Curitiba.",
+  "description": "TV com imagem escura, som normal e tela quase apagada? Veja como separar backlight queimado, placa de fonte, ajuste de brilho e falha do painel antes de trocar.",
   "h1": "TV com imagem escura: iluminação de fundo, fonte ou ajuste",
   "subtitulo": "Tela escura com som normal quase nunca é painel queimado.",
   "blocos": [
@@ -2483,7 +2483,7 @@ const BASE_ROUTES = [
 {
   "path": "/problemas/tv-travando",
   "title": "TV Travando ou Muito Lenta: O Que Fazer | Curitiba",
-  "description": "Smart TV travando, aplicativo congelando ou controle demorando para responder? Veja como separar memória cheia, aplicativo desatualizado, rede saturada e falha de placa antes de trocar a televisão, com avaliação técnica em Curitiba.",
+  "description": "Smart TV travando, aplicativo congelando ou controle demorando para responder? Veja como separar memória cheia, aplicativo desatualizado, rede saturada e falha.",
   "h1": "TV travando: memória cheia, aplicativo, rede ou placa",
   "subtitulo": "Três das quatro causas de smart TV lenta custam pouco para descartar antes de aposentar o aparelho.",
   "blocos": [
@@ -2521,7 +2521,7 @@ const BASE_ROUTES = [
 {
   "path": "/problemas/mouse-nao-funciona",
   "title": "Mouse Não Funciona: Como Resolver | Curitiba",
-  "description": "Mouse não funciona, cursor travado ou clique falhando sozinho? Veja como separar porta USB, receptor sem fio, driver, bateria e falha do próprio mouse antes de comprar outro, com avaliação técnica em Curitiba.",
+  "description": "Mouse não funciona, cursor travado ou clique falhando sozinho? Veja como separar porta USB, receptor sem fio, driver, bateria e falha do próprio mouse.",
   "h1": "Mouse não funciona: porta USB, receptor, driver ou o próprio mouse",
   "subtitulo": "Um teste de um minuto separa defeito do periférico de falha da porta USB ou do sistema.",
   "blocos": [
@@ -2559,7 +2559,7 @@ const BASE_ROUTES = [
 {
   "path": "/problemas/computador-sem-som",
   "title": "Computador Sem Som: Como Resolver | Curitiba",
-  "description": "Computador sem som, som só no fone ou saída de áudio sumida do Windows? Veja como separar dispositivo de saída errado, driver, conector danificado e falha no chip de áudio antes de trocar peça, com avaliação em Curitiba.",
+  "description": "Computador sem som, som só no fone ou saída de áudio sumida do Windows? Veja como separar dispositivo de saída errado, driver, conector danificado e falha no chip.",
   "h1": "Computador sem som: saída errada, driver, conector ou chip de áudio",
   "subtitulo": "A maior parte dos computadores sem áudio não tem peça queimada: o que falta é investigar na ordem certa.",
   "blocos": [
@@ -2597,7 +2597,7 @@ const BASE_ROUTES = [
 {
   "path": "/problemas/computador-travando",
   "title": "Computador Travando: Causas e Conserto | Curitiba",
-  "description": "Computador travando do nada, congelando a tela ou parando só em jogos e programas pesados? Veja como separar memória com defeito, superaquecimento, disco em falha e driver antes de trocar peça, com avaliação técnica em Curitiba.",
+  "description": "Computador travando do nada, congelando a tela ou parando só em jogos e programas pesados? Veja como separar memória com defeito, superaquecimento, disco em falha.",
   "h1": "Computador travando: memória, temperatura, disco em falha ou software",
   "subtitulo": "O momento em que o travamento acontece diz mais do que qualquer teste isolado e separa peça defeituosa de problema de sistema.",
   "blocos": [
@@ -2635,7 +2635,7 @@ const BASE_ROUTES = [
 {
   "path": "/problemas/touchpad-nao-funciona",
   "title": "Touchpad Não Funciona no Notebook | Curitiba",
-  "description": "Touchpad do notebook parou de responder, funciona pela metade ou só o clique falhou? Veja como separar atalho desativado, driver, cabo flat solto e falha física antes de orçar, com avaliação técnica em Curitiba.",
+  "description": "Touchpad do notebook parou de responder, funciona pela metade ou só o clique falhou? Veja como separar atalho desativado, driver, cabo flat solto e falha física.",
   "h1": "Touchpad não funciona: atalho desativado, driver, cabo flat ou falha física",
   "subtitulo": "Boa parte dos touchpads que aparentam estar queimados está apenas desativada por atalho de teclado ou driver trocado em atualização.",
   "blocos": [
@@ -2673,7 +2673,7 @@ const BASE_ROUTES = [
 {
   "path": "/problemas/tv-desligando-sozinha",
   "title": "TV Desligando Sozinha: Causas e Conserto | Curitiba",
-  "description": "Televisor que desliga sozinho, reinicia ou entra em ciclo de LED piscando? Entenda como separar capacitor de fonte, proteção térmica, ajuste de economia e placa principal, com avaliação por coleta em Curitiba.",
+  "description": "Televisor que desliga sozinho, reinicia ou entra em ciclo de LED piscando? Entenda como separar capacitor de fonte, proteção térmica, ajuste de economia e placa.",
   "h1": "TV desligando sozinha: proteção da fonte, ajuste do menu ou falha de placa",
   "subtitulo": "Televisor que apaga sem comando quase nunca é defeito aleatório: na maioria dos casos é o próprio aparelho se protegendo de uma tensão fora da faixa.",
   "blocos": [
@@ -2711,7 +2711,7 @@ const BASE_ROUTES = [
 {
     "path": "/problemas/computador-fazendo-barulho",
     "title": "Computador Fazendo Barulho: Como Identificar a Origem | Curitiba",
-    "description": "PC barulhento, ventoinha rugindo, estalo ou zumbido? Entenda como separar cooler, fonte, disco r\u00edgido e ru\u00eddo el\u00e9trico antes de trocar pe\u00e7a, e como funciona a coleta em Curitiba.",
+    "description": "PC barulhento, ventoinha rugindo, estalo ou zumbido? Entenda como separar cooler, fonte, disco r\u00edgido e ru\u00eddo el\u00e9trico antes de trocar pe\u00e7a, e como funciona.",
     "h1": "Computador fazendo barulho: como descobrir a origem antes de trocar pe\u00e7a",
     "subtitulo": "Rugido por temperatura, chiado de rolamento, clique de disco e zumbido el\u00e9trico t\u00eam causas, urg\u00eancias e custos diferentes \u2014 e comprar cooler novo antes do diagn\u00f3stico \u00e9 o erro mais caro.",
     "blocos": [
@@ -2750,7 +2750,7 @@ const BASE_ROUTES = [
 {
     "path": "/problemas/tv-com-linhas-na-tela",
     "title": "TV com Linhas na Tela: Tem Conserto? | Curitiba",
-    "description": "Televisor com linhas verticais, horizontais ou faixas coloridas na imagem? Entenda quando \u00e9 conex\u00e3o do painel, placa de controle ou dano interno sem reparo vi\u00e1vel, e como funciona a avalia\u00e7\u00e3o por coleta em Curitiba.",
+    "description": "Televisor com linhas verticais, horizontais ou faixas coloridas na imagem? Entenda quando \u00e9 conex\u00e3o do painel, placa de controle ou dano interno sem reparo vi\u00e1vel.",
     "h1": "TV com linhas na tela: quando \u00e9 conex\u00e3o, quando \u00e9 placa e quando n\u00e3o tem reparo",
     "subtitulo": "Linha vertical, linha horizontal e faixa escura parecem o mesmo defeito, mas v\u00e3o de um reparo simples de contato at\u00e9 a aus\u00eancia de solu\u00e7\u00e3o vi\u00e1vel.",
     "blocos": [
@@ -2789,7 +2789,7 @@ const BASE_ROUTES = [
   {
     "path": "/problemas/computador-nao-liga",
     "title": "Computador de Mesa N\u00e3o Liga: Diagn\u00f3stico Real | Curitiba",
-    "description": "PC n\u00e3o liga, n\u00e3o d\u00e1 v\u00eddeo ou liga e apaga em seguida? Entenda como separar fonte, bot\u00e3o, placa-m\u00e3e e mem\u00f3ria antes de trocar pe\u00e7a por achismo, e como funciona a coleta em Curitiba.",
+    "description": "PC n\u00e3o liga, n\u00e3o d\u00e1 v\u00eddeo ou liga e apaga em seguida? Entenda como separar fonte, bot\u00e3o, placa-m\u00e3e e mem\u00f3ria antes de trocar pe\u00e7a por achismo, e como funciona.",
     "h1": "Computador de mesa n\u00e3o liga: como descobrir a causa sem trocar pe\u00e7a por achismo",
     "subtitulo": "\"N\u00e3o liga\" descreve pelo menos quatro defeitos diferentes, com custos que v\u00e3o de um cabo trocado a reparo de placa \u2014 e a ordem do teste \u00e9 o que evita comprar pe\u00e7a antes do diagn\u00f3stico.",
     "blocos": [
@@ -2828,7 +2828,7 @@ const BASE_ROUTES = [
   {
     "path": "/problemas/teclado-de-notebook-nao-funciona",
     "title": "Teclado do Notebook N\u00e3o Funciona: Causas e Troca | Curitiba",
-    "description": "Teclas que n\u00e3o respondem, teclado morto ou digitando sozinho? Entenda quando \u00e9 software, cabo flat, l\u00edquido ou placa, o que a troca resolve e como funciona a coleta em Curitiba.",
+    "description": "Teclas que n\u00e3o respondem, teclado morto ou digitando sozinho? Entenda quando \u00e9 software, cabo flat, l\u00edquido ou placa, o que a troca resolve e como funciona.",
     "h1": "Teclado de notebook n\u00e3o funciona: quando \u00e9 ajuste, quando \u00e9 pe\u00e7a",
     "subtitulo": "Parte dos casos \u00e9 layout de idioma trocado, cabo flat solto ou res\u00edduo sob a tecla. A outra parte precisa de substitui\u00e7\u00e3o, e o custo muda conforme o teclado seja pe\u00e7a independente ou venha rebitado \u00e0 carca\u00e7a.",
     "blocos": [
@@ -2867,7 +2867,7 @@ const BASE_ROUTES = [
   {
     "path": "/problemas/hd-nao-reconhecido",
     "title": "HD ou SSD Não é Reconhecido: O Que Fazer | Curitiba",
-    "description": "O computador não reconhece o HD ou SSD? Entenda a diferença entre falha de cabo, de partição e de mecânica, por que insistir reduz a chance de recuperar arquivos e como funciona a coleta em Curitiba.",
+    "description": "O computador não reconhece o HD ou SSD? Entenda a diferença entre falha de cabo, de partição e de mecânica, por que insistir reduz a chance de recuperar arquivos.",
     "h1": "HD ou SSD não reconhecido: o que fazer antes de perder os arquivos",
     "subtitulo": "Quando o disco some, a diferença entre recuperar tudo e perder tudo costuma estar nas duas horas seguintes — e quase toda tentativa caseira consome parte dessa chance.",
     "blocos": [

@@ -10,6 +10,8 @@
  * usa para ADOTAR o nó estático na hidratação (sem duplicar entidades).
  */
 import { buildLocalBusinessSchema } from "@/lib/localBusinessJsonLd";
+import { buildOrganizationSchema, buildWebSiteSchema } from "@/lib/organizationJsonLd";
+import { HOME_FAQS, HOME_SERVICES } from "@/lib/home/homeContent";
 import { absoluteUrl, siteConfig } from "@/lib/siteConfig";
 
 export interface RouteFaq {
@@ -86,19 +88,68 @@ export function seoHead({
 
   const scripts: Array<Record<string, unknown>> = [];
 
+  // Identidade institucional — um nó por documento, idêntico ao cliente
+  // (mesmos builders), portanto adotado na hidratação sem duplicar.
+  scripts.push(jsonLd("organization", buildOrganizationSchema()));
+  scripts.push(jsonLd("website", buildWebSiteSchema()));
+
   if (localBusiness) {
     scripts.push(
       jsonLd("local-business", buildLocalBusinessSchema({ path, description })),
     );
   }
 
-  if (faq?.length) {
+  // Home: WebPage + ItemList derivados do conteúdo realmente renderizado.
+  if (path === "/") {
+    scripts.push(
+      jsonLd("web-page", {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": `${siteConfig.baseUrl}/#webpage-home`,
+        url: `${siteConfig.baseUrl}/`,
+        name: title,
+        description,
+        isPartOf: { "@id": `${siteConfig.baseUrl}/#website` },
+        about: { "@id": `${siteConfig.baseUrl}/#organization` },
+        inLanguage: "pt-BR",
+        speakable: {
+          "@type": "SpeakableSpecification",
+          cssSelector: ["h1", ".tldr", "[data-speakable]"],
+        },
+      }),
+    );
+    scripts.push(
+      jsonLd("item-list-services", {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "@id": `${siteConfig.baseUrl}/#services-list`,
+        name: "Serviços de informática em Curitiba",
+        itemListOrder: "https://schema.org/ItemListUnordered",
+        numberOfItems: HOME_SERVICES.length,
+        itemListElement: HOME_SERVICES.map((s, i) => ({
+          "@type": "ListItem",
+          position: i + 1,
+          name: s.t,
+          url: absoluteUrl(s.href),
+        })),
+      }),
+    );
+  }
+
+  const faqItems =
+    faq?.length
+      ? faq
+      : path === "/"
+        ? HOME_FAQS.map((f) => ({ question: f.q, answer: f.a }))
+        : undefined;
+
+  if (faqItems?.length) {
     scripts.push(
       jsonLd("faq", {
         "@context": "https://schema.org",
         "@type": "FAQPage",
         "@id": `${url}#faq`,
-        mainEntity: faq.map((f) => ({
+        mainEntity: faqItems.map((f) => ({
           "@type": "Question",
           name: f.question,
           acceptedAnswer: { "@type": "Answer", text: f.answer },
