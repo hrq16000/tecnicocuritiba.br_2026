@@ -50,10 +50,19 @@ const Blog = () => {
   // Fail-closed: hub permanece noindex enquanto não houver massa editorial aprovada.
   const noindex = approvedSlugs.length < MIN_APPROVED_TO_INDEX;
 
-  // Títulos/resumos reais dos artigos, carregados sob demanda (chunk pesado).
+  // Títulos/resumos reais dos artigos. O estado inicial vem do espelho estático
+  // (BLOG_POSTS_META) para que o HTML servido já traga títulos legíveis, e não o slug.
   const [summaries, setSummaries] = useState<
     Record<string, { title: string; excerpt: string }>
-  >({});
+  >(() => {
+    const seed: Record<string, { title: string; excerpt: string }> = {};
+    for (const slug of approvedSlugs) {
+      const meta = BLOG_POSTS_META[slug];
+      if (meta) seed[slug] = { title: meta.title, excerpt: meta.description };
+    }
+    return seed;
+  });
+
 
   useEffect(() => {
     trackPageView("/blog", "Blog - Hub editorial");
