@@ -9,6 +9,8 @@ import { FloatingParticles } from "@/components/FloatingParticles";
 import { trackPageView } from "@/lib/analytics";
 import { getApprovedSlugs } from "@/lib/blogEditorialRegistry";
 import { getEditorialCover } from "@/lib/blogEditorialCovers";
+import { BLOG_POSTS_META } from "@/lib/seo/blogPostsMeta";
+
 
 import {
   BookOpen, ShieldCheck, FileSearch, Wrench, MessageCircle,
