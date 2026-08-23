@@ -2445,7 +2445,7 @@ const BASE_ROUTES = [
 {
   "path": "/problemas/tv-com-imagem-escura",
   "title": "TV com Imagem Escura: Causas e Conserto | Curitiba",
-  "description": "TV com imagem escura, som normal e tela quase apagada? Veja como separar backlight queimado, placa de fonte, ajuste de brilho e falha do painel antes de trocar o.",
+  "description": "TV com imagem escura, som normal e tela quase apagada? Veja como separar backlight queimado, placa de fonte, ajuste de brilho e falha do painel antes de trocar.",
   "h1": "TV com imagem escura: iluminação de fundo, fonte ou ajuste",
   "subtitulo": "Tela escura com som normal quase nunca é painel queimado.",
   "blocos": [
@@ -2711,7 +2711,7 @@ const BASE_ROUTES = [
 {
     "path": "/problemas/computador-fazendo-barulho",
     "title": "Computador Fazendo Barulho: Como Identificar a Origem | Curitiba",
-    "description": "PC barulhento, ventoinha rugindo, estalo ou zumbido? Entenda como separar cooler, fonte, disco r\u00edgido e ru\u00eddo el\u00e9trico antes de trocar pe\u00e7a, e como funciona a.",
+    "description": "PC barulhento, ventoinha rugindo, estalo ou zumbido? Entenda como separar cooler, fonte, disco r\u00edgido e ru\u00eddo el\u00e9trico antes de trocar pe\u00e7a, e como funciona.",
     "h1": "Computador fazendo barulho: como descobrir a origem antes de trocar pe\u00e7a",
     "subtitulo": "Rugido por temperatura, chiado de rolamento, clique de disco e zumbido el\u00e9trico t\u00eam causas, urg\u00eancias e custos diferentes \u2014 e comprar cooler novo antes do diagn\u00f3stico \u00e9 o erro mais caro.",
     "blocos": [
@@ -2789,7 +2789,7 @@ const BASE_ROUTES = [
   {
     "path": "/problemas/computador-nao-liga",
     "title": "Computador de Mesa N\u00e3o Liga: Diagn\u00f3stico Real | Curitiba",
-    "description": "PC n\u00e3o liga, n\u00e3o d\u00e1 v\u00eddeo ou liga e apaga em seguida? Entenda como separar fonte, bot\u00e3o, placa-m\u00e3e e mem\u00f3ria antes de trocar pe\u00e7a por achismo, e como funciona a.",
+    "description": "PC n\u00e3o liga, n\u00e3o d\u00e1 v\u00eddeo ou liga e apaga em seguida? Entenda como separar fonte, bot\u00e3o, placa-m\u00e3e e mem\u00f3ria antes de trocar pe\u00e7a por achismo, e como funciona.",
     "h1": "Computador de mesa n\u00e3o liga: como descobrir a causa sem trocar pe\u00e7a por achismo",
     "subtitulo": "\"N\u00e3o liga\" descreve pelo menos quatro defeitos diferentes, com custos que v\u00e3o de um cabo trocado a reparo de placa \u2014 e a ordem do teste \u00e9 o que evita comprar pe\u00e7a antes do diagn\u00f3stico.",
     "blocos": [
@@ -2828,7 +2828,7 @@ const BASE_ROUTES = [
   {
     "path": "/problemas/teclado-de-notebook-nao-funciona",
     "title": "Teclado do Notebook N\u00e3o Funciona: Causas e Troca | Curitiba",
-    "description": "Teclas que n\u00e3o respondem, teclado morto ou digitando sozinho? Entenda quando \u00e9 software, cabo flat, l\u00edquido ou placa, o que a troca resolve e como funciona a.",
+    "description": "Teclas que n\u00e3o respondem, teclado morto ou digitando sozinho? Entenda quando \u00e9 software, cabo flat, l\u00edquido ou placa, o que a troca resolve e como funciona.",
     "h1": "Teclado de notebook n\u00e3o funciona: quando \u00e9 ajuste, quando \u00e9 pe\u00e7a",
     "subtitulo": "Parte dos casos \u00e9 layout de idioma trocado, cabo flat solto ou res\u00edduo sob a tecla. A outra parte precisa de substitui\u00e7\u00e3o, e o custo muda conforme o teclado seja pe\u00e7a independente ou venha rebitado \u00e0 carca\u00e7a.",
     "blocos": [
