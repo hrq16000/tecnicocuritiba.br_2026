@@ -211,15 +211,15 @@ const AreasAtendidas = () => {
                   <p className="mt-2 text-sm text-muted-foreground">{r.perfil}</p>
                   <ul className="mt-4 flex flex-wrap gap-2">
                     {r.bairros.map((b) => {
-                      const comPagina = CURITIBA_BAIRROS.find((x) => x.label === b);
+                      const to = bairroPathPorNome(b);
                       return (
                         <li key={b}>
-                          {comPagina ? (
+                          {to ? (
                             <Link
-                              to={comPagina.to}
+                              to={to}
                               className="inline-flex rounded-full border border-accent/40 bg-accent/10 px-3 py-1 text-sm font-semibold text-accent"
                             >
-                              {b}
+                              Técnico de informática {b}
                             </Link>
                           ) : (
                             <span className="inline-flex rounded-full border border-border px-3 py-1 text-sm text-muted-foreground">
