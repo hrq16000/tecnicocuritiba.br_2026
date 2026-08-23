@@ -62,28 +62,6 @@ const BlogPost = () => {
     }
   }, [post, slug]);
 
-  // Capa social do artigo (o head() SSR emite a imagem institucional padrão).
-  useEffect(() => {
-    if (!post || !slug) return;
-    const set = (sel: string, attr: string, key: string, value: string) => {
-      let el = document.head.querySelector<HTMLMetaElement>(sel);
-      if (!el) {
-        el = document.createElement("meta");
-        el.setAttribute(attr, key);
-        document.head.appendChild(el);
-      }
-      el.setAttribute("content", value);
-    };
-    if (heroImageOg) {
-      set('meta[property="og:image"]', "property", "og:image", heroImageOg);
-      set('meta[property="og:image:alt"]', "property", "og:image:alt", post.title);
-      set('meta[name="twitter:image"]', "name", "twitter:image", heroImageOg);
-    }
-    if (isEditorialApproved(slug)) {
-      set('meta[property="article:published_time"]', "property", "article:published_time", `${post.date}T08:00:00-03:00`);
-      set('meta[property="article:section"]', "property", "article:section", post.category);
-    }
-  }, [post, slug, heroImageOg]);
 
 
   // Fail-closed: a meta robots reflete APENAS o registro editorial.
@@ -119,6 +97,29 @@ const BlogPost = () => {
         : `https://tecnico.curitiba.br${post.image}`)
     : (slug ? getUniqueImage(slug).replace(/w=\d+/, 'w=1600').replace(/q=\d+/, 'q=80') + '&w=1600&h=900' : '');
   const heroImageOg = withOgVersion(heroImage);
+
+  // Capa social do artigo (o head() SSR emite a imagem institucional padrão).
+  useEffect(() => {
+    if (!post || !slug) return;
+    const set = (sel: string, attr: string, key: string, value: string) => {
+      let el = document.head.querySelector<HTMLMetaElement>(sel);
+      if (!el) {
+        el = document.createElement("meta");
+        el.setAttribute(attr, key);
+        document.head.appendChild(el);
+      }
+      el.setAttribute("content", value);
+    };
+    if (heroImageOg) {
+      set('meta[property="og:image"]', "property", "og:image", heroImageOg);
+      set('meta[property="og:image:alt"]', "property", "og:image:alt", post.title);
+      set('meta[name="twitter:image"]', "name", "twitter:image", heroImageOg);
+    }
+    if (isEditorialApproved(slug)) {
+      set('meta[property="article:published_time"]', "property", "article:published_time", `${post.date}T08:00:00-03:00`);
+      set('meta[property="article:section"]', "property", "article:section", post.category);
+    }
+  }, [post, slug, heroImageOg]);
 
   // Compute word count from content (rough estimate via readTime)
   const wordCount = post ? Math.round(parseInt(post.readTime) * 220) : 1500;
