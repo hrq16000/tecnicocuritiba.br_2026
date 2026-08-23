@@ -53,15 +53,15 @@ on conflict (user_id, role) do nothing;
 
 -- 3) Avaliações de demonstração (marcadas como fictícias) -------------------
 -- Existem apenas para o painel/local não quebrar com tabela vazia.
-insert into public.reviews (author_name, rating, comment, service_slug, city, neighborhood, review_date, status)
-select v.author_name, v.rating, v.comment, v.service_slug, v.city, v.neighborhood, v.review_date, v.status
+insert into public.reviews (author_name, rating, comment, service_slug, city, neighborhood, source, verified, published, review_date)
+select v.author_name, v.rating, v.comment, v.service_slug, v.city, v.neighborhood, 'manual', true, true, v.review_date
 from (values
-  ('[DEMO LOCAL] Cliente A', 5, '[DEMO LOCAL] Registro fictício de ambiente de desenvolvimento.', 'formatacao-notebook', 'Curitiba', 'Batel', current_date - 10, 'published'),
-  ('[DEMO LOCAL] Cliente B', 5, '[DEMO LOCAL] Registro fictício de ambiente de desenvolvimento.', 'conserto-notebook', 'Curitiba', 'Água Verde', current_date - 4, 'published')
-) as v(author_name, rating, comment, service_slug, city, neighborhood, review_date, status)
+  ('[DEMO LOCAL] Cliente A', 5::smallint, '[DEMO LOCAL] Registro ficticio de ambiente de desenvolvimento.', 'formatacao-notebook', 'Curitiba', 'Batel', current_date - 10),
+  ('[DEMO LOCAL] Cliente B', 5::smallint, '[DEMO LOCAL] Registro ficticio de ambiente de desenvolvimento.', 'conserto-notebook', 'Curitiba', 'Agua Verde', current_date - 4)
+) as v(author_name, rating, comment, service_slug, city, neighborhood, review_date)
 where not exists (select 1 from public.reviews where author_name like '[DEMO LOCAL]%');
 
--- 4) Ordem de serviço de exemplo para testar a consulta pública -------------
-insert into public.ordens_servico (numero, status, descricao)
-select 'OS-LOCAL-0001', 'em_analise', '[DEMO LOCAL] Ordem de serviço fictícia para testes offline.'
-where not exists (select 1 from public.ordens_servico where numero = 'OS-LOCAL-0001');
+-- 4) Ordem de servico de exemplo para testar a consulta publica -------------
+insert into public.ordens_servico (protocolo, cliente_nome, telefone, equipamento, sintomas, modalidade, status)
+select 'OS-LOCAL-0001', '[DEMO LOCAL] Cliente Teste', '41999999999', 'Notebook', '[DEMO LOCAL] Ordem ficticia para testes offline.', 'coleta', 'em_analise'
+where not exists (select 1 from public.ordens_servico where protocolo = 'OS-LOCAL-0001');
