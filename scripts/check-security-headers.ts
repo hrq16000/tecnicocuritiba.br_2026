@@ -40,10 +40,21 @@ if (drift.length > 0) {
 // precisa espelhar a CSP e o Permissions-Policy da fonte única.
 const serverPolicy = readFileSync("src/lib/securityHeaders.ts", "utf8");
 const serverDrift: string[] = [];
-for (const [nome, valor] of Object.entries(CSP_DIRECTIVES as Record<string, string[]>)) {
-  const linha = `"${nome}": [${valor.map((v) => `"${v}"`).join(", ")}]`;
-  const compacto = serverPolicy.replace(/\s+/g, " ").replace(/,\s*\]/g, "]").replace(/\[ /g, "[").replace(/ \]/g, "]");
-  if (!compacto.includes(linha)) serverDrift.push(`csp:${nome}`);
+const compacto = serverPolicy
+  .replace(/\s+/g, " ")
+  .replace(/,\s*\]/g, "]")
+  .replace(/\[ /g, "[")
+  .replace(/ \]/g, "]");
+for (const [nome, valores] of Object.entries(CSP_DIRECTIVES as Record<string, string[]>)) {
+  if (!compacto.includes(`"${nome}": [`)) {
+    serverDrift.push(`csp:${nome}`);
+    continue;
+  }
+  // Valores podem estar como literal ou via constante (SUPABASE/SUPABASE_WS).
+  const faltando = valores.filter(
+    (v) => !compacto.includes(`"${v}"`) && !serverPolicy.includes(`"${v}"`),
+  );
+  if (faltando.length) serverDrift.push(`csp:${nome}`);
 }
 if (!serverPolicy.includes((SECURITY_HEADERS as Record<string, string>)["Permissions-Policy"]))
   serverDrift.push("Permissions-Policy");
