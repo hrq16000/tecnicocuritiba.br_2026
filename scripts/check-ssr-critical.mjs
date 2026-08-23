@@ -45,6 +45,9 @@ const text = (html) =>
     .replace(/<style[\s\S]*?<\/style>/gi, " ")
     .replace(/<[^>]+>/g, " ")
     .replace(/&nbsp;/g, " ")
+    .replace(/&#x27;|&#39;|&apos;|[\u2018\u2019]/g, "'")
+    .replace(/&quot;|[\u201c\u201d]/g, '"')
+    .replace(/&amp;/g, "&")
     .replace(/\s+/g, " ")
     .trim();
 
