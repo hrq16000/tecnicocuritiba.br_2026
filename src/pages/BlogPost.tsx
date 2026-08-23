@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useParams, Link, Navigate } from "@/lib/router-compat";
 import { Helmet } from "react-helmet";
 import { useCanonical } from "@/lib/canonicalUrl";
@@ -16,7 +16,7 @@ import { getEditorialCover } from "@/lib/blogEditorialCovers";
 import { getCategoryCover } from "@/lib/categoryCovers";
 import { withOgVersion } from "@/lib/ogCacheBust";
 import { programmaticPosts } from "@/data/blogProgrammaticPosts";
-import type { BlogPostContent } from "@/data/blogPostsContent";
+import { blogPostsContentBase, type BlogPostContent } from "@/data/blogPostsContent";
 import { BlogPostFAQ } from "@/components/BlogPostFAQ";
 import { EditorialCta, EditorialRelatedLinks } from "@/components/editorial/EditorialCta";
 import {
