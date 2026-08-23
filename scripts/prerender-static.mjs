@@ -11,6 +11,7 @@ import { mkdirSync, writeFileSync, existsSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 import { pathToFileURL } from "node:url";
 import { CURATED_ROUTES } from "./curated-routes-meta.mjs";
+import { EDITORIAL_WAVE_SLUGS } from "./lib/editorial-wave.mjs";
 
 const DIST = resolve(process.argv[2] ?? "dist");
 const SERVER = join(DIST, "server/index.mjs");
