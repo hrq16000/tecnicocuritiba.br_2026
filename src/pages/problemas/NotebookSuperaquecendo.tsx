@@ -14,6 +14,7 @@ import { Button } from "@/components/ui/button";
 import { SCHEMA_SLOTS, SLOT_PRIORITY, useJsonLdSlot } from "@/lib/jsonLdSlots";
 import { whatsappLink, absoluteUrl } from "@/lib/siteConfig";
 import { trackPageView, trackCTAClick } from "@/lib/analytics";
+import ProximosProblemas from "@/components/problemas/ProximosProblemas";
 
 const PATH = "/problemas/notebook-superaquecendo";
 const TITLE = "Notebook Superaquecendo? Diagnóstico Técnico em Curitiba";
@@ -511,6 +512,7 @@ const NotebookSuperaquecendo = () => {
             </a>
           </Button>
         </section>
+        <ProximosProblemas path={PATH} />
       </main>
 
       <Footer />
