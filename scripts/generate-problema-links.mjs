@@ -78,6 +78,12 @@ const afinidade = (a, b) => {
   return inter / Math.min(wa.size, wb.size);
 };
 
+/** Primeira frase útil da meta description, limitada para caber no card. */
+const resumo = (d) => {
+  const frase = (d.split(/(?<=[.?!])\s/)[0] || d).trim();
+  return frase.length > 132 ? `${frase.slice(0, 129).trimEnd()}…` : frase;
+};
+
 const inbound = new Map([...vocabs.keys()].map((p) => [p, 0]));
 const mapa = {};
 for (const origem of [...vocabs.keys()].sort()) {
@@ -93,7 +99,7 @@ for (const origem of [...vocabs.keys()].sort()) {
   mapa[origem] = candidatos.map(({ p }) => ({
     to: p,
     titulo: conteudo.get(p).h1.split(":")[0].trim(),
-    desc: conteudo.get(p).desc.split(".")[0].trim() + ".",
+    desc: resumo(conteudo.get(p).desc),
   }));
 }
 
