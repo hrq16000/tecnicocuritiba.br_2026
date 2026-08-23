@@ -8,6 +8,7 @@ import { promises as fs } from "node:fs";
 import path from "node:path";
 import crypto from "node:crypto";
 import { createServer } from "./serve-dist.mjs";
+import { buildRouteManifest } from "./lib/route-manifest.mjs";
 
 const args = process.argv.slice(2);
 const baseArg = args.find((a) => a.startsWith("--base="))?.split("=")[1];
@@ -98,7 +99,13 @@ async function main() {
     notes.push(`servidor local de paridade em ${base}`);
   }
 
-  const manifest = JSON.parse(await fs.readFile(path.join(DIST, "route-manifest.json"), "utf8"));
+  const manifestPath = path.join(DIST, "route-manifest.json");
+  const manifest = await fs.readFile(manifestPath, "utf8")
+    .then(JSON.parse)
+    .catch(async () => {
+      notes.push("manifesto ausente: derivado localmente para a verificação");
+      return buildRouteManifest({ distDir: DIST });
+    });
 
   // Teste 1 — URLs indexáveis do manifesto curado.
   for (const p of manifest.curated) {

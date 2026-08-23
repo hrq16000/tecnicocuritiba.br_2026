@@ -12,6 +12,7 @@
 import { buildLocalBusinessSchema } from "@/lib/localBusinessJsonLd";
 import { buildOrganizationSchema, buildWebSiteSchema } from "@/lib/organizationJsonLd";
 import { HOME_FAQS, HOME_SERVICES } from "@/lib/home/homeContent";
+import { CIDADES } from "@/lib/cidadesData";
 import { absoluteUrl, siteConfig } from "@/lib/siteConfig";
 
 export interface RouteFaq {
@@ -136,12 +137,20 @@ export function seoHead({
     );
   }
 
+  const citySlug = path.startsWith("/tecnico-informatica-")
+    ? path.slice("/tecnico-informatica-".length)
+    : undefined;
+  const cityFaqs = citySlug && CIDADES[citySlug]
+    ? CIDADES[citySlug].faqs
+    : undefined;
   const faqItems =
     faq?.length
       ? faq
-      : path === "/"
-        ? HOME_FAQS.map((f) => ({ question: f.q, answer: f.a }))
-        : undefined;
+      : cityFaqs?.length
+        ? cityFaqs
+        : path === "/"
+          ? HOME_FAQS.map((f) => ({ question: f.q, answer: f.a }))
+          : undefined;
 
   if (faqItems?.length) {
     scripts.push(
@@ -178,7 +187,7 @@ export function seoHead({
 
   // Service — apenas em rotas de serviço; sem preço inventado (o componente
   // client-side sobrescreve o slot com a oferta real quando existir).
-  if (path.startsWith("/servicos/")) {
+  if (path.startsWith("/servicos/") || path === "/empresa-de-ti-curitiba") {
     scripts.push(
       jsonLd("service", {
         "@context": "https://schema.org",

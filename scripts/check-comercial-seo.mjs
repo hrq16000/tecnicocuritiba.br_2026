@@ -24,6 +24,7 @@ import { BASE_URL, COMERCIAL_ONDA2, SITE_NAME, keywordsDuplicadas } from "./lib/
 const args = process.argv.slice(2);
 const BASE = args.find((a) => a.startsWith("--base="))?.slice(7)?.replace(/\/$/, "") ?? null;
 const DIST = args.find((a) => !a.startsWith("--")) ?? "dist";
+const STATIC_ROOT = existsSync(join(DIST, "client")) ? join(DIST, "client") : DIST;
 
 const errors = [];
 const warnings = [];
@@ -66,7 +67,7 @@ async function carregar(path) {
       return null;
     }
   }
-  const file = path === "/" ? join(DIST, "index.html") : join(DIST, path.replace(/^\//, ""), "index.html");
+  const file = path === "/" ? join(STATIC_ROOT, "index.html") : join(STATIC_ROOT, path.replace(/^\//, ""), "index.html");
   return existsSync(file) ? readFileSync(file, "utf8") : null;
 }
 
