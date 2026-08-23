@@ -7,7 +7,7 @@ export const Route = createFileRoute("/problemas/computador-nao-liga")({
   head: () => seoHead({
     "path": "/problemas/computador-nao-liga",
     "title": "Computador de Mesa Não Liga: Diagnóstico Real | Curitiba",
-    "description": "PC não liga, não dá vídeo ou liga e apaga em seguida? Entenda como separar fonte, botão, placa-mãe e memória antes de trocar peça por achismo, e como funciona a coleta em Curitiba.",
+    "description": "PC não liga, não dá vídeo ou liga e apaga em seguida? Entenda como separar fonte, botão, placa-mãe e memória antes de trocar peça por achismo, e como funciona a.",
     "faq": [
       {
         "question": "Meu PC não liga de jeito nenhum. É sempre a fonte?",

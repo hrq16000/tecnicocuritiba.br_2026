@@ -7,7 +7,7 @@ export const Route = createFileRoute("/como-funciona")({
   head: () => seoHead({
     "path": "/como-funciona",
     "title": "Como Funciona o Atendimento Técnico em Curitiba",
-    "description": "Entenda como funciona o atendimento técnico de informática em Curitiba e região. Passo a passo completo: solicitação via WhatsApp, diagnóstico, execução e garantia. Técnico a domicílio no mesmo dia.",
+    "description": "Entenda como funciona o atendimento técnico de informática em Curitiba e região. Passo a passo completo: solicitação via WhatsApp, diagnóstico, execução e garantia.",
     "faq": [
       {
         "question": "Meus arquivos são copiados antes de formatar?",

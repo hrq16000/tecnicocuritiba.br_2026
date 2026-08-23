@@ -7,7 +7,7 @@ export const Route = createFileRoute("/problemas/computador-travando")({
   head: () => seoHead({
     "path": "/problemas/computador-travando",
     "title": "Computador Travando: Causas e Conserto | Curitiba",
-    "description": "Computador travando do nada, congelando a tela ou parando só em jogos e programas pesados? Veja como separar memória com defeito, superaquecimento, disco em falha e driver antes de trocar peça, com avaliação técnica em Curitiba.",
+    "description": "Computador travando do nada, congelando a tela ou parando só em jogos e programas pesados? Veja como separar memória com defeito, superaquecimento, disco em falha e.",
     "faq": [
       {
         "question": "Computador travando é sempre defeito de peça?",

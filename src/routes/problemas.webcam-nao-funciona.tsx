@@ -7,7 +7,7 @@ export const Route = createFileRoute("/problemas/webcam-nao-funciona")({
   head: () => seoHead({
     "path": "/problemas/webcam-nao-funciona",
     "title": "Webcam Não Funciona: Causas e Solução | Curitiba",
-    "description": "Webcam do notebook sem imagem, tela preta na reunião ou câmera não encontrada pelo sistema? Veja como separar permissão do sistema, driver, cabo flat e falha do módulo antes de comprar câmera externa, com avaliação técnica em Curitiba.",
+    "description": "Webcam do notebook sem imagem, tela preta na reunião ou câmera não encontrada pelo sistema? Veja como separar permissão do sistema, driver, cabo flat e falha do.",
     "faq": [
       {
         "question": "Minha webcam parou depois de uma atualização. É defeito de hardware?",

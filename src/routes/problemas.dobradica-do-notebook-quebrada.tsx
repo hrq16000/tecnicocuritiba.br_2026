@@ -7,7 +7,7 @@ export const Route = createFileRoute("/problemas/dobradica-do-notebook-quebrada"
   head: () => seoHead({
     "path": "/problemas/dobradica-do-notebook-quebrada",
     "title": "Dobradiça do Notebook Quebrada: Conserto | Curitiba",
-    "description": "Dobradiça do notebook quebrada, carcaça estufando ou tampa que não para em pé? Veja como avaliar o dano na estrutura, o risco para o cabo de vídeo e o que realmente resolve, com avaliação técnica em Curitiba.",
+    "description": "Dobradiça do notebook quebrada, carcaça estufando ou tampa que não para em pé? Veja como avaliar o dano na estrutura, o risco para o cabo de vídeo e o que realmente.",
     "faq": [
       {
         "question": "Dá para consertar dobradiça de notebook ou tem que trocar a carcaça inteira?",

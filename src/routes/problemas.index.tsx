@@ -7,7 +7,7 @@ export const Route = createFileRoute("/problemas/")({
   head: () => seoHead({
     "path": "/problemas",
     "title": "Problemas de Computador, Notebook e TV | Curitiba",
-    "description": "Índice de sintomas atendidos em Curitiba: computador lento, tela azul, Wi-Fi caindo, notebook que não liga e smart TV com defeito. Cada página explica causas prováveis, testes seguros e o que resolve, com avaliação técnica e coleta no endereço.",
+    "description": "Índice de sintomas atendidos em Curitiba: computador lento, tela azul, Wi-Fi caindo, notebook que não liga e smart TV com defeito.",
     "faq": [
       {
         "question": "Como escolho a página certa para o meu caso?",

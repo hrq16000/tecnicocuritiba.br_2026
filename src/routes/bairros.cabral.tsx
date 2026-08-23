@@ -7,7 +7,7 @@ export const Route = createFileRoute("/bairros/cabral")({
   head: () => seoHead({
     "path": "/bairros/cabral",
     "title": "Técnico de Informática no Cabral (Curitiba) | Notebook e PC",
-    "description": "Técnico de informática no Cabral, Curitiba: conserto de notebook, formatação, upgrade de SSD e suporte a consultórios e escritórios. A partir de R$ 99,99. Via WhatsApp.",
+    "description": "Técnico de informática no Cabral, Curitiba: conserto de notebook, formatação, upgrade de SSD e suporte a consultórios e escritórios. A partir de R$ 99,99.",
     "faq": [
       {
         "question": "Atendem consultórios e escritórios no Cabral?",

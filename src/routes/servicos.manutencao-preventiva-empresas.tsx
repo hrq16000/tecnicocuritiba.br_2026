@@ -7,7 +7,7 @@ export const Route = createFileRoute("/servicos/manutencao-preventiva-empresas")
   head: () => seoHead({
     "path": "/servicos/manutencao-preventiva-empresas",
     "title": "Manutenção Preventiva de Computadores em Curitiba | Empresas",
-    "description": "Manutenção preventiva de computadores para empresas em Curitiba: inventário, inspeção, armazenamento, atualizações e relatório de riscos priorizado, sem promessa de zero falhas.",
+    "description": "Manutenção preventiva de computadores para empresas em Curitiba: inventário, inspeção, armazenamento, atualizações e relatório de riscos priorizado, sem promessa de.",
     "faq": [
       {
         "question": "Com que frequência a manutenção deve ser feita?",

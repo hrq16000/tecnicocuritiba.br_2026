@@ -7,7 +7,7 @@ export const Route = createFileRoute("/problemas/tv-desligando-sozinha")({
   head: () => seoHead({
     "path": "/problemas/tv-desligando-sozinha",
     "title": "TV Desligando Sozinha: Causas e Conserto | Curitiba",
-    "description": "Televisor que desliga sozinho, reinicia ou entra em ciclo de LED piscando? Entenda como separar capacitor de fonte, proteção térmica, ajuste de economia e placa principal, com avaliação por coleta em Curitiba.",
+    "description": "Televisor que desliga sozinho, reinicia ou entra em ciclo de LED piscando? Entenda como separar capacitor de fonte, proteção térmica, ajuste de economia e placa.",
     "faq": [
       {
         "question": "Minha TV desliga sozinha depois de alguns minutos. O que costuma ser?",

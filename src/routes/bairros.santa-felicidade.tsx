@@ -7,7 +7,7 @@ export const Route = createFileRoute("/bairros/santa-felicidade")({
   head: () => seoHead({
     "path": "/bairros/santa-felicidade",
     "title": "Técnico de Informática em Santa Felicidade | Curitiba",
-    "description": "Técnico de informática em Santa Felicidade, Curitiba: conserto de PC e notebook, formatação, Wi-Fi em casa grande e suporte a comércio. A partir de R$ 99,99. Via WhatsApp.",
+    "description": "Técnico de informática em Santa Felicidade, Curitiba: conserto de PC e notebook, formatação, Wi-Fi em casa grande e suporte a comércio. A partir de R$ 99,99.",
     "faq": [
       {
         "question": "O Wi-Fi não chega aos fundos da casa. Como resolvem?",

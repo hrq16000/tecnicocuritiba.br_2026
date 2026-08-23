@@ -7,7 +7,7 @@ export const Route = createFileRoute("/bairros/agua-verde")({
   head: () => seoHead({
     "path": "/bairros/agua-verde",
     "title": "Técnico de Informática no Água Verde | Notebook e PC",
-    "description": "Técnico de informática no Água Verde, Curitiba: conserto de notebook, manutenção de computador, formatação e upgrade de SSD. Diagnóstico a partir de R$ 99,99. Via WhatsApp.",
+    "description": "Técnico de informática no Água Verde, Curitiba: conserto de notebook, manutenção de computador, formatação e upgrade de SSD. Diagnóstico a partir de R$ 99,99.",
     "faq": [
       {
         "question": "Vocês fazem upgrade de SSD no Água Verde?",

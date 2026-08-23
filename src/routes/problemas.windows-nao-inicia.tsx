@@ -7,7 +7,7 @@ export const Route = createFileRoute("/problemas/windows-nao-inicia")({
   head: () => seoHead({
     "path": "/problemas/windows-nao-inicia",
     "title": "Windows Não Inicia: Como Recuperar o Sistema | Curitiba",
-    "description": "Windows travado no logo, reparo automático em loop ou mensagem de disco de inicialização não encontrado? Veja como separar falha de sistema, disco com setor ruim e configuração de BIOS antes de formatar, com avaliação técnica em Curitiba.",
+    "description": "Windows travado no logo, reparo automático em loop ou mensagem de disco de inicialização não encontrado? Veja como separar falha de sistema, disco com setor ruim e.",
     "faq": [
       {
         "question": "Windows não inicia significa que vou perder meus arquivos?",

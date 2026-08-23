@@ -7,7 +7,7 @@ export const Route = createFileRoute("/bairros/uberaba")({
   head: () => seoHead({
     "path": "/bairros/uberaba",
     "title": "Técnico de Informática no Uberaba (Curitiba) | Notebook e PC",
-    "description": "Técnico de informática no Uberaba, Curitiba: conserto de notebook, formatação, remoção de vírus e Wi-Fi para home office. A partir de R$ 99,99. Atendimento via WhatsApp.",
+    "description": "Técnico de informática no Uberaba, Curitiba: conserto de notebook, formatação, remoção de vírus e Wi-Fi para home office. A partir de R$ 99,99.",
     "faq": [
       {
         "question": "Trabalho em casa e não posso ficar sem o notebook. Como fica?",

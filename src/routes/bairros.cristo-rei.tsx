@@ -7,7 +7,7 @@ export const Route = createFileRoute("/bairros/cristo-rei")({
   head: () => seoHead({
     "path": "/bairros/cristo-rei",
     "title": "Técnico de Informática no Cristo Rei (Curitiba) | Notebook e PC",
-    "description": "Técnico de informática no Cristo Rei, Curitiba: conserto de notebook, formatação, upgrade de SSD e Wi-Fi para estudantes e famílias. A partir de R$ 99,99. Via WhatsApp.",
+    "description": "Técnico de informática no Cristo Rei, Curitiba: conserto de notebook, formatação, upgrade de SSD e Wi-Fi para estudantes e famílias. A partir de R$ 99,99.",
     "faq": [
       {
         "question": "Meu notebook travou e tenho trabalho para entregar. Dá para priorizar?",

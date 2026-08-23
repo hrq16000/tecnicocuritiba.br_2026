@@ -7,7 +7,7 @@ export const Route = createFileRoute("/problemas/hd-nao-reconhecido")({
   head: () => seoHead({
     "path": "/problemas/hd-nao-reconhecido",
     "title": "HD ou SSD Não é Reconhecido: O Que Fazer | Curitiba",
-    "description": "O computador não reconhece o HD ou SSD? Entenda a diferença entre falha de cabo, de partição e de mecânica, por que insistir reduz a chance de recuperar arquivos e como funciona a coleta em Curitiba.",
+    "description": "O computador não reconhece o HD ou SSD? Entenda a diferença entre falha de cabo, de partição e de mecânica, por que insistir reduz a chance de recuperar arquivos e.",
     "faq": [
       {
         "question": "O computador pede para formatar o disco. Posso aceitar?",

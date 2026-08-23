@@ -7,7 +7,7 @@ export const Route = createFileRoute("/problemas/computador-desliga-sozinho")({
   head: () => seoHead({
     "path": "/problemas/computador-desliga-sozinho",
     "title": "Computador Desliga Sozinho? Diagnóstico em Curitiba",
-    "description": "Computador ou notebook que desliga sozinho, reinicia do nada ou apaga durante jogos: entenda a diferença entre temperatura, fonte, energia e software, o que observar antes do atendimento e como é feito o diagnóstico.",
+    "description": "Computador ou notebook que desliga sozinho, reinicia do nada ou apaga durante jogos: entenda a diferença entre temperatura, fonte, energia e software, o que.",
     "faq": [
       {
         "question": "Computador que desliga sozinho é sempre superaquecimento?",

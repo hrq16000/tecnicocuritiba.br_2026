@@ -7,7 +7,7 @@ export const Route = createFileRoute("/problemas/mouse-nao-funciona")({
   head: () => seoHead({
     "path": "/problemas/mouse-nao-funciona",
     "title": "Mouse Não Funciona: Como Resolver | Curitiba",
-    "description": "Mouse não funciona, cursor travado ou clique falhando sozinho? Veja como separar porta USB, receptor sem fio, driver, bateria e falha do próprio mouse antes de comprar outro, com avaliação técnica em Curitiba.",
+    "description": "Mouse não funciona, cursor travado ou clique falhando sozinho? Veja como separar porta USB, receptor sem fio, driver, bateria e falha do próprio mouse antes de.",
     "faq": [
       {
         "question": "Meu mouse parou de funcionar de repente. Preciso comprar outro?",

@@ -7,7 +7,7 @@ export const Route = createFileRoute("/problemas/tela-de-notebook-quebrada")({
   head: () => seoHead({
     "path": "/problemas/tela-de-notebook-quebrada",
     "title": "Tela de Notebook Quebrada: Troca, Custo e Riscos | Curitiba",
-    "description": "Tela trincada, com manchas ou linhas? Entenda a diferença entre painel danificado, cabo flat e placa de vídeo, o que a troca resolve, o que não resolve e como funciona a coleta em Curitiba.",
+    "description": "Tela trincada, com manchas ou linhas? Entenda a diferença entre painel danificado, cabo flat e placa de vídeo, o que a troca resolve, o que não resolve e como.",
     "faq": [
       {
         "question": "Dá para consertar a tela trincada sem trocar o painel?",

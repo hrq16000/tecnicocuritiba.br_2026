@@ -7,7 +7,7 @@ export const Route = createFileRoute("/bairros/merces")({
   head: () => seoHead({
     "path": "/bairros/merces",
     "title": "Técnico de Informática nas Mercês (Curitiba) | Notebook e PC",
-    "description": "Técnico de informática nas Mercês, Curitiba: conserto de notebook, formatação com backup, recuperação de arquivos e Wi-Fi. A partir de R$ 99,99. Atendimento via WhatsApp.",
+    "description": "Técnico de informática nas Mercês, Curitiba: conserto de notebook, formatação com backup, recuperação de arquivos e Wi-Fi. A partir de R$ 99,99.",
     "faq": [
       {
         "question": "Consigo recuperar arquivos de um disco que parou de abrir?",

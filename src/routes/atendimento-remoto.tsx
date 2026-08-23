@@ -7,7 +7,7 @@ export const Route = createFileRoute("/atendimento-remoto")({
   head: () => seoHead({
     "path": "/atendimento-remoto",
     "title": "Suporte Remoto de Informática em Curitiba | Online",
-    "description": "Suporte remoto de informática em Curitiba para configurações, sistema, programas, e-mail, impressora já conectada, orientação e home office — com autorização e acompanhamento.",
+    "description": "Suporte remoto de informática em Curitiba para configurações, sistema, programas, e-mail, impressora já conectada, orientação e home office — com autorização e.",
     "faq": [
       {
         "question": "O que pode ser resolvido remotamente?",

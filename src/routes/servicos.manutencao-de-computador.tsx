@@ -7,7 +7,7 @@ export const Route = createFileRoute("/servicos/manutencao-de-computador")({
   head: () => seoHead({
     "path": "/servicos/manutencao-de-computador",
     "title": "Assistência Técnica de Computador em Curitiba | PC",
-    "description": "Assistência técnica de computador em Curitiba: travamentos, fonte, memória, HD/SSD e placa-mãe. Casa e empresa. Diagnóstico honesto antes de informar o valor via WhatsApp.",
+    "description": "Assistência técnica de computador em Curitiba: travamentos, fonte, memória, HD/SSD e placa-mãe. Casa e empresa.",
     "faq": [
       {
         "question": "Meu PC liga mas não dá imagem, o que pode ser?",

@@ -7,7 +7,7 @@ export const Route = createFileRoute("/problemas/notebook-superaquecendo")({
   head: () => seoHead({
     "path": "/problemas/notebook-superaquecendo",
     "title": "Notebook Superaquecendo? Diagnóstico Técnico em Curitiba",
-    "description": "Notebook esquentando, com cooler acelerado ou desligando sozinho: entenda o que é temperatura normal, quais causas são de poeira, pasta térmica, uso ou falha elétrica, e o que fazer antes do atendimento.",
+    "description": "Notebook esquentando, com cooler acelerado ou desligando sozinho: entenda o que é temperatura normal, quais causas são de poeira, pasta térmica, uso ou falha.",
     "faq": [
       {
         "question": "Qual temperatura é considerada normal em um notebook?",

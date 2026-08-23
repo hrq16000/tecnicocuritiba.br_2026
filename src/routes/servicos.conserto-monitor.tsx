@@ -7,7 +7,7 @@ export const Route = createFileRoute("/servicos/conserto-monitor")({
   head: () => seoHead({
     "path": "/servicos/conserto-monitor",
     "title": "Conserto de Monitor em Curitiba | Bancada, Coleta e Entrega",
-    "description": "Conserto de monitor em Curitiba: avaliação em bancada, reparo de fonte, placa e backlight quando viável, coleta e entrega. Não fazemos troca de painel — critério informado antes.",
+    "description": "Conserto de monitor em Curitiba: avaliação em bancada, reparo de fonte, placa e backlight quando viável, coleta e entrega.",
     "faq": [
       {
         "question": "Meu monitor não liga. Tem conserto?",

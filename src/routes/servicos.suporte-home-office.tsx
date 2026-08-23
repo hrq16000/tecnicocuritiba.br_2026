@@ -7,7 +7,7 @@ export const Route = createFileRoute("/servicos/suporte-home-office")({
   head: () => seoHead({
     "path": "/servicos/suporte-home-office",
     "title": "Suporte Técnico para Home Office em Curitiba",
-    "description": "Suporte técnico para quem trabalha em casa em Curitiba: computador lento, Wi-Fi instável, câmera e microfone em reuniões, e-mail, arquivos e preparação do posto de trabalho.",
+    "description": "Suporte técnico para quem trabalha em casa em Curitiba: computador lento, Wi-Fi instável, câmera e microfone em reuniões, e-mail, arquivos e preparação do posto de.",
     "faq": [
       {
         "question": "Vocês atendem profissionais em home office?",

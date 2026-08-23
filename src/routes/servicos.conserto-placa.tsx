@@ -7,7 +7,7 @@ export const Route = createFileRoute("/servicos/conserto-placa")({
   head: () => seoHead({
     "path": "/servicos/conserto-placa",
     "title": "Reparo de Placa Eletrônica em Curitiba | Nível de Componente",
-    "description": "Reparo de placa-mãe de notebook, placa de PC e placa de TV em Curitiba: avaliação em bancada, reparo em nível de componente, retrabalho de BGA quando viável, coleta e entrega.",
+    "description": "Reparo de placa-mãe de notebook, placa de PC e placa de TV em Curitiba: avaliação em bancada, reparo em nível de componente, retrabalho de BGA quando viável, coleta.",
     "faq": [
       {
         "question": "O que é reparo em nível de componente?",

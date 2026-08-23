@@ -7,7 +7,7 @@ export const Route = createFileRoute("/bairros/boqueirao")({
   head: () => seoHead({
     "path": "/bairros/boqueirao",
     "title": "Técnico de Informática no Boqueirão (Curitiba) | PC e Notebook",
-    "description": "Técnico de informática no Boqueirão, Curitiba: conserto de PC e notebook, formatação com backup, upgrade de SSD e Wi-Fi. A partir de R$ 99,99. Atendimento via WhatsApp.",
+    "description": "Técnico de informática no Boqueirão, Curitiba: conserto de PC e notebook, formatação com backup, upgrade de SSD e Wi-Fi. A partir de R$ 99,99.",
     "faq": [
       {
         "question": "Meu PC emite nota e não pode parar. Como funciona?",

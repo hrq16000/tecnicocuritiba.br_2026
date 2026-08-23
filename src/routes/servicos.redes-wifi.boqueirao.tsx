@@ -7,7 +7,7 @@ export const Route = createFileRoute("/servicos/redes-wifi/boqueirao")({
   head: () => seoHead({
     "path": "/servicos/redes-wifi/boqueirao",
     "title": "Configuração de Wi-Fi no Boqueirão | Curitiba",
-    "description": "Instalação e configuração de Wi-Fi, mesh e roteadores no Boqueirão, Curitiba. Atendimento presencial, valor do atendimento pelo WhatsApp e valor mínimo de R$ 99,99."
+    "description": "Wi-Fi, mesh e roteadores no Boqueirão, Curitiba. Instalação e configuração presencial, com valor combinado pelo WhatsApp a partir de R$ 99,99."
   }),
   /* seo:auto-end */
   component: RedesWifiBoqueirao,

@@ -7,7 +7,7 @@ export const Route = createFileRoute("/seguranca-dos-dados")({
   head: () => seoHead({
     "path": "/seguranca-dos-dados",
     "title": "Segurança dos Dados na Assistência Técnica | Curitiba",
-    "description": "Como arquivos, senhas e acessos são tratados durante a assistência técnica em Curitiba: autorização, acesso mínimo, backup prévio, cópias temporárias, limites e responsabilidades.",
+    "description": "Como arquivos, senhas e acessos são tratados durante a assistência técnica em Curitiba: autorização, acesso mínimo, backup prévio, cópias temporárias, limites e.",
     "faq": [
       {
         "question": "O técnico precisa acessar meus arquivos?",

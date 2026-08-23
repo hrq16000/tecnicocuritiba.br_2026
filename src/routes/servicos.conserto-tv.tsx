@@ -7,7 +7,7 @@ export const Route = createFileRoute("/servicos/conserto-tv")({
   head: () => seoHead({
     "path": "/servicos/conserto-tv",
     "title": "Conserto de TV e Smart TV em Curitiba | Bancada e Coleta",
-    "description": "Conserto de TV LED, LCD e Smart TV em Curitiba: avaliação em bancada, reparo em nível de componente quando viável, coleta e entrega. Critérios de aceite e recusa informados antes.",
+    "description": "Conserto de TV LED, LCD e Smart TV em Curitiba: avaliação em bancada, reparo em nível de componente quando viável, coleta e entrega.",
     "faq": [
       {
         "question": "Vocês fazem visita para consertar TV?",

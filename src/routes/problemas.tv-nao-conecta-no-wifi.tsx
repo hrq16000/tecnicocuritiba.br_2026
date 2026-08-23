@@ -7,7 +7,7 @@ export const Route = createFileRoute("/problemas/tv-nao-conecta-no-wifi")({
   head: () => seoHead({
     "path": "/problemas/tv-nao-conecta-no-wifi",
     "title": "TV Não Conecta no Wi-Fi: O Que Fazer | Curitiba",
-    "description": "Smart TV não conecta no Wi-Fi, some da lista de redes ou cai no meio do filme? Veja como separar cobertura do roteador, faixa de 5 GHz, sistema da TV e módulo sem fio em falha antes de trocar o aparelho, com avaliação técnica em Curitiba.",
+    "description": "Smart TV não conecta no Wi-Fi, some da lista de redes ou cai no meio do filme? Veja como separar cobertura do roteador, faixa de 5 GHz, sistema da TV e módulo sem.",
     "faq": [
       {
         "question": "Minha TV não acha a rede, mas o celular conecta no mesmo lugar. É defeito da televisão?",

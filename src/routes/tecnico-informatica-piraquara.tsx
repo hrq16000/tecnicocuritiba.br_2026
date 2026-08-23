@@ -7,7 +7,7 @@ export const Route = createFileRoute("/tecnico-informatica-piraquara")({
   head: () => seoHead({
     "path": "/tecnico-informatica-piraquara",
     "title": "Técnico em Piraquara para Notebook, PC e Internet",
-    "description": "Técnico de informática em Piraquara: formatação, conserto de notebook e PC, upgrade de SSD, remoção de vírus e Wi-Fi. Atendimento a domicílio ou coleta combinada por WhatsApp."
+    "description": "Técnico de informática em Piraquara: formatação, conserto de notebook e PC, upgrade de SSD, remoção de vírus e Wi-Fi."
   }),
   /* seo:auto-end */
   component: TecnicoInformaticaPiraquara,

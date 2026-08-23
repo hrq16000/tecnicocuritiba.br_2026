@@ -7,7 +7,7 @@ export const Route = createFileRoute("/problemas/tv-com-linhas-na-tela")({
   head: () => seoHead({
     "path": "/problemas/tv-com-linhas-na-tela",
     "title": "TV com Linhas na Tela: Tem Conserto? | Curitiba",
-    "description": "Televisor com linhas verticais, horizontais ou faixas coloridas na imagem? Entenda quando é conexão do painel, placa de controle ou dano interno sem reparo viável, e como funciona a avaliação por coleta em Curitiba.",
+    "description": "Televisor com linhas verticais, horizontais ou faixas coloridas na imagem? Entenda quando é conexão do painel, placa de controle ou dano interno sem reparo viável.",
     "faq": [
       {
         "question": "TV com linhas na tela tem conserto?",

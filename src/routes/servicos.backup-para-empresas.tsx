@@ -7,7 +7,7 @@ export const Route = createFileRoute("/servicos/backup-para-empresas")({
   head: () => seoHead({
     "path": "/servicos/backup-para-empresas",
     "title": "Backup para Empresas em Curitiba | Proteção de Arquivos",
-    "description": "Backup para empresas em Curitiba: avaliação do que existe hoje, cópia local, cópia externa, nuvem, retenção, versionamento e teste de restauração. Sem promessa de proteção absoluta.",
+    "description": "Backup para empresas em Curitiba: avaliação do que existe hoje, cópia local, cópia externa, nuvem, retenção, versionamento e teste de restauração.",
     "faq": [
       {
         "question": "Google Drive ou OneDrive já são backup?",

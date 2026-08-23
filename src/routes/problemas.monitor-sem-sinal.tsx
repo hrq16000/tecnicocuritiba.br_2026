@@ -7,7 +7,7 @@ export const Route = createFileRoute("/problemas/monitor-sem-sinal")({
   head: () => seoHead({
     "path": "/problemas/monitor-sem-sinal",
     "title": "Monitor Sem Sinal: Causas e Solução | Curitiba",
-    "description": "Monitor mostra \"sem sinal\" com o computador ligado? Veja como separar cabo, entrada errada, placa de vídeo e falha do próprio monitor com testes gratuitos antes de orçar, com avaliação técnica em Curitiba.",
+    "description": "Monitor mostra \"sem sinal\" com o computador ligado? Veja como separar cabo, entrada errada, placa de vídeo e falha do próprio monitor com testes gratuitos antes de.",
     "faq": [
       {
         "question": "Meu computador liga mas o monitor fica sem sinal. É o monitor ou o PC?",

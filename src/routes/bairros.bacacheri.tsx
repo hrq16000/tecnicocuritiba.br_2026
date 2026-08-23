@@ -7,7 +7,7 @@ export const Route = createFileRoute("/bairros/bacacheri")({
   head: () => seoHead({
     "path": "/bairros/bacacheri",
     "title": "Técnico de Informática no Bacacheri (Curitiba) | Notebook e PC",
-    "description": "Técnico de informática no Bacacheri, Curitiba: conserto de notebook, manutenção de computador, formatação e rede Wi-Fi. A partir de R$ 99,99. Atendimento via WhatsApp.",
+    "description": "Técnico de informática no Bacacheri, Curitiba: conserto de notebook, manutenção de computador, formatação e rede Wi-Fi. A partir de R$ 99,99.",
     "faq": [
       {
         "question": "Minha casa é grande e o Wi-Fi não chega nos fundos. O que fazem?",

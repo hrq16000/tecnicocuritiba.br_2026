@@ -7,7 +7,7 @@ export const Route = createFileRoute("/problemas/notebook-desligando-sozinho")({
   head: () => seoHead({
     "path": "/problemas/notebook-desligando-sozinho",
     "title": "Notebook Desligando Sozinho: Causas | Curitiba",
-    "description": "Notebook desligando sozinho do nada, só em jogos ou quando tira da tomada? Veja como separar superaquecimento, bateria em fim de vida, carregador fraco e falha de placa antes de gastar, com avaliação técnica em Curitiba.",
+    "description": "Notebook desligando sozinho do nada, só em jogos ou quando tira da tomada? Veja como separar superaquecimento, bateria em fim de vida, carregador fraco e falha de.",
     "faq": [
       {
         "question": "Notebook desligando sozinho é sempre superaquecimento?",

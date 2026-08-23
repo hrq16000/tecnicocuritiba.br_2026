@@ -7,7 +7,7 @@ export const Route = createFileRoute("/bairros/batel")({
   head: () => seoHead({
     "path": "/bairros/batel",
     "title": "Técnico de Informática no Batel (Curitiba) | Notebook e PC",
-    "description": "Técnico de informática no Batel, Curitiba: conserto de notebook, manutenção de computador, formatação e upgrade de SSD. Diagnóstico a partir de R$ 99,99. Via WhatsApp.",
+    "description": "Técnico de informática no Batel, Curitiba: conserto de notebook, manutenção de computador, formatação e upgrade de SSD. Diagnóstico a partir de R$ 99,99.",
     "faq": [
       {
         "question": "Fazem suporte para home office no Batel?",

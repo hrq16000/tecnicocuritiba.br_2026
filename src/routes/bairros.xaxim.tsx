@@ -7,7 +7,7 @@ export const Route = createFileRoute("/bairros/xaxim")({
   head: () => seoHead({
     "path": "/bairros/xaxim",
     "title": "Técnico de Informática no Xaxim (Curitiba) | Notebook e PC",
-    "description": "Técnico de informática no Xaxim, Curitiba: conserto de notebook, formatação com backup, remoção de vírus e Wi-Fi em casa. A partir de R$ 99,99. Atendimento via WhatsApp.",
+    "description": "Técnico de informática no Xaxim, Curitiba: conserto de notebook, formatação com backup, remoção de vírus e Wi-Fi em casa. A partir de R$ 99,99.",
     "faq": [
       {
         "question": "O Wi-Fi cai quando todos usam ao mesmo tempo. Tem solução?",

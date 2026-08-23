@@ -7,7 +7,7 @@ export const Route = createFileRoute("/servicos/montagem-de-pc")({
   head: () => seoHead({
     "path": "/servicos/montagem-de-pc",
     "title": "Montagem de PC e PC Gamer em Curitiba | Testes Inclusos",
-    "description": "Montagem e configuração de computadores em Curitiba: verificação de compatibilidade, instalação dos componentes, BIOS, sistema, drivers e testes antes da entrega. Peças do cliente aceitas.",
+    "description": "Montagem e configuração de computadores em Curitiba: verificação de compatibilidade, instalação dos componentes, BIOS, sistema, drivers e testes antes da entrega.",
     "faq": [
       {
         "question": "Vocês montam PC com peças compradas pelo cliente?",

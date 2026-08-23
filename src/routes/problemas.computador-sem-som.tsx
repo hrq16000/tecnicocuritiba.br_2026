@@ -7,7 +7,7 @@ export const Route = createFileRoute("/problemas/computador-sem-som")({
   head: () => seoHead({
     "path": "/problemas/computador-sem-som",
     "title": "Computador Sem Som: Como Resolver | Curitiba",
-    "description": "Computador sem som, som só no fone ou saída de áudio sumida do Windows? Veja como separar dispositivo de saída errado, driver, conector danificado e falha no chip de áudio antes de trocar peça, com avaliação em Curitiba.",
+    "description": "Computador sem som, som só no fone ou saída de áudio sumida do Windows? Veja como separar dispositivo de saída errado, driver, conector danificado e falha no chip.",
     "faq": [
       {
         "question": "Meu computador ficou sem som do nada. É defeito de hardware?",

@@ -7,7 +7,7 @@ export const Route = createFileRoute("/problemas/tela-do-computador-piscando")({
   head: () => seoHead({
     "path": "/problemas/tela-do-computador-piscando",
     "title": "Tela do Computador Piscando: O Que Fazer | Curitiba",
-    "description": "Tela piscando, imagem tremendo ou monitor apagando por instantes? Veja como separar cabo, taxa de atualização, driver de vídeo, fonte do monitor e falha na placa antes de comprar peça, com avaliação técnica em Curitiba.",
+    "description": "Tela piscando, imagem tremendo ou monitor apagando por instantes? Veja como separar cabo, taxa de atualização, driver de vídeo, fonte do monitor e falha na placa.",
     "faq": [
       {
         "question": "A tela do meu computador está piscando. É a placa de vídeo?",

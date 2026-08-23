@@ -7,7 +7,7 @@ export const Route = createFileRoute("/servicos/recuperacao-de-dados")({
   head: () => seoHead({
     "path": "/servicos/recuperacao-de-dados",
     "title": "Recuperação de Dados em Curitiba | HD, SSD e Pendrive",
-    "description": "Recuperação de dados em Curitiba de HD, SSD, pendrive e cartão. Exclusão acidental, sistema que não inicia e falhas. Avaliação primeiro — recuperação não é garantida.",
+    "description": "Recuperação de dados em Curitiba de HD, SSD, pendrive e cartão. Exclusão acidental, sistema que não inicia e falhas.",
     "faq": [
       {
         "question": "A recuperação de dados é garantida?",
