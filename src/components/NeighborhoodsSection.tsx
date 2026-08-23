@@ -59,28 +59,30 @@ export const NeighborhoodsSection = () => {
         </div>
         
         <div className="flex flex-wrap justify-center gap-2 md:gap-3 max-w-4xl mx-auto">
-          {neighborhoods.map((neighborhood, index) => (
-            neighborhood.hasPage ? (
+          {neighborhoods.map((nome, index) => {
+            const to = bairroPathPorNome(nome);
+            return to ? (
               <Link
-                key={neighborhood.slug}
-                to={`/bairros/${neighborhood.slug}`}
+                key={nome}
+                to={to}
+                aria-label={`Técnico de informática em ${nome}, Curitiba`}
                 className="flex items-center gap-1.5 bg-background px-3.5 py-2 rounded-full text-sm border border-primary/10 hover:border-accent hover:bg-accent/5 hover:scale-110 hover:-translate-y-1 hover:shadow-[var(--shadow-md)] transition-all duration-300 group elastic-click slide-up-stagger"
                 style={{ animationDelay: `${index * 30}ms` }}
               >
                 <MapPin className="h-3.5 w-3.5 text-accent group-hover:scale-110 transition-transform duration-300" />
-                <span className="text-foreground/80 group-hover:text-accent font-medium transition-colors">{neighborhood.name}</span>
+                <span className="text-foreground/80 group-hover:text-accent font-medium transition-colors">{nome}</span>
               </Link>
             ) : (
               <div
-                key={neighborhood.slug}
+                key={nome}
                 className="flex items-center gap-1.5 bg-background px-3.5 py-2 rounded-full text-sm border border-primary/10 hover:border-primary/30 hover:bg-accent/5 hover:scale-105 transition-all duration-300 slide-up-stagger"
                 style={{ animationDelay: `${index * 30}ms` }}
               >
                 <MapPin className="h-3.5 w-3.5 text-accent/60" />
-                <span className="text-foreground/70">{neighborhood.name}</span>
+                <span className="text-foreground/70">{nome}</span>
               </div>
-            )
-          ))}
+            );
+          })}
         </div>
         
         <div className="text-center mt-8">
