@@ -14,6 +14,7 @@ import { Button } from "@/components/ui/button";
 import { SCHEMA_SLOTS, SLOT_PRIORITY, useJsonLdSlot } from "@/lib/jsonLdSlots";
 import { whatsappLink, absoluteUrl } from "@/lib/siteConfig";
 import { trackPageView, trackCTAClick } from "@/lib/analytics";
+import ProximosProblemas from "@/components/problemas/ProximosProblemas";
 
 const PATH = "/problemas/tv-nao-liga";
 const TITLE = "TV Não Liga? Diagnóstico Técnico de TV em Curitiba";
@@ -494,6 +495,7 @@ const TvNaoLiga = () => {
             </a>
           </Button>
         </section>
+        <ProximosProblemas path={PATH} />
       </main>
 
       <Footer />

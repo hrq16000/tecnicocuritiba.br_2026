@@ -33,6 +33,14 @@ export const SERVICOS_POR_BAIRRO: Record<string, LocalLink[]> = {
     {
       "href": "/servicos/upgrade-ssd-memoria/agua-verde",
       "anchor": "upgrade de SSD e memória no Água Verde"
+    },
+    {
+      "href": "/servicos/manutencao-de-computador",
+      "anchor": "manutenção de computador para quem está no Água Verde"
+    },
+    {
+      "href": "/servicos/formatacao",
+      "anchor": "formatação de computador para quem está no Água Verde"
     }
   ],
   "/bairros/bacacheri": [
@@ -237,6 +245,10 @@ export const SERVICOS_POR_BAIRRO: Record<string, LocalLink[]> = {
     {
       "href": "/servicos/formatacao",
       "anchor": "formatação de computador para quem está no Centro"
+    },
+    {
+      "href": "/servicos/redes-e-wifi",
+      "anchor": "redes e Wi-Fi para quem está no Centro"
     }
   ],
   "/bairros/cic": [
@@ -263,6 +275,14 @@ export const SERVICOS_POR_BAIRRO: Record<string, LocalLink[]> = {
     {
       "href": "/servicos/manutencao-de-computador",
       "anchor": "manutenção de computador para quem está na CIC"
+    },
+    {
+      "href": "/servicos/formatacao",
+      "anchor": "formatação de computador para quem está na CIC"
+    },
+    {
+      "href": "/servicos/redes-e-wifi",
+      "anchor": "redes e Wi-Fi para quem está na CIC"
     }
   ],
   "/bairros/cristo-rei": [
@@ -421,6 +441,14 @@ export const SERVICOS_POR_BAIRRO: Record<string, LocalLink[]> = {
     {
       "href": "/servicos/upgrade-ssd-memoria/reboucas",
       "anchor": "upgrade de SSD e memória no Rebouças"
+    },
+    {
+      "href": "/servicos/manutencao-de-computador",
+      "anchor": "manutenção de computador para quem está no Rebouças"
+    },
+    {
+      "href": "/servicos/formatacao",
+      "anchor": "formatação de computador para quem está no Rebouças"
     }
   ],
   "/bairros/santa-felicidade": [
@@ -529,68 +557,100 @@ export const BAIRROS_POR_SERVICO: Record<string, LocalLink[]> = {
     {
       "href": "/bairros/boqueirao",
       "anchor": "atendimento técnico no Boqueirão"
+    },
+    {
+      "href": "/bairros/cabral",
+      "anchor": "atendimento técnico no Cabral"
+    },
+    {
+      "href": "/bairros/cajuru",
+      "anchor": "atendimento técnico no Cajuru"
     }
   ],
   "/servicos/conserto-monitor": [
     {
-      "href": "/bairros/agua-verde",
-      "anchor": "atendimento técnico no Água Verde"
+      "href": "/bairros/campo-comprido",
+      "anchor": "atendimento técnico no Campo Comprido"
     },
     {
-      "href": "/bairros/bacacheri",
-      "anchor": "atendimento técnico no Bacacheri"
+      "href": "/bairros/capao-raso",
+      "anchor": "atendimento técnico no Capao Raso"
     },
     {
-      "href": "/bairros/batel",
-      "anchor": "atendimento técnico no Batel"
+      "href": "/bairros/centro",
+      "anchor": "atendimento técnico no Centro"
     },
     {
-      "href": "/bairros/bigorrilho",
-      "anchor": "atendimento técnico no Bigorrilho"
+      "href": "/bairros/cic",
+      "anchor": "atendimento técnico na CIC"
     },
     {
-      "href": "/bairros/boa-vista",
-      "anchor": "atendimento técnico na Boa Vista"
+      "href": "/bairros/cristo-rei",
+      "anchor": "atendimento técnico no Cristo Rei"
     },
     {
-      "href": "/bairros/boqueirao",
-      "anchor": "atendimento técnico no Boqueirão"
+      "href": "/bairros/fazendinha",
+      "anchor": "atendimento técnico no Fazendinha"
+    },
+    {
+      "href": "/bairros/hauer",
+      "anchor": "atendimento técnico no Hauer"
+    },
+    {
+      "href": "/bairros/juveve",
+      "anchor": "atendimento técnico no Juveve"
     }
   ],
   "/servicos/conserto-placa": [
     {
-      "href": "/bairros/agua-verde",
-      "anchor": "atendimento técnico no Água Verde"
+      "href": "/bairros/merces",
+      "anchor": "atendimento técnico no Merces"
     },
     {
-      "href": "/bairros/bacacheri",
-      "anchor": "atendimento técnico no Bacacheri"
+      "href": "/bairros/novo-mundo",
+      "anchor": "atendimento técnico no Novo Mundo"
     },
     {
-      "href": "/bairros/batel",
-      "anchor": "atendimento técnico no Batel"
+      "href": "/bairros/pinheirinho",
+      "anchor": "atendimento técnico no Pinheirinho"
     },
     {
-      "href": "/bairros/bigorrilho",
-      "anchor": "atendimento técnico no Bigorrilho"
+      "href": "/bairros/portao",
+      "anchor": "atendimento técnico no Portão"
     },
     {
-      "href": "/bairros/boa-vista",
-      "anchor": "atendimento técnico na Boa Vista"
+      "href": "/bairros/reboucas",
+      "anchor": "atendimento técnico no Rebouças"
     },
     {
-      "href": "/bairros/boqueirao",
-      "anchor": "atendimento técnico no Boqueirão"
+      "href": "/bairros/santa-felicidade",
+      "anchor": "atendimento técnico em Santa Felicidade"
+    },
+    {
+      "href": "/bairros/seminario",
+      "anchor": "atendimento técnico no Seminario"
+    },
+    {
+      "href": "/bairros/sitio-cercado",
+      "anchor": "atendimento técnico no Sitio Cercado"
     }
   ],
   "/servicos/conserto-tv": [
     {
-      "href": "/servicos/manutencao-tv/agua-verde",
-      "anchor": "manutenção de Smart TV no Água Verde"
-    },
-    {
       "href": "/servicos/manutencao-tv/alto-da-xv",
       "anchor": "manutenção de Smart TV no Alto da XV"
+    },
+    {
+      "href": "/servicos/manutencao-tv/ecoville",
+      "anchor": "manutenção de Smart TV no Ecoville"
+    },
+    {
+      "href": "/servicos/manutencao-tv/jardim-das-americas",
+      "anchor": "manutenção de Smart TV no Jardim das Américas"
+    },
+    {
+      "href": "/servicos/manutencao-tv/agua-verde",
+      "anchor": "manutenção de Smart TV no Água Verde"
     },
     {
       "href": "/servicos/manutencao-tv/batel",
@@ -611,12 +671,20 @@ export const BAIRROS_POR_SERVICO: Record<string, LocalLink[]> = {
   ],
   "/servicos/formatacao": [
     {
-      "href": "/servicos/formatacao-computador/agua-verde",
-      "anchor": "formatação de computador no Água Verde"
-    },
-    {
       "href": "/servicos/formatacao-computador/alto-da-xv",
       "anchor": "formatação de computador no Alto da XV"
+    },
+    {
+      "href": "/servicos/formatacao-computador/ecoville",
+      "anchor": "formatação de computador no Ecoville"
+    },
+    {
+      "href": "/servicos/formatacao-computador/jardim-das-americas",
+      "anchor": "formatação de computador no Jardim das Américas"
+    },
+    {
+      "href": "/servicos/formatacao-computador/agua-verde",
+      "anchor": "formatação de computador no Água Verde"
     },
     {
       "href": "/servicos/formatacao-computador/batel",
@@ -627,26 +695,18 @@ export const BAIRROS_POR_SERVICO: Record<string, LocalLink[]> = {
       "anchor": "formatação de computador na CIC"
     },
     {
-      "href": "/servicos/formatacao-computador/ecoville",
-      "anchor": "formatação de computador no Ecoville"
+      "href": "/servicos/formatacao-computador/reboucas",
+      "anchor": "formatação de computador no Rebouças"
     },
     {
-      "href": "/servicos/formatacao-computador/jardim-das-americas",
-      "anchor": "formatação de computador no Jardim das Américas"
+      "href": "/bairros/uberaba",
+      "anchor": "atendimento técnico no Uberaba"
     }
   ],
   "/servicos/manutencao-de-computador": [
     {
-      "href": "/servicos/conserto-pc-notebook/agua-verde",
-      "anchor": "conserto de PC e notebook no Água Verde"
-    },
-    {
       "href": "/servicos/conserto-pc-notebook/alto-da-xv",
       "anchor": "conserto de PC e notebook no Alto da XV"
-    },
-    {
-      "href": "/servicos/conserto-pc-notebook/centro",
-      "anchor": "conserto de PC e notebook no Centro"
     },
     {
       "href": "/servicos/conserto-pc-notebook/ecoville",
@@ -657,16 +717,28 @@ export const BAIRROS_POR_SERVICO: Record<string, LocalLink[]> = {
       "anchor": "conserto de PC e notebook no Jardim das Américas"
     },
     {
+      "href": "/servicos/conserto-pc-notebook/agua-verde",
+      "anchor": "conserto de PC e notebook no Água Verde"
+    },
+    {
+      "href": "/servicos/conserto-pc-notebook/centro",
+      "anchor": "conserto de PC e notebook no Centro"
+    },
+    {
       "href": "/servicos/conserto-pc-notebook/reboucas",
       "anchor": "conserto de PC e notebook no Rebouças"
+    },
+    {
+      "href": "/bairros/xaxim",
+      "anchor": "atendimento técnico no Xaxim"
+    },
+    {
+      "href": "/bairros/agua-verde",
+      "anchor": "atendimento técnico no Água Verde"
     }
   ],
   "/servicos/manutencao-de-notebook": [
     {
-      "href": "/bairros/agua-verde",
-      "anchor": "atendimento técnico no Água Verde"
-    },
-    {
       "href": "/bairros/bacacheri",
       "anchor": "atendimento técnico no Bacacheri"
     },
@@ -685,62 +757,94 @@ export const BAIRROS_POR_SERVICO: Record<string, LocalLink[]> = {
     {
       "href": "/bairros/boqueirao",
       "anchor": "atendimento técnico no Boqueirão"
+    },
+    {
+      "href": "/bairros/cabral",
+      "anchor": "atendimento técnico no Cabral"
+    },
+    {
+      "href": "/bairros/cajuru",
+      "anchor": "atendimento técnico no Cajuru"
+    },
+    {
+      "href": "/bairros/campo-comprido",
+      "anchor": "atendimento técnico no Campo Comprido"
     }
   ],
   "/servicos/manutencao-preventiva-empresas": [
     {
-      "href": "/bairros/agua-verde",
-      "anchor": "atendimento técnico no Água Verde"
+      "href": "/bairros/capao-raso",
+      "anchor": "atendimento técnico no Capao Raso"
     },
     {
-      "href": "/bairros/bacacheri",
-      "anchor": "atendimento técnico no Bacacheri"
+      "href": "/bairros/centro",
+      "anchor": "atendimento técnico no Centro"
     },
     {
-      "href": "/bairros/batel",
-      "anchor": "atendimento técnico no Batel"
+      "href": "/bairros/cic",
+      "anchor": "atendimento técnico na CIC"
     },
     {
-      "href": "/bairros/bigorrilho",
-      "anchor": "atendimento técnico no Bigorrilho"
+      "href": "/bairros/cristo-rei",
+      "anchor": "atendimento técnico no Cristo Rei"
     },
     {
-      "href": "/bairros/boa-vista",
-      "anchor": "atendimento técnico na Boa Vista"
+      "href": "/bairros/fazendinha",
+      "anchor": "atendimento técnico no Fazendinha"
     },
     {
-      "href": "/bairros/boqueirao",
-      "anchor": "atendimento técnico no Boqueirão"
+      "href": "/bairros/hauer",
+      "anchor": "atendimento técnico no Hauer"
+    },
+    {
+      "href": "/bairros/juveve",
+      "anchor": "atendimento técnico no Juveve"
+    },
+    {
+      "href": "/bairros/merces",
+      "anchor": "atendimento técnico no Merces"
     }
   ],
   "/servicos/montagem-de-pc": [
     {
-      "href": "/bairros/agua-verde",
-      "anchor": "atendimento técnico no Água Verde"
+      "href": "/bairros/novo-mundo",
+      "anchor": "atendimento técnico no Novo Mundo"
     },
     {
-      "href": "/bairros/bacacheri",
-      "anchor": "atendimento técnico no Bacacheri"
+      "href": "/bairros/pinheirinho",
+      "anchor": "atendimento técnico no Pinheirinho"
     },
     {
-      "href": "/bairros/batel",
-      "anchor": "atendimento técnico no Batel"
+      "href": "/bairros/portao",
+      "anchor": "atendimento técnico no Portão"
     },
     {
-      "href": "/bairros/bigorrilho",
-      "anchor": "atendimento técnico no Bigorrilho"
+      "href": "/bairros/reboucas",
+      "anchor": "atendimento técnico no Rebouças"
     },
     {
-      "href": "/bairros/boa-vista",
-      "anchor": "atendimento técnico na Boa Vista"
+      "href": "/bairros/santa-felicidade",
+      "anchor": "atendimento técnico em Santa Felicidade"
     },
     {
-      "href": "/bairros/boqueirao",
-      "anchor": "atendimento técnico no Boqueirão"
+      "href": "/bairros/seminario",
+      "anchor": "atendimento técnico no Seminario"
+    },
+    {
+      "href": "/bairros/sitio-cercado",
+      "anchor": "atendimento técnico no Sitio Cercado"
+    },
+    {
+      "href": "/bairros/uberaba",
+      "anchor": "atendimento técnico no Uberaba"
     }
   ],
   "/servicos/recuperacao-de-dados": [
     {
+      "href": "/bairros/xaxim",
+      "anchor": "atendimento técnico no Xaxim"
+    },
+    {
       "href": "/bairros/agua-verde",
       "anchor": "atendimento técnico no Água Verde"
     },
@@ -763,16 +867,28 @@ export const BAIRROS_POR_SERVICO: Record<string, LocalLink[]> = {
     {
       "href": "/bairros/boqueirao",
       "anchor": "atendimento técnico no Boqueirão"
+    },
+    {
+      "href": "/bairros/cabral",
+      "anchor": "atendimento técnico no Cabral"
     }
   ],
   "/servicos/redes-e-wifi": [
     {
-      "href": "/servicos/redes-wifi/agua-verde",
-      "anchor": "instalação e ajuste de Wi-Fi no Água Verde"
-    },
-    {
       "href": "/servicos/redes-wifi/alto-da-xv",
       "anchor": "instalação e ajuste de Wi-Fi no Alto da XV"
+    },
+    {
+      "href": "/servicos/redes-wifi/ecoville",
+      "anchor": "instalação e ajuste de Wi-Fi no Ecoville"
+    },
+    {
+      "href": "/servicos/redes-wifi/jardim-das-americas",
+      "anchor": "instalação e ajuste de Wi-Fi no Jardim das Américas"
+    },
+    {
+      "href": "/servicos/redes-wifi/agua-verde",
+      "anchor": "instalação e ajuste de Wi-Fi no Água Verde"
     },
     {
       "href": "/servicos/redes-wifi/batel",
@@ -793,16 +909,8 @@ export const BAIRROS_POR_SERVICO: Record<string, LocalLink[]> = {
   ],
   "/servicos/remocao-de-virus": [
     {
-      "href": "/servicos/remocao-virus/agua-verde",
-      "anchor": "remoção de vírus no Água Verde"
-    },
-    {
       "href": "/servicos/remocao-virus/alto-da-xv",
       "anchor": "remoção de vírus no Alto da XV"
-    },
-    {
-      "href": "/servicos/remocao-virus/cic",
-      "anchor": "remoção de vírus na CIC"
     },
     {
       "href": "/servicos/remocao-virus/ecoville",
@@ -813,70 +921,110 @@ export const BAIRROS_POR_SERVICO: Record<string, LocalLink[]> = {
       "anchor": "remoção de vírus no Jardim das Américas"
     },
     {
+      "href": "/servicos/remocao-virus/agua-verde",
+      "anchor": "remoção de vírus no Água Verde"
+    },
+    {
+      "href": "/servicos/remocao-virus/cic",
+      "anchor": "remoção de vírus na CIC"
+    },
+    {
       "href": "/servicos/remocao-virus/reboucas",
       "anchor": "remoção de vírus no Rebouças"
+    },
+    {
+      "href": "/bairros/cajuru",
+      "anchor": "atendimento técnico no Cajuru"
+    },
+    {
+      "href": "/bairros/campo-comprido",
+      "anchor": "atendimento técnico no Campo Comprido"
     }
   ],
   "/servicos/suporte-home-office": [
     {
-      "href": "/bairros/agua-verde",
-      "anchor": "atendimento técnico no Água Verde"
+      "href": "/bairros/capao-raso",
+      "anchor": "atendimento técnico no Capao Raso"
     },
     {
-      "href": "/bairros/bacacheri",
-      "anchor": "atendimento técnico no Bacacheri"
+      "href": "/bairros/centro",
+      "anchor": "atendimento técnico no Centro"
     },
     {
-      "href": "/bairros/batel",
-      "anchor": "atendimento técnico no Batel"
+      "href": "/bairros/cic",
+      "anchor": "atendimento técnico na CIC"
     },
     {
-      "href": "/bairros/bigorrilho",
-      "anchor": "atendimento técnico no Bigorrilho"
+      "href": "/bairros/cristo-rei",
+      "anchor": "atendimento técnico no Cristo Rei"
     },
     {
-      "href": "/bairros/boa-vista",
-      "anchor": "atendimento técnico na Boa Vista"
+      "href": "/bairros/fazendinha",
+      "anchor": "atendimento técnico no Fazendinha"
     },
     {
-      "href": "/bairros/boqueirao",
-      "anchor": "atendimento técnico no Boqueirão"
+      "href": "/bairros/hauer",
+      "anchor": "atendimento técnico no Hauer"
+    },
+    {
+      "href": "/bairros/juveve",
+      "anchor": "atendimento técnico no Juveve"
+    },
+    {
+      "href": "/bairros/merces",
+      "anchor": "atendimento técnico no Merces"
     }
   ],
   "/servicos/suporte-tecnico-empresarial": [
     {
-      "href": "/bairros/agua-verde",
-      "anchor": "atendimento técnico no Água Verde"
+      "href": "/bairros/novo-mundo",
+      "anchor": "atendimento técnico no Novo Mundo"
     },
     {
-      "href": "/bairros/bacacheri",
-      "anchor": "atendimento técnico no Bacacheri"
+      "href": "/bairros/pinheirinho",
+      "anchor": "atendimento técnico no Pinheirinho"
     },
     {
-      "href": "/bairros/batel",
-      "anchor": "atendimento técnico no Batel"
+      "href": "/bairros/portao",
+      "anchor": "atendimento técnico no Portão"
     },
     {
-      "href": "/bairros/bigorrilho",
-      "anchor": "atendimento técnico no Bigorrilho"
+      "href": "/bairros/reboucas",
+      "anchor": "atendimento técnico no Rebouças"
     },
     {
-      "href": "/bairros/boa-vista",
-      "anchor": "atendimento técnico na Boa Vista"
+      "href": "/bairros/santa-felicidade",
+      "anchor": "atendimento técnico em Santa Felicidade"
     },
     {
-      "href": "/bairros/boqueirao",
-      "anchor": "atendimento técnico no Boqueirão"
+      "href": "/bairros/seminario",
+      "anchor": "atendimento técnico no Seminario"
+    },
+    {
+      "href": "/bairros/sitio-cercado",
+      "anchor": "atendimento técnico no Sitio Cercado"
+    },
+    {
+      "href": "/bairros/uberaba",
+      "anchor": "atendimento técnico no Uberaba"
     }
   ],
   "/servicos/upgrade-ssd-ram": [
     {
-      "href": "/servicos/upgrade-ssd-memoria/agua-verde",
-      "anchor": "upgrade de SSD e memória no Água Verde"
-    },
-    {
       "href": "/servicos/upgrade-ssd-memoria/alto-da-xv",
       "anchor": "upgrade de SSD e memória no Alto da XV"
+    },
+    {
+      "href": "/servicos/upgrade-ssd-memoria/ecoville",
+      "anchor": "upgrade de SSD e memória no Ecoville"
+    },
+    {
+      "href": "/servicos/upgrade-ssd-memoria/jardim-das-americas",
+      "anchor": "upgrade de SSD e memória no Jardim das Américas"
+    },
+    {
+      "href": "/servicos/upgrade-ssd-memoria/agua-verde",
+      "anchor": "upgrade de SSD e memória no Água Verde"
     },
     {
       "href": "/servicos/upgrade-ssd-memoria/centro",
@@ -887,12 +1035,12 @@ export const BAIRROS_POR_SERVICO: Record<string, LocalLink[]> = {
       "anchor": "upgrade de SSD e memória na CIC"
     },
     {
-      "href": "/servicos/upgrade-ssd-memoria/ecoville",
-      "anchor": "upgrade de SSD e memória no Ecoville"
+      "href": "/servicos/upgrade-ssd-memoria/portao",
+      "anchor": "upgrade de SSD e memória no Portão"
     },
     {
-      "href": "/servicos/upgrade-ssd-memoria/jardim-das-americas",
-      "anchor": "upgrade de SSD e memória no Jardim das Américas"
+      "href": "/servicos/upgrade-ssd-memoria/reboucas",
+      "anchor": "upgrade de SSD e memória no Rebouças"
     }
   ]
 };

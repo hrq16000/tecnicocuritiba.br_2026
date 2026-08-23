@@ -182,7 +182,11 @@ const Servicos = () => {
             explica os sintomas atendidos, o processo e o que pode influenciar o valor do atendimento.
           </p>
           <p className="mb-8 max-w-2xl text-muted-foreground">
-            Procurando pelo sintoma?{" "}
+            Procurando pelo sintoma? Comece pelo{" "}
+            <Link to="/problemas" className="font-medium text-[hsl(var(--accent))] hover:underline">
+              hub de problemas atendidos em Curitiba
+            </Link>
+            , que organiza as falhas por equipamento, ou vá direto para{" "}
             <Link to="/problemas/notebook-nao-liga" className="font-medium text-[hsl(var(--accent))] hover:underline">
               Notebook não liga: sinais, causas possíveis e diagnóstico
             </Link>{" "}

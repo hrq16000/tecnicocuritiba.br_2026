@@ -13,6 +13,7 @@ import { Button } from "@/components/ui/button";
 import { SCHEMA_SLOTS, SLOT_PRIORITY, useJsonLdSlot } from "@/lib/jsonLdSlots";
 import { whatsappLink, absoluteUrl } from "@/lib/siteConfig";
 import { trackPageView, trackCTAClick } from "@/lib/analytics";
+import ProximosProblemas from "@/components/problemas/ProximosProblemas";
 
 const PATH = "/problemas/monitor-sem-sinal";
 const TITLE = "Monitor Sem Sinal: Causas e Solução | Curitiba";
@@ -378,6 +379,7 @@ const MonitorSemSinal = () => {
             </a>
           </Button>
         </section>
+        <ProximosProblemas path={PATH} />
       </main>
 
       <Footer />

@@ -1,33 +1,45 @@
 import { Link } from "@/lib/router-compat";
 import { MapPin } from "lucide-react";
+import { bairroPathPorNome } from "@/lib/bairroLinks";
 
+/**
+ * Bairros exibidos na home. A existência de página é resolvida em
+ * `bairroPathPorNome` a partir de `src/lib/bairrosData.ts` — a lista aqui é só
+ * de exibição, então nenhum bairro publicado fica sem link de entrada.
+ */
 const neighborhoods = [
-  { name: "Centro", slug: "centro", hasPage: true },
-  { name: "Batel", slug: "batel", hasPage: true },
-  { name: "Água Verde", slug: "agua-verde", hasPage: false },
-  { name: "Portão", slug: "portao", hasPage: true },
-  { name: "Bigorrilho", slug: "bigorrilho", hasPage: false },
-  { name: "Mercês", slug: "merces", hasPage: false },
-  { name: "Campina do Siqueira", slug: "campina-do-siqueira", hasPage: false },
-  { name: "Santa Felicidade", slug: "santa-felicidade", hasPage: true },
-  { name: "Boa Vista", slug: "boa-vista", hasPage: false },
-  { name: "Juvevê", slug: "juveve", hasPage: false },
-  { name: "Alto da XV", slug: "alto-da-xv", hasPage: false },
-  { name: "Cabral", slug: "cabral", hasPage: false },
-  { name: "Cristo Rei", slug: "cristo-rei", hasPage: false },
-  { name: "Jardim das Américas", slug: "jardim-das-americas", hasPage: false },
-  { name: "Cajuru", slug: "cajuru", hasPage: false },
-  { name: "Uberaba", slug: "uberaba", hasPage: false },
-  { name: "Pinheirinho", slug: "pinheirinho", hasPage: false },
-  { name: "Xaxim", slug: "xaxim", hasPage: false },
-  { name: "Boqueirão", slug: "boqueirao", hasPage: false },
-  { name: "Hauer", slug: "hauer", hasPage: false },
-  { name: "Bacacheri", slug: "bacacheri", hasPage: false },
-  { name: "Tingui", slug: "tingui", hasPage: false },
-  { name: "Atuba", slug: "atuba", hasPage: false },
-  { name: "Campo Comprido", slug: "campo-comprido", hasPage: true },
-  { name: "CIC", slug: "cic", hasPage: true },
-];
+  "Centro",
+  "Batel",
+  "Água Verde",
+  "Portão",
+  "Bigorrilho",
+  "Mercês",
+  "Campina do Siqueira",
+  "Santa Felicidade",
+  "Boa Vista",
+  "Juvevê",
+  "Alto da XV",
+  "Cabral",
+  "Cristo Rei",
+  "Jardim das Américas",
+  "Cajuru",
+  "Uberaba",
+  "Pinheirinho",
+  "Xaxim",
+  "Boqueirão",
+  "Hauer",
+  "Bacacheri",
+  "Rebouças",
+  "Novo Mundo",
+  "Capão Raso",
+  "Sítio Cercado",
+  "Fazendinha",
+  "Seminário",
+  "Juvevê",
+  "Campo Comprido",
+  "CIC",
+].filter((nome, i, arr) => arr.indexOf(nome) === i);
+
 
 export const NeighborhoodsSection = () => {
   return (
@@ -47,28 +59,30 @@ export const NeighborhoodsSection = () => {
         </div>
         
         <div className="flex flex-wrap justify-center gap-2 md:gap-3 max-w-4xl mx-auto">
-          {neighborhoods.map((neighborhood, index) => (
-            neighborhood.hasPage ? (
+          {neighborhoods.map((nome, index) => {
+            const to = bairroPathPorNome(nome);
+            return to ? (
               <Link
-                key={neighborhood.slug}
-                to={`/bairros/${neighborhood.slug}`}
+                key={nome}
+                to={to}
+                aria-label={`Técnico de informática em ${nome}, Curitiba`}
                 className="flex items-center gap-1.5 bg-background px-3.5 py-2 rounded-full text-sm border border-primary/10 hover:border-accent hover:bg-accent/5 hover:scale-110 hover:-translate-y-1 hover:shadow-[var(--shadow-md)] transition-all duration-300 group elastic-click slide-up-stagger"
                 style={{ animationDelay: `${index * 30}ms` }}
               >
                 <MapPin className="h-3.5 w-3.5 text-accent group-hover:scale-110 transition-transform duration-300" />
-                <span className="text-foreground/80 group-hover:text-accent font-medium transition-colors">{neighborhood.name}</span>
+                <span className="text-foreground/80 group-hover:text-accent font-medium transition-colors">{nome}</span>
               </Link>
             ) : (
               <div
-                key={neighborhood.slug}
+                key={nome}
                 className="flex items-center gap-1.5 bg-background px-3.5 py-2 rounded-full text-sm border border-primary/10 hover:border-primary/30 hover:bg-accent/5 hover:scale-105 transition-all duration-300 slide-up-stagger"
                 style={{ animationDelay: `${index * 30}ms` }}
               >
                 <MapPin className="h-3.5 w-3.5 text-accent/60" />
-                <span className="text-foreground/70">{neighborhood.name}</span>
+                <span className="text-foreground/70">{nome}</span>
               </div>
-            )
-          ))}
+            );
+          })}
         </div>
         
         <div className="text-center mt-8">

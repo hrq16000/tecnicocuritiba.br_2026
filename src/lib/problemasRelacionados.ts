@@ -6,6 +6,8 @@
  * navegação e crawl — nunca repetir a mesma keyword em páginas diferentes.
  */
 
+import { PROBLEMAS_RELACIONADOS_GERADOS } from "@/lib/problemasRelacionadosGerados";
+
 export interface ProblemaRelacionado {
   to: string;
   titulo: string;
@@ -101,13 +103,19 @@ const GRAFO: Record<string, string[]> = {
   ],
 };
 
-/** Retorna os sintomas relacionados de uma rota (vazio quando não mapeada). */
+/**
+ * Retorna os sintomas relacionados de uma rota.
+ * O grafo curado tem prioridade; o restante vem do mapa gerado por
+ * `npm run links:problemas`, que garante cobertura para todas as páginas.
+ */
 export function problemasRelacionados(path: string): ProblemaRelacionado[] {
-  return (GRAFO[path] || [])
+  const curado = (GRAFO[path] || [])
     .filter((to) => to !== path && PROBLEMA_LABELS[to])
     .map((to) => ({
       to,
       titulo: PROBLEMA_LABELS[to],
       desc: DESCRICOES[to] || "",
     }));
+  if (curado.length) return curado;
+  return (PROBLEMAS_RELACIONADOS_GERADOS[path] || []).filter((r) => r.to !== path);
 }

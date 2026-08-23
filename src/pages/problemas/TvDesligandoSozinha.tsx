@@ -13,6 +13,7 @@ import { Button } from "@/components/ui/button";
 import { SCHEMA_SLOTS, SLOT_PRIORITY, useJsonLdSlot } from "@/lib/jsonLdSlots";
 import { whatsappLink, absoluteUrl } from "@/lib/siteConfig";
 import { trackPageView, trackCTAClick } from "@/lib/analytics";
+import ProximosProblemas from "@/components/problemas/ProximosProblemas";
 
 const PATH = "/problemas/tv-desligando-sozinha";
 const TITLE = "TV Desligando Sozinha: Causas e Conserto | Curitiba";
@@ -386,6 +387,7 @@ const TvDesligandoSozinha = () => {
             </a>
           </Button>
         </section>
+        <ProximosProblemas path={PATH} />
       </main>
 
       <Footer />

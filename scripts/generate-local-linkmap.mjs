@@ -21,7 +21,9 @@ import { nomeBairro, prepDe, nomeServico } from "./lib/local-nomes.mjs";
 
 const CHECK = process.argv.includes("--check");
 const OUT = "src/lib/localLinkMap.ts";
-const MAX_LINKS = 6;
+const MAX_LINKS = 8;
+/** Folga permitida apenas na passagem de cobertura (destino sem inbound). */
+const MAX_LINKS_COBERTURA = 11;
 
 const curated = [...new Set(ACTIVE_SITEMAPS.flatMap(([, e]) => e.map((x) => x.path)))].sort();
 const curatedSet = new Set(curated);
@@ -43,14 +45,27 @@ const HUB_EQUIVALENTE = {
   "/servicos/manutencao-tv": "/servicos/conserto-tv",
 };
 
-const add = (lista, usados, href, anchor) => {
-  if (!curatedSet.has(href) || lista.length >= MAX_LINKS) return;
+/**
+ * Contagem de links de entrada já atribuídos pelo próprio mapa.
+ * A seleção é orientada por cobertura: destinos com menos inbound entram
+ * primeiro, para que nenhuma URL curada fique órfã.
+ */
+const inbound = new Map(curated.map((p) => [p, 0]));
+const registra = (href) => inbound.set(href, (inbound.get(href) ?? 0) + 1);
+
+const add = (lista, usados, href, anchor, limite = MAX_LINKS) => {
+  if (!curatedSet.has(href) || lista.length >= limite) return false;
   const chave = anchor.toLowerCase();
-  if (usados.has(chave) || usados.has(href)) return;
+  if (usados.has(chave) || usados.has(href)) return false;
   usados.add(chave);
   usados.add(href);
   lista.push({ href, anchor });
+  registra(href);
+  return true;
 };
+
+/** Menos linkados primeiro; empate resolvido pelo path (determinístico). */
+const porCobertura = (a, b) => (inbound.get(a) ?? 0) - (inbound.get(b) ?? 0) || a.localeCompare(b);
 
 /** bairro → serviços atendidos naquele bairro. */
 const porBairro = {};
@@ -61,7 +76,7 @@ for (const bairro of bairros) {
   const links = [];
   const usados = new Set([bairro]);
 
-  for (const p of servicoBairro.filter((x) => slugBairro(x) === slug)) {
+  for (const p of servicoBairro.filter((x) => slugBairro(x) === slug).sort(porCobertura)) {
     add(links, usados, p, `${nomeServico(servicoDe(p))} ${prep} ${nome}`);
   }
   for (const p of ["/servicos/manutencao-de-computador", "/servicos/formatacao", "/servicos/redes-e-wifi"]) {
@@ -72,22 +87,52 @@ for (const bairro of bairros) {
 
 /** serviço → bairros onde o serviço é atendido. */
 const porServico = {};
+const usadosPorServico = new Map();
 for (const servico of servicos) {
   const links = [];
   const usados = new Set([servico]);
-  const filhos = servicoBairro.filter(
-    (p) => servicoDe(p) === servico || HUB_EQUIVALENTE[servicoDe(p)] === servico,
-  );
+  usadosPorServico.set(servico, usados);
+  const filhos = servicoBairro
+    .filter((p) => servicoDe(p) === servico || HUB_EQUIVALENTE[servicoDe(p)] === servico)
+    .sort(porCobertura);
   for (const p of filhos) {
     const slug = slugBairro(p);
     add(links, usados, p, `${nomeServico(servicoDe(p))} ${prepDe(slug)} ${nomeBairro(slug)}`);
   }
-  for (const b of bairros) {
+  for (const b of [...bairros].sort(porCobertura)) {
     const slug = slugBairro(b);
     add(links, usados, b, `atendimento técnico ${prepDe(slug)} ${nomeBairro(slug)}`);
   }
-  if (links.length >= 2) porServico[servico] = links;
+  porServico[servico] = links;
 }
+
+/**
+ * Passagem de cobertura (fail-closed contra órfãs): toda landing local e todo
+ * bairro curado precisa de pelo menos um link de entrada. O destino é inserido
+ * no hub de serviço semanticamente correspondente — nunca em página aleatória.
+ */
+const semInbound = [...bairros, ...servicoBairro].filter((p) => (inbound.get(p) ?? 0) === 0);
+for (const destino of semInbound) {
+  const slug = slugBairro(destino);
+  const ehLanding = /^\/servicos\/[^/]+\/[^/]+$/.test(destino);
+  const hubs = ehLanding
+    ? [HUB_EQUIVALENTE[servicoDe(destino)], servicoDe(destino)].filter(Boolean)
+    : [...servicos].sort((a, b) => (porServico[a]?.length ?? 0) - (porServico[b]?.length ?? 0));
+  const anchor = ehLanding
+    ? `${nomeServico(servicoDe(destino))} ${prepDe(slug)} ${nomeBairro(slug)}`
+    : `atendimento técnico ${prepDe(slug)} ${nomeBairro(slug)}`;
+
+  for (const hub of hubs) {
+    if (!porServico[hub]) continue;
+    const usados = usadosPorServico.get(hub);
+    if (add(porServico[hub], usados, destino, anchor, MAX_LINKS_COBERTURA)) break;
+  }
+}
+
+for (const [servico, links] of Object.entries(porServico)) {
+  if (links.length < 2) delete porServico[servico];
+}
+
 
 const ts = `// ⚠️ ARQUIVO GERADO por scripts/generate-local-linkmap.mjs — não editar à mão.
 // Mapa de links internos locais com âncoras naturais (bairro ⇄ serviço).

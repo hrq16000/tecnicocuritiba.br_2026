@@ -7,7 +7,8 @@ import { FastHeader } from "@/components/FastHeader";
 import { Footer } from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { LocalFAQSection } from "@/components/LocalFAQSection";
-import { CIDADE_LIST, CURITIBA_BAIRROS, MODALIDADES_ATENDIMENTO } from "@/lib/cidadesData";
+import { CIDADE_LIST, MODALIDADES_ATENDIMENTO } from "@/lib/cidadesData";
+import { bairroPathPorNome } from "@/lib/bairroLinks";
 import { CIDADES_RMC_NOMES } from "@/lib/bairrosSelect";
 import { trackPageView, trackCTAClick } from "@/lib/analytics";
 
@@ -19,7 +20,7 @@ const DESCRIPTION =
 const REGIONAIS = [
   {
     nome: "Centro e região central",
-    bairros: ["Centro", "Centro Cívico", "Alto da Glória", "Alto da XV", "São Francisco", "Rebouças", "Prado Velho"],
+    bairros: ["Centro", "Centro Cívico", "Alto da Glória", "Alto da XV", "Batel", "São Francisco", "Rebouças", "Prado Velho"],
     perfil: "Escritórios, consultórios e comércio: atendimento com hora marcada para não parar o expediente.",
   },
   {
@@ -211,12 +212,13 @@ const AreasAtendidas = () => {
                   <p className="mt-2 text-sm text-muted-foreground">{r.perfil}</p>
                   <ul className="mt-4 flex flex-wrap gap-2">
                     {r.bairros.map((b) => {
-                      const comPagina = CURITIBA_BAIRROS.find((x) => x.label === b);
+                      const to = bairroPathPorNome(b);
                       return (
                         <li key={b}>
-                          {comPagina ? (
+                          {to ? (
                             <Link
-                              to={comPagina.to}
+                              to={to}
+                              aria-label={`Técnico de informática em ${b}, Curitiba`}
                               className="inline-flex rounded-full border border-accent/40 bg-accent/10 px-3 py-1 text-sm font-semibold text-accent"
                             >
                               {b}

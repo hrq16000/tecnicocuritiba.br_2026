@@ -13,6 +13,7 @@ import { Button } from "@/components/ui/button";
 import { SCHEMA_SLOTS, SLOT_PRIORITY, useJsonLdSlot } from "@/lib/jsonLdSlots";
 import { whatsappLink, absoluteUrl } from "@/lib/siteConfig";
 import { trackPageView, trackCTAClick } from "@/lib/analytics";
+import ProximosProblemas from "@/components/problemas/ProximosProblemas";
 
 const PATH = "/problemas/teclado-de-notebook-nao-funciona";
 const TITLE = "Teclado do Notebook Não Funciona: Causas e Troca | Curitiba";
@@ -385,6 +386,7 @@ const TecladoNotebookNaoFunciona = () => {
             </a>
           </Button>
         </section>
+        <ProximosProblemas path={PATH} />
       </main>
 
       <Footer />
