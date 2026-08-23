@@ -30,7 +30,11 @@ if (!existsSync(CLIENT)) {
   process.exit(1);
 }
 
-const sitemaps = readdirSync(CLIENT).filter((f) => /^sitemap.*\.xml$/.test(f));
+// sitemap-images.xml repete as URLs de páginas por design (extensão de imagem),
+// por isso fica fora da auditoria de unicidade/HTTP das URLs de página.
+const sitemaps = readdirSync(CLIENT).filter(
+  (f) => /^sitemap.*\.xml$/.test(f) && f !== "sitemap-images.xml",
+);
 const locsBySitemap = new Map();
 for (const file of sitemaps) {
   const xml = readFileSync(join(CLIENT, file), "utf8");
