@@ -86,13 +86,6 @@ const QuandoNaoCompensa = () => {
   return (
     <div className="min-h-screen bg-background">
       <PageSEO title="Quando NÃO Compensa Reparar | Guia Técnico - Curitiba" description="Guia completo sobre quando compensa e quando NÃO compensa reparar computadores, notebooks, TVs e outros equipamentos. Dicas de um técnico profissional em Curitiba." path="/quando-nao-compensa" breadcrumbs={[{ name: "Início", path: "/" }, { name: "Quando Não Compensa", path: "/quando-nao-compensa" }]} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        "@context": "https://schema.org", "@type": "BreadcrumbList",
-        itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Início", item: "https://tecnico.curitiba.br/" },
-          { "@type": "ListItem", position: 2, name: "Quando Não Compensa Reparar", item: "https://tecnico.curitiba.br/quando-nao-compensa" },
-        ],
-      })}} />
       <JsonLdSchema />
       <Header />
       <Breadcrumbs items={[{ label: "Quando Não Compensa Reparar" }]} />

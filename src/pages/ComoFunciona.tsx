@@ -71,37 +71,6 @@ const ComoFunciona = () => {
     <div className="min-h-screen bg-background">
       <PageSEO title="Como Funciona o Atendimento Técnico em Curitiba" description="Entenda como funciona o atendimento técnico de informática em Curitiba e região. Passo a passo completo: solicitação via WhatsApp, diagnóstico, execução e garantia. Técnico a domicílio conforme a disponibilidade da agenda." path="/como-funciona" breadcrumbs={[{ name: "Início", path: "/" }, { name: "Como Funciona", path: "/como-funciona" }]} />
       {/* JSON-LD FAQPage */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            mainEntity: faqItems.map((item) => ({
-              "@type": "Question",
-              name: item.question,
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: item.answer,
-              },
-            })),
-          }),
-        }}
-      />
-      {/* BreadcrumbList Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Início", item: "https://tecnico.curitiba.br/" },
-              { "@type": "ListItem", position: 2, name: "Como Funciona", item: "https://tecnico.curitiba.br/como-funciona" },
-            ],
-          }),
-        }}
-      />
       <JsonLdSchema />
       <Header />
       <Breadcrumbs items={[{ label: "Como Funciona" }]} />
