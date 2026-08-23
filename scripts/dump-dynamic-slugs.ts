@@ -1,9 +1,9 @@
 // Exporta, a partir das fontes reais de dados do app, os slugs válidos das
 // rotas dinâmicas que não são pré-renderizadas (/marcas/:slug, /problemas/:slug,
 // /procedimentos/:slug). Sem isso, qualquer slug inventado responderia 200
-// (soft-404). Executado com bun no postbuild.
+// (soft-404). Executado com tsx no postbuild.
 //
-// Uso: bun scripts/dump-dynamic-slugs.ts dist/dynamic-slugs.json
+// Uso: tsx scripts/dump-dynamic-slugs.ts dist/dynamic-slugs.json
 
 import { writeFileSync } from "node:fs";
 import { brandsData } from "../src/lib/brandsData";

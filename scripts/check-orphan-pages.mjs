@@ -15,8 +15,10 @@
  */
 import { readFileSync, readdirSync, existsSync, statSync } from "node:fs";
 import { join } from "node:path";
+import { tanstackRouteFiles } from "./lib/tanstack-routes.mjs";
 
-const ROUTERS = ["src/LegacyApp.tsx", "src/App.tsx"].filter(existsSync);
+const ROOT = process.cwd();
+const ROUTERS = tanstackRouteFiles(ROOT);
 const SCOPE_DIRS = ["src/pages", "src/pages/servicos"];
 
 /** Rotas comerciais P0 desta rodada — precisam de componente próprio montado. */
@@ -55,7 +57,7 @@ const pages = [...new Set(SCOPE_DIRS.flatMap(listPages))].filter(
 
 // 1) Componente de página sem import em nenhum roteador.
 for (const file of pages) {
-  const importPath = file.replace(/^src\//, "").replace(/\.tsx$/, "");
+  const importPath = file.replace(/\\/g, "/").replace(/^src\//, "").replace(/\.tsx$/, "");
   const short = importPath.replace(/^pages\//, "");
   const referenced =
     routerSrc.includes(`/${short}"`) ||

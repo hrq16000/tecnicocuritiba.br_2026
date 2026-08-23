@@ -29,6 +29,14 @@ const SENTRY_ORG = process.env.SENTRY_ORG || "";
 const SENTRY_PROJECT = process.env.SENTRY_PROJECT || "";
 
 export default defineConfig({
+  nitro: {
+    // Evita um ciclo de chunks do Nitro que deixa `__exportAll` indefinido no
+    // worker SSR compilado. O bundle único é compatível com o worker
+    // Cloudflare e mantém o handler importável no prerender.
+    rollupConfig: {
+      output: { inlineDynamicImports: true },
+    },
+  } as any,
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
