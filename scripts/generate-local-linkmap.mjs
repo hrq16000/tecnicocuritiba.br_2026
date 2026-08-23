@@ -21,7 +21,9 @@ import { nomeBairro, prepDe, nomeServico } from "./lib/local-nomes.mjs";
 
 const CHECK = process.argv.includes("--check");
 const OUT = "src/lib/localLinkMap.ts";
-const MAX_LINKS = 6;
+const MAX_LINKS = 8;
+/** Folga permitida apenas na passagem de cobertura (destino sem inbound). */
+const MAX_LINKS_COBERTURA = 11;
 
 const curated = [...new Set(ACTIVE_SITEMAPS.flatMap(([, e]) => e.map((x) => x.path)))].sort();
 const curatedSet = new Set(curated);
