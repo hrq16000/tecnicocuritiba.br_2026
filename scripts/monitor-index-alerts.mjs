@@ -20,6 +20,10 @@
 import { existsSync, readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import path from "node:path";
 import { ACTIVE_SITEMAPS } from "./lib/curated-urls.mjs";
+import { exitIfLocalMode } from "./lib/local-mode.mjs";
+
+// Ambiente local/offline: nao chama servicos externos.
+exitIfLocalMode("Google Search Console", "monitor de indexacao");
 
 const ALERT_AFTER_DAYS = Number((process.argv.find((a) => a.startsWith("--days=")) || "--days=7").split("=")[1]);
 const STATE = "reports/index-state.json";

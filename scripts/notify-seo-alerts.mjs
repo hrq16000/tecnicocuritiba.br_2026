@@ -19,6 +19,10 @@
  * Uso: node scripts/notify-seo-alerts.mjs [--always] [--rank-drop=3]
  */
 import { readFileSync, existsSync } from "node:fs";
+import { exitIfLocalMode } from "./lib/local-mode.mjs";
+
+// Ambiente local/offline: nao chama servicos externos.
+exitIfLocalMode("Slack/Resend", "alertas de SEO");
 
 const args = process.argv.slice(2);
 const ALWAYS = args.includes("--always");

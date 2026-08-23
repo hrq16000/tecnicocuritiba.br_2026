@@ -11,6 +11,10 @@
  */
 import { readdirSync, readFileSync } from "node:fs";
 import { resolve } from "node:path";
+import { exitIfLocalMode } from "./lib/local-mode.mjs";
+
+// Ambiente local/offline: nao chama servicos externos.
+exitIfLocalMode("IndexNow", "ping de sitemaps");
 
 const HOST = process.env.INDEXNOW_HOST || "tecnico.curitiba.br";
 const KEY = process.env.INDEXNOW_KEY;

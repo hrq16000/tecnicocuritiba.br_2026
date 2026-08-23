@@ -18,6 +18,10 @@
  * Uso: node scripts/alert-edge-errors.mjs [--max-404=5] [--max-5xx=1] [--strict] [--dry-run]
  */
 import { readFileSync, existsSync, mkdirSync, writeFileSync } from "node:fs";
+import { exitIfLocalMode } from "./lib/local-mode.mjs";
+
+// Ambiente local/offline: nao chama servicos externos.
+exitIfLocalMode("Cloudflare/Slack/Resend", "alertas de borda");
 
 const args = process.argv.slice(2);
 const num = (n, d) => Number(args.find((a) => a.startsWith(`--${n}=`))?.split("=")[1] ?? d);

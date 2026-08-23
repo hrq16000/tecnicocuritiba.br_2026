@@ -13,6 +13,10 @@
  * Nunca falha o build, salvo com --strict.
  */
 import { readFileSync, existsSync } from "node:fs";
+import { exitIfLocalMode } from "./lib/local-mode.mjs";
+
+// Ambiente local/offline: nao chama servicos externos.
+exitIfLocalMode("Slack/Resend/PagerDuty", "alertas de sitemap");
 
 const args = process.argv.slice(2);
 const DRY = args.includes("--dry-run");
