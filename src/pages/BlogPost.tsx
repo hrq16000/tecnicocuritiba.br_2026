@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { useParams, Link, Navigate } from "@/lib/router-compat";
-import { Helmet } from "react-helmet";
 import { useCanonical } from "@/lib/canonicalUrl";
 import { Header } from "@/components/Header";
 import { CTASection } from "@/components/CTASection";
