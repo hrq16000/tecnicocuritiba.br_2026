@@ -138,14 +138,13 @@ export const FastHeader = () => {
     >
       <div className="container mx-auto flex h-full items-center justify-between gap-3">
         <a href="/" aria-label="Técnico em Curitiba — início" className="min-w-0 flex-shrink-0">
-          <img loading="eager" fetchPriority="high"
+          <img loading="eager"
             alt="Técnico em Curitiba — assistência técnica em informática"
             src="/logo.webp"
             width="304"
             height="71"
             decoding="sync"
-            // @ts-ignore - fetchpriority is a valid HTML attribute
-            fetchpriority="high"
+            fetchPriority="high"
             className="h-11 w-auto object-scale-down transition-[height] duration-200 sm:h-12 md:h-14 [html[data-scrolled='1']_&]:h-9 [html[data-scrolled='1']_&]:md:h-10"
           />
         </a>
