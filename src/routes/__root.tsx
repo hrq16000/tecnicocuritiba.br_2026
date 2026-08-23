@@ -68,11 +68,21 @@ const FONTS_SWAP_SNIPPET = `(function(){var h=${JSON.stringify(GOOGLE_FONTS_HREF
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   beforeLoad: ({ location }) => {
-    const path = location.pathname.replace(/\/+$/, "");
-    if (path === "/index") {
-      throw redirect({ to: "/", statusCode: 301 });
+    // Política única de URL (salto único, sempre 301, sem canonicalização client-side):
+    //   /index.html, /index → /
+    //   /Servicos           → /servicos   (caixa baixa)
+    //   //servicos, /servicos/ → /servicos (barras duplicadas e barra final)
+    const raw = location.pathname;
+    let path = raw.replace(/\/{2,}/g, "/");
+    path = path.replace(/\/index\.html?$/i, "/");
+    path = path.toLowerCase();
+    path = path.replace(/(.)\/+$/, "$1");
+    if (path === "/index") path = "/";
+    if (path !== raw) {
+      throw redirect({ href: `${path}${location.searchStr ?? ""}`, statusCode: 301 });
     }
   },
+
   head: () => ({
     meta: [
       { charSet: "UTF-8" },

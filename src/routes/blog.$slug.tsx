@@ -1,9 +1,14 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, notFound } from "@tanstack/react-router";
 import { seoHead } from "@/lib/seo/routeHead";
 import { getBlogPostMeta } from "@/lib/seo/blogPostsMeta";
 import BlogPost from "@/pages/BlogPost";
 
 export const Route = createFileRoute("/blog/$slug")({
+  // Fail-closed: artigo fora da lista aprovada responde 404 HTTP real (nunca 200 + noindex).
+  beforeLoad: ({ params }) => {
+    if (!getBlogPostMeta(params.slug)) throw notFound();
+  },
+
   head: ({ params }) => {
     const meta = getBlogPostMeta(params.slug);
     return seoHead({
