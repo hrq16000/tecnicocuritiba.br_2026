@@ -27,23 +27,15 @@ import {
 } from "@/lib/blogEditorialRegistry";
 
 
-// blogPostsContentBase lives in its own chunk (src/data/blogPostsContent.tsx)
-// and is loaded on demand to keep the BlogPost route bundle small.
+// O conteúdo é importado estaticamente (e não mais por `import()` tardio):
+// sem isso o HTML servido ao crawler ficava vazio — o artigo só existia após
+// a hidratação. O custo fica isolado no chunk da rota /blog/$slug.
 type PostsMap = Record<string, BlogPostContent>;
 
-let cachedPosts: PostsMap | null = null;
-let inflight: Promise<PostsMap> | null = null;
-
-const loadBlogPostsContent = (): Promise<PostsMap> => {
-  if (cachedPosts) return Promise.resolve(cachedPosts);
-  if (inflight) return inflight;
-  inflight = import("@/data/blogPostsContent").then((m) => {
-    cachedPosts = { ...m.blogPostsContentBase, ...programmaticPosts } as PostsMap;
-    inflight = null;
-    return cachedPosts;
-  });
-  return inflight;
-};
+const posts: PostsMap = {
+  ...blogPostsContentBase,
+  ...programmaticPosts,
+} as PostsMap;
 
 // Indexabilidade é decidida EXCLUSIVAMENTE pelo registro editorial
 // fail-closed (src/lib/blogEditorialRegistry.ts). Categoria, data,
@@ -52,19 +44,12 @@ const loadBlogPostsContent = (): Promise<PostsMap> => {
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
-  const [posts, setPosts] = useState<PostsMap | null>(cachedPosts);
 
   useCanonical(`https://tecnico.curitiba.br/blog/${slug}`);
 
-  useEffect(() => {
-    let cancelled = false;
-    if (!posts) {
-      loadBlogPostsContent().then((p) => { if (!cancelled) setPosts(p); }).catch(() => {});
-    }
-    return () => { cancelled = true; };
-  }, [posts]);
+  const post = slug ? posts[slug] ?? null : null;
 
-  const post = slug && posts ? posts[slug] : null;
+
 
 
   useEffect(() => {
