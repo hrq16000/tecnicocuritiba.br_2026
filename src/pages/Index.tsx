@@ -1,21 +1,18 @@
-import { lazy, Suspense, useEffect } from "react";
+import { useEffect } from "react";
 import { upsertCanonical } from "@/lib/canonicalUrl";
 import { FastHeader } from "@/components/FastHeader";
 import { JsonLdSchema } from "@/components/JsonLdSchema";
 import { HeroPremium } from "@/components/home/HeroPremium";
 import { TrustStrip } from "@/components/TrustStrip";
 
-import { LazyOnVisible } from "@/components/LazyOnVisible";
 import { siteConfig } from "@/lib/siteConfig";
 
-const HomeSections = lazy(() =>
-  import("@/components/home/HomeSections").then((m) => ({ default: m.HomeSections })),
-);
-const Footer = lazy(() => import("@/components/Footer").then((m) => ({ default: m.Footer })));
+// SSR-first: as seções da home (serviços, processo, regiões, FAQ) e o rodapé
+// são renderizados no servidor. Antes ficavam atrás de LazyOnVisible + lazy(),
+// e o HTML entregue ao crawler tinha ~200 palavras e nenhum H2.
+import { HomeSections } from "@/components/home/HomeSections";
+import { Footer } from "@/components/Footer";
 
-const SectionFallback = ({ height = "480px" }: { height?: string }) => (
-  <div style={{ minHeight: height }} className="w-full" aria-hidden="true" />
-);
 
 const Index = () => {
   useEffect(() => {
