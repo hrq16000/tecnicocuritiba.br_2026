@@ -20,7 +20,7 @@
     "audit:sitemap-http": "node scripts/audit-sitemap-http.mjs dist",
     "check:jsonld-integrity": "node scripts/check-jsonld-integrity.mjs dist",
     "check:ssr-critical": "node scripts/check-ssr-critical.mjs dist",
-    "postbuild": "node scripts/prerender-static.mjs dist && node scripts/generate-image-sitemap.mjs dist && node scripts/check-dist-artifacts.mjs dist && node scripts/audit-sitemap-http.mjs dist && node scripts/check-jsonld-integrity.mjs dist && node scripts/check-ssr-critical.mjs dist && bun scripts/dump-dynamic-slugs.ts dist/dynamic-slugs.json && node scripts/report-sitemap-inclusions.mjs",
+    "postbuild": "node scripts/prerender-static.mjs dist && node scripts/generate-image-sitemap.mjs dist/client && node scripts/check-dist-artifacts.mjs dist && node scripts/audit-sitemap-http.mjs dist && node scripts/check-jsonld-integrity.mjs dist && node scripts/check-ssr-critical.mjs dist && bun scripts/dump-dynamic-slugs.ts dist/dynamic-slugs.json && node scripts/report-sitemap-inclusions.mjs",
     "check:postbuild:static": "bun scripts/check-seo-basics.ts dist/index.html && bun scripts/check-seo-basics.ts --curated dist && node scripts/check-jsonld-references.mjs dist && node scripts/generate-route-manifest.mjs dist && node scripts/check-soft-404.mjs && node scripts/generate-image-sitemap.mjs dist && node scripts/check-image-sitemap.mjs dist && node scripts/check-originality.mjs dist --static --report && node scripts/check-geo-conformance.mjs dist && node scripts/check-comercial-seo.mjs dist",
     "build:dev": "vite build --mode development",
     "check:seo": "bun scripts/check-seo-basics.ts index.html",
