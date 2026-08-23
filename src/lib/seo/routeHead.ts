@@ -40,41 +40,36 @@ const jsonLd = (key: string, schema: unknown) => ({
 /** Título curto (sem sufixo de marca) para nomes de entidade. */
 const shortTitle = (title: string) => title.split(/\s[|—–]\s/)[0].trim();
 
-const SEGMENT_LABELS: Record<string, string> = {
-  servicos: "Serviços",
-  bairros: "Bairros",
-  problemas: "Problemas",
-  blog: "Blog",
-  precos: "Preços",
-  empresas: "Empresas",
+/** Hubs que realmente respondem 200 — só eles podem virar nó intermediário. */
+const HUB_PATHS: Record<string, string> = {
+  "/servicos": "Serviços",
+  "/problemas": "Problemas",
+  "/blog": "Blog",
+  "/empresas": "Empresas",
 };
-
-const prettify = (slug: string) =>
-  slug
-    .split("-")
-    .map((w) => (w.length <= 2 ? w : w.charAt(0).toUpperCase() + w.slice(1)))
-    .join(" ");
 
 interface Crumb {
   name: string;
   path: string;
 }
 
-/** Trilha derivada do path real (Home > seções > página atual). */
+/** Trilha derivada do path real (Início > hub existente > página atual). */
 function buildBreadcrumbs(path: string, title: string): Crumb[] {
+  if (path === "/") return [];
   const segments = path.split("/").filter(Boolean);
   const crumbs: Crumb[] = [{ name: "Início", path: "/" }];
   let acc = "";
   segments.forEach((seg, i) => {
     acc += `/${seg}`;
-    const isLast = i === segments.length - 1;
-    crumbs.push({
-      name: isLast ? shortTitle(title) : (SEGMENT_LABELS[seg] ?? prettify(seg)),
-      path: acc,
-    });
+    if (i === segments.length - 1) {
+      crumbs.push({ name: shortTitle(title), path: acc });
+    } else if (HUB_PATHS[acc]) {
+      crumbs.push({ name: HUB_PATHS[acc], path: acc });
+    }
   });
   return crumbs;
 }
+
 
 
 export function seoHead({
