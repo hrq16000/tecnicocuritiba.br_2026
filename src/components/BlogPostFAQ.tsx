@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { SCHEMA_SLOTS, SLOT_PRIORITY, useJsonLdSlot } from "@/lib/jsonLdSlots";
 import { isEditorialApproved } from "@/lib/blogEditorialRegistry";
 import { getArticleSources } from "@/lib/blogEditorialSources";
 
@@ -290,33 +290,26 @@ export const BlogPostFAQ = ({ category, slug }: { category: string; slug: string
   const extras = CATEGORY_EXTRA[category] ?? [];
   const items = override ?? [...extras, ...BASE_FAQ].slice(0, 5);
 
-  useEffect(() => {
-    const id = `faq-jsonld-${slug}`;
-    document.getElementById(id)?.remove();
-    // Fail-closed: FAQPage (rich result) apenas para conteúdo aprovado.
-    // Conteúdo em revisão/rascunho mantém a FAQ visível, mas sem schema.
-    if (!isEditorialApproved(slug)) {
-      return () => {
-        document.getElementById(id)?.remove();
-      };
-    }
-    const script = document.createElement("script");
-    script.type = "application/ld+json";
-    script.id = id;
-    script.text = JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      mainEntity: items.map((it) => ({
-        "@type": "Question",
-        name: it.q,
-        acceptedAnswer: { "@type": "Answer", text: it.a },
-      })),
-    });
-    document.head.appendChild(script);
-    return () => {
-      document.getElementById(id)?.remove();
-    };
-  }, [slug, items]);
+  // FAQPage ocupa o SLOT único de FAQ da página (prioridade de página):
+  // substitui o FAQ institucional global e nunca duplica o nó do SSR.
+  // Fail-closed: schema apenas para conteúdo aprovado — a FAQ visível
+  // continua renderizada em rascunhos, só sem rich result.
+  useJsonLdSlot(
+    SCHEMA_SLOTS.faq,
+    isEditorialApproved(slug)
+      ? {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "@id": `https://tecnico.curitiba.br/blog/${slug}#faq`,
+          mainEntity: items.map((it) => ({
+            "@type": "Question",
+            name: it.q,
+            acceptedAnswer: { "@type": "Answer", text: it.a },
+          })),
+        }
+      : null,
+    SLOT_PRIORITY.page,
+  );
 
   return (
     <section className="not-prose mt-12">
