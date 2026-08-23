@@ -106,6 +106,12 @@ const xml =
   `${body}\n</urlset>\n`;
 
 writeFileSync(path.join(DIST, "sitemap-images.xml"), xml);
+// O diretório realmente servido é `dist/client` (TanStack Start). Sem esta
+// cópia, o Sitemap declarado no robots.txt respondia 404 para os crawlers.
+if (existsSync(path.join(DIST, "client"))) {
+  writeFileSync(path.join(DIST, "client", "sitemap-images.xml"), xml);
+}
+
 
 const total = [...entries.values()].reduce((n, e) => n + e.images.size, 0);
 console.log(`OK — sitemap-images.xml gerado com ${entries.size} página(s) e ${total} imagem(ns).`);
