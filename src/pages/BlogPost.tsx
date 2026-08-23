@@ -1,6 +1,5 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useParams, Link, Navigate } from "@/lib/router-compat";
-import { Helmet } from "react-helmet";
 import { useCanonical } from "@/lib/canonicalUrl";
 import { Header } from "@/components/Header";
 import { CTASection } from "@/components/CTASection";
@@ -16,7 +15,7 @@ import { getEditorialCover } from "@/lib/blogEditorialCovers";
 import { getCategoryCover } from "@/lib/categoryCovers";
 import { withOgVersion } from "@/lib/ogCacheBust";
 import { programmaticPosts } from "@/data/blogProgrammaticPosts";
-import type { BlogPostContent } from "@/data/blogPostsContent";
+import { blogPostsContentBase, type BlogPostContent } from "@/data/blogPostsContent";
 import { BlogPostFAQ } from "@/components/BlogPostFAQ";
 import { EditorialCta, EditorialRelatedLinks } from "@/components/editorial/EditorialCta";
 import {
@@ -27,23 +26,15 @@ import {
 } from "@/lib/blogEditorialRegistry";
 
 
-// blogPostsContentBase lives in its own chunk (src/data/blogPostsContent.tsx)
-// and is loaded on demand to keep the BlogPost route bundle small.
+// O conteúdo é importado estaticamente (e não mais por `import()` tardio):
+// sem isso o HTML servido ao crawler ficava vazio — o artigo só existia após
+// a hidratação. O custo fica isolado no chunk da rota /blog/$slug.
 type PostsMap = Record<string, BlogPostContent>;
 
-let cachedPosts: PostsMap | null = null;
-let inflight: Promise<PostsMap> | null = null;
-
-const loadBlogPostsContent = (): Promise<PostsMap> => {
-  if (cachedPosts) return Promise.resolve(cachedPosts);
-  if (inflight) return inflight;
-  inflight = import("@/data/blogPostsContent").then((m) => {
-    cachedPosts = { ...m.blogPostsContentBase, ...programmaticPosts } as PostsMap;
-    inflight = null;
-    return cachedPosts;
-  });
-  return inflight;
-};
+const posts: PostsMap = {
+  ...blogPostsContentBase,
+  ...programmaticPosts,
+} as PostsMap;
 
 // Indexabilidade é decidida EXCLUSIVAMENTE pelo registro editorial
 // fail-closed (src/lib/blogEditorialRegistry.ts). Categoria, data,
@@ -52,19 +43,12 @@ const loadBlogPostsContent = (): Promise<PostsMap> => {
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
-  const [posts, setPosts] = useState<PostsMap | null>(cachedPosts);
 
   useCanonical(`https://tecnico.curitiba.br/blog/${slug}`);
 
-  useEffect(() => {
-    let cancelled = false;
-    if (!posts) {
-      loadBlogPostsContent().then((p) => { if (!cancelled) setPosts(p); }).catch(() => {});
-    }
-    return () => { cancelled = true; };
-  }, [posts]);
+  const post = slug ? posts[slug] ?? null : null;
 
-  const post = slug && posts ? posts[slug] : null;
+
 
 
   useEffect(() => {
@@ -77,6 +61,8 @@ const BlogPost = () => {
       trackPageView(`/blog/${slug}`, `Blog - ${post.title}`);
     }
   }, [post, slug]);
+
+
 
   // Fail-closed: a meta robots reflete APENAS o registro editorial.
   // Artigo sem aprovação válida => noindex, follow. Aprovado => index, follow.
@@ -111,6 +97,29 @@ const BlogPost = () => {
         : `https://tecnico.curitiba.br${post.image}`)
     : (slug ? getUniqueImage(slug).replace(/w=\d+/, 'w=1600').replace(/q=\d+/, 'q=80') + '&w=1600&h=900' : '');
   const heroImageOg = withOgVersion(heroImage);
+
+  // Capa social do artigo (o head() SSR emite a imagem institucional padrão).
+  useEffect(() => {
+    if (!post || !slug) return;
+    const set = (sel: string, attr: string, key: string, value: string) => {
+      let el = document.head.querySelector<HTMLMetaElement>(sel);
+      if (!el) {
+        el = document.createElement("meta");
+        el.setAttribute(attr, key);
+        document.head.appendChild(el);
+      }
+      el.setAttribute("content", value);
+    };
+    if (heroImageOg) {
+      set('meta[property="og:image"]', "property", "og:image", heroImageOg);
+      set('meta[property="og:image:alt"]', "property", "og:image:alt", post.title);
+      set('meta[name="twitter:image"]', "name", "twitter:image", heroImageOg);
+    }
+    if (isEditorialApproved(slug)) {
+      set('meta[property="article:published_time"]', "property", "article:published_time", `${post.date}T08:00:00-03:00`);
+      set('meta[property="article:section"]', "property", "article:section", post.category);
+    }
+  }, [post, slug, heroImageOg]);
 
   // Compute word count from content (rough estimate via readTime)
   const wordCount = post ? Math.round(parseInt(post.readTime) * 220) : 1500;
@@ -225,14 +234,10 @@ const BlogPost = () => {
     };
   }, [post, slug, heroImage, wordCount]);
 
-  // Wait for the content chunk before deciding to redirect.
-  if (!posts) {
-    return (
-      <div className="min-h-screen bg-background flex items-center justify-center">
-        <div className="h-8 w-8 rounded-full border-2 border-accent border-t-transparent animate-spin" aria-label="Carregando artigo" />
-      </div>
-    );
+  if (!post) {
+    return <Navigate to="/blog" replace />;
   }
+
   if (!post) {
     return <Navigate to="/blog" replace />;
   }
@@ -242,38 +247,10 @@ const BlogPost = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Helmet>
-        <title>{post.title} | Blog | Técnico em Curitiba</title>
-        <meta name="description" content={post.excerpt} />
-        {/* robots/googlebot são gerenciados via efeito (registro editorial) */}
-        <meta property="og:type" content={approved ? "article" : "website"} />
-        <meta property="og:title" content={post.title} />
-        <meta property="og:description" content={post.excerpt} />
-        <meta property="og:url" content={`https://tecnico.curitiba.br/blog/${slug}`} />
-        <meta property="og:site_name" content="Técnico em Curitiba" />
-        <meta property="og:locale" content="pt_BR" />
-        <meta property="og:image" content={heroImageOg} />
-        <meta property="og:image:secure_url" content={heroImageOg} />
-        <meta property="og:image:width" content={editorialCover ? "1200" : "1600"} />
-        <meta property="og:image:height" content={editorialCover ? "630" : "900"} />
-        <meta property="og:image:alt" content={post.title} />
-        {approved && (
-          <>
-            <meta property="article:published_time" content={`${post.date}T08:00:00-03:00`} />
-            <meta property="article:section" content={post.category} />
-            <meta property="article:tag" content={post.category} />
-            <meta property="article:author" content="Técnico em Curitiba" />
-            <meta property="article:publisher" content="https://tecnico.curitiba.br" />
-          </>
-        )}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={post.title} />
-        <meta name="twitter:description" content={post.excerpt} />
-        <meta name="twitter:image" content={heroImageOg} />
-        <meta name="twitter:image:alt" content={post.title} />
-        {/* Preload hero image for faster LCP */}
-        <link rel="preload" as="image" href={heroImage} fetchPriority="high" />
-      </Helmet>
+      {/* title/description/canonical/OG base vêm do head() SSR da rota
+          (src/routes/blog.$slug.tsx). Aqui só a capa e os campos article:*,
+          aplicados via efeito — react-helmet quebrava o SSR. */}
+
       <JsonLdSchema />
       <Header />
       <main>

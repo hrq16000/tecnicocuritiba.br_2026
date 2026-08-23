@@ -74,8 +74,10 @@ const block = (route) => {
     title: route.title,
     description: route.description,
     ...(faq.length ? { faq } : {}),
+    ...(route.localBusiness === false ? { localBusiness: false } : {}),
     ...(bairroNoindex(route.path) ? { noindex: true } : {}),
   };
+
   return [
     START,
     `  head: () => seoHead(${JSON.stringify(payload, null, 2).replace(/\n/g, "\n  ")}),`,
