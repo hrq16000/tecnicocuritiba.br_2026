@@ -94,7 +94,7 @@ const BASE_ROUTES = [
   {
     "path": "/servicos/manutencao-preventiva-empresas",
     "title": "Manutenção Preventiva de Computadores em Curitiba | Empresas",
-    "description": "Manutenção preventiva de computadores para empresas em Curitiba: inventário, inspeção, armazenamento, atualizações e relatório de riscos priorizado, sem promessa de."
+    "description": "Manutenção preventiva de computadores para empresas em Curitiba: inventário, inspeção, armazenamento, atualizações e relatório de riscos priorizado, sem promessa."
   },
   {
     "path": "/servicos/backup-para-empresas",
@@ -152,7 +152,7 @@ const BASE_ROUTES = [
   {
     "path": "/servicos/suporte-home-office",
     "title": "Suporte Técnico para Home Office em Curitiba",
-    "description": "Suporte técnico para quem trabalha em casa em Curitiba: computador lento, Wi-Fi instável, câmera e microfone em reuniões, e-mail, arquivos e preparação do posto de."
+    "description": "Suporte técnico para quem trabalha em casa em Curitiba: computador lento, Wi-Fi instável, câmera e microfone em reuniões, e-mail, arquivos e preparação do posto."
   },
   {
     "path": "/politica-de-pecas-do-cliente",
@@ -199,7 +199,7 @@ const BASE_ROUTES = [
   {
     "path": "/seguranca-dos-dados",
     "title": "Segurança dos Dados na Assistência Técnica | Curitiba",
-    "description": "Como arquivos, senhas e acessos são tratados durante a assistência técnica em Curitiba: autorização, acesso mínimo, backup prévio, cópias temporárias, limites e.",
+    "description": "Como arquivos, senhas e acessos são tratados durante a assistência técnica em Curitiba: autorização, acesso mínimo, backup prévio, cópias temporárias, limites.",
     "blocos": [
       {
         "titulo": "Compromisso de acesso mínimo",
@@ -1183,7 +1183,7 @@ const BASE_ROUTES = [
     "path": "/atendimento-remoto",
     "title": "Suporte Remoto de Informática em Curitiba | Online",
     "h1": "Suporte remoto de informática para residências e empresas",
-    "description": "Suporte remoto de informática em Curitiba para configurações, sistema, programas, e-mail, impressora já conectada, orientação e home office — com autorização e.",
+    "description": "Suporte remoto de informática em Curitiba para configurações, sistema, programas, e-mail, impressora já conectada, orientação e home office — com autorização.",
     "blocos": [
       {
         "titulo": "O que é atendimento remoto",
@@ -1331,7 +1331,7 @@ const BASE_ROUTES = [
   {
     "path": "/areas-atendidas",
     "title": "Áreas Atendidas em Curitiba e Região | Bairros e Cidades",
-    "description": "Bairros de Curitiba e cidades da região metropolitana atendidas pelo Técnico em Curitiba, com a modalidade indicada em cada caso: no local, remoto ou coleta para.",
+    "description": "Bairros de Curitiba e cidades da região metropolitana atendidas pelo Técnico em Curitiba, com a modalidade indicada em cada caso: no local, remoto ou coleta.",
     "blocos": [
       {
         "titulo": "O que esta página resolve",
@@ -1367,7 +1367,7 @@ const BASE_ROUTES = [
   {
     "path": "/equipamentos-atendidos",
     "title": "Equipamentos Atendidos | Técnico em Curitiba",
-    "description": "Notebooks, desktops, PC gamer, All in One, estações de trabalho, equipamentos de home office, redes e armazenamento: o que atendemos em Curitiba, os limites e a.",
+    "description": "Notebooks, desktops, PC gamer, All in One, estações de trabalho, equipamentos de home office, redes e armazenamento: o que atendemos em Curitiba, os limites.",
     "blocos": [
       {
         "titulo": "Como usar esta página",
@@ -1435,7 +1435,7 @@ const BASE_ROUTES = [
   {
     "path": "/guia-tecnico-informatica",
     "title": "Guia Técnico: Manutenção de PC e Notebook Passo a Passo",
-    "description": "Guia completo de manutenção de computador e notebook: como identificar a família da falha, o que verificar antes de chamar o técnico, quando o upgrade compensa e.",
+    "description": "Guia completo de manutenção de computador e notebook: como identificar a família da falha, o que verificar antes de chamar o técnico, quando o upgrade compensa.",
     "h1": "Guia técnico de informática: manutenção de PC e notebook",
     "subtitulo": "Como separar as famílias de falha de um computador ou notebook, o que verificar antes do atendimento, quando o upgrade muda o desempenho e quando o reparo deixa de compensar.",
     "blocos": [
@@ -1511,7 +1511,7 @@ const BASE_ROUTES = [
   {
     "path": "/problemas/computador-lento",
     "title": "Computador Lento? Diagnóstico Técnico em Curitiba",
-    "description": "Computador ou notebook lento para ligar e abrir programas? Veja os sintomas, as causas possíveis, quando SSD ou memória resolvem, quando formatar e quando trocar o.",
+    "description": "Computador ou notebook lento para ligar e abrir programas? Veja os sintomas, as causas possíveis, quando SSD ou memória resolvem, quando formatar e quando trocar.",
     "h1": "Computador lento: sintomas, causas possíveis e o que realmente resolve",
     "subtitulo": "Lentidão quase nunca tem uma causa única: armazenamento, memória, temperatura e software se manifestam de formas diferentes e exigem soluções diferentes.",
     "blocos": [
@@ -1542,7 +1542,7 @@ const BASE_ROUTES = [
   {
     "path": "/problemas/tela-azul-windows",
     "title": "Tela Azul no Windows? Diagnóstico Técnico em Curitiba",
-    "description": "Tela azul recorrente no Windows: o que o código de erro indica, quais causas são de memória, disco, driver ou temperatura, o que anotar antes do atendimento e.",
+    "description": "Tela azul recorrente no Windows: o que o código de erro indica, quais causas são de memória, disco, driver ou temperatura, o que anotar antes do atendimento.",
     "h1": "Tela azul no Windows: o que o código indica e como o diagnóstico é feito",
     "subtitulo": "Tela azul não é um defeito: é o sistema interrompendo a execução para evitar dano maior. O que importa é o que provocou a interrupção — memória, disco, driver, temperatura ou alimentação.",
     "blocos": [
@@ -1618,7 +1618,7 @@ const BASE_ROUTES = [
   {
     "path": "/problemas/notebook-nao-carrega-bateria",
     "title": "Notebook Não Carrega a Bateria? Diagnóstico em Curitiba",
-    "description": "Notebook conectado à tomada mas sem carregar, parado em uma porcentagem fixa ou funcionando só no cabo: entenda o que é bateria, carregador, conector de energia ou.",
+    "description": "Notebook conectado à tomada mas sem carregar, parado em uma porcentagem fixa ou funcionando só no cabo: entenda o que é bateria, carregador, conector de energia.",
     "h1": "Notebook não carrega a bateria: como separar bateria, carregador e placa",
     "subtitulo": "Entre a tomada e a célula existem cabo, fonte, conector, circuito de carga e controlador. Cada etapa falha de um jeito diferente e produz o mesmo sintoma visível: a porcentagem que não sobe.",
     "blocos": [
@@ -1656,7 +1656,7 @@ const BASE_ROUTES = [
   {
     "path": "/problemas/tv-nao-liga",
     "title": "TV Não Liga? Diagnóstico Técnico de TV em Curitiba",
-    "description": "TV que não liga, com LED piscando, som sem imagem ou desligando sozinha: entenda o que é fonte, placa principal, backlight ou painel, o que verificar antes do.",
+    "description": "TV que não liga, com LED piscando, som sem imagem ou desligando sozinha: entenda o que é fonte, placa principal, backlight ou painel, o que verificar.",
     "h1": "TV não liga: como separar fonte, placa, iluminação e painel",
     "subtitulo": "Em uma TV, \"não liga\" descreve pelo menos quatro situações diferentes, e cada uma leva a um custo e a um desfecho distintos.",
     "blocos": [
@@ -1695,7 +1695,7 @@ const BASE_ROUTES = [
   {
     "path": "/problemas/computador-desliga-sozinho",
     "title": "Computador Desliga Sozinho? Diagnóstico em Curitiba",
-    "description": "Computador ou notebook que desliga sozinho, reinicia do nada ou apaga durante jogos: entenda a diferença entre temperatura, fonte, energia e software, o que.",
+    "description": "Computador ou notebook que desliga sozinho, reinicia do nada ou apaga durante jogos: entenda a diferença entre temperatura, fonte, energia e software.",
     "h1": "Computador desliga sozinho: temperatura, fonte, energia ou software",
     "subtitulo": "O jeito como o equipamento apaga já separa quatro grupos de causa, e tratar tudo como superaquecimento é o que mais gera troca de peça desnecessária.",
     "blocos": [
@@ -1733,7 +1733,7 @@ const BASE_ROUTES = [
   {
     "path": "/problemas/wifi-caindo-toda-hora",
     "title": "Wi-Fi Caindo Toda Hora? Diagnóstico de Rede em Curitiba",
-    "description": "Wi-Fi que cai toda hora, sinal que some em um cômodo ou internet lenta só à noite: entenda a diferença entre falha do provedor, do roteador e da cobertura, o que.",
+    "description": "Wi-Fi que cai toda hora, sinal que some em um cômodo ou internet lenta só à noite: entenda a diferença entre falha do provedor, do roteador e da cobertura.",
     "h1": "Wi-Fi caindo toda hora: provedor, roteador ou cobertura",
     "subtitulo": "A causa mais comum de rede instável não é defeito do provedor nem do roteador, e sim cobertura mal distribuída dentro do imóvel.",
     "blocos": [
@@ -1772,7 +1772,7 @@ const BASE_ROUTES = [
   {
     "path": "/problemas/tv-com-som-sem-imagem",
     "title": "TV com Som e Sem Imagem? Diagnóstico em Curitiba",
-    "description": "Televisor com som normal e tela apagada: entenda a diferença entre falha de backlight, de placa de fonte e de painel, quais testes indicam cada caso e quando o.",
+    "description": "Televisor com som normal e tela apagada: entenda a diferença entre falha de backlight, de placa de fonte e de painel, quais testes indicam cada caso e quando.",
     "h1": "TV com som e sem imagem: iluminação, alimentação ou painel",
     "subtitulo": "Televisor que reproduz áudio com a tela apagada quase sempre continua gerando imagem: o que parou foi a iluminação por trás do painel.",
     "blocos": [
@@ -1811,7 +1811,7 @@ const BASE_ROUTES = [
   {
     "path": "/problemas/notebook-molhado",
     "title": "Notebook Molhado? O Que Fazer nas Primeiras Horas | Curitiba",
-    "description": "Derramou líquido no notebook? Entenda por que ligar o aparelho piora o quadro, o que fazer nas primeiras horas, como funciona a limpeza de placa e em que casos o.",
+    "description": "Derramou líquido no notebook? Entenda por que ligar o aparelho piora o quadro, o que fazer nas primeiras horas, como funciona a limpeza de placa e em que casos.",
     "h1": "Notebook molhado: o que fazer nas primeiras horas",
     "subtitulo": "Em aparelho que recebeu líquido, o desfecho é decidido nas primeiras horas — e as três atitudes mais comuns são justamente as que agravam o dano.",
     "blocos": [
@@ -1850,7 +1850,7 @@ const BASE_ROUTES = [
   {
     "path": "/problemas/tela-de-notebook-quebrada",
     "title": "Tela de Notebook Quebrada: Troca, Custo e Riscos | Curitiba",
-    "description": "Tela trincada, com manchas ou linhas? Entenda a diferença entre painel danificado, cabo flat e placa de vídeo, o que a troca resolve, o que não resolve e como.",
+    "description": "Tela trincada, com manchas ou linhas? Entenda a diferença entre painel danificado, cabo flat e placa de vídeo, o que a troca resolve, o que não resolve.",
     "h1": "Tela de notebook quebrada: quando trocar e quando não é a tela",
     "subtitulo": "Nem toda falha de imagem é painel quebrado. Um teste com monitor externo separa três cenários com custos muito diferentes: painel, cabo flat e circuito de vídeo.",
     "blocos": [
@@ -1889,7 +1889,7 @@ const BASE_ROUTES = [
 {
   "path": "/problemas/notebook-com-tela-preta",
   "title": "Notebook com Tela Preta mas Ligado: O Que Fazer | Curitiba",
-  "description": "Notebook liga, ventoinha gira e teclado acende, mas a tela fica preta? Entenda como separar iluminação da tela, cabo interno, vídeo da placa e sistema travado antes.",
+  "description": "Notebook liga, ventoinha gira e teclado acende, mas a tela fica preta? Entenda como separar iluminação da tela, cabo interno, vídeo da placa e sistema travado.",
   "h1": "Notebook com tela preta: como descobrir se é a tela, o cabo ou a placa",
   "subtitulo": "O aparelho liga e responde, mas a tela continua escura. Dois testes caseiros separam três causas com custos completamente diferentes.",
   "blocos": [
@@ -1965,7 +1965,7 @@ const BASE_ROUTES = [
 {
   "path": "/problemas/impressora-nao-imprime",
   "title": "Impressora Não Imprime: Causas e Solução | Curitiba",
-  "description": "Impressora aparece como offline, aceita o trabalho e não imprime ou sai página em branco? Veja como separar fila travada, driver, rede Wi-Fi e falha mecânica antes.",
+  "description": "Impressora aparece como offline, aceita o trabalho e não imprime ou sai página em branco? Veja como separar fila travada, driver, rede Wi-Fi e falha mecânica.",
   "h1": "Impressora não imprime: fila travada, driver, rede ou falha mecânica",
   "subtitulo": "A maior parte das impressoras que pararam de funcionar está intacta: o que falhou foi a fila, o driver ou o endereço na rede.",
   "blocos": [
@@ -2041,7 +2041,7 @@ const BASE_ROUTES = [
 {
   "path": "/problemas/notebook-lento",
   "title": "Notebook Lento: Causas Reais e Solução | Curitiba",
-  "description": "Notebook demorando para ligar, travando ao abrir programas ou lento só na bateria? Veja como separar disco mecânico, memória insuficiente, calor e software antes de.",
+  "description": "Notebook demorando para ligar, travando ao abrir programas ou lento só na bateria? Veja como separar disco mecânico, memória insuficiente, calor e software.",
   "h1": "Notebook lento: disco mecânico, memória curta, calor ou software acumulado",
   "subtitulo": "Lentidão tem quatro origens bem diferentes, e cada uma tem um custo próprio: identificar a sua evita gastar com peça, formatação ou aparelho novo.",
   "blocos": [
@@ -2079,7 +2079,7 @@ const BASE_ROUTES = [
 {
   "path": "/problemas/notebook-desligando-sozinho",
   "title": "Notebook Desligando Sozinho: Causas | Curitiba",
-  "description": "Notebook desligando sozinho do nada, só em jogos ou quando tira da tomada? Veja como separar superaquecimento, bateria em fim de vida, carregador fraco e falha de.",
+  "description": "Notebook desligando sozinho do nada, só em jogos ou quando tira da tomada? Veja como separar superaquecimento, bateria em fim de vida, carregador fraco e falha.",
   "h1": "Notebook desligando sozinho: temperatura, bateria, carregador ou placa",
   "subtitulo": "O momento em que o notebook desliga é o dado mais valioso do diagnóstico e separa problema térmico de bateria e de falha elétrica.",
   "blocos": [
@@ -2269,7 +2269,7 @@ const BASE_ROUTES = [
 {
   "path": "/problemas/webcam-nao-funciona",
   "title": "Webcam Não Funciona: Causas e Solução | Curitiba",
-  "description": "Webcam do notebook sem imagem, tela preta na reunião ou câmera não encontrada pelo sistema? Veja como separar permissão do sistema, driver, cabo flat e falha do.",
+  "description": "Webcam do notebook sem imagem, tela preta na reunião ou câmera não encontrada pelo sistema? Veja como separar permissão do sistema, driver, cabo flat e falha.",
   "h1": "Webcam não funciona: permissão, driver, cabo flat ou módulo",
   "subtitulo": "Tela preta na reunião raramente é câmera queimada.",
   "blocos": [
@@ -2369,7 +2369,7 @@ const BASE_ROUTES = [
 {
   "path": "/problemas/tv-nao-conecta-no-wifi",
   "title": "TV Não Conecta no Wi-Fi: O Que Fazer | Curitiba",
-  "description": "Smart TV não conecta no Wi-Fi, some da lista de redes ou cai no meio do filme? Veja como separar cobertura do roteador, faixa de 5 GHz, sistema da TV e módulo sem.",
+  "description": "Smart TV não conecta no Wi-Fi, some da lista de redes ou cai no meio do filme? Veja como separar cobertura do roteador, faixa de 5 GHz, sistema da TV e módulo.",
   "h1": "TV não conecta no Wi-Fi: cobertura, faixa, sistema ou módulo",
   "subtitulo": "Três testes gratuitos separam problema de rede de falha do aparelho.",
   "blocos": [
@@ -2407,7 +2407,7 @@ const BASE_ROUTES = [
 {
   "path": "/problemas/windows-nao-inicia",
   "title": "Windows Não Inicia: Como Recuperar o Sistema | Curitiba",
-  "description": "Windows travado no logo, reparo automático em loop ou mensagem de disco de inicialização não encontrado? Veja como separar falha de sistema, disco com setor ruim e.",
+  "description": "Windows travado no logo, reparo automático em loop ou mensagem de disco de inicialização não encontrado? Veja como separar falha de sistema, disco com setor ruim.",
   "h1": "Windows não inicia: sistema, disco ou configuração de boot",
   "subtitulo": "Computador que liga mas não carrega o sistema quase nunca precisa de formatação imediata.",
   "blocos": [
@@ -2483,7 +2483,7 @@ const BASE_ROUTES = [
 {
   "path": "/problemas/tv-travando",
   "title": "TV Travando ou Muito Lenta: O Que Fazer | Curitiba",
-  "description": "Smart TV travando, aplicativo congelando ou controle demorando para responder? Veja como separar memória cheia, aplicativo desatualizado, rede saturada e falha de.",
+  "description": "Smart TV travando, aplicativo congelando ou controle demorando para responder? Veja como separar memória cheia, aplicativo desatualizado, rede saturada e falha.",
   "h1": "TV travando: memória cheia, aplicativo, rede ou placa",
   "subtitulo": "Três das quatro causas de smart TV lenta custam pouco para descartar antes de aposentar o aparelho.",
   "blocos": [
@@ -2521,7 +2521,7 @@ const BASE_ROUTES = [
 {
   "path": "/problemas/mouse-nao-funciona",
   "title": "Mouse Não Funciona: Como Resolver | Curitiba",
-  "description": "Mouse não funciona, cursor travado ou clique falhando sozinho? Veja como separar porta USB, receptor sem fio, driver, bateria e falha do próprio mouse antes de.",
+  "description": "Mouse não funciona, cursor travado ou clique falhando sozinho? Veja como separar porta USB, receptor sem fio, driver, bateria e falha do próprio mouse.",
   "h1": "Mouse não funciona: porta USB, receptor, driver ou o próprio mouse",
   "subtitulo": "Um teste de um minuto separa defeito do periférico de falha da porta USB ou do sistema.",
   "blocos": [
@@ -2597,7 +2597,7 @@ const BASE_ROUTES = [
 {
   "path": "/problemas/computador-travando",
   "title": "Computador Travando: Causas e Conserto | Curitiba",
-  "description": "Computador travando do nada, congelando a tela ou parando só em jogos e programas pesados? Veja como separar memória com defeito, superaquecimento, disco em falha e.",
+  "description": "Computador travando do nada, congelando a tela ou parando só em jogos e programas pesados? Veja como separar memória com defeito, superaquecimento, disco em falha.",
   "h1": "Computador travando: memória, temperatura, disco em falha ou software",
   "subtitulo": "O momento em que o travamento acontece diz mais do que qualquer teste isolado e separa peça defeituosa de problema de sistema.",
   "blocos": [
@@ -2867,7 +2867,7 @@ const BASE_ROUTES = [
   {
     "path": "/problemas/hd-nao-reconhecido",
     "title": "HD ou SSD Não é Reconhecido: O Que Fazer | Curitiba",
-    "description": "O computador não reconhece o HD ou SSD? Entenda a diferença entre falha de cabo, de partição e de mecânica, por que insistir reduz a chance de recuperar arquivos e.",
+    "description": "O computador não reconhece o HD ou SSD? Entenda a diferença entre falha de cabo, de partição e de mecânica, por que insistir reduz a chance de recuperar arquivos.",
     "h1": "HD ou SSD não reconhecido: o que fazer antes de perder os arquivos",
     "subtitulo": "Quando o disco some, a diferença entre recuperar tudo e perder tudo costuma estar nas duas horas seguintes — e quase toda tentativa caseira consome parte dessa chance.",
     "blocos": [
