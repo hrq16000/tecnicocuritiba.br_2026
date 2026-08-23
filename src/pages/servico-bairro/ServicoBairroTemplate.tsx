@@ -100,58 +100,9 @@ export const ServicoBairroTemplate = ({ data }: { data: ServicoBairroData }) => 
   };
 
 
-  // Preço numérico normalizado (aceita "R$ 99,99" ou "R$ 299,99")
-  const priceNumeric = data.precoBase.replace(/[^\d,]/g, "").replace(",", ".");
-
-  // ── LocalBusiness (referenciável por @id em outros schemas)
-  const localBusinessLd = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "@id": `${CANONICAL_BASE}/#localbusiness`,
-    name: "Técnico em Curitiba",
-    url: CANONICAL_BASE,
-    telephone: "+5541997086380",
-    areaServed: [
-      { "@type": "Place", name: `${data.bairro}, ${data.cidade}` },
-      { "@type": "City", name: data.cidade },
-    ],
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: data.cidade,
-      addressRegion: "PR",
-      addressCountry: "BR",
-    },
-  };
-
-  // ── Service — canonical/@id self-referente na URL da página
-  const serviceLd = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "@id": `${canonical}#service`,
-    name: `${data.servico} no ${data.bairro}`,
-    description: data.metaDescription,
-    serviceType: data.servico,
-    provider: { "@id": `${CANONICAL_BASE}/#localbusiness` },
-    areaServed: { "@type": "Place", name: `${data.bairro}, ${data.cidade}` },
-    offers: {
-      "@type": "Offer",
-      price: priceNumeric,
-      priceCurrency: "BRL",
-      url: canonical,
-      availability: "https://schema.org/InStock",
-    },
-    url: canonical,
-  };
-
-  // FAQPage é emitido uma única vez pelo head estático da rota (seoHead),
-  // por isso não entra neste grafo — evita FAQPage duplicado no HTML servido.
-
-  const jsonLdGraph = {
-    "@context": "https://schema.org",
-    "@graph": [localBusinessLd, serviceLd],
-  };
-
-
+  // LocalBusiness, Service e BreadcrumbList são emitidos uma única vez pelo
+  // head estático da rota (seoHead / inject-route-head). Emitir o grafo aqui
+  // duplicava LocalBusiness e o @id `#service` no HTML servido.
 
   return (
     <div className="min-h-screen bg-background">
@@ -161,7 +112,6 @@ export const ServicoBairroTemplate = ({ data }: { data: ServicoBairroData }) => 
         { name: data.servico, path: `/servicos/${data.servicoSlug}` },
         { name: data.bairro, path: `/servicos/${data.servicoSlug}/${data.bairroSlug}` }
       ]} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph) }} />
 
       
       <Header />

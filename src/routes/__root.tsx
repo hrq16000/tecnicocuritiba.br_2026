@@ -60,6 +60,12 @@ gtag('config', 'AW-17892118207');
 });
 `;
 
+const GOOGLE_FONTS_HREF =
+  "https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Sora:wght@400;500;600;700&display=swap";
+
+/** Promove o preload das webfonts para stylesheet sem bloquear o primeiro paint. */
+const FONTS_SWAP_SNIPPET = `(function(){var h=${JSON.stringify(GOOGLE_FONTS_HREF)};function p(){var l=document.querySelector('link[rel="preload"][href="'+h+'"]');if(l){l.rel="stylesheet";return;}var n=document.createElement("link");n.rel="stylesheet";n.href=h;document.head.appendChild(n);}if(document.readyState==="complete"){p();}else{window.addEventListener("load",p,{once:true});}})();`;
+
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   beforeLoad: ({ location }) => {
     const path = location.pathname.replace(/\/+$/, "");
@@ -126,9 +132,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "dns-prefetch", href: "https://www.google-analytics.com" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      // Rajdhani/Sora entram sem bloquear a renderização: o preload baixa em
+      // paralelo e o snippet abaixo promove para stylesheet. Montserrat/Poppins
+      // auto-hospedados cobrem o primeiro paint sem FOIT.
       {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Sora:wght@400;500;600;700&display=swap",
+        rel: "preload",
+        as: "style",
+        href: GOOGLE_FONTS_HREF,
       },
       { rel: "preload", as: "font", type: "font/woff2", href: "/fonts/montserrat-var.woff2", crossOrigin: "anonymous" },
       { rel: "preload", as: "font", type: "font/woff2", href: "/fonts/poppins-700.woff2", crossOrigin: "anonymous" },
@@ -136,6 +146,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "manifest", href: "/manifest.json", crossOrigin: "use-credentials" },
     ],
     scripts: [
+      { children: FONTS_SWAP_SNIPPET },
       // Google Consent Mode v2: tudo "denied" por padrão (LGPD). O banner de
       // consentimento chama gtag('consent','update', {...}) ao aceitar.
       { children: CONSENT_GTAG_SNIPPET },

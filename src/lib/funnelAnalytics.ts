@@ -463,6 +463,8 @@ const trackConversionClick = (
     cta_location: location,
     customer_type: resolveCustomerType(),
     lead_id: leadId,
+    // Conversão por rota: permite medir quais páginas de SEO local convertem.
+    page_path: typeof window !== "undefined" ? window.location.pathname : "unknown",
     ...ctx,
     ...extra,
   };
