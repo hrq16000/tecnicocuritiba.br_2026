@@ -210,14 +210,10 @@ const BlogPost = () => {
     };
   }, [post, slug, heroImage, wordCount]);
 
-  // Wait for the content chunk before deciding to redirect.
-  if (!posts) {
-    return (
-      <div className="min-h-screen bg-background flex items-center justify-center">
-        <div className="h-8 w-8 rounded-full border-2 border-accent border-t-transparent animate-spin" aria-label="Carregando artigo" />
-      </div>
-    );
+  if (!post) {
+    return <Navigate to="/blog" replace />;
   }
+
   if (!post) {
     return <Navigate to="/blog" replace />;
   }
