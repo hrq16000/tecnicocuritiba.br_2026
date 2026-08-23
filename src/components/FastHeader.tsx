@@ -138,7 +138,7 @@ export const FastHeader = () => {
     >
       <div className="container mx-auto flex h-full items-center justify-between gap-3">
         <a href="/" aria-label="Técnico em Curitiba — início" className="min-w-0 flex-shrink-0">
-          <img loading="eager" fetchPriority="high"
+          <img loading="eager"
             alt="Técnico em Curitiba — assistência técnica em informática"
             src="/logo.webp"
             width="304"
