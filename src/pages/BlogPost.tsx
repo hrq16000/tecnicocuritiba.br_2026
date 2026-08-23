@@ -223,38 +223,10 @@ const BlogPost = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Helmet>
-        <title>{post.title} | Blog | Técnico em Curitiba</title>
-        <meta name="description" content={post.excerpt} />
-        {/* robots/googlebot são gerenciados via efeito (registro editorial) */}
-        <meta property="og:type" content={approved ? "article" : "website"} />
-        <meta property="og:title" content={post.title} />
-        <meta property="og:description" content={post.excerpt} />
-        <meta property="og:url" content={`https://tecnico.curitiba.br/blog/${slug}`} />
-        <meta property="og:site_name" content="Técnico em Curitiba" />
-        <meta property="og:locale" content="pt_BR" />
-        <meta property="og:image" content={heroImageOg} />
-        <meta property="og:image:secure_url" content={heroImageOg} />
-        <meta property="og:image:width" content={editorialCover ? "1200" : "1600"} />
-        <meta property="og:image:height" content={editorialCover ? "630" : "900"} />
-        <meta property="og:image:alt" content={post.title} />
-        {approved && (
-          <>
-            <meta property="article:published_time" content={`${post.date}T08:00:00-03:00`} />
-            <meta property="article:section" content={post.category} />
-            <meta property="article:tag" content={post.category} />
-            <meta property="article:author" content="Técnico em Curitiba" />
-            <meta property="article:publisher" content="https://tecnico.curitiba.br" />
-          </>
-        )}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={post.title} />
-        <meta name="twitter:description" content={post.excerpt} />
-        <meta name="twitter:image" content={heroImageOg} />
-        <meta name="twitter:image:alt" content={post.title} />
-        {/* Preload hero image for faster LCP */}
-        <link rel="preload" as="image" href={heroImage} fetchPriority="high" />
-      </Helmet>
+      {/* title/description/canonical/OG base vêm do head() SSR da rota
+          (src/routes/blog.$slug.tsx). Aqui só a capa e os campos article:*,
+          aplicados via efeito — react-helmet quebrava o SSR. */}
+
       <JsonLdSchema />
       <Header />
       <main>
