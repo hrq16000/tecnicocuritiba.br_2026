@@ -54,11 +54,8 @@ describe("acervo editorial indexável", () => {
       const hrefs = [...src.matchAll(/<Link\s+to="(\/[^"#?]*)"/g)].map((m) => m[1]);
       const broken = hrefs.filter((href) => {
         const clean = href.replace(/\/$/, "") || "/";
-        if (routePaths.has(clean)) return true === false;
-        // rotas dinâmicas/aninhadas: aceita quando existe rota-pai declarada
-        return ![...routePaths].some(
-          (p) => clean === p || clean.startsWith(`${p}/`),
-        );
+        // aceita rota exata ou sub-rota de uma rota declarada
+        return ![...routePaths].some((p) => clean === p || clean.startsWith(`${p}/`));
       });
       expect(broken, `links quebrados em ${slug}`).toEqual([]);
     });
