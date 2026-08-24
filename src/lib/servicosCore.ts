@@ -130,6 +130,34 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
         ],
       },
       {
+        titulo: "Checklist do que separar antes de autorizar a formatação",
+        paragrafos: [
+          "Antes de reinstalar qualquer sistema existe uma etapa que não pode ser pulada: garantir que nada dependa exclusivamente daquele disco. Isso inclui arquivos, mas também acessos — a conta de e-mail que recebe os códigos de verificação, a senha do gerenciador do navegador e a licença dos programas que você usa para trabalhar.",
+          "Se o equipamento tiver criptografia de unidade ativada (BitLocker, presente em edições Pro e em vários notebooks corporativos), a chave de recuperação precisa estar em mãos antes de mexer no disco. Sem ela, uma falha durante o processo pode deixar o conteúdo inacessível de forma definitiva. A chave costuma estar vinculada à conta Microsoft usada na configuração do aparelho, conforme a documentação do próprio fabricante do sistema.",
+          "Também vale confirmar como a licença do Windows está vinculada ao equipamento. Máquinas com licença de fábrica reativam pela chave gravada na placa; instalações que dependem de conta precisam do login disponível no momento da entrega. Nenhum desses pontos é obstáculo, mas descobri-los depois de formatar transforma um serviço simples em transtorno.",
+        ],
+        tabela: {
+          headers: ["Situação", "Formatar resolve?", "O que verificar antes", "Próximo passo"],
+          rows: [
+            ["Windows corrompido, erro no boot ou perfil quebrado", "Sim, na maioria dos casos", "Saúde do disco e cópia dos arquivos", "Instalação limpa com backup prévio"],
+            ["Infecção persistente que volta após limpeza", "Costuma resolver", "Pontos de persistência e contas comprometidas", "Reinstalação + troca de senhas por outro aparelho"],
+            ["Lentidão com HD mecânico", "Não de forma duradoura", "Se ainda é HD e qual o uso de disco", "Avaliar upgrade de SSD antes de reinstalar"],
+            ["Lentidão com SSD e memória no limite", "Não", "Consumo de memória em uso real", "Dimensionar RAM em vez de formatar"],
+            ["Disco com setor defeituoso ou falha de leitura", "Não, e pode agravar", "Preservação dos arquivos", "Priorizar recuperação de dados antes de qualquer escrita"],
+            ["Travamento e desligamento por temperatura", "Não", "Ventilação, poeira e queda progressiva de desempenho", "Manutenção térmica, não reinstalação"],
+            ["Memória com erro provocando telas azuis", "Não", "Teste de memória em bancada", "Diagnóstico de hardware antes de reinstalar"],
+          ],
+        },
+      },
+      {
+        titulo: "Recuperação, redefinição e instalação limpa não são a mesma coisa",
+        paragrafos: [
+          "A redefinição oferecida pelo próprio Windows permite manter arquivos pessoais e recriar o sistema, e resolve parte dos casos de corrupção leve. Ela reaproveita a mesma imagem instalada no aparelho, então problemas herdados de drivers antigos ou de personalizações do fabricante podem permanecer.",
+          "A restauração de fábrica devolve o estado original da máquina, incluindo os programas que vieram com ela. É útil para repasse ou venda, mas raramente é a melhor escolha para quem quer uma máquina enxuta.",
+          "A instalação limpa parte de uma mídia atual do sistema, apaga a partição e monta tudo do zero. É o caminho mais previsível quando houve infecção, quando o disco foi trocado ou quando o objetivo é sair de anos de acúmulo. A escolha entre os três é feita depois da avaliação, não por preferência de bancada.",
+        ],
+      },
+      {
         titulo: "Como fica a máquina na entrega",
         paragrafos: [
           "Entregamos com Windows atualizado, drivers corretos do modelo, navegador, leitor de PDF, compactador e antivírus ativos, inicialização enxuta e os arquivos restaurados nas pastas originais. Programas específicos do seu trabalho podem ser instalados se você fornecer instalador e licença.",
