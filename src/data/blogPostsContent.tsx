@@ -26,8 +26,8 @@ export const blogPostsContentBase: Record<string, BlogPostContent> = {
       <>
         <p className="lead">Escritório pequeno raramente tem alguém dedicado a TI. Na prática, o computador é problema de quem senta nele — até o dia em que a máquina do fechamento para, o arquivo some ou ninguém sabe a senha do sistema. Organizar TI num escritório de 3 a 20 pessoas não exige contratar departamento: exige inventário, rotina e decisões escritas.</p>
 
-        <h2>Resposta curta</h2>
-        <p>Comece pelo inventário dos equipamentos, defina onde os arquivos de trabalho ficam, estabeleça quem autoriza acessos, crie uma rotina simples de cópia de segurança e registre por escrito quem responde por cada sistema contratado. Esses cinco pontos resolvem a maior parte das paradas evitáveis.</p>
+        <h2>Resposta rápida</h2>
+        <p>Como organizar a TI de um escritório pequeno? Comece pelo inventário dos equipamentos e programas, defina um único local oficial para os arquivos de trabalho, estabeleça quem autoriza acessos, crie uma rotina de cópia de segurança com teste de restauração e registre por escrito quem responde por cada sistema contratado. Esses cinco pontos resolvem a maior parte das paradas evitáveis em ambientes de 3 a 20 pessoas — sem contratar departamento de TI e sem ferramenta cara.</p>
 
         <h2>1. Inventário: você não protege o que não conhece</h2>
         <p>Antes de qualquer decisão, liste o que existe. Uma planilha simples basta: identificação da máquina, quem usa, tipo (desktop ou notebook), idade aproximada, tipo de armazenamento, quantidade de memória, sistema operacional, se está na garantia e quais programas críticos rodam nela. Some os periféricos que param a operação quando falham — impressora, leitor, roteador, nobreak.</p>
@@ -60,6 +60,38 @@ export const blogPostsContentBase: Record<string, BlogPostContent> = {
         <h2>8. Onde termina o computador e começa o fornecedor</h2>
         <p>Sistema contratado — contábil, jurídico, de gestão, e-mail corporativo, certificado digital — é mantido por terceiros. O suporte técnico atua na camada da máquina, da rede e do acesso: instalar, conectar, corrigir sessão, ajustar permissão e periférico. Erro interno do sistema, licença, indisponibilidade do servidor e recuperação de conta são do fornecedor. Deixar isso claro por escrito evita expectativa errada nos dois lados. O escopo completo está em <Link to="/servicos/suporte-tecnico-empresarial" className="text-accent">suporte técnico empresarial</Link>.</p>
 
+        <h2>Tabela de diagnóstico: paradas evitáveis no escritório</h2>
+        <table>
+          <thead>
+            <tr><th>Causa possível</th><th>Sintoma observável</th><th>Como diferenciar</th><th>Próxima ação</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Arquivo salvo apenas na máquina do usuário</td><td>Documento “sumiu” após defeito ou troca de equipamento</td><td>Verificar se o caminho do arquivo é local (área de trabalho) ou o local oficial compartilhado</td><td>Definir e comunicar um único local oficial de trabalho</td></tr>
+            <tr><td>Sincronização confundida com cópia de segurança</td><td>Exclusão ou corrupção se propagou para todos os dispositivos</td><td>Checar se o serviço mantém versões anteriores recuperáveis</td><td>Adicionar cópia com versionamento e teste mensal de restauração</td></tr>
+            <tr><td>Credencial compartilhada por toda a equipe</td><td>Ninguém sabe quem alterou o quê; saída de pessoa exige trocar tudo</td><td>Conferir se há conta individual por pessoa nos sistemas críticos</td><td>Contas individuais + gerenciador para senhas compartilhadas</td></tr>
+            <tr><td>Distribuição interna de rede inadequada</td><td>“Internet lenta” só em parte do escritório ou em horário de pico</td><td>Comparar a mesma tarefa em máquina com cabo e em máquina sem fio</td><td>Avaliar posicionamento, cabeamento e capacidade do equipamento</td></tr>
+            <tr><td>Falta de proteção de energia</td><td>Arquivo corrompido ou sistema que não inicia após queda de luz</td><td>Relacionar a data do problema com oscilação ou desligamento abrupto</td><td>Nobreak nos equipamentos que não podem cair</td></tr>
+            <tr><td>Responsável administrativo indefinido</td><td>Recuperação de conta travada por falta de acesso ao e-mail cadastrado</td><td>Conferir qual e-mail recebe a recuperação de cada sistema</td><td>Registrar responsável e e-mail de recuperação por sistema</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Sincronização e cópia de segurança não são a mesma coisa</h2>
+        <p><strong>Sincronização</strong> mantém o mesmo estado em vários dispositivos: o que você apaga aqui some lá. <strong>Cópia de segurança</strong> guarda versões anteriores que podem ser restauradas depois do erro. Um escritório pode ter sincronização perfeita e ainda assim perder um mês de trabalho. A referência prática usada no mercado — três cópias, dois tipos de mídia, uma fora do local — só protege quando a restauração é testada.</p>
+
+        <h2>Erros comuns</h2>
+        <ul>
+          <li>Guardar senhas, códigos de autenticação ou dados de clientes dentro da planilha de inventário</li>
+          <li>Tratar sincronização em nuvem como cópia de segurança</li>
+          <li>Nunca testar a restauração — descobrir que a cópia não funciona no dia do incidente</li>
+          <li>Usar um único login administrativo compartilhado por toda a equipe</li>
+          <li>Cadastrar sistemas com o e-mail pessoal de alguém que pode sair da empresa</li>
+          <li>Enviar senha ou código de verificação por mensagem para “agilizar” o suporte</li>
+          <li>Comprar equipamento sem inventário, repetindo o gargalo que já existe</li>
+        </ul>
+
+        <h2>Segurança dos dados: limites do que fazer sozinho</h2>
+        <p>Reorganizar pastas, mudar o local oficial dos arquivos ou trocar máquina são operações em que dados se perdem com facilidade. Faça uma cópia recuperável antes de qualquer movimentação em massa e nunca use a própria máquina de origem como único destino. Em caso de suspeita de invasão ou de arquivos criptografados por terceiros, pare de usar o equipamento e preserve o estado atual: sobrescrever ou reinstalar reduz o que ainda pode ser recuperado.</p>
+
         <h2>Checklist de organização</h2>
         <ul>
           <li>Inventário atualizado de máquinas, periféricos e programas críticos</li>
@@ -75,7 +107,9 @@ export const blogPostsContentBase: Record<string, BlogPostContent> = {
         </ul>
 
         <h2>Por onde começar se estiver tudo desorganizado</h2>
-        <p>Não tente resolver os dez itens ao mesmo tempo. Faça o inventário na primeira semana, resolva a cópia de segurança na segunda, organize acessos na terceira e coloque a manutenção no calendário na quarta. Em um mês o escritório sai do modo urgência. O diagnóstico do ambiente e o acompanhamento contínuo estão descritos em <Link to="/empresa-de-ti-curitiba" className="text-accent">empresa de TI em Curitiba</Link>.</p>
+        <p>Não tente resolver os dez itens ao mesmo tempo. Faça o inventário na primeira semana, resolva a cópia de segurança na segunda, organize acessos na terceira e coloque a manutenção no calendário na quarta. Em um mês o escritório sai do modo urgência. O diagnóstico do ambiente e o acompanhamento contínuo estão descritos em <Link to="/empresa-de-ti-curitiba" className="text-accent">empresa de TI em Curitiba</Link>, com atendimento presencial em Curitiba e São José dos Pinhais.</p>
+
+        <EditorialReferences slug="organizacao-de-ti-para-pequenos-escritorios" />
       </>
     ),
   },
@@ -90,8 +124,8 @@ export const blogPostsContentBase: Record<string, BlogPostContent> = {
       <>
         <p className="lead">Workstation não é “o computador mais caro da loja”. É um conjunto dimensionado para uma carga de trabalho específica, que roda horas seguidas, com arquivos grandes e pouca tolerância a parada. Escolher errado custa dos dois lados: gastar demais em um componente que a aplicação não usa, ou economizar exatamente onde o trabalho trava.</p>
 
-        <h2>Resposta curta</h2>
-        <p>Antes de escolher peça, levante o que roda, o tamanho dos arquivos, quantas aplicações ficam abertas ao mesmo tempo, quantos monitores e em que resolução, quanto tempo a máquina fica sob carga e quanto há disponível para investir. A configuração é consequência desse levantamento — nunca o contrário.</p>
+        <h2>Resposta rápida</h2>
+        <p>Como escolher uma workstation? Levante primeiro a carga de trabalho: quais programas rodam e em qual versão, o tamanho típico dos arquivos, quantas aplicações ficam abertas ao mesmo tempo, quantos monitores e em que resolução, quantas horas por dia a máquina fica sob carga e qual a faixa de investimento. Confronte esse levantamento com os requisitos oficiais publicados pelo fabricante de cada programa e dimensione o conjunto a partir do gargalo real. A configuração é consequência do levantamento — nunca o contrário. <strong>Workstation</strong>, aqui, significa estação de trabalho dimensionada para uma carga profissional contínua, não uma faixa de preço.</p>
 
         <h2>Checklist de requisitos</h2>
         <ul>
@@ -144,8 +178,34 @@ export const blogPostsContentBase: Record<string, BlogPostContent> = {
           <li>Tratar a estação como cópia de segurança dos projetos</li>
         </ul>
 
+        <h2>Árvore de decisão: pronta, sob medida ou melhoria</h2>
+        <ol>
+          <li>A máquina atual trava em uma etapa específica (abrir projeto grande, exportar, alternar aplicações)? Se sim, meça o gargalo antes de comprar: memória cheia, disco lento ou processador em uso contínuo apontam caminhos diferentes.</li>
+          <li>O gargalo é isolado e o restante do conjunto atende? Melhoria pontual costuma resolver por uma fração do custo.</li>
+          <li>O gargalo é a plataforma inteira (idade, encaixes esgotados, alimentação no limite)? A troca passa a fazer sentido.</li>
+          <li>Precisa de garantia unificada e mínimo de decisões? Máquina pronta de fabricante. Precisa dimensionar componente a componente e prever expansão? Montagem sob medida.</li>
+        </ol>
+
+        <h2>Gargalo observável: como diferenciar antes de comprar</h2>
+        <table>
+          <thead>
+            <tr><th>Sintoma observável</th><th>Causa possível</th><th>Como diferenciar</th><th>Próxima ação</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Máquina começa bem e degrada ao longo do dia</td><td>Memória insuficiente para as aplicações abertas</td><td>Acompanhar o uso de memória no gerenciador de tarefas em um dia comum de trabalho</td><td>Avaliar aumento de memória antes de trocar a máquina</td></tr>
+            <tr><td>Abrir e salvar arquivos grandes demora</td><td>Armazenamento lento ou quase cheio</td><td>Verificar tipo de unidade (mecânica ou SSD) e espaço livre</td><td>Separar sistema, projetos e cache em unidades dimensionadas</td></tr>
+            <tr><td>Exportação/renderização longa, com uso contínuo de processador</td><td>Carga limitada pelo processador</td><td>Observar se o uso fica alto durante toda a tarefa, não apenas em picos</td><td>Dimensionar processador conforme o tipo de carga (contínua ou intercalada)</td></tr>
+            <tr><td>Interface travando só em programas com aceleração gráfica</td><td>Placa de vídeo abaixo do requisito da aplicação</td><td>Conferir os requisitos oficiais publicados pelo fabricante do programa</td><td>Investir na placa apenas quando a aceleração é suportada</td></tr>
+            <tr><td>Desligamento ou instabilidade sob carga prolongada</td><td>Fonte subdimensionada ou refrigeração insuficiente</td><td>Notar se ocorre só em uso intenso e prolongado, não em uso leve</td><td>Revisar fonte e dissipação antes de trocar outros componentes</td></tr>
+          </tbody>
+        </table>
+        <p><strong>Gargalo</strong> é o componente que limita o conjunto: aumentar qualquer outro não muda o resultado enquanto ele não for tratado.</p>
+
+        <h2>Segurança dos dados na troca de máquina</h2>
+        <p>Antes de migrar projetos para a estação nova, tenha uma cópia recuperável dos arquivos em outro lugar. Migração é justamente o momento em que arquivos são apagados por engano ou sobrescritos por versão antiga. A estação, por mais bem dimensionada que seja, não é cópia de segurança.</p>
+
         <h2>Como conduzir a decisão</h2>
-        <p>Levante os requisitos, confronte com os requisitos oficiais das aplicações, defina a faixa de investimento, dimensione o conjunto a partir do gargalo real e só então escolha as peças. Se o uso for crítico, teste com um projeto verdadeiro antes de repetir a configuração para a equipe inteira. Uma decisão documentada hoje evita a discussão de “por que essa máquina não dá conta” daqui a seis meses.</p>
+        <p>Levante os requisitos, confronte com os requisitos oficiais das aplicações, defina a faixa de investimento, dimensione o conjunto a partir do gargalo real e só então escolha as peças. Se o uso for crítico, teste com um projeto verdadeiro antes de repetir a configuração para a equipe inteira. Uma decisão documentada hoje evita a discussão de “por que essa máquina não dá conta” daqui a seis meses. Em Curitiba e São José dos Pinhais, essa avaliação pode ser feita presencialmente com a máquina atual em mãos — veja <Link to="/servicos/montagem-de-pc" className="text-accent">montagem de PC</Link>.</p>
       </>
     ),
   },
