@@ -244,6 +244,7 @@ const NotebookSuperaquecendo = () => {
             { id: "normal-ou-problema", label: "Quente ou superaquecendo?" },
             { id: "sintomas", label: "Sintomas que separam as causas" },
             { id: "causas", label: "Causas possíveis" },
+            { id: "quadro", label: "Quando o calor aparece" },
             { id: "opcoes", label: "O que resolve cada causa" },
             { id: "faq", label: "Perguntas frequentes" },
           ]}
