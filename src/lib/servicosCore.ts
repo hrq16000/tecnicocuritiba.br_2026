@@ -130,6 +130,34 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
         ],
       },
       {
+        titulo: "Checklist do que separar antes de autorizar a formatação",
+        paragrafos: [
+          "Antes de reinstalar qualquer sistema existe uma etapa que não pode ser pulada: garantir que nada dependa exclusivamente daquele disco. Isso inclui arquivos, mas também acessos — a conta de e-mail que recebe os códigos de verificação, a senha do gerenciador do navegador e a licença dos programas que você usa para trabalhar.",
+          "Se o equipamento tiver criptografia de unidade ativada (BitLocker, presente em edições Pro e em vários notebooks corporativos), a chave de recuperação precisa estar em mãos antes de mexer no disco. Sem ela, uma falha durante o processo pode deixar o conteúdo inacessível de forma definitiva. A chave costuma estar vinculada à conta Microsoft usada na configuração do aparelho, conforme a documentação do próprio fabricante do sistema.",
+          "Também vale confirmar como a licença do Windows está vinculada ao equipamento. Máquinas com licença de fábrica reativam pela chave gravada na placa; instalações que dependem de conta precisam do login disponível no momento da entrega. Nenhum desses pontos é obstáculo, mas descobri-los depois de formatar transforma um serviço simples em transtorno.",
+        ],
+        tabela: {
+          headers: ["Situação", "Formatar resolve?", "O que verificar antes", "Próximo passo"],
+          rows: [
+            ["Windows corrompido, erro no boot ou perfil quebrado", "Sim, na maioria dos casos", "Saúde do disco e cópia dos arquivos", "Instalação limpa com backup prévio"],
+            ["Infecção persistente que volta após limpeza", "Costuma resolver", "Pontos de persistência e contas comprometidas", "Reinstalação + troca de senhas por outro aparelho"],
+            ["Lentidão com HD mecânico", "Não de forma duradoura", "Se ainda é HD e qual o uso de disco", "Avaliar upgrade de SSD antes de reinstalar"],
+            ["Lentidão com SSD e memória no limite", "Não", "Consumo de memória em uso real", "Dimensionar RAM em vez de formatar"],
+            ["Disco com setor defeituoso ou falha de leitura", "Não, e pode agravar", "Preservação dos arquivos", "Priorizar recuperação de dados antes de qualquer escrita"],
+            ["Travamento e desligamento por temperatura", "Não", "Ventilação, poeira e queda progressiva de desempenho", "Manutenção térmica, não reinstalação"],
+            ["Memória com erro provocando telas azuis", "Não", "Teste de memória em bancada", "Diagnóstico de hardware antes de reinstalar"],
+          ],
+        },
+      },
+      {
+        titulo: "Recuperação, redefinição e instalação limpa não são a mesma coisa",
+        paragrafos: [
+          "A redefinição oferecida pelo próprio Windows permite manter arquivos pessoais e recriar o sistema, e resolve parte dos casos de corrupção leve. Ela reaproveita a mesma imagem instalada no aparelho, então problemas herdados de drivers antigos ou de personalizações do fabricante podem permanecer.",
+          "A restauração de fábrica devolve o estado original da máquina, incluindo os programas que vieram com ela. É útil para repasse ou venda, mas raramente é a melhor escolha para quem quer uma máquina enxuta.",
+          "A instalação limpa parte de uma mídia atual do sistema, apaga a partição e monta tudo do zero. É o caminho mais previsível quando houve infecção, quando o disco foi trocado ou quando o objetivo é sair de anos de acúmulo. A escolha entre os três é feita depois da avaliação, não por preferência de bancada.",
+        ],
+      },
+      {
         titulo: "Como fica a máquina na entrega",
         paragrafos: [
           "Entregamos com Windows atualizado, drivers corretos do modelo, navegador, leitor de PDF, compactador e antivírus ativos, inicialização enxuta e os arquivos restaurados nas pastas originais. Programas específicos do seu trabalho podem ser instalados se você fornecer instalador e licença.",
@@ -562,6 +590,54 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
         ],
       },
       {
+        titulo: "HD, SSD SATA e NVMe lado a lado",
+        paragrafos: [
+          "Três detalhes confundem quase todo mundo na hora de comprar. O primeiro: M.2 é apenas o formato físico do módulo — existem SSDs M.2 que funcionam no barramento SATA e outros que usam NVMe sobre PCI Express. Um slot M.2 na placa não garante suporte a NVMe, e é por isso que conferimos a documentação do modelo antes de indicar peça.",
+          "O segundo: a diferença de números entre SATA e NVMe é grande no papel e bem menor no uso comum. Sistema, navegador, pacote de escritório e programas do dia a dia dependem mais de acessos pequenos do que de transferência sequencial. Quem move arquivos grandes com frequência, edita vídeo ou trabalha com bases pesadas percebe o NVMe; quem usa a máquina para tarefas de escritório percebe muito mais o salto de sair do HD.",
+          "O terceiro: capacidade influencia desempenho. Unidade praticamente cheia tem menos espaço livre para gerenciamento interno e responde pior, o que vale para qualquer tecnologia de memória flash. Dimensionar com folga é parte da indicação, não venda de capacidade extra.",
+        ],
+        tabela: {
+          headers: ["Característica", "HD mecânico", "SSD SATA", "SSD NVMe"],
+          rows: [
+            ["Partes móveis", "Sim, sensível a impacto", "Não", "Não"],
+            ["Ganho percebido ao ligar e abrir programas", "Referência (o mais lento)", "Salto grande", "Salto grande, semelhante ao SATA"],
+            ["Transferência de arquivos grandes", "Limitada", "Boa", "Melhor, quando a plataforma acompanha"],
+            ["Formato típico", "2,5\" ou 3,5\"", "2,5\" ou M.2 SATA", "M.2 (PCIe)"],
+            ["Depende de suporte da placa", "Interface SATA", "Interface SATA", "Slot M.2 com suporte a NVMe"],
+            ["Uso ainda recomendado", "Armazenamento secundário de arquivos", "Sistema em máquinas SATA", "Sistema em plataformas compatíveis"],
+          ],
+        },
+      },
+      {
+        titulo: "RAM ou SSD: qual upgrade fazer primeiro",
+        paragrafos: [
+          "A resposta curta não é \"SSD sempre\". A escolha depende de qual recurso está estrangulando a máquina no seu uso real. Quando o computador ainda usa HD mecânico, o armazenamento quase sempre é o gargalo dominante e o SSD vem primeiro. Quando já existe SSD e o incômodo aparece só com muitos programas abertos, a memória passa à frente.",
+          "Dá para observar isso sem ferramenta especial. No Gerenciador de Tarefas do Windows, a aba Desempenho mostra o uso de disco e de memória. Disco preso em uso alto com pouca atividade aponta armazenamento; memória constantemente no limite, com o sistema recorrendo à paginação em disco, aponta RAM. Quando os dois aparecem saturados ao mesmo tempo em máquina com HD, o SSD costuma aliviar inclusive o sintoma de memória, porque a paginação deixa de ser tão penalizada.",
+          "Existe ainda o cenário em que nenhum dos dois é a resposta: armazenamento quase cheio, dezenas de programas iniciando junto com o sistema, infecção ativa ou queda progressiva de desempenho por temperatura. Comprar peça antes de investigar esses casos costuma gerar frustração — a máquina fica um pouco melhor e o sintoma volta.",
+        ],
+        tabela: {
+          headers: ["Sintoma", "RAM pode ajudar", "SSD pode ajudar", "Investigar antes"],
+          rows: [
+            ["Demora muito para chegar à área de trabalho", "Pouco provável", "Sim, se ainda for HD", "Programas na inicialização"],
+            ["Programas demoram para abrir, um de cada vez", "Pouco provável", "Sim", "Saúde do disco atual"],
+            ["Trava ao alternar entre muitas abas e programas", "Sim", "Ajuda indiretamente", "Quanto de memória é usada no pico"],
+            ["Uso de memória constantemente alto em repouso", "Sim", "Não", "Programas em segundo plano e possível infecção"],
+            ["Sistema recorre à paginação o tempo todo", "Sim", "Reduz o impacto", "Quantidade de memória instalada e limite da placa"],
+            ["Armazenamento quase cheio", "Não", "Só com mais capacidade", "Liberar espaço antes de comprar peça"],
+            ["Já tem SSD e mesmo assim engasga em multitarefa", "Sim", "Não", "Memória disponível e temperatura"],
+            ["Começa rápido e piora após alguns minutos", "Não", "Não", "Refrigeração e redução automática de desempenho"],
+          ],
+        },
+      },
+      {
+        titulo: "Decisão final: manter o HD, trocar por SSD ou investigar antes",
+        paragrafos: [
+          "Manter o HD faz sentido quando ele é usado apenas como depósito de arquivos, com o sistema já em SSD, e quando a avaliação não aponta desgaste. Nesse arranjo o disco mecânico continua útil sem penalizar a resposta do computador.",
+          "Trocar por SSD é a decisão evidente quando o sistema ainda mora no HD, o equipamento está saudável no restante e você pretende usá-lo por mais um bom tempo. É o upgrade com melhor relação entre custo e mudança percebida.",
+          "Investigar antes é a resposta quando existe desligamento, superaquecimento, tela azul recorrente, ruído no disco ou falha de leitura. Nesses cenários, instalar peça nova sobre um problema não resolvido apenas transfere o defeito para um equipamento mais caro — e, quando há suspeita de disco em falha, preservar os arquivos vem antes de qualquer migração.",
+        ],
+      },
+      {
         titulo: "Expectativas realistas e o que o upgrade não corrige",
         paragrafos: [
           "Trocar HD por SSD costuma melhorar de forma perceptível a inicialização, a abertura de programas e a resposta geral do sistema. Não corrige defeito de placa-mãe, superaquecimento, fonte instável, tela com falha, memória defeituosa nem infecção ativa — nesses casos o equipamento continua apresentando o mesmo sintoma com armazenamento novo.",
@@ -668,6 +744,28 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
           "Reinstalar passa a ser a escolha certa quando a ameaça tocou componentes do sistema, quando há vários malwares somados a anos de acúmulo, ou quando a máquina volta a apresentar sintoma depois da limpeza. Nesses casos, insistir em remover peça por peça custa mais tempo do que reinstalar e devolve uma máquina menos confiável.",
           "Em ransomware, a conversa é outra e precisa ser honesta: arquivos criptografados por famílias recentes normalmente não têm decriptador público. Avaliamos a extensão, verificamos se existe ferramenta legítima disponível e priorizamos preservar o disco original antes de qualquer tentativa. Não prometemos recuperação que não podemos entregar, e não intermediamos pagamento de resgate.",
         ],
+      },
+      {
+        titulo: "Sintomas que sugerem infecção e sintomas que enganam",
+        paragrafos: [
+          "Boa parte dos atendimentos começa com a frase \"acho que peguei vírus\", e em uma parcela relevante deles não há infecção alguma. Lentidão, ventoinha acelerada e travamento são sintomas genéricos: aparecem em disco em fim de vida, memória insuficiente, poeira no dissipador e sistema desatualizado exatamente como aparecem em máquina comprometida.",
+          "Os sinais que realmente pesam a favor de malware são outros: página inicial e mecanismo de busca trocados sem você mexer, extensão desconhecida no navegador, redirecionamento para páginas de anúncio, notificações de sites que você nunca autorizou, processo consumindo rede em repouso, programa que reaparece depois de desinstalado e alerta do antivírus sendo desativado sozinho.",
+          "Há ainda o grupo mais sério, que muda a ordem de prioridade: arquivos renomeados com extensão estranha e bilhete de resgate (ransomware), e-mails enviados em seu nome, cobrança desconhecida ou aviso de login em outro local. Nesses casos o problema pode estar na conta e não na máquina, e proteger credenciais vem antes de qualquer limpeza — orientação alinhada às recomendações públicas de agências de segurança como a CISA, que priorizam isolar o equipamento e preservar evidência em incidentes de ransomware.",
+        ],
+        tabela: {
+          headers: ["Sintoma", "Pode ser malware?", "Outras causas", "Próxima verificação"],
+          rows: [
+            ["Computador lento de forma geral", "Talvez", "HD em fim de vida, pouca memória, temperatura", "Uso de disco e memória em repouso"],
+            ["Página inicial e busca trocadas", "Provável", "Extensão instalada junto com outro programa", "Extensões e mecanismo de busca do navegador"],
+            ["Pop-ups e notificações constantes", "Provável", "Permissão de notificação concedida a sites", "Permissões de site no navegador"],
+            ["Programa que volta após desinstalar", "Sim, alta suspeita", "Instalador residente do fabricante", "Tarefas agendadas e itens de inicialização"],
+            ["Antivírus desativado sozinho", "Sim, alta suspeita", "Conflito entre dois antivírus", "Estado da proteção e histórico de detecções"],
+            ["Consumo de rede alto em repouso", "Possível", "Atualização do sistema, sincronização de nuvem", "Processos com atividade de rede"],
+            ["Arquivos com extensão estranha e bilhete de resgate", "Sim, incidente", "Nenhuma outra causa comum", "Desligar da rede e preservar o disco"],
+            ["E-mails enviados em seu nome", "Talvez", "Senha vazada em outro serviço", "Trocar senhas por outro aparelho e revisar sessões"],
+            ["Tela azul recorrente", "Pouco provável", "Memória, driver, disco", "Diagnóstico de hardware"],
+          ],
+        },
       },
       {
         titulo: "O que fazer agora, antes do atendimento",
@@ -794,6 +892,28 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
           "Urgência média: arquivos apagados por engano, partição que passou a pedir formatação, pendrive ou cartão reconhecido com capacidade errada. O conteúdo geralmente ainda está gravado, e o inimigo é a escrita nova: instalar programas, baixar arquivos ou salvar documentos no mesmo dispositivo pode sobrescrever justamente o que você quer de volta.",
           "Urgência baixa: o dispositivo funciona, abre os arquivos e não apresenta comportamento anormal, mas você quer proteger o que existe. Esse é o cenário em que backup resolve por uma fração do custo de qualquer tentativa de recuperação — e é a única situação em que dá para trabalhar sem pressa.",
         ],
+      },
+      {
+        titulo: "Leitura rápida do sintoma: o que é seguro tentar e o que não é",
+        paragrafos: [
+          "Em recuperação de dados, quase todo prejuízo irreversível vem da fase anterior ao atendimento. Unidade que apresenta ruído mecânico, clique repetido ou desaparecimento durante a cópia está sinalizando falha física: cada nova tentativa de ligar submete o conjunto a mais desgaste e pode transformar um caso recuperável em um caso perdido.",
+          "Falha lógica é diferente. Partição que sumiu, sistema de arquivos danificado, exclusão acidental ou formatação recente costumam manter o conteúdo gravado na mídia, desde que nada novo seja escrito por cima. Por isso a primeira instrução é sempre a mesma: parar de usar a unidade, não instalar programa nela e não aceitar a oferta do sistema para inicializar ou formatar o disco.",
+          "Indicadores de saúde (o conjunto SMART, previsto nas especificações de interface dos fabricantes de armazenamento) ajudam a separar os cenários, mas não são veredito: unidade pode falhar com SMART aparentemente normal e pode continuar lendo por um tempo com contadores já ruins. Eles entram como mais um dado da avaliação, ao lado do comportamento observado em bancada.",
+          "Também é preciso dizer com clareza: recuperação de dados não é garantida. Existem casos em que a mídia já sofreu dano suficiente para tornar a leitura inviável, e existem casos em que a sobregravação apagou definitivamente o conteúdo. O compromisso é avaliar antes, explicar o cenário real e não cobrar por promessa que não pode ser cumprida.",
+        ],
+        tabela: {
+          headers: ["Sintoma", "Risco", "Pode tentar algo seguro?", "Próximo passo"],
+          rows: [
+            ["Clique, estalo ou zumbido no HD", "Alto — falha física provável", "Não. Desligue imediatamente", "Avaliação com o disco parado, sem novas tentativas"],
+            ["Unidade não aparece no sistema", "Médio a alto", "Testar outro cabo e outra porta, uma vez", "Se seguir invisível, parar e encaminhar"],
+            ["Aparece, mas pede para formatar", "Médio — costuma ser lógico", "Sim: não formatar e não gravar nada", "Avaliação de partição e sistema de arquivos"],
+            ["Cópia trava ou fica lentíssima", "Alto — setores em falha", "Não insistir na cópia", "Imagem setor a setor em bancada"],
+            ["Arquivos abrem corrompidos", "Médio", "Preservar cópia do estado atual", "Análise de integridade antes de qualquer reparo"],
+            ["Exclusão acidental ou formatação recente", "Médio", "Sim: parar de usar a unidade agora", "Recuperação lógica antes que haja sobregravação"],
+            ["Pen drive ou cartão não reconhecido", "Médio", "Testar em outro computador, uma vez", "Avaliação de controlador e mídia"],
+            ["Arquivos criptografados com bilhete de resgate", "Alto — incidente", "Isolar o equipamento da rede", "Preservar o disco e avaliar opções reais"],
+          ],
+        },
       },
       {
         titulo: "O que evitar antes da avaliação",

@@ -152,6 +152,16 @@ const FAQS = [
       "Limpeza interna, troca de pasta térmica e substituição de ventoinha não envolvem apagar dados. Quando a avaliação identifica que o disco também apresenta perda de saúde, isso é informado antes, e preservar os arquivos passa à frente de qualquer outra etapa.",
   },
   {
+    question: "Notebook esquenta e desliga só em jogos. É defeito?",
+    answer:
+      "Nem sempre. Jogo e edição exigem o máximo do processador e da placa de vídeo por tempo prolongado, e há modelos cuja refrigeração foi dimensionada para uso de escritório. O que separa limite de projeto de defeito é a mudança de comportamento: se o mesmo jogo rodava sem desligar há um ano e hoje derruba o aparelho em minutos, a dissipação piorou — normalmente poeira no dissipador, pasta térmica ressecada ou ventoinha com rotação abaixo do esperado.",
+  },
+  {
+    question: "Por que o notebook esquenta mais quando está carregando?",
+    answer:
+      "Carregar gera calor por si só, e um aquecimento moderado durante a carga é esperado, principalmente com o aparelho em uso ao mesmo tempo. Vira sinal de alerta quando o calor concentra na região do conector de energia, quando a bateria incha, quando o carregador esquenta de forma anormal ou quando o equipamento desliga só nessa condição. Nesses casos a avaliação mede a saúde da bateria e confere se o carregador entrega a potência exigida pelo modelo.",
+  },
+  {
     question: "O valor pode ser informado antes do diagnóstico?",
     answer:
       "Não com precisão. Modelos diferentes exigem desmontagens de complexidade bem distinta, e a necessidade de peça só é confirmada com o equipamento aberto. As condições comerciais vigentes estão publicadas na página de preços e políticas, e o valor do serviço é apresentado depois da avaliação, dependendo da sua autorização.",
@@ -244,6 +254,7 @@ const NotebookSuperaquecendo = () => {
             { id: "normal-ou-problema", label: "Quente ou superaquecendo?" },
             { id: "sintomas", label: "Sintomas que separam as causas" },
             { id: "causas", label: "Causas possíveis" },
+            { id: "quadro", label: "Quando o calor aparece" },
             { id: "opcoes", label: "O que resolve cada causa" },
             { id: "faq", label: "Perguntas frequentes" },
           ]}
@@ -294,6 +305,106 @@ const NotebookSuperaquecendo = () => {
               </li>
             ))}
           </ul>
+        </section>
+
+        <section id="quadro" className="scroll-mt-24 mb-12">
+          <h2 className="mb-4 text-2xl font-bold text-foreground">
+            Quando o calor aparece: um quadro para localizar o seu caso
+          </h2>
+          <p className="mb-4 text-muted-foreground">
+            O momento em que o aquecimento incomoda diz mais sobre a causa do que a temperatura em si. O quadro abaixo
+            reúne as situações que mais chegam à triagem e o que costuma explicar cada uma. Ele orienta a conversa, não
+            substitui a avaliação com o equipamento em bancada.
+          </p>
+          <div className="overflow-x-auto">
+            <table className="w-full border-collapse text-sm">
+              <thead>
+                <tr>
+                  {["Quando acontece", "Causa mais provável", "Menos provável", "O que observar"].map((h) => (
+                    <th
+                      key={h}
+                      scope="col"
+                      className="border border-border bg-secondary px-3 py-2 text-left font-semibold text-foreground"
+                    >
+                      {h}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  [
+                    "Esquenta e desliga depois de alguns minutos sob carga",
+                    "Dissipação comprometida: poeira no radiador ou pasta térmica ressecada",
+                    "Falha de placa",
+                    "Se precisa esfriar antes de aceitar ligar de novo",
+                  ],
+                  [
+                    "Esquenta muito só em jogos ou edição",
+                    "Refrigeração no limite para o esforço exigido",
+                    "Defeito",
+                    "Se o desempenho cai progressivamente durante a sessão",
+                  ],
+                  [
+                    "Esquenta em tarefas leves, com cooler sempre no máximo",
+                    "Carga de processamento em segundo plano ou perfil de energia em desempenho máximo",
+                    "Pasta térmica",
+                    "Quais processos consomem processador em repouso",
+                  ],
+                  [
+                    "Esquenta mais quando está carregando",
+                    "Bateria degradada ou carregador inadequado gerando calor extra",
+                    "Ventoinha",
+                    "Se o calor concentra perto do conector de energia",
+                  ],
+                  [
+                    "Base muito quente, saída de ar quase sem fluxo",
+                    "Obstrução do dissipador ou ventoinha com rotação abaixo do esperado",
+                    "Sistema",
+                    "Se há ruído metálico ou chiado ao acelerar",
+                  ],
+                  [
+                    "Desliga de forma aleatória, mesmo frio",
+                    "Alimentação: bateria, carregador ou circuito de energia",
+                    "Temperatura",
+                    "Se ocorre também logo após ligar",
+                  ],
+                  [
+                    "Esquenta usando sobre cama, sofá ou almofada",
+                    "Entradas de ar da base obstruídas",
+                    "Falha interna",
+                    "Se o comportamento muda em superfície rígida e plana",
+                  ],
+                  [
+                    "Passou a esquentar depois de uma manutenção recente",
+                    "Montagem do dissipador ou dosagem de pasta térmica",
+                    "Poeira",
+                    "Há quanto tempo o serviço foi feito e o que foi trocado",
+                  ],
+                  [
+                    "Carcaça deformada, bateria estufada ou cheiro de queimado",
+                    "Risco físico — interromper o uso",
+                    "—",
+                    "Encaminhar para avaliação sem insistir em ligar",
+                  ],
+                ].map((row) => (
+                  <tr key={row[0]}>
+                    {row.map((cell, ci) => (
+                      <td key={ci} className="border border-border px-3 py-2 align-top text-muted-foreground">
+                        {cell}
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-4 text-sm text-muted-foreground">
+            Um ponto que gera confusão: a queda de desempenho sob calor é proteção, não defeito. Processadores reduzem a
+            própria frequência quando a temperatura sobe demais, e o desligamento automático é o último recurso desse
+            mecanismo — descrito na documentação técnica dos próprios fabricantes de processador. Ele evita dano
+            imediato, mas conviver com ele por meses é o que desgasta o equipamento.
+          </p>
         </section>
 
         <section className="mb-12">

@@ -75,7 +75,12 @@ export interface ServicoLandingData {
   /** Rodada 3Q — CTA intermediário (mesmo fluxo de triagem) */
   ctaIntermediario?: { titulo: string; texto: string; label: string };
   /** Conteúdo local aprofundado (H2 + parágrafos) para reforço de SEO local */
-  blocoLocal?: { titulo: string; paragrafos: string[] }[];
+  blocoLocal?: {
+    titulo: string;
+    paragrafos: string[];
+    /** Rodada 4A — tabela diagnóstica opcional (aditiva, mesma seção) */
+    tabela?: { headers: string[]; rows: string[][] };
+  }[];
   /** Links internos contextuais para bairros/cidades e problemas próximos */
   linksLocais?: { label: string; to: string }[];
   /** Rodada 3S — variante visual da página (padrão: residencial) */
@@ -448,6 +453,39 @@ export const ServicoLandingLayout = ({ data }: { data: ServicoLandingData }) => 
                       </p>
                     ))}
                   </div>
+                  {bloco.tabela && (
+                    <div className="mt-5 overflow-x-auto">
+                      <table className="w-full text-sm border-collapse">
+                        <thead>
+                          <tr>
+                            {bloco.tabela.headers.map((h) => (
+                              <th
+                                key={h}
+                                scope="col"
+                                className="border border-border bg-secondary px-3 py-2 text-left font-semibold text-foreground"
+                              >
+                                {h}
+                              </th>
+                            ))}
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {bloco.tabela.rows.map((row) => (
+                            <tr key={row.join("|")}>
+                              {row.map((cell, ci) => (
+                                <td
+                                  key={ci}
+                                  className="border border-border px-3 py-2 align-top text-muted-foreground"
+                                >
+                                  {cell}
+                                </td>
+                              ))}
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  )}
                 </article>
               ))}
             </div>
