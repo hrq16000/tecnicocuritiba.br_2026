@@ -26,8 +26,8 @@ export const blogPostsContentBase: Record<string, BlogPostContent> = {
       <>
         <p className="lead">Escritório pequeno raramente tem alguém dedicado a TI. Na prática, o computador é problema de quem senta nele — até o dia em que a máquina do fechamento para, o arquivo some ou ninguém sabe a senha do sistema. Organizar TI num escritório de 3 a 20 pessoas não exige contratar departamento: exige inventário, rotina e decisões escritas.</p>
 
-        <h2>Resposta curta</h2>
-        <p>Comece pelo inventário dos equipamentos, defina onde os arquivos de trabalho ficam, estabeleça quem autoriza acessos, crie uma rotina simples de cópia de segurança e registre por escrito quem responde por cada sistema contratado. Esses cinco pontos resolvem a maior parte das paradas evitáveis.</p>
+        <h2>Resposta rápida</h2>
+        <p>Como organizar a TI de um escritório pequeno? Comece pelo inventário dos equipamentos e programas, defina um único local oficial para os arquivos de trabalho, estabeleça quem autoriza acessos, crie uma rotina de cópia de segurança com teste de restauração e registre por escrito quem responde por cada sistema contratado. Esses cinco pontos resolvem a maior parte das paradas evitáveis em ambientes de 3 a 20 pessoas — sem contratar departamento de TI e sem ferramenta cara.</p>
 
         <h2>1. Inventário: você não protege o que não conhece</h2>
         <p>Antes de qualquer decisão, liste o que existe. Uma planilha simples basta: identificação da máquina, quem usa, tipo (desktop ou notebook), idade aproximada, tipo de armazenamento, quantidade de memória, sistema operacional, se está na garantia e quais programas críticos rodam nela. Some os periféricos que param a operação quando falham — impressora, leitor, roteador, nobreak.</p>
