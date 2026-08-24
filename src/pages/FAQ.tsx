@@ -92,7 +92,45 @@ const faqCategories = [
       },
     ]
   },
+  {
+    category: "Decisões técnicas antes de autorizar um serviço",
+    questions: [
+      {
+        question: "Formatar apaga tudo?",
+        answer: "A instalação limpa apaga o conteúdo da partição do sistema, incluindo programas instalados e, na prática, os arquivos das pastas de usuário (Documentos, Downloads, Área de Trabalho). Arquivos em outra unidade física costumam ser preservados, mas não tratamos isso como garantia: se houver algo sem cópia, o backup é feito antes, e só depois o sistema é reinstalado. Licença do Windows vinculada ao equipamento normalmente é reativada sozinha; licenças de programas de terceiros precisam da chave ou do login em mãos."
+      },
+      {
+        question: "SSD resolve computador lento?",
+        answer: "Resolve quando o gargalo é o armazenamento: máquina com HD mecânico que demora para ligar, abrir programas e alternar tarefas melhora de forma clara. Não resolve quando a lentidão vem de memória insuficiente, superaquecimento com redução automática de desempenho (thermal throttling), programas indesejados na inicialização ou defeito de placa. Por isso medimos o gargalo antes de indicar a peça, em vez de vender SSD como solução universal."
+      },
+      {
+        question: "Computador que não liga pode ser só a fonte?",
+        answer: "Pode, e é um dos cenários mais comuns em desktop: nenhum LED, nenhum ruído de ventoinha e nenhuma resposta ao botão. Mas o mesmo comportamento aparece em curto na placa, botão de energia, memória mal encaixada e cabo de energia rompido. A separação começa distinguindo falha de alimentação (não dá sinal nenhum) de falha de inicialização (liga, ventila, mas não completa o boot) — são caminhos de diagnóstico diferentes."
+      },
+      {
+        question: "Posso continuar usando o computador que está esquentando muito?",
+        answer: "Uso contínuo com temperatura alta tende a agravar o quadro: o equipamento reduz desempenho para se proteger, pode desligar sem aviso e o desligamento abrupto repetido aumenta o risco de corrupção do sistema e de arquivos abertos. Se houver desligamento súbito, cheiro forte ou ruído anormal, o mais seguro é parar de usar e trazer para avaliação — insistir raramente melhora e às vezes transforma limpeza em troca de peça."
+      },
+      {
+        question: "Meu HD está fazendo um clique repetitivo. O que faço primeiro?",
+        answer: "Desligue e não ligue de novo. Ruído repetitivo costuma indicar falha física, e cada nova tentativa força um hardware já comprometido, reduzindo a chance de leitura. Não execute programas de recuperação sobre o disco original e não formate quando o sistema pedir. Se há dados importantes, essa é a situação de urgência alta: preservar o estado atual vale mais que qualquer tentativa caseira."
+      },
+      {
+        question: "Vale a pena reparar um notebook antigo?",
+        answer: "Depende de quatro fatores: custo da peça, estado geral do conjunto (tela, teclado, bateria, dobradiças), disponibilidade do componente para aquele modelo e valor de mercado do aparelho. Troca de armazenamento, memória, bateria ou limpeza costuma valer em aparelhos ainda saudáveis. Quando o orçamento se aproxima do preço de um equipamento adequado, ou quando a placa apresenta dano extenso, dizemos isso abertamente — inclusive quando a melhor decisão é migrar os dados em vez de reparar."
+      },
+      {
+        question: "Quanto tempo demora um diagnóstico?",
+        answer: "Não usamos prazo fixo, porque o tempo depende do sintoma. Falhas que se reproduzem na hora (não liga, não dá vídeo, não reconhece o disco) são identificadas mais rápido; sintomas intermitentes, como travamento ocasional e desligamento aleatório, exigem observação sob carga e testes sequenciais de memória, temperatura, alimentação e integridade do sistema. Depois da avaliação informamos a causa provável, o prazo estimado e o valor — a execução só ocorre com a sua aprovação."
+      },
+      {
+        question: "Como sei se o problema é de software, hardware ou da internet?",
+        answer: "Alguns sinais ajudam a separar. Sintoma que desaparece em outro sistema ou em modo de segurança aponta para software. Sintoma que aparece antes do Windows carregar, ou que persiste em qualquer sistema, aponta para hardware. Lentidão só em navegação, com o restante do computador respondendo bem, aponta para rede: nesse caso vale comparar cabo e Wi-Fi, testar outro dispositivo na mesma rede e observar se a queda ocorre em horários específicos. Essa separação é o primeiro passo do diagnóstico e evita pagar pelo serviço errado."
+      },
+    ]
+  },
 ];
+
 
 const FAQ = () => {
   useEffect(() => {
