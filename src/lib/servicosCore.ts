@@ -894,6 +894,28 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
         ],
       },
       {
+        titulo: "Leitura rápida do sintoma: o que é seguro tentar e o que não é",
+        paragrafos: [
+          "Em recuperação de dados, quase todo prejuízo irreversível vem da fase anterior ao atendimento. Unidade que apresenta ruído mecânico, clique repetido ou desaparecimento durante a cópia está sinalizando falha física: cada nova tentativa de ligar submete o conjunto a mais desgaste e pode transformar um caso recuperável em um caso perdido.",
+          "Falha lógica é diferente. Partição que sumiu, sistema de arquivos danificado, exclusão acidental ou formatação recente costumam manter o conteúdo gravado na mídia, desde que nada novo seja escrito por cima. Por isso a primeira instrução é sempre a mesma: parar de usar a unidade, não instalar programa nela e não aceitar a oferta do sistema para inicializar ou formatar o disco.",
+          "Indicadores de saúde (o conjunto SMART, previsto nas especificações de interface dos fabricantes de armazenamento) ajudam a separar os cenários, mas não são veredito: unidade pode falhar com SMART aparentemente normal e pode continuar lendo por um tempo com contadores já ruins. Eles entram como mais um dado da avaliação, ao lado do comportamento observado em bancada.",
+          "Também é preciso dizer com clareza: recuperação de dados não é garantida. Existem casos em que a mídia já sofreu dano suficiente para tornar a leitura inviável, e existem casos em que a sobregravação apagou definitivamente o conteúdo. O compromisso é avaliar antes, explicar o cenário real e não cobrar por promessa que não pode ser cumprida.",
+        ],
+        tabela: {
+          headers: ["Sintoma", "Risco", "Pode tentar algo seguro?", "Próximo passo"],
+          rows: [
+            ["Clique, estalo ou zumbido no HD", "Alto — falha física provável", "Não. Desligue imediatamente", "Avaliação com o disco parado, sem novas tentativas"],
+            ["Unidade não aparece no sistema", "Médio a alto", "Testar outro cabo e outra porta, uma vez", "Se seguir invisível, parar e encaminhar"],
+            ["Aparece, mas pede para formatar", "Médio — costuma ser lógico", "Sim: não formatar e não gravar nada", "Avaliação de partição e sistema de arquivos"],
+            ["Cópia trava ou fica lentíssima", "Alto — setores em falha", "Não insistir na cópia", "Imagem setor a setor em bancada"],
+            ["Arquivos abrem corrompidos", "Médio", "Preservar cópia do estado atual", "Análise de integridade antes de qualquer reparo"],
+            ["Exclusão acidental ou formatação recente", "Médio", "Sim: parar de usar a unidade agora", "Recuperação lógica antes que haja sobregravação"],
+            ["Pen drive ou cartão não reconhecido", "Médio", "Testar em outro computador, uma vez", "Avaliação de controlador e mídia"],
+            ["Arquivos criptografados com bilhete de resgate", "Alto — incidente", "Isolar o equipamento da rede", "Preservar o disco e avaliar opções reais"],
+          ],
+        },
+      },
+      {
         titulo: "O que evitar antes da avaliação",
         paragrafos: [
           "Evite rodar programas de recuperação instalados no próprio disco afetado, formatar quando o Windows sugerir, executar verificação de disco (chkdsk) em mídia com suspeita de falha física e repetir ciclos de liga-desliga esperando que funcione na próxima. Cada um desses passos grava dados ou força mecânica em um dispositivo já fragilizado.",
