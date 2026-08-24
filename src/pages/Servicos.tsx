@@ -331,7 +331,7 @@ const Servicos = () => {
                     <td className="px-4 py-3">Lentidão só na navegação, com o resto respondendo bem</td>
                     <td className="px-4 py-3">Rede, sinal Wi-Fi ou link de internet</td>
                     <td className="px-4 py-3">
-                      <Link to="/servicos/redes-wifi" className="text-[hsl(var(--accent))] hover:underline">
+                      <Link to="/servicos/redes-e-wifi" className="text-[hsl(var(--accent))] hover:underline">
                         Redes e Wi-Fi
                       </Link>
                     </td>
