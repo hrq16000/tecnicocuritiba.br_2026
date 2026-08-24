@@ -517,7 +517,24 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
           "Se o HD não é reconhecido, faz ruído, congela durante a cópia ou apresenta falhas de leitura, não trate como simples upgrade. Nesse caso, preservar os arquivos vem antes de migrar o sistema; insistir em clonar um disco em falha pode reduzir a chance de recuperação.",
         ],
       },
+      {
+        titulo: "Como identificar o gargalo antes de comprar peça",
+        paragrafos: [
+          "Sintoma: demora longa para chegar à área de trabalho e para abrir programas, com o disco em uso alto. Gargalo provável: armazenamento mecânico. O que verificar: se o equipamento ainda usa HD, se o uso de disco fica próximo de 100% no gerenciador de tarefas com pouca atividade e se a inicialização melhora depois de reduzir programas que abrem junto com o Windows.",
+          "Sintoma: o computador responde bem sozinho, mas trava ao alternar entre muitas abas, reunião e planilha ao mesmo tempo. Gargalo provável: memória insuficiente. O que verificar: quanto de memória está em uso no pico, se o sistema recorre intensamente ao arquivo de paginação e se a queda de desempenho coincide com a quantidade de programas abertos — e não com o tempo ligado.",
+          "Sintoma: começa rápido e fica lento depois de alguns minutos, com ventoinha acelerada. Gargalo provável: temperatura, não peça nova. O que verificar: ventilação obstruída, poeira acumulada e queda de desempenho progressiva (thermal throttling — a redução automática de velocidade para proteger o processador). Nesse cenário, SSD e memória não corrigem o problema: a resposta é limpeza e manutenção térmica.",
+        ],
+      },
+      {
+        titulo: "Expectativas realistas e o que o upgrade não corrige",
+        paragrafos: [
+          "Trocar HD por SSD costuma melhorar de forma perceptível a inicialização, a abertura de programas e a resposta geral do sistema. Não corrige defeito de placa-mãe, superaquecimento, fonte instável, tela com falha, memória defeituosa nem infecção ativa — nesses casos o equipamento continua apresentando o mesmo sintoma com armazenamento novo.",
+          "Ampliar memória reduz travamento por falta de RAM, mas não aumenta a velocidade bruta do processador nem melhora jogos limitados pela placa de vídeo. Instalar mais memória do que a placa reconhece também não produz ganho: parte do módulo simplesmente não é usada.",
+          "Entre SSD SATA e NVMe existe diferença real de taxa de transferência, mas para uso comum — sistema, navegador, pacote de escritório — o salto mais sentido é sair do HD para qualquer SSD compatível e confiável. Indicamos NVMe quando a placa suporta e o uso justifica, não como argumento de venda.",
+        ],
+      },
     ],
+
     linksLocais: [
       { label: "Atendimento técnico em Curitiba", to: "/tecnico-informatica-curitiba" },
       { label: "Instalação limpa do sistema", to: "/servicos/formatacao" },
