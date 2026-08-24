@@ -594,7 +594,7 @@ const ComoFunciona = () => {
                 Casos de perda já ocorrida seguem por{" "}
                 <Link to="/servicos/recuperacao-de-dados" className="text-accent hover:underline font-medium">recuperação de dados</Link>
                 {" "}· rotina de proteção em{" "}
-                <Link to="/blog/backup-como-proteger-seus-arquivos" className="text-accent hover:underline font-medium">como proteger seus arquivos</Link>
+                <Link to="/seguranca-dos-dados" className="text-accent hover:underline font-medium">como proteger seus arquivos</Link>
                 {" "}· condições em{" "}
                 <Link to="/precos-e-politicas" className="text-accent hover:underline font-medium">preços e políticas</Link>.
               </p>
