@@ -152,6 +152,16 @@ const FAQS = [
       "Limpeza interna, troca de pasta térmica e substituição de ventoinha não envolvem apagar dados. Quando a avaliação identifica que o disco também apresenta perda de saúde, isso é informado antes, e preservar os arquivos passa à frente de qualquer outra etapa.",
   },
   {
+    question: "Notebook esquenta e desliga só em jogos. É defeito?",
+    answer:
+      "Nem sempre. Jogo e edição exigem o máximo do processador e da placa de vídeo por tempo prolongado, e há modelos cuja refrigeração foi dimensionada para uso de escritório. O que separa limite de projeto de defeito é a mudança de comportamento: se o mesmo jogo rodava sem desligar há um ano e hoje derruba o aparelho em minutos, a dissipação piorou — normalmente poeira no dissipador, pasta térmica ressecada ou ventoinha com rotação abaixo do esperado.",
+  },
+  {
+    question: "Por que o notebook esquenta mais quando está carregando?",
+    answer:
+      "Carregar gera calor por si só, e um aquecimento moderado durante a carga é esperado, principalmente com o aparelho em uso ao mesmo tempo. Vira sinal de alerta quando o calor concentra na região do conector de energia, quando a bateria incha, quando o carregador esquenta de forma anormal ou quando o equipamento desliga só nessa condição. Nesses casos a avaliação mede a saúde da bateria e confere se o carregador entrega a potência exigida pelo modelo.",
+  },
+  {
     question: "O valor pode ser informado antes do diagnóstico?",
     answer:
       "Não com precisão. Modelos diferentes exigem desmontagens de complexidade bem distinta, e a necessidade de peça só é confirmada com o equipamento aberto. As condições comerciais vigentes estão publicadas na página de preços e políticas, e o valor do serviço é apresentado depois da avaliação, dependendo da sua autorização.",
