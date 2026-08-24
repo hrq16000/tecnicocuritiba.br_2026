@@ -144,8 +144,34 @@ export const blogPostsContentBase: Record<string, BlogPostContent> = {
           <li>Tratar a estação como cópia de segurança dos projetos</li>
         </ul>
 
+        <h2>Árvore de decisão: pronta, sob medida ou melhoria</h2>
+        <ol>
+          <li>A máquina atual trava em uma etapa específica (abrir projeto grande, exportar, alternar aplicações)? Se sim, meça o gargalo antes de comprar: memória cheia, disco lento ou processador em uso contínuo apontam caminhos diferentes.</li>
+          <li>O gargalo é isolado e o restante do conjunto atende? Melhoria pontual costuma resolver por uma fração do custo.</li>
+          <li>O gargalo é a plataforma inteira (idade, encaixes esgotados, alimentação no limite)? A troca passa a fazer sentido.</li>
+          <li>Precisa de garantia unificada e mínimo de decisões? Máquina pronta de fabricante. Precisa dimensionar componente a componente e prever expansão? Montagem sob medida.</li>
+        </ol>
+
+        <h2>Gargalo observável: como diferenciar antes de comprar</h2>
+        <table>
+          <thead>
+            <tr><th>Sintoma observável</th><th>Causa possível</th><th>Como diferenciar</th><th>Próxima ação</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Máquina começa bem e degrada ao longo do dia</td><td>Memória insuficiente para as aplicações abertas</td><td>Acompanhar o uso de memória no gerenciador de tarefas em um dia comum de trabalho</td><td>Avaliar aumento de memória antes de trocar a máquina</td></tr>
+            <tr><td>Abrir e salvar arquivos grandes demora</td><td>Armazenamento lento ou quase cheio</td><td>Verificar tipo de unidade (mecânica ou SSD) e espaço livre</td><td>Separar sistema, projetos e cache em unidades dimensionadas</td></tr>
+            <tr><td>Exportação/renderização longa, com uso contínuo de processador</td><td>Carga limitada pelo processador</td><td>Observar se o uso fica alto durante toda a tarefa, não apenas em picos</td><td>Dimensionar processador conforme o tipo de carga (contínua ou intercalada)</td></tr>
+            <tr><td>Interface travando só em programas com aceleração gráfica</td><td>Placa de vídeo abaixo do requisito da aplicação</td><td>Conferir os requisitos oficiais publicados pelo fabricante do programa</td><td>Investir na placa apenas quando a aceleração é suportada</td></tr>
+            <tr><td>Desligamento ou instabilidade sob carga prolongada</td><td>Fonte subdimensionada ou refrigeração insuficiente</td><td>Notar se ocorre só em uso intenso e prolongado, não em uso leve</td><td>Revisar fonte e dissipação antes de trocar outros componentes</td></tr>
+          </tbody>
+        </table>
+        <p><strong>Gargalo</strong> é o componente que limita o conjunto: aumentar qualquer outro não muda o resultado enquanto ele não for tratado.</p>
+
+        <h2>Segurança dos dados na troca de máquina</h2>
+        <p>Antes de migrar projetos para a estação nova, tenha uma cópia recuperável dos arquivos em outro lugar. Migração é justamente o momento em que arquivos são apagados por engano ou sobrescritos por versão antiga. A estação, por mais bem dimensionada que seja, não é cópia de segurança.</p>
+
         <h2>Como conduzir a decisão</h2>
-        <p>Levante os requisitos, confronte com os requisitos oficiais das aplicações, defina a faixa de investimento, dimensione o conjunto a partir do gargalo real e só então escolha as peças. Se o uso for crítico, teste com um projeto verdadeiro antes de repetir a configuração para a equipe inteira. Uma decisão documentada hoje evita a discussão de “por que essa máquina não dá conta” daqui a seis meses.</p>
+        <p>Levante os requisitos, confronte com os requisitos oficiais das aplicações, defina a faixa de investimento, dimensione o conjunto a partir do gargalo real e só então escolha as peças. Se o uso for crítico, teste com um projeto verdadeiro antes de repetir a configuração para a equipe inteira. Uma decisão documentada hoje evita a discussão de “por que essa máquina não dá conta” daqui a seis meses. Em Curitiba e São José dos Pinhais, essa avaliação pode ser feita presencialmente com a máquina atual em mãos — veja <Link to="/servicos/montagem-de-pc" className="text-accent">montagem de PC</Link>.</p>
       </>
     ),
   },
