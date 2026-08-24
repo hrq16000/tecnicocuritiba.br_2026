@@ -75,7 +75,9 @@ export const blogPostsContentBase: Record<string, BlogPostContent> = {
         </ul>
 
         <h2>Por onde começar se estiver tudo desorganizado</h2>
-        <p>Não tente resolver os dez itens ao mesmo tempo. Faça o inventário na primeira semana, resolva a cópia de segurança na segunda, organize acessos na terceira e coloque a manutenção no calendário na quarta. Em um mês o escritório sai do modo urgência. O diagnóstico do ambiente e o acompanhamento contínuo estão descritos em <Link to="/empresa-de-ti-curitiba" className="text-accent">empresa de TI em Curitiba</Link>.</p>
+        <p>Não tente resolver os dez itens ao mesmo tempo. Faça o inventário na primeira semana, resolva a cópia de segurança na segunda, organize acessos na terceira e coloque a manutenção no calendário na quarta. Em um mês o escritório sai do modo urgência. O diagnóstico do ambiente e o acompanhamento contínuo estão descritos em <Link to="/empresa-de-ti-curitiba" className="text-accent">empresa de TI em Curitiba</Link>, com atendimento presencial em Curitiba e São José dos Pinhais.</p>
+
+        <EditorialReferences slug="organizacao-de-ti-para-pequenos-escritorios" />
       </>
     ),
   },
