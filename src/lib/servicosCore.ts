@@ -746,6 +746,28 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
         ],
       },
       {
+        titulo: "Sintomas que sugerem infecção e sintomas que enganam",
+        paragrafos: [
+          "Boa parte dos atendimentos começa com a frase \"acho que peguei vírus\", e em uma parcela relevante deles não há infecção alguma. Lentidão, ventoinha acelerada e travamento são sintomas genéricos: aparecem em disco em fim de vida, memória insuficiente, poeira no dissipador e sistema desatualizado exatamente como aparecem em máquina comprometida.",
+          "Os sinais que realmente pesam a favor de malware são outros: página inicial e mecanismo de busca trocados sem você mexer, extensão desconhecida no navegador, redirecionamento para páginas de anúncio, notificações de sites que você nunca autorizou, processo consumindo rede em repouso, programa que reaparece depois de desinstalado e alerta do antivírus sendo desativado sozinho.",
+          "Há ainda o grupo mais sério, que muda a ordem de prioridade: arquivos renomeados com extensão estranha e bilhete de resgate (ransomware), e-mails enviados em seu nome, cobrança desconhecida ou aviso de login em outro local. Nesses casos o problema pode estar na conta e não na máquina, e proteger credenciais vem antes de qualquer limpeza — orientação alinhada às recomendações públicas de agências de segurança como a CISA, que priorizam isolar o equipamento e preservar evidência em incidentes de ransomware.",
+        ],
+        tabela: {
+          headers: ["Sintoma", "Pode ser malware?", "Outras causas", "Próxima verificação"],
+          rows: [
+            ["Computador lento de forma geral", "Talvez", "HD em fim de vida, pouca memória, temperatura", "Uso de disco e memória em repouso"],
+            ["Página inicial e busca trocadas", "Provável", "Extensão instalada junto com outro programa", "Extensões e mecanismo de busca do navegador"],
+            ["Pop-ups e notificações constantes", "Provável", "Permissão de notificação concedida a sites", "Permissões de site no navegador"],
+            ["Programa que volta após desinstalar", "Sim, alta suspeita", "Instalador residente do fabricante", "Tarefas agendadas e itens de inicialização"],
+            ["Antivírus desativado sozinho", "Sim, alta suspeita", "Conflito entre dois antivírus", "Estado da proteção e histórico de detecções"],
+            ["Consumo de rede alto em repouso", "Possível", "Atualização do sistema, sincronização de nuvem", "Processos com atividade de rede"],
+            ["Arquivos com extensão estranha e bilhete de resgate", "Sim, incidente", "Nenhuma outra causa comum", "Desligar da rede e preservar o disco"],
+            ["E-mails enviados em seu nome", "Talvez", "Senha vazada em outro serviço", "Trocar senhas por outro aparelho e revisar sessões"],
+            ["Tela azul recorrente", "Pouco provável", "Memória, driver, disco", "Diagnóstico de hardware"],
+          ],
+        },
+      },
+      {
         titulo: "O que fazer agora, antes do atendimento",
         paragrafos: [
           "Se aparecerem cobranças estranhas ou logins suspeitos, desconecte a máquina da internet e troque as senhas críticas por outro aparelho — e-mail principal primeiro, depois banco e redes sociais. Trocar senha no computador infectado apenas entrega a senha nova ao invasor.",
