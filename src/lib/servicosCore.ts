@@ -208,6 +208,8 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { question: "É possível informar o valor sem diagnóstico?", answer: "Não com precisão. O mesmo sintoma pode ter causas de custo muito diferente. Informamos antes as condições comerciais vigentes, publicadas em preços e políticas; o valor do reparo vem depois da causa confirmada e depende da sua autorização." },
       { question: "Peças estão incluídas?", answer: "Não. Peças, componentes e materiais são tratados à parte do serviço e só são adquiridos após a sua aprovação. Informamos se o item é original, paralelo ou recondicionado." },
       { question: "Há garantia?", answer: "Sim, conforme o serviço efetivamente executado e a peça aplicada. As condições de garantia estão descritas na página de preços e políticas." },
+      { question: "Vale a pena consertar um notebook antigo?", answer: "Depende de três números: valor do reparo com peça, valor de mercado do equipamento no estado atual e o que você espera dele nos próximos meses. Reparo de teclado, bateria, refrigeração ou armazenamento costuma se pagar; reparo de placa em plataforma antiga com peça escassa nem sempre. Apresentamos os valores e a alternativa antes de qualquer execução." },
+      { question: "Trocar a bateria melhora o desempenho do notebook?", answer: "Não. A troca devolve autonomia longe da tomada e evita desligamento inesperado, mas não altera velocidade de processamento, abertura de programas nem tempo de inicialização. Desempenho lento tem outras causas — armazenamento, memória, temperatura ou sistema — e é avaliado separadamente." },
     ],
     relacionados: [
       { label: "Upgrade de SSD e RAM", to: "/servicos/upgrade-ssd-ram" },
@@ -225,6 +227,22 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { label: "Coleta e entrega", to: "/coleta-e-entrega" },
     ],
     blocoLocal: [
+      {
+        titulo: "Quando a manutenção de notebook não resolve",
+        paragrafos: [
+          "Manutenção de notebook cobre limpeza interna, refrigeração, teclado, bateria, conectores, armazenamento e sistema. Ela não conserta painel de tela trincado sem substituição da peça, não devolve carcaça quebrada por queda e não corrige placa que sofreu contato com líquido sem avaliação em nível de componente — cada um desses casos tem escopo, risco e custo próprios.",
+          "Também não é o serviço certo quando a queixa é exclusivamente de dados: arquivo apagado, disco que não monta ou sistema que não inicia com informação importante dentro. Ligar repetidamente um notebook nessa condição reduz a chance de recuperação, e o encaminhamento correto é preservar primeiro.",
+          "Notebook muito antigo com defeito de placa entra na conta de custo-benefício: sem peça disponível ou com valor de reparo próximo ao de um equipamento usado em bom estado, dizemos isso claramente. A decisão continua sua, com o número na mesa.",
+        ],
+      },
+      {
+        titulo: "Bateria, carregamento e aquecimento: o que cada sintoma indica",
+        paragrafos: [
+          "Notebook que só funciona na tomada, que mostra carga travada em um valor ou que desliga com percentual alto costuma estar com a bateria no fim do ciclo útil — mas o mesmo comportamento aparece com carregador de potência incorreta, conector de energia com mau contato ou porta USB-C danificada. Verificamos a fonte, o conector e o relatório de saúde antes de indicar troca.",
+          "Aquecimento com ruído alto normalmente vem de duto obstruído por poeira, pasta térmica ressecada ou ventoinha em fim de vida. Aquecimento silencioso, com desempenho reduzido e sem ruído, sugere outra coisa: ventoinha parada, sensor com leitura errada ou limitação térmica ativada pelo próprio sistema.",
+          "Bateria estufada é caso de parada imediata: não use, não perfure e não continue carregando. O equipamento deve ser levado para substituição segura, porque o inchaço pressiona teclado, touchpad e placa e pode evoluir para risco térmico.",
+        ],
+      },
       {
         titulo: "Os três defeitos que mais chegam em notebook",
         paragrafos: [
@@ -271,7 +289,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { label: "Coleta e entrega do equipamento", to: "/coleta-e-entrega" },
       { label: "Preços e políticas", to: "/precos-e-politicas" },
     ],
-    dateModified: "2026-08-05",
+    dateModified: "2026-08-24",
   },
 
   // 3 ─────────────────────────────────────────────────────────
@@ -333,6 +351,8 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { question: "Vale a pena trocar HD por SSD?", answer: "Quando o restante da plataforma está saudável, a migração para SSD costuma ser o upgrade de melhor retorno. A compatibilidade e o ganho esperado são avaliados no diagnóstico, sem promessa de desempenho de máquina nova." },
       { question: "O diagnóstico inclui peças?", answer: "Não. O diagnóstico identifica a causa; peças, componentes e materiais têm valor à parte e só adquiridos após a sua autorização." },
       { question: "O serviço possui garantia?", answer: "Sim, conforme o serviço executado e a peça aplicada, nas condições publicadas na página de preços e políticas." },
+      { question: "Trocar a fonte resolve computador que desliga sozinho?", answer: "Às vezes, e por isso não trocamos por suposição. Desligamento sob carga também vem de superaquecimento, pasta térmica ressecada, ventilação obstruída, memória com erro ou proteção da própria placa. A alimentação é testada de forma isolada com componente conhecido; a troca só é proposta quando o teste aponta a fonte." },
+      { question: "Limpeza interna resolve superaquecimento?", answer: "Resolve quando a causa é poeira acumulada, ventilação obstruída ou pasta térmica ressecada. Não resolve ventoinha com rolamento danificado, dissipador mal encaixado, sensor com defeito ou projeto de gabinete sem fluxo de ar — situações em que a solução é substituição de peça ou mudança de configuração, informada antes da execução." },
     ],
     relacionados: [
       { label: "Formatação", to: "/servicos/formatacao" },
@@ -349,6 +369,22 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { label: "Atendimento em domicílio", to: "/atendimento-domicilio" },
     ],
     blocoLocal: [
+      {
+        titulo: "Quando a manutenção do desktop não é o caminho",
+        paragrafos: [
+          "Manutenção de computador atua em alimentação, refrigeração, memória, armazenamento, conexões e sistema. Ela não substitui recuperação de dados quando o disco já apresenta falha de leitura: nesse cenário, ligar e desligar a máquina para testar reduz a chance de preservar os arquivos, e a prioridade passa a ser copiar antes de consertar.",
+          "Também não é o serviço indicado quando o único sintoma é software: sistema corrompido, perfil quebrado ou infecção resolvem-se em formatação e remoção de malware, sem abrir o gabinete. Abrir e limpar um computador cujo problema é de sistema devolve a mesma lentidão em poucas horas.",
+          "E há o limite honesto de custo: placa-mãe de plataforma antiga com defeito, com peça escassa no mercado, pode custar mais que o valor residual da máquina. Nesses casos apresentamos o número e a alternativa, em vez de executar um reparo que não se paga.",
+        ],
+      },
+      {
+        titulo: "Do sintoma ao diagnóstico: o que é testado antes de trocar peça",
+        paragrafos: [
+          "PC que reinicia sozinho, desliga sob carga ou trava em uso pesado pede a mesma sequência inicial: leitura de temperaturas e do estado da ventilação, verificação da alimentação com componente conhecido, teste de memória e leitura SMART do disco. Só depois disso faz sentido falar em substituição.",
+          "Computador que liga sem imagem é isolado por etapas — vídeo integrado contra dedicado, um pente de memória por vez, alimentação da placa — porque o mesmo sintoma pode vir de memória, placa de vídeo, fonte ou placa-mãe. Trocar por tentativa é o que faz o orçamento crescer sem resolver.",
+          "Quando a queixa é lentidão, a ordem é medir antes de opinar: disco mecânico saturado, memória insuficiente para o uso real, temperatura alta com redução de desempenho e sistema comprometido produzem a mesma sensação e exigem intervenções diferentes. O caminho é sintoma, diagnóstico, causa e só então intervenção.",
+        ],
+      },
       {
         titulo: "Como isolamos a causa em um PC de mesa",
         paragrafos: [
@@ -395,7 +431,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { label: "Coleta e entrega do equipamento", to: "/coleta-e-entrega" },
       { label: "Preços e políticas", to: "/precos-e-politicas" },
     ],
-    dateModified: "2026-08-05",
+    dateModified: "2026-08-24",
   },
 
   // 4 ─────────────────────────────────────────────────────────
@@ -599,6 +635,8 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { question: "Como identificar vírus no computador sem piorar o problema?", answer: "Observe sinais objetivos: navegador abrindo páginas diferentes, extensões que você não instalou, avisos falsos, contas com login desconhecido ou arquivos bloqueados. Não clique em alertas que pedem telefone ou pagamento e não instale ferramentas anunciadas nesses avisos. Se houver dados importantes, desconecte a internet e procure orientação por outro aparelho." },
       { question: "Como evitar pegar vírus de novo?", answer: "Orientamos sobre antivírus, atualizações, downloads seguros e cuidado com anexos e links. A prevenção faz parte do atendimento." },
       { question: "Recebi um aviso pedindo pagamento, é golpe?", answer: "Avisos que pedem pagamento ou ligação urgente costumam ser golpe. Não pague nem ligue: avaliamos o equipamento e orientamos com segurança." },
+      { question: "O antivírus sozinho remove todo tipo de malware?", answer: "Não. Antivírus cobre bem ameaças conhecidas por assinatura e comportamento, mas costuma deixar passar PUP instalado com o seu consentimento, extensão de navegador abusiva e configuração alterada manualmente. Por isso a limpeza revisa extensões, inicialização, tarefas agendadas e proxy, e não apenas o resultado de uma varredura." },
+      { question: "Depois da limpeza, o computador fica seguro para sempre?", answer: "Não existe garantia desse tipo e desconfie de quem prometer. O que entregamos é a máquina sem os componentes maliciosos encontrados, com proteção nativa ativa, atualizações aplicadas e orientação sobre a origem provável da infecção. Nova infecção depende do uso posterior, e por isso não é coberta como se fosse defeito do serviço." },
     ],
     relacionados: [
       { label: "Formatação", to: "/servicos/formatacao" },
@@ -607,6 +645,22 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       ...LINKS_BASE,
     ],
     blocoLocal: [
+      {
+        titulo: "Quando remover vírus não é a solução",
+        paragrafos: [
+          "Remoção de malware corrige o que é software malicioso. Ela não corrige disco em fim de vida, memória com erro, fonte instável, superaquecimento nem placa com defeito — e nesses casos a máquina continua travando depois da limpeza, o que costuma ser interpretado como \"o vírus voltou\". Por isso o diagnóstico separa infecção de falha física antes de qualquer intervenção.",
+          "Também não é o serviço certo quando o problema é conta comprometida e não computador infectado: cobrança indevida, e-mail enviado em seu nome ou login de outro país podem vir de senha vazada em outro serviço, sem nenhum malware na máquina. Nessa situação a prioridade é trocar credenciais por um aparelho limpo e ativar verificação em duas etapas.",
+          "E não existe limpeza que devolva arquivo já criptografado por ransomware quando não há decriptador legítimo publicado. O que fazemos é preservar o disco no estado em que está, verificar a família da extensão e explicar as opções reais — nunca prometer devolução dos dados.",
+        ],
+      },
+      {
+        titulo: "Adware, PUP, malware e ransomware não são a mesma coisa",
+        paragrafos: [
+          "Adware e PUP (programa potencialmente indesejado) entram junto com instaladores e vivem no navegador: página inicial trocada, busca redirecionada, extensão que você não instalou, notificação de site pedindo permissão. Saem com limpeza dirigida e revisão de extensões, sem reinstalar o sistema.",
+          "Malware propriamente dito busca persistência: tarefa agendada, serviço, atalho contaminado, execução na inicialização. Aqui a limpeza precisa cobrir os pontos de persistência, não só o arquivo visível — remover o executável e deixar a tarefa agendada é o que faz o problema reaparecer em dias.",
+          "Ransomware e comprometimento de conta são categorias de resposta a incidente: mudam a ordem das ações, priorizam isolamento, preservação e troca de credenciais. Nenhuma dessas categorias é resolvida com a promessa de deixar o computador \"100% livre de vírus\" — o que existe é reduzir superfície de risco e explicar o que ficou fora do alcance técnico.",
+        ],
+      },
       {
         titulo: "Limpar, formatar ou preservar: como decidimos",
         paragrafos: [
@@ -1092,6 +1146,8 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { question: "Pode ser feita em atendimento recorrente?", answer: "Sim. O acompanhamento periódico é definido na contratação, com escopo e intervalo combinados. Não trabalhamos com contrato de suporte ilimitado nem com prazos de resposta garantidos fora do que foi acordado." },
       { question: "A manutenção preventiva melhora o desempenho?", answer: "Melhora quando o problema é software acumulado, disco cheio ou superaquecimento. Quando a limitação é hardware — HD mecânico, memória insuficiente, processador antigo — o ganho real vem de upgrade, e explicamos isso no relatório em vez de prometer resultado." },
       { question: "Vocês cuidam do backup durante a preventiva?", answer: "Conferimos o que existe hoje e apontamos as falhas do processo. Estruturar cópias, definir retenção e testar restauração é escopo da página de backup para empresas, contratado à parte." },
+      { question: "Manutenção preventiva evita que os computadores parem?", answer: "Reduz a probabilidade e antecipa a maior parte das falhas previsíveis — disco degradado, refrigeração comprometida, fonte instável, espaço no fim. Não elimina falha súbita de componente nem incidente externo, e por isso a preventiva é planejada junto com backup testado e um plano de substituição para o posto crítico." },
+      { question: "A preventiva inclui as peças que precisarem ser trocadas?", answer: "Não. A rotina inclui inspeção, limpeza, verificações e o relatório priorizado; peças, componentes e materiais são orçados à parte e só adquiridos após autorização da empresa. Essa separação evita a impressão de que a substituição já está paga dentro do contrato de rotina." },
     ],
     relacionados: [
       { label: "Suporte técnico empresarial", to: "/servicos/suporte-tecnico-empresarial" },
@@ -1103,6 +1159,22 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { label: "Preços e políticas", to: "/precos-e-politicas" },
     ],
     blocoLocal: [
+      {
+        titulo: "O que a preventiva não cobre",
+        paragrafos: [
+          "Manutenção preventiva reduz probabilidade de parada: inventário, inspeção física, limpeza, verificação de armazenamento, atualizações e relatório de risco priorizado. Ela não é garantia de que nada vai falhar — componente eletrônico falha sem aviso, e prometer disponibilidade total seria promessa não verificável.",
+          "Preventiva também não substitui backup. Detectar disco degradado antecipa a troca, mas não recupera arquivo perdido em falha súbita, exclusão acidental ou incidente de segurança; a cópia testada continua sendo a única proteção real, tratada no escopo próprio de backup para empresas.",
+          "E não é suporte corretivo contínuo: chamados do dia a dia, usuário travado e incidentes pontuais pertencem ao suporte empresarial. A preventiva é a rotina programada que reduz a quantidade desses chamados, não o canal para atendê-los.",
+        ],
+      },
+      {
+        titulo: "Como a rotina é definida sem inventar SLA",
+        paragrafos: [
+          "A periodicidade sai do parque instalado, não de um pacote pronto: quantidade de máquinas, idade média, ambiente físico (poeira, temperatura, obra próxima), criticidade por posto e horário em que a parada custa menos. Escritório com dez estações em sala climatizada e oficina com equipamento em ambiente com particulado não pedem o mesmo intervalo.",
+          "Cada visita gera registro por equipamento com o que foi inspecionado, o que foi ajustado e o que ficou como risco pendente com prioridade. Esse relatório é o que permite planejar troca de disco, aumento de memória ou substituição de máquina antes da falha, com orçamento previsto em vez de urgência.",
+          "Prazo de execução depende de disponibilidade de peça, janela liberada pela empresa e tempo de teste. Não publicamos SLA fixo porque ele mudaria conforme o parque; a janela real é combinada por escrito antes da rotina começar.",
+        ],
+      },
       {
         titulo: "Por que preventiva empresarial não é a mesma coisa que consertar quando quebra",
         paragrafos: [
@@ -1135,7 +1207,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { label: "Atendimento remoto", to: "/atendimento-remoto" },
       { label: "Como funciona o atendimento", to: "/como-funciona" },
     ],
-    dateModified: "2026-08-06",
+    dateModified: "2026-08-24",
   },
 
   // 10 ────────────────────────────────────────────────────────
@@ -1200,6 +1272,8 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { question: "Vocês garantem que os arquivos sempre voltam?", answer: "Não. Backup reduz o risco de perda, mas nenhuma rotina elimina totalmente a possibilidade de falha. Quando o arquivo já foi perdido e não existe cópia, o caminho é a avaliação de recuperação de dados, que também não tem resultado assegurado." },
       { question: "Backup atende às exigências da LGPD?", answer: "Backup é uma das medidas técnicas que apoiam a proteção de dados, mas conformidade não é automática: depende de políticas internas, base legal, controle de acesso e tratamento adequado dos dados pessoais pela própria empresa. Não emitimos declaração de conformidade." },
       { question: "Com que frequência a cópia deve ser feita?", answer: "Pela pergunta inversa: quanto trabalho a empresa aceita refazer. Se refazer um dia inteiro é inviável, a rotina precisa ser diária ou mais frequente. Definimos frequência e retenção junto com você, em vez de aplicar um padrão único." },
+      { question: "Sincronização em nuvem já é backup?", answer: "Não por si só. Sincronização replica a alteração: se o arquivo é apagado, corrompido ou criptografado em uma máquina, a mudança viaja para a nuvem. Só vira proteção real quando existe versionamento com histórico suficiente, retenção definida e uma cópia que não seja alcançável pela mesma sessão do usuário." },
+      { question: "Com backup, ransomware deixa de ser um problema?", answer: "Deixa de ser perda definitiva, o que já é a diferença entre parar um dia e parar semanas. Ainda restam a indisponibilidade durante a restauração, a limpeza dos equipamentos afetados e a apuração de que dado foi exposto. Por isso a cópia é planejada para não ser alcançada pelo mesmo acesso comprometido." },
     ],
     relacionados: [
       { label: "Suporte técnico empresarial", to: "/servicos/suporte-tecnico-empresarial" },
@@ -1210,6 +1284,22 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { label: "Como funciona", to: "/como-funciona" },
     ],
     blocoLocal: [
+      {
+        titulo: "Quando backup não é a resposta certa",
+        paragrafos: [
+          "Backup protege contra perda futura. Ele não recupera o que já foi perdido antes de existir rotina: arquivo apagado meses atrás, disco que já falhou ou pasta sobrescrita sem versionamento pertencem a recuperação de dados, com avaliação própria e sem garantia de resultado.",
+          "Backup também não substitui controle de acesso. Se a conta de um usuário é comprometida e um arquivo é alterado por dentro, a cópia salva a versão anterior, mas não impede o incidente nem resolve a exposição da informação — isso depende de senha forte, verificação em duas etapas e permissão mínima por função.",
+          "E cópia sem teste de restauração não é backup, é sensação de segurança. Rotina que roda há meses com destino cheio, credencial expirada ou pasta fora do escopo só é descoberta na hora do desastre; por isso o teste periódico faz parte do escopo, não é um extra.",
+        ],
+      },
+      {
+        titulo: "Cópia local, cópia externa e nuvem: o papel de cada uma",
+        paragrafos: [
+          "A cópia local existe para restaurar rápido: é a que devolve um arquivo apagado por engano ou uma pasta corrompida em minutos, sem depender de link de internet. Sozinha, porém, morre junto com o escritório em furto, incêndio, surto elétrico ou ransomware que alcança a rede.",
+          "A cópia externa e a nuvem existem para sobreviver ao evento que atinge o local. Elas são mais lentas para restaurar volumes grandes e dependem da banda contratada, mas são o que garante continuidade quando o ambiente físico é perdido. Retenção e versionamento definem quantos dias para trás você consegue voltar.",
+          "A definição prática é feita por pergunta objetiva, não por produto: quanto de trabalho a empresa aceita perder (janela entre cópias) e em quanto tempo precisa voltar a operar. Essas duas respostas determinam frequência, destino, retenção e custo — e é assim que a proposta é montada, sem pacote genérico.",
+        ],
+      },
       {
         titulo: "Sincronizar não é copiar: a confusão que mais causa perda de arquivo",
         paragrafos: [
@@ -1242,7 +1332,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { label: "Atendimento remoto", to: "/atendimento-remoto" },
       { label: "Como funciona o atendimento", to: "/como-funciona" },
     ],
-    dateModified: "2026-08-06",
+    dateModified: "2026-08-24",
   },
 
   // 11 ────────────────────────────────────────────────────────
@@ -1733,6 +1823,8 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { question: "A placa já foi mexida por outro técnico. Vocês aceitam?", answer: "Aceitamos, desde que você informe isso na triagem. Reparo anterior não é motivo de recusa, mas muda o trabalho: excesso de solda, cola, componente trocado por outro fora de especificação e trilha já emendada precisam ser corrigidos antes de qualquer diagnóstico confiável. Placa muito castigada por intervenções sucessivas pode chegar ao ponto de não ter mais viabilidade." },
       { question: "Existe risco de a placa piorar durante o reparo?", answer: "Existe, e não escondemos isso. Trabalho em nível de componente envolve aquecimento, remoção de peças e manipulação de trilhas, tudo em uma placa que já está com defeito. Em placas com corrosão, com dano térmico anterior ou com múltiplos reparos prévios, o risco é maior. Avisamos quando identificamos esse cenário e só seguimos com a sua autorização registrada." },
       { question: "Como funciona o envio da placa ou do equipamento?", answer: "Pela coleta e entrega, nas condições publicadas na página de coleta. O equipamento é registrado no recebimento com estado e acessórios, avaliado em bancada e devolvido após os testes. Não fazemos esse tipo de serviço em visita: reparo de placa depende de bancada, instrumentos e ambiente controlado." },
+      { question: "Placa que pegou líquido tem conserto?", answer: "Depende da extensão da corrosão e do tempo desde o contato. Placa limpa cedo, com dano restrito, tem chance real; placa que continuou sendo ligada, com corrosão espalhada sob componentes, tem chance baixa e cobertura de garantia delimitada. A avaliação em bancada é o que separa os dois cenários — e o resultado é informado antes de qualquer autorização." },
+      { question: "Vale reparar a placa ou trocar o equipamento?", answer: "A comparação usa três valores: custo do reparo com peça, valor do equipamento funcionando hoje e disponibilidade de componente de reposição. Reparo localizado em equipamento de valor preservado costuma compensar; falha extensa em plataforma antiga normalmente não. Entregamos os números e a alternativa, e a decisão é sua." },
     ],
     relacionados: [
       { label: "Conserto de TV e Smart TV", to: "/servicos/conserto-tv" },
@@ -1742,6 +1834,22 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       ...LINKS_BASE,
     ],
     blocoLocal: [
+      {
+        titulo: "Quando o reparo de placa não é indicado",
+        paragrafos: [
+          "Reparo em nível de componente faz sentido quando a falha está localizada: trilha rompida, componente em curto, seção de alimentação comprometida, conector solto. Não faz sentido quando há corrosão espalhada por líquido, quando a placa já passou por intervenção anterior com dano térmico, ou quando o componente necessário não existe no mercado de reposição — nesses casos, dizer isso é mais honesto do que iniciar um reparo com chance baixa.",
+          "Também não é o serviço certo quando o objetivo real é preservar informação. Placa da controladora de um disco, por exemplo, envolve dados: nessa situação a decisão precisa começar por recuperação de dados, porque uma tentativa de reparo malsucedida pode encerrar as opções.",
+          "E existe o limite econômico: em equipamento de baixo valor residual, o reparo com peça e bancada pode superar o preço de substituir o aparelho. Apresentamos o número antes, com a alternativa, em vez de executar por padrão.",
+        ],
+      },
+      {
+        titulo: "Como a avaliação de placa é conduzida",
+        paragrafos: [
+          "A avaliação começa por inspeção visual sob ampliação, procurando marca térmica, corrosão, componente estufado, solda fria e sinal de intervenção anterior. Em seguida vêm as medições nas seções de alimentação e a verificação das tensões esperadas, comparadas com o comportamento descrito no atendimento.",
+          "Esse trabalho é de bancada e não tem resultado previsível pelo relato: sintomas iguais podem vir de causas distintas, e só a medição separa alimentação, controlador e periferia. Por isso a avaliação é sempre a primeira etapa, com o parecer entregue antes de qualquer autorização de reparo.",
+          "Quando o reparo é viável, o parecer traz o que foi encontrado, o que será feito, o que fica coberto e o que permanece fora de garantia — placa com histórico de líquido, por exemplo, tem cobertura delimitada, porque a corrosão pode evoluir depois em pontos não tocados no reparo.",
+        ],
+      },
       {
         titulo: "O que a bancada faz que a troca de peça não faz",
         paragrafos: [
@@ -1774,7 +1882,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { label: "Coleta e entrega", to: "/coleta-e-entrega" },
       { label: "Equipamentos atendidos", to: "/equipamentos-atendidos" },
     ],
-    dateModified: "2026-08-07",
+    dateModified: "2026-08-24",
   },
 
   // 15 ─────────────────────────────────────────────────────────

@@ -48,6 +48,14 @@ export const Route = createFileRoute("/servicos/conserto-placa")({
       {
         "question": "Como funciona o envio da placa ou do equipamento?",
         "answer": "Pela coleta e entrega, nas condições publicadas na página de coleta. O equipamento é registrado no recebimento com estado e acessórios, avaliado em bancada e devolvido após os testes. Não fazemos esse tipo de serviço em visita: reparo de placa depende de bancada, instrumentos e ambiente controlado."
+      },
+      {
+        "question": "Placa que pegou líquido tem conserto?",
+        "answer": "Depende da extensão da corrosão e do tempo desde o contato. Placa limpa cedo, com dano restrito, tem chance real; placa que continuou sendo ligada, com corrosão espalhada sob componentes, tem chance baixa e cobertura de garantia delimitada. A avaliação em bancada é o que separa os dois cenários — e o resultado é informado antes de qualquer autorização."
+      },
+      {
+        "question": "Vale reparar a placa ou trocar o equipamento?",
+        "answer": "A comparação usa três valores: custo do reparo com peça, valor do equipamento funcionando hoje e disponibilidade de componente de reposição. Reparo localizado em equipamento de valor preservado costuma compensar; falha extensa em plataforma antiga normalmente não. Entregamos os números e a alternativa, e a decisão é sua."
       }
     ]
   }),

@@ -56,6 +56,14 @@ export const Route = createFileRoute("/servicos/manutencao-de-notebook")({
       {
         "question": "Há garantia?",
         "answer": "Sim, conforme o serviço efetivamente executado e a peça aplicada. As condições de garantia estão descritas na página de preços e políticas."
+      },
+      {
+        "question": "Vale a pena consertar um notebook antigo?",
+        "answer": "Depende de três números: valor do reparo com peça, valor de mercado do equipamento no estado atual e o que você espera dele nos próximos meses. Reparo de teclado, bateria, refrigeração ou armazenamento costuma se pagar; reparo de placa em plataforma antiga com peça escassa nem sempre. Apresentamos os valores e a alternativa antes de qualquer execução."
+      },
+      {
+        "question": "Trocar a bateria melhora o desempenho do notebook?",
+        "answer": "Não. A troca devolve autonomia longe da tomada e evita desligamento inesperado, mas não altera velocidade de processamento, abertura de programas nem tempo de inicialização. Desempenho lento tem outras causas — armazenamento, memória, temperatura ou sistema — e é avaliado separadamente."
       }
     ]
   }),
