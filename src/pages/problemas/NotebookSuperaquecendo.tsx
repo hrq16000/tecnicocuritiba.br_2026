@@ -296,6 +296,106 @@ const NotebookSuperaquecendo = () => {
           </ul>
         </section>
 
+        <section id="quadro" className="scroll-mt-24 mb-12">
+          <h2 className="mb-4 text-2xl font-bold text-foreground">
+            Quando o calor aparece: um quadro para localizar o seu caso
+          </h2>
+          <p className="mb-4 text-muted-foreground">
+            O momento em que o aquecimento incomoda diz mais sobre a causa do que a temperatura em si. O quadro abaixo
+            reúne as situações que mais chegam à triagem e o que costuma explicar cada uma. Ele orienta a conversa, não
+            substitui a avaliação com o equipamento em bancada.
+          </p>
+          <div className="overflow-x-auto">
+            <table className="w-full border-collapse text-sm">
+              <thead>
+                <tr>
+                  {["Quando acontece", "Causa mais provável", "Menos provável", "O que observar"].map((h) => (
+                    <th
+                      key={h}
+                      scope="col"
+                      className="border border-border bg-secondary px-3 py-2 text-left font-semibold text-foreground"
+                    >
+                      {h}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  [
+                    "Esquenta e desliga depois de alguns minutos sob carga",
+                    "Dissipação comprometida: poeira no radiador ou pasta térmica ressecada",
+                    "Falha de placa",
+                    "Se precisa esfriar antes de aceitar ligar de novo",
+                  ],
+                  [
+                    "Esquenta muito só em jogos ou edição",
+                    "Refrigeração no limite para o esforço exigido",
+                    "Defeito",
+                    "Se o desempenho cai progressivamente durante a sessão",
+                  ],
+                  [
+                    "Esquenta em tarefas leves, com cooler sempre no máximo",
+                    "Carga de processamento em segundo plano ou perfil de energia em desempenho máximo",
+                    "Pasta térmica",
+                    "Quais processos consomem processador em repouso",
+                  ],
+                  [
+                    "Esquenta mais quando está carregando",
+                    "Bateria degradada ou carregador inadequado gerando calor extra",
+                    "Ventoinha",
+                    "Se o calor concentra perto do conector de energia",
+                  ],
+                  [
+                    "Base muito quente, saída de ar quase sem fluxo",
+                    "Obstrução do dissipador ou ventoinha com rotação abaixo do esperado",
+                    "Sistema",
+                    "Se há ruído metálico ou chiado ao acelerar",
+                  ],
+                  [
+                    "Desliga de forma aleatória, mesmo frio",
+                    "Alimentação: bateria, carregador ou circuito de energia",
+                    "Temperatura",
+                    "Se ocorre também logo após ligar",
+                  ],
+                  [
+                    "Esquenta usando sobre cama, sofá ou almofada",
+                    "Entradas de ar da base obstruídas",
+                    "Falha interna",
+                    "Se o comportamento muda em superfície rígida e plana",
+                  ],
+                  [
+                    "Passou a esquentar depois de uma manutenção recente",
+                    "Montagem do dissipador ou dosagem de pasta térmica",
+                    "Poeira",
+                    "Há quanto tempo o serviço foi feito e o que foi trocado",
+                  ],
+                  [
+                    "Carcaça deformada, bateria estufada ou cheiro de queimado",
+                    "Risco físico — interromper o uso",
+                    "—",
+                    "Encaminhar para avaliação sem insistir em ligar",
+                  ],
+                ].map((row) => (
+                  <tr key={row[0]}>
+                    {row.map((cell, ci) => (
+                      <td key={ci} className="border border-border px-3 py-2 align-top text-muted-foreground">
+                        {cell}
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-4 text-sm text-muted-foreground">
+            Um ponto que gera confusão: a queda de desempenho sob calor é proteção, não defeito. Processadores reduzem a
+            própria frequência quando a temperatura sobe demais, e o desligamento automático é o último recurso desse
+            mecanismo — descrito na documentação técnica dos próprios fabricantes de processador. Ele evita dano
+            imediato, mas conviver com ele por meses é o que desgasta o equipamento.
+          </p>
+        </section>
+
         <section className="mb-12">
           <h2 className="mb-4 flex items-center gap-2 text-2xl font-bold text-foreground">
             <Gauge className="h-6 w-6 text-accent" /> O que você pode observar antes do atendimento
