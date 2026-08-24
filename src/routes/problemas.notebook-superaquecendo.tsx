@@ -46,8 +46,8 @@ export const Route = createFileRoute("/problemas/notebook-superaquecendo")({
         "answer": "Limpeza interna, troca de pasta térmica e substituição de ventoinha não envolvem apagar dados. Quando a avaliação identifica que o disco também apresenta perda de saúde, isso é informado antes, e preservar os arquivos passa à frente de qualquer outra etapa."
       },
       {
-        "question": "O valor pode ser informado antes do diagnóstico?",
-        "answer": "Não com precisão. Modelos diferentes exigem desmontagens de complexidade bem distinta, e a necessidade de peça só é confirmada com o equipamento aberto. As condições comerciais vigentes estão publicadas na página de preços e políticas, e o valor do serviço é apresentado depois da avaliação, dependendo da sua autorização."
+        "question": "Notebook esquenta e desliga só em jogos. É defeito?",
+        "answer": "Nem sempre. Jogo e edição exigem o máximo do processador e da placa de vídeo por tempo prolongado, e há modelos cuja refrigeração foi dimensionada para uso de escritório. O que separa limite de projeto de defeito é a mudança de comportamento: se o mesmo jogo rodava sem desligar há um ano e hoje derruba o aparelho em minutos, a dissipação piorou — normalmente poeira no dissipador, pasta térmica ressecada ou ventoinha com rotação abaixo do esperado."
       }
     ]
   }),
