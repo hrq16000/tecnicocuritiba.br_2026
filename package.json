@@ -238,7 +238,12 @@
     "db:diff": "supabase db diff -f",
     "functions:serve": "supabase functions serve --env-file .env.local",
     "functions:serve:debug": "supabase functions serve --env-file .env.local --inspect-mode brk",
-    "dev:local": "node scripts/check-local-env.mjs && vite dev"
+    "dev:local": "node scripts/check-local-env.mjs && vite dev",
+    "gsc:pull": "node scripts/gsc-fase4-pull.mjs",
+    "gsc:inspect": "node scripts/gsc-fase4-inspect.mjs",
+    "report:seo-p0p1": "node scripts/report-seo-p0p1.mjs",
+    "report:query-intent": "node scripts/report-query-intent-map.mjs",
+    "report:noindex-inspection": "node scripts/report-noindex-inspection.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
