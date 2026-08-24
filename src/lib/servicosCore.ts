@@ -517,7 +517,24 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
           "Se o HD não é reconhecido, faz ruído, congela durante a cópia ou apresenta falhas de leitura, não trate como simples upgrade. Nesse caso, preservar os arquivos vem antes de migrar o sistema; insistir em clonar um disco em falha pode reduzir a chance de recuperação.",
         ],
       },
+      {
+        titulo: "Como identificar o gargalo antes de comprar peça",
+        paragrafos: [
+          "Sintoma: demora longa para chegar à área de trabalho e para abrir programas, com o disco em uso alto. Gargalo provável: armazenamento mecânico. O que verificar: se o equipamento ainda usa HD, se o uso de disco fica próximo de 100% no gerenciador de tarefas com pouca atividade e se a inicialização melhora depois de reduzir programas que abrem junto com o Windows.",
+          "Sintoma: o computador responde bem sozinho, mas trava ao alternar entre muitas abas, reunião e planilha ao mesmo tempo. Gargalo provável: memória insuficiente. O que verificar: quanto de memória está em uso no pico, se o sistema recorre intensamente ao arquivo de paginação e se a queda de desempenho coincide com a quantidade de programas abertos — e não com o tempo ligado.",
+          "Sintoma: começa rápido e fica lento depois de alguns minutos, com ventoinha acelerada. Gargalo provável: temperatura, não peça nova. O que verificar: ventilação obstruída, poeira acumulada e queda de desempenho progressiva (thermal throttling — a redução automática de velocidade para proteger o processador). Nesse cenário, SSD e memória não corrigem o problema: a resposta é limpeza e manutenção térmica.",
+        ],
+      },
+      {
+        titulo: "Expectativas realistas e o que o upgrade não corrige",
+        paragrafos: [
+          "Trocar HD por SSD costuma melhorar de forma perceptível a inicialização, a abertura de programas e a resposta geral do sistema. Não corrige defeito de placa-mãe, superaquecimento, fonte instável, tela com falha, memória defeituosa nem infecção ativa — nesses casos o equipamento continua apresentando o mesmo sintoma com armazenamento novo.",
+          "Ampliar memória reduz travamento por falta de RAM, mas não aumenta a velocidade bruta do processador nem melhora jogos limitados pela placa de vídeo. Instalar mais memória do que a placa reconhece também não produz ganho: parte do módulo simplesmente não é usada.",
+          "Entre SSD SATA e NVMe existe diferença real de taxa de transferência, mas para uso comum — sistema, navegador, pacote de escritório — o salto mais sentido é sair do HD para qualquer SSD compatível e confiável. Indicamos NVMe quando a placa suporta e o uso justifica, não como argumento de venda.",
+        ],
+      },
     ],
+
     linksLocais: [
       { label: "Atendimento técnico em Curitiba", to: "/tecnico-informatica-curitiba" },
       { label: "Instalação limpa do sistema", to: "/servicos/formatacao" },
@@ -716,7 +733,32 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
           "Quando o disco ainda funciona mas dá sinais de desgaste, a ordem é copiar tudo primeiro e só depois planejar a troca por SSD. Se o equipamento sequer inicia, a avaliação começa pela manutenção do computador, porque o problema pode estar fora do disco.",
         ],
       },
+      {
+        titulo: "Urgência: quando parar de usar o dispositivo imediatamente",
+        paragrafos: [
+          "Urgência alta: ruído repetitivo (clique, arranhado), o disco desaparece no meio da cópia, o sistema congela ao acessar determinada pasta, ou há cheiro de queimado depois de queda de energia. Nesses casos cada nova tentativa de ligar consome a chance restante de leitura — desligue e não execute nada sobre a mídia original.",
+          "Urgência média: arquivos apagados por engano, partição que passou a pedir formatação, pendrive ou cartão reconhecido com capacidade errada. O conteúdo geralmente ainda está gravado, e o inimigo é a escrita nova: instalar programas, baixar arquivos ou salvar documentos no mesmo dispositivo pode sobrescrever justamente o que você quer de volta.",
+          "Urgência baixa: o dispositivo funciona, abre os arquivos e não apresenta comportamento anormal, mas você quer proteger o que existe. Esse é o cenário em que backup resolve por uma fração do custo de qualquer tentativa de recuperação — e é a única situação em que dá para trabalhar sem pressa.",
+        ],
+      },
+      {
+        titulo: "O que evitar antes da avaliação",
+        paragrafos: [
+          "Evite rodar programas de recuperação instalados no próprio disco afetado, formatar quando o Windows sugerir, executar verificação de disco (chkdsk) em mídia com suspeita de falha física e repetir ciclos de liga-desliga esperando que funcione na próxima. Cada um desses passos grava dados ou força mecânica em um dispositivo já fragilizado.",
+          "Evite também os improvisos que circulam na internet: colocar o HD no congelador, bater no aparelho, abrir a unidade fora de ambiente controlado ou trocar a placa lógica por outra de modelo parecido. Mídia aberta ou congelada chega em condição pior, e parte dos casos que não avançam tinham chance antes da tentativa caseira.",
+          "Se o equipamento é de trabalho e você precisa voltar a produzir hoje, o caminho seguro é separar o dispositivo afetado e usar outra máquina, em vez de continuar operando sobre a mídia em risco. A avaliação define o que é possível; o que já foi sobrescrito não volta.",
+        ],
+      },
+      {
+        titulo: "O que é analisado na avaliação",
+        paragrafos: [
+          "A avaliação começa identificando se o dispositivo é reconhecido de forma estável, com que capacidade e com que comportamento sob leitura. Quando a mídia responde, verificamos os indicadores de saúde do armazenamento (SMART — o autodiagnóstico interno do disco), a estrutura de partições e a integridade do sistema de arquivos, sempre priorizando leitura em vez de correção automática.",
+          "Quando a leitura é instável, a prioridade passa a ser gerar uma cópia de imagem setor a setor e trabalhar sobre essa cópia, nunca sobre o original. Em SSD, avaliamos também se a controladora responde: quando ela falha, o conteúdo deixa de ser acessível por software e o caso deixa de ter caminho aqui.",
+          "Não realizamos abertura de disco em sala limpa nem substituição de conjunto mecânico com peças doadoras. Quando o diagnóstico aponta esse caminho, dizemos que é serviço de laboratório especializado, com prazo e custo próprios, em vez de cobrar por uma tentativa sem perspectiva.",
+        ],
+      },
     ],
+
     linksLocais: [
       { label: "Atendimento técnico em Curitiba", to: "/tecnico-informatica-curitiba" },
       { label: "Coleta e entrega do equipamento", to: "/coleta-e-entrega" },

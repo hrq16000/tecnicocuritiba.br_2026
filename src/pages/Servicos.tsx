@@ -260,6 +260,96 @@ const Servicos = () => {
         </div>
       </section>
 
+      {/* Triagem: sintoma → serviço indicado */}
+      <section className="py-14 md:py-16 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="mx-auto max-w-4xl">
+            <h2 className="text-2xl md:text-3xl font-heading font-bold text-foreground">
+              Qual serviço resolve cada sintoma
+            </h2>
+            <p className="mt-3 text-muted-foreground">
+              Antes de escolher um serviço, vale separar o que o equipamento está fazendo. O mesmo sintoma
+              pode ter causa de software, de hardware, de rede ou de alimentação — e o serviço correto muda
+              conforme essa separação. A tabela abaixo mostra por onde a triagem começa em cada caso.
+            </p>
+            <div className="mt-6 overflow-x-auto rounded-xl border border-border">
+              <table className="w-full min-w-[640px] text-left text-sm">
+                <thead className="bg-secondary text-foreground">
+                  <tr>
+                    <th scope="col" className="px-4 py-3 font-semibold">O que você observa</th>
+                    <th scope="col" className="px-4 py-3 font-semibold">Causa mais provável</th>
+                    <th scope="col" className="px-4 py-3 font-semibold">Por onde começar</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-border text-muted-foreground">
+                  <tr>
+                    <td className="px-4 py-3">Demora para ligar e abrir programas, disco sempre em uso alto</td>
+                    <td className="px-4 py-3">Armazenamento mecânico ou pouca memória</td>
+                    <td className="px-4 py-3">
+                      <Link to="/servicos/upgrade-ssd-ram" className="text-[hsl(var(--accent))] hover:underline">
+                        Upgrade de SSD e memória
+                      </Link>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="px-4 py-3">Anúncios abrindo sozinhos, navegador alterado, avisos estranhos</td>
+                    <td className="px-4 py-3">Programas indesejados ou infecção ativa</td>
+                    <td className="px-4 py-3">
+                      <Link to="/servicos/remocao-virus" className="text-[hsl(var(--accent))] hover:underline">
+                        Remoção de vírus
+                      </Link>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="px-4 py-3">Sistema instável, erros recorrentes, anos de acúmulo</td>
+                    <td className="px-4 py-3">Sistema comprometido no nível de software</td>
+                    <td className="px-4 py-3">
+                      <Link to="/servicos/formatacao" className="text-[hsl(var(--accent))] hover:underline">
+                        Formatação com backup
+                      </Link>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="px-4 py-3">Disco não reconhecido, arquivos apagados, ruído no HD</td>
+                    <td className="px-4 py-3">Falha lógica ou física de armazenamento</td>
+                    <td className="px-4 py-3">
+                      <Link to="/servicos/recuperacao-de-dados" className="text-[hsl(var(--accent))] hover:underline">
+                        Recuperação de dados
+                      </Link>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="px-4 py-3">Não dá sinal nenhum, ou liga e não completa a inicialização</td>
+                    <td className="px-4 py-3">Alimentação, placa ou falha de boot</td>
+                    <td className="px-4 py-3">
+                      <Link to="/problemas/computador-nao-liga" className="text-[hsl(var(--accent))] hover:underline">
+                        Diagnóstico de “não liga”
+                      </Link>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="px-4 py-3">Lentidão só na navegação, com o resto respondendo bem</td>
+                    <td className="px-4 py-3">Rede, sinal Wi-Fi ou link de internet</td>
+                    <td className="px-4 py-3">
+                      <Link to="/servicos/redes-e-wifi" className="text-[hsl(var(--accent))] hover:underline">
+                        Redes e Wi-Fi
+                      </Link>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p className="mt-4 text-sm text-muted-foreground">
+              Se o sintoma aparece antes do Windows carregar, ou persiste em outro sistema, a suspeita passa a ser
+              hardware. Se desaparece em modo de segurança ou em outro perfil, a suspeita é software. Essa separação
+              é o primeiro passo do diagnóstico e evita pagar pelo serviço errado.
+            </p>
+          </div>
+        </div>
+      </section>
+
+
+
       {/* Como o atendimento começa */}
       <section className="py-14 md:py-16 bg-secondary">
         <div className="container mx-auto px-4">
