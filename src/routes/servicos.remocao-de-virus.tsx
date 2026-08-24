@@ -36,6 +36,14 @@ export const Route = createFileRoute("/servicos/remocao-de-virus")({
       {
         "question": "Recebi um aviso pedindo pagamento, é golpe?",
         "answer": "Avisos que pedem pagamento ou ligação urgente costumam ser golpe. Não pague nem ligue: avaliamos o equipamento e orientamos com segurança."
+      },
+      {
+        "question": "O antivírus sozinho remove todo tipo de malware?",
+        "answer": "Não. Antivírus cobre bem ameaças conhecidas por assinatura e comportamento, mas costuma deixar passar PUP instalado com o seu consentimento, extensão de navegador abusiva e configuração alterada manualmente. Por isso a limpeza revisa extensões, inicialização, tarefas agendadas e proxy, e não apenas o resultado de uma varredura."
+      },
+      {
+        "question": "Depois da limpeza, o computador fica seguro para sempre?",
+        "answer": "Não existe garantia desse tipo e desconfie de quem prometer. O que entregamos é a máquina sem os componentes maliciosos encontrados, com proteção nativa ativa, atualizações aplicadas e orientação sobre a origem provável da infecção. Nova infecção depende do uso posterior, e por isso não é coberta como se fosse defeito do serviço."
       }
     ]
   }),

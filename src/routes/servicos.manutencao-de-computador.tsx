@@ -52,6 +52,14 @@ export const Route = createFileRoute("/servicos/manutencao-de-computador")({
       {
         "question": "O serviço possui garantia?",
         "answer": "Sim, conforme o serviço executado e a peça aplicada, nas condições publicadas na página de preços e políticas."
+      },
+      {
+        "question": "Trocar a fonte resolve computador que desliga sozinho?",
+        "answer": "Às vezes, e por isso não trocamos por suposição. Desligamento sob carga também vem de superaquecimento, pasta térmica ressecada, ventilação obstruída, memória com erro ou proteção da própria placa. A alimentação é testada de forma isolada com componente conhecido; a troca só é proposta quando o teste aponta a fonte."
+      },
+      {
+        "question": "Limpeza interna resolve superaquecimento?",
+        "answer": "Resolve quando a causa é poeira acumulada, ventilação obstruída ou pasta térmica ressecada. Não resolve ventoinha com rolamento danificado, dissipador mal encaixado, sensor com defeito ou projeto de gabinete sem fluxo de ar — situações em que a solução é substituição de peça ou mudança de configuração, informada antes da execução."
       }
     ]
   }),

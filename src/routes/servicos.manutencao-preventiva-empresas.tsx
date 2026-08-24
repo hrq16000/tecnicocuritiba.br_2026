@@ -48,6 +48,14 @@ export const Route = createFileRoute("/servicos/manutencao-preventiva-empresas")
       {
         "question": "Vocês cuidam do backup durante a preventiva?",
         "answer": "Conferimos o que existe hoje e apontamos as falhas do processo. Estruturar cópias, definir retenção e testar restauração é escopo da página de backup para empresas, contratado à parte."
+      },
+      {
+        "question": "Manutenção preventiva evita que os computadores parem?",
+        "answer": "Reduz a probabilidade e antecipa a maior parte das falhas previsíveis — disco degradado, refrigeração comprometida, fonte instável, espaço no fim. Não elimina falha súbita de componente nem incidente externo, e por isso a preventiva é planejada junto com backup testado e um plano de substituição para o posto crítico."
+      },
+      {
+        "question": "A preventiva inclui as peças que precisarem ser trocadas?",
+        "answer": "Não. A rotina inclui inspeção, limpeza, verificações e o relatório priorizado; peças, componentes e materiais são orçados à parte e só adquiridos após autorização da empresa. Essa separação evita a impressão de que a substituição já está paga dentro do contrato de rotina."
       }
     ]
   }),

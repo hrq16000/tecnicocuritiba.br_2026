@@ -48,6 +48,14 @@ export const Route = createFileRoute("/servicos/backup-para-empresas")({
       {
         "question": "Com que frequência a cópia deve ser feita?",
         "answer": "Pela pergunta inversa: quanto trabalho a empresa aceita refazer. Se refazer um dia inteiro é inviável, a rotina precisa ser diária ou mais frequente. Definimos frequência e retenção junto com você, em vez de aplicar um padrão único."
+      },
+      {
+        "question": "Sincronização em nuvem já é backup?",
+        "answer": "Não por si só. Sincronização replica a alteração: se o arquivo é apagado, corrompido ou criptografado em uma máquina, a mudança viaja para a nuvem. Só vira proteção real quando existe versionamento com histórico suficiente, retenção definida e uma cópia que não seja alcançável pela mesma sessão do usuário."
+      },
+      {
+        "question": "Com backup, ransomware deixa de ser um problema?",
+        "answer": "Deixa de ser perda definitiva, o que já é a diferença entre parar um dia e parar semanas. Ainda restam a indisponibilidade durante a restauração, a limpeza dos equipamentos afetados e a apuração de que dado foi exposto. Por isso a cópia é planejada para não ser alcançada pelo mesmo acesso comprometido."
       }
     ]
   }),
