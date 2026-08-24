@@ -590,6 +590,54 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
         ],
       },
       {
+        titulo: "HD, SSD SATA e NVMe lado a lado",
+        paragrafos: [
+          "Três detalhes confundem quase todo mundo na hora de comprar. O primeiro: M.2 é apenas o formato físico do módulo — existem SSDs M.2 que funcionam no barramento SATA e outros que usam NVMe sobre PCI Express. Um slot M.2 na placa não garante suporte a NVMe, e é por isso que conferimos a documentação do modelo antes de indicar peça.",
+          "O segundo: a diferença de números entre SATA e NVMe é grande no papel e bem menor no uso comum. Sistema, navegador, pacote de escritório e programas do dia a dia dependem mais de acessos pequenos do que de transferência sequencial. Quem move arquivos grandes com frequência, edita vídeo ou trabalha com bases pesadas percebe o NVMe; quem usa a máquina para tarefas de escritório percebe muito mais o salto de sair do HD.",
+          "O terceiro: capacidade influencia desempenho. Unidade praticamente cheia tem menos espaço livre para gerenciamento interno e responde pior, o que vale para qualquer tecnologia de memória flash. Dimensionar com folga é parte da indicação, não venda de capacidade extra.",
+        ],
+        tabela: {
+          headers: ["Característica", "HD mecânico", "SSD SATA", "SSD NVMe"],
+          rows: [
+            ["Partes móveis", "Sim, sensível a impacto", "Não", "Não"],
+            ["Ganho percebido ao ligar e abrir programas", "Referência (o mais lento)", "Salto grande", "Salto grande, semelhante ao SATA"],
+            ["Transferência de arquivos grandes", "Limitada", "Boa", "Melhor, quando a plataforma acompanha"],
+            ["Formato típico", "2,5\" ou 3,5\"", "2,5\" ou M.2 SATA", "M.2 (PCIe)"],
+            ["Depende de suporte da placa", "Interface SATA", "Interface SATA", "Slot M.2 com suporte a NVMe"],
+            ["Uso ainda recomendado", "Armazenamento secundário de arquivos", "Sistema em máquinas SATA", "Sistema em plataformas compatíveis"],
+          ],
+        },
+      },
+      {
+        titulo: "RAM ou SSD: qual upgrade fazer primeiro",
+        paragrafos: [
+          "A resposta curta não é \"SSD sempre\". A escolha depende de qual recurso está estrangulando a máquina no seu uso real. Quando o computador ainda usa HD mecânico, o armazenamento quase sempre é o gargalo dominante e o SSD vem primeiro. Quando já existe SSD e o incômodo aparece só com muitos programas abertos, a memória passa à frente.",
+          "Dá para observar isso sem ferramenta especial. No Gerenciador de Tarefas do Windows, a aba Desempenho mostra o uso de disco e de memória. Disco preso em uso alto com pouca atividade aponta armazenamento; memória constantemente no limite, com o sistema recorrendo à paginação em disco, aponta RAM. Quando os dois aparecem saturados ao mesmo tempo em máquina com HD, o SSD costuma aliviar inclusive o sintoma de memória, porque a paginação deixa de ser tão penalizada.",
+          "Existe ainda o cenário em que nenhum dos dois é a resposta: armazenamento quase cheio, dezenas de programas iniciando junto com o sistema, infecção ativa ou queda progressiva de desempenho por temperatura. Comprar peça antes de investigar esses casos costuma gerar frustração — a máquina fica um pouco melhor e o sintoma volta.",
+        ],
+        tabela: {
+          headers: ["Sintoma", "RAM pode ajudar", "SSD pode ajudar", "Investigar antes"],
+          rows: [
+            ["Demora muito para chegar à área de trabalho", "Pouco provável", "Sim, se ainda for HD", "Programas na inicialização"],
+            ["Programas demoram para abrir, um de cada vez", "Pouco provável", "Sim", "Saúde do disco atual"],
+            ["Trava ao alternar entre muitas abas e programas", "Sim", "Ajuda indiretamente", "Quanto de memória é usada no pico"],
+            ["Uso de memória constantemente alto em repouso", "Sim", "Não", "Programas em segundo plano e possível infecção"],
+            ["Sistema recorre à paginação o tempo todo", "Sim", "Reduz o impacto", "Quantidade de memória instalada e limite da placa"],
+            ["Armazenamento quase cheio", "Não", "Só com mais capacidade", "Liberar espaço antes de comprar peça"],
+            ["Já tem SSD e mesmo assim engasga em multitarefa", "Sim", "Não", "Memória disponível e temperatura"],
+            ["Começa rápido e piora após alguns minutos", "Não", "Não", "Refrigeração e redução automática de desempenho"],
+          ],
+        },
+      },
+      {
+        titulo: "Decisão final: manter o HD, trocar por SSD ou investigar antes",
+        paragrafos: [
+          "Manter o HD faz sentido quando ele é usado apenas como depósito de arquivos, com o sistema já em SSD, e quando a avaliação não aponta desgaste. Nesse arranjo o disco mecânico continua útil sem penalizar a resposta do computador.",
+          "Trocar por SSD é a decisão evidente quando o sistema ainda mora no HD, o equipamento está saudável no restante e você pretende usá-lo por mais um bom tempo. É o upgrade com melhor relação entre custo e mudança percebida.",
+          "Investigar antes é a resposta quando existe desligamento, superaquecimento, tela azul recorrente, ruído no disco ou falha de leitura. Nesses cenários, instalar peça nova sobre um problema não resolvido apenas transfere o defeito para um equipamento mais caro — e, quando há suspeita de disco em falha, preservar os arquivos vem antes de qualquer migração.",
+        ],
+      },
+      {
         titulo: "Expectativas realistas e o que o upgrade não corrige",
         paragrafos: [
           "Trocar HD por SSD costuma melhorar de forma perceptível a inicialização, a abertura de programas e a resposta geral do sistema. Não corrige defeito de placa-mãe, superaquecimento, fonte instável, tela com falha, memória defeituosa nem infecção ativa — nesses casos o equipamento continua apresentando o mesmo sintoma com armazenamento novo.",
