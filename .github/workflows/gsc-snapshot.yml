@@ -1,0 +1,63 @@
+name: gsc-snapshot
+
+# Ingestão automatizada do Search Console + geração dos relatórios de
+# diagnóstico (checklist P0/P1, mapa consulta→página, inspeção de noindex)
+# e atualização do dashboard /admin/vitals via public/seo-priority.json.
+#
+# Somente leitura no Google: nenhuma submissão de sitemap, nenhum pedido de
+# indexação. O site não é alterado por este workflow.
+on:
+  schedule:
+    - cron: "20 9 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  LOVABLE_API_KEY: ${{ secrets.LOVABLE_API_KEY }}
+  GOOGLE_SEARCH_CONSOLE_API_KEY: ${{ secrets.GOOGLE_SEARCH_CONSOLE_API_KEY }}
+  GSC_SITE_URL: ${{ vars.GSC_SITE_URL }}
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+
+      - name: Ingestão bruta (Search Analytics + sitemaps)
+        run: npm run gsc:pull
+
+      - name: Inspeção de URL das URLs curadas
+        run: npm run gsc:inspect
+
+      - name: Checklist P0/P1 por URL
+        run: npm run report:seo-p0p1
+
+      - name: Mapa consulta → página
+        run: npm run report:query-intent
+
+      - name: Inspeção de URLs noindex no sitemap
+        run: npm run report:noindex-inspection
+
+      - name: Atualizar prioridades do dashboard
+        run: npm run report:seo-priority
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: gsc-snapshot
+          path: |
+            reports/gsc/
+            reports/seo-p0p1-checklist.md
+            reports/seo-p0p1-checklist.json
+            reports/query-intent-map.md
+            reports/query-intent-map.json
+            reports/noindex-inspection.md
+            reports/noindex-inspection.json
+            public/seo-priority.json
