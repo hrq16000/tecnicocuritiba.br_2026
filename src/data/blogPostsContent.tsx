@@ -90,8 +90,8 @@ export const blogPostsContentBase: Record<string, BlogPostContent> = {
       <>
         <p className="lead">Workstation não é “o computador mais caro da loja”. É um conjunto dimensionado para uma carga de trabalho específica, que roda horas seguidas, com arquivos grandes e pouca tolerância a parada. Escolher errado custa dos dois lados: gastar demais em um componente que a aplicação não usa, ou economizar exatamente onde o trabalho trava.</p>
 
-        <h2>Resposta curta</h2>
-        <p>Antes de escolher peça, levante o que roda, o tamanho dos arquivos, quantas aplicações ficam abertas ao mesmo tempo, quantos monitores e em que resolução, quanto tempo a máquina fica sob carga e quanto há disponível para investir. A configuração é consequência desse levantamento — nunca o contrário.</p>
+        <h2>Resposta rápida</h2>
+        <p>Como escolher uma workstation? Levante primeiro a carga de trabalho: quais programas rodam e em qual versão, o tamanho típico dos arquivos, quantas aplicações ficam abertas ao mesmo tempo, quantos monitores e em que resolução, quantas horas por dia a máquina fica sob carga e qual a faixa de investimento. Confronte esse levantamento com os requisitos oficiais publicados pelo fabricante de cada programa e dimensione o conjunto a partir do gargalo real. A configuração é consequência do levantamento — nunca o contrário. <strong>Workstation</strong>, aqui, significa estação de trabalho dimensionada para uma carga profissional contínua, não uma faixa de preço.</p>
 
         <h2>Checklist de requisitos</h2>
         <ul>
