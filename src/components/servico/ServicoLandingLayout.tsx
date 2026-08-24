@@ -75,7 +75,12 @@ export interface ServicoLandingData {
   /** Rodada 3Q — CTA intermediário (mesmo fluxo de triagem) */
   ctaIntermediario?: { titulo: string; texto: string; label: string };
   /** Conteúdo local aprofundado (H2 + parágrafos) para reforço de SEO local */
-  blocoLocal?: { titulo: string; paragrafos: string[] }[];
+  blocoLocal?: {
+    titulo: string;
+    paragrafos: string[];
+    /** Rodada 4A — tabela diagnóstica opcional (aditiva, mesma seção) */
+    tabela?: { headers: string[]; rows: string[][] };
+  }[];
   /** Links internos contextuais para bairros/cidades e problemas próximos */
   linksLocais?: { label: string; to: string }[];
   /** Rodada 3S — variante visual da página (padrão: residencial) */
