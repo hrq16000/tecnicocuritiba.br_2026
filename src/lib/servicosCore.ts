@@ -453,6 +453,9 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { question: "Notebook aceita qualquer SSD?", answer: "Não. É preciso confirmar o formato aceito pelo modelo (SATA 2,5 polegadas, M.2 SATA ou M.2 NVMe), se existe slot livre e se a placa reconhece o padrão. Também existem notebooks com armazenamento ou memória soldados, que limitam ou impedem o upgrade — isso é verificado antes de indicar qualquer peça." },
       { question: "A peça está incluída?", answer: "Não. Peças e componentes são informados separadamente da mão de obra, sempre com aprovação antes da compra. Você também pode fornecer o SSD ou a memória que já possui; nesse caso conferimos a compatibilidade antes de instalar." },
       { question: "Vale a pena fazer upgrade em computador antigo?", answer: "Às vezes, sim; às vezes, não. Em máquinas com plataforma muito defasada, o SSD melhora a resposta, mas o restante continua limitando o desempenho. Quando o valor do upgrade se aproxima do valor de um equipamento adequado, dizemos isso abertamente, e o critério está detalhado na página sobre quando não compensa reparar." },
+      { question: "SSD ou RAM: qual upgrade fazer primeiro?", answer: "Quando o computador ainda usa HD mecânico, o SSD normalmente é o primeiro salto percebido: inicialização, abertura de programas e resposta do Windows deixam de esperar o disco. A RAM vem antes quando a máquina já tem SSD, mas trava ao alternar entre muitas abas, reuniões, planilhas ou programas. A escolha certa depende do gargalo medido no equipamento, não de uma regra de prateleira." },
+      { question: "SSD vale a pena em notebook?", answer: "Vale quando o notebook aceita o formato compatível e o restante do conjunto ainda está saudável. O ganho mais claro aparece em aparelhos com HD mecânico lento. Antes de comprar, confirmamos a interface, o espaço físico, a saúde do disco atual e se a plataforma não tem outro defeito que limite o resultado." },
+      { question: "Qual a diferença real entre HD e SSD?", answer: "O HD usa partes móveis e demora mais para localizar pequenos arquivos; o SSD usa memória flash e reduz essa espera. No dia a dia, isso aparece ao ligar, abrir programas e alternar tarefas. SSD SATA e NVMe têm desempenhos diferentes, mas o salto mais sentido pela maioria das pessoas é sair do HD para qualquer SSD compatível e confiável." },
       { question: "O serviço possui garantia?", answer: "A mão de obra segue as condições publicadas na página de preços e políticas, e a peça segue a garantia do fornecedor ou fabricante. Não existe garantia universal para qualquer falha futura do equipamento." },
     ],
     relacionados: [
@@ -506,6 +509,14 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
           "Também não indicamos upgrade como cura para um sintoma ainda não investigado. Quando a queixa é lentidão, a ordem correta é entender a origem — o caminho está descrito na página sobre computador lento — e só então decidir entre peça, limpeza, reinstalação ou reparo.",
         ],
       },
+      {
+        titulo: "Checklist antes de comprar SSD ou memória",
+        paragrafos: [
+          "Antes de procurar uma peça, separe o modelo exato do notebook ou desktop, quanto espaço está ocupado hoje, quais programas usa ao mesmo tempo e se existem arquivos sem backup. Essas quatro informações já evitam compras incompatíveis e capacidades que ficam pequenas logo depois da instalação.",
+          "Em Curitiba e região, a avaliação pode começar pela triagem: foto da etiqueta do equipamento, captura das configurações do Windows e descrição do sintoma. Isso não substitui a confirmação em bancada, mas deixa claro se a prioridade é armazenamento, memória, limpeza, formatação ou investigação de defeito físico.",
+          "Se o HD não é reconhecido, faz ruído, congela durante a cópia ou apresenta falhas de leitura, não trate como simples upgrade. Nesse caso, preservar os arquivos vem antes de migrar o sistema; insistir em clonar um disco em falha pode reduzir a chance de recuperação.",
+        ],
+      },
     ],
     linksLocais: [
       { label: "Atendimento técnico em Curitiba", to: "/tecnico-informatica-curitiba" },
@@ -513,7 +524,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { label: "Técnico no seu endereço", to: "/atendimento-domicilio" },
       { label: "Preços e políticas", to: "/precos-e-politicas" },
     ],
-    dateModified: "2026-08-05",
+    dateModified: "2026-08-24",
   },
 
   // 5 ─────────────────────────────────────────────────────────
@@ -567,6 +578,8 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { question: "Vou perder meus arquivos na remoção de vírus?", answer: "O objetivo é preservar seus dados. Em infecções graves, com criptografia ou corrupção, nem sempre há garantia de integridade total — por isso priorizamos o backup antes de intervir e explicamos os riscos." },
       { question: "Sempre precisa formatar para remover vírus?", answer: "Não. Muitos casos são resolvidos com limpeza direcionada. A formatação só é indicada quando o sistema está comprometido demais." },
       { question: "Meu navegador foi 'sequestrado', dá para resolver?", answer: "Sim. Removemos extensões e redirecionamentos maliciosos e reconfiguramos o navegador com segurança." },
+      { question: "PC lento é sempre vírus?", answer: "Não. Lentidão pode vir de HD desgastado, pouca memória, aquecimento, programas iniciando junto com o Windows, falta de espaço ou falha física. Vírus é uma hipótese quando a lentidão vem com pop-ups, redirecionamentos, programas desconhecidos, uso anormal de rede ou acessos suspeitos. O diagnóstico separa causa de software e hardware antes de indicar limpeza ou formatação." },
+      { question: "Como identificar vírus no computador sem piorar o problema?", answer: "Observe sinais objetivos: navegador abrindo páginas diferentes, extensões que você não instalou, avisos falsos, contas com login desconhecido ou arquivos bloqueados. Não clique em alertas que pedem telefone ou pagamento e não instale ferramentas anunciadas nesses avisos. Se houver dados importantes, desconecte a internet e procure orientação por outro aparelho." },
       { question: "Como evitar pegar vírus de novo?", answer: "Orientamos sobre antivírus, atualizações, downloads seguros e cuidado com anexos e links. A prevenção faz parte do atendimento." },
       { question: "Recebi um aviso pedindo pagamento, é golpe?", answer: "Avisos que pedem pagamento ou ligação urgente costumam ser golpe. Não pague nem ligue: avaliamos o equipamento e orientamos com segurança." },
     ],
@@ -607,7 +620,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { label: "Coleta e entrega do equipamento", to: "/coleta-e-entrega" },
       { label: "Preços e políticas", to: "/precos-e-politicas" },
     ],
-    dateModified: "2026-08-05",
+    dateModified: "2026-08-24",
   },
 
   // 6 ─────────────────────────────────────────────────────────
@@ -660,6 +673,8 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
     faqs: [
       { question: "A recuperação de dados é garantida?", answer: "Não. Nenhum serviço sério garante resultado. Fazemos a avaliação, explicamos as chances reais do seu caso e trabalhamos para não piorar o estado do dispositivo. Quando não há perspectiva técnica, dizemos antes de executar qualquer tentativa." },
       { question: "Apaguei arquivos, o que devo fazer agora?", answer: "Pare de usar o dispositivo imediatamente e não instale programas de recuperação nele. Cada nova gravação pode sobrescrever justamente o que você quer de volta. Desligue, guarde e traga para avaliação o quanto antes." },
+      { question: "Meu HD não é reconhecido: ainda dá para recuperar os arquivos?", answer: "Às vezes, sim, mas não é possível prometer resultado sem avaliar. O mais importante é não inicializar, formatar ou insistir em ligar a unidade. O disco pode ter falha de cabo, case, sistema de arquivos ou defeito físico; cada cenário exige uma abordagem diferente. Preservar o estado atual é a primeira medida que protege a chance de leitura." },
+      { question: "Posso usar programa de recuperação no HD com defeito?", answer: "Não antes de avaliar. Instalar ou executar programas no mesmo disco pode gravar por cima de arquivos ainda recuperáveis, e leituras forçadas em mídia com falha física pioram o desgaste. Quando há possibilidade técnica, o procedimento seguro é trabalhar sobre uma cópia, não sobre o original." },
       { question: "Meu HD faz barulho, tem solução?", answer: "Ruído repetitivo costuma indicar falha física, que é o cenário mais delicado. Não insista em ligar e desligar: cada tentativa força um hardware já comprometido. A avaliação define se o caso é tratável aqui ou se exige ambiente de laboratório especializado." },
       { question: "Recuperação em SSD é diferente de HD?", answer: "Sim. O SSD gerencia os blocos internamente e descarta dados apagados de forma automática, o que reduz a janela de recuperação em comparação com o HD. Falha de controladora frequentemente encerra o caso. Preferimos explicar esse limite antes de qualquer tentativa." },
       { question: "Vocês veem o conteúdo dos meus arquivos?", answer: "O acesso é limitado ao necessário para confirmar integridade e organizar a entrega, sempre com sua autorização. Não copiamos, divulgamos nem utilizamos conteúdo pessoal, e o material recuperado é entregue em mídia combinada com você." },
@@ -708,7 +723,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { label: "Política de privacidade", to: "/politica-de-privacidade" },
       { label: "Preços e políticas", to: "/precos-e-politicas" },
     ],
-    dateModified: "2026-08-05",
+    dateModified: "2026-08-24",
   },
 
   // 7 ─────────────────────────────────────────────────────────
@@ -761,6 +776,8 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
     },
     faqs: [
       { question: "Meu Wi-Fi não pega em todos os cômodos, o que fazer?", answer: "Avaliamos o ambiente e indicamos posicionamento do roteador, repetidores ou sistema mesh para ampliar a cobertura de forma estável." },
+      { question: "Wi-Fi cai toda hora: o problema é o roteador?", answer: "Pode ser, mas não é a única hipótese. Queda pode vir de posição inadequada, interferência de redes vizinhas, faixa congestionada, fonte do roteador, aquecimento, número de dispositivos, configuração ou instabilidade da operadora. Testamos primeiro por cabo e perto do roteador para separar internet, rede local e cobertura antes de trocar equipamento." },
+      { question: "Como melhorar o sinal de Wi-Fi em casa ou no escritório?", answer: "Comece pela posição: roteador alto, central e longe de armário metálico, micro-ondas e paredes muito espessas. Depois, escolha o canal e a faixa adequados e avalie pontos adicionais onde o sinal realmente cai. Repetidor, mesh e cabeamento são soluções para cenários diferentes; instalar sem medir costuma apenas deslocar o problema." },
       { question: "Repetidor ou mesh, qual é melhor?", answer: "Depende do ambiente. O mesh costuma oferecer transição mais suave; o repetidor pode resolver casos pontuais. Indicamos o adequado após avaliar." },
       { question: "Vocês configuram a rede da minha empresa?", answer: "Sim. Trabalhamos estabilidade, segurança e organização de redes empresariais, com atendimento pontual ou recorrente conforme o escopo definido após a avaliação." },
       { question: "Por que o Wi-Fi cai em alguns ambientes do escritório?", answer: "Normalmente por distância, parede de concreto, divisórias metálicas, excesso de redes vizinhas na faixa de 2,4 GHz ou por um único roteador tentando cobrir toda a área. A medição no local mostra onde o sinal deixa de ser utilizável." },
@@ -840,7 +857,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { label: "Suporte para empresas", to: "/empresa-de-ti-curitiba" },
       { label: "Preços e políticas", to: "/precos-e-politicas" },
     ],
-    dateModified: "2026-08-06",
+    dateModified: "2026-08-24",
   },
 
   // 8 ─────────────────────────────────────────────────────────
@@ -900,6 +917,8 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { question: "Como funciona o faturamento?", answer: "O escopo é definido após o diagnóstico e o valor é apresentado e aprovado antes da execução. As formas de pagamento e as condições aplicáveis estão descritas na página de preços e políticas." },
       { question: "Há garantia?", answer: "Sim, conforme o serviço executado e as condições publicadas em preços e políticas. A garantia cobre o serviço realizado, não novas falhas de causa diferente nem alterações feitas depois da entrega." },
       { question: "Vocês atendem empresas de qual porte?", answer: "Atendemos principalmente autônomos, escritórios, comércios e micro e pequenas empresas em Curitiba e região, de forma avulsa ou recorrente, dentro da nossa capacidade operacional." },
+      { question: "Quando uma pequena empresa precisa terceirizar o suporte de TI?", answer: "Quando as falhas começam a consumir tempo da equipe, não existe responsável claro pelas máquinas e rede, ou os mesmos incidentes voltam sem registro. Terceirizar não significa contratar suporte ilimitado: significa definir um escopo, uma rotina e uma referência técnica para diagnosticar, priorizar e documentar as decisões." },
+      { question: "O que preparar antes de pedir suporte técnico empresarial?", answer: "Informe quantas pessoas foram afetadas, qual equipamento ou setor parou, mensagem de erro, horário de início, o que mudou, impacto na operação e se existe backup recente. Não envie senhas ou códigos de autenticação por mensagem. Com esse contexto, a triagem diferencia urgência real de ajuste simples e orienta se o caso pode começar remotamente." },
       { question: "Como funciona o atendimento recorrente?", answer: "Definimos escopo, itens acompanhados e periodicidade conforme a necessidade da empresa. Não é suporte ilimitado: o que está incluído e o que é cobrado à parte fica registrado antes de começar." },
       { question: "Fazem atendimento de emergência?", answer: "Avaliamos situações com operação parada e priorizamos o restabelecimento conforme a disponibilidade da agenda. Não mantemos plantão em regime ininterrupto." },
       { question: "Resolvem problemas de rede e impressão?", answer: "Sim, esses estão entre os chamados mais comuns. Casos que envolvem cobertura, cabeamento ou reestruturação da conectividade são conduzidos pela página de redes e Wi-Fi." },
@@ -966,7 +985,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { label: "Atendimento remoto", to: "/atendimento-remoto" },
       { label: "Preços e políticas", to: "/precos-e-politicas" },
     ],
-    dateModified: "2026-08-06",
+    dateModified: "2026-08-24",
   },
 
   // 9 ─────────────────────────────────────────────────────────

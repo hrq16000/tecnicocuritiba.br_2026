@@ -18,6 +18,14 @@ export const Route = createFileRoute("/servicos/recuperacao-de-dados")({
         "answer": "Pare de usar o dispositivo imediatamente e não instale programas de recuperação nele. Cada nova gravação pode sobrescrever justamente o que você quer de volta. Desligue, guarde e traga para avaliação o quanto antes."
       },
       {
+        "question": "Meu HD não é reconhecido: ainda dá para recuperar os arquivos?",
+        "answer": "Às vezes, sim, mas não é possível prometer resultado sem avaliar. O mais importante é não inicializar, formatar ou insistir em ligar a unidade. O disco pode ter falha de cabo, case, sistema de arquivos ou defeito físico; cada cenário exige uma abordagem diferente. Preservar o estado atual é a primeira medida que protege a chance de leitura."
+      },
+      {
+        "question": "Posso usar programa de recuperação no HD com defeito?",
+        "answer": "Não antes de avaliar. Instalar ou executar programas no mesmo disco pode gravar por cima de arquivos ainda recuperáveis, e leituras forçadas em mídia com falha física pioram o desgaste. Quando há possibilidade técnica, o procedimento seguro é trabalhar sobre uma cópia, não sobre o original."
+      },
+      {
         "question": "Meu HD faz barulho, tem solução?",
         "answer": "Ruído repetitivo costuma indicar falha física, que é o cenário mais delicado. Não insista em ligar e desligar: cada tentativa força um hardware já comprometido. A avaliação define se o caso é tratável aqui ou se exige ambiente de laboratório especializado."
       },

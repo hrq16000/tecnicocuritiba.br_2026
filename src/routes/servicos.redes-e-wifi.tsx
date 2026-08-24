@@ -14,6 +14,14 @@ export const Route = createFileRoute("/servicos/redes-e-wifi")({
         "answer": "Avaliamos o ambiente e indicamos posicionamento do roteador, repetidores ou sistema mesh para ampliar a cobertura de forma estável."
       },
       {
+        "question": "Wi-Fi cai toda hora: o problema é o roteador?",
+        "answer": "Pode ser, mas não é a única hipótese. Queda pode vir de posição inadequada, interferência de redes vizinhas, faixa congestionada, fonte do roteador, aquecimento, número de dispositivos, configuração ou instabilidade da operadora. Testamos primeiro por cabo e perto do roteador para separar internet, rede local e cobertura antes de trocar equipamento."
+      },
+      {
+        "question": "Como melhorar o sinal de Wi-Fi em casa ou no escritório?",
+        "answer": "Comece pela posição: roteador alto, central e longe de armário metálico, micro-ondas e paredes muito espessas. Depois, escolha o canal e a faixa adequados e avalie pontos adicionais onde o sinal realmente cai. Repetidor, mesh e cabeamento são soluções para cenários diferentes; instalar sem medir costuma apenas deslocar o problema."
+      },
+      {
         "question": "Repetidor ou mesh, qual é melhor?",
         "answer": "Depende do ambiente. O mesh costuma oferecer transição mais suave; o repetidor pode resolver casos pontuais. Indicamos o adequado após avaliar."
       },

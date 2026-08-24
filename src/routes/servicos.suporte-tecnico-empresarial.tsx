@@ -46,6 +46,14 @@ export const Route = createFileRoute("/servicos/suporte-tecnico-empresarial")({
         "answer": "Atendemos principalmente autônomos, escritórios, comércios e micro e pequenas empresas em Curitiba e região, de forma avulsa ou recorrente, dentro da nossa capacidade operacional."
       },
       {
+        "question": "Quando uma pequena empresa precisa terceirizar o suporte de TI?",
+        "answer": "Quando as falhas começam a consumir tempo da equipe, não existe responsável claro pelas máquinas e rede, ou os mesmos incidentes voltam sem registro. Terceirizar não significa contratar suporte ilimitado: significa definir um escopo, uma rotina e uma referência técnica para diagnosticar, priorizar e documentar as decisões."
+      },
+      {
+        "question": "O que preparar antes de pedir suporte técnico empresarial?",
+        "answer": "Informe quantas pessoas foram afetadas, qual equipamento ou setor parou, mensagem de erro, horário de início, o que mudou, impacto na operação e se existe backup recente. Não envie senhas ou códigos de autenticação por mensagem. Com esse contexto, a triagem diferencia urgência real de ajuste simples e orienta se o caso pode começar remotamente."
+      },
+      {
         "question": "Como funciona o atendimento recorrente?",
         "answer": "Definimos escopo, itens acompanhados e periodicidade conforme a necessidade da empresa. Não é suporte ilimitado: o que está incluído e o que é cobrado à parte fica registrado antes de começar."
       },

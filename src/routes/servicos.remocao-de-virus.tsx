@@ -22,6 +22,14 @@ export const Route = createFileRoute("/servicos/remocao-de-virus")({
         "answer": "Sim. Removemos extensões e redirecionamentos maliciosos e reconfiguramos o navegador com segurança."
       },
       {
+        "question": "PC lento é sempre vírus?",
+        "answer": "Não. Lentidão pode vir de HD desgastado, pouca memória, aquecimento, programas iniciando junto com o Windows, falta de espaço ou falha física. Vírus é uma hipótese quando a lentidão vem com pop-ups, redirecionamentos, programas desconhecidos, uso anormal de rede ou acessos suspeitos. O diagnóstico separa causa de software e hardware antes de indicar limpeza ou formatação."
+      },
+      {
+        "question": "Como identificar vírus no computador sem piorar o problema?",
+        "answer": "Observe sinais objetivos: navegador abrindo páginas diferentes, extensões que você não instalou, avisos falsos, contas com login desconhecido ou arquivos bloqueados. Não clique em alertas que pedem telefone ou pagamento e não instale ferramentas anunciadas nesses avisos. Se houver dados importantes, desconecte a internet e procure orientação por outro aparelho."
+      },
+      {
         "question": "Como evitar pegar vírus de novo?",
         "answer": "Orientamos sobre antivírus, atualizações, downloads seguros e cuidado com anexos e links. A prevenção faz parte do atendimento."
       },

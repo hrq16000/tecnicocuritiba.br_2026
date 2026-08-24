@@ -38,6 +38,18 @@ export const Route = createFileRoute("/servicos/upgrade-ssd-ram")({
         "answer": "Às vezes, sim; às vezes, não. Em máquinas com plataforma muito defasada, o SSD melhora a resposta, mas o restante continua limitando o desempenho. Quando o valor do upgrade se aproxima do valor de um equipamento adequado, dizemos isso abertamente, e o critério está detalhado na página sobre quando não compensa reparar."
       },
       {
+        "question": "SSD ou RAM: qual upgrade fazer primeiro?",
+        "answer": "Quando o computador ainda usa HD mecânico, o SSD normalmente é o primeiro salto percebido: inicialização, abertura de programas e resposta do Windows deixam de esperar o disco. A RAM vem antes quando a máquina já tem SSD, mas trava ao alternar entre muitas abas, reuniões, planilhas ou programas. A escolha certa depende do gargalo medido no equipamento, não de uma regra de prateleira."
+      },
+      {
+        "question": "SSD vale a pena em notebook?",
+        "answer": "Vale quando o notebook aceita o formato compatível e o restante do conjunto ainda está saudável. O ganho mais claro aparece em aparelhos com HD mecânico lento. Antes de comprar, confirmamos a interface, o espaço físico, a saúde do disco atual e se a plataforma não tem outro defeito que limite o resultado."
+      },
+      {
+        "question": "Qual a diferença real entre HD e SSD?",
+        "answer": "O HD usa partes móveis e demora mais para localizar pequenos arquivos; o SSD usa memória flash e reduz essa espera. No dia a dia, isso aparece ao ligar, abrir programas e alternar tarefas. SSD SATA e NVMe têm desempenhos diferentes, mas o salto mais sentido pela maioria das pessoas é sair do HD para qualquer SSD compatível e confiável."
+      },
+      {
         "question": "O serviço possui garantia?",
         "answer": "A mão de obra segue as condições publicadas na página de preços e políticas, e a peça segue a garantia do fornecedor ou fabricante. Não existe garantia universal para qualquer falha futura do equipamento."
       }
