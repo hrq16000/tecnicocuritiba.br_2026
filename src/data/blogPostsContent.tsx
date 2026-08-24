@@ -60,6 +60,38 @@ export const blogPostsContentBase: Record<string, BlogPostContent> = {
         <h2>8. Onde termina o computador e começa o fornecedor</h2>
         <p>Sistema contratado — contábil, jurídico, de gestão, e-mail corporativo, certificado digital — é mantido por terceiros. O suporte técnico atua na camada da máquina, da rede e do acesso: instalar, conectar, corrigir sessão, ajustar permissão e periférico. Erro interno do sistema, licença, indisponibilidade do servidor e recuperação de conta são do fornecedor. Deixar isso claro por escrito evita expectativa errada nos dois lados. O escopo completo está em <Link to="/servicos/suporte-tecnico-empresarial" className="text-accent">suporte técnico empresarial</Link>.</p>
 
+        <h2>Tabela de diagnóstico: paradas evitáveis no escritório</h2>
+        <table>
+          <thead>
+            <tr><th>Causa possível</th><th>Sintoma observável</th><th>Como diferenciar</th><th>Próxima ação</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Arquivo salvo apenas na máquina do usuário</td><td>Documento “sumiu” após defeito ou troca de equipamento</td><td>Verificar se o caminho do arquivo é local (área de trabalho) ou o local oficial compartilhado</td><td>Definir e comunicar um único local oficial de trabalho</td></tr>
+            <tr><td>Sincronização confundida com cópia de segurança</td><td>Exclusão ou corrupção se propagou para todos os dispositivos</td><td>Checar se o serviço mantém versões anteriores recuperáveis</td><td>Adicionar cópia com versionamento e teste mensal de restauração</td></tr>
+            <tr><td>Credencial compartilhada por toda a equipe</td><td>Ninguém sabe quem alterou o quê; saída de pessoa exige trocar tudo</td><td>Conferir se há conta individual por pessoa nos sistemas críticos</td><td>Contas individuais + gerenciador para senhas compartilhadas</td></tr>
+            <tr><td>Distribuição interna de rede inadequada</td><td>“Internet lenta” só em parte do escritório ou em horário de pico</td><td>Comparar a mesma tarefa em máquina com cabo e em máquina sem fio</td><td>Avaliar posicionamento, cabeamento e capacidade do equipamento</td></tr>
+            <tr><td>Falta de proteção de energia</td><td>Arquivo corrompido ou sistema que não inicia após queda de luz</td><td>Relacionar a data do problema com oscilação ou desligamento abrupto</td><td>Nobreak nos equipamentos que não podem cair</td></tr>
+            <tr><td>Responsável administrativo indefinido</td><td>Recuperação de conta travada por falta de acesso ao e-mail cadastrado</td><td>Conferir qual e-mail recebe a recuperação de cada sistema</td><td>Registrar responsável e e-mail de recuperação por sistema</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Sincronização e cópia de segurança não são a mesma coisa</h2>
+        <p><strong>Sincronização</strong> mantém o mesmo estado em vários dispositivos: o que você apaga aqui some lá. <strong>Cópia de segurança</strong> guarda versões anteriores que podem ser restauradas depois do erro. Um escritório pode ter sincronização perfeita e ainda assim perder um mês de trabalho. A referência prática usada no mercado — três cópias, dois tipos de mídia, uma fora do local — só protege quando a restauração é testada.</p>
+
+        <h2>Erros comuns</h2>
+        <ul>
+          <li>Guardar senhas, códigos de autenticação ou dados de clientes dentro da planilha de inventário</li>
+          <li>Tratar sincronização em nuvem como cópia de segurança</li>
+          <li>Nunca testar a restauração — descobrir que a cópia não funciona no dia do incidente</li>
+          <li>Usar um único login administrativo compartilhado por toda a equipe</li>
+          <li>Cadastrar sistemas com o e-mail pessoal de alguém que pode sair da empresa</li>
+          <li>Enviar senha ou código de verificação por mensagem para “agilizar” o suporte</li>
+          <li>Comprar equipamento sem inventário, repetindo o gargalo que já existe</li>
+        </ul>
+
+        <h2>Segurança dos dados: limites do que fazer sozinho</h2>
+        <p>Reorganizar pastas, mudar o local oficial dos arquivos ou trocar máquina são operações em que dados se perdem com facilidade. Faça uma cópia recuperável antes de qualquer movimentação em massa e nunca use a própria máquina de origem como único destino. Em caso de suspeita de invasão ou de arquivos criptografados por terceiros, pare de usar o equipamento e preserve o estado atual: sobrescrever ou reinstalar reduz o que ainda pode ser recuperado.</p>
+
         <h2>Checklist de organização</h2>
         <ul>
           <li>Inventário atualizado de máquinas, periféricos e programas críticos</li>
