@@ -3,7 +3,7 @@
 // supabase function: mcp
 // Bundled from src/lib/mcp/index.ts by @lovable.dev/mcp-js.
 // src/lib/mcp/index.ts
-import { defineMcp } from "npm:@lovable.dev/mcp-js@0.26.2";
+import { auth, defineMcp } from "npm:@lovable.dev/mcp-js@0.26.2";
 
 // src/lib/mcp/tools/validate-seo.ts
 import { defineTool } from "npm:@lovable.dev/mcp-js@0.26.2";
@@ -228,12 +228,22 @@ ${linhas.join("\n")}` }],
 });
 
 // src/lib/mcp/index.ts
+var SUPABASE_URL = "https://hisepaayuwxjrnumbqeq.supabase.co".replace(/\/+$/, "");
 var mcp_default = defineMcp({
   name: "tecnico-curitiba-br",
   title: "Tecnico.Curitiba.br",
   version: "0.1.0",
   instructions: "Ferramentas de valida\xE7\xE3o t\xE9cnica de SEO do site T\xE9cnico em Curitiba. Use `validate_seo` para conferir title, description, canonical, og:url e H1 de uma rota p\xFAblica; `validate_jsonld` para extrair e validar os blocos schema.org; e `check_geo_conformance` para auditar em lote a conformidade GEO (conte\xFAdo leg\xEDvel sem JavaScript) de v\xE1rias rotas. Todas leem apenas HTML p\xFAblico do site.",
-  tools: [validate_seo_default, validate_jsonld_default, check_geo_conformance_default]
+  tools: [validate_seo_default, validate_jsonld_default, check_geo_conformance_default],
+  // Exige OAuth: só tokens válidos emitidos pelo backend do projeto podem
+  // chamar as ferramentas. Sem isso o servidor MCP fica público após publicar.
+  auth: auth.oauth.issuer({
+    issuer: `${SUPABASE_URL}/auth/v1`,
+    jwksUri: `${SUPABASE_URL}/auth/v1/.well-known/jwks.json`,
+    acceptedAudiences: ["authenticated"],
+    resource: `${SUPABASE_URL}/functions/v1/mcp`,
+    resourceName: "Tecnico.Curitiba.br MCP"
+  })
 });
 
 // lovable-mcp-supabase-entry.ts
