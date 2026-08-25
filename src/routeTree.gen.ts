@@ -433,6 +433,7 @@ import { Route as ServicosRemocaoDeVirusRouteImport } from './routes/servicos.re
 import { Route as ServicosSuporteHomeOfficeRouteImport } from './routes/servicos.suporte-home-office'
 import { Route as ServicosSuporteTecnicoEmpresarialRouteImport } from './routes/servicos.suporte-tecnico-empresarial'
 import { Route as ServicosUpgradeSsdRamRouteImport } from './routes/servicos.upgrade-ssd-ram'
+import { Route as AdminOrdensProtocoloRouteImport } from './routes/admin.ordens.$protocolo'
 import { Route as AdminOrdensNovaRouteImport } from './routes/admin.ordens.nova'
 import { Route as ServicosServicoCidadeRouteImport } from './routes/servicos.$servico.$cidade'
 import { Route as ServicosBackupRecuperacaoIndexRouteImport } from './routes/servicos.backup-recuperacao.index'
@@ -2761,6 +2762,11 @@ const ServicosUpgradeSsdRamRoute = ServicosUpgradeSsdRamRouteImport.update({
   path: '/servicos/upgrade-ssd-ram',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AdminOrdensProtocoloRoute = AdminOrdensProtocoloRouteImport.update({
+  id: '/$protocolo',
+  path: '/$protocolo',
+  getParentRoute: () => AdminOrdensRoute,
+} as any)
 const AdminOrdensNovaRoute = AdminOrdensNovaRouteImport.update({
   id: '/nova',
   path: '/nova',
@@ -3625,6 +3631,7 @@ export interface FileRoutesByFullPath {
   '/parceiros/': typeof ParceirosIndexRoute
   '/problemas/': typeof ProblemasIndexRoute
   '/servicos/': typeof ServicosIndexRoute
+  '/admin/ordens/$protocolo': typeof AdminOrdensProtocoloRoute
   '/admin/ordens/nova': typeof AdminOrdensNovaRoute
   '/servicos/$servico/$cidade': typeof ServicosServicoCidadeRoute
   '/servicos/backup-recuperacao/centro': typeof ServicosBackupRecuperacaoCentroRoute
@@ -4126,6 +4133,7 @@ export interface FileRoutesByTo {
   '/parceiros': typeof ParceirosIndexRoute
   '/problemas': typeof ProblemasIndexRoute
   '/servicos': typeof ServicosIndexRoute
+  '/admin/ordens/$protocolo': typeof AdminOrdensProtocoloRoute
   '/admin/ordens/nova': typeof AdminOrdensNovaRoute
   '/servicos/$servico/$cidade': typeof ServicosServicoCidadeRoute
   '/servicos/backup-recuperacao/centro': typeof ServicosBackupRecuperacaoCentroRoute
@@ -4628,6 +4636,7 @@ export interface FileRoutesById {
   '/parceiros/': typeof ParceirosIndexRoute
   '/problemas/': typeof ProblemasIndexRoute
   '/servicos/': typeof ServicosIndexRoute
+  '/admin/ordens/$protocolo': typeof AdminOrdensProtocoloRoute
   '/admin/ordens/nova': typeof AdminOrdensNovaRoute
   '/servicos/$servico/$cidade': typeof ServicosServicoCidadeRoute
   '/servicos/backup-recuperacao/centro': typeof ServicosBackupRecuperacaoCentroRoute
@@ -5131,6 +5140,7 @@ export interface FileRouteTypes {
     | '/parceiros/'
     | '/problemas/'
     | '/servicos/'
+    | '/admin/ordens/$protocolo'
     | '/admin/ordens/nova'
     | '/servicos/$servico/$cidade'
     | '/servicos/backup-recuperacao/centro'
@@ -5632,6 +5642,7 @@ export interface FileRouteTypes {
     | '/parceiros'
     | '/problemas'
     | '/servicos'
+    | '/admin/ordens/$protocolo'
     | '/admin/ordens/nova'
     | '/servicos/$servico/$cidade'
     | '/servicos/backup-recuperacao/centro'
@@ -6133,6 +6144,7 @@ export interface FileRouteTypes {
     | '/parceiros/'
     | '/problemas/'
     | '/servicos/'
+    | '/admin/ordens/$protocolo'
     | '/admin/ordens/nova'
     | '/servicos/$servico/$cidade'
     | '/servicos/backup-recuperacao/centro'
@@ -9681,6 +9693,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicosUpgradeSsdRamRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/admin/ordens/$protocolo': {
+      id: '/admin/ordens/$protocolo'
+      path: '/$protocolo'
+      fullPath: '/admin/ordens/$protocolo'
+      preLoaderRoute: typeof AdminOrdensProtocoloRouteImport
+      parentRoute: typeof AdminOrdensRoute
+    }
     '/admin/ordens/nova': {
       id: '/admin/ordens/nova'
       path: '/nova'
@@ -10210,10 +10229,12 @@ declare module '@tanstack/react-router' {
 }
 
 interface AdminOrdensRouteChildren {
+  AdminOrdensProtocoloRoute: typeof AdminOrdensProtocoloRoute
   AdminOrdensNovaRoute: typeof AdminOrdensNovaRoute
 }
 
 const AdminOrdensRouteChildren: AdminOrdensRouteChildren = {
+  AdminOrdensProtocoloRoute: AdminOrdensProtocoloRoute,
   AdminOrdensNovaRoute: AdminOrdensNovaRoute,
 }
 
