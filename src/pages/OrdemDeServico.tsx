@@ -140,8 +140,10 @@ const OrdemDeServico = () => {
 
 
   const baixarPdf = async () => {
-    const n = garantirNumero();
+    const n = await garantirNumero();
+    if (!n) return;
     const { jsPDF } = await import("jspdf");
+
     const doc = new jsPDF({ unit: "pt", format: "a4" });
     const M = 48;
     const W = doc.internal.pageSize.getWidth();
