@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-25T00:39:14.079Z",
+  "geradoEm": "2026-08-25T00:58:08.992Z",
   "totais": {
     "urls": 170,
     "indexadas": 22,
@@ -157,6 +157,40 @@
     "mudadas": 0,
     "ignoradas": 0
   },
+  "tiers": [
+    {
+      "tier": "A",
+      "total": 31,
+      "indexadas": 18,
+      "descobertas": 3,
+      "desconhecidas": 9,
+      "taxaIndexacao": 58.1
+    },
+    {
+      "tier": "B",
+      "total": 69,
+      "indexadas": 2,
+      "descobertas": 27,
+      "desconhecidas": 37,
+      "taxaIndexacao": 2.9
+    },
+    {
+      "tier": "C",
+      "total": 58,
+      "indexadas": 2,
+      "descobertas": 28,
+      "desconhecidas": 28,
+      "taxaIndexacao": 3.4
+    },
+    {
+      "tier": "D",
+      "total": 12,
+      "indexadas": 0,
+      "descobertas": 1,
+      "desconhecidas": 11,
+      "taxaIndexacao": 0
+    }
+  ],
   "qualidade": {
     "faixas": {
       "D": 21,
@@ -164,6 +198,7 @@
       "B": 85,
       "A": 22
     },
+    "scoreMedianoGeral": 73,
     "piores": [
       {
         "path": "/servicos/redes-wifi/alto-da-xv",
@@ -333,10 +368,21 @@
     ]
   },
   "doorway": {
-    "total": 96,
-    "alto": 42,
+    "total": 56,
+    "alto": 2,
     "medio": 16,
     "baixo": 32,
-    "ok": 6
+    "ok": 6,
+    "consolidadas": 40
+  },
+  "pisoQualidade": {
+    "score": 60,
+    "textoExclusivoRatio": 0.16,
+    "similaridadeMax": 0.55
+  },
+  "consolidacao": {
+    "total": 40,
+    "urlsAntes": 170,
+    "urlsDepois": 130
   }
 }

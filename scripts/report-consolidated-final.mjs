@@ -28,6 +28,10 @@ const jsonld = ler("reports/jsonld-integrity.json");
 const smoke = ler("reports/smoke-tests.json") ?? ler("reports/post-deploy-checklist.json");
 const links = ler("reports/blog-link-fixes.json");
 const local = ler("reports/local-page-quality.json");
+const auditLocal = ler("reports/servico-bairro-decisions.json");
+const consolidados = (auditLocal?.decisoes ?? []).filter((d) => d.decisao === "CONSOLIDATE");
+
+
 
 const geradoEm = new Date().toISOString();
 
@@ -219,6 +223,23 @@ const totais = {
   outras: clusterPayload.reduce((s, c) => s + c.outras, 0),
 };
 
+// Tier A é o único compromisso de indexação da Fase Final: páginas comerciais
+// e de sintoma que devem estar indexadas. Tiers B–D são consequência.
+const tierMap = new Map();
+for (const u of inv?.urls ?? []) {
+  const t = u.tier ?? "SEM_TIER";
+  const row = tierMap.get(t) ?? { tier: t, total: 0, indexadas: 0, descobertas: 0, desconhecidas: 0 };
+  row.total++;
+  if (u.gscStatus === "INDEXED") row.indexadas++;
+  else if (u.gscStatus === "DISCOVERED_NOT_INDEXED") row.descobertas++;
+  else if (u.gscStatus === "UNKNOWN_TO_GOOGLE") row.desconhecidas++;
+  tierMap.set(t, row);
+}
+const tiers = [...tierMap.values()]
+  .map((r) => ({ ...r, taxaIndexacao: r.total ? Number(((r.indexadas / r.total) * 100).toFixed(1)) : null }))
+  .sort((a, b) => String(a.tier).localeCompare(String(b.tier)));
+
+
 const dia = geradoEm.slice(0, 10);
 const historico = existsSync(historicoPath) ? JSON.parse(readFileSync(historicoPath, "utf8")) : [];
 const semHoje = historico.filter((h) => h.dia !== dia);
@@ -247,13 +268,20 @@ writeFileSync(
             ignoradas: idxnow.ignoradas?.length ?? 0,
           }
         : null,
+      tiers,
       qualidade: qual
         ? {
             faixas: qual.results.reduce((acc, r) => ({ ...acc, [r.faixa]: (acc[r.faixa] ?? 0) + 1 }), {}),
+            scoreMedianoGeral: mediana(qual.results.map((r) => r.score)),
             piores: qual.results.slice(0, 15).map((r) => ({ path: r.path, score: r.score, faixa: r.faixa, causas: r.causas })),
           }
         : null,
       doorway: local?.resumo ?? null,
+      pisoQualidade: local?.floor ?? null,
+      consolidacao: consolidados.length
+        ? { total: consolidados.length, urlsAntes: totalUrls, urlsDepois: totalUrls - consolidados.length }
+        : null,
+
     },
     null,
     2,

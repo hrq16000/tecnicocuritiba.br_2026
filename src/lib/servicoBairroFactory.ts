@@ -15,6 +15,7 @@
  */
 import type { ServicoBairroData } from "@/pages/servico-bairro/ServicoBairroTemplate";
 import { BAIRROS_INDEXAVEIS } from "@/pages/servico-bairro/wifiTvBairroData";
+import { CONSOLIDATED_LOCAL_PATHS } from "@/lib/consolidatedLocalUrls";
 
 /**
  * Bairros-âncora do sitemap curado (política de poda).
@@ -282,6 +283,8 @@ export function isIndexavel(servicoSlug: string, bairroSlug: string): boolean {
   if (!bairro) return false;
   if (!(BAIRROS_ANCORA as readonly string[]).includes(bairroSlug)) return false;
   if (ROTAS_ESTATICAS_EXISTENTES.has(`${servicoSlug}/${bairroSlug}`)) return false;
+  // Fase Final: consolidada ⇒ 301, nunca indexável.
+  if (CONSOLIDATED_LOCAL_PATHS.has(`/servicos/${servicoSlug}/${bairroSlug}`)) return false;
   return Boolean(bairro.narrativaLocal || bairro.descricaoLocal);
 }
 

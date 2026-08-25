@@ -13,6 +13,7 @@
  */
 
 import { EDITORIAL_WAVE_SLUGS } from "./editorial-wave.mjs";
+import { CONSOLIDATED_LOCAL_PATHS } from "./consolidated-local-urls.mjs";
 
 export const BASE_URL = "https://tecnico.curitiba.br";
 
@@ -115,7 +116,14 @@ export const BAIRROS = [
  * e para o hub de Curitiba. Devem permanecer em sincronia com
  * `GENERATED_INDEXABLE_PATHS`.
  */
-export const SERVICO_BAIRRO = [
+/**
+ * Fase Final: o conjunto curado é o que sobrevive à auditoria individual —
+ * URLs consolidadas (301) são removidas aqui, nunca "preservadas por existir".
+ */
+const semConsolidadas = (paths) =>
+  paths.filter((path) => !CONSOLIDATED_LOCAL_PATHS.has(path));
+
+export const SERVICO_BAIRRO = semConsolidadas([
   "/servicos/formatacao-computador/cic",
   "/servicos/formatacao-computador/batel",
   "/servicos/formatacao-computador/agua-verde",
@@ -143,7 +151,7 @@ export const SERVICO_BAIRRO = [
   "/servicos/upgrade-ssd-memoria/ecoville",
   "/servicos/upgrade-ssd-memoria/alto-da-xv",
   "/servicos/upgrade-ssd-memoria/reboucas",
-].map((path) => ({ path, changefreq: "monthly", priority: "0.6" }));
+]).map((path) => ({ path, changefreq: "monthly", priority: "0.6" }));
 
 /**
  * Liberação de índice — landings Wi-Fi e Smart TV dos bairros com
@@ -151,7 +159,7 @@ export const SERVICO_BAIRRO = [
  * Rota estática dedicada, canonical self e robots index.
  * Onda 2: conclui 100% dos bairros herdados reformados.
  */
-export const WIFI_TV_BAIRRO = [
+const WIFI_TV_BAIRRO_CANDIDATOS = [
   "jardim-das-americas",
   "ecoville",
   "alto-da-xv",
@@ -171,7 +179,10 @@ export const WIFI_TV_BAIRRO = [
 ].flatMap((slug) => [
   `/servicos/redes-wifi/${slug}`,
   `/servicos/manutencao-tv/${slug}`,
-]).map((path) => ({ path, changefreq: "monthly", priority: "0.6" }));
+]);
+export const WIFI_TV_BAIRRO = semConsolidadas(WIFI_TV_BAIRRO_CANDIDATOS).map(
+  (path) => ({ path, changefreq: "monthly", priority: "0.6" }),
+);
 
 /**
  * Cluster de problemas (sintomas). Piloto controlado da Rodada 3B: só entram

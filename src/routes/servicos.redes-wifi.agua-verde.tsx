@@ -1,14 +1,8 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { seoHead } from "@/lib/seo/routeHead";
-import RedesWifiAguaVerde from "@/pages/servico-bairro/RedesWifiAguaVerde";
+import { createFileRoute, redirect } from "@tanstack/react-router";
 
+// Consolidada na Fase Final: sem intenção independente comprovada.
 export const Route = createFileRoute("/servicos/redes-wifi/agua-verde")({
-  /* seo:auto-start */
-  head: () => seoHead({
-    "path": "/servicos/redes-wifi/agua-verde",
-    "title": "Configuração de Wi-Fi no Água Verde | Curitiba",
-    "description": "Wi-Fi, mesh e roteadores no Água Verde, Curitiba. Instalação e configuração presencial, com valor combinado pelo WhatsApp a partir de R$ 99,99."
-  }),
-  /* seo:auto-end */
-  component: RedesWifiAguaVerde,
+  beforeLoad: () => {
+    throw redirect({ to: "/servicos/redes-e-wifi", statusCode: 301 });
+  },
 });
