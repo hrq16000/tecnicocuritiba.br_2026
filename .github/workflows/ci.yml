@@ -35,6 +35,8 @@ jobs:
         run: npm run check:cta-funnel
       - name: Internal links + sitemap gate
         run: npm run check:internal-links
+      - name: Bairros baseline emitem noindex no SSR (Fase 1)
+        run: npm run check:bairros-noindex
       - name: Mapa de localidades sem link quebrado (rotas reais)
         run: npm run check:rotas-localidades
       - name: JSON-LD sem verticais recusadas (Service[])

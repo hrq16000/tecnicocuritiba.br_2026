@@ -12,6 +12,7 @@ import { Footer } from "@/components/Footer";
 import { BlocoInteligencia } from "@/components/BlocoInteligencia";
 import { WhatsAppChat } from "@/components/WhatsAppChat";
 import { BairroInterlinkLocal } from "@/components/areas/BairroInterlinkLocal";
+import { whatsappDeepLink } from "@/lib/whatsappDeepLink";
 import { JsonLdSchema } from "@/components/JsonLdSchema";
 import { PricingBanner } from "@/components/PricingBanner";
 import { GeoSpecificFAQs, bairroFAQs } from "@/components/GeoSpecificFAQs";
@@ -34,7 +35,6 @@ import {
   Zap
 } from "lucide-react";
 
-const WHATSAPP_NUMBER = "5541997086380";
 
 interface BairroData {
   nome: string;
@@ -60,8 +60,11 @@ interface BairroTemplateProps {
 }
 
 export const BairroTemplate = ({ data }: BairroTemplateProps) => {
-  const whatsappMessage = `Olá! Preciso de um técnico de informática em ${data.nome}. Serviço: [DESCREVA O PROBLEMA]`;
-  const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(whatsappMessage)}`;
+  const whatsappUrl = whatsappDeepLink({
+    local: data.nome,
+    servico: data.servicosDestaque[0],
+    extra: "Pode me passar os próximos horários disponíveis?",
+  });
 
   useEffect(() => {
     document.title = data.metaTitle;
@@ -295,7 +298,15 @@ export const BairroTemplate = ({ data }: BairroTemplateProps) => {
                             style={{ animationDelay: `${index * 80}ms` }}
                           >
                             <CheckCircle className="h-5 w-5 text-accent flex-shrink-0" />
-                            <span className="text-foreground">{servico}</span>
+                            <a
+                              href={whatsappDeepLink({ local: data.nome, servico })}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              onClick={handleWhatsAppClick}
+                              className="text-foreground underline-offset-4 hover:text-accent hover:underline"
+                            >
+                              {servico}
+                            </a>
                           </li>
                         ))}
                       </ul>

@@ -149,6 +149,35 @@ export const INTERVENCOES = [
     coorte: "INTERVENTION_COHORT",
     experimentalStatus: "INTERVENED",
   },
+  {
+    id: "INT-2026-08-25-004",
+    tipo: "PUBLIC_INTERVENTION",
+    timestamp: "2026-08-25T07:40:00.000Z",
+    deploymentId: null,
+    commit: null,
+    urlsDiretas: ["/"],
+    urlsIndiretas: [],
+    arquivos: [
+      "src/components/home/RegioesCuritibaSection.tsx",
+      "src/lib/whatsappDeepLink.ts",
+      "src/pages/bairros/BairroTemplate.tsx",
+      "scripts/check-bairros-noindex.mjs",
+    ],
+    mudanca: "INTERNAL_LINKS",
+    motivo:
+      "Grid de regiões da home passou a linkar as 45 localidades de Curitiba + 9 municípios da RMC (antes só 5 chips eram clicáveis) e os CTAs de bairro receberam deep link contextual de WhatsApp (local + serviço).",
+    impacto: {
+      seo: "Malha interna da home ampliada. Title/description/canonical/robots inalterados.",
+      internalLinking: "54 destinos de localidade agora descobríveis a partir de /.",
+      conteudo: "Sem texto editorial novo; chips passaram de span para Link.",
+      schema: "Sem alteração de JSON-LD.",
+      metadata: "Sem alteração de metadata.",
+      lastmod: "Elegível apenas para /.",
+      conversao: "Deep links de WhatsApp com serviço e bairro pré-preenchidos.",
+    },
+    coorte: "INTERVENTION_COHORT",
+    experimentalStatus: "INTERVENED",
+  },
 ];
 
 export default { LEDGER_SCHEMA, D0, INTERVENCOES };

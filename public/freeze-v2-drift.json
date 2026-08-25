@@ -1,8 +1,8 @@
 {
   "schema": "freeze-v2-drift/1.0",
-  "verificadoEm": "2026-08-25T07:30:20.279Z",
-  "freezeSelo": "2c97c1a2fdef7dbe1a6470988845d2f2436d88f179c158a0ef7bc0c2571b9ab0",
-  "freezeSeladoEm": "2026-08-25T07:30:09.047Z",
+  "verificadoEm": "2026-08-25T07:41:22.721Z",
+  "freezeSelo": "4668127078c1a836316f65f424e1595080a8da50c56080b662c61ef52d5f833b",
+  "freezeSeladoEm": "2026-08-25T07:41:21.942Z",
   "totalDiffs": 2,
   "porClasse": {
     "OBSERVABILITY_CHANGE": 2

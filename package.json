@@ -77,6 +77,7 @@
     "check:sitemap-source": "node scripts/check-sitemap-source.mjs",
     "check:internal-links": "node scripts/check-internal-links.mjs",
     "check:internal-links:strict": "node scripts/check-internal-links.mjs --strict",
+    "check:bairros-noindex": "node scripts/check-bairros-noindex.mjs",
     "check:rotas-localidades": "node scripts/check-rotas-localidades.mjs",
     "check:rotas-localidades:live": "node scripts/check-rotas-localidades.mjs --live",
     "check:aggregate-rating": "node scripts/check-aggregate-rating.mjs",
