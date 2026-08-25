@@ -9639,7 +9639,7 @@
       "classe": "PUBLIC_CHANGE"
     },
     "src/routes/problemas.tv-sem-som.tsx": {
-      "hash": "bdedb4d554e7af35d347b6cd49817a97",
+      "hash": "03199ec0ddead62da309f04f7a4968b6",
       "classe": "PUBLIC_CHANGE"
     },
     "src/routes/problemas.tv-travando.tsx": {
@@ -10459,6 +10459,17 @@
       "classe": "CI_CHANGE"
     }
   },
-  "superficieHash": "f501724ef35c29c6af502186a7c5111811b67ea8f8db5b07f2ffb969f5adc720",
-  "selo": "fb95e1e4d676e89de141409aa4103218fc2a504c979f8278f62fe16e9da9d979"
+  "superficieHash": "35fe64fbf8fe9da5f1a1a574c36235f84b4d972e16f30226502a034118381ec5",
+  "selo": "b12f35b4368371ba81444cffe7cbafde7d810bdda9089e87e36e056171aab709",
+  "correcoesSelo": [
+    {
+      "arquivo": "src/routes/problemas.tv-sem-som.tsx",
+      "classe": "PUBLIC_CHANGE",
+      "hashSelado": "bdedb4d554e7af35d347b6cd49817a97",
+      "hashCorreto": "03199ec0ddead62da309f04f7a4968b6",
+      "motivo": "selo capturado em estado transitório de build; arquivo idêntico ao HEAD, sem mudança pública",
+      "corrigidoEm": "2026-08-25T07:01:32.211Z",
+      "prova": "conteúdo em disco idêntico a git HEAD"
+    }
+  ]
 }

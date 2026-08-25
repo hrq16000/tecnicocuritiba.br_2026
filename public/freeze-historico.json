@@ -11,7 +11,13 @@
       "selo": "fb95e1e4d676e89de141409aa4103218fc2a504c979f8278f62fe16e9da9d979",
       "seladoEm": "2026-08-25T06:09:07.486Z",
       "deploymentId": "live:5eec352d9a7f460d"
+    },
+    {
+      "versao": "FREEZE_V2.correcao-2",
+      "selo": "b12f35b4368371ba81444cffe7cbafde7d810bdda9089e87e36e056171aab709",
+      "seladoEm": "2026-08-25T07:01:32.222Z",
+      "nota": "correção de impressão digital sem mudança pública: src/routes/problemas.tv-sem-som.tsx"
     }
   ],
-  "atualizadoEm": "2026-08-25T06:09:07.499Z"
+  "atualizadoEm": "2026-08-25T07:01:32.222Z"
 }

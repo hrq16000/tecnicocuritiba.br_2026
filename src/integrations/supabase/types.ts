@@ -451,57 +451,184 @@ export type Database = {
       }
       ordens_servico: {
         Row: {
+          aberta_em: string
           cliente_nome: string | null
+          concluida_em: string | null
           created_at: string
+          desconto: number
+          diagnostico: string | null
           equipamento: string | null
           etapas: Json
           fotos: Json
           id: string
           marca_modelo: string | null
           modalidade: string | null
+          numero_serie: string | null
           observacoes_publicas: string | null
+          pagamento_status: string
+          pecas: Json
           previsao_conclusao: string | null
           protocolo: string
+          servico_executado: string | null
           sintomas: string | null
           status: string
+          tecnico_responsavel: string | null
           telefone: string
+          total: number
+          updated_at: string
+          valor_pecas: number
+          valor_servicos: number
+        }
+        Insert: {
+          aberta_em?: string
+          cliente_nome?: string | null
+          concluida_em?: string | null
+          created_at?: string
+          desconto?: number
+          diagnostico?: string | null
+          equipamento?: string | null
+          etapas?: Json
+          fotos?: Json
+          id?: string
+          marca_modelo?: string | null
+          modalidade?: string | null
+          numero_serie?: string | null
+          observacoes_publicas?: string | null
+          pagamento_status?: string
+          pecas?: Json
+          previsao_conclusao?: string | null
+          protocolo: string
+          servico_executado?: string | null
+          sintomas?: string | null
+          status?: string
+          tecnico_responsavel?: string | null
+          telefone: string
+          total?: number
+          updated_at?: string
+          valor_pecas?: number
+          valor_servicos?: number
+        }
+        Update: {
+          aberta_em?: string
+          cliente_nome?: string | null
+          concluida_em?: string | null
+          created_at?: string
+          desconto?: number
+          diagnostico?: string | null
+          equipamento?: string | null
+          etapas?: Json
+          fotos?: Json
+          id?: string
+          marca_modelo?: string | null
+          modalidade?: string | null
+          numero_serie?: string | null
+          observacoes_publicas?: string | null
+          pagamento_status?: string
+          pecas?: Json
+          previsao_conclusao?: string | null
+          protocolo?: string
+          servico_executado?: string | null
+          sintomas?: string | null
+          status?: string
+          tecnico_responsavel?: string | null
+          telefone?: string
+          total?: number
+          updated_at?: string
+          valor_pecas?: number
+          valor_servicos?: number
+        }
+        Relationships: []
+      }
+      os_eventos: {
+        Row: {
+          ator_email: string | null
+          ator_id: string | null
+          created_at: string
+          de_status: string | null
+          descricao: string
+          id: string
+          ordem_id: string
+          para_status: string | null
+          tipo: string
+        }
+        Insert: {
+          ator_email?: string | null
+          ator_id?: string | null
+          created_at?: string
+          de_status?: string | null
+          descricao: string
+          id?: string
+          ordem_id: string
+          para_status?: string | null
+          tipo: string
+        }
+        Update: {
+          ator_email?: string | null
+          ator_id?: string | null
+          created_at?: string
+          de_status?: string | null
+          descricao?: string
+          id?: string
+          ordem_id?: string
+          para_status?: string | null
+          tipo?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "os_eventos_ordem_id_fkey"
+            columns: ["ordem_id"]
+            isOneToOne: false
+            referencedRelation: "ordens_servico"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      os_lembretes: {
+        Row: {
+          created_at: string
+          created_by: string | null
+          id: string
+          observacao: string | null
+          ordem_id: string
+          quando: string
+          responsavel: string | null
+          status: string
+          tipo: string
           updated_at: string
         }
         Insert: {
-          cliente_nome?: string | null
           created_at?: string
-          equipamento?: string | null
-          etapas?: Json
-          fotos?: Json
+          created_by?: string | null
           id?: string
-          marca_modelo?: string | null
-          modalidade?: string | null
-          observacoes_publicas?: string | null
-          previsao_conclusao?: string | null
-          protocolo: string
-          sintomas?: string | null
+          observacao?: string | null
+          ordem_id: string
+          quando: string
+          responsavel?: string | null
           status?: string
-          telefone: string
+          tipo: string
           updated_at?: string
         }
         Update: {
-          cliente_nome?: string | null
           created_at?: string
-          equipamento?: string | null
-          etapas?: Json
-          fotos?: Json
+          created_by?: string | null
           id?: string
-          marca_modelo?: string | null
-          modalidade?: string | null
-          observacoes_publicas?: string | null
-          previsao_conclusao?: string | null
-          protocolo?: string
-          sintomas?: string | null
+          observacao?: string | null
+          ordem_id?: string
+          quando?: string
+          responsavel?: string | null
           status?: string
-          telefone?: string
+          tipo?: string
           updated_at?: string
         }
-        Relationships: []
+        Relationships: [
+          {
+            foreignKeyName: "os_lembretes_ordem_id_fkey"
+            columns: ["ordem_id"]
+            isOneToOne: false
+            referencedRelation: "ordens_servico"
+            referencedColumns: ["id"]
+          },
+        ]
       }
       os_lookup_attempts: {
         Row: {
@@ -535,6 +662,44 @@ export type Database = {
           telefone_hash?: string
         }
         Relationships: []
+      }
+      os_pdf_snapshots: {
+        Row: {
+          doc_hash: string
+          generated_at: string
+          generated_by: string | null
+          generated_by_email: string | null
+          id: string
+          ordem_id: string
+          versao: number
+        }
+        Insert: {
+          doc_hash: string
+          generated_at?: string
+          generated_by?: string | null
+          generated_by_email?: string | null
+          id?: string
+          ordem_id: string
+          versao: number
+        }
+        Update: {
+          doc_hash?: string
+          generated_at?: string
+          generated_by?: string | null
+          generated_by_email?: string | null
+          id?: string
+          ordem_id?: string
+          versao?: number
+        }
+        Relationships: [
+          {
+            foreignKeyName: "os_pdf_snapshots_ordem_id_fkey"
+            columns: ["ordem_id"]
+            isOneToOne: false
+            referencedRelation: "ordens_servico"
+            referencedColumns: ["id"]
+          },
+        ]
       }
       os_publicas: {
         Row: {

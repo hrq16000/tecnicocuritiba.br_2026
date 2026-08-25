@@ -159,6 +159,8 @@ jobs:
         run: npm run check:coortes
       - name: Freeze V2 — proibição de drift público silencioso
         run: npm run check:seo-freeze-v2
+      - name: Privacidade da Ordem de Serviço (fora do índice, sem PII em analytics)
+        run: npm run check:os-privacidade
       - name: Relatório HTML de auditoria local
         run: npm run report:local-audit
 
