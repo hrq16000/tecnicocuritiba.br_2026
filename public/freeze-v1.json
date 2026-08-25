@@ -1,0 +1,18 @@
+{
+  "schema": "freeze/1.0",
+  "versao": "FREEZE_V1",
+  "origem": "declarativo — baseline D0 (ZERO_PUBLIC_SEO_DIFF)",
+  "baseline": {
+    "marco": "D0",
+    "registradoEm": "2026-08-25T01:49:17.273Z",
+    "universoCurado": 130,
+    "politica": "ZERO_PUBLIC_SEO_DIFF",
+    "freeze": "freeze_v1",
+    "imutavel": true
+  },
+  "seladoEm": "2026-08-25T01:49:17.273Z",
+  "universoCurado": 130,
+  "curadoHash": "e8f8544eba7c928d6268c32cda10d4b6d355f4be0c1e10812d712fa7a0f72a7e",
+  "imutavel": true,
+  "selo": "82f7d05473cc059042b7bbe51cfa63a6fb5e93ae1f077c09ba55f7450b18ed70"
+}

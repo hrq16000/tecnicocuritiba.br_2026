@@ -1,0 +1,17 @@
+{
+  "schema": "freeze-historico/1.0",
+  "versoes": [
+    {
+      "versao": "FREEZE_V1",
+      "selo": "82f7d05473cc059042b7bbe51cfa63a6fb5e93ae1f077c09ba55f7450b18ed70",
+      "seladoEm": "2026-08-25T01:49:17.273Z"
+    },
+    {
+      "versao": "FREEZE_V2",
+      "selo": "fb95e1e4d676e89de141409aa4103218fc2a504c979f8278f62fe16e9da9d979",
+      "seladoEm": "2026-08-25T06:09:07.486Z",
+      "deploymentId": "live:5eec352d9a7f460d"
+    }
+  ],
+  "atualizadoEm": "2026-08-25T06:09:07.499Z"
+}
