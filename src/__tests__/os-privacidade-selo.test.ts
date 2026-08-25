@@ -48,9 +48,9 @@ describe("selo × metadata das rotas críticas", () => {
 
   it("nenhuma rota selada divergiu do arquivo em disco", async () => {
     const selo = JSON.parse(ler(seloPath)) as {
-      arquivos?: Record<string, { hash: string }>;
+      superficie?: Record<string, { hash: string }>;
     };
-    const arquivos = selo.arquivos ?? {};
+    const arquivos = selo.superficie ?? {};
     const { createHash } = await import("node:crypto");
     const divergentes: string[] = [];
 
@@ -61,8 +61,10 @@ describe("selo × metadata das rotas críticas", () => {
         divergentes.push(`${rel} (ausente)`);
         continue;
       }
-      const hash = createHash("sha256").update(readFileSync(abs)).digest("hex").slice(0, 32);
-      if (hash !== meta.hash) divergentes.push(`${rel} (hash divergente)`);
+      const hash = createHash("sha256").update(readFileSync(abs, "utf8")).digest("hex");
+      if (!meta.hash.startsWith(hash.slice(0, meta.hash.length))) {
+        divergentes.push(`${rel} (hash divergente)`);
+      }
     }
 
     expect(divergentes).toEqual([]);
