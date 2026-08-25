@@ -174,6 +174,92 @@ ${
 `;
 
 writeFileSync("reports/relatorio-final-consolidado.md", md);
+
+// Payload diário para o painel interno (/admin/indexacao-diaria).
+// Só publica o que existe: o painel exibe "sem dado" em vez de zero fabricado.
+const historicoPath = "reports/indexation-daily-history.json";
+const clusters = new Map();
+for (const u of inv?.urls ?? []) {
+  const c = clusters.get(u.cluster) ?? {
+    cluster: u.cluster,
+    total: 0,
+    indexadas: 0,
+    descobertas: 0,
+    desconhecidas: 0,
+    outras: 0,
+    cliques: 0,
+    impressoes: 0,
+    scores: [],
+  };
+  c.total++;
+  if (u.gscStatus === "INDEXED") c.indexadas++;
+  else if (u.gscStatus === "DISCOVERED_NOT_INDEXED") c.descobertas++;
+  else if (u.gscStatus === "UNKNOWN_TO_GOOGLE") c.desconhecidas++;
+  else c.outras++;
+  c.cliques += u.clicks ?? 0;
+  c.impressoes += u.impressions ?? 0;
+  clusters.set(u.cluster, c);
+}
+for (const r of qual?.results ?? []) clusters.get(r.cluster)?.scores.push(r.score);
+
+const mediana = (arr) => {
+  if (!arr.length) return null;
+  const s = [...arr].sort((a, b) => a - b);
+  return s[Math.floor(s.length / 2)];
+};
+const clusterPayload = [...clusters.values()]
+  .map(({ scores, ...c }) => ({ ...c, scoreMediano: mediana(scores) }))
+  .sort((a, b) => b.total - a.total);
+
+const totais = {
+  urls: totalUrls,
+  indexadas: clusterPayload.reduce((s, c) => s + c.indexadas, 0),
+  descobertas: clusterPayload.reduce((s, c) => s + c.descobertas, 0),
+  desconhecidas: clusterPayload.reduce((s, c) => s + c.desconhecidas, 0),
+  outras: clusterPayload.reduce((s, c) => s + c.outras, 0),
+};
+
+const dia = geradoEm.slice(0, 10);
+const historico = existsSync(historicoPath) ? JSON.parse(readFileSync(historicoPath, "utf8")) : [];
+const semHoje = historico.filter((h) => h.dia !== dia);
+semHoje.push({ dia, ...totais });
+const historicoFinal = semHoje.slice(-90);
+writeFileSync(historicoPath, JSON.stringify(historicoFinal, null, 2));
+
+writeFileSync(
+  "public/indexation-daily.json",
+  JSON.stringify(
+    {
+      geradoEm,
+      totais,
+      clusters: clusterPayload,
+      historico: historicoFinal,
+      latencia: lat
+        ? { escopo: lat.escopo, limiarMs: lat.limiarMs, medidas: lat.total, p50: lat.p50, p75: lat.p75, p95: lat.p95, falhas: lat.falhas?.length ?? 0 }
+        : null,
+      indexnow: idxnow
+        ? {
+            executadoEm: idxnow.executadoEm ?? idxnow.geradoEm ?? null,
+            enviadas: idxSubmitted,
+            falhas: idxFailed,
+            novas: idxnow.novas?.length ?? 0,
+            mudadas: idxnow.mudadas?.length ?? 0,
+            ignoradas: idxnow.ignoradas?.length ?? 0,
+          }
+        : null,
+      qualidade: qual
+        ? {
+            faixas: qual.results.reduce((acc, r) => ({ ...acc, [r.faixa]: (acc[r.faixa] ?? 0) + 1 }), {}),
+            piores: qual.results.slice(0, 15).map((r) => ({ path: r.path, score: r.score, faixa: r.faixa, causas: r.causas })),
+          }
+        : null,
+      doorway: local?.resumo ?? null,
+    },
+    null,
+    2,
+  ),
+);
+
 writeFileSync(
   "reports/relatorio-final-consolidado.json",
   JSON.stringify(
