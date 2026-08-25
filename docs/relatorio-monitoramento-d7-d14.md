@@ -1,6 +1,6 @@
 # Monitoramento D7 / D14 — tecnico.curitiba.br
 
-Gerado em 2026-08-25T03:58:56.314Z · marco de referência **D7**.
+Gerado em 2026-08-25T03:59:16.664Z · marco de referência **D7**.
 Relatório de medição: nenhuma alteração de conteúdo, sitemap, canonical, redirect ou IndexNow foi feita para produzi-lo.
 
 ## FUNIL
@@ -88,7 +88,7 @@ Ativos: 0 · última assinatura N/A
 
 ## DECISÃO D7
 
-**QUICK_WINS** — 5 páginas indexadas com impressões reais em posição 5–20.
+**WAIT** — Sete dias após a consolidação, processamento dentro do esperado — não mexer.
 
 ## DECISÃO D14
 

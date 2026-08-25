@@ -90,7 +90,7 @@ export function sinaisDeRegressao({ anterior, atual, serpDiff } = {}) {
  * Decide o marco.
  * @param {{d0:object|null, anterior:object|null, atual:object, urls?:any[], serpDiff?:object|null}} entrada
  */
-export function decidirMarco({ d0 = null, anterior = null, atual, urls = [], serpDiff = null } = {}) {
+export function decidirMarco({ d0 = null, anterior = null, atual, urls = [], serpDiff = null, fase = null } = {}) {
   if (!atual) {
     return {
       decisao: "PENDENTE",
@@ -126,6 +126,12 @@ export function decidirMarco({ d0 = null, anterior = null, atual, urls = [], ser
     quickWinsElegiveis: quickWins.length,
   };
 
+  /* Fase do marco. Em D0/D7 o tempo normal ainda está correndo: estagnação
+   * não é gargalo e quick win não é autorizado pela governança. Só a partir
+   * do D14 as decisões B e C ficam disponíveis. */
+  const faseEfetiva = fase ?? (["D0", "D7"].includes(atual.marco) ? "inicial" : "decisoria");
+  const decisoria = faseEfetiva === "decisoria";
+
   const responder = (codigo, justificativa) => ({
     ...DECISOES[codigo],
     decisao: codigo,
@@ -137,6 +143,13 @@ export function decidirMarco({ d0 = null, anterior = null, atual, urls = [], ser
 
   if (regressoes.length)
     return responder("D", `Regressão técnica objetiva: ${regressoes.map((r) => r.sinal).join(", ")}.`);
+
+  const crawledDisparou =
+    (base?.google?.crawled_not_indexed ?? 0) + 3 < crawledNaoIndexadas;
+  if (!decisoria)
+    return crawledDisparou
+      ? responder("C", `Crawled-not-indexed saltou para ${crawledNaoIndexadas} acima do limiar operacional — investigar antes do próximo marco.`)
+      : responder("A", "Sete dias após a consolidação, processamento dentro do esperado — não mexer.");
 
   if (!crawledBaixo && !indexedSobe && !tierAAvanca)
     return responder(

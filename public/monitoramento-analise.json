@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-25T03:58:56.314Z",
+  "geradoEm": "2026-08-25T03:59:16.664Z",
   "marcoAtual": "D7",
   "funil": {
     "D0": {
@@ -512,12 +512,12 @@
     "ativos": 0
   },
   "decisaoD7": {
-    "valor": "QUICK_WINS",
-    "decisao": "B",
-    "rotulo": "PREPARE QUICK WINS",
-    "severidade": "media",
+    "valor": "WAIT",
+    "decisao": "A",
+    "rotulo": "CONTINUE WAITING",
+    "severidade": "informativa",
     "alerta": false,
-    "justificativa": "5 páginas indexadas com impressões reais em posição 5–20.",
+    "justificativa": "Sete dias após a consolidação, processamento dentro do esperado — não mexer.",
     "regressoes": [],
     "sinais": {
       "tierABase": 58.1,
