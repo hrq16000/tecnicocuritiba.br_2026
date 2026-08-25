@@ -273,7 +273,9 @@
     "monitor:operacao:notify": "node scripts/monitor-operational-alerts.mjs --notify",
     "reindex:snapshots": "node scripts/reindex-snapshots.mjs",
     "reindex:snapshots:gate": "node scripts/reindex-snapshots.mjs --strict",
-    "report:monitoramento": "node scripts/report-monitoramento-d7-d14.mjs"
+    "report:monitoramento": "node scripts/report-monitoramento-d7-d14.mjs",
+    "report:diff-marcos": "node scripts/diff-marcos.mjs",
+    "report:diff-marcos:gate": "node scripts/diff-marcos.mjs --gate"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

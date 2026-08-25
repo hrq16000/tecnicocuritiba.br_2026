@@ -1,7 +1,7 @@
 {
-  "geradoEm": "2026-08-25T02:42:02.479Z",
+  "geradoEm": "2026-08-25T02:42:36.156Z",
   "verificacao": {
-    "executadoEm": "2026-08-25T02:42:02.479Z",
+    "executadoEm": "2026-08-25T02:42:36.156Z",
     "marcos": [
       "D0",
       "D7"
@@ -16,33 +16,33 @@
       "ok": true,
       "itens": [
         {
-          "path": ".lovable/memory/features/ambiente-local-offline.md",
+          "path": ".lovable/memory/features/onda-visual-3u.md",
           "tipo": "memoria",
-          "hash": "ca521b7ddd66b2a9eba2fd59ae999fee026d31e1",
+          "hash": "55b2008fc1d9db8a9dbdcefff2183d191229e437",
           "conferido": true
         },
         {
-          "path": ".lovable/memory/features/whatsapp-funnel-v2.md",
+          "path": ".lovable/memory/index.md",
           "tipo": "memoria",
-          "hash": "a2eaa262ac2f0bda1fd189c207c6d7c87f73b3ed",
+          "hash": "b11f626bef478e7764aa89648854fdd609b04304",
           "conferido": true
         },
         {
-          "path": "reports/indexation-inventory.json",
-          "tipo": "inventario",
-          "hash": "87ba07a6d0ab07da25d235f5fdbc76b1f6f388f2",
+          "path": ".lovable/memory/features/governanca-originalidade-ondas.md",
+          "tipo": "memoria",
+          "hash": "903ef2ddb45b6872b886e2e5b585080ae6ee0bda",
           "conferido": true
         },
         {
-          "path": "reports/operacao-d7.md",
+          "path": "reports/operacao-d0.md",
           "tipo": "marco-resumo",
-          "hash": "fee6b5b44c584a1d2805b39cc4866f0eb9662602",
+          "hash": "21aea3b80f606495b61015e18f6940018ae65ec2",
           "conferido": true
         },
         {
-          "path": "reports/serp-signals-d0.json",
-          "tipo": "marco-serp",
-          "hash": "156332cde9ee5804fb7428840bc41286da4bca69",
+          "path": ".lovable/memory/features/triagem-pf-pj.md",
+          "tipo": "memoria",
+          "hash": "611c07d464f2816ccf0fb2eeaa13bc466dcb23bd",
           "conferido": true
         }
       ]
@@ -121,9 +121,9 @@
     {
       "tipo": "historico",
       "path": "reports/operacao-marcos.json",
-      "bytes": 12417,
-      "hash": "d787326f1ab2a1c23e017853c874c8375709988c",
-      "modificadoEm": "2026-08-25T02:39:00.335Z",
+      "bytes": 105233,
+      "hash": "6fc1aa5a3ea89d7a4a855066a06b3ff02395606a",
+      "modificadoEm": "2026-08-25T02:42:36.071Z",
       "marcos": [
         "D0",
         "D7"
@@ -157,8 +157,8 @@
       "tipo": "marco-resumo",
       "path": "reports/operacao-d7.md",
       "bytes": 1530,
-      "hash": "fee6b5b44c584a1d2805b39cc4866f0eb9662602",
-      "modificadoEm": "2026-08-25T02:39:00.337Z",
+      "hash": "b28eafe03c141faf042af858c71fdbdd73c5db2e",
+      "modificadoEm": "2026-08-25T02:42:36.073Z",
       "marco": "D7"
     },
     {
