@@ -150,6 +150,28 @@ for (const [cluster, itens] of [...clusters].sort()) {
 
   const palavrasRepetidas = repetidos.reduce((acc, r) => acc + r.palavras, 0);
 
+  // Checklist por página: exatamente quais trechos daquela URL são
+  // compartilhados, com o par mais parecido e a ação de reescrita.
+  for (const p of porPagina) {
+    const item = itens.find((i) => i.path === p.path);
+    const blocos = new Set(
+      [...(item.signals.paragraphs ?? []), ...(item.signals.listItems ?? [])]
+        .filter((t) => t.split(/\s+/).length >= 12)
+        .map(norm),
+    );
+    p.trechosParaReescrever = repetidos
+      .filter((r) => blocos.has(norm(r.trecho)) || [...blocos].some((b) => b.startsWith(r.trecho.slice(0, 120))))
+      .map((r) => ({ trecho: r.trecho, urls: r.urls, palavras: r.palavras, acao: r.sugestao }));
+    const parItem = itens.find((i) => i.path === p.parMaisParecido);
+    p.diffComOPar = parItem ? diffTrechos(item, parItem) : null;
+    p.decisao =
+      p.exclusividade < 0.16 || p.similaridadeMax > 0.55
+        ? "REESCREVER OU CONSOLIDAR — abaixo do piso do QUALITY_STANDARD"
+        : p.trechosParaReescrever.length
+          ? "REESCREVER TRECHOS LISTADOS"
+          : "OK";
+  }
+
   clustersOut.push({
     cluster,
     urls: itens.length,
@@ -164,6 +186,30 @@ for (const [cluster, itens] of [...clusters].sort()) {
     paginas: porPagina.sort((a, b) => b.similaridadeMax - a.similaridadeMax),
     trechosRepetidos: repetidos,
   });
+}
+
+/**
+ * Diff legível entre duas páginas do mesmo cluster: o que é idêntico
+ * (precisa mudar) e o que já é exclusivo de cada lado (o que preservar).
+ */
+function diffTrechos(a, b) {
+  const blocos = (x) =>
+    new Map(
+      [...(x.signals.paragraphs ?? []), ...(x.signals.listItems ?? [])]
+        .filter((t) => t.split(/\s+/).length >= 10)
+        .map((t) => [norm(t), t]),
+    );
+  const ba = blocos(a);
+  const bb = blocos(b);
+  const iguais = [...ba.keys()].filter((k) => bb.has(k));
+  return {
+    par: b.path,
+    blocosIdenticos: iguais.length,
+    palavrasIdenticas: iguais.reduce((acc, k) => acc + k.split(/\s+/).length, 0),
+    exemplos: iguais.slice(0, 5).map((k) => ba.get(k).slice(0, 200)),
+    exclusivosDestaPagina: [...ba.keys()].filter((k) => !bb.has(k)).length,
+    exclusivosDoPar: [...bb.keys()].filter((k) => !ba.has(k)).length,
+  };
 }
 
 /** Sugestão concreta de reescrita conforme o tipo de bloco repetido. */
@@ -216,6 +262,31 @@ const md = [
           `- **${r.urls} URLs · ${r.palavras} palavras** — “${r.trecho}${r.trecho.length >= 240 ? "…" : ""}”\n  - Onde: ${r.exemplos.join(", ")}\n  - Ação: ${r.sugestao}`,
       ),
       "",
+    ]),
+  "",
+  "## Checklist de reescrita, página por página",
+  "",
+  ...clustersOut
+    .filter((c) => (c.paginas ?? []).some((p) => p.decisao && p.decisao !== "OK"))
+    .flatMap((c) => [
+      `### ${c.cluster}`,
+      "",
+      ...c.paginas
+        .filter((p) => p.decisao && p.decisao !== "OK")
+        .flatMap((p) => [
+          `#### ${p.path}`,
+          `- Similaridade máxima: **${p.similaridadeMax}** (par: ${p.parMaisParecido})`,
+          `- Exclusividade: **${(p.exclusividade * 100).toFixed(0)}%** · piso 16%`,
+          `- Decisão: **${p.decisao}**`,
+          p.diffComOPar
+            ? `- Diff com o par: ${p.diffComOPar.blocosIdenticos} blocos idênticos (${p.diffComOPar.palavrasIdenticas} palavras) · exclusivos aqui: ${p.diffComOPar.exclusivosDestaPagina} · exclusivos no par: ${p.diffComOPar.exclusivosDoPar}`
+            : "- Diff com o par: indisponível",
+          ...(p.diffComOPar?.exemplos ?? []).map((e) => `  - idêntico: “${e}…”`),
+          ...(p.trechosParaReescrever ?? []).map(
+            (t) => `- [ ] Reescrever (${t.urls} URLs · ${t.palavras} palavras): “${t.trecho.slice(0, 160)}…”\n  - Ação: ${t.acao}`,
+          ),
+          "",
+        ]),
     ]),
 ].join("\n");
 
