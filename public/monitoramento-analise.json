@@ -1,6 +1,6 @@
 {
-  "geradoEm": "2026-08-25T02:00:15.534Z",
-  "marcoAtual": "D0",
+  "geradoEm": "2026-08-25T02:39:19.007Z",
+  "marcoAtual": "D7",
   "funil": {
     "D0": {
       "unknown": 56,
@@ -12,11 +12,53 @@
       "ctr": 1.27,
       "posicao": 18.28
     },
-    "D7": null,
+    "D7": {
+      "unknown": 57,
+      "discovered": 47,
+      "crawled_not_indexed": 0,
+      "indexed": 22,
+      "impressoes": 473,
+      "cliques": 6,
+      "ctr": 1.27,
+      "posicao": 18.28
+    },
     "D14": null
   },
   "deltas": {
-    "D0→D7": null,
+    "D0→D7": {
+      "unknown": {
+        "abs": 1,
+        "pct": 1.8
+      },
+      "discovered": {
+        "abs": -1,
+        "pct": -2.1
+      },
+      "crawled_not_indexed": {
+        "abs": 0,
+        "pct": null
+      },
+      "indexed": {
+        "abs": 0,
+        "pct": 0
+      },
+      "impressoes": {
+        "abs": 0,
+        "pct": 0
+      },
+      "cliques": {
+        "abs": 0,
+        "pct": 0
+      },
+      "ctr": {
+        "abs": 0,
+        "pct": 0
+      },
+      "posicao": {
+        "abs": 0,
+        "pct": 0
+      }
+    },
     "D7→D14": null,
     "D0→D14": null
   },
@@ -33,7 +75,18 @@
       "cliques": 6,
       "posicaoMedia": 18.24
     },
-    "D7": null,
+    "D7": {
+      "chave": "A",
+      "total": 31,
+      "indexadas": 18,
+      "unknown": 8,
+      "discovered": 4,
+      "crawledNaoIndexadas": 0,
+      "taxaIndexacao": 58.1,
+      "impressoes": 471,
+      "cliques": 6,
+      "posicaoMedia": 18.24
+    },
     "D14": null
   },
   "clusters": [
@@ -41,8 +94,8 @@
       "chave": "PROBLEMA",
       "total": 36,
       "indexadas": 2,
-      "unknown": 21,
-      "discovered": 13,
+      "unknown": 18,
+      "discovered": 16,
       "crawledNaoIndexadas": 0,
       "taxaIndexacao": 5.6,
       "impressoes": 2,
@@ -53,8 +106,8 @@
       "chave": "BAIRRO",
       "total": 26,
       "indexadas": 3,
-      "unknown": 10,
-      "discovered": 11,
+      "unknown": 9,
+      "discovered": 12,
       "crawledNaoIndexadas": 0,
       "taxaIndexacao": 11.5,
       "impressoes": 41,
@@ -65,8 +118,8 @@
       "chave": "SERVICO_BAIRRO",
       "total": 19,
       "indexadas": 3,
-      "unknown": 7,
-      "discovered": 9,
+      "unknown": 10,
+      "discovered": 6,
       "crawledNaoIndexadas": 0,
       "taxaIndexacao": 15.8,
       "impressoes": 9,
@@ -77,8 +130,8 @@
       "chave": "SERVICO",
       "total": 15,
       "indexadas": 4,
-      "unknown": 6,
-      "discovered": 5,
+      "unknown": 7,
+      "discovered": 4,
       "crawledNaoIndexadas": 0,
       "taxaIndexacao": 26.7,
       "impressoes": 113,
@@ -89,8 +142,8 @@
       "chave": "INSTITUCIONAL",
       "total": 13,
       "indexadas": 3,
-      "unknown": 6,
-      "discovered": 4,
+      "unknown": 7,
+      "discovered": 3,
       "crawledNaoIndexadas": 0,
       "taxaIndexacao": 23.1,
       "impressoes": 98,
@@ -101,8 +154,8 @@
       "chave": "CIDADE",
       "total": 11,
       "indexadas": 4,
-      "unknown": 2,
-      "discovered": 4,
+      "unknown": 1,
+      "discovered": 5,
       "crawledNaoIndexadas": 0,
       "taxaIndexacao": 36.4,
       "impressoes": 157,
@@ -113,8 +166,8 @@
       "chave": "HUB",
       "total": 5,
       "indexadas": 2,
-      "unknown": 2,
-      "discovered": 1,
+      "unknown": 3,
+      "discovered": 0,
       "crawledNaoIndexadas": 0,
       "taxaIndexacao": 40,
       "impressoes": 30,
@@ -125,8 +178,8 @@
       "chave": "ARTIGO",
       "total": 2,
       "indexadas": 0,
-      "unknown": 2,
-      "discovered": 0,
+      "unknown": 1,
+      "discovered": 1,
       "crawledNaoIndexadas": 0,
       "taxaIndexacao": 0,
       "impressoes": 0,
@@ -161,8 +214,8 @@
       "chave": "EQUIPAMENTO",
       "total": 1,
       "indexadas": 0,
-      "unknown": 0,
-      "discovered": 1,
+      "unknown": 1,
+      "discovered": 0,
       "crawledNaoIndexadas": 0,
       "taxaIndexacao": 0,
       "impressoes": 0,
@@ -175,9 +228,9 @@
       "url": "/areas-atendidas",
       "cluster": "HUB",
       "estadoD0": "N/A",
-      "estadoD7": "N/A",
+      "estadoD7": "unknown",
       "estadoD14": "N/A",
-      "estadoAtual": "discovered",
+      "estadoAtual": "unknown",
       "ultimoCrawl": "N/A",
       "sitemap": "sitemap-main.xml",
       "canonicalSelf": true,
@@ -187,13 +240,13 @@
       "unicidade": null,
       "impressoes": 0,
       "indexnow": "2026-08-25T01:36:20.032Z",
-      "decisao": "CRAWL_PROBLEM"
+      "decisao": "WAIT"
     },
     {
       "url": "/blog",
       "cluster": "BLOG_HUB",
       "estadoD0": "N/A",
-      "estadoD7": "N/A",
+      "estadoD7": "unknown",
       "estadoD14": "N/A",
       "estadoAtual": "unknown",
       "ultimoCrawl": "2026-07-25T12:07:58Z",
@@ -211,9 +264,9 @@
       "url": "/como-funciona",
       "cluster": "INSTITUCIONAL",
       "estadoD0": "N/A",
-      "estadoD7": "N/A",
+      "estadoD7": "discovered",
       "estadoD14": "N/A",
-      "estadoAtual": "unknown",
+      "estadoAtual": "discovered",
       "ultimoCrawl": "N/A",
       "sitemap": "sitemap-main.xml",
       "canonicalSelf": true,
@@ -223,13 +276,13 @@
       "unicidade": null,
       "impressoes": 0,
       "indexnow": "2026-08-25T01:36:20.032Z",
-      "decisao": "WAIT"
+      "decisao": "CRAWL_PROBLEM"
     },
     {
       "url": "/contato",
       "cluster": "INSTITUCIONAL",
       "estadoD0": "N/A",
-      "estadoD7": "N/A",
+      "estadoD7": "discovered",
       "estadoD14": "N/A",
       "estadoAtual": "discovered",
       "ultimoCrawl": "N/A",
@@ -247,7 +300,7 @@
       "url": "/problemas",
       "cluster": "HUB",
       "estadoD0": "N/A",
-      "estadoD7": "N/A",
+      "estadoD7": "unknown",
       "estadoD14": "N/A",
       "estadoAtual": "unknown",
       "ultimoCrawl": "N/A",
@@ -265,7 +318,7 @@
       "url": "/servicos/backup-para-empresas",
       "cluster": "SERVICO",
       "estadoD0": "N/A",
-      "estadoD7": "N/A",
+      "estadoD7": "discovered",
       "estadoD14": "N/A",
       "estadoAtual": "discovered",
       "ultimoCrawl": "N/A",
@@ -283,9 +336,9 @@
       "url": "/servicos/manutencao-de-computador",
       "cluster": "SERVICO",
       "estadoD0": "N/A",
-      "estadoD7": "N/A",
+      "estadoD7": "discovered",
       "estadoD14": "N/A",
-      "estadoAtual": "unknown",
+      "estadoAtual": "discovered",
       "ultimoCrawl": "N/A",
       "sitemap": "sitemap-servicos.xml",
       "canonicalSelf": true,
@@ -295,13 +348,13 @@
       "unicidade": null,
       "impressoes": 0,
       "indexnow": "2026-08-25T01:36:20.032Z",
-      "decisao": "WAIT"
+      "decisao": "CRAWL_PROBLEM"
     },
     {
       "url": "/servicos/manutencao-de-notebook",
       "cluster": "SERVICO",
       "estadoD0": "N/A",
-      "estadoD7": "N/A",
+      "estadoD7": "unknown",
       "estadoD14": "N/A",
       "estadoAtual": "unknown",
       "ultimoCrawl": "N/A",
@@ -319,9 +372,9 @@
       "url": "/servicos/manutencao-preventiva-empresas",
       "cluster": "SERVICO",
       "estadoD0": "N/A",
-      "estadoD7": "N/A",
+      "estadoD7": "unknown",
       "estadoD14": "N/A",
-      "estadoAtual": "discovered",
+      "estadoAtual": "unknown",
       "ultimoCrawl": "N/A",
       "sitemap": "sitemap-servicos.xml",
       "canonicalSelf": true,
@@ -331,13 +384,13 @@
       "unicidade": null,
       "impressoes": 0,
       "indexnow": "2026-08-25T01:36:20.032Z",
-      "decisao": "CRAWL_PROBLEM"
+      "decisao": "WAIT"
     },
     {
       "url": "/servicos/montagem-de-pc",
       "cluster": "SERVICO",
       "estadoD0": "N/A",
-      "estadoD7": "N/A",
+      "estadoD7": "unknown",
       "estadoD14": "N/A",
       "estadoAtual": "unknown",
       "ultimoCrawl": "N/A",
@@ -355,9 +408,9 @@
       "url": "/servicos/redes-e-wifi",
       "cluster": "SERVICO",
       "estadoD0": "N/A",
-      "estadoD7": "N/A",
+      "estadoD7": "unknown",
       "estadoD14": "N/A",
-      "estadoAtual": "discovered",
+      "estadoAtual": "unknown",
       "ultimoCrawl": "N/A",
       "sitemap": "sitemap-servicos.xml",
       "canonicalSelf": true,
@@ -367,15 +420,15 @@
       "unicidade": null,
       "impressoes": 0,
       "indexnow": "2026-08-25T01:36:20.032Z",
-      "decisao": "CRAWL_PROBLEM"
+      "decisao": "WAIT"
     },
     {
       "url": "/servicos/remocao-de-virus",
       "cluster": "SERVICO",
       "estadoD0": "N/A",
-      "estadoD7": "N/A",
+      "estadoD7": "unknown",
       "estadoD14": "N/A",
-      "estadoAtual": "discovered",
+      "estadoAtual": "unknown",
       "ultimoCrawl": "N/A",
       "sitemap": "sitemap-servicos.xml",
       "canonicalSelf": true,
@@ -385,13 +438,13 @@
       "unicidade": null,
       "impressoes": 0,
       "indexnow": "2026-08-25T01:36:20.032Z",
-      "decisao": "CRAWL_PROBLEM"
+      "decisao": "WAIT"
     },
     {
       "url": "/servicos/suporte-tecnico-empresarial",
       "cluster": "SERVICO",
       "estadoD0": "N/A",
-      "estadoD7": "N/A",
+      "estadoD7": "unknown",
       "estadoD14": "N/A",
       "estadoAtual": "unknown",
       "ultimoCrawl": "N/A",
@@ -428,8 +481,8 @@
     "ativos": 0
   },
   "decisaoD7": {
-    "valor": "PENDENTE",
-    "justificativa": "Marco D7 ainda não registrado."
+    "valor": "WAIT",
+    "justificativa": "Processamento dentro do esperado sete dias após a consolidação."
   },
   "decisaoD14": {
     "valor": "PENDENTE",

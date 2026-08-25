@@ -1,7 +1,7 @@
 {
-  "geradoEm": "2026-08-25T02:39:00.476Z",
+  "geradoEm": "2026-08-25T02:39:19.304Z",
   "verificacao": {
-    "executadoEm": "2026-08-25T02:39:00.476Z",
+    "executadoEm": "2026-08-25T02:39:19.304Z",
     "marcos": [
       "D0",
       "D7"
@@ -16,6 +16,18 @@
       "ok": true,
       "itens": [
         {
+          "path": "reports/serp-signals-d0.json",
+          "tipo": "marco-serp",
+          "hash": "156332cde9ee5804fb7428840bc41286da4bca69",
+          "conferido": true
+        },
+        {
+          "path": ".lovable/memory/features/hubs-seo-categorias.md",
+          "tipo": "memoria",
+          "hash": "1d3cddaa2db9cafd8d8627039ec500174fb8aec7",
+          "conferido": true
+        },
+        {
           "path": ".lovable/memory/features/ambiente-local-offline.md",
           "tipo": "memoria",
           "hash": "ca521b7ddd66b2a9eba2fd59ae999fee026d31e1",
@@ -28,21 +40,9 @@
           "conferido": true
         },
         {
-          "path": ".lovable/memory/features/hubs-seo-categorias.md",
+          "path": ".lovable/memory/features/bairro-pruning-policy.md",
           "tipo": "memoria",
-          "hash": "1d3cddaa2db9cafd8d8627039ec500174fb8aec7",
-          "conferido": true
-        },
-        {
-          "path": ".lovable/memory/features/triagem-pf-pj.md",
-          "tipo": "memoria",
-          "hash": "611c07d464f2816ccf0fb2eeaa13bc466dcb23bd",
-          "conferido": true
-        },
-        {
-          "path": ".lovable/memory/features/analise-d7-d14.md",
-          "tipo": "memoria",
-          "hash": "8f5763d5e348281319950aa78f6d09e389764ee9",
+          "hash": "cad8b8b4fa58838975d08a4ada534992eccaada4",
           "conferido": true
         }
       ]
