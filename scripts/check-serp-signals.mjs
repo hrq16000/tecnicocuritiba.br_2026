@@ -70,7 +70,8 @@ async function lerHtml(path) {
     if (res.status !== 200) return null;
     return res.text();
   }
-  const file = join(DIST, path === "/" ? "" : path.replace(/^\//, ""), "index.html");
+  const base = DIST.endsWith("client") || existsSync(join(DIST, "index.html")) ? DIST : join(DIST, "client");
+  const file = join(base, path === "/" ? "" : path.replace(/^\//, ""), "index.html");
   return existsSync(file) ? readFileSync(file, "utf8") : null;
 }
 
