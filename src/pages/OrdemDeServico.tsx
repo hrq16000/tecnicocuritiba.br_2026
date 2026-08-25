@@ -1,14 +1,18 @@
 import { useEffect, useMemo, useState } from "react";
+import { Link } from "@tanstack/react-router";
 import { PageSEO } from "@/components/PageSEO";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { TermosCtaLink } from "@/components/TermosCtaLink";
+import { TermosOsView } from "@/components/os/TermosOsView";
 import { LocalidadeInput } from "@/components/funnel/LocalidadeInput";
 import { geoSuggestion, subscribeGeo } from "@/lib/geoContext";
 import { trackCTAClick } from "@/lib/analytics";
 import { MODALIDADES, REGRA_CANCELAMENTO, NOTA_VISITA_AVULSA } from "@/lib/precosConfig";
+import { classificarAtendimento, mensagemWhatsAppOs, MOTIVO_CLASSIFICACAO } from "@/lib/os/termosOs";
+import { criarOs } from "@/lib/os/os.functions";
 import { toast } from "sonner";
 
 interface OsForm {
@@ -21,12 +25,7 @@ interface OsForm {
   modalidadeId: string;
 }
 
-const gerarNumero = () => {
-  const d = new Date();
-  const p = (n: number) => String(n).padStart(2, "0");
-  const rand = Math.floor(Math.random() * 9000 + 1000);
-  return `OS-${d.getFullYear()}${p(d.getMonth() + 1)}${p(d.getDate())}-${rand}`;
-};
+
 
 const OrdemDeServico = () => {
   const [form, setForm] = useState<OsForm>(() => ({
