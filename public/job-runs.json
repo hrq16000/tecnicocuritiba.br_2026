@@ -1,0 +1,30 @@
+{
+  "execucoes": [
+    {
+      "id": "reindex:snapshots-1787625722489",
+      "job": "reindex:snapshots",
+      "marco": "D7",
+      "executadoEm": "2026-08-25T02:42:02.489Z",
+      "duracaoMs": 18,
+      "status": "aviso",
+      "failClosed": true,
+      "contagens": {
+        "artefatos": 15,
+        "memorias": 9,
+        "urlsCuradas": 130,
+        "amostrasConferidas": 5
+      },
+      "logs": [
+        "marcos: D0, D7",
+        "amostra ok · .lovable/memory/features/ambiente-local-offline.md",
+        "amostra ok · .lovable/memory/features/whatsapp-funnel-v2.md",
+        "amostra ok · reports/indexation-inventory.json",
+        "amostra ok · reports/operacao-d7.md",
+        "amostra ok · reports/serp-signals-d0.json",
+        "aviso · D0: snapshot de queries ausente (N/A — sem coleta GSC de queries neste marco)",
+        "aviso · D7: snapshot de queries ausente (N/A — sem coleta GSC de queries neste marco)"
+      ]
+    }
+  ],
+  "atualizadoEm": "2026-08-25T02:42:02.489Z"
+}

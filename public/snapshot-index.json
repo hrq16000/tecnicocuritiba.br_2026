@@ -1,7 +1,7 @@
 {
-  "geradoEm": "2026-08-25T02:39:19.304Z",
+  "geradoEm": "2026-08-25T02:42:02.479Z",
   "verificacao": {
-    "executadoEm": "2026-08-25T02:39:19.304Z",
+    "executadoEm": "2026-08-25T02:42:02.479Z",
     "marcos": [
       "D0",
       "D7"
@@ -16,33 +16,33 @@
       "ok": true,
       "itens": [
         {
-          "path": "reports/serp-signals-d0.json",
-          "tipo": "marco-serp",
-          "hash": "156332cde9ee5804fb7428840bc41286da4bca69",
-          "conferido": true
-        },
-        {
-          "path": ".lovable/memory/features/hubs-seo-categorias.md",
-          "tipo": "memoria",
-          "hash": "1d3cddaa2db9cafd8d8627039ec500174fb8aec7",
-          "conferido": true
-        },
-        {
           "path": ".lovable/memory/features/ambiente-local-offline.md",
           "tipo": "memoria",
           "hash": "ca521b7ddd66b2a9eba2fd59ae999fee026d31e1",
           "conferido": true
         },
         {
-          "path": "reports/operacao-d0.md",
-          "tipo": "marco-resumo",
-          "hash": "21aea3b80f606495b61015e18f6940018ae65ec2",
+          "path": ".lovable/memory/features/whatsapp-funnel-v2.md",
+          "tipo": "memoria",
+          "hash": "a2eaa262ac2f0bda1fd189c207c6d7c87f73b3ed",
           "conferido": true
         },
         {
-          "path": ".lovable/memory/features/bairro-pruning-policy.md",
-          "tipo": "memoria",
-          "hash": "cad8b8b4fa58838975d08a4ada534992eccaada4",
+          "path": "reports/indexation-inventory.json",
+          "tipo": "inventario",
+          "hash": "87ba07a6d0ab07da25d235f5fdbc76b1f6f388f2",
+          "conferido": true
+        },
+        {
+          "path": "reports/operacao-d7.md",
+          "tipo": "marco-resumo",
+          "hash": "fee6b5b44c584a1d2805b39cc4866f0eb9662602",
+          "conferido": true
+        },
+        {
+          "path": "reports/serp-signals-d0.json",
+          "tipo": "marco-serp",
+          "hash": "156332cde9ee5804fb7428840bc41286da4bca69",
           "conferido": true
         }
       ]
