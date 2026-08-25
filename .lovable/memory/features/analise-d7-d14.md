@@ -46,3 +46,20 @@ ou disparo de IndexNow é feito para produzir relatório.
 - Painel `/admin/monitoramento`: `ExportarMarco` (CSV/PDF do marco com funil, clusters, tiers,
   transições, Tier A e alertas), `ComparacaoMarcos` (deltas D7×D14 por URL/cluster/Tier A) e
   `ChecklistAuditoria` no drilldown, persistido em `public.url_audit_checks` (só admin).
+
+## Relatório formal, D30 e experimentos
+
+- `npm run report:marco -- --marco=D14|D30` (`report:marco:gate` = fail-closed) gera
+  `docs/relatorio-monitoramento-<marco>.md` só a partir de evidências já congeladas, com links
+  diretos para as âncoras do painel (`#drilldown`, `#comparacao`, `#tendencias`, `#jobs`,
+  `#quick-wins`, `#experimentos`, `#alertas`). Nunca recalcula nada pela rede.
+- `npm run marco:d30` encadeia snapshot (guarda de janela ≥30d) + `reindex:snapshots --strict
+  --conter-auto` + relatório com `--gate`. O workflow `operacao-marcos.yml` tem cron diário
+  08:00 UTC para D30, que só registra quando a janela real fecha.
+- `/admin/monitoramento` ganhou: **Tendências entre marcos** (funil Indexed/Unknown/Discovered/
+  Crawled n/i e Impressões/Cliques/CTR em janelas de 28d), **Experimentos controlados**
+  (`experimentos_indexacao`: mudança única, test × control sem sobreposição, métrica declarada
+  antes; liberado só a partir de D14) e **Classificação de alertas** (`alerta_classificacoes`:
+  verdadeiro/falso positivo com justificativa obrigatória e cluster/URL afetado).
+- `scripts/monitor-operational-alerts.mjs` passou a espelhar o estado em
+  `public/operational-alerts.json` (somente leitura) para alimentar essa classificação.
