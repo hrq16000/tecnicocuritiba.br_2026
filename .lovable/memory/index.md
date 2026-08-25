@@ -21,3 +21,4 @@
 - [Governança de entidade local (4G)](mem://features/governanca-entidade-4g) — SERVICE AREA BUSINESS, proibido publicar endereço/CEP/CNPJ, "desde 1998" é declaração sem documento.
 - [Governança de originalidade e ondas](mem://features/governanca-originalidade-ondas) — Gate Jaccard + corpo mínimo, sitemap por aprovação e ondas Wi-Fi/TV 4–6/semana com prova visual.
 - [Ambiente local offline](mem://features/ambiente-local-offline) — Supabase CLI/Docker, .env.local, seed de teste e guarda offline para integrações externas.
+- [Análise D7/D14 e reindexação](mem://features/analise-d7-d14) — Relatório analista somente-leitura, decisões D7/D14 e verificação de snapshots no painel.
