@@ -1,4 +1,6 @@
+import { Link } from "@tanstack/react-router";
 import { PageSEO } from "@/components/PageSEO";
+
 import { FastHeader } from "@/components/FastHeader";
 import { Footer } from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
