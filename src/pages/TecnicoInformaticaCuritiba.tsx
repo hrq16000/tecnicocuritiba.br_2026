@@ -24,6 +24,7 @@ import { SCHEMA_SLOTS, SLOT_PRIORITY, useJsonLdSlot } from "@/lib/jsonLdSlots";
 import { LocalBusinessJsonLd } from "@/components/LocalBusinessJsonLd";
 import { siteConfig, whatsappLink, absoluteUrl } from "@/lib/siteConfig";
 import { trackPageView, trackCTAClick } from "@/lib/analytics";
+import { REGIOES_COBERTURA } from "@/lib/bairrosBaseline";
 
 /**
  * Página dominante para a intenção "técnico de informática em Curitiba".
@@ -161,15 +162,6 @@ const VALORES = [
   "Volume de dados envolvido em backup ou migração",
   "Modalidade escolhida — no endereço, remoto ou bancada",
   "Tempo de teste necessário para confirmar a causa",
-];
-
-const REGIOES = [
-  "Centro e região central expandida",
-  "Batel, Água Verde e Portão",
-  "Boa Vista, Santa Felicidade e Ecoville",
-  "Cajuru, Boqueirão e Uberaba",
-  "CIC e região sul",
-  "Bairros ligados à região metropolitana atendida",
 ];
 
 const PERFIS = [
