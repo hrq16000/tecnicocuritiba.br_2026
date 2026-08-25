@@ -31,6 +31,7 @@ export const BairroInterlinkLocal = ({ slug, nome }: BairroInterlinkLocalProps) 
               {SERVICOS_INTERLINK_LOCAL.map((servico) => (
                 <li key={servico.to}>
                   <Link
+                    preload="intent"
                     to={servico.to}
                     className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-accent transition-colors"
                   >
@@ -59,6 +60,7 @@ export const BairroInterlinkLocal = ({ slug, nome }: BairroInterlinkLocalProps) 
               ))}
             </div>
             <Link
+              preload="intent"
               to="/areas-atendidas"
               className="inline-flex items-center gap-1 text-sm font-medium text-accent mt-4"
             >

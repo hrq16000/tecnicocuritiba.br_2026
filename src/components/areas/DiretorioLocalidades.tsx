@@ -188,6 +188,7 @@ export const DiretorioLocalidades = ({ regioes, cidades, cidadesSemPagina = [] }
               <h3 className="mt-1.5 text-base font-heading font-bold text-foreground">{item.nome}</h3>
               {item.to ? (
                 <Link
+                  preload="intent"
                   to={item.to}
                   className="mt-1 inline-flex text-sm font-semibold text-accent underline underline-offset-4"
                 >

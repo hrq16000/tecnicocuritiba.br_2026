@@ -24,6 +24,7 @@ import { SCHEMA_SLOTS, SLOT_PRIORITY, useJsonLdSlot } from "@/lib/jsonLdSlots";
 import { LocalBusinessJsonLd } from "@/components/LocalBusinessJsonLd";
 import { siteConfig, whatsappLink, absoluteUrl } from "@/lib/siteConfig";
 import { trackPageView, trackCTAClick } from "@/lib/analytics";
+import { REGIOES_COBERTURA } from "@/lib/bairrosBaseline";
 
 /**
  * Página dominante para a intenção "técnico de informática em Curitiba".
@@ -161,15 +162,6 @@ const VALORES = [
   "Volume de dados envolvido em backup ou migração",
   "Modalidade escolhida — no endereço, remoto ou bancada",
   "Tempo de teste necessário para confirmar a causa",
-];
-
-const REGIOES = [
-  "Centro e região central expandida",
-  "Batel, Água Verde e Portão",
-  "Boa Vista, Santa Felicidade e Ecoville",
-  "Cajuru, Boqueirão e Uberaba",
-  "CIC e região sul",
-  "Bairros ligados à região metropolitana atendida",
 ];
 
 const PERFIS = [
@@ -519,14 +511,36 @@ const TecnicoInformaticaCuritiba = () => {
             <h2 className="font-heading text-2xl font-bold text-foreground md:text-3xl">
               Principais regiões de Curitiba atendidas
             </h2>
-            <ul className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-              {REGIOES.map((r) => (
-                <li key={r} className="flex gap-3 text-sm text-muted-foreground">
+            <ul className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {REGIOES_COBERTURA.map((r) => (
+                <li key={r.id} className="flex gap-3 text-sm text-muted-foreground">
                   <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
-                  <span>{r}</span>
+                  <div>
+                    <span className="block font-semibold text-foreground">{r.titulo}</span>
+                    <span className="mt-2 flex flex-wrap gap-x-2 gap-y-1">
+                      {r.itens.map((item) => (
+                        <Link
+                          key={item.to}
+                          to={item.to}
+                          preload="intent"
+                          className="underline underline-offset-4 hover:text-accent"
+                          aria-label={`Assistência técnica em ${item.nome}`}
+                        >
+                          {item.nome}
+                        </Link>
+                      ))}
+                    </span>
+                  </div>
                 </li>
               ))}
             </ul>
+            <Link
+              to="/areas-atendidas"
+              preload="intent"
+              className="mt-6 inline-block text-sm font-semibold text-accent hover:underline"
+            >
+              Ver todas as regiões e bairros atendidos
+            </Link>
           </div>
         </section>
 

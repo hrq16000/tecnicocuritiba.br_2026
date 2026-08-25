@@ -12,6 +12,7 @@ import { Footer } from "@/components/Footer";
 import { BlocoInteligencia } from "@/components/BlocoInteligencia";
 import { WhatsAppChat } from "@/components/WhatsAppChat";
 import { BairroInterlinkLocal } from "@/components/areas/BairroInterlinkLocal";
+import { REGIOES_COBERTURA } from "@/lib/bairrosBaseline";
 import { whatsappDeepLink } from "@/lib/whatsappDeepLink";
 import { JsonLdSchema } from "@/components/JsonLdSchema";
 import { PricingBanner } from "@/components/PricingBanner";
@@ -102,6 +103,10 @@ export const BairroTemplate = ({ data }: BairroTemplateProps) => {
     },
   ];
 
+  // Região da malha geográfica oficial — usada no BreadcrumbList
+  // (Home > Cidade > Bairros > Região > Bairro) e no interlinking de vizinhos.
+  const regiaoAtual = REGIOES_COBERTURA.find((r) => r.itens.some((i) => i.slug === data.slug));
+
   const localSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
@@ -158,6 +163,8 @@ export const BairroTemplate = ({ data }: BairroTemplateProps) => {
       <Breadcrumbs
         items={[
           { label: `Técnico em ${data.cidade}`, href: getCityLink() },
+          { label: "Bairros atendidos", href: "/areas-atendidas" },
+          ...(regiaoAtual ? [{ label: regiaoAtual.titulo, href: "/areas-atendidas" }] : []),
           { label: data.nome },
         ]}
       />
