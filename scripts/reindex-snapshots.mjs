@@ -139,12 +139,63 @@ const amostras = sorteio.map((i) => {
   return { path: i.path, tipo: i.tipo, hash: i.hash, conferido: ok };
 });
 
-// 4. cobertura de URLs do marco atual
+// 4. cobertura de URLs do marco atual (única dimensão sujeita a contenção)
 const inv = lerJson("reports/indexation-inventory.json");
-const curadas = (inv?.urls ?? []).filter((u) => u.sitemap).length;
+const urlsCuradasLista = (inv?.urls ?? []).filter((u) => u.sitemap);
+const curadas = urlsCuradasLista.length;
 const atual = marcos[marcos.length - 1] ?? null;
-if (atual && curadas && atual.denominador?.curadas !== curadas)
-  falhas.push(`cobertura: marco ${atual.marco} registrou ${atual.denominador?.curadas} URLs e o inventário atual tem ${curadas}`);
+const coberturaDivergente =
+  atual && curadas && atual.denominador?.curadas !== curadas
+    ? `cobertura: marco ${atual.marco} registrou ${atual.denominador?.curadas} URLs e o inventário atual tem ${curadas}`
+    : null;
+
+/** Aplica um conjunto de filtros cluster/tier e devolve o subconjunto contido. */
+const aplicarEscopo = (filtros) =>
+  urlsCuradasLista.filter((u) =>
+    filtros.some(
+      (f) =>
+        (f.tipo === "cluster" && (u.cluster ?? "").toUpperCase() === f.valor) ||
+        (f.tipo === "tier" && (u.tier ?? "").toUpperCase() === f.valor),
+    ),
+  );
+
+let contencao = null;
+if (escopoManual.length) {
+  const contidas = aplicarEscopo(escopoManual);
+  contencao = {
+    ativa: true,
+    origem: "explicita",
+    filtros: escopoManual,
+    urlsNoEscopo: contidas.length,
+    urlsForaDoEscopo: curadas - contidas.length,
+    motivo: `contenção solicitada na linha de comando (${escopoBruto})`,
+    coberturaVerificada: false,
+  };
+  avisos.push(`contenção ativa: verificação de cobertura limitada a ${contidas.length}/${curadas} URL(s) (${escopoBruto}).`);
+} else if (coberturaDivergente) {
+  if (CONTER_AUTO) {
+    // Contenção automática: mantém a falha registrada, mas restringe o escopo
+    // ao(s) cluster(s) realmente divergente(s) para preservar rastreabilidade.
+    const clustersMarco = new Set((atual?.urls ?? []).map((u) => (u.cluster ?? "OUTROS").toUpperCase()));
+    const filtros = [...new Set(urlsCuradasLista.map((u) => (u.cluster ?? "OUTROS").toUpperCase()))]
+      .filter((c) => !clustersMarco.has(c))
+      .map((valor) => ({ tipo: "cluster", valor }));
+    const contidas = filtros.length ? aplicarEscopo(filtros) : [];
+    contencao = {
+      ativa: true,
+      origem: "automatica",
+      filtros,
+      urlsNoEscopo: contidas.length,
+      urlsForaDoEscopo: curadas - contidas.length,
+      motivo: coberturaDivergente,
+      coberturaVerificada: false,
+    };
+    avisos.push(`contenção automática após fail-closed de cobertura — escopo reduzido a ${filtros.map((f) => f.valor).join(", ") || "nenhum cluster identificável"}; site intocado.`);
+  } else {
+    falhas.push(coberturaDivergente);
+  }
+}
+
 
 const verificacao = {
   executadoEm: new Date().toISOString(),
