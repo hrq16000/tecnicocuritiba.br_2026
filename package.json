@@ -274,6 +274,11 @@
     "reindex:snapshots": "node scripts/reindex-snapshots.mjs",
     "reindex:snapshots:gate": "node scripts/reindex-snapshots.mjs --strict",
     "report:monitoramento": "node scripts/report-monitoramento-d7-d14.mjs",
+    "report:marco": "node scripts/gerar-relatorio-marco.mjs",
+    "report:marco:gate": "node scripts/gerar-relatorio-marco.mjs --gate",
+    "report:marco:d14": "node scripts/gerar-relatorio-marco.mjs --marco=D14",
+    "report:marco:d30": "node scripts/gerar-relatorio-marco.mjs --marco=D30",
+    "marco:d30": "node scripts/snapshot-marco.mjs --marco=D30 && node scripts/reindex-snapshots.mjs --strict --conter-auto && node scripts/gerar-relatorio-marco.mjs --marco=D30 --gate",
     "report:diff-marcos": "node scripts/diff-marcos.mjs",
     "report:diff-marcos:gate": "node scripts/diff-marcos.mjs --gate"
   },

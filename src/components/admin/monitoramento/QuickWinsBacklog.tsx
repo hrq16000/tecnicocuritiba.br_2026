@@ -134,7 +134,7 @@ export function QuickWinsBacklog({
   };
 
   return (
-    <section className="mt-10">
+    <section id="quick-wins" className="mt-10 scroll-mt-24">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div>
           <h2 className="text-lg font-semibold">Backlog de quick wins</h2>
