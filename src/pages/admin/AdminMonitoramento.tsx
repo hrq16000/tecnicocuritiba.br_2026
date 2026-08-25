@@ -119,6 +119,15 @@ export default function AdminMonitoramento() {
 
   useEffect(carregar, []);
 
+  // Verificação da reindexação de memórias/snapshots (scripts/reindex-snapshots.mjs).
+  const [indice, setIndice] = useState<SnapshotIndex | null>(null);
+  useEffect(() => {
+    fetch(`/snapshot-index.json?t=${Date.now()}`)
+      .then((r) => (r.ok ? r.json() : null))
+      .then((j) => setIndice(j))
+      .catch(() => setIndice(null));
+  }, []);
+
   const marcos = useMemo(
     () => (data?.marcos ?? []).slice().sort((a, b) => ORDEM.indexOf(a.marco) - ORDEM.indexOf(b.marco)),
     [data],
