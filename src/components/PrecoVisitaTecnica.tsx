@@ -29,7 +29,7 @@ export const PrecoVisitaTecnica = ({ tipo, className = "", showLink = true, comp
         <div className={`ml-6 mt-1.5 space-y-1 ${compact ? "text-xs" : "text-sm"}`}>
           <p className="text-muted-foreground flex items-center gap-1.5">
             <MessageCircle className="h-3 w-3 text-accent flex-shrink-0" />
-            {REGRA_ESTIMATIVA_GRATIS}. valor preciso após coleta.
+            {REGRA_ESTIMATIVA_GRATIS}. Valor preciso após coleta.
           </p>
           {PRAZOS.map((p, i) => (
             <p key={i} className="text-muted-foreground">

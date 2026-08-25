@@ -199,7 +199,7 @@ const TvDesligandoSozinha = () => {
           <p className="mb-4 line-clamp-4 text-[0.95rem] leading-relaxed opacity-95 sm:mb-6 sm:line-clamp-none sm:text-base">
             Televisor que apaga sem comando quase nunca é defeito aleatório: na maioria dos casos é o próprio aparelho
             se protegendo de uma tensão fora da faixa. Esta página mostra como separar configuração de menu, falha
-            térmica de fonte e problema de placa antes de qualquer orçamento.
+            térmica de fonte e problema de placa antes de qualquer valor fechado.
           </p>
           <Button asChild size="lg" className="min-h-14">
             <a href={waHref} onClick={cta("hero")} data-cta-location="problema_hero">

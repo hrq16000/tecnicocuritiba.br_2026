@@ -166,7 +166,7 @@ const ComputadorLento = () => {
               {[
                 { icon: MessageCircle, titulo: "1. Contato", desc: "Descreva o problema pelo WhatsApp. Já orientamos se é algo simples ou se precisa visita." },
                 { icon: Wrench, titulo: "2. Diagnóstico", desc: "Identificamos a causa real no local ou em bancada. Sem achismo." },
-                { icon: Clock, titulo: "3. valor do atendimento", desc: "Valor apresentado antes da execução. Você aprova ou não, sem surpresas." },
+                { icon: Clock, titulo: "3. Valor do atendimento", desc: "Valor apresentado antes da execução. Você aprova ou não, sem surpresas." },
                 { icon: Shield, titulo: "4. Resolução", desc: "Executamos com garantia. A maioria dos casos resolve na primeira visita." },
               ].map((step, i) => (
                 <div key={i} className="text-center bg-secondary rounded-xl p-5 group hover:-translate-y-1 hover:shadow-lg transition-all duration-300 stagger-item" style={{ animationDelay: `${i * 100}ms` }}>

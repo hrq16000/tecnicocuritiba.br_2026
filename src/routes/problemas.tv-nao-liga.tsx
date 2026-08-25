@@ -34,7 +34,7 @@ export const Route = createFileRoute("/problemas/tv-nao-liga")({
         "answer": "Não atendemos em balcão. O contato começa pelo WhatsApp com marca, modelo, tamanho e descrição do sintoma, e o aparelho é retirado e devolvido no endereço combinado, com as condições descritas na página de coleta e entrega."
       },
       {
-        "question": "Dá para orçar antes de ver a TV?",
+        "question": "Dá para fechar valor antes de ver a TV?",
         "answer": "Não com precisão. Fonte, iluminação e placa principal são intervenções com custo bem diferente, e o mesmo sintoma pode vir de qualquer uma delas. O que fazemos na triagem é indicar quais cenários são compatíveis com o que você descreveu e qual deles não compensaria seguir."
       },
       {

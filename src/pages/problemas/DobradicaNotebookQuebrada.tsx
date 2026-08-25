@@ -87,7 +87,7 @@ const OPCOES = [
   },
   {
     titulo: "Avaliação do conjunto da tela",
-    desc: "Se o cabo de vídeo foi pinçado ou a tela trincou junto, o orçamento passa a incluir o conjunto e não só a estrutura.",
+    desc: "Se o cabo de vídeo foi pinçado ou a tela trincou junto, o valor passa a incluir o conjunto e não só a estrutura.",
     to: "/problemas/tela-de-notebook-quebrada",
     label: "Tela de notebook quebrada",
   },
@@ -236,7 +236,7 @@ const DobradicaNotebookQuebrada = () => {
           <p className="mb-3 text-muted-foreground">
             Essa progressão importa porque o custo do reparo acompanha o estágio. Corrigir a fixação enquanto o
             problema é estrutural é um serviço; esperar até o cabo de vídeo ser pinçado dentro do canal da dobradiça
-            leva o orçamento para outro patamar, porque passa a envolver o conjunto da tela.
+            leva o valor para outro patamar, porque passa a envolver o conjunto da tela.
           </p>
           <p className="text-muted-foreground">
             Se a tela já apresenta trinca ou mancha, o roteiro correto está em{" "}
@@ -299,7 +299,7 @@ const DobradicaNotebookQuebrada = () => {
             ))}
           </ol>
           <p className="mt-4 text-sm text-muted-foreground">
-            O que não recomendamos: colar a carcaça, apertar parafusos com força em plástico já arrancado, forçar a
+            O que não recomendamos: colar a carcaça, apertar parafusos com força em plástico já arrancado, ffechar valor a
             tampa até o fim do curso e continuar usando o notebook aberto quando a tela pisca ao movimentar.
           </p>
         </section>
@@ -333,7 +333,7 @@ const DobradicaNotebookQuebrada = () => {
           </p>
           <div className="grid gap-4 md:grid-cols-3">
             <div className="rounded-lg border border-border bg-card p-5">
-              <h3 className="mb-2 font-semibold text-foreground">Avaliação antes do orçamento</h3>
+              <h3 className="mb-2 font-semibold text-foreground">Avaliação antes do valor</h3>
               <p className="text-sm text-muted-foreground">
                 O conjunto é aberto para verificar fixação, cabo de vídeo e moldura. O valor só é informado depois
                 dessa verificação, com o cenário real em mãos.

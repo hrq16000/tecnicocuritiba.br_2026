@@ -486,7 +486,7 @@ const TecnicoInformaticaCuritiba = () => {
           </div>
         </section>
 
-        {/* 10. valor do atendimento */}
+        {/* 10. Valor do atendimento */}
         <section className="py-12 md:py-16">
           <div className="container mx-auto max-w-3xl">
             <h2 className="font-heading text-2xl font-bold text-foreground md:text-3xl">

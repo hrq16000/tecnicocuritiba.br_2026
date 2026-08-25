@@ -11,7 +11,7 @@ export const Route = createFileRoute("/problemas/notebook-com-tela-preta")({
     "faq": [
       {
         "question": "Meu notebook liga mas a tela fica preta. É a tela ou a placa?",
-        "answer": "O teste do monitor externo responde isso em menos de um minuto. Se a imagem aparece no monitor conectado, o computador está processando normalmente e o defeito está no conjunto de tela, no cabo interno ou no circuito que ilumina o painel. Se nem o monitor externo mostra imagem, a investigação se desloca para memória, vídeo e circuitos de alimentação da placa. São dois caminhos com custo e prazo bem diferentes, por isso esse teste vem antes de qualquer orçamento."
+        "answer": "O teste do monitor externo responde isso em menos de um minuto. Se a imagem aparece no monitor conectado, o computador está processando normalmente e o defeito está no conjunto de tela, no cabo interno ou no circuito que ilumina o painel. Se nem o monitor externo mostra imagem, a investigação se desloca para memória, vídeo e circuitos de alimentação da placa. São dois caminhos com custo e prazo bem diferentes, por isso esse teste vem antes de qualquer valor fechado."
       },
       {
         "question": "Consigo ver a imagem bem fraquinha com a lanterna. O que isso significa?",

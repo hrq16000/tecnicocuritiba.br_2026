@@ -281,7 +281,7 @@ const NotebookDesligandoSozinho = () => {
 
         <section className="mb-12">
           <h2 className="mb-4 flex items-center gap-2 text-2xl font-bold text-foreground">
-            <PowerOff className="h-6 w-6 text-accent" /> Verificações gratuitas antes de qualquer orçamento
+            <PowerOff className="h-6 w-6 text-accent" /> Verificações gratuitas antes de qualquer valor fechado
           </h2>
           <p className="mb-4 text-muted-foreground">
             Faça na ordem. Nenhum desses passos exige abrir o aparelho e todos ajudam a chegar com informação útil no

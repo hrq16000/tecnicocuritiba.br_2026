@@ -1450,7 +1450,7 @@ const BASE_ROUTES = [
         "titulo": "Checklist antes de chamar o técnico",
         "paragrafos": [
           "Nenhum item exige abrir o equipamento: anotar quando o problema começou e o que mudou antes, testar outra tomada aterrada, desconectar periféricos, observar LEDs e ruídos, conferir o espaço livre do disco e notar se a lentidão aparece logo ou depois de alguns minutos.",
-          "O que evitar: abrir fonte, insistir em ligar equipamento que teve contato com líquido, forçar conectores, instalar otimizadores baixados por anúncio e reinstalar o sistema com suspeita de disco falhando."
+          "O que evitar: abrir fonte, insistir em ligar equipamento que teve contato com líquido, ffechar valor conectores, instalar otimizadores baixados por anúncio e reinstalar o sistema com suspeita de disco falhando."
         ]
       },
       {
@@ -1564,7 +1564,7 @@ const BASE_ROUTES = [
         "titulo": "O que você pode registrar antes do atendimento",
         "paragrafos": [
           "Fotografar o código de erro, registrar o que estava sendo feito, lembrar de instalações e atualizações recentes, observar aquecimento antes do reinício e contar quantas vezes a falha ocorre por dia.",
-          "O que não recomendamos: reinstalar o Windows por conta própria com suspeita de disco, aplicar \"correções de registro\" baixadas por anúncio e forçar atualização de BIOS sem confirmar o modelo da placa."
+          "O que não recomendamos: reinstalar o Windows por conta própria com suspeita de disco, aplicar \"correções de registro\" baixadas por anúncio e ffechar valor atualização de BIOS sem confirmar o modelo da placa."
         ]
       },
       {
@@ -1935,7 +1935,7 @@ const BASE_ROUTES = [
       "titulo": "O som se perde em um de três pontos",
       "paragrafos": [
         "O áudio percorre um caminho curto: a fonte gera o sinal, o processamento decide por onde ele sai, o amplificador dá potência e os alto-falantes transformam isso em som. Falta de áudio é a interrupção desse caminho em um desses pontos, e cada um tem custo bem diferente.",
-        "Por isso o primeiro passo não é orçamento, é teste de fonte. Silêncio em todas as entradas coloca a suspeita dentro do aparelho. Silêncio em uma só entrega o caso para ajuste de formato, cabo ou aparelho externo, sem reparo nenhum."
+        "Por isso o primeiro passo não é fechar valor, é teste de fonte. Silêncio em todas as entradas coloca a suspeita dentro do aparelho. Silêncio em uma só entrega o caso para ajuste de formato, cabo ou aparelho externo, sem reparo nenhum."
       ]
     },
     {
@@ -1987,7 +1987,7 @@ const BASE_ROUTES = [
       "titulo": "Testes antes de comprar suprimento",
       "paragrafos": [
         "Cancele a fila e reinicie a impressora pela tomada, confira se a impressora padrão é o aparelho físico e não um dispositivo virtual de PDF, imprima a página de teste pelo painel e tente imprimir pelo celular na mesma rede.",
-        "O que não recomendamos: forçar o carro de impressão com a mão, lavar cabeçote com produtos improvisados e puxar papel preso contra o sentido do mecanismo, o que costuma quebrar dentes de engrenagem."
+        "O que não recomendamos: ffechar valor o carro de impressão com a mão, lavar cabeçote com produtos improvisados e puxar papel preso contra o sentido do mecanismo, o que costuma quebrar dentes de engrenagem."
       ]
     },
     {
@@ -2022,7 +2022,7 @@ const BASE_ROUTES = [
       ]
     },
     {
-      "titulo": "Testes gratuitos antes de qualquer orçamento",
+      "titulo": "Testes gratuitos antes de qualquer valor fechado",
       "paragrafos": [
         "Troque o cabo por outro em bom estado, percorra manualmente todas as entradas no menu do monitor, ligue o computador em uma TV pela porta HDMI e ligue o monitor em outro aparelho conhecido. Se o computador aparece na TV, o monitor é o suspeito; se não aparece em lugar nenhum, o problema está no computador.",
         "Em desktop com placa de vídeo dedicada, confirme se o cabo está na placa e não na saída da placa-mãe. Reassentar memória e placa de vídeo com o aparelho desligado da tomada resolve parte real dos casos após limpeza interna."
@@ -2098,7 +2098,7 @@ const BASE_ROUTES = [
       ]
     },
     {
-      "titulo": "Verificações gratuitas antes de qualquer orçamento",
+      "titulo": "Verificações gratuitas antes de qualquer valor fechado",
       "paragrafos": [
         "Anote em que situação desliga, sinta o fluxo de ar na saída do dissipador, use o aparelho sobre superfície rígida por um dia, confira se o carregador tem a potência indicada na etiqueta e observe a temperatura sob carga.",
         "O que não recomendamos: soprar ar comprimido pelas grades, apoiar o notebook em base improvisada com o cooler bloqueado e continuar usando após cheiro de queimado."
@@ -2163,7 +2163,7 @@ const BASE_ROUTES = [
       "titulo": "Dobradiça quebrada tem estágios, e eles custam diferente",
       "paragrafos": [
         "Quase nenhum notebook chega com a dobradiça rompida de uma vez. Primeiro a tampa deixa de parar no ângulo escolhido, depois a carcaça começa a estufar perto do encaixe, em seguida a moldura da tela descola de um lado e só então o conjunto cede por completo.",
-        "O custo do reparo acompanha o estágio: corrigir a fixação enquanto o problema é estrutural é um serviço; esperar até o cabo de vídeo ser pinçado dentro do canal da dobradiça leva o orçamento para o conjunto da tela."
+        "O custo do reparo acompanha o estágio: corrigir a fixação enquanto o problema é estrutural é um serviço; esperar até o cabo de vídeo ser pinçado dentro do canal da dobradiça leva o valor para o conjunto da tela."
       ]
     },
     {
@@ -2177,14 +2177,14 @@ const BASE_ROUTES = [
       "titulo": "Verificações seguras antes de qualquer tentativa",
       "paragrafos": [
         "Pare de abrir e fechar o equipamento, observe se a carcaça está estufando, verifique se a tela pisca ao movimentar a tampa e confira se a moldura descolou em algum canto. Todos esses passos são de observação e não exigem abrir o notebook.",
-        "O que não recomendamos: colar a carcaça, apertar parafusos com força em plástico já arrancado, forçar a tampa até o fim do curso e transportar o notebook aberto."
+        "O que não recomendamos: colar a carcaça, apertar parafusos com força em plástico já arrancado, ffechar valor a tampa até o fim do curso e transportar o notebook aberto."
       ]
     },
     {
       "titulo": "O que resolve cada cenário e quais são as condições",
       "paragrafos": [
         "Com bucha arrancada, o reparo recompõe o ponto de fixação da carcaça e devolve firmeza à tampa. Eixo empenado ou mecanismo travado exige peça nova, e a disponibilidade para o modelo é confirmada antes da aprovação.",
-        "Se o cabo de vídeo foi pinçado ou a tela trincou junto, o orçamento passa a incluir o conjunto da tela e não apenas a estrutura.",
+        "Se o cabo de vídeo foi pinçado ou a tela trincou junto, o valor passa a incluir o conjunto da tela e não apenas a estrutura.",
         "Atendimento apenas por coleta e entrega no endereço informado, sem balcão. Garantia de 90 dias sobre mão de obra e peça aplicada, limitada ao serviço executado."
       ]
     }
@@ -2291,7 +2291,7 @@ const BASE_ROUTES = [
       "titulo": "Verificações seguras antes de comprar câmera externa",
       "paragrafos": [
         "Confira obturador físico sobre a lente, teste o aplicativo de câmera nativo, revise as permissões do sistema, feche programas de vídeo concorrentes e reinicie uma vez. Em câmera externa, troque de porta USB e teste em outro computador.",
-        "O que não recomendamos: instalar programas que prometem recuperar drivers automaticamente, forçar a moldura da tela para chegar ao módulo e desativar o antivírus inteiro para testar a câmera."
+        "O que não recomendamos: instalar programas que prometem recuperar drivers automaticamente, ffechar valor a moldura da tela para chegar ao módulo e desativar o antivírus inteiro para testar a câmera."
       ]
     },
     {
@@ -2313,7 +2313,7 @@ const BASE_ROUTES = [
       {
         "titulo": "Como usar este índice de problemas",
         "paragrafos": [
-          "A maioria dos orçamentos errados começa com uma suspeita, não com um sintoma. Quem chega dizendo que acha que é a placa costuma pagar por uma peça que não era o problema. Por isso este índice está organizado pelo que o equipamento faz — não liga, liga sem imagem, trava, esquenta, perde rede — e não pelo componente que alguém imaginou estar em falha.",
+          "A maioria dos reparos errados começa com uma suspeita, não com um sintoma. Quem chega dizendo que acha que é a placa costuma pagar por uma peça que não era o problema. Por isso este índice está organizado pelo que o equipamento faz — não liga, liga sem imagem, trava, esquenta, perde rede — e não pelo componente que alguém imaginou estar em falha.",
           "Cada página segue a mesma lógica da bancada: primeiro os testes gratuitos que separam grandes grupos de causa, depois as verificações seguras que podem ser feitas em casa e só então as intervenções que exigem ferramenta e equipamento de medição."
         ]
       },
@@ -2543,7 +2543,7 @@ const BASE_ROUTES = [
       "titulo": "Verificações seguras antes de comprar outro mouse",
       "paragrafos": [
         "Teste o mouse em outra máquina, troque de porta USB preferindo as traseiras, troque a pilha em modelos sem fio, aproxime o receptor, limpe o sensor e teste sobre superfície fosca. Nenhum passo exige abrir equipamento.",
-        "O que não recomendamos: instalar programas que prometem consertar drivers automaticamente, forçar o conector em porta com folga e abrir o mouse para mexer no switch sem experiência."
+        "O que não recomendamos: instalar programas que prometem consertar drivers automaticamente, ffechar valor o conector em porta com folga e abrir o mouse para mexer no switch sem experiência."
       ]
     },
     {
@@ -2581,7 +2581,7 @@ const BASE_ROUTES = [
       "titulo": "Verificações seguras antes de trocar qualquer peça",
       "paragrafos": [
         "Confira o dispositivo de saída, abra o mixer de volume, teste um fone conhecido nas saídas frontal e traseira, teste a caixa em outro equipamento e verifique o gerenciador de dispositivos. Nenhum passo exige abrir o gabinete.",
-        "O que não recomendamos: instalar pacotes automáticos de driver baixados de sites genéricos, comprar caixa de som antes de testar a saída e forçar o plugue em jack com folga."
+        "O que não recomendamos: instalar pacotes automáticos de driver baixados de sites genéricos, comprar caixa de som antes de testar a saída e ffechar valor o plugue em jack com folga."
       ]
     },
     {
@@ -2654,7 +2654,7 @@ const BASE_ROUTES = [
       ]
     },
     {
-      "titulo": "Testes gratuitos antes de qualquer orçamento",
+      "titulo": "Testes gratuitos antes de qualquer valor fechado",
       "paragrafos": [
         "Pressione a tecla de função com o ícone de touchpad, desconecte o mouse externo e reinicie, confirme nas configurações se o dispositivo está habilitado e reinstale o driver oficial do fabricante do notebook em vez do driver genérico.",
         "O que não recomendamos: abrir o notebook com espátula improvisada, aplicar produto de limpeza direto sobre a superfície e insistir no uso depois de contato com líquido, porque a corrosão avança com o aparelho energizado."

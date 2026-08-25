@@ -103,7 +103,7 @@ const FAQS = [
   {
     question: "TV com linhas na tela tem conserto?",
     answer:
-      "Depende de onde a falha está. Quando a origem é conexão do painel, cabo flat ou placa de controle da imagem, o reparo costuma ser viável e o aparelho volta com imagem normal. Quando o dano está dentro da matriz do painel, não há reparo possível — e trocar o painel raramente compensa diante do valor de um televisor novo. Por isso a avaliação em bancada vem antes de qualquer orçamento: é ela que separa os dois mundos.",
+      "Depende de onde a falha está. Quando a origem é conexão do painel, cabo flat ou placa de controle da imagem, o reparo costuma ser viável e o aparelho volta com imagem normal. Quando o dano está dentro da matriz do painel, não há reparo possível — e trocar o painel raramente compensa diante do valor de um televisor novo. Por isso a avaliação em bancada vem antes de qualquer valor fechado: é ela que separa os dois mundos.",
   },
   {
     question: "Linha vertical e linha horizontal têm a mesma causa?",

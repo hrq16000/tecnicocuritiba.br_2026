@@ -87,7 +87,7 @@ const OPCOES = [
   },
   {
     titulo: "Troca de disco e migração",
-    desc: "Disco com setores defeituosos não volta a ser confiável. A saída é migrar para SSD, e o orçamento sai antes de qualquer compra.",
+    desc: "Disco com setores defeituosos não volta a ser confiável. A saída é migrar para SSD, e o valor sai antes de qualquer compra.",
     to: "/servicos/upgrade-ssd-ram",
     label: "Upgrade de SSD e memória",
   },

@@ -117,7 +117,7 @@ const faqCategories = [
       },
       {
         question: "Vale a pena reparar um notebook antigo?",
-        answer: "Depende de quatro fatores: custo da peça, estado geral do conjunto (tela, teclado, bateria, dobradiças), disponibilidade do componente para aquele modelo e valor de mercado do aparelho. Troca de armazenamento, memória, bateria ou limpeza costuma valer em aparelhos ainda saudáveis. Quando o orçamento se aproxima do preço de um equipamento adequado, ou quando a placa apresenta dano extenso, dizemos isso abertamente — inclusive quando a melhor decisão é migrar os dados em vez de reparar."
+        answer: "Depende de quatro fatores: custo da peça, estado geral do conjunto (tela, teclado, bateria, dobradiças), disponibilidade do componente para aquele modelo e valor de mercado do aparelho. Troca de armazenamento, memória, bateria ou limpeza costuma valer em aparelhos ainda saudáveis. Quando o valor do reparo se aproxima do preço de um equipamento adequado, ou quando a placa apresenta dano extenso, dizemos isso abertamente — inclusive quando a melhor decisão é migrar os dados em vez de reparar."
       },
       {
         question: "Quanto tempo demora um diagnóstico?",

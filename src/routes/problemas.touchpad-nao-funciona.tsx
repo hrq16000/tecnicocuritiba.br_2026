@@ -11,7 +11,7 @@ export const Route = createFileRoute("/problemas/touchpad-nao-funciona")({
     "faq": [
       {
         "question": "O touchpad parou do nada. É defeito de fábrica?",
-        "answer": "Raramente. Parar de uma hora para outra, sem queda e sem líquido, costuma ser o atalho de teclado que desativa o touchpad ou o driver substituído em uma atualização do sistema. Antes de qualquer orçamento vale testar o atalho de função e reinstalar o driver oficial do fabricante — são dois passos gratuitos que resolvem a maior parte dos casos."
+        "answer": "Raramente. Parar de uma hora para outra, sem queda e sem líquido, costuma ser o atalho de teclado que desativa o touchpad ou o driver substituído em uma atualização do sistema. Antes de qualquer valor do reparo vale testar o atalho de função e reinstalar o driver oficial do fabricante — são dois passos gratuitos que resolvem a maior parte dos casos."
       },
       {
         "question": "O cursor anda mas o clique não funciona. Precisa trocar a peça?",

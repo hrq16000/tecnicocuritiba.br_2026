@@ -236,7 +236,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { question: "É possível informar o valor sem diagnóstico?", answer: "Não com precisão. O mesmo sintoma pode ter causas de custo muito diferente. Informamos antes as condições comerciais vigentes, publicadas em preços e políticas; o valor do reparo vem depois da causa confirmada e depende da sua autorização." },
       { question: "Peças estão incluídas?", answer: "Não. Peças, componentes e materiais são tratados à parte do serviço e só são adquiridos após a sua aprovação. Informamos se o item é original, paralelo ou recondicionado." },
       { question: "Há garantia?", answer: "Sim, conforme o serviço efetivamente executado e a peça aplicada. As condições de garantia estão descritas na página de preços e políticas." },
-      { question: "Vale a pena consertar um notebook antigo?", answer: "Depende de três números: valor do reparo com peça, valor de mercado do equipamento no estado atual e o que você espera dele nos próximos meses. Reparo de teclado, bateria, refrigeração ou armazenamento costuma se pagar; reparo de placa em plataforma antiga com peça escassa nem sempre. Apresentamos os valores e a alternativa antes de qualquer execução." },
+      { question: "Vale a pena consertar um notebook antigo?", answer: "Depende de três números: Valor do reparo com peça, valor de mercado do equipamento no estado atual e o que você espera dele nos próximos meses. Reparo de teclado, bateria, refrigeração ou armazenamento costuma se pagar; reparo de placa em plataforma antiga com peça escassa nem sempre. Apresentamos os valores e a alternativa antes de qualquer execução." },
       { question: "Trocar a bateria melhora o desempenho do notebook?", answer: "Não. A troca devolve autonomia longe da tomada e evita desligamento inesperado, mas não altera velocidade de processamento, abertura de programas nem tempo de inicialização. Desempenho lento tem outras causas — armazenamento, memória, temperatura ou sistema — e é avaliado separadamente." },
     ],
     relacionados: [
@@ -409,7 +409,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
         titulo: "Do sintoma ao diagnóstico: o que é testado antes de trocar peça",
         paragrafos: [
           "PC que reinicia sozinho, desliga sob carga ou trava em uso pesado pede a mesma sequência inicial: leitura de temperaturas e do estado da ventilação, verificação da alimentação com componente conhecido, teste de memória e leitura SMART do disco. Só depois disso faz sentido falar em substituição.",
-          "Computador que liga sem imagem é isolado por etapas — vídeo integrado contra dedicado, um pente de memória por vez, alimentação da placa — porque o mesmo sintoma pode vir de memória, placa de vídeo, fonte ou placa-mãe. Trocar por tentativa é o que faz o orçamento crescer sem resolver.",
+          "Computador que liga sem imagem é isolado por etapas — vídeo integrado contra dedicado, um pente de memória por vez, alimentação da placa — porque o mesmo sintoma pode vir de memória, placa de vídeo, fonte ou placa-mãe. Trocar por tentativa é o que faz o valor do reparo crescer sem resolver.",
           "Quando a queixa é lentidão, a ordem é medir antes de opinar: disco mecânico saturado, memória insuficiente para o uso real, temperatura alta com redução de desempenho e sistema comprometido produzem a mesma sensação e exigem intervenções diferentes. O caminho é sintoma, diagnóstico, causa e só então intervenção.",
         ],
       },
@@ -1267,7 +1267,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { question: "A manutenção preventiva melhora o desempenho?", answer: "Melhora quando o problema é software acumulado, disco cheio ou superaquecimento. Quando a limitação é hardware — HD mecânico, memória insuficiente, processador antigo — o ganho real vem de upgrade, e explicamos isso no relatório em vez de prometer resultado." },
       { question: "Vocês cuidam do backup durante a preventiva?", answer: "Conferimos o que existe hoje e apontamos as falhas do processo. Estruturar cópias, definir retenção e testar restauração é escopo da página de backup para empresas, contratado à parte." },
       { question: "Manutenção preventiva evita que os computadores parem?", answer: "Reduz a probabilidade e antecipa a maior parte das falhas previsíveis — disco degradado, refrigeração comprometida, fonte instável, espaço no fim. Não elimina falha súbita de componente nem incidente externo, e por isso a preventiva é planejada junto com backup testado e um plano de substituição para o posto crítico." },
-      { question: "A preventiva inclui as peças que precisarem ser trocadas?", answer: "Não. A rotina inclui inspeção, limpeza, verificações e o relatório priorizado; peças, componentes e materiais são orçados à parte e só adquiridos após autorização da empresa. Essa separação evita a impressão de que a substituição já está paga dentro do contrato de rotina." },
+      { question: "A preventiva inclui as peças que precisarem ser trocadas?", answer: "Não. A rotina inclui inspeção, limpeza, verificações e o relatório priorizado; peças, componentes e materiais têm valor informado à parte e só adquiridos após autorização da empresa. Essa separação evita a impressão de que a substituição já está paga dentro do contrato de rotina." },
     ],
     relacionados: [
       { label: "Suporte técnico empresarial", to: "/servicos/suporte-tecnico-empresarial" },
@@ -1291,7 +1291,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
         titulo: "Como a rotina é definida sem inventar SLA",
         paragrafos: [
           "A periodicidade sai do parque instalado, não de um pacote pronto: quantidade de máquinas, idade média, ambiente físico (poeira, temperatura, obra próxima), criticidade por posto e horário em que a parada custa menos. Escritório com dez estações em sala climatizada e oficina com equipamento em ambiente com particulado não pedem o mesmo intervalo.",
-          "Cada visita gera registro por equipamento com o que foi inspecionado, o que foi ajustado e o que ficou como risco pendente com prioridade. Esse relatório é o que permite planejar troca de disco, aumento de memória ou substituição de máquina antes da falha, com orçamento previsto em vez de urgência.",
+          "Cada visita gera registro por equipamento com o que foi inspecionado, o que foi ajustado e o que ficou como risco pendente com prioridade. Esse relatório é o que permite planejar troca de disco, aumento de memória ou substituição de máquina antes da falha, com valor do reparo previsto em vez de urgência.",
           "Prazo de execução depende de disponibilidade de peça, janela liberada pela empresa e tempo de teste. Não publicamos SLA fixo porque ele mudaria conforme o parque; a janela real é combinada por escrito antes da rotina começar.",
         ],
       },

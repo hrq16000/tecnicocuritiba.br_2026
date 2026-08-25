@@ -406,7 +406,7 @@ export const CIDADES: Record<string, CidadeData> = {
     faqs: [
       { question: "Vocês atendem empresas e galpões em Quatro Barras?", answer: "Sim. Fazemos suporte pontual ou recorrente para estações de trabalho, rede e backup, sob consulta, priorizando manter a operação funcionando durante a avaliação." },
       { question: "Atendem condomínios afastados da área urbana?", answer: "Atendemos, combinando endereço e acesso antes pelo WhatsApp. Como o deslocamento varia bastante, não prometemos tempo fixo de chegada." },
-      { question: "Qual o valor do atendimento?", answer: "A partir de R$ 99,99 para visita/diagnóstico quando aplicável. Peças e serviços adicionais são orçados e aprovados por você antes de qualquer execução." },
+      { question: "Qual o valor do atendimento?", answer: "A partir de R$ 99,99 para visita/diagnóstico quando aplicável. Peças e serviços adicionais têm valor informado e aprovado por você antes de qualquer execução." },
       { question: "Existe loja para deixar o equipamento?", answer: "Não. Não temos balcão ao público: o serviço acontece no seu endereço ou por coleta e entrega quando o reparo precisa de bancada." },
       { question: "Fazem cabeamento de rede?", answer: "Avaliamos a rede existente e indicamos o que faz sentido: reposicionar roteador, organizar pontos de cabo ou ampliar cobertura. O escopo é definido depois do diagnóstico." },
     ],
@@ -464,7 +464,7 @@ export const CIDADES: Record<string, CidadeData> = {
       "Técnico de informática em Almirante Tamandaré: formatação, conserto de notebook e PC, upgrade de SSD, remoção de vírus e redes. Visita agendada ou coleta via WhatsApp.",
     eyebrow: "Atendimento em Almirante Tamandaré",
     h1: "Técnico em Almirante Tamandaré para notebook e PC",
-    h1Accent: "com orçamento aprovado antes",
+    h1Accent: "com valor aprovado antes",
     subtitulo:
       "Atendimento técnico em informática em Almirante Tamandaré, com diagnóstico primeiro, valor depois e garantia sobre o serviço realizado.",
     whatsappMessage: "Olá! Preciso de um técnico de informática em Almirante Tamandaré. Pode me orientar?",

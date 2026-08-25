@@ -103,7 +103,7 @@ const FAQS = [
   {
     question: "Meu notebook liga mas a tela fica preta. É a tela ou a placa?",
     answer:
-      "O teste do monitor externo responde isso em menos de um minuto. Se a imagem aparece no monitor conectado, o computador está processando normalmente e o defeito está no conjunto de tela, no cabo interno ou no circuito que ilumina o painel. Se nem o monitor externo mostra imagem, a investigação se desloca para memória, vídeo e circuitos de alimentação da placa. São dois caminhos com custo e prazo bem diferentes, por isso esse teste vem antes de qualquer orçamento.",
+      "O teste do monitor externo responde isso em menos de um minuto. Se a imagem aparece no monitor conectado, o computador está processando normalmente e o defeito está no conjunto de tela, no cabo interno ou no circuito que ilumina o painel. Se nem o monitor externo mostra imagem, a investigação se desloca para memória, vídeo e circuitos de alimentação da placa. São dois caminhos com custo e prazo bem diferentes, por isso esse teste vem antes de qualquer valor fechado.",
   },
   {
     question: "Consigo ver a imagem bem fraquinha com a lanterna. O que isso significa?",
@@ -335,7 +335,7 @@ const NotebookComTelaPreta = () => {
           </p>
           <div className="grid gap-4 md:grid-cols-3">
             <div className="rounded-lg border border-border bg-card p-5">
-              <h3 className="mb-2 font-semibold text-foreground">Diagnóstico antes do orçamento</h3>
+              <h3 className="mb-2 font-semibold text-foreground">Diagnóstico antes do valor</h3>
               <p className="text-sm text-muted-foreground">
                 Nenhuma peça é comprada ou trocada antes da avaliação em bancada e da sua aprovação explícita do valor.
               </p>

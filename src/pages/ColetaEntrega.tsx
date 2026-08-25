@@ -182,7 +182,7 @@ const ColetaEntrega = () => {
               </h2>
               <div className="space-y-0">
                 {[
-                  { icon: Phone, title: "1. Contato Inicial", desc: `Você descreve o problema via WhatsApp. O técnico faz uma estimativa gratuita e informa as condições. valor preciso somente com compromisso (taxa mínima ${COLETA_TAXA_MINIMA_LABEL} pré-aprovada).` },
+                  { icon: Phone, title: "1. Contato Inicial", desc: `Você descreve o problema via WhatsApp. O técnico faz uma estimativa gratuita e informa as condições. Valor preciso somente com compromisso (taxa mínima ${COLETA_TAXA_MINIMA_LABEL} pré-aprovada).` },
                   { icon: Truck, title: "2. Coleta no Local", desc: "Agendamos a coleta no seu endereço, em horário conveniente. O equipamento é embalado com proteção profissional para transporte seguro." },
                   { icon: Shield, title: "3. Diagnóstico e Aprovação", desc: `Em laboratório, o técnico realiza diagnóstico completo. Se estiver dentro do valor pré-aprovado (${COLETA_TAXA_MINIMA_LABEL}), o reparo é realizado. Acima disso, consultamos antes.` },
                   { icon: Package, title: "4. Entrega com Garantia", desc: "Equipamento reparado, testado e devolvido no seu endereço. Garantia por escrito de todo o serviço realizado." },
@@ -276,7 +276,7 @@ const ColetaEntrega = () => {
               </h2>
               <div className="bg-secondary rounded-2xl p-6 md:p-8 border-2 border-accent/20 text-center">
                 <p className="text-muted-foreground mb-4">
-                  A coleta e entrega está <strong className="text-accent">inclusa no valor do reparo</strong> quando o serviço é aprovado. {REGRA_ESTIMATIVA_GRATIS}. valor preciso somente com compromisso.
+                  A coleta e entrega está <strong className="text-accent">inclusa no valor do reparo</strong> quando o serviço é aprovado. {REGRA_ESTIMATIVA_GRATIS}. Valor preciso somente com compromisso.
                 </p>
                 <div className="bg-accent/10 rounded-xl p-4 mb-4">
                   <p className="text-sm text-foreground font-medium">

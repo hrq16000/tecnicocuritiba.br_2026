@@ -108,7 +108,7 @@ const FAQS = [
   {
     question: "Como vocês sabem se é a tela ou a placa de vídeo?",
     answer:
-      "Pelo teste com monitor externo, que separa os dois caminhos em minutos. Se a imagem externa sai limpa, a parte gráfica da placa está funcionando e a falha está no painel, no cabo flat ou no conector. Se o monitor externo repete o mesmo defeito, o problema é da placa e trocar a tela não resolveria nada. Esse teste é feito antes de qualquer orçamento de peça.",
+      "Pelo teste com monitor externo, que separa os dois caminhos em minutos. Se a imagem externa sai limpa, a parte gráfica da placa está funcionando e a falha está no painel, no cabo flat ou no conector. Se o monitor externo repete o mesmo defeito, o problema é da placa e trocar a tela não resolveria nada. Esse teste é feito antes de qualquer valor fechado de peça.",
   },
   {
     question: "Quanto custa trocar a tela do meu notebook?",
@@ -133,7 +133,7 @@ const FAQS = [
   {
     question: "Qual é a garantia da troca de tela?",
     answer:
-      "90 dias sobre a mão de obra e sobre o painel aplicado, escopados ao serviço executado. A garantia cobre defeito da peça e da instalação — não cobre novo impacto, pressão sobre a tampa ou queda posterior, porque são danos novos e não falha do reparo. Esse limite é informado antes, por escrito, junto do orçamento.",
+      "90 dias sobre a mão de obra e sobre o painel aplicado, escopados ao serviço executado. A garantia cobre defeito da peça e da instalação — não cobre novo impacto, pressão sobre a tampa ou queda posterior, porque são danos novos e não falha do reparo. Esse limite é informado antes, por escrito, junto do valor.",
   },
   {
     question: "Meus arquivos correm risco durante a troca?",
@@ -198,7 +198,7 @@ const TelaDeNotebookQuebrada = () => {
             Tela de notebook quebrada: quando trocar e quando não é a tela
           </h1>
           <p className="mb-4 line-clamp-4 text-[0.95rem] leading-relaxed opacity-95 sm:mb-6 sm:line-clamp-none sm:text-base">
-            Nem toda falha de imagem é painel quebrado, e nem todo painel quebrado precisa do orçamento mais caro. Um
+            Nem toda falha de imagem é painel quebrado, e nem todo painel quebrado precisa do reparo mais caro. Um
             teste de monitor externo e uma observação da tampa separam, em minutos, três cenários com custos muito
             diferentes: painel, cabo flat e circuito de vídeo. Esta página explica como identificar cada um antes de
             aprovar qualquer peça.
@@ -218,7 +218,7 @@ const TelaDeNotebookQuebrada = () => {
         secondaryImageKey="bancadaTecnica"
         layout="duo"
         caption="Notebook aberto em bancada para verificação de painel, cabo flat e conector de vídeo"
-        secondaryCaption="Teste de imagem em monitor externo antes de qualquer orçamento de peça"
+        secondaryCaption="Teste de imagem em monitor externo antes de qualquer valor fechado de peça"
       />
 
       <main className="container mx-auto max-w-4xl px-4 py-12">

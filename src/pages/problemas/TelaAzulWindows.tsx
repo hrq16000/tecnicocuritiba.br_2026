@@ -352,7 +352,7 @@ const TelaAzulWindows = () => {
           </ol>
           <p className="mt-4 text-sm text-muted-foreground">
             O que não recomendamos: reinstalar o Windows por conta própria com suspeita de disco, aplicar "correções de
-            registro" baixadas por anúncio, desativar a memória virtual por tutorial e forçar atualização de BIOS sem
+            registro" baixadas por anúncio, desativar a memória virtual por tutorial e ffechar valor atualização de BIOS sem
             confirmar o modelo exato da placa.
           </p>
         </section>

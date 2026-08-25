@@ -3914,7 +3914,7 @@ O pior erro que você pode cometer é desligar o computador à força durante um
   {
     slug: "notebook-com-tela-quebrada-curitiba",
     title: "Notebook com Tela Quebrada em Curitiba — Troca de Tela e Reparo",
-    metaDescription: "Tela do notebook quebrada, trincada ou com manchas em Curitiba? Troca de tela LCD/LED com peças compatíveis. valor do atendimento rápido e sem compromisso.",
+    metaDescription: "Tela do notebook quebrada, trincada ou com manchas em Curitiba? Troca de tela LCD/LED com peças compatíveis. Valor do atendimento rápido e sem compromisso.",
     h1: "Notebook com Tela Quebrada — Troca e Reparo em Curitiba",
     categoria: "Hardware — Tela",
     intro: `Notebook caiu, levou uma pancada ou a tela simplesmente começou a apresentar manchas e linhas? A tela é um dos componentes mais frágeis do notebook — e um dos mais caros de substituir se não souber onde procurar.
@@ -3950,7 +3950,7 @@ O importante é não continuar usando com a tela quebrada: além do desconforto 
       "Telas genéricas baratas podem ter cores distorcidas e durabilidade baixa",
       "Trocar tela sem experiência pode danificar o cabo flat, webcam ou antena Wi-Fi"
     ],
-    diagnostico: `Diagnóstico completo de tela:\n\n1. Inspeção visual da tela (trinca, mancha, linha)\n2. Teste com monitor externo (para confirmar que GPU está OK)\n3. Verificação do cabo flat (mau contato vs. rompimento)\n4. Teste de dobradiças (folga, aperto, quebra)\n5. Identificação do modelo exato da tela (part number)\n6. valor do atendimento com peça compatível de qualidade\n\nCusto do diagnóstico: R$ 99,99 (incorporado se aprovar o serviço).`,
+    diagnostico: `Diagnóstico completo de tela:\n\n1. Inspeção visual da tela (trinca, mancha, linha)\n2. Teste com monitor externo (para confirmar que GPU está OK)\n3. Verificação do cabo flat (mau contato vs. rompimento)\n4. Teste de dobradiças (folga, aperto, quebra)\n5. Identificação do modelo exato da tela (part number)\n6. Valor do atendimento com peça compatível de qualidade\n\nCusto do diagnóstico: R$ 99,99 (incorporado se aprovar o serviço).`,
     solucao: `Processo de troca de tela:\n\n1. **Identificação** — Localizamos o part number exato da tela original\n2. **Peça** — Tela compatível de qualidade (mesma resolução, brilho e conector)\n3. **Desmontagem** — Remoção cuidadosa da moldura, dobradiças e cabos\n4. **Instalação** — Conexão do cabo flat e fixação da nova tela\n5. **Teste** — Verificação de cores, brilho, dead pixels e funcionamento do touch (se aplicável)\n6. **Entrega** — Notebook pronto com garantia na peça e serviço`,
     quandoCompensa: "Na maioria dos casos compensa — especialmente notebooks de até 4-5 anos. Troca de tela custa R$ 350-700, muito menos que um notebook novo.",
     quandoNaoCompensa: "Quando o notebook é antigo (7+ anos), a tela é de resolução/modelo raro e cara, ou há outros problemas simultâneos (placa, bateria, teclado).",
@@ -4062,7 +4062,7 @@ Em Curitiba, tratamos HD barulhento como emergência: diagnóstico prioritário 
       "Congelar o HD (mito da internet) pode causar condensação e destruir os pratos",
       "Abrir o HD fora de sala limpa contamina os pratos com poeira e inviabiliza a recuperação"
     ],
-    diagnostico: `Diagnóstico de EMERGÊNCIA para HD barulhento:\n\n1. Avaliação sonora (tipo de barulho indica gravidade)\n2. Verificação SMART (saúde do disco via software)\n3. Teste de leitura superficial (sem estressar o disco)\n4. Se detectado: tentativa imediata de backup dos dados mais importantes\n5. Avaliação: clonagem possível vs. necessidade de lab especializado\n6. valor do atendimento para migração de dados para SSD novo\n\nCusto: R$ 99,99 (incorporado se aprovar o serviço). URGENTE — não adie.`,
+    diagnostico: `Diagnóstico de EMERGÊNCIA para HD barulhento:\n\n1. Avaliação sonora (tipo de barulho indica gravidade)\n2. Verificação SMART (saúde do disco via software)\n3. Teste de leitura superficial (sem estressar o disco)\n4. Se detectado: tentativa imediata de backup dos dados mais importantes\n5. Avaliação: clonagem possível vs. necessidade de lab especializado\n6. Valor do atendimento para migração de dados para SSD novo\n\nCusto: R$ 99,99 (incorporado se aprovar o serviço). URGENTE — não adie.`,
     solucao: `Protocolo para HD barulhento:\n\n1. **Não ligue mais o PC** até o diagnóstico — cada boot é um risco\n2. **Backup emergencial** — Se o HD ainda lê, copiamos os dados prioritários primeiro\n3. **Clonagem** — Para HDs com setores ruins, usamos ferramentas de clonagem bit-a-bit\n4. **Migração para SSD** — Instalamos SSD novo com seus dados e sistema operacional\n5. **Casos graves** — Encaminhamos para laboratório de recuperação em sala limpa\n\nSempre preservamos o HD original como último recurso até confirmar que todos os dados foram recuperados.`,
     quandoCompensa: "Sempre vale diagnosticar — o custo do diagnóstico é mínimo comparado ao valor dos dados. Se a clonagem funcionar (R$ 200-600), é excelente custo-benefício.",
     quandoNaoCompensa: "Quando o HD precisa de sala limpa (R$ 2.000-5.000+), vale avaliar se os dados justificam o investimento. Para dados substituíveis, melhor comprar SSD novo.",
@@ -4498,7 +4498,7 @@ Em Curitiba, diagnosticamos problemas de Wi-Fi tanto no computador quanto na red
       "Pagar resgate de ransomware não garante recuperação e financia criminosos",
       "Tentar recuperar dados de SSD com TRIM ativado pode ser impossível — o controlador já apagou os blocos"
     ],
-    diagnostico: `Diagnóstico de recuperação de dados:\n\n1. Avaliação do dispositivo (HD, SSD, pen drive, cartão SD)\n2. Verificação de saúde do disco (SMART, setores defeituosos)\n3. Clone bit-a-bit do disco original (para trabalhar na cópia, protegendo o original)\n4. Análise do sistema de arquivos (NTFS, FAT32, ext4, APFS)\n5. Scan profundo com ferramentas profissionais (R-Studio, DMDE)\n6. Listagem de arquivos recuperáveis com prévia\n7. valor do atendimento baseado na complexidade e volume de dados\n\nCusto do diagnóstico: R$ 100 (incorporado se aprovar a recuperação).`,
+    diagnostico: `Diagnóstico de recuperação de dados:\n\n1. Avaliação do dispositivo (HD, SSD, pen drive, cartão SD)\n2. Verificação de saúde do disco (SMART, setores defeituosos)\n3. Clone bit-a-bit do disco original (para trabalhar na cópia, protegendo o original)\n4. Análise do sistema de arquivos (NTFS, FAT32, ext4, APFS)\n5. Scan profundo com ferramentas profissionais (R-Studio, DMDE)\n6. Listagem de arquivos recuperáveis com prévia\n7. Valor do atendimento baseado na complexidade e volume de dados\n\nCusto do diagnóstico: R$ 100 (incorporado se aprovar a recuperação).`,
     solucao: `Solução conforme o cenário:\n\n- **Exclusão acidental**: Scan profundo + recuperação com R-Studio ou PhotoRec\n- **Corrupção lógica**: Reparo de tabela de partição + reconstrução de sistema de arquivos\n- **HD com dano físico**: Clone em ambiente controlado + recuperação da imagem\n- **Ransomware**: Verificação de chave de descriptografia conhecida + recuperação de shadow copies\n- **SSD**: Recuperação via modo de manutenção do controlador (quando possível)\n\nTodos os dados recuperados são entregues em mídia nova (HD externo ou SSD) com verificação de integridade.\n\nAdicional: montamos estratégia de backup 3-2-1 para evitar futuras perdas.`,
     quandoCompensa: "Sempre que os dados têm valor sentimental ou profissional insubstituível. Fotos de família, documentos únicos e projetos acadêmicos não têm preço.",
     quandoNaoCompensa: "Quando os dados podem ser baixados novamente (jogos, programas, músicas compradas) ou quando o custo de recuperação excede o valor comercial dos dados.",
@@ -7549,7 +7549,7 @@ Abre um relatório HTML com capacidade original vs atual e histórico de carga.`
   {
     slug: "hd-externo-nao-reconhece-curitiba",
     title: "HD Externo Não Reconhece Curitiba — Recuperação e Diagnóstico",
-    metaDescription: "HD externo não aparece no PC? Técnico em Curitiba faz diagnóstico profissional para recuperar dados e reparar unidades externas. valor transparente.",
+    metaDescription: "HD externo não aparece no PC? Técnico em Curitiba faz diagnóstico profissional para recuperar dados e reparar unidades externas. Valor transparente.",
     h1: "HD Externo Não Reconhece — Diagnóstico e Recuperação em Curitiba",
     categoria: "Hardware / Armazenamento",
     intro: `Quando o HD externo não é reconhecido pelo computador, a preocupação principal é sempre os dados. Fotos, documentos, trabalhos acadêmicos e backups podem estar em risco. O problema pode ser tão simples quanto um cabo defeituoso ou tão grave quanto falha mecânica do disco.\n\nAntes de tentar qualquer solução por conta própria, é fundamental entender que HDs externos com problemas mecânicos (cliques, ruídos) NÃO devem ser ligados repetidamente — cada tentativa pode piorar o dano e tornar a recuperação mais cara ou impossível.\n\nOs HDs externos são especialmente vulneráveis porque são transportados constantemente e podem sofrer quedas, vibrações e variações de temperatura que HDs internos não experimentam.`,
@@ -9133,7 +9133,7 @@ Atendemos toda Curitiba e região metropolitana. Problemas de software no touchp
       "Manchas no display tendem a crescer com o tempo — quanto mais esperar, pior",
       "Displays genéricos de baixíssima qualidade podem apresentar problemas em poucas semanas",
     ],
-    diagnostico: "Avaliação em bancada do tipo de dano (vidro, LCD, AMOLED, touch). Verificação de funcionamento dos demais componentes. valor do atendimento imediato com opções de display (original e compatível).",
+    diagnostico: "Avaliação em bancada do tipo de dano (vidro, LCD, AMOLED, touch). Verificação de funcionamento dos demais componentes. Valor do atendimento imediato com opções de display (original e compatível).",
     solucao: "Troca do display (módulo completo ou apenas vidro, quando viável). Teste completo após instalação com garantia do serviço.",
     quandoCompensa: "Praticamente sempre compensa em celulares de médio e alto valor. Um display compatível custa uma fração do celular novo. Mesmo displays originais caros podem valer a pena em aparelhos premium recentes.",
     quandoNaoCompensa: "Celulares muito antigos ou de valor muito baixo onde a tela custa mais que 60% do aparelho novo. Exemplo: trocar display AMOLED original de R$ 1.200 em celular que custa R$ 1.500 novo raramente compensa — nesse caso, o compatível é a melhor opção.",
@@ -10158,7 +10158,7 @@ Atendemos toda Curitiba e região metropolitana. Problemas de software no touchp
       { nivel: "Complexo", desc: "Flagships (Galaxy S24 Ultra, iPhone 15 Pro Max, Xiaomi 14). Display original AMOLED/OLED de altíssimo custo.", tempo: "2 a 7 dias", custo: "R$ 800 a R$ 2.500" },
     ],
     riscos: ["Display genérico muito barato pode ter cores desbotadas e touch impreciso", "Troca mal feita pode danificar flat cables e sensores", "Celular com tela trincada expõe internos a umidade e poeira"],
-    diagnostico: "Avaliação do tipo de dano, modelo exato do celular, disponibilidade de peça original e compatível. valor do atendimento após avaliação em bancada com opções.",
+    diagnostico: "Avaliação do tipo de dano, modelo exato do celular, disponibilidade de peça original e compatível. Valor do atendimento após avaliação em bancada com opções.",
     solucao: "Troca de display com peça original ou compatível de qualidade, conforme escolha do cliente. Teste completo e garantia do serviço.",
     quandoCompensa: "Celulares de até 3 anos com display compatível disponível. Mesmo flagships compensam com display compatível de boa qualidade.",
     quandoNaoCompensa: "Celulares com valor de mercado inferior ao custo da troca de display. Ex: pagar R$ 1.500 de display para um celular que custa R$ 1.800 novo.",

@@ -17,7 +17,7 @@ export const Route = createFileRoute("/servicos/$servico/$cidade")({
   head: ({ params }) => {
     const path = `/servicos/${params.servico}/${params.cidade}`;
     const curated = CURATED_DYNAMIC_HEAD[path];
-    return curated ? seoHead(curated) : seoHead({ path, title: "Assistência Técnica em Curitiba", description: "Atendimento técnico em Curitiba e região com diagnóstico antes do orçamento." });
+    return curated ? seoHead(curated) : seoHead({ path, title: "Assistência Técnica em Curitiba", description: "Atendimento técnico em Curitiba e região com diagnóstico antes do valor." });
   },
   component: ServicoCidadePage,
 });

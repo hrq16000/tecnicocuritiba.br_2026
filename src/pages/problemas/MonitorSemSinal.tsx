@@ -18,7 +18,7 @@ import ProximosProblemas from "@/components/problemas/ProximosProblemas";
 const PATH = "/problemas/monitor-sem-sinal";
 const TITLE = "Monitor Sem Sinal: Causas e Solução | Curitiba";
 const DESCRIPTION =
-  "Monitor mostra \"sem sinal\" com o computador ligado? Veja como separar cabo, entrada errada, placa de vídeo e falha do próprio monitor com testes gratuitos antes de orçar, com avaliação técnica em Curitiba.";
+  "Monitor mostra \"sem sinal\" com o computador ligado? Veja como separar cabo, entrada errada, placa de vídeo e falha do próprio monitor com testes gratuitos antes de fechar valor, com avaliação técnica em Curitiba.";
 
 const WA_MESSAGE =
   "Olá! Vim da página sobre monitor sem sinal. Meu computador liga, mas o monitor fica com a mensagem de sem sinal e preciso de avaliação.";
@@ -123,7 +123,7 @@ const FAQS = [
   {
     question: "Vale a pena consertar o monitor ou é melhor comprar outro?",
     answer:
-      "Depende do bloco defeituoso. Fonte interna e placa de sinal são reparos de componente que costumam compensar com folga. Painel com trinca, mancha ou linhas fixas não tem reparo viável: a peça sozinha se aproxima do valor de um monitor equivalente, e nesses casos orientamos não fazer o serviço em vez de empurrar orçamento.",
+      "Depende do bloco defeituoso. Fonte interna e placa de sinal são reparos de componente que costumam compensar com folga. Painel com trinca, mancha ou linhas fixas não tem reparo viável: a peça sozinha se aproxima do valor de um monitor equivalente, e nesses casos orientamos não fazer o serviço em vez de empurrar serviço.",
   },
   {
     question: "Preciso levar o equipamento até vocês?",
@@ -193,7 +193,7 @@ const MonitorSemSinal = () => {
           </h1>
           <p className="mb-4 line-clamp-4 text-[0.95rem] leading-relaxed opacity-95 sm:mb-6 sm:line-clamp-none sm:text-base">
             A mensagem de sem sinal quase nunca diz onde está o defeito. Esta página mostra a sequência de testes
-            cruzados que usamos para separar cabo, saída de vídeo e monitor antes de qualquer orçamento.
+            cruzados que usamos para separar cabo, saída de vídeo e monitor antes de qualquer valor fechado.
           </p>
           <Button asChild size="lg" className="min-h-14">
             <a href={waHref} onClick={cta("hero")} data-cta-location="problema_hero">
@@ -233,7 +233,7 @@ const MonitorSemSinal = () => {
             recebendo nada. Ela não distingue cabo rompido, saída morta ou computador que nem completou a inicialização.
           </p>
           <p className="mb-3 text-muted-foreground">
-            Por isso o diagnóstico começa por teste cruzado, e não por orçamento. Monitor em outro equipamento e
+            Por isso o diagnóstico começa por teste cruzado, e não por valor do reparo. Monitor em outro equipamento e
             computador em outra tela dividem o problema ao meio em dois minutos, sem custo e sem abrir nada.
           </p>
           <p className="text-muted-foreground">
@@ -295,7 +295,7 @@ const MonitorSemSinal = () => {
             ))}
           </ol>
           <p className="mt-4 text-sm text-muted-foreground">
-            O que não recomendamos em nenhuma hipótese: abrir a carcaça do monitor, forçar conector com pino torto e
+            O que não recomendamos em nenhuma hipótese: abrir a carcaça do monitor, ffechar valor conector com pino torto e
             trocar placa de vídeo por palpite antes do teste cruzado.
           </p>
         </section>
@@ -329,7 +329,7 @@ const MonitorSemSinal = () => {
               <h3 className="mb-2 font-semibold text-foreground">Limite declarado</h3>
               <p className="text-sm text-muted-foreground">
                 Não trocamos painel de monitor com trinca ou mancha: a peça se aproxima do valor de um aparelho
-                equivalente e recusamos o serviço em vez de empurrar orçamento.
+                equivalente e recusamos o serviço em vez de empurrar serviço.
               </p>
             </div>
             <div className="rounded-lg border border-border bg-card p-5">
