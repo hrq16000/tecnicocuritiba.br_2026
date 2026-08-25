@@ -219,6 +219,23 @@ const totais = {
   outras: clusterPayload.reduce((s, c) => s + c.outras, 0),
 };
 
+// Tier A é o único compromisso de indexação da Fase Final: páginas comerciais
+// e de sintoma que devem estar indexadas. Tiers B–D são consequência.
+const tierMap = new Map();
+for (const u of inv?.urls ?? []) {
+  const t = u.tier ?? "SEM_TIER";
+  const row = tierMap.get(t) ?? { tier: t, total: 0, indexadas: 0, descobertas: 0, desconhecidas: 0 };
+  row.total++;
+  if (u.gscStatus === "INDEXED") row.indexadas++;
+  else if (u.gscStatus === "DISCOVERED_NOT_INDEXED") row.descobertas++;
+  else if (u.gscStatus === "UNKNOWN_TO_GOOGLE") row.desconhecidas++;
+  tierMap.set(t, row);
+}
+const tiers = [...tierMap.values()]
+  .map((r) => ({ ...r, taxaIndexacao: r.total ? Number(((r.indexadas / r.total) * 100).toFixed(1)) : null }))
+  .sort((a, b) => String(a.tier).localeCompare(String(b.tier)));
+
+
 const dia = geradoEm.slice(0, 10);
 const historico = existsSync(historicoPath) ? JSON.parse(readFileSync(historicoPath, "utf8")) : [];
 const semHoje = historico.filter((h) => h.dia !== dia);
