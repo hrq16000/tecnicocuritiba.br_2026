@@ -196,5 +196,3 @@ if (informativos.length)
   console.log(
     `  nota: ${informativos.length} link(s) pendente(s) dentro de artigos ainda não servidos — registrados em reports/blog-link-fixes.json e a corrigir antes de aprová-los.`,
   );
-
-);
