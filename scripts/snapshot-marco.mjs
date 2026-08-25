@@ -23,6 +23,7 @@
  */
 import { copyFileSync, existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 
+const INICIO_JOB = Date.now();
 const args = process.argv.slice(2);
 const arg = (nome, padrao = null) => {
   const hit = args.find((a) => a.startsWith(`--${nome}=`));
@@ -294,4 +295,29 @@ try {
   execFileSync(process.execPath, ["scripts/reindex-snapshots.mjs"], { stdio: "inherit" });
 } catch (e) {
   console.warn(`[marco] reindexação falhou: ${e.message}`);
+}
+
+// Registro de execução do job (consumido pela seção "Execução de jobs").
+try {
+  const { registrarJob } = await import("./lib/job-log.mjs");
+  registrarJob({
+    job: "snapshot:marco",
+    marco: MARCO,
+    duracaoMs: Date.now() - INICIO_JOB,
+    status: "ok",
+    failClosed: null,
+    contagens: {
+      curadas: urls.length,
+      indexed: buckets.indexed,
+      unknown: buckets.unknown,
+      discovered: buckets.discovered,
+      crawledNaoIndexadas: buckets.crawled_not_indexed,
+    },
+    logs: [
+      `marco ${MARCO} registrado com ${urls.length} URL(s) curada(s)`,
+      `serp snapshot: ${registro.serpSnapshot ?? "N/A"}`,
+    ],
+  });
+} catch (e) {
+  console.warn(`[marco] log de execução falhou: ${e.message}`);
 }
