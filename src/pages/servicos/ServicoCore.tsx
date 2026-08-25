@@ -17,6 +17,8 @@ import { ProvasVisuaisMonitor } from "@/components/servico/ProvasVisuaisMonitor"
 import { WorkstationSection } from "@/components/servico/WorkstationSection";
 import { SuporteModalidadesSection } from "@/components/servico/SuporteModalidadesSection";
 import { SuporteEmpresarialBlocos } from "@/components/servico/SuporteEmpresarialBlocos";
+import { RespostasConversacionais } from "@/components/servico/RespostasConversacionais";
+import { faqsConversacionais } from "@/lib/conversacional";
 import { SERVICOS_CORE } from "@/lib/servicosCore";
 import { SERVICOS_LOCAL } from "@/lib/servicosLocal";
 import { visualDoServico } from "@/lib/servicoVisual3q";
@@ -190,29 +192,38 @@ const ServicoCore = ({ slug }: { slug: keyof typeof SERVICOS_CORE }) => {
 
   const modulosNode = cfgModulos ? <ModulosEditoriais cfg={cfgModulos} /> : null;
 
+  // Intenção conversacional (buscas estilo IA): H2 por intenção + H3 com a
+  // pergunta exata. As respostas curtas alimentam o FAQPage único da página.
+  const conversacional = <RespostasConversacionais slug={slug as string} />;
+  const faqsExtra = faqsConversacionais(slug as string);
+
   const extraFinal = cfgBlocos ? (
     <>
       {extra}
       <Blocos3T slug={slug as string} />
       {ficha}
+      {conversacional}
     </>
   ) : cfg3u ? (
     <>
       <Blocos3U path={path3u} />
       {extra}
       {ficha}
+      {conversacional}
     </>
   ) : cfg4a ? (
     <>
       <Blocos4A path={path3u} />
       {extra}
       {ficha}
+      {conversacional}
     </>
   ) : (
     <>
       {extra}
       {modulosNode}
       {ficha}
+      {conversacional}
     </>
   );
 
@@ -230,6 +241,7 @@ const ServicoCore = ({ slug }: { slug: keyof typeof SERVICOS_CORE }) => {
         ...blocos3u,
         ...blocos4a,
         ...modulos,
+        faqsSchemaExtra: faqsExtra,
         extra: extraFinal,
       }}
     />
