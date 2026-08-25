@@ -264,13 +264,20 @@ writeFileSync(
             ignoradas: idxnow.ignoradas?.length ?? 0,
           }
         : null,
+      tiers,
       qualidade: qual
         ? {
             faixas: qual.results.reduce((acc, r) => ({ ...acc, [r.faixa]: (acc[r.faixa] ?? 0) + 1 }), {}),
+            scoreMedianoGeral: mediana(qual.results.map((r) => r.score)),
             piores: qual.results.slice(0, 15).map((r) => ({ path: r.path, score: r.score, faixa: r.faixa, causas: r.causas })),
           }
         : null,
       doorway: local?.resumo ?? null,
+      pisoQualidade: local?.floor ?? null,
+      consolidacao: consolidados.length
+        ? { total: consolidados.length, urlsAntes: totalUrls + consolidados.length, urlsDepois: totalUrls }
+        : null,
+
     },
     null,
     2,
