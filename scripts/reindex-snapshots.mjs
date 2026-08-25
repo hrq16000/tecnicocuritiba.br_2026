@@ -205,18 +205,29 @@ const verificacao = {
   urlsCuradas: curadas || null,
   urlsNoMarcoAtual: atual?.denominador?.curadas ?? null,
   amostragem: { solicitada: AMOSTRA, conferidas: amostras.length, ok: amostras.every((a) => a.conferido), itens: amostras },
+  contencao: contencao ?? { ativa: false, origem: null, filtros: [], motivo: null, coberturaVerificada: true },
   falhas,
   avisos,
-  status: falhas.length === 0 ? "ok" : "falhou",
+  status: falhas.length === 0 ? (contencao ? "contido" : "ok") : "falhou",
 };
 
 mkdirSync("reports", { recursive: true });
 mkdirSync("public", { recursive: true });
 writeFileSync("reports/snapshot-index-verificacao.json", `${JSON.stringify(verificacao, null, 2)}\n`);
+// Trilha dedicada da contenção: sempre gravada, mesmo quando inativa, para que
+// o painel distingua "não houve contenção" de "não há dado".
+const trilhaContencao = {
+  registradoEm: verificacao.executadoEm,
+  marco: atual?.marco ?? null,
+  ...verificacao.contencao,
+};
+writeFileSync("reports/reindex-contencao.json", `${JSON.stringify(trilhaContencao, null, 2)}\n`);
+writeFileSync("public/reindex-contencao.json", `${JSON.stringify(trilhaContencao, null, 2)}\n`);
 writeFileSync(
   "public/snapshot-index.json",
   `${JSON.stringify({ geradoEm: verificacao.executadoEm, verificacao: { ...verificacao, itens: undefined }, itens: indice }, null, 2)}\n`,
 );
+
 
 console.log(`[reindex] ${indice.length} artefato(s) · ${verificacao.memorias} memória(s) · marcos: ${verificacao.marcos.join(", ") || "nenhum"}`);
 for (const a of avisos) console.log(`  · aviso ${a}`);
