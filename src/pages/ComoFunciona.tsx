@@ -7,6 +7,8 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { InterlinkingBlock } from "@/components/InterlinkingBlock";
 import { JsonLdSchema } from "@/components/JsonLdSchema";
+import { SCHEMA_SLOTS, SLOT_PRIORITY, useJsonLdSlot } from "@/lib/jsonLdSlots";
+import { siteConfig, absoluteUrl } from "@/lib/siteConfig";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { ExperienciaBadge } from "@/components/social-proof/ExperienciaBadge";
 import { trackPageView, trackCTAClick } from "@/lib/analytics";
@@ -46,7 +48,35 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-const WHATSAPP_NUMBER = "5541997086380";
+const WHATSAPP_NUMBER = siteConfig.whatsappNumber;
+
+/** Passo a passo real do atendimento — fonte única do HowTo e do texto da página. */
+const PASSOS_ATENDIMENTO = [
+  {
+    name: "Triagem pelo WhatsApp",
+    text: "Você descreve equipamento, sintoma e localidade na triagem. Já nessa etapa definimos se o caso é remoto, visita ou coleta.",
+  },
+  {
+    name: "Agendamento",
+    text: "Confirmamos janela de atendimento conforme a disponibilidade da agenda e a região atendida em Curitiba e cidades vizinhas.",
+  },
+  {
+    name: "Diagnóstico técnico",
+    text: "O equipamento é testado antes de qualquer proposta: energia, inicialização, armazenamento, memória e temperatura, conforme o sintoma.",
+  },
+  {
+    name: "Aprovação do valor",
+    text: "Apresentamos o escopo e o valor por escrito. Nada é executado sem sua aprovação, e recusamos o serviço quando o reparo não compensa.",
+  },
+  {
+    name: "Execução do serviço",
+    text: "Serviço realizado a domicílio, remotamente ou em bancada, com registro do que foi feito em cada equipamento.",
+  },
+  {
+    name: "Entrega e pós-serviço",
+    text: "Testes de conferência com você, orientações de uso e garantia escopada ao serviço executado.",
+  },
+] as const;
 
 const ComoFunciona = () => {
   useEffect(() => {
@@ -60,6 +90,29 @@ const ComoFunciona = () => {
     }
     trackPageView("/como-funciona", "Como Funciona");
   }, []);
+
+  useJsonLdSlot(
+    SCHEMA_SLOTS.howTo,
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "@id": `${absoluteUrl("/como-funciona")}#howto`,
+      name: "Como funciona o atendimento técnico de informática em Curitiba",
+      description:
+        "Passo a passo do atendimento: triagem, agendamento, diagnóstico, aprovação do valor, execução e pós-serviço.",
+      totalTime: "PT1H",
+      supply: [],
+      tool: [],
+      step: PASSOS_ATENDIMENTO.map((p, i) => ({
+        "@type": "HowToStep",
+        position: i + 1,
+        name: p.name,
+        text: p.text,
+        url: `${absoluteUrl("/como-funciona")}#passo-${i + 1}`,
+      })),
+    },
+    SLOT_PRIORITY.page,
+  );
 
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Olá! Gostaria de entender como funciona o atendimento técnico.")}`;
 
