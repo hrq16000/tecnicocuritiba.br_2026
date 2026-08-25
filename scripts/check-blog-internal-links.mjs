@@ -149,7 +149,7 @@ for (const file of fontes) {
 
 // ── 5. Verificação live opcional dos links do blog servidos em produção ───
 if (live) {
-  const alvos = [...new Set(linksBlog.map((l) => l.href))];
+  const alvos = [...new Set(linksBlog.filter((l) => l.servido).map((l) => l.href))];
   for (const href of alvos) {
     try {
       const res = await fetch(`${BASE}${href}`, { redirect: "manual" });
@@ -174,7 +174,10 @@ writeFileSync(
       geradoEm: new Date().toISOString(),
       slugsAprovados: [...aprovados].sort(),
       linksBlogEncontrados: linksBlog.length,
+      linksEmPaginasServidas: linksBlog.filter((l) => l.servido).length,
       correcoesPendentes: problemas,
+      // Não bloqueiam o deploy hoje, mas viram dívida no dia em que o artigo dono for aprovado.
+      pendenciasEmArtigosNaoServidos: informativos,
     },
     null,
     2,
@@ -182,10 +185,16 @@ writeFileSync(
 );
 
 if (problemas.length) {
-  console.error(`check:blog-internal-links FALHOU — ${problemas.length} link(s) para rota inexistente:`);
+  console.error(`check:blog-internal-links FALHOU — ${problemas.length} link(s) para rota inexistente em página servida:`);
   for (const p of problemas) console.error(`  ✗ ${p.file}:${p.linha} → ${p.href}\n      ${p.motivo}\n      correção: ${p.correcao}`);
   process.exit(1);
 }
 console.log(
-  `check:blog-internal-links OK — ${linksBlog.length} link(s) para /blog/* apontam para slugs aprovados (${aprovados.size}); nenhum destino inexistente.`,
+  `check:blog-internal-links OK — ${linksBlog.filter((l) => l.servido).length} link(s) /blog/* em páginas servidas, todos para slugs aprovados (${aprovados.size}).`,
+);
+if (informativos.length)
+  console.log(
+    `  nota: ${informativos.length} link(s) pendente(s) dentro de artigos ainda não servidos — registrados em reports/blog-link-fixes.json e a corrigir antes de aprová-los.`,
+  );
+
 );
