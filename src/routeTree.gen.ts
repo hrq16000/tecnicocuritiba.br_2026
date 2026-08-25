@@ -355,6 +355,7 @@ import { Route as ConsertoVideogameLocalRouteImport } from './routes/conserto-vi
 import { Route as MarcasIndexRouteImport } from './routes/marcas.index'
 import { Route as MarcasSlugRouteImport } from './routes/marcas.$slug'
 import { Route as OrdemDeServicoIndexRouteImport } from './routes/ordem-de-servico.index'
+import { Route as OrdemDeServicoProtocoloRouteImport } from './routes/ordem-de-servico.$protocolo'
 import { Route as ParceirosIndexRouteImport } from './routes/parceiros.index'
 import { Route as ParceirosSlugRouteImport } from './routes/parceiros.$slug'
 import { Route as ProblemasIndexRouteImport } from './routes/problemas.index'
@@ -2313,6 +2314,11 @@ const OrdemDeServicoIndexRoute = OrdemDeServicoIndexRouteImport.update({
   path: '/ordem-de-servico/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const OrdemDeServicoProtocoloRoute = OrdemDeServicoProtocoloRouteImport.update({
+  id: '/ordem-de-servico/$protocolo',
+  path: '/ordem-de-servico/$protocolo',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ParceirosIndexRoute = ParceirosIndexRouteImport.update({
   id: '/parceiros/',
   path: '/parceiros/',
@@ -3450,6 +3456,7 @@ export interface FileRoutesByFullPath {
   '/conserto-tv/$local': typeof ConsertoTvLocalRoute
   '/conserto-videogame/$local': typeof ConsertoVideogameLocalRoute
   '/marcas/$slug': typeof MarcasSlugRoute
+  '/ordem-de-servico/$protocolo': typeof OrdemDeServicoProtocoloRoute
   '/parceiros/$slug': typeof ParceirosSlugRoute
   '/problemas/$slug': typeof ProblemasSlugRoute
   '/problemas/computador-desliga-sozinho': typeof ProblemasComputadorDesligaSozinhoRoute
@@ -3936,6 +3943,7 @@ export interface FileRoutesByTo {
   '/conserto-tv/$local': typeof ConsertoTvLocalRoute
   '/conserto-videogame/$local': typeof ConsertoVideogameLocalRoute
   '/marcas/$slug': typeof MarcasSlugRoute
+  '/ordem-de-servico/$protocolo': typeof OrdemDeServicoProtocoloRoute
   '/parceiros/$slug': typeof ParceirosSlugRoute
   '/problemas/$slug': typeof ProblemasSlugRoute
   '/problemas/computador-desliga-sozinho': typeof ProblemasComputadorDesligaSozinhoRoute
@@ -4423,6 +4431,7 @@ export interface FileRoutesById {
   '/conserto-tv/$local': typeof ConsertoTvLocalRoute
   '/conserto-videogame/$local': typeof ConsertoVideogameLocalRoute
   '/marcas/$slug': typeof MarcasSlugRoute
+  '/ordem-de-servico/$protocolo': typeof OrdemDeServicoProtocoloRoute
   '/parceiros/$slug': typeof ParceirosSlugRoute
   '/problemas/$slug': typeof ProblemasSlugRoute
   '/problemas/computador-desliga-sozinho': typeof ProblemasComputadorDesligaSozinhoRoute
@@ -4911,6 +4920,7 @@ export interface FileRouteTypes {
     | '/conserto-tv/$local'
     | '/conserto-videogame/$local'
     | '/marcas/$slug'
+    | '/ordem-de-servico/$protocolo'
     | '/parceiros/$slug'
     | '/problemas/$slug'
     | '/problemas/computador-desliga-sozinho'
@@ -5397,6 +5407,7 @@ export interface FileRouteTypes {
     | '/conserto-tv/$local'
     | '/conserto-videogame/$local'
     | '/marcas/$slug'
+    | '/ordem-de-servico/$protocolo'
     | '/parceiros/$slug'
     | '/problemas/$slug'
     | '/problemas/computador-desliga-sozinho'
@@ -5883,6 +5894,7 @@ export interface FileRouteTypes {
     | '/conserto-tv/$local'
     | '/conserto-videogame/$local'
     | '/marcas/$slug'
+    | '/ordem-de-servico/$protocolo'
     | '/parceiros/$slug'
     | '/problemas/$slug'
     | '/problemas/computador-desliga-sozinho'
@@ -6370,6 +6382,7 @@ export interface RootRouteChildren {
   ConsertoTvLocalRoute: typeof ConsertoTvLocalRoute
   ConsertoVideogameLocalRoute: typeof ConsertoVideogameLocalRoute
   MarcasSlugRoute: typeof MarcasSlugRoute
+  OrdemDeServicoProtocoloRoute: typeof OrdemDeServicoProtocoloRoute
   ParceirosSlugRoute: typeof ParceirosSlugRoute
   ProblemasSlugRoute: typeof ProblemasSlugRoute
   ProblemasComputadorDesligaSozinhoRoute: typeof ProblemasComputadorDesligaSozinhoRoute
@@ -8940,6 +8953,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof OrdemDeServicoIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/ordem-de-servico/$protocolo': {
+      id: '/ordem-de-servico/$protocolo'
+      path: '/ordem-de-servico/$protocolo'
+      fullPath: '/ordem-de-servico/$protocolo'
+      preLoaderRoute: typeof OrdemDeServicoProtocoloRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/parceiros/': {
       id: '/parceiros/'
       path: '/parceiros'
@@ -10257,6 +10277,7 @@ const rootRouteChildren: RootRouteChildren = {
   ConsertoTvLocalRoute: ConsertoTvLocalRoute,
   ConsertoVideogameLocalRoute: ConsertoVideogameLocalRoute,
   MarcasSlugRoute: MarcasSlugRoute,
+  OrdemDeServicoProtocoloRoute: OrdemDeServicoProtocoloRoute,
   ParceirosSlugRoute: ParceirosSlugRoute,
   ProblemasSlugRoute: ProblemasSlugRoute,
   ProblemasComputadorDesligaSozinhoRoute:
