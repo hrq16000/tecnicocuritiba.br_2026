@@ -27,10 +27,12 @@ const PUBLICO_NAO_CURADO = [
   "src/lib/os/",
   "src/routes/ordem-de-servico",
   "src/routes/api/",
+  // Registro de cobertura/backlog de bairros baseline (não renderiza URL curada).
+  "src/lib/bairrosBaseline.ts",
 ];
 
 const ADMIN = ["src/pages/admin/", "src/components/admin/", "src/routes/admin", "src/hooks/useAdminAuth"];
-const CI = [".github/", "scripts/", "e2e/", "playwright", "vitest", "package.json", "package-lock.json",
+const CI = [".github/", "scripts/", "e2e/", "src/__tests__/", "src/test/", "src/routeTree.gen.ts", "playwright", "vitest", "package.json", "package-lock.json",
   "bun.lockb", "tsconfig", "eslint", "lighthouserc", "vite.config", "supabase/"];
 const OBSERVABILIDADE = ["reports/", "docs/", ".lovable/", "public/fotos/manifest"];
 

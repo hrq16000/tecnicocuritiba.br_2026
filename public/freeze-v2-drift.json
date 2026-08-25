@@ -1,18 +1,18 @@
 {
   "schema": "freeze-v2-drift/1.0",
-  "verificadoEm": "2026-08-25T06:46:00.341Z",
+  "verificadoEm": "2026-08-25T06:46:26.709Z",
   "freezeSelo": "fb95e1e4d676e89de141409aa4103218fc2a504c979f8278f62fe16e9da9d979",
   "freezeSeladoEm": "2026-08-25T06:09:07.486Z",
   "totalDiffs": 46,
   "porClasse": {
-    "CI_CHANGE": 8,
+    "CI_CHANGE": 10,
     "OBSERVABILITY_CHANGE": 8,
-    "PUBLIC_CHANGE": 4,
     "ADMIN_CHANGE": 2,
-    "NON_CURATED_PUBLIC_CHANGE": 24
+    "NON_CURATED_PUBLIC_CHANGE": 25,
+    "PUBLIC_CHANGE": 1
   },
-  "publicChangeTotal": 4,
-  "publicChangeNaoRegistrado": 4,
+  "publicChangeTotal": 1,
+  "publicChangeNaoRegistrado": 1,
   "alerta": "PRE_D14_PUBLIC_INTERVENTION_DETECTED",
   "exigido": [
     "intervention event",
@@ -102,7 +102,7 @@
     {
       "arquivo": "src/__tests__/bairros-cobertura-oficial.test.ts",
       "tipo": "ADICIONADO",
-      "classe": "PUBLIC_CHANGE"
+      "classe": "CI_CHANGE"
     },
     {
       "arquivo": "src/components/admin/monitoramento/FreezeV2Status.tsx",
@@ -112,7 +112,7 @@
     {
       "arquivo": "src/lib/bairrosBaseline.ts",
       "tipo": "ADICIONADO",
-      "classe": "PUBLIC_CHANGE"
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     {
       "arquivo": "src/pages/admin/AdminMonitoramento.tsx",
@@ -182,7 +182,7 @@
     {
       "arquivo": "src/routeTree.gen.ts",
       "tipo": "ALTERADO",
-      "classe": "PUBLIC_CHANGE"
+      "classe": "CI_CHANGE"
     },
     {
       "arquivo": "src/routes/bairros.alto-da-xv.tsx",
