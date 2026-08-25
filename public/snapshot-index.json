@@ -1,7 +1,7 @@
 {
-  "geradoEm": "2026-08-25T02:42:36.156Z",
+  "geradoEm": "2026-08-25T04:01:59.958Z",
   "verificacao": {
-    "executadoEm": "2026-08-25T02:42:36.156Z",
+    "executadoEm": "2026-08-25T04:01:59.958Z",
     "marcos": [
       "D0",
       "D7"
@@ -11,22 +11,10 @@
     "urlsCuradas": 130,
     "urlsNoMarcoAtual": 130,
     "amostragem": {
-      "solicitada": 5,
-      "conferidas": 5,
+      "solicitada": 3,
+      "conferidas": 3,
       "ok": true,
       "itens": [
-        {
-          "path": ".lovable/memory/features/onda-visual-3u.md",
-          "tipo": "memoria",
-          "hash": "55b2008fc1d9db8a9dbdcefff2183d191229e437",
-          "conferido": true
-        },
-        {
-          "path": ".lovable/memory/index.md",
-          "tipo": "memoria",
-          "hash": "b11f626bef478e7764aa89648854fdd609b04304",
-          "conferido": true
-        },
         {
           "path": ".lovable/memory/features/governanca-originalidade-ondas.md",
           "tipo": "memoria",
@@ -34,18 +22,25 @@
           "conferido": true
         },
         {
-          "path": "reports/operacao-d0.md",
-          "tipo": "marco-resumo",
-          "hash": "21aea3b80f606495b61015e18f6940018ae65ec2",
+          "path": "reports/serp-signals-d7.json",
+          "tipo": "marco-serp",
+          "hash": "156332cde9ee5804fb7428840bc41286da4bca69",
           "conferido": true
         },
         {
-          "path": ".lovable/memory/features/triagem-pf-pj.md",
+          "path": ".lovable/memory/index.md",
           "tipo": "memoria",
-          "hash": "611c07d464f2816ccf0fb2eeaa13bc466dcb23bd",
+          "hash": "b11f626bef478e7764aa89648854fdd609b04304",
           "conferido": true
         }
       ]
+    },
+    "contencao": {
+      "ativa": false,
+      "origem": null,
+      "filtros": [],
+      "motivo": null,
+      "coberturaVerificada": true
     },
     "falhas": [],
     "avisos": [
@@ -65,9 +60,9 @@
     {
       "tipo": "memoria",
       "path": ".lovable/memory/features/analise-d7-d14.md",
-      "bytes": 1483,
-      "hash": "8f5763d5e348281319950aa78f6d09e389764ee9",
-      "modificadoEm": "2026-08-25T02:02:04.484Z"
+      "bytes": 4727,
+      "hash": "1d570fe56e69d4a5261769abf75659adb82655c7",
+      "modificadoEm": "2026-08-25T03:45:28.132Z"
     },
     {
       "tipo": "memoria",
