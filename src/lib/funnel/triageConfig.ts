@@ -36,7 +36,10 @@ export const PRICING = {
   coletaMin: "R$ 299,99",
   coletaCancel: "R$ 99,99",
   coletaTeto: "R$ 300,00",
+  /** Impressora 3D: bancada dedicada, mínimo pré-aprovado próprio. */
+  impressora3dMin: "R$ 500,00",
 } as const;
+
 
 export const PRAZO_COLETA = "3 a 60 dias úteis (pode ser maior se houver encomenda/importação de peças)";
 
@@ -86,7 +89,9 @@ export type EquipmentId =
   | "surface"
   | "som"
   | "videogame"
+  | "impressora3d"
   | "outro";
+
 
 export type FieldType = "single" | "chips" | "text" | "textarea" | "multi";
 
@@ -917,7 +922,104 @@ export const EQUIPMENTS: EquipmentConfig[] = [
     contextFields: [],
   },
 
+  // ===================== IMPRESSORA 3D =====================
+  // Bancada dedicada (extrusão, eletrônica e mecânica de eixos).
+  // Mínimo pré-aprovado próprio de R$ 500,00 — ver PRICING.impressora3dMin.
+  {
+    id: "impressora3d",
+    label: "Impressora 3D",
+    icon: "Boxes",
+    forcedRoute: "coleta",
+    identityFields: [
+      {
+        id: "tecnologia",
+        label: "Qual é a tecnologia da impressora?",
+        type: "single",
+        required: true,
+        options: [
+          { value: "fdm", label: "FDM (filamento)" },
+          { value: "resina", label: "Resina (SLA/DLP/LCD)" },
+          { value: "nao-sei", label: "Não sei informar" },
+        ],
+      },
+      {
+        id: "marca",
+        label: "Marca",
+        type: "text",
+        required: true,
+        placeholder: "Ex.: Creality, Bambu Lab, Elegoo, Anycubic",
+      },
+      modeloField,
+      idadeField,
+      {
+        id: "liga",
+        label: "A impressora liga?",
+        type: "single",
+        required: true,
+        options: [
+          { value: "liga-normal", label: "Liga e inicia normalmente" },
+          { value: "liga-erro", label: "Liga, mas apresenta erro" },
+          { value: "nao-liga", label: "Não liga" },
+          { value: "nao-sei", label: "Não sei informar" },
+        ],
+      },
+    ],
+    symptomField: {
+      id: "symptom",
+      label: "O que está acontecendo?",
+      type: "single",
+      required: true,
+      options: [
+        { value: "bico-entupido", label: "Bico entupido / sem extrusão" },
+        { value: "termistor", label: "Erro de temperatura (termistor/resistência)" },
+        { value: "calibracao", label: "Primeira camada / calibração de mesa" },
+        { value: "eixos", label: "Ruído, folga ou travamento de eixo" },
+        { value: "placa", label: "Placa, fonte ou driver de motor" },
+        { value: "tela-firmware", label: "Tela, firmware ou conectividade" },
+        { value: "upgrade", label: "Upgrade de peça ou melhoria" },
+        { value: "outro", label: "Outro" },
+      ],
+    },
+    symptomMeta: {
+      "bico-entupido": { route: "coleta", event: "quando_comecou", category: "manutenção do conjunto de extrusão", priceHint: "Impressora 3D: mínimo pré-aprovado de R$ 500,00, peças não inclusas." },
+      "termistor": { route: "coleta", event: "quando_comecou", category: "falha no sensoriamento térmico", priceHint: "Impressora 3D: mínimo pré-aprovado de R$ 500,00, peças não inclusas." },
+      "calibracao": { route: "coleta", event: "frequencia", category: "calibração de mesa e eixo Z", priceHint: "Impressora 3D: mínimo pré-aprovado de R$ 500,00, peças não inclusas." },
+      "eixos": { route: "coleta", event: "frequencia", category: "mecânica de eixos e transmissão", priceHint: "Impressora 3D: mínimo pré-aprovado de R$ 500,00, peças não inclusas." },
+      "placa": { route: "coleta", event: "quando_aconteceu", category: "eletrônica de controle", priceHint: "Impressora 3D: mínimo pré-aprovado de R$ 500,00, peças não inclusas." },
+      "tela-firmware": { route: "coleta", event: "quando_comecou", category: "firmware e interface", priceHint: "Impressora 3D: mínimo pré-aprovado de R$ 500,00, peças não inclusas." },
+      "upgrade": { route: "coleta", event: "quando_comecou", category: "upgrade de componente", priceHint: "Impressora 3D: mínimo pré-aprovado de R$ 500,00, peças não inclusas." },
+      "outro": { route: "coleta", event: "quando_comecou", priceHint: "Impressora 3D: mínimo pré-aprovado de R$ 500,00, peças não inclusas." },
+    },
+    contextFields: [
+      {
+        id: "filamento",
+        label: "Qual material você usa com mais frequência?",
+        type: "chips",
+        required: false,
+        options: [
+          { value: "PLA", label: "PLA" },
+          { value: "PETG", label: "PETG" },
+          { value: "ABS/ASA", label: "ABS ou ASA" },
+          { value: "Flexível", label: "Flexível (TPU)" },
+          { value: "Com carga", label: "Com fibra/carga abrasiva" },
+          { value: "Resina", label: "Resina" },
+        ],
+      },
+      {
+        id: "tentativa-reparo",
+        label: "Já houve tentativa de reparo ou troca de peça?",
+        type: "single",
+        required: false,
+        options: [
+          { value: "nao", label: "Não" },
+          { value: "sim", label: "Sim" },
+        ],
+      },
+    ],
+  },
+
   // ===================== OUTRO =====================
+
   {
     id: "outro",
     label: "Outro",
