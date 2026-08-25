@@ -178,6 +178,36 @@ export const INTERVENCOES = [
     coorte: "INTERVENTION_COHORT",
     experimentalStatus: "INTERVENED",
   },
+  {
+    id: "INT-2026-08-25-005",
+    tipo: "PUBLIC_INTERVENTION",
+    timestamp: "2026-08-25T08:40:00.000Z",
+    deploymentId: null,
+    commit: null,
+    urlsDiretas: ["/tecnico-informatica-curitiba"],
+    urlsIndiretas: [],
+    arquivos: [
+      "src/pages/TecnicoInformaticaCuritiba.tsx",
+      "src/pages/bairros/BairroTemplate.tsx",
+      "src/components/areas/BairroInterlinkLocal.tsx",
+      "src/components/areas/DiretorioLocalidades.tsx",
+      "src/components/home/RegioesCuritibaSection.tsx",
+    ],
+    mudanca: "INTERNAL_LINKS",
+    motivo:
+      "Bloco 'Principais regiões de Curitiba atendidas' passou de lista estática de texto para malha real de links por bairro/RMC, com prefetch por intenção; BreadcrumbList das páginas de bairro ganhou o nível de região.",
+    impacto: {
+      seo: "Profundidade de clique reduzida para as localidades. Title/description/canonical/robots inalterados.",
+      internalLinking: "54 destinos de localidade descobríveis a partir do pilar de Curitiba.",
+      conteudo: "Sem texto editorial novo.",
+      schema: "BreadcrumbList das páginas de bairro passa a ter Home > Cidade > Bairros > Região > Bairro.",
+      metadata: "Sem alteração de metadata.",
+      lastmod: "Elegível para /tecnico-informatica-curitiba e páginas de bairro curadas.",
+      conversao: "Sem CTA novo.",
+    },
+    coorte: "INTERVENTION_COHORT",
+    experimentalStatus: "INTERVENED",
+  },
 ];
 
 export default { LEDGER_SCHEMA, D0, INTERVENCOES };
