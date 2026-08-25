@@ -97,6 +97,7 @@ import { Route as UpgradeSsdCuritibaRouteImport } from './routes/upgrade-ssd-cur
 import { Route as ValoresRouteImport } from './routes/valores'
 import { Route as AdminIndexRouteImport } from './routes/admin.index'
 import { Route as AdminAuditoriaOsRouteImport } from './routes/admin.auditoria-os'
+import { Route as AdminBairrosRouteImport } from './routes/admin.bairros'
 import { Route as AdminCasosRouteImport } from './routes/admin.casos'
 import { Route as AdminConversaoRouteImport } from './routes/admin.conversao'
 import { Route as AdminDashboardRouteImport } from './routes/admin.dashboard'
@@ -972,6 +973,11 @@ const AdminIndexRoute = AdminIndexRouteImport.update({
 const AdminAuditoriaOsRoute = AdminAuditoriaOsRouteImport.update({
   id: '/admin/auditoria-os',
   path: '/admin/auditoria-os',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminBairrosRoute = AdminBairrosRouteImport.update({
+  id: '/admin/bairros',
+  path: '/admin/bairros',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AdminCasosRoute = AdminCasosRouteImport.update({
@@ -3294,6 +3300,7 @@ export interface FileRoutesByFullPath {
   '/upgrade-ssd-curitiba': typeof UpgradeSsdCuritibaRoute
   '/valores': typeof ValoresRoute
   '/admin/auditoria-os': typeof AdminAuditoriaOsRoute
+  '/admin/bairros': typeof AdminBairrosRoute
   '/admin/casos': typeof AdminCasosRoute
   '/admin/conversao': typeof AdminConversaoRoute
   '/admin/dashboard': typeof AdminDashboardRoute
@@ -3796,6 +3803,7 @@ export interface FileRoutesByTo {
   '/upgrade-ssd-curitiba': typeof UpgradeSsdCuritibaRoute
   '/valores': typeof ValoresRoute
   '/admin/auditoria-os': typeof AdminAuditoriaOsRoute
+  '/admin/bairros': typeof AdminBairrosRoute
   '/admin/casos': typeof AdminCasosRoute
   '/admin/conversao': typeof AdminConversaoRoute
   '/admin/dashboard': typeof AdminDashboardRoute
@@ -4299,6 +4307,7 @@ export interface FileRoutesById {
   '/upgrade-ssd-curitiba': typeof UpgradeSsdCuritibaRoute
   '/valores': typeof ValoresRoute
   '/admin/auditoria-os': typeof AdminAuditoriaOsRoute
+  '/admin/bairros': typeof AdminBairrosRoute
   '/admin/casos': typeof AdminCasosRoute
   '/admin/conversao': typeof AdminConversaoRoute
   '/admin/dashboard': typeof AdminDashboardRoute
@@ -4803,6 +4812,7 @@ export interface FileRouteTypes {
     | '/upgrade-ssd-curitiba'
     | '/valores'
     | '/admin/auditoria-os'
+    | '/admin/bairros'
     | '/admin/casos'
     | '/admin/conversao'
     | '/admin/dashboard'
@@ -5305,6 +5315,7 @@ export interface FileRouteTypes {
     | '/upgrade-ssd-curitiba'
     | '/valores'
     | '/admin/auditoria-os'
+    | '/admin/bairros'
     | '/admin/casos'
     | '/admin/conversao'
     | '/admin/dashboard'
@@ -5807,6 +5818,7 @@ export interface FileRouteTypes {
     | '/upgrade-ssd-curitiba'
     | '/valores'
     | '/admin/auditoria-os'
+    | '/admin/bairros'
     | '/admin/casos'
     | '/admin/conversao'
     | '/admin/dashboard'
@@ -6310,6 +6322,7 @@ export interface RootRouteChildren {
   UpgradeSsdCuritibaRoute: typeof UpgradeSsdCuritibaRoute
   ValoresRoute: typeof ValoresRoute
   AdminAuditoriaOsRoute: typeof AdminAuditoriaOsRoute
+  AdminBairrosRoute: typeof AdminBairrosRoute
   AdminCasosRoute: typeof AdminCasosRoute
   AdminConversaoRoute: typeof AdminConversaoRoute
   AdminDashboardRoute: typeof AdminDashboardRoute
@@ -7339,6 +7352,13 @@ declare module '@tanstack/react-router' {
       path: '/admin/auditoria-os'
       fullPath: '/admin/auditoria-os'
       preLoaderRoute: typeof AdminAuditoriaOsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/bairros': {
+      id: '/admin/bairros'
+      path: '/admin/bairros'
+      fullPath: '/admin/bairros'
+      preLoaderRoute: typeof AdminBairrosRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/admin/casos': {
@@ -10336,6 +10356,7 @@ const rootRouteChildren: RootRouteChildren = {
   UpgradeSsdCuritibaRoute: UpgradeSsdCuritibaRoute,
   ValoresRoute: ValoresRoute,
   AdminAuditoriaOsRoute: AdminAuditoriaOsRoute,
+  AdminBairrosRoute: AdminBairrosRoute,
   AdminCasosRoute: AdminCasosRoute,
   AdminConversaoRoute: AdminConversaoRoute,
   AdminDashboardRoute: AdminDashboardRoute,
