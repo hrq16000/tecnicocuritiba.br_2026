@@ -1,10 +1,10 @@
 {
-  "startedAt": "2026-08-23T16:33:44.525Z",
-  "finishedAt": "2026-08-23T16:33:46.990Z",
-  "ok": false,
+  "startedAt": "2026-08-25T01:35:44.931Z",
+  "finishedAt": "2026-08-25T01:35:46.524Z",
+  "ok": true,
   "total": 9,
-  "passed": 6,
-  "failed": 3,
+  "passed": 9,
+  "failed": 0,
   "skipped": 0,
   "gates": [
     {
@@ -12,72 +12,72 @@
       "label": "ads.txt e metatag AdSense",
       "status": "ok",
       "detail": "sem pendências",
-      "durationMs": 101,
-      "checkedAt": "2026-08-23T16:33:44.626Z"
+      "durationMs": 58,
+      "checkedAt": "2026-08-25T01:35:44.990Z"
     },
     {
       "id": "policy-jsonld",
       "label": "JSON-LD das políticas",
       "status": "ok",
       "detail": "sem pendências",
-      "durationMs": 88,
-      "checkedAt": "2026-08-23T16:33:44.714Z"
+      "durationMs": 69,
+      "checkedAt": "2026-08-25T01:35:45.059Z"
     },
     {
       "id": "telemetry",
       "label": "Transparência da telemetria",
       "status": "ok",
       "detail": "sem pendências",
-      "durationMs": 87,
-      "checkedAt": "2026-08-23T16:33:44.801Z"
+      "durationMs": 72,
+      "checkedAt": "2026-08-25T01:35:45.131Z"
     },
     {
       "id": "missing-exports",
       "label": "Exports ausentes nas rotas",
       "status": "ok",
       "detail": "sem pendências",
-      "durationMs": 1061,
-      "checkedAt": "2026-08-23T16:33:45.862Z"
+      "durationMs": 730,
+      "checkedAt": "2026-08-25T01:35:45.861Z"
     },
     {
       "id": "internal-links",
       "label": "Links internos sem 404",
-      "status": "fail",
-      "detail": "  - link interno quebrado → /apple-touch-icon-20260624.png (em src/routes/__root.tsx)",
-      "durationMs": 382,
-      "checkedAt": "2026-08-23T16:33:46.244Z"
+      "status": "ok",
+      "detail": "sem pendências",
+      "durationMs": 217,
+      "checkedAt": "2026-08-25T01:35:46.078Z"
     },
     {
       "id": "sitemap-source",
       "label": "Sitemap x fonte curada",
-      "status": "fail",
-      "detail": "  ✗ [sitemap-editorial.xml] URL sem rota correspondente (404): /blog/como-escolher-uma-workstation",
-      "durationMs": 178,
-      "checkedAt": "2026-08-23T16:33:46.422Z"
+      "status": "ok",
+      "detail": "sem pendências",
+      "durationMs": 117,
+      "checkedAt": "2026-08-25T01:35:46.195Z"
     },
     {
       "id": "aggregate-rating",
       "label": "Ausência de aggregateRating fabricado",
       "status": "ok",
       "detail": "sem pendências",
-      "durationMs": 165,
-      "checkedAt": "2026-08-23T16:33:46.587Z"
+      "durationMs": 102,
+      "checkedAt": "2026-08-25T01:35:46.297Z"
     },
     {
       "id": "media-assets",
       "label": "og:image, mídia kit e assets públicos",
       "status": "ok",
       "detail": "sem pendências",
-      "durationMs": 292,
-      "checkedAt": "2026-08-23T16:33:46.879Z"
+      "durationMs": 130,
+      "checkedAt": "2026-08-25T01:35:46.427Z"
     },
     {
       "id": "orphan-pages",
       "label": "Páginas órfãs",
-      "status": "fail",
-      "detail": "      esperado: montar na rota canônica ou remover o arquivo",
-      "durationMs": 111,
-      "checkedAt": "2026-08-23T16:33:46.990Z"
+      "status": "ok",
+      "detail": "sem pendências",
+      "durationMs": 97,
+      "checkedAt": "2026-08-25T01:35:46.524Z"
     }
   ]
 }

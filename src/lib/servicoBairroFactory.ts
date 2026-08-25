@@ -339,8 +339,14 @@ export function buildServicoBairroData(
     faq: servico.faq(bairro.nome),
     pontosReferencia: bairro.pontosReferencia,
     tempoAtendimento: bairro.tempoAtendimento,
-    servicosRelacionados: servico.relacionados,
-    bairrosProximos: bairro.bairrosProximos,
+    // Fase de operação: nenhum link interno pode apontar para URL consolidada
+    // (301). Os destinos removidos saem da malha aqui, na fonte dos dados.
+    servicosRelacionados: servico.relacionados.filter(
+      (s) => !CONSOLIDATED_LOCAL_PATHS.has(`/servicos/${s.slug}/${bairroSlug}`),
+    ),
+    bairrosProximos: bairro.bairrosProximos.filter(
+      (b) => !CONSOLIDATED_LOCAL_PATHS.has(`/servicos/${servicoSlug}/${b.slug}`),
+    ),
     indexable: isIndexavel(servicoSlug, bairroSlug),
   };
 }

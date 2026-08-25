@@ -179,7 +179,9 @@ for (const path of CURATED_PATHS) {
     }
     const repetidos = new Map();
     for (const n of nodes) {
-      if (!n["@id"]) continue;
+      // Referência curta (`{"@id": ...}` sem @type) é o padrão correto de
+      // ligação entre nós — só conta como declaração o nó que traz @type.
+      if (!n["@id"] || !n["@type"]) continue;
       repetidos.set(n["@id"], (repetidos.get(n["@id"]) ?? 0) + 1);
     }
     for (const [id, qtd] of repetidos)

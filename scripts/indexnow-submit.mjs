@@ -119,13 +119,46 @@ console.log(
 );
 for (const f of falhas.slice(0, 15)) console.log(`  · ignorada ${f}`);
 
+/** Evidência para o painel operacional: sempre registrada, inclusive no no-op. */
+function registrarExecucao(extra) {
+  mkdirSync("reports", { recursive: true });
+  const registro = {
+    executadoEm: new Date().toISOString(),
+    host: HOST,
+    modo: dryRun ? "dry-run" : forceAll ? "baseline" : "incremental",
+    eligible: lista.length,
+    novas,
+    mudadas,
+    submitted: 0,
+    accepted: 0,
+    failed: 0,
+    ignoradas: falhas,
+    ...extra,
+  };
+  writeFileSync("reports/indexnow-last-run.json", JSON.stringify(registro, null, 2));
+  const histPath = "reports/indexnow-history.json";
+  const hist = existsSync(histPath) ? JSON.parse(readFileSync(histPath, "utf8")) : [];
+  hist.push({
+    executadoEm: registro.executadoEm,
+    modo: registro.modo,
+    eligible: registro.eligible,
+    submitted: registro.submitted,
+    accepted: registro.accepted,
+    failed: registro.failed,
+  });
+  writeFileSync(histPath, JSON.stringify(hist.slice(-180), null, 2));
+  return registro;
+}
+
 if (enviar.length === 0) {
   console.log("[indexnow] nada mudou — nenhuma submissão (evita ruído de ping repetido).");
   if (!dryRun) writeFileSync(MANIFEST, JSON.stringify(atualizado, null, 2));
+  registrarExecucao({});
   process.exit(0);
 }
 
 if (dryRun) {
+  registrarExecucao({ submitted: 0, elegiveisParaEnvio: enviar.length });
   console.log(`[indexnow] --dry-run: submeteria ${enviar.length} URL(s):`);
   for (const p of enviar.slice(0, 40)) console.log(`  → ${p}`);
   process.exit(0);
@@ -133,6 +166,8 @@ if (dryRun) {
 
 const agora = new Date().toISOString();
 let ok = true;
+let aceitas = 0;
+let falhou = 0;
 for (let i = 0; i < enviar.length; i += 1000) {
   const chunk = enviar.slice(i, i + 1000);
   const res = await fetch(ENDPOINT, {
@@ -148,9 +183,11 @@ for (let i = 0; i < enviar.length; i += 1000) {
   console.log(`[indexnow] ${res.status} ${res.statusText} — ${chunk.length} URL(s)`);
   if (!res.ok) {
     ok = false;
+    falhou += chunk.length;
     console.error(await res.text());
     continue;
   }
+  aceitas += chunk.length;
   for (const p of chunk) {
     atualizado[p].lastSubmitted = agora;
     atualizado[p].submissions += 1;
@@ -159,8 +196,11 @@ for (let i = 0; i < enviar.length; i += 1000) {
 
 mkdirSync("reports", { recursive: true });
 writeFileSync(MANIFEST, JSON.stringify(atualizado, null, 2));
-writeFileSync(
-  "reports/indexnow-last-run.json",
-  JSON.stringify({ executadoEm: agora, host: HOST, novas, mudadas, enviadas: enviar.length, ignoradas: falhas }, null, 2),
-);
+registrarExecucao({
+  executadoEm: agora,
+  enviadas: enviar.length,
+  submitted: enviar.length,
+  accepted: aceitas,
+  failed: falhou,
+});
 if (!ok) process.exit(1);
