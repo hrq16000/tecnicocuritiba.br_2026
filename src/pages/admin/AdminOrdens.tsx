@@ -65,6 +65,38 @@ const AdminOrdens = () => {
     if (isAdmin) void carregar();
   }, [isAdmin, carregar]);
 
+  const alternarSelecao = useCallback((protocolo: string) => {
+    setSelecionados((atual) =>
+      atual.includes(protocolo)
+        ? atual.filter((p) => p !== protocolo)
+        : [...atual, protocolo],
+    );
+  }, []);
+
+  const aplicarLote = useCallback(async () => {
+    if (!statusLote || selecionados.length === 0) return;
+    setAplicandoLote(true);
+    setResultadoLote(null);
+    try {
+      const r = await alterarStatusEmLote({
+        data: { protocolos: selecionados, status: statusLote as OsStatus, nota: "" },
+      });
+      const falhas = r.falhas
+        .map((f) => `${f.protocolo}: ${f.motivo}`)
+        .join(" · ");
+      setResultadoLote(
+        `${r.aplicados.length} atualizada(s).` +
+          (r.falhas.length ? ` ${r.falhas.length} recusada(s) — ${falhas}` : ""),
+      );
+      setSelecionados([]);
+      await carregar();
+    } catch (e) {
+      setResultadoLote(e instanceof Error ? e.message : "Falha ao aplicar em lote.");
+    } finally {
+      setAplicandoLote(false);
+    }
+  }, [statusLote, selecionados, carregar]);
+
   const paginas = useMemo(() => Math.max(1, Math.ceil(total / POR_PAGINA)), [total]);
 
   if (authLoading) {
