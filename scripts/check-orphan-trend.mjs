@@ -9,14 +9,14 @@
  *   node scripts/check-orphan-trend.mjs            # verifica (gate)
  *   node scripts/check-orphan-trend.mjs --update   # regrava o baseline
  *
- * Baseline: reports/orphan-baseline.json (versionado).
+ * Baseline: scripts/data/orphan-baseline.json (versionado).
  */
 import { readFileSync, writeFileSync, existsSync, readdirSync, statSync, mkdirSync } from "node:fs";
 import { join, resolve } from "node:path";
 import { CURATED_PATHS } from "./lib/curated-urls.mjs";
 
 const ROOT = resolve(import.meta.dirname, "..");
-const BASELINE = join(ROOT, "reports/orphan-baseline.json");
+const BASELINE = join(ROOT, "scripts/data/orphan-baseline.json");
 const UPDATE = process.argv.includes("--update");
 
 /** Todos os arquivos de código que podem conter links internos. */
