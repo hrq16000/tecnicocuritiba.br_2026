@@ -106,6 +106,7 @@ import { Route as AdminFunnelRouteImport } from './routes/admin.funnel'
 import { Route as AdminIndexacaoRouteImport } from './routes/admin.indexacao'
 import { Route as AdminIndexacaoDiariaRouteImport } from './routes/admin.indexacao-diaria'
 import { Route as AdminLoginRouteImport } from './routes/admin.login'
+import { Route as AdminMonitoramentoRouteImport } from './routes/admin.monitoramento'
 import { Route as AdminOperacaoRouteImport } from './routes/admin.operacao'
 import { Route as AdminProvasMonitorRouteImport } from './routes/admin.provas-monitor'
 import { Route as AdminProvasVerticaisRouteImport } from './routes/admin.provas-verticais'
@@ -1000,6 +1001,11 @@ const AdminIndexacaoDiariaRoute = AdminIndexacaoDiariaRouteImport.update({
 const AdminLoginRoute = AdminLoginRouteImport.update({
   id: '/admin/login',
   path: '/admin/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminMonitoramentoRoute = AdminMonitoramentoRouteImport.update({
+  id: '/admin/monitoramento',
+  path: '/admin/monitoramento',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AdminOperacaoRoute = AdminOperacaoRouteImport.update({
@@ -3200,6 +3206,7 @@ export interface FileRoutesByFullPath {
   '/admin/indexacao': typeof AdminIndexacaoRoute
   '/admin/indexacao-diaria': typeof AdminIndexacaoDiariaRoute
   '/admin/login': typeof AdminLoginRoute
+  '/admin/monitoramento': typeof AdminMonitoramentoRoute
   '/admin/operacao': typeof AdminOperacaoRoute
   '/admin/provas-monitor': typeof AdminProvasMonitorRoute
   '/admin/provas-verticais': typeof AdminProvasVerticaisRoute
@@ -3685,6 +3692,7 @@ export interface FileRoutesByTo {
   '/admin/indexacao': typeof AdminIndexacaoRoute
   '/admin/indexacao-diaria': typeof AdminIndexacaoDiariaRoute
   '/admin/login': typeof AdminLoginRoute
+  '/admin/monitoramento': typeof AdminMonitoramentoRoute
   '/admin/operacao': typeof AdminOperacaoRoute
   '/admin/provas-monitor': typeof AdminProvasMonitorRoute
   '/admin/provas-verticais': typeof AdminProvasVerticaisRoute
@@ -4171,6 +4179,7 @@ export interface FileRoutesById {
   '/admin/indexacao': typeof AdminIndexacaoRoute
   '/admin/indexacao-diaria': typeof AdminIndexacaoDiariaRoute
   '/admin/login': typeof AdminLoginRoute
+  '/admin/monitoramento': typeof AdminMonitoramentoRoute
   '/admin/operacao': typeof AdminOperacaoRoute
   '/admin/provas-monitor': typeof AdminProvasMonitorRoute
   '/admin/provas-verticais': typeof AdminProvasVerticaisRoute
@@ -4658,6 +4667,7 @@ export interface FileRouteTypes {
     | '/admin/indexacao'
     | '/admin/indexacao-diaria'
     | '/admin/login'
+    | '/admin/monitoramento'
     | '/admin/operacao'
     | '/admin/provas-monitor'
     | '/admin/provas-verticais'
@@ -5143,6 +5153,7 @@ export interface FileRouteTypes {
     | '/admin/indexacao'
     | '/admin/indexacao-diaria'
     | '/admin/login'
+    | '/admin/monitoramento'
     | '/admin/operacao'
     | '/admin/provas-monitor'
     | '/admin/provas-verticais'
@@ -5628,6 +5639,7 @@ export interface FileRouteTypes {
     | '/admin/indexacao'
     | '/admin/indexacao-diaria'
     | '/admin/login'
+    | '/admin/monitoramento'
     | '/admin/operacao'
     | '/admin/provas-monitor'
     | '/admin/provas-verticais'
@@ -6114,6 +6126,7 @@ export interface RootRouteChildren {
   AdminIndexacaoRoute: typeof AdminIndexacaoRoute
   AdminIndexacaoDiariaRoute: typeof AdminIndexacaoDiariaRoute
   AdminLoginRoute: typeof AdminLoginRoute
+  AdminMonitoramentoRoute: typeof AdminMonitoramentoRoute
   AdminOperacaoRoute: typeof AdminOperacaoRoute
   AdminProvasMonitorRoute: typeof AdminProvasMonitorRoute
   AdminProvasVerticaisRoute: typeof AdminProvasVerticaisRoute
@@ -7182,6 +7195,13 @@ declare module '@tanstack/react-router' {
       path: '/admin/login'
       fullPath: '/admin/login'
       preLoaderRoute: typeof AdminLoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/monitoramento': {
+      id: '/admin/monitoramento'
+      path: '/admin/monitoramento'
+      fullPath: '/admin/monitoramento'
+      preLoaderRoute: typeof AdminMonitoramentoRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/admin/operacao': {
@@ -9992,6 +10012,7 @@ const rootRouteChildren: RootRouteChildren = {
   AdminIndexacaoRoute: AdminIndexacaoRoute,
   AdminIndexacaoDiariaRoute: AdminIndexacaoDiariaRoute,
   AdminLoginRoute: AdminLoginRoute,
+  AdminMonitoramentoRoute: AdminMonitoramentoRoute,
   AdminOperacaoRoute: AdminOperacaoRoute,
   AdminProvasMonitorRoute: AdminProvasMonitorRoute,
   AdminProvasVerticaisRoute: AdminProvasVerticaisRoute,
