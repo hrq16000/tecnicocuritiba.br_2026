@@ -14,6 +14,11 @@ import {
 import { AlertTriangle, Download, FileText, Loader2, RefreshCw } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Button } from "@/components/ui/button";
+import { DrilldownUrls } from "@/components/admin/monitoramento/DrilldownUrls";
+import { DiffSnapshots } from "@/components/admin/monitoramento/DiffSnapshots";
+import { JobRuns } from "@/components/admin/monitoramento/JobRuns";
+import { QuickWinsBacklog } from "@/components/admin/monitoramento/QuickWinsBacklog";
+import type { MarcoUrl } from "@/components/admin/monitoramento/types";
 
 /**
  * Painel interno de monitoramento operacional D0 → D7 → D14 → D30.
@@ -77,6 +82,8 @@ interface Marco {
   bing: Record<string, unknown> | null;
   serpSignals: { geradoEm: string | null; urls: number } | null;
   serpSnapshot: string | null;
+  /** Estado por URL congelado no marco (ausente em marcos antigos). */
+  urls?: MarcoUrl[];
 }
 
 interface SnapshotIndex {
@@ -118,6 +125,9 @@ export default function AdminMonitoramento() {
   const [erro, setErro] = useState<string | null>(null);
   const [carregando, setCarregando] = useState(true);
   const [detalhe, setDetalhe] = useState<"tiers" | "clusters">("tiers");
+  // Alertas por cluster linkam para /admin/monitoramento?cluster=SERVICO
+  const clusterInicial =
+    typeof window === "undefined" ? null : new URLSearchParams(window.location.search).get("cluster");
 
   const carregar = () => {
     setCarregando(true);
@@ -410,6 +420,17 @@ export default function AdminMonitoramento() {
                 </div>
               ))}
             </section>
+
+            <DrilldownUrls marcos={marcos} clusterInicial={clusterInicial} />
+
+            <DiffSnapshots />
+
+            <JobRuns />
+
+            <QuickWinsBacklog
+              marcoAtual={atual.marco}
+              podeAbrir={ORDEM.indexOf(atual.marco) >= ORDEM.indexOf("D14")}
+            />
 
             <section className="mt-10">
               <h2 className="text-lg font-semibold">Reindexação de memórias e snapshots</h2>

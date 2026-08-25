@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { ChevronDown, ChevronRight } from "lucide-react";
 import { SEM_DADO } from "./types";
 
@@ -65,8 +65,8 @@ export function JobRuns() {
               {execucoes.slice(0, 20).map((e) => {
                 const expandida = aberta === e.id;
                 return (
-                  <>
-                    <tr key={e.id} className="border-t border-border">
+                  <Fragment key={e.id}>
+                    <tr className="border-t border-border">
                       <td className="p-3">
                         <button
                           type="button"
@@ -89,7 +89,7 @@ export function JobRuns() {
                       </td>
                     </tr>
                     {expandida && (
-                      <tr key={`${e.id}-logs`} className="border-t border-border bg-muted/30">
+                      <tr className="border-t border-border bg-muted/30">
                         <td colSpan={7} className="p-4">
                           <pre className="whitespace-pre-wrap break-words font-mono text-[11px] leading-relaxed text-muted-foreground">
                             {e.logs.length ? e.logs.join("\n") : "sem linhas de log registradas"}
@@ -97,7 +97,7 @@ export function JobRuns() {
                         </td>
                       </tr>
                     )}
-                  </>
+                  </Fragment>
                 );
               })}
             </tbody>
