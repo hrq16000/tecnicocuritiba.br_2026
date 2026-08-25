@@ -42,7 +42,7 @@ for (const pagina of PAGINAS_COM_GRADE) {
     const alvos = internalHrefs(html).filter((h) => h !== pagina);
     expect(alvos.length, `nenhum link interno encontrado em ${pagina}`).toBeGreaterThan(0);
 
-    const comNoindex: string[] = [];
+    const noindexSemFollow: string[] = [];
     const comRedirect: string[] = [];
 
     for (const alvo of alvos) {
@@ -54,10 +54,17 @@ for (const pagina of PAGINAS_COM_GRADE) {
       }
       expect(status, `HTTP de ${alvo} (link em ${pagina})`).toBe(200);
       const alvoHtml = await res.text();
-      if (/<meta[^>]+name="robots"[^>]+noindex/i.test(alvoHtml)) comNoindex.push(alvo);
+      const robots = /<meta[^>]+name="robots"[^>]+content="([^"]+)"/i.exec(alvoHtml)?.[1] ?? "";
+      // Página em enriquecimento (SHALLOW) pode receber link interno, mas só
+      // com `noindex, follow` — nunca `nofollow`, que mataria a malha.
+      if (/noindex/i.test(robots) && !/(^|[\s,])follow/i.test(robots)) noindexSemFollow.push(`${alvo} → ${robots}`);
     }
 
     expect(comRedirect, `links internos apontando para redirect em ${pagina}`).toEqual([]);
-    expect(comNoindex, `links internos apontando para noindex em ${pagina}`).toEqual([]);
+    expect(
+      noindexSemFollow,
+      `links internos apontando para noindex sem follow em ${pagina}`,
+    ).toEqual([]);
+
   });
 }
