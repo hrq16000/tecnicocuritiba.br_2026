@@ -402,6 +402,15 @@ export default function AdminMonitoramento() {
         )}
 
         <section className="mt-8">
+          <FreezeV2Status
+            proximoMarcoEm={(() => {
+              const d0 = marcos.find((m) => m.marco === "D0")?.registradoEm;
+              return d0 ? new Date(new Date(d0).getTime() + 14 * 86400000).toISOString() : null;
+            })()}
+          />
+        </section>
+
+        <section className="mt-8">
           <IntervencoesRegistradas />
         </section>
 
