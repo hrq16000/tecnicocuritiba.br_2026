@@ -250,6 +250,14 @@
     "check:indexability-contract:live": "node scripts/check-indexability-contract.mjs --live",
     "check:sitemap-lastmod": "node scripts/check-sitemap-lastmod.mjs",
     "indexnow:submit": "node scripts/indexnow-submit.mjs",
+    "report:quality": "node scripts/report-quality-audit.mjs",
+    "check:local-page-quality": "node scripts/check-local-page-quality.mjs",
+    "check:local-page-quality:strict": "node scripts/check-local-page-quality.mjs --strict",
+    "check:crawl-latency": "node scripts/check-crawl-latency.mjs",
+    "check:crawl-latency:strict": "node scripts/check-crawl-latency.mjs --strict",
+    "check:blog-internal-links": "node scripts/check-blog-internal-links.mjs",
+    "check:blog-internal-links:live": "node scripts/check-blog-internal-links.mjs --live",
+    "report:consolidated": "node scripts/report-consolidated-final.mjs",
     "indexnow:submit:dry": "node scripts/indexnow-submit.mjs --dry-run"
   },
   "dependencies": {

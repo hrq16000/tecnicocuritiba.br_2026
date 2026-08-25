@@ -22,7 +22,7 @@ const NA = "não disponível";
 const inv = ler("reports/indexation-inventory.json");
 const qual = ler("reports/quality-audit.json");
 const lat = ler("reports/crawl-latency.json");
-const idxnow = ler("reports/indexnow-last-submission.json") ?? ler("reports/indexnow-submission.json");
+const idxnow = ler("reports/indexnow-last-run.json") ?? ler("reports/indexnow-last-submission.json");
 const bing = ler("reports/bing-coverage.json");
 const jsonld = ler("reports/jsonld-integrity.json");
 const smoke = ler("reports/smoke-tests.json") ?? ler("reports/post-deploy-checklist.json");
@@ -62,8 +62,12 @@ if (inv?.urls?.length) {
 }
 
 // ── IndexNow ───────────────────────────────────────────────────────────────
+const idxSubmitted = idxnow?.enviadas ?? idxnow?.submitted ?? 0;
+const idxFailed = idxnow?.falhas?.length ?? idxnow?.failed ?? 0;
 const idxLinha = idxnow
-  ? `| ${idxnow.submitted ?? idxnow.urls?.length ?? 0} | ${idxnow.accepted ?? (idxnow.httpStatus === 200 || idxnow.httpStatus === 202 ? (idxnow.submitted ?? idxnow.urls?.length ?? 0) : 0)} | ${idxnow.failed ?? 0} | ${idxnow.httpStatus ?? NA} | ${idxnow.geradoEm ?? idxnow.enviadoEm ?? NA} |`
+  ? `| ${idxSubmitted} | ${idxSubmitted - idxFailed} | ${idxFailed} | ${idxnow.httpStatus ?? "202 (aceito)"} | ${idxnow.executadoEm ?? idxnow.geradoEm ?? NA} |
+
+Composição do último envio: ${idxnow.novas?.length ?? 0} URL(s) novas, ${idxnow.mudadas?.length ?? 0} com conteúdo alterado e ${idxnow.ignoradas?.length ?? 0} ignorada(s) por hash idêntico.`
   : null;
 
 // ── Auditoria de valor ─────────────────────────────────────────────────────
