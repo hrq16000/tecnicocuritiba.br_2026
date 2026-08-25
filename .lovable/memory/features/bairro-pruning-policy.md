@@ -29,3 +29,18 @@ Todos usam `BairroLocalLayout` + entrada curada em `src/lib/bairrosData.ts`
 - FAQPage SSR de todos os bairros vem de `scripts/curated-routes-meta.mjs` (campo `faq`).
 - Promoção em ondas de 4–6 páginas; após promover, rodar
   `inject-route-head`, `generate-sitemaps`, `generate-local-linkmap`.
+
+## Fila de Enriquecimento Agressivo (25/08/2026)
+
+- Mapeamento oficial de cobertura (45 bairros de Curitiba em 7 regiões + 9
+  municípios da RMC) vive em `src/lib/bairrosBaseline.ts` — fonte única do
+  escopo geográfico exibido em `/areas-atendidas`.
+- Toda página mapeada existe e navega, mas nasce `seoDepth: "baseline"` /
+  `enrichmentStatus: "pending"` → `noindex` explícito no `head()` da rota e
+  fora do sitemap. O teto de indexáveis **não muda** por criar página nova.
+- Promoção baseline → curated exige narrativa exclusiva aprovada em
+  `check:bairro-copy` + entrada em `bairroPhotos.ts`; nunca manual.
+- Backlog operacional: `npm run report:fila-bairros` →
+  `reports/fila-enriquecimento-bairros.md`.
+- Gate de cobertura/vazamento: `src/__tests__/bairros-cobertura-oficial.test.ts`
+  (rota existe, módulo carrega, nenhum baseline no sitemap).
