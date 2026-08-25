@@ -3,6 +3,12 @@ import validateSeo from "./tools/validate-seo";
 import validateJsonld from "./tools/validate-jsonld";
 import checkGeoConformance from "./tools/check-geo-conformance";
 
+const SUPABASE_URL = (
+  import.meta.env?.VITE_SUPABASE_URL ??
+  (typeof process !== "undefined" ? process.env?.["SUPABASE_URL"] : undefined) ??
+  ""
+).replace(/\/+$/, "");
+
 export default defineMcp({
   name: "tecnico-curitiba-br",
   title: "Tecnico.Curitiba.br",

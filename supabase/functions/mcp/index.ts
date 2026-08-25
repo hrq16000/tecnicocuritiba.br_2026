@@ -228,6 +228,7 @@ ${linhas.join("\n")}` }],
 });
 
 // src/lib/mcp/index.ts
+var SUPABASE_URL = "https://hisepaayuwxjrnumbqeq.supabase.co".replace(/\/+$/, "");
 var mcp_default = defineMcp({
   name: "tecnico-curitiba-br",
   title: "Tecnico.Curitiba.br",

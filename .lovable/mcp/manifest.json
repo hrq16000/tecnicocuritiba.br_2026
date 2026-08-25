@@ -3,7 +3,14 @@
   "sdk_version": "0.26.2",
   "path": "/functions/v1/mcp",
   "auth": {
-    "type": "none"
+    "type": "oauth",
+    "issuer": "https://hisepaayuwxjrnumbqeq.supabase.co/auth/v1",
+    "resource": "https://hisepaayuwxjrnumbqeq.supabase.co/functions/v1/mcp",
+    "resource_name": "Tecnico.Curitiba.br MCP",
+    "accepted_audiences": [
+      "authenticated"
+    ],
+    "jwks_uri": "https://hisepaayuwxjrnumbqeq.supabase.co/auth/v1/.well-known/jwks.json"
   },
   "mcp": {
     "server": {
