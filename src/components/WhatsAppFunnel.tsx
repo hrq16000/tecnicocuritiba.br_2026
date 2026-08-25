@@ -233,7 +233,6 @@ export const WhatsAppFunnel = () => {
       setStep((s) => Math.min(s + 1, totalSteps - 1));
       setInvalidField(null);
       setInvalidReason(null);
-      setInvalidReason(null);
       isTransitioning.current = false;
     }, delay);
 
@@ -243,7 +242,6 @@ export const WhatsAppFunnel = () => {
     const v = validateStep(s, a);
     if (v.ok) {
       setInvalidField(null);
-      setInvalidReason(null);
       setInvalidReason(null);
       return;
     }
