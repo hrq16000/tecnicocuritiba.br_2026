@@ -38,6 +38,30 @@ const args = process.argv.slice(2);
 const STRICT = args.includes("--strict");
 const AMOSTRA = Number(args.find((a) => a.startsWith("--amostra="))?.split("=")[1] ?? 5);
 
+/* ── Modo de contenção ──────────────────────────────────────────────────────
+ * Quando o fail-closed reprova, a resposta correta NÃO é relaxar a verificação
+ * nem tocar no site: é conter o escopo, registrar o motivo e manter a trilha.
+ *
+ *   --conter=cluster:PROBLEMA,tier:A   contenção explícita já na entrada
+ *   --conter-auto                      contém sozinho se a verificação falhar
+ *
+ * A contenção limita apenas a COBERTURA verificada (quais URLs curadas são
+ * exigidas do marco atual). Contagem, paridade e hashes continuam integrais —
+ * eles não dependem de escopo e nunca são afastados.
+ */
+const CONTER_AUTO = args.includes("--conter-auto");
+const escopoBruto = args.find((a) => a.startsWith("--conter="))?.split("=")[1] ?? "";
+const escopoManual = escopoBruto
+  .split(",")
+  .map((p) => p.trim())
+  .filter(Boolean)
+  .map((p) => {
+    const [tipo, valor] = p.split(":");
+    return { tipo: (tipo ?? "").toLowerCase(), valor: (valor ?? "").toUpperCase() };
+  })
+  .filter((f) => ["cluster", "tier"].includes(f.tipo) && f.valor);
+
+
 const sha1 = (buf) => createHash("sha1").update(buf).digest("hex");
 const lerJson = (p) => {
   try {
