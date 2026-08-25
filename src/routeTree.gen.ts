@@ -43,7 +43,6 @@ import { Route as GestorResponsavelRouteImport } from './routes/gestor-responsav
 import { Route as GuiaTecnicoInformaticaRouteImport } from './routes/guia-tecnico-informatica'
 import { Route as MicrosoldagemCelularCuritibaRouteImport } from './routes/microsoldagem-celular-curitiba'
 import { Route as ObrigadoRouteImport } from './routes/obrigado'
-import { Route as OrdemDeServicoRouteImport } from './routes/ordem-de-servico'
 import { Route as ParaEmpresasRouteImport } from './routes/para-empresas'
 import { Route as ParaVoceRouteImport } from './routes/para-voce'
 import { Route as PatrocinadoresRouteImport } from './routes/patrocinadores'
@@ -355,6 +354,8 @@ import { Route as ConsertoTvLocalRouteImport } from './routes/conserto-tv.$local
 import { Route as ConsertoVideogameLocalRouteImport } from './routes/conserto-videogame.$local'
 import { Route as MarcasIndexRouteImport } from './routes/marcas.index'
 import { Route as MarcasSlugRouteImport } from './routes/marcas.$slug'
+import { Route as OrdemDeServicoIndexRouteImport } from './routes/ordem-de-servico.index'
+import { Route as OrdemDeServicoProtocoloRouteImport } from './routes/ordem-de-servico.$protocolo'
 import { Route as ParceirosIndexRouteImport } from './routes/parceiros.index'
 import { Route as ParceirosSlugRouteImport } from './routes/parceiros.$slug'
 import { Route as ProblemasIndexRouteImport } from './routes/problemas.index'
@@ -670,11 +671,6 @@ const MicrosoldagemCelularCuritibaRoute =
 const ObrigadoRoute = ObrigadoRouteImport.update({
   id: '/obrigado',
   path: '/obrigado',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const OrdemDeServicoRoute = OrdemDeServicoRouteImport.update({
-  id: '/ordem-de-servico',
-  path: '/ordem-de-servico',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ParaEmpresasRoute = ParaEmpresasRouteImport.update({
@@ -2313,6 +2309,16 @@ const MarcasSlugRoute = MarcasSlugRouteImport.update({
   path: '/marcas/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
+const OrdemDeServicoIndexRoute = OrdemDeServicoIndexRouteImport.update({
+  id: '/ordem-de-servico/',
+  path: '/ordem-de-servico/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OrdemDeServicoProtocoloRoute = OrdemDeServicoProtocoloRouteImport.update({
+  id: '/ordem-de-servico/$protocolo',
+  path: '/ordem-de-servico/$protocolo',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ParceirosIndexRoute = ParceirosIndexRouteImport.update({
   id: '/parceiros/',
   path: '/parceiros/',
@@ -3144,7 +3150,6 @@ export interface FileRoutesByFullPath {
   '/guia-tecnico-informatica': typeof GuiaTecnicoInformaticaRoute
   '/microsoldagem-celular-curitiba': typeof MicrosoldagemCelularCuritibaRoute
   '/obrigado': typeof ObrigadoRoute
-  '/ordem-de-servico': typeof OrdemDeServicoRoute
   '/para-empresas': typeof ParaEmpresasRoute
   '/para-voce': typeof ParaVoceRoute
   '/patrocinadores': typeof PatrocinadoresRoute
@@ -3451,6 +3456,7 @@ export interface FileRoutesByFullPath {
   '/conserto-tv/$local': typeof ConsertoTvLocalRoute
   '/conserto-videogame/$local': typeof ConsertoVideogameLocalRoute
   '/marcas/$slug': typeof MarcasSlugRoute
+  '/ordem-de-servico/$protocolo': typeof OrdemDeServicoProtocoloRoute
   '/parceiros/$slug': typeof ParceirosSlugRoute
   '/problemas/$slug': typeof ProblemasSlugRoute
   '/problemas/computador-desliga-sozinho': typeof ProblemasComputadorDesligaSozinhoRoute
@@ -3517,6 +3523,7 @@ export interface FileRoutesByFullPath {
   '/blog/': typeof BlogIndexRoute
   '/cftv/': typeof CftvIndexRoute
   '/marcas/': typeof MarcasIndexRoute
+  '/ordem-de-servico/': typeof OrdemDeServicoIndexRoute
   '/parceiros/': typeof ParceirosIndexRoute
   '/problemas/': typeof ProblemasIndexRoute
   '/servicos/': typeof ServicosIndexRoute
@@ -3630,7 +3637,6 @@ export interface FileRoutesByTo {
   '/guia-tecnico-informatica': typeof GuiaTecnicoInformaticaRoute
   '/microsoldagem-celular-curitiba': typeof MicrosoldagemCelularCuritibaRoute
   '/obrigado': typeof ObrigadoRoute
-  '/ordem-de-servico': typeof OrdemDeServicoRoute
   '/para-empresas': typeof ParaEmpresasRoute
   '/para-voce': typeof ParaVoceRoute
   '/patrocinadores': typeof PatrocinadoresRoute
@@ -3937,6 +3943,7 @@ export interface FileRoutesByTo {
   '/conserto-tv/$local': typeof ConsertoTvLocalRoute
   '/conserto-videogame/$local': typeof ConsertoVideogameLocalRoute
   '/marcas/$slug': typeof MarcasSlugRoute
+  '/ordem-de-servico/$protocolo': typeof OrdemDeServicoProtocoloRoute
   '/parceiros/$slug': typeof ParceirosSlugRoute
   '/problemas/$slug': typeof ProblemasSlugRoute
   '/problemas/computador-desliga-sozinho': typeof ProblemasComputadorDesligaSozinhoRoute
@@ -4003,6 +4010,7 @@ export interface FileRoutesByTo {
   '/blog': typeof BlogIndexRoute
   '/cftv': typeof CftvIndexRoute
   '/marcas': typeof MarcasIndexRoute
+  '/ordem-de-servico': typeof OrdemDeServicoIndexRoute
   '/parceiros': typeof ParceirosIndexRoute
   '/problemas': typeof ProblemasIndexRoute
   '/servicos': typeof ServicosIndexRoute
@@ -4117,7 +4125,6 @@ export interface FileRoutesById {
   '/guia-tecnico-informatica': typeof GuiaTecnicoInformaticaRoute
   '/microsoldagem-celular-curitiba': typeof MicrosoldagemCelularCuritibaRoute
   '/obrigado': typeof ObrigadoRoute
-  '/ordem-de-servico': typeof OrdemDeServicoRoute
   '/para-empresas': typeof ParaEmpresasRoute
   '/para-voce': typeof ParaVoceRoute
   '/patrocinadores': typeof PatrocinadoresRoute
@@ -4424,6 +4431,7 @@ export interface FileRoutesById {
   '/conserto-tv/$local': typeof ConsertoTvLocalRoute
   '/conserto-videogame/$local': typeof ConsertoVideogameLocalRoute
   '/marcas/$slug': typeof MarcasSlugRoute
+  '/ordem-de-servico/$protocolo': typeof OrdemDeServicoProtocoloRoute
   '/parceiros/$slug': typeof ParceirosSlugRoute
   '/problemas/$slug': typeof ProblemasSlugRoute
   '/problemas/computador-desliga-sozinho': typeof ProblemasComputadorDesligaSozinhoRoute
@@ -4490,6 +4498,7 @@ export interface FileRoutesById {
   '/blog/': typeof BlogIndexRoute
   '/cftv/': typeof CftvIndexRoute
   '/marcas/': typeof MarcasIndexRoute
+  '/ordem-de-servico/': typeof OrdemDeServicoIndexRoute
   '/parceiros/': typeof ParceirosIndexRoute
   '/problemas/': typeof ProblemasIndexRoute
   '/servicos/': typeof ServicosIndexRoute
@@ -4605,7 +4614,6 @@ export interface FileRouteTypes {
     | '/guia-tecnico-informatica'
     | '/microsoldagem-celular-curitiba'
     | '/obrigado'
-    | '/ordem-de-servico'
     | '/para-empresas'
     | '/para-voce'
     | '/patrocinadores'
@@ -4912,6 +4920,7 @@ export interface FileRouteTypes {
     | '/conserto-tv/$local'
     | '/conserto-videogame/$local'
     | '/marcas/$slug'
+    | '/ordem-de-servico/$protocolo'
     | '/parceiros/$slug'
     | '/problemas/$slug'
     | '/problemas/computador-desliga-sozinho'
@@ -4978,6 +4987,7 @@ export interface FileRouteTypes {
     | '/blog/'
     | '/cftv/'
     | '/marcas/'
+    | '/ordem-de-servico/'
     | '/parceiros/'
     | '/problemas/'
     | '/servicos/'
@@ -5091,7 +5101,6 @@ export interface FileRouteTypes {
     | '/guia-tecnico-informatica'
     | '/microsoldagem-celular-curitiba'
     | '/obrigado'
-    | '/ordem-de-servico'
     | '/para-empresas'
     | '/para-voce'
     | '/patrocinadores'
@@ -5398,6 +5407,7 @@ export interface FileRouteTypes {
     | '/conserto-tv/$local'
     | '/conserto-videogame/$local'
     | '/marcas/$slug'
+    | '/ordem-de-servico/$protocolo'
     | '/parceiros/$slug'
     | '/problemas/$slug'
     | '/problemas/computador-desliga-sozinho'
@@ -5464,6 +5474,7 @@ export interface FileRouteTypes {
     | '/blog'
     | '/cftv'
     | '/marcas'
+    | '/ordem-de-servico'
     | '/parceiros'
     | '/problemas'
     | '/servicos'
@@ -5577,7 +5588,6 @@ export interface FileRouteTypes {
     | '/guia-tecnico-informatica'
     | '/microsoldagem-celular-curitiba'
     | '/obrigado'
-    | '/ordem-de-servico'
     | '/para-empresas'
     | '/para-voce'
     | '/patrocinadores'
@@ -5884,6 +5894,7 @@ export interface FileRouteTypes {
     | '/conserto-tv/$local'
     | '/conserto-videogame/$local'
     | '/marcas/$slug'
+    | '/ordem-de-servico/$protocolo'
     | '/parceiros/$slug'
     | '/problemas/$slug'
     | '/problemas/computador-desliga-sozinho'
@@ -5950,6 +5961,7 @@ export interface FileRouteTypes {
     | '/blog/'
     | '/cftv/'
     | '/marcas/'
+    | '/ordem-de-servico/'
     | '/parceiros/'
     | '/problemas/'
     | '/servicos/'
@@ -6064,7 +6076,6 @@ export interface RootRouteChildren {
   GuiaTecnicoInformaticaRoute: typeof GuiaTecnicoInformaticaRoute
   MicrosoldagemCelularCuritibaRoute: typeof MicrosoldagemCelularCuritibaRoute
   ObrigadoRoute: typeof ObrigadoRoute
-  OrdemDeServicoRoute: typeof OrdemDeServicoRoute
   ParaEmpresasRoute: typeof ParaEmpresasRoute
   ParaVoceRoute: typeof ParaVoceRoute
   PatrocinadoresRoute: typeof PatrocinadoresRoute
@@ -6371,6 +6382,7 @@ export interface RootRouteChildren {
   ConsertoTvLocalRoute: typeof ConsertoTvLocalRoute
   ConsertoVideogameLocalRoute: typeof ConsertoVideogameLocalRoute
   MarcasSlugRoute: typeof MarcasSlugRoute
+  OrdemDeServicoProtocoloRoute: typeof OrdemDeServicoProtocoloRoute
   ParceirosSlugRoute: typeof ParceirosSlugRoute
   ProblemasSlugRoute: typeof ProblemasSlugRoute
   ProblemasComputadorDesligaSozinhoRoute: typeof ProblemasComputadorDesligaSozinhoRoute
@@ -6437,6 +6449,7 @@ export interface RootRouteChildren {
   BlogIndexRoute: typeof BlogIndexRoute
   CftvIndexRoute: typeof CftvIndexRoute
   MarcasIndexRoute: typeof MarcasIndexRoute
+  OrdemDeServicoIndexRoute: typeof OrdemDeServicoIndexRoute
   ParceirosIndexRoute: typeof ParceirosIndexRoute
   ProblemasIndexRoute: typeof ProblemasIndexRoute
   ServicosIndexRoute: typeof ServicosIndexRoute
@@ -6754,13 +6767,6 @@ declare module '@tanstack/react-router' {
       path: '/obrigado'
       fullPath: '/obrigado'
       preLoaderRoute: typeof ObrigadoRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/ordem-de-servico': {
-      id: '/ordem-de-servico'
-      path: '/ordem-de-servico'
-      fullPath: '/ordem-de-servico'
-      preLoaderRoute: typeof OrdemDeServicoRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/para-empresas': {
@@ -8940,6 +8946,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MarcasSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/ordem-de-servico/': {
+      id: '/ordem-de-servico/'
+      path: '/ordem-de-servico'
+      fullPath: '/ordem-de-servico/'
+      preLoaderRoute: typeof OrdemDeServicoIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ordem-de-servico/$protocolo': {
+      id: '/ordem-de-servico/$protocolo'
+      path: '/ordem-de-servico/$protocolo'
+      fullPath: '/ordem-de-servico/$protocolo'
+      preLoaderRoute: typeof OrdemDeServicoProtocoloRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/parceiros/': {
       id: '/parceiros/'
       path: '/parceiros'
@@ -9946,7 +9966,6 @@ const rootRouteChildren: RootRouteChildren = {
   GuiaTecnicoInformaticaRoute: GuiaTecnicoInformaticaRoute,
   MicrosoldagemCelularCuritibaRoute: MicrosoldagemCelularCuritibaRoute,
   ObrigadoRoute: ObrigadoRoute,
-  OrdemDeServicoRoute: OrdemDeServicoRoute,
   ParaEmpresasRoute: ParaEmpresasRoute,
   ParaVoceRoute: ParaVoceRoute,
   PatrocinadoresRoute: PatrocinadoresRoute,
@@ -10258,6 +10277,7 @@ const rootRouteChildren: RootRouteChildren = {
   ConsertoTvLocalRoute: ConsertoTvLocalRoute,
   ConsertoVideogameLocalRoute: ConsertoVideogameLocalRoute,
   MarcasSlugRoute: MarcasSlugRoute,
+  OrdemDeServicoProtocoloRoute: OrdemDeServicoProtocoloRoute,
   ParceirosSlugRoute: ParceirosSlugRoute,
   ProblemasSlugRoute: ProblemasSlugRoute,
   ProblemasComputadorDesligaSozinhoRoute:
@@ -10334,6 +10354,7 @@ const rootRouteChildren: RootRouteChildren = {
   BlogIndexRoute: BlogIndexRoute,
   CftvIndexRoute: CftvIndexRoute,
   MarcasIndexRoute: MarcasIndexRoute,
+  OrdemDeServicoIndexRoute: OrdemDeServicoIndexRoute,
   ParceirosIndexRoute: ParceirosIndexRoute,
   ProblemasIndexRoute: ProblemasIndexRoute,
   ServicosIndexRoute: ServicosIndexRoute,

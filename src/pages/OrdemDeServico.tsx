@@ -1,14 +1,18 @@
 import { useEffect, useMemo, useState } from "react";
+import { Link } from "@tanstack/react-router";
 import { PageSEO } from "@/components/PageSEO";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { TermosCtaLink } from "@/components/TermosCtaLink";
+import { TermosOsView } from "@/components/os/TermosOsView";
 import { LocalidadeInput } from "@/components/funnel/LocalidadeInput";
 import { geoSuggestion, subscribeGeo } from "@/lib/geoContext";
 import { trackCTAClick } from "@/lib/analytics";
 import { MODALIDADES, REGRA_CANCELAMENTO, NOTA_VISITA_AVULSA } from "@/lib/precosConfig";
+import { classificarAtendimento, mensagemWhatsAppOs, MOTIVO_CLASSIFICACAO } from "@/lib/os/termosOs";
+import { criarOs } from "@/lib/os/os.functions";
 import { toast } from "sonner";
 
 interface OsForm {
@@ -21,12 +25,7 @@ interface OsForm {
   modalidadeId: string;
 }
 
-const gerarNumero = () => {
-  const d = new Date();
-  const p = (n: number) => String(n).padStart(2, "0");
-  const rand = Math.floor(Math.random() * 9000 + 1000);
-  return `OS-${d.getFullYear()}${p(d.getMonth() + 1)}${p(d.getDate())}-${rand}`;
-};
+
 
 const OrdemDeServico = () => {
   const [form, setForm] = useState<OsForm>(() => ({
@@ -39,6 +38,9 @@ const OrdemDeServico = () => {
     modalidadeId: MODALIDADES[0].id,
   }));
   const [numero, setNumero] = useState<string | null>(null);
+  const [salvando, setSalvando] = useState(false);
+  const [modalidadeTocada, setModalidadeTocada] = useState(false);
+  const [consulta, setConsulta] = useState("");
 
   // Pré-preenche bairro/cidade assim que a detecção (IP ou precisa) resolver,
   // sem sobrescrever o que o usuário já digitou.
@@ -55,7 +57,18 @@ const OrdemDeServico = () => {
 
   const set = (k: keyof OsForm) => (v: string) => setForm((p) => ({ ...p, [k]: v }));
 
+  // Classificação automática: eletrônicos de bancada e falhas de energia vão
+  // para coleta; o restante começa como visita técnica de inspeção.
+  const tipo = classificarAtendimento(form.equipamento, form.sintoma);
+
+  useEffect(() => {
+    if (modalidadeTocada || numero) return;
+    const sugerida = tipo === "laboratorio" ? "coleta-diagnostico" : "visita-avulsa";
+    setForm((p) => (p.modalidadeId === sugerida ? p : { ...p, modalidadeId: sugerida }));
+  }, [tipo, modalidadeTocada, numero]);
+
   const modalidade = MODALIDADES.find((m) => m.id === form.modalidadeId) ?? MODALIDADES[0];
+
 
   const pronta =
     form.nome.trim().length >= 2 && form.equipamento.trim().length >= 2 && form.sintoma.trim().length >= 5;
@@ -81,35 +94,55 @@ const OrdemDeServico = () => {
     return linhas.join("\n");
   }, [form, numero, modalidade]);
 
-  const garantirNumero = () => {
-    const n = numero ?? gerarNumero();
-    if (!numero) setNumero(n);
-    return n;
+  const garantirNumero = async (): Promise<string | null> => {
+    if (numero) return numero;
+    if (!pronta) return null;
+    setSalvando(true);
+    try {
+      const { protocolo } = await criarOs({
+        data: {
+          tipo,
+          nome: form.nome.trim(),
+          local: form.local.trim(),
+          equipamento: form.equipamento.trim(),
+          marcaModelo: form.marcaModelo.trim(),
+          acessorios: form.acessorios.trim(),
+          sintoma: form.sintoma.trim(),
+          modalidadeId: modalidade.id,
+          valorLabel: modalidade.valorLabel,
+        },
+      });
+      setNumero(protocolo);
+      return protocolo;
+    } catch {
+      toast.error("Não foi possível registrar a ordem de serviço agora. Tente novamente.");
+      return null;
+    } finally {
+      setSalvando(false);
+    }
   };
 
   const gerar = () => {
-    if (!pronta) return;
-    garantirNumero();
+    void garantirNumero();
   };
 
   const mensagemWhatsApp = (n: string) =>
-    [
-      `Olá! Registrei a ordem de serviço ${n}.`,
-      "",
-      `Modalidade: ${modalidade.titulo}`,
-      `Valor: ${modalidade.valorLabel} (${modalidade.unidade})`,
-      form.local ? `Bairro/cidade: ${form.local}` : "",
-      `Equipamento: ${form.equipamento}${form.marcaModelo ? ` (${form.marcaModelo})` : ""}`,
-      `Problema: ${form.sintoma}`,
-      "",
-      "Registro completo:",
-      resumo.replace(/^Ordem de serviço.*$/m, `Ordem de serviço ${n}`),
-    ]
-      .filter(Boolean)
-      .join("\n");
+    mensagemWhatsAppOs({
+      protocolo: n,
+      tipo,
+      nome: form.nome,
+      local: form.local,
+      equipamento: form.equipamento,
+      marcaModelo: form.marcaModelo,
+      acessorios: form.acessorios,
+      sintoma: form.sintoma,
+      modalidadeTitulo: modalidade.titulo,
+      valorLabel: `${modalidade.valorLabel} (${modalidade.unidade})`,
+    });
 
   const copiar = async () => {
-    const n = garantirNumero();
+    const n = await garantirNumero();
+    if (!n) return;
     try {
       await navigator.clipboard.writeText(mensagemWhatsApp(n));
       toast.success("Conteúdo copiado — cole no WhatsApp.");
@@ -118,9 +151,12 @@ const OrdemDeServico = () => {
     }
   };
 
+
   const baixarPdf = async () => {
-    const n = garantirNumero();
+    const n = await garantirNumero();
+    if (!n) return;
     const { jsPDF } = await import("jspdf");
+
     const doc = new jsPDF({ unit: "pt", format: "a4" });
     const M = 48;
     const W = doc.internal.pageSize.getWidth();
@@ -204,8 +240,9 @@ const OrdemDeServico = () => {
     toast.success("PDF da ordem de serviço gerado.");
   };
 
-  const baixar = () => {
-    const n = garantirNumero();
+  const baixar = async () => {
+    const n = await garantirNumero();
+    if (!n) return;
     const conteudo = resumo.replace(/^Ordem de serviço.*$/m, `Ordem de serviço ${n}`);
     const blob = new Blob([conteudo], { type: "text/plain;charset=utf-8" });
     const url = URL.createObjectURL(blob);
@@ -216,8 +253,9 @@ const OrdemDeServico = () => {
     URL.revokeObjectURL(url);
   };
 
-  const enviar = () => {
-    const n = garantirNumero();
+  const enviar = async () => {
+    const n = await garantirNumero();
+    if (!n) return;
     trackCTAClick("whatsapp", "ordem-de-servico");
     window.dispatchEvent(
       new CustomEvent("wa-funnel:open", {
@@ -227,6 +265,7 @@ const OrdemDeServico = () => {
         },
       }),
     );
+
   };
 
   return (
@@ -272,11 +311,17 @@ const OrdemDeServico = () => {
           </div>
           <div className="grid gap-2">
             <Label htmlFor="os-modalidade">Modalidade de atendimento</Label>
+            <p className="text-sm leading-relaxed text-muted-foreground" data-testid="os-classificacao">
+              {MOTIVO_CLASSIFICACAO[tipo]}
+            </p>
             <select
               id="os-modalidade"
               className="h-10 rounded-md border border-input bg-background px-3 text-sm text-foreground"
               value={form.modalidadeId}
-              onChange={(e) => set("modalidadeId")(e.target.value)}
+              onChange={(e) => {
+                setModalidadeTocada(true);
+                set("modalidadeId")(e.target.value);
+              }}
             >
               {MODALIDADES.map((m) => (
                 <option key={m.id} value={m.id}>
@@ -310,10 +355,10 @@ const OrdemDeServico = () => {
           </div>
 
           <div className="flex flex-wrap gap-3">
-            <Button onClick={gerar} disabled={!pronta} variant="secondary">
-              Gerar ordem de serviço
+            <Button onClick={gerar} disabled={!pronta || salvando} variant="secondary">
+              {salvando ? "Registrando..." : "Gerar ordem de serviço"}
             </Button>
-            <Button onClick={enviar} disabled={!pronta} data-cta-location="ordem-de-servico">
+            <Button onClick={enviar} disabled={!pronta || salvando} data-cta-location="ordem-de-servico">
               Enviar esta ordem no WhatsApp
             </Button>
             {numero ? (
@@ -340,10 +385,52 @@ const OrdemDeServico = () => {
         {numero ? (
           <section className="mt-10 rounded-xl border border-border bg-card p-6" data-testid="os-documento">
             <h2 className="font-heading text-xl font-semibold text-foreground">Registro {numero}</h2>
+            <p className="mt-2 text-sm text-muted-foreground">
+              Guarde este código. Você pode consultar esta ordem a qualquer momento em{" "}
+              <Link
+                to="/ordem-de-servico/$protocolo"
+                params={{ protocolo: numero.toLowerCase() }}
+                className="text-foreground underline underline-offset-4"
+              >
+                /ordem-de-servico/{numero}
+              </Link>
+              .
+            </p>
             <pre className="mt-4 whitespace-pre-wrap font-sans text-sm text-muted-foreground">{resumo}</pre>
+            <TermosOsView tipo={tipo} protocolo={numero} />
             <p className="mt-4 text-xs text-muted-foreground">{REGRA_CANCELAMENTO}</p>
           </section>
         ) : null}
+
+        <section className="mt-12 rounded-xl border border-border bg-muted/30 p-6">
+          <h2 className="font-heading text-xl font-semibold text-foreground">Consultar uma ordem existente</h2>
+          <p className="mt-2 text-sm text-muted-foreground">
+            Informe o código recebido (formato OS-AAAAMMDD-XXXX) para ver os dados e os termos aplicáveis.
+          </p>
+          <form
+            className="mt-4 flex flex-col gap-3 sm:flex-row"
+            onSubmit={(e) => {
+              e.preventDefault();
+              const codigo = consulta.trim().toUpperCase();
+              if (!/^OS-\d{8}-[A-Z0-9]{4}$/.test(codigo)) {
+                toast.error("Código inválido. Confira o formato OS-AAAAMMDD-XXXX.");
+                return;
+              }
+              window.location.assign(`/ordem-de-servico/${codigo.toLowerCase()}`);
+            }}
+          >
+            <Input
+              aria-label="Código da ordem de serviço"
+              value={consulta}
+              onChange={(e) => setConsulta(e.target.value)}
+              placeholder="OS-20260908-A1B2"
+            />
+            <Button type="submit" variant="outline">
+              Consultar
+            </Button>
+          </form>
+        </section>
+
       </main>
     </div>
   );
