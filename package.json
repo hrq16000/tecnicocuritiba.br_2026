@@ -267,7 +267,10 @@
     "report:interlink-playbook": "node scripts/generate-interlink-playbook.mjs dist",
     "check:interlink-playbook:gate": "node scripts/generate-interlink-playbook.mjs dist --gate",
     "check:post-consolidation": "node scripts/check-post-consolidation.mjs dist",
-    "check:post-consolidation:live": "node scripts/check-post-consolidation.mjs --live https://tecnico.curitiba.br"
+    "check:post-consolidation:live": "node scripts/check-post-consolidation.mjs --live https://tecnico.curitiba.br",
+    "snapshot:marco": "node scripts/snapshot-marco.mjs",
+    "monitor:operacao": "node scripts/monitor-operational-alerts.mjs",
+    "monitor:operacao:notify": "node scripts/monitor-operational-alerts.mjs --notify"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

@@ -1,0 +1,254 @@
+{
+  "marcos": [
+    {
+      "marco": "D0",
+      "registradoEm": "2026-08-25T01:44:52.193Z",
+      "nota": "baseline pós-deploy operacional",
+      "deploymentId": null,
+      "commit": null,
+      "denominador": {
+        "curadas": 170,
+        "observacao": "Percentuais deste marco usam o conjunto curado atual; não são comparáveis com denominadores anteriores (170 URLs) sem conversão explícita."
+      },
+      "google": {
+        "indexed": 22,
+        "unknown": 85,
+        "discovered": 59,
+        "crawled_not_indexed": 0,
+        "duplicate": 0,
+        "redirect": 0,
+        "soft_404": 0,
+        "canonical_different": 0,
+        "outros": 4,
+        "impressoes28d": 473,
+        "cliques28d": 6,
+        "ctr28d": 1.27,
+        "posicaoMedia28d": 18.28,
+        "erro": null
+      },
+      "clusters": [
+        {
+          "chave": "SERVICO_BAIRRO",
+          "total": 59,
+          "indexadas": 3,
+          "unknown": 28,
+          "discovered": 28,
+          "crawledNaoIndexadas": 0,
+          "taxaIndexacao": 5.1,
+          "impressoes": 9,
+          "cliques": 1,
+          "posicaoMedia": 15.33
+        },
+        {
+          "chave": "PROBLEMA",
+          "total": 36,
+          "indexadas": 2,
+          "unknown": 20,
+          "discovered": 14,
+          "crawledNaoIndexadas": 0,
+          "taxaIndexacao": 5.6,
+          "impressoes": 2,
+          "cliques": 0,
+          "posicaoMedia": 26
+        },
+        {
+          "chave": "BAIRRO",
+          "total": 26,
+          "indexadas": 3,
+          "unknown": 12,
+          "discovered": 9,
+          "crawledNaoIndexadas": 0,
+          "taxaIndexacao": 11.5,
+          "impressoes": 41,
+          "cliques": 0,
+          "posicaoMedia": 8.24
+        },
+        {
+          "chave": "SERVICO",
+          "total": 15,
+          "indexadas": 4,
+          "unknown": 9,
+          "discovered": 2,
+          "crawledNaoIndexadas": 0,
+          "taxaIndexacao": 26.7,
+          "impressoes": 113,
+          "cliques": 2,
+          "posicaoMedia": 22.41
+        },
+        {
+          "chave": "INSTITUCIONAL",
+          "total": 13,
+          "indexadas": 3,
+          "unknown": 9,
+          "discovered": 1,
+          "crawledNaoIndexadas": 0,
+          "taxaIndexacao": 23.1,
+          "impressoes": 98,
+          "cliques": 0,
+          "posicaoMedia": 18.5
+        },
+        {
+          "chave": "CIDADE",
+          "total": 11,
+          "indexadas": 4,
+          "unknown": 4,
+          "discovered": 2,
+          "crawledNaoIndexadas": 0,
+          "taxaIndexacao": 36.4,
+          "impressoes": 157,
+          "cliques": 2,
+          "posicaoMedia": 11.13
+        },
+        {
+          "chave": "HUB",
+          "total": 5,
+          "indexadas": 2,
+          "unknown": 1,
+          "discovered": 2,
+          "crawledNaoIndexadas": 0,
+          "taxaIndexacao": 40,
+          "impressoes": 30,
+          "cliques": 0,
+          "posicaoMedia": 58.9
+        },
+        {
+          "chave": "ARTIGO",
+          "total": 2,
+          "indexadas": 0,
+          "unknown": 1,
+          "discovered": 1,
+          "crawledNaoIndexadas": 0,
+          "taxaIndexacao": 0,
+          "impressoes": 0,
+          "cliques": 0,
+          "posicaoMedia": null
+        },
+        {
+          "chave": "HOME",
+          "total": 1,
+          "indexadas": 1,
+          "unknown": 0,
+          "discovered": 0,
+          "crawledNaoIndexadas": 0,
+          "taxaIndexacao": 100,
+          "impressoes": 23,
+          "cliques": 1,
+          "posicaoMedia": 11.17
+        },
+        {
+          "chave": "BLOG_HUB",
+          "total": 1,
+          "indexadas": 0,
+          "unknown": 0,
+          "discovered": 0,
+          "crawledNaoIndexadas": 0,
+          "taxaIndexacao": 0,
+          "impressoes": 0,
+          "cliques": 0,
+          "posicaoMedia": null
+        },
+        {
+          "chave": "EQUIPAMENTO",
+          "total": 1,
+          "indexadas": 0,
+          "unknown": 1,
+          "discovered": 0,
+          "crawledNaoIndexadas": 0,
+          "taxaIndexacao": 0,
+          "impressoes": 0,
+          "cliques": 0,
+          "posicaoMedia": null
+        }
+      ],
+      "tiers": [
+        {
+          "chave": "B",
+          "total": 69,
+          "indexadas": 2,
+          "unknown": 37,
+          "discovered": 27,
+          "crawledNaoIndexadas": 0,
+          "taxaIndexacao": 2.9,
+          "impressoes": 2,
+          "cliques": 0,
+          "posicaoMedia": 26
+        },
+        {
+          "chave": "C",
+          "total": 58,
+          "indexadas": 2,
+          "unknown": 28,
+          "discovered": 28,
+          "crawledNaoIndexadas": 0,
+          "taxaIndexacao": 3.4,
+          "impressoes": 0,
+          "cliques": 0,
+          "posicaoMedia": null
+        },
+        {
+          "chave": "A",
+          "total": 31,
+          "indexadas": 18,
+          "unknown": 9,
+          "discovered": 3,
+          "crawledNaoIndexadas": 0,
+          "taxaIndexacao": 58.1,
+          "impressoes": 471,
+          "cliques": 6,
+          "posicaoMedia": 18.24
+        },
+        {
+          "chave": "D",
+          "total": 12,
+          "indexadas": 0,
+          "unknown": 11,
+          "discovered": 1,
+          "crawledNaoIndexadas": 0,
+          "taxaIndexacao": 0,
+          "impressoes": 0,
+          "cliques": 0,
+          "posicaoMedia": null
+        }
+      ],
+      "qualidade": null,
+      "doorway": {
+        "alto": 2,
+        "medio": 16,
+        "baixo": 32
+      },
+      "grafo": {
+        "urls": 130,
+        "orfas": 0,
+        "subLinkadas": 32,
+        "linksParaRedirect": 0
+      },
+      "consolidacao": {
+        "total": 40,
+        "pass": 40,
+        "falhas": 0
+      },
+      "entidade": {
+        "problemas": 0,
+        "urls": null
+      },
+      "sitemap": {
+        "total": 170,
+        "bloqueadas": 0
+      },
+      "indexnow": {
+        "executadoEm": "2026-08-25T01:36:20.032Z",
+        "eligible": 130,
+        "submitted": 0,
+        "accepted": 0,
+        "failed": 0
+      },
+      "bing": null,
+      "serpSignals": {
+        "geradoEm": "2026-08-25T01:34:00.526Z",
+        "urls": 0
+      },
+      "serpSnapshot": "reports/serp-signals-d0.json"
+    }
+  ],
+  "atualizadoEm": "2026-08-25T01:44:52.197Z"
+}
