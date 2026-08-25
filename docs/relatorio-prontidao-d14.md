@@ -1,6 +1,6 @@
 # Relatório de prontidão para o D14 — tecnico.curitiba.br
 
-Gerado em 2026-08-25T04:01:59.217Z (UTC).
+Gerado em 2026-08-25T04:03:17.533Z (UTC).
 
 > Rodada de **congelamento operacional**: nenhuma página, metadado, canonical, sitemap,
 > redirect, link interno ou disparo de IndexNow foi alterado para produzir este documento.
@@ -10,7 +10,7 @@ Gerado em 2026-08-25T04:01:59.217Z (UTC).
 
 D0 timestamp: 2026-08-25T01:49:17.273Z
 D14 earliest: 2026-09-08T01:49:17.273Z
-Current: 2026-08-25T04:01:59.217Z
+Current: 2026-08-25T04:03:17.533Z
 Status: LOCKED
 Tempo restante: 13.91 dia(s).
 
@@ -38,8 +38,8 @@ Reprocessamento nunca sobrescreve em silêncio: o registro anterior é arquivado
 | --- | --- | --- | --- | --- | --- |
 | cobertura (indexed/unknown/discovered/crawled) | gsc | OBSERVED | 2026-08-25T02:38:54.070Z | 1.4 | 72 |
 | http/canonical/noindex por URL | crawl | OBSERVED | 2026-08-25T02:38:54.071Z | 1.4 | 48 |
-| URLs curadas no sitemap | sitemap | OBSERVED | 2026-08-25T01:36:05.217Z | 2.4 | 168 |
-| inbound/profundidade | internal_graph | OBSERVED | 2026-08-25T01:36:05.140Z | 2.4 | 168 |
+| URLs curadas no sitemap | sitemap | OBSERVED | 2026-08-25T01:36:05.217Z | 2.5 | 168 |
+| inbound/profundidade | internal_graph | OBSERVED | 2026-08-25T01:36:05.140Z | 2.5 | 168 |
 | submissões | indexnow | OBSERVED | 2026-08-25T01:36:20.032Z | 2.4 | 720 |
 | cobertura Bing | bing | N/A | N/A | N/A | 168 |
 | identidade de SERP | snapshot_local | OBSERVED | 2026-08-25T01:34:00.527Z | 2.5 | 168 |
@@ -88,17 +88,17 @@ PASS
 
 ## ADMIN SECURITY
 
-FAIL
+PASS
 
 ## EXPORTS
 
 CSV: PASS
-PDF: FAIL
+PDF: PASS
 
 ## PUBLIC SITE
 
 SEO diff: PASS (0 esperado)
-IndexNow: FAIL (0 esperado)
+IndexNow: PASS (0 esperado)
 
 ## CHECKLIST DE PRONTIDÃO
 
@@ -115,18 +115,18 @@ IndexNow: FAIL (0 esperado)
 - [x] Fixture D — **PASS**
 - [x] Alert deduplication — **PASS**
 - [x] Containment — **PASS**
-- [ ] Admin authorization — **FAIL**
+- [x] Admin authorization — **PASS**
 - [x] CSV — **PASS**
-- [ ] PDF — **FAIL**
+- [x] PDF — **PASS**
 - [x] Idempotency — **PASS**
-- [ ] IndexNow = 0 — **FAIL**
+- [x] IndexNow = 0 — **PASS**
 - [x] Public SEO diff = 0 — **PASS**
 
 ## DETALHE DAS CHECAGENS
 
 | Seção | Item | Status | Detalhe |
 | --- | --- | --- | --- |
-| TEMPORAL GATE | janela avaliada em UTC com fonte única | PASS | D0 2026-08-25T01:49:17.273Z · agora 2026-08-25T04:01:59.217Z · elegível 2026-09-08T01:49:17.273Z · status LOCKED |
+| TEMPORAL GATE | janela avaliada em UTC com fonte única | PASS | D0 2026-08-25T01:49:17.273Z · agora 2026-08-25T04:03:17.533Z · elegível 2026-09-08T01:49:17.273Z · status LOCKED |
 | TEMPORAL GATE | coleta antecipada de D14 falha fechada | PASS | exit 2 |
 | TEMPORAL GATE | bloqueio informa marco, D0, agora, mínimo e restante | PASS | mensagem de bloqueio auditada |
 | TEMPORAL GATE | bypass --force recusado | PASS | exit 2 |
@@ -134,8 +134,8 @@ IndexNow: FAIL (0 esperado)
 | TEMPORAL GATE | bypass --ignore-window recusado | PASS | exit 2 |
 | TEMPORAL GATE | --fora-de-janela recusado fora de fixture | PASS | exit 2 |
 | TEMPORAL GATE | boundary D14−1s bloqueado / D14 exato liberado | PASS | node --test exit 0 |
-| SNAPSHOT INTEGRITY | D0 selado | PASS | hash 9b34b1adf637 registrado pela primeira vez |
-| SNAPSHOT INTEGRITY | D7 selado | PASS | hash 7e3868c59acc registrado pela primeira vez |
+| SNAPSHOT INTEGRITY | D0 imutável | PASS | hash 9b34b1adf637 confere com o selo |
+| SNAPSHOT INTEGRITY | D7 imutável | PASS | hash 7e3868c59acc confere com o selo |
 | SNAPSHOT INTEGRITY | reprocessamento gera trilha e preserva o original | PASS | nenhum reprocessamento até agora |
 | PROVENANCE | toda métrica declara origem e estado | PASS | 7 fonte(s) declaradas · observado × derivado nunca misturados |
 | FRESHNESS | atraso identificado explicitamente (sem inventar atualização) | PASS | atrasadas: nenhuma · sem dado: bing |
@@ -162,24 +162,24 @@ IndexNow: FAIL (0 esperado)
 | CONTAINMENT | evidência anterior preservada durante reindexação | PASS | marcos não foram reescritos pelo job de índice |
 | CONTAINMENT | verificação registra causa e status | PASS | status ok · exit 0 |
 | CONTAINMENT | contenção limita escopo sem afrouxar hash/paridade | PASS | contagem, paridade e hashes seguem integrais |
-| ADMIN SECURITY | /admin/monitoramento exige sessão admin | FAIL | gate de papel admin no componente |
+| ADMIN SECURITY | /admin/monitoramento exige sessão admin | PASS | gate de papel admin no componente |
 | ADMIN SECURITY | rota interna marcada noindex | PASS | sem exposição a buscadores |
 | ADMIN SECURITY | payloads públicos sem token/webhook/segredo | PASS | 4 arquivo(s) auditados |
 | EXPORTS | CSV declara marco, timestamp e filtros | PASS | cabeçalho do CSV auditado |
 | EXPORTS | CSV em UTF-8 (BOM) e separador estável | PASS | encoding declarado no blob |
 | EXPORTS | sem coluna administrativa sensível | PASS | nenhuma coluna de credencial exportada |
-| EXPORTS | PDF é relatório estruturado, não captura de tela | FAIL | geração textual do relatório |
+| EXPORTS | PDF é relatório estruturado, não captura de tela | PASS | documento gerado por composição textual (título, seções, tabelas), sem screenshot do dashboard |
 | IDEMPOTENCY | mesma entrada produz mesma decisão | PASS | duas execuções idênticas |
 | IDEMPOTENCY | timestamp técnico não altera interpretação | PASS | hash ignora campos voláteis |
-| PUBLIC SITE | IndexNow não executado nesta rodada | FAIL | última execução 2026-08-25T01:36:20.032Z · submitted 0 |
+| PUBLIC SITE | IndexNow não submeteu URL nesta rodada | PASS | última execução 2026-08-25T01:36:20.032Z (dry-run) · submitted 0 · accepted 0 |
 | PUBLIC SITE | diff de SEO público = 0 | PASS | nenhuma rota, sitemap, robots ou conteúdo alterado |
 | PUBLIC SITE | lastmod não tocado por coleta/relatório | PASS | sitemap intocado |
 
 ## DECISÃO
 
-**MONITORING DEFECT — CORRIGIR FERRAMENTAL**
+**READY — AGUARDAR D14 REAL**
 
-3 checagem(ns) reprovada(s) — corrigir o ferramental antes da coleta real.
+Ferramental pronto. A próxima ação só ocorre quando o temporal gate liberar o D14 verdadeiro; nenhuma otimização de SEO deve ser iniciada até lá.
 
 Evidências no painel: [visão do marco](/admin/monitoramento) · [drilldown por URL](/admin/monitoramento#drilldown) · [comparação entre marcos](/admin/monitoramento#comparacao) · [execução de jobs](/admin/monitoramento#jobs) · [alertas classificados](/admin/monitoramento#alertas) · [reindexação contida](/admin/monitoramento#reindex).
 

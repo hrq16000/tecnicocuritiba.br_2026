@@ -1,7 +1,7 @@
 {
-  "geradoEm": "2026-08-25T04:01:59.958Z",
+  "geradoEm": "2026-08-25T04:03:18.246Z",
   "verificacao": {
-    "executadoEm": "2026-08-25T04:01:59.958Z",
+    "executadoEm": "2026-08-25T04:03:18.246Z",
     "marcos": [
       "D0",
       "D7"
@@ -16,21 +16,21 @@
       "ok": true,
       "itens": [
         {
-          "path": ".lovable/memory/features/governanca-originalidade-ondas.md",
+          "path": ".lovable/memory/features/whatsapp-funnel-v2.md",
           "tipo": "memoria",
-          "hash": "903ef2ddb45b6872b886e2e5b585080ae6ee0bda",
+          "hash": "a2eaa262ac2f0bda1fd189c207c6d7c87f73b3ed",
           "conferido": true
         },
         {
-          "path": "reports/serp-signals-d7.json",
-          "tipo": "marco-serp",
-          "hash": "156332cde9ee5804fb7428840bc41286da4bca69",
+          "path": ".lovable/memory/features/ambiente-local-offline.md",
+          "tipo": "memoria",
+          "hash": "ca521b7ddd66b2a9eba2fd59ae999fee026d31e1",
           "conferido": true
         },
         {
-          "path": ".lovable/memory/index.md",
-          "tipo": "memoria",
-          "hash": "b11f626bef478e7764aa89648854fdd609b04304",
+          "path": "reports/operacao-marcos.json",
+          "tipo": "historico",
+          "hash": "6fc1aa5a3ea89d7a4a855066a06b3ff02395606a",
           "conferido": true
         }
       ]

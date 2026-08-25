@@ -1,6 +1,45 @@
 {
   "execucoes": [
     {
+      "id": "reindex:snapshots-1787630598255",
+      "job": "reindex:snapshots",
+      "marco": "D7",
+      "executadoEm": "2026-08-25T04:03:18.255Z",
+      "duracaoMs": 20,
+      "status": "aviso",
+      "failClosed": true,
+      "contagens": {
+        "artefatos": 15,
+        "memorias": 9,
+        "urlsCuradas": 130,
+        "amostrasConferidas": 3
+      },
+      "logs": [
+        "marcos: D0, D7",
+        "amostra ok · .lovable/memory/features/whatsapp-funnel-v2.md",
+        "amostra ok · .lovable/memory/features/ambiente-local-offline.md",
+        "amostra ok · reports/operacao-marcos.json",
+        "aviso · D0: snapshot de queries ausente (N/A — sem coleta GSC de queries neste marco)",
+        "aviso · D7: snapshot de queries ausente (N/A — sem coleta GSC de queries neste marco)"
+      ]
+    },
+    {
+      "id": "snapshot:marco-1787630597605",
+      "job": "snapshot:marco",
+      "marco": "D14",
+      "executadoEm": "2026-08-25T04:03:17.605Z",
+      "duracaoMs": 9,
+      "status": "falhou",
+      "failClosed": true,
+      "contagens": {
+        "diasDesdeD0": 0.09,
+        "minimoDias": 14
+      },
+      "logs": [
+        "bloqueio de janela · apenas 0.09 dia(s) desde o D0 (2026-08-25T01:49:17.273Z); D14 exige 14 dia(s) — elegível a partir de 2026-09-08T01:49:17.273Z"
+      ]
+    },
+    {
       "id": "reindex:snapshots-1787630519964",
       "job": "reindex:snapshots",
       "marco": "D7",
@@ -127,5 +166,5 @@
       ]
     }
   ],
-  "atualizadoEm": "2026-08-25T04:01:59.964Z"
+  "atualizadoEm": "2026-08-25T04:03:18.255Z"
 }

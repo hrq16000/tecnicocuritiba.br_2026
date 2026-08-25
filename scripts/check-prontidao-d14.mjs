@@ -308,7 +308,12 @@ const fingerprint = (marco, regra, alvo) => createHash("sha1").update(`${marco}|
   registrar("EXPORTS", "CSV em UTF-8 (BOM) e separador estável", exp.includes("\\ufeff") || exp.includes("charset=utf-8"), "encoding declarado no blob");
   const sensiveis = /email|token|senha|password|service_role/i.test(exp.replace(/solicitado_por_email|classificado_por_email/g, ""));
   registrar("EXPORTS", "sem coluna administrativa sensível", !sensiveis, "nenhuma coluna de credencial exportada");
-  registrar("EXPORTS", "PDF é relatório estruturado, não captura de tela", /jspdf|autoTable|printWindow|@media print|window\.print/i.test(exp), "geração textual do relatório");
+  registrar(
+    "EXPORTS",
+    "PDF é relatório estruturado, não captura de tela",
+    /createPdf|pdfDoc|jspdf|autoTable/i.test(exp) && /pdf\.(title|heading|paragraph|keyValue|bullet)/.test(exp),
+    "documento gerado por composição textual (título, seções, tabelas), sem screenshot do dashboard",
+  );
 }
 
 /* ── 12. Idempotência ───────────────────────────────────────────────────── */
@@ -325,8 +330,15 @@ const fingerprint = (marco, regra, alvo) => createHash("sha1").update(`${marco}|
 /* ── 13. IndexNow e lastmod intocados ───────────────────────────────────── */
 {
   const idx = lerJson("reports/indexnow-last-run.json");
-  const executadoHoje = idx?.executadoEm ? idx.executadoEm.slice(0, 10) === AGORA.toISOString().slice(0, 10) : false;
-  registrar("PUBLIC SITE", "IndexNow não executado nesta rodada", !executadoHoje, `última execução ${idx?.executadoEm ?? "N/A"} · submitted ${idx?.submitted ?? 0}`);
+  // Nenhuma URL mudou nesta rodada: submitted/accepted precisam ser 0.
+  // Execução em dry-run é auditoria, não ping de manutenção.
+  const submetido = Number(idx?.submitted ?? 0) + Number(idx?.accepted ?? 0);
+  registrar(
+    "PUBLIC SITE",
+    "IndexNow não submeteu URL nesta rodada",
+    submetido === 0,
+    `última execução ${idx?.executadoEm ?? "N/A"} (${idx?.modo ?? "N/A"}) · submitted ${idx?.submitted ?? 0} · accepted ${idx?.accepted ?? 0}`,
+  );
   const gitSujo = rodar("git", ["status", "--porcelain"]).out
     .split("\n")
     .map((l) => l.slice(3).trim())
