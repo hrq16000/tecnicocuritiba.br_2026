@@ -66,6 +66,8 @@ const relatorio = {
 
 mkdirSync(path.dirname(OUT), { recursive: true });
 writeFileSync(OUT, `${JSON.stringify(relatorio, null, 2)}\n`);
+// Espelho consumido pelo painel /admin/monitoramento.
+writeFileSync(path.resolve("public/freeze-v2-drift.json"), `${JSON.stringify(relatorio, null, 2)}\n`);
 
 console.log(`FREEZE_V2 ${freeze.selo.slice(0, 12)}… selado em ${freeze.seladoEm}`);
 for (const [classe, n] of Object.entries(porClasse)) console.log(`  ${classe.padEnd(28)} ${n}`);
