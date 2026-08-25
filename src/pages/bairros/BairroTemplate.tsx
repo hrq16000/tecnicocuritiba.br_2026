@@ -506,6 +506,10 @@ export const BairroTemplate = ({ data }: BairroTemplateProps) => {
         </AnimatedSection>
 
         <AnimatedSection>
+          <BairroInterlinkLocal slug={data.slug} nome={data.nome} />
+        </AnimatedSection>
+
+        <AnimatedSection>
           <ServiceLocalLinks currentCity={data.cidade} currentNeighborhood={data.nome} />
         </AnimatedSection>
 
