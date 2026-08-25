@@ -1,17 +1,18 @@
 {
   "schema": "freeze-v2-drift/1.0",
-  "verificadoEm": "2026-08-25T06:45:21.366Z",
+  "verificadoEm": "2026-08-25T06:46:00.341Z",
   "freezeSelo": "fb95e1e4d676e89de141409aa4103218fc2a504c979f8278f62fe16e9da9d979",
   "freezeSeladoEm": "2026-08-25T06:09:07.486Z",
-  "totalDiffs": 45,
+  "totalDiffs": 46,
   "porClasse": {
-    "CI_CHANGE": 7,
+    "CI_CHANGE": 8,
     "OBSERVABILITY_CHANGE": 8,
-    "PUBLIC_CHANGE": 28,
-    "ADMIN_CHANGE": 2
+    "PUBLIC_CHANGE": 4,
+    "ADMIN_CHANGE": 2,
+    "NON_CURATED_PUBLIC_CHANGE": 24
   },
-  "publicChangeTotal": 28,
-  "publicChangeNaoRegistrado": 28,
+  "publicChangeTotal": 4,
+  "publicChangeNaoRegistrado": 4,
   "alerta": "PRE_D14_PUBLIC_INTERVENTION_DETECTED",
   "exigido": [
     "intervention event",
@@ -84,6 +85,11 @@
       "classe": "CI_CHANGE"
     },
     {
+      "arquivo": "scripts/lib/superficie-publica.mjs",
+      "tipo": "ALTERADO",
+      "classe": "CI_CHANGE"
+    },
+    {
       "arquivo": "scripts/report-fila-enriquecimento.mjs",
       "tipo": "ADICIONADO",
       "classe": "CI_CHANGE"
@@ -116,62 +122,62 @@
     {
       "arquivo": "src/pages/bairros/AltoDaXV.tsx",
       "tipo": "ADICIONADO",
-      "classe": "PUBLIC_CHANGE"
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     {
       "arquivo": "src/pages/bairros/AtubaCuritiba.tsx",
       "tipo": "ADICIONADO",
-      "classe": "PUBLIC_CHANGE"
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     {
       "arquivo": "src/pages/bairros/BairroAlto.tsx",
       "tipo": "ADICIONADO",
-      "classe": "PUBLIC_CHANGE"
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     {
       "arquivo": "src/pages/bairros/Butiatuvinha.tsx",
       "tipo": "ADICIONADO",
-      "classe": "PUBLIC_CHANGE"
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     {
       "arquivo": "src/pages/bairros/CampinaDoSiqueira.tsx",
       "tipo": "ADICIONADO",
-      "classe": "PUBLIC_CHANGE"
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     {
       "arquivo": "src/pages/bairros/CentroCivico.tsx",
       "tipo": "ADICIONADO",
-      "classe": "PUBLIC_CHANGE"
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     {
       "arquivo": "src/pages/bairros/Fanny.tsx",
       "tipo": "ADICIONADO",
-      "classe": "PUBLIC_CHANGE"
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     {
       "arquivo": "src/pages/bairros/Guabirotuba.tsx",
       "tipo": "ADICIONADO",
-      "classe": "PUBLIC_CHANGE"
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     {
       "arquivo": "src/pages/bairros/Lindoia.tsx",
       "tipo": "ADICIONADO",
-      "classe": "PUBLIC_CHANGE"
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     {
       "arquivo": "src/pages/bairros/PradoVelho.tsx",
       "tipo": "ADICIONADO",
-      "classe": "PUBLIC_CHANGE"
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     {
       "arquivo": "src/pages/bairros/SantaQuiteria.tsx",
       "tipo": "ADICIONADO",
-      "classe": "PUBLIC_CHANGE"
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     {
       "arquivo": "src/pages/bairros/VistaAlegre.tsx",
       "tipo": "ADICIONADO",
-      "classe": "PUBLIC_CHANGE"
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     {
       "arquivo": "src/routeTree.gen.ts",
@@ -181,62 +187,62 @@
     {
       "arquivo": "src/routes/bairros.alto-da-xv.tsx",
       "tipo": "ADICIONADO",
-      "classe": "PUBLIC_CHANGE"
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     {
       "arquivo": "src/routes/bairros.atuba.tsx",
       "tipo": "ADICIONADO",
-      "classe": "PUBLIC_CHANGE"
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     {
       "arquivo": "src/routes/bairros.bairro-alto.tsx",
       "tipo": "ADICIONADO",
-      "classe": "PUBLIC_CHANGE"
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     {
       "arquivo": "src/routes/bairros.butiatuvinha.tsx",
       "tipo": "ADICIONADO",
-      "classe": "PUBLIC_CHANGE"
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     {
       "arquivo": "src/routes/bairros.campina-do-siqueira.tsx",
       "tipo": "ADICIONADO",
-      "classe": "PUBLIC_CHANGE"
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     {
       "arquivo": "src/routes/bairros.centro-civico.tsx",
       "tipo": "ADICIONADO",
-      "classe": "PUBLIC_CHANGE"
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     {
       "arquivo": "src/routes/bairros.fanny.tsx",
       "tipo": "ADICIONADO",
-      "classe": "PUBLIC_CHANGE"
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     {
       "arquivo": "src/routes/bairros.guabirotuba.tsx",
       "tipo": "ADICIONADO",
-      "classe": "PUBLIC_CHANGE"
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     {
       "arquivo": "src/routes/bairros.lindoia.tsx",
       "tipo": "ADICIONADO",
-      "classe": "PUBLIC_CHANGE"
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     {
       "arquivo": "src/routes/bairros.prado-velho.tsx",
       "tipo": "ADICIONADO",
-      "classe": "PUBLIC_CHANGE"
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     {
       "arquivo": "src/routes/bairros.santa-quiteria.tsx",
       "tipo": "ADICIONADO",
-      "classe": "PUBLIC_CHANGE"
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     {
       "arquivo": "src/routes/bairros.vista-alegre.tsx",
       "tipo": "ADICIONADO",
-      "classe": "PUBLIC_CHANGE"
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     {
       "arquivo": "src/routes/problemas.tv-sem-som.tsx",
