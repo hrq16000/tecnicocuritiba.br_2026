@@ -136,6 +136,30 @@ const registro = {
   },
   clusters: agrupar("cluster"),
   tiers: agrupar("tier"),
+  // Estado por URL congelado no marco — base do drilldown e das transições
+  // entre marcos em /admin/monitoramento. Sem estimativa: campo ausente = null.
+  urls: urls.map((u) => ({
+    path: u.path,
+    cluster: u.cluster ?? null,
+    tier: u.tier ?? null,
+    estado: bucket(u),
+    gscStatus: u.gscStatus ?? null,
+    gscCoverage: u.gscCoverage ?? null,
+    lastCrawl: u.lastCrawl ?? null,
+    canonical: u.canonical ?? null,
+    canonicalSelf: u.canonicalSelf ?? null,
+    googleCanonical: u.googleCanonical ?? null,
+    http: u.http ?? null,
+    ttfbMs: u.ttfbMs ?? null,
+    noindex: u.noindex ?? null,
+    inbound: u.inbound ?? null,
+    inboundContextual: u.inboundContextual ?? null,
+    depth: u.depth ?? null,
+    lastmod: u.lastmod ?? null,
+    impressions: u.impressions ?? 0,
+    clicks: u.clicks ?? 0,
+    position: typeof u.position === "number" ? u.position : null,
+  })),
   qualidade: faixas ? { faixas, piso: qualidade?.piso ?? null } : null,
   doorway: qualidade?.resumo
     ? {
