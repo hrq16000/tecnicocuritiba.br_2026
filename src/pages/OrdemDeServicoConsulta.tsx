@@ -4,7 +4,7 @@ import { useParams, Link } from "@tanstack/react-router";
 import { PageSEO } from "@/components/PageSEO";
 import { Button } from "@/components/ui/button";
 import { TermosOsView } from "@/components/os/TermosOsView";
-import { consultarOs, type OsPublica } from "@/lib/os/os.functions";
+import { consultarOs, OS_ERRO_LIMITE, type OsPublica } from "@/lib/os/os.functions";
 import { mensagemWhatsAppOs } from "@/lib/os/termosOs";
 import { trackCTAClick } from "@/lib/analytics";
 import { MODALIDADES } from "@/lib/precosConfig";
