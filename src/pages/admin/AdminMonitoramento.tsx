@@ -624,6 +624,10 @@ export default function AdminMonitoramento() {
 
             <DiffSnapshots />
 
+            <ComparacaoMarcos marcos={marcos} />
+
+            <ExportarMarco marcos={marcos} />
+
             <JobRuns />
 
             <QuickWinsBacklog
