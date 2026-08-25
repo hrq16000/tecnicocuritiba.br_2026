@@ -433,6 +433,7 @@ import { Route as ServicosRemocaoDeVirusRouteImport } from './routes/servicos.re
 import { Route as ServicosSuporteHomeOfficeRouteImport } from './routes/servicos.suporte-home-office'
 import { Route as ServicosSuporteTecnicoEmpresarialRouteImport } from './routes/servicos.suporte-tecnico-empresarial'
 import { Route as ServicosUpgradeSsdRamRouteImport } from './routes/servicos.upgrade-ssd-ram'
+import { Route as AdminOrdensNovaRouteImport } from './routes/admin.ordens.nova'
 import { Route as ServicosServicoCidadeRouteImport } from './routes/servicos.$servico.$cidade'
 import { Route as ServicosBackupRecuperacaoIndexRouteImport } from './routes/servicos.backup-recuperacao.index'
 import { Route as ServicosBackupRecuperacaoCentroRouteImport } from './routes/servicos.backup-recuperacao.centro'
@@ -2760,6 +2761,11 @@ const ServicosUpgradeSsdRamRoute = ServicosUpgradeSsdRamRouteImport.update({
   path: '/servicos/upgrade-ssd-ram',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AdminOrdensNovaRoute = AdminOrdensNovaRouteImport.update({
+  id: '/nova',
+  path: '/nova',
+  getParentRoute: () => AdminOrdensRoute,
+} as any)
 const ServicosServicoCidadeRoute = ServicosServicoCidadeRouteImport.update({
   id: '/servicos/$servico/$cidade',
   path: '/servicos/$servico/$cidade',
@@ -3292,7 +3298,7 @@ export interface FileRoutesByFullPath {
   '/admin/login': typeof AdminLoginRoute
   '/admin/monitoramento': typeof AdminMonitoramentoRoute
   '/admin/operacao': typeof AdminOperacaoRoute
-  '/admin/ordens': typeof AdminOrdensRoute
+  '/admin/ordens': typeof AdminOrdensRouteWithChildren
   '/admin/provas-monitor': typeof AdminProvasMonitorRoute
   '/admin/provas-verticais': typeof AdminProvasVerticaisRoute
   '/admin/publicacao': typeof AdminPublicacaoRoute
@@ -3619,6 +3625,7 @@ export interface FileRoutesByFullPath {
   '/parceiros/': typeof ParceirosIndexRoute
   '/problemas/': typeof ProblemasIndexRoute
   '/servicos/': typeof ServicosIndexRoute
+  '/admin/ordens/nova': typeof AdminOrdensNovaRoute
   '/servicos/$servico/$cidade': typeof ServicosServicoCidadeRoute
   '/servicos/backup-recuperacao/centro': typeof ServicosBackupRecuperacaoCentroRoute
   '/servicos/conserto-pc-notebook/araucaria': typeof ServicosConsertoPcNotebookAraucariaRoute
@@ -3792,7 +3799,7 @@ export interface FileRoutesByTo {
   '/admin/login': typeof AdminLoginRoute
   '/admin/monitoramento': typeof AdminMonitoramentoRoute
   '/admin/operacao': typeof AdminOperacaoRoute
-  '/admin/ordens': typeof AdminOrdensRoute
+  '/admin/ordens': typeof AdminOrdensRouteWithChildren
   '/admin/provas-monitor': typeof AdminProvasMonitorRoute
   '/admin/provas-verticais': typeof AdminProvasVerticaisRoute
   '/admin/publicacao': typeof AdminPublicacaoRoute
@@ -4119,6 +4126,7 @@ export interface FileRoutesByTo {
   '/parceiros': typeof ParceirosIndexRoute
   '/problemas': typeof ProblemasIndexRoute
   '/servicos': typeof ServicosIndexRoute
+  '/admin/ordens/nova': typeof AdminOrdensNovaRoute
   '/servicos/$servico/$cidade': typeof ServicosServicoCidadeRoute
   '/servicos/backup-recuperacao/centro': typeof ServicosBackupRecuperacaoCentroRoute
   '/servicos/conserto-pc-notebook/araucaria': typeof ServicosConsertoPcNotebookAraucariaRoute
@@ -4293,7 +4301,7 @@ export interface FileRoutesById {
   '/admin/login': typeof AdminLoginRoute
   '/admin/monitoramento': typeof AdminMonitoramentoRoute
   '/admin/operacao': typeof AdminOperacaoRoute
-  '/admin/ordens': typeof AdminOrdensRoute
+  '/admin/ordens': typeof AdminOrdensRouteWithChildren
   '/admin/provas-monitor': typeof AdminProvasMonitorRoute
   '/admin/provas-verticais': typeof AdminProvasVerticaisRoute
   '/admin/publicacao': typeof AdminPublicacaoRoute
@@ -4620,6 +4628,7 @@ export interface FileRoutesById {
   '/parceiros/': typeof ParceirosIndexRoute
   '/problemas/': typeof ProblemasIndexRoute
   '/servicos/': typeof ServicosIndexRoute
+  '/admin/ordens/nova': typeof AdminOrdensNovaRoute
   '/servicos/$servico/$cidade': typeof ServicosServicoCidadeRoute
   '/servicos/backup-recuperacao/centro': typeof ServicosBackupRecuperacaoCentroRoute
   '/servicos/conserto-pc-notebook/araucaria': typeof ServicosConsertoPcNotebookAraucariaRoute
@@ -5122,6 +5131,7 @@ export interface FileRouteTypes {
     | '/parceiros/'
     | '/problemas/'
     | '/servicos/'
+    | '/admin/ordens/nova'
     | '/servicos/$servico/$cidade'
     | '/servicos/backup-recuperacao/centro'
     | '/servicos/conserto-pc-notebook/araucaria'
@@ -5622,6 +5632,7 @@ export interface FileRouteTypes {
     | '/parceiros'
     | '/problemas'
     | '/servicos'
+    | '/admin/ordens/nova'
     | '/servicos/$servico/$cidade'
     | '/servicos/backup-recuperacao/centro'
     | '/servicos/conserto-pc-notebook/araucaria'
@@ -6122,6 +6133,7 @@ export interface FileRouteTypes {
     | '/parceiros/'
     | '/problemas/'
     | '/servicos/'
+    | '/admin/ordens/nova'
     | '/servicos/$servico/$cidade'
     | '/servicos/backup-recuperacao/centro'
     | '/servicos/conserto-pc-notebook/araucaria'
@@ -6296,7 +6308,7 @@ export interface RootRouteChildren {
   AdminLoginRoute: typeof AdminLoginRoute
   AdminMonitoramentoRoute: typeof AdminMonitoramentoRoute
   AdminOperacaoRoute: typeof AdminOperacaoRoute
-  AdminOrdensRoute: typeof AdminOrdensRoute
+  AdminOrdensRoute: typeof AdminOrdensRouteWithChildren
   AdminProvasMonitorRoute: typeof AdminProvasMonitorRoute
   AdminProvasVerticaisRoute: typeof AdminProvasVerticaisRoute
   AdminPublicacaoRoute: typeof AdminPublicacaoRoute
@@ -9669,6 +9681,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicosUpgradeSsdRamRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/admin/ordens/nova': {
+      id: '/admin/ordens/nova'
+      path: '/nova'
+      fullPath: '/admin/ordens/nova'
+      preLoaderRoute: typeof AdminOrdensNovaRouteImport
+      parentRoute: typeof AdminOrdensRoute
+    }
     '/servicos/$servico/$cidade': {
       id: '/servicos/$servico/$cidade'
       path: '/servicos/$servico/$cidade'
@@ -10190,6 +10209,18 @@ declare module '@tanstack/react-router' {
   }
 }
 
+interface AdminOrdensRouteChildren {
+  AdminOrdensNovaRoute: typeof AdminOrdensNovaRoute
+}
+
+const AdminOrdensRouteChildren: AdminOrdensRouteChildren = {
+  AdminOrdensNovaRoute: AdminOrdensNovaRoute,
+}
+
+const AdminOrdensRouteWithChildren = AdminOrdensRoute._addFileChildren(
+  AdminOrdensRouteChildren,
+)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AnuncieRoute: AnuncieRoute,
@@ -10294,7 +10325,7 @@ const rootRouteChildren: RootRouteChildren = {
   AdminLoginRoute: AdminLoginRoute,
   AdminMonitoramentoRoute: AdminMonitoramentoRoute,
   AdminOperacaoRoute: AdminOperacaoRoute,
-  AdminOrdensRoute: AdminOrdensRoute,
+  AdminOrdensRoute: AdminOrdensRouteWithChildren,
   AdminProvasMonitorRoute: AdminProvasMonitorRoute,
   AdminProvasVerticaisRoute: AdminProvasVerticaisRoute,
   AdminPublicacaoRoute: AdminPublicacaoRoute,
