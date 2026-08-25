@@ -90,3 +90,5 @@ jobs:
             reports/operacao-marcos.json
             reports/operacao-*.md
             reports/operational-alerts.md
+            reports/snapshot-index-verificacao.json
+            docs/relatorio-monitoramento-d7-d14.md
