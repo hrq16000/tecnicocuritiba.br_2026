@@ -298,7 +298,8 @@
     "sentinel:pre-d14": "node scripts/sentinel-pre-d14.mjs",
     "check:sentinel-pre-d14": "node scripts/sentinel-pre-d14.mjs --gate",
     "freeze:corrigir-selo": "node scripts/corrigir-selo-freeze-v2.mjs",
-    "check:os-privacidade": "node scripts/check-os-privacidade.mjs"
+    "check:os-privacidade": "node scripts/check-os-privacidade.mjs",
+    "audit:noindex-live": "node scripts/auditar-noindex-live.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
