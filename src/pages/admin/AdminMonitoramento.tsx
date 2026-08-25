@@ -669,7 +669,12 @@ export default function AdminMonitoramento() {
               urlsDisponiveis={(atual.urls ?? []).map((u) => u.path)}
             />
 
+            <ResumoDiarioAlertas />
+
             <ClassificacaoAlertas marcoAtual={atual.marco} />
+
+            <ReindexContencao marcoAtual={atual.marco} />
+
 
             <section className="mt-10">
               <h2 className="text-lg font-semibold">
