@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-25T00:57:57.461Z",
+  "geradoEm": "2026-08-25T00:58:08.992Z",
   "totais": {
     "urls": 170,
     "indexadas": 22,
@@ -382,7 +382,7 @@
   },
   "consolidacao": {
     "total": 40,
-    "urlsAntes": 210,
-    "urlsDepois": 170
+    "urlsAntes": 170,
+    "urlsDepois": 130
   }
 }

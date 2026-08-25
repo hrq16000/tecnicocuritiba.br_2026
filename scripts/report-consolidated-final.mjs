@@ -279,7 +279,7 @@ writeFileSync(
       doorway: local?.resumo ?? null,
       pisoQualidade: local?.floor ?? null,
       consolidacao: consolidados.length
-        ? { total: consolidados.length, urlsAntes: totalUrls + consolidados.length, urlsDepois: totalUrls }
+        ? { total: consolidados.length, urlsAntes: totalUrls, urlsDepois: totalUrls - consolidados.length }
         : null,
 
     },
