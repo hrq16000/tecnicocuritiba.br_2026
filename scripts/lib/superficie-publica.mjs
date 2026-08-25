@@ -36,11 +36,28 @@ const OBSERVABILIDADE = ["reports/", "docs/", ".lovable/", "public/fotos/manifes
 
 const ehJsonArtefato = (rel) => rel.startsWith("public/") && rel.endsWith(".json") && !rel.includes("/fotos/");
 
+/**
+ * Página de bairro em baseline (`noindex` explícito / `indexavel: false`) não
+ * entra no índice nem no sitemap curado — logo não contamina o experimento.
+ */
+function ehBairroBaseline(p) {
+  const ehRota = /^src\/routes\/bairros\.[a-z0-9-]+\.tsx$/.test(p);
+  const ehPagina = /^src\/pages\/bairros\/[A-Za-z0-9]+\.tsx$/.test(p);
+  if (!ehRota && !ehPagina) return false;
+  try {
+    const src = readFileSync(path.join(process.cwd(), p), "utf8");
+    return src.includes("noindex: true") || src.includes("indexavel: false");
+  } catch {
+    return false;
+  }
+}
+
 /** @returns {"ADMIN_CHANGE"|"CI_CHANGE"|"OBSERVABILITY_CHANGE"|"NON_CURATED_PUBLIC_CHANGE"|"PUBLIC_CHANGE"|"IGNORED"} */
 export function classificarArquivo(rel) {
   const p = rel.replace(/\\/g, "/");
   if (ADMIN.some((a) => p.startsWith(a) || p.includes(a))) return "ADMIN_CHANGE";
   if (PUBLICO_NAO_CURADO.some((a) => p.startsWith(a))) return "NON_CURATED_PUBLIC_CHANGE";
+  if (ehBairroBaseline(p)) return "NON_CURATED_PUBLIC_CHANGE";
   if (CI.some((a) => p.startsWith(a) || p.includes(a))) return "CI_CHANGE";
   if (OBSERVABILIDADE.some((a) => p.startsWith(a)) || ehJsonArtefato(p)) return "OBSERVABILITY_CHANGE";
   if (p.startsWith("src/") || p.startsWith("public/") || p === "index.html") return "PUBLIC_CHANGE";
