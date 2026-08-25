@@ -1,14 +1,14 @@
 {
   "schema": "freeze/1.0",
   "versao": "FREEZE_V2",
-  "seladoEm": "2026-08-25T06:09:07.486Z",
+  "seladoEm": "2026-08-25T07:30:09.047Z",
   "base": "https://tecnico.curitiba.br",
   "deploymentId": "live:5eec352d9a7f460d",
   "origem": {
     "liveValidation": "85510cd99f64f1191a3dc3d94a14e71844a813db7487ae69255fa4002f161345",
     "executadoEm": "2026-08-25T06:05:10.617Z"
   },
-  "ledgerSelo": "bff936e327fd72f159e3d54347e8986bed312cdd83332ea5a0595055f5aba1d3",
+  "ledgerSelo": "72bfdd59665f65ae7631f6098027c9fffc20de55870e25a87ff67f66519cd31a",
   "freezeV1": {
     "selo": "82f7d05473cc059042b7bbe51cfa63a6fb5e93ae1f077c09ba55f7450b18ed70",
     "preservado": true,
@@ -17,8 +17,8 @@
   "universoCurado": 130,
   "coortes": {
     "CLEAN_COHORT": 91,
-    "DIRECT_INTERVENTION": 2,
-    "INDIRECT_DISCOVERY_INTERVENTION": 37
+    "DIRECT_INTERVENTION": 28,
+    "INDIRECT_DISCOVERY_INTERVENTION": 11
   },
   "regra": "Qualquer PUBLIC_CHANGE em superfície curada após este selo exige novo evento de intervenção no ledger.",
   "urls": [
@@ -994,7 +994,7 @@
       "internalLinkSetHash": "10491483ba1d0b7bb6548d5655533c48",
       "sitemapMembro": true,
       "lastmod": null,
-      "cohort": "INDIRECT_DISCOVERY_INTERVENTION",
+      "cohort": "DIRECT_INTERVENTION",
       "deploymentId": "live:5eec352d9a7f460d"
     },
     {
@@ -1009,7 +1009,7 @@
       "internalLinkSetHash": "914ce77a4caaeb65fd3d9af75240fe19",
       "sitemapMembro": true,
       "lastmod": null,
-      "cohort": "INDIRECT_DISCOVERY_INTERVENTION",
+      "cohort": "DIRECT_INTERVENTION",
       "deploymentId": "live:5eec352d9a7f460d"
     },
     {
@@ -1024,7 +1024,7 @@
       "internalLinkSetHash": "10491483ba1d0b7bb6548d5655533c48",
       "sitemapMembro": true,
       "lastmod": null,
-      "cohort": "INDIRECT_DISCOVERY_INTERVENTION",
+      "cohort": "DIRECT_INTERVENTION",
       "deploymentId": "live:5eec352d9a7f460d"
     },
     {
@@ -1039,7 +1039,7 @@
       "internalLinkSetHash": "10491483ba1d0b7bb6548d5655533c48",
       "sitemapMembro": true,
       "lastmod": null,
-      "cohort": "INDIRECT_DISCOVERY_INTERVENTION",
+      "cohort": "DIRECT_INTERVENTION",
       "deploymentId": "live:5eec352d9a7f460d"
     },
     {
@@ -1054,7 +1054,7 @@
       "internalLinkSetHash": "10491483ba1d0b7bb6548d5655533c48",
       "sitemapMembro": true,
       "lastmod": null,
-      "cohort": "INDIRECT_DISCOVERY_INTERVENTION",
+      "cohort": "DIRECT_INTERVENTION",
       "deploymentId": "live:5eec352d9a7f460d"
     },
     {
@@ -1069,7 +1069,7 @@
       "internalLinkSetHash": "10491483ba1d0b7bb6548d5655533c48",
       "sitemapMembro": true,
       "lastmod": null,
-      "cohort": "INDIRECT_DISCOVERY_INTERVENTION",
+      "cohort": "DIRECT_INTERVENTION",
       "deploymentId": "live:5eec352d9a7f460d"
     },
     {
@@ -1084,7 +1084,7 @@
       "internalLinkSetHash": "10491483ba1d0b7bb6548d5655533c48",
       "sitemapMembro": true,
       "lastmod": null,
-      "cohort": "INDIRECT_DISCOVERY_INTERVENTION",
+      "cohort": "DIRECT_INTERVENTION",
       "deploymentId": "live:5eec352d9a7f460d"
     },
     {
@@ -1099,7 +1099,7 @@
       "internalLinkSetHash": "914ce77a4caaeb65fd3d9af75240fe19",
       "sitemapMembro": true,
       "lastmod": null,
-      "cohort": "INDIRECT_DISCOVERY_INTERVENTION",
+      "cohort": "DIRECT_INTERVENTION",
       "deploymentId": "live:5eec352d9a7f460d"
     },
     {
@@ -1114,7 +1114,7 @@
       "internalLinkSetHash": "914ce77a4caaeb65fd3d9af75240fe19",
       "sitemapMembro": true,
       "lastmod": null,
-      "cohort": "INDIRECT_DISCOVERY_INTERVENTION",
+      "cohort": "DIRECT_INTERVENTION",
       "deploymentId": "live:5eec352d9a7f460d"
     },
     {
@@ -1129,7 +1129,7 @@
       "internalLinkSetHash": "10491483ba1d0b7bb6548d5655533c48",
       "sitemapMembro": true,
       "lastmod": null,
-      "cohort": "INDIRECT_DISCOVERY_INTERVENTION",
+      "cohort": "DIRECT_INTERVENTION",
       "deploymentId": "live:5eec352d9a7f460d"
     },
     {
@@ -1144,7 +1144,7 @@
       "internalLinkSetHash": "10491483ba1d0b7bb6548d5655533c48",
       "sitemapMembro": true,
       "lastmod": null,
-      "cohort": "INDIRECT_DISCOVERY_INTERVENTION",
+      "cohort": "DIRECT_INTERVENTION",
       "deploymentId": "live:5eec352d9a7f460d"
     },
     {
@@ -1159,7 +1159,7 @@
       "internalLinkSetHash": "10491483ba1d0b7bb6548d5655533c48",
       "sitemapMembro": true,
       "lastmod": null,
-      "cohort": "INDIRECT_DISCOVERY_INTERVENTION",
+      "cohort": "DIRECT_INTERVENTION",
       "deploymentId": "live:5eec352d9a7f460d"
     },
     {
@@ -1174,7 +1174,7 @@
       "internalLinkSetHash": "914ce77a4caaeb65fd3d9af75240fe19",
       "sitemapMembro": true,
       "lastmod": null,
-      "cohort": "INDIRECT_DISCOVERY_INTERVENTION",
+      "cohort": "DIRECT_INTERVENTION",
       "deploymentId": "live:5eec352d9a7f460d"
     },
     {
@@ -1189,7 +1189,7 @@
       "internalLinkSetHash": "10491483ba1d0b7bb6548d5655533c48",
       "sitemapMembro": true,
       "lastmod": null,
-      "cohort": "INDIRECT_DISCOVERY_INTERVENTION",
+      "cohort": "DIRECT_INTERVENTION",
       "deploymentId": "live:5eec352d9a7f460d"
     },
     {
@@ -1204,7 +1204,7 @@
       "internalLinkSetHash": "10491483ba1d0b7bb6548d5655533c48",
       "sitemapMembro": true,
       "lastmod": null,
-      "cohort": "INDIRECT_DISCOVERY_INTERVENTION",
+      "cohort": "DIRECT_INTERVENTION",
       "deploymentId": "live:5eec352d9a7f460d"
     },
     {
@@ -1219,7 +1219,7 @@
       "internalLinkSetHash": "10491483ba1d0b7bb6548d5655533c48",
       "sitemapMembro": true,
       "lastmod": null,
-      "cohort": "INDIRECT_DISCOVERY_INTERVENTION",
+      "cohort": "DIRECT_INTERVENTION",
       "deploymentId": "live:5eec352d9a7f460d"
     },
     {
@@ -1234,7 +1234,7 @@
       "internalLinkSetHash": "914ce77a4caaeb65fd3d9af75240fe19",
       "sitemapMembro": true,
       "lastmod": null,
-      "cohort": "INDIRECT_DISCOVERY_INTERVENTION",
+      "cohort": "DIRECT_INTERVENTION",
       "deploymentId": "live:5eec352d9a7f460d"
     },
     {
@@ -1249,7 +1249,7 @@
       "internalLinkSetHash": "10491483ba1d0b7bb6548d5655533c48",
       "sitemapMembro": true,
       "lastmod": null,
-      "cohort": "INDIRECT_DISCOVERY_INTERVENTION",
+      "cohort": "DIRECT_INTERVENTION",
       "deploymentId": "live:5eec352d9a7f460d"
     },
     {
@@ -1264,7 +1264,7 @@
       "internalLinkSetHash": "10491483ba1d0b7bb6548d5655533c48",
       "sitemapMembro": true,
       "lastmod": null,
-      "cohort": "INDIRECT_DISCOVERY_INTERVENTION",
+      "cohort": "DIRECT_INTERVENTION",
       "deploymentId": "live:5eec352d9a7f460d"
     },
     {
@@ -1279,7 +1279,7 @@
       "internalLinkSetHash": "914ce77a4caaeb65fd3d9af75240fe19",
       "sitemapMembro": true,
       "lastmod": null,
-      "cohort": "INDIRECT_DISCOVERY_INTERVENTION",
+      "cohort": "DIRECT_INTERVENTION",
       "deploymentId": "live:5eec352d9a7f460d"
     },
     {
@@ -1294,7 +1294,7 @@
       "internalLinkSetHash": "914ce77a4caaeb65fd3d9af75240fe19",
       "sitemapMembro": true,
       "lastmod": null,
-      "cohort": "INDIRECT_DISCOVERY_INTERVENTION",
+      "cohort": "DIRECT_INTERVENTION",
       "deploymentId": "live:5eec352d9a7f460d"
     },
     {
@@ -1309,7 +1309,7 @@
       "internalLinkSetHash": "10491483ba1d0b7bb6548d5655533c48",
       "sitemapMembro": true,
       "lastmod": null,
-      "cohort": "INDIRECT_DISCOVERY_INTERVENTION",
+      "cohort": "DIRECT_INTERVENTION",
       "deploymentId": "live:5eec352d9a7f460d"
     },
     {
@@ -1324,7 +1324,7 @@
       "internalLinkSetHash": "914ce77a4caaeb65fd3d9af75240fe19",
       "sitemapMembro": true,
       "lastmod": null,
-      "cohort": "INDIRECT_DISCOVERY_INTERVENTION",
+      "cohort": "DIRECT_INTERVENTION",
       "deploymentId": "live:5eec352d9a7f460d"
     },
     {
@@ -1339,7 +1339,7 @@
       "internalLinkSetHash": "914ce77a4caaeb65fd3d9af75240fe19",
       "sitemapMembro": true,
       "lastmod": null,
-      "cohort": "INDIRECT_DISCOVERY_INTERVENTION",
+      "cohort": "DIRECT_INTERVENTION",
       "deploymentId": "live:5eec352d9a7f460d"
     },
     {
@@ -1354,7 +1354,7 @@
       "internalLinkSetHash": "914ce77a4caaeb65fd3d9af75240fe19",
       "sitemapMembro": true,
       "lastmod": null,
-      "cohort": "INDIRECT_DISCOVERY_INTERVENTION",
+      "cohort": "DIRECT_INTERVENTION",
       "deploymentId": "live:5eec352d9a7f460d"
     },
     {
@@ -1369,7 +1369,7 @@
       "internalLinkSetHash": "914ce77a4caaeb65fd3d9af75240fe19",
       "sitemapMembro": true,
       "lastmod": null,
-      "cohort": "INDIRECT_DISCOVERY_INTERVENTION",
+      "cohort": "DIRECT_INTERVENTION",
       "deploymentId": "live:5eec352d9a7f460d"
     },
     {
@@ -1975,7 +1975,7 @@
   ],
   "superficie": {
     ".github/workflows/ci.yml": {
-      "hash": "03bfab2768cb11b11466bcc672290b29",
+      "hash": "ba99c43f10f40223bdd73c0bc4a54760",
       "classe": "CI_CHANGE"
     },
     ".github/workflows/cloudflare-edge.yml": {
@@ -2055,7 +2055,7 @@
       "classe": "OBSERVABILITY_CHANGE"
     },
     ".lovable/memory/features/bairro-pruning-policy.md": {
-      "hash": "f348111d6e861e61daf381fabfc77725",
+      "hash": "841efe97140ab5846bd6aace4803a8c9",
       "classe": "OBSERVABILITY_CHANGE"
     },
     ".lovable/memory/features/governanca-originalidade-ondas.md": {
@@ -2132,6 +2132,10 @@
     },
     "docs/audit-topo.md": {
       "hash": "508e75219c86897c7b63c60501a34005",
+      "classe": "OBSERVABILITY_CHANGE"
+    },
+    "docs/auditoria-noindex-gsc.md": {
+      "hash": "a7281f39153b43d6266422f0299b8cc8",
       "classe": "OBSERVABILITY_CHANGE"
     },
     "docs/auditoria-segmentos-advocacia-consultorios.md": {
@@ -2266,6 +2270,10 @@
       "hash": "6781cddfdc3728da16d831aa4094f023",
       "classe": "OBSERVABILITY_CHANGE"
     },
+    "docs/relatorio-freeze-v2-pre-d14.md": {
+      "hash": "4b93c43fbaaa0124821f00fe18f85479",
+      "classe": "OBSERVABILITY_CHANGE"
+    },
     "docs/relatorio-intervencao-pre-d14.md": {
       "hash": "c01fb2a9ca197ab784064153caac385d",
       "classe": "OBSERVABILITY_CHANGE"
@@ -2280,6 +2288,10 @@
     },
     "docs/relatorio-monitoramento-d7-d14.md": {
       "hash": "d17ce7783d469709246ddda95bbee3b3",
+      "classe": "OBSERVABILITY_CHANGE"
+    },
+    "docs/relatorio-operacao-os-pre-d14.md": {
+      "hash": "1b5b5818ca706f9cab5ecc7842a5284b",
       "classe": "OBSERVABILITY_CHANGE"
     },
     "docs/relatorio-prontidao-d14.md": {
@@ -2679,7 +2691,7 @@
       "classe": "CI_CHANGE"
     },
     "package.json": {
-      "hash": "e597bec7931289351e1fdd9662bb9ff2",
+      "hash": "29afd163e9eb68317c3f2e5723f3136f",
       "classe": "CI_CHANGE"
     },
     "playwright-fixture.ts": {
@@ -2962,8 +2974,20 @@
       "hash": "7df344df305c1cf07cd6a8d0804ffdbc",
       "classe": "PUBLIC_CHANGE"
     },
+    "public/freeze-historico.json": {
+      "hash": "6a58098c42cd301cf6c720fafa090f1f",
+      "classe": "OBSERVABILITY_CHANGE"
+    },
     "public/freeze-v1.json": {
       "hash": "75ac3d49ffe526e04ee5fb2421e0a5b0",
+      "classe": "OBSERVABILITY_CHANGE"
+    },
+    "public/freeze-v2-drift.json": {
+      "hash": "8976ffa87375e1032e8fe280b8f23df2",
+      "classe": "OBSERVABILITY_CHANGE"
+    },
+    "public/freeze-v2.json": {
+      "hash": "f85283856af4f0d7f72d73a4378dfca8",
       "classe": "OBSERVABILITY_CHANGE"
     },
     "public/indexation-daily.json": {
@@ -2971,7 +2995,7 @@
       "classe": "OBSERVABILITY_CHANGE"
     },
     "public/intervencoes-d0.json": {
-      "hash": "d9898a0814a0dacbaf4453cd084ab3d6",
+      "hash": "61e747e09c7ebb4236055d077536d4cb",
       "classe": "OBSERVABILITY_CHANGE"
     },
     "public/job-runs.json": {
@@ -3250,6 +3274,10 @@
       "hash": "59e28ef5ac71df9d391a26207a741469",
       "classe": "OBSERVABILITY_CHANGE"
     },
+    "reports/auditoria-noindex-live.json": {
+      "hash": "cd9863c2abd21502f94d2d4a481fb5f9",
+      "classe": "OBSERVABILITY_CHANGE"
+    },
     "reports/bairro-validation.json": {
       "hash": "8ab3f68c4886c48d36e6da4be3d1b324",
       "classe": "OBSERVABILITY_CHANGE"
@@ -3258,12 +3286,24 @@
       "hash": "617c237bcd132ba8745feb06ac472350",
       "classe": "OBSERVABILITY_CHANGE"
     },
+    "reports/fila-enriquecimento-bairros.md": {
+      "hash": "1d63c33a9a635a6cc5e4946ffb4c67b7",
+      "classe": "OBSERVABILITY_CHANGE"
+    },
+    "reports/freeze-v2-drift.json": {
+      "hash": "8976ffa87375e1032e8fe280b8f23df2",
+      "classe": "OBSERVABILITY_CHANGE"
+    },
     "reports/intervention-impact-map.json": {
       "hash": "c7956ae6d3b618c3381bfdae85804043",
       "classe": "OBSERVABILITY_CHANGE"
     },
     "reports/live-validation.json": {
       "hash": "85510cd99f64f1191a3dc3d94a14e718",
+      "classe": "OBSERVABILITY_CHANGE"
+    },
+    "reports/pre-d14-sentinel.json": {
+      "hash": "5cf9d751ab97e37b0e33690d230bc1bd",
       "classe": "OBSERVABILITY_CHANGE"
     },
     "scripts/alert-edge-errors.mjs": {
@@ -3300,6 +3340,10 @@
     },
     "scripts/audit-url-checklist.mjs": {
       "hash": "aaf6cafbc2411e5cf9282e16eebdec5c",
+      "classe": "CI_CHANGE"
+    },
+    "scripts/auditar-noindex-live.mjs": {
+      "hash": "5634c5589daa2ed8ae7f11826d8124bc",
       "classe": "CI_CHANGE"
     },
     "scripts/build-migration-matrix.mjs": {
@@ -3359,7 +3403,7 @@
       "classe": "CI_CHANGE"
     },
     "scripts/check-cohort-reconciliation.mjs": {
-      "hash": "ec08dc7f3e75e445a89e155cb118792e",
+      "hash": "1d002928fbe9986617bc44d1dbb6631f",
       "classe": "CI_CHANGE"
     },
     "scripts/check-comercial-seo.mjs": {
@@ -3550,6 +3594,10 @@
       "hash": "da0489227778674e630d6d6bd41d4451",
       "classe": "CI_CHANGE"
     },
+    "scripts/check-os-privacidade.mjs": {
+      "hash": "2a8d512dd761c602f6559fd792e3b3ba",
+      "classe": "CI_CHANGE"
+    },
     "scripts/check-parceiros.mjs": {
       "hash": "4d48ca7a23c26bf1f8439e02bdfef5af",
       "classe": "CI_CHANGE"
@@ -3618,6 +3666,10 @@
       "hash": "3ba5d0b00ff87ba17aacb3e4aa961811",
       "classe": "CI_CHANGE"
     },
+    "scripts/check-rotas-localidades.mjs": {
+      "hash": "af00de16f6f61570b10fc294f3fd77b8",
+      "classe": "CI_CHANGE"
+    },
     "scripts/check-route-differentiation.mjs": {
       "hash": "6ff0aec821263d61af8c9ce1f5404d05",
       "classe": "CI_CHANGE"
@@ -3643,7 +3695,7 @@
       "classe": "CI_CHANGE"
     },
     "scripts/check-seo-freeze-v2.mjs": {
-      "hash": "99611b6f5dd56e2213932ab36badb41f",
+      "hash": "be617084451f3d81e74959c42b6066b1",
       "classe": "CI_CHANGE"
     },
     "scripts/check-serp-signals.mjs": {
@@ -3730,6 +3782,10 @@
       "hash": "f8e05e9bc4b894d6caed09d3e0fa66d8",
       "classe": "CI_CHANGE"
     },
+    "scripts/corrigir-selo-freeze-v2.mjs": {
+      "hash": "69037fff22cca5b9e630c878469018d1",
+      "classe": "CI_CHANGE"
+    },
     "scripts/curated-routes-meta.mjs": {
       "hash": "ab6c56d34cead7180d2b84c97f597237",
       "classe": "CI_CHANGE"
@@ -3804,6 +3860,10 @@
     },
     "scripts/generate-sitemaps.mjs": {
       "hash": "cfb594e6c4e3ea6bf98a942d28f32cb0",
+      "classe": "CI_CHANGE"
+    },
+    "scripts/gerar-relatorio-freeze-v2.mjs": {
+      "hash": "19244d95cd8bfadc6cc16bf91f046059",
       "classe": "CI_CHANGE"
     },
     "scripts/gerar-relatorio-marco.mjs": {
@@ -3907,7 +3967,7 @@
       "classe": "CI_CHANGE"
     },
     "scripts/lib/intervencoes.mjs": {
-      "hash": "3e2426d982425bfc55e93b68512b56cc",
+      "hash": "b75d31c055ad55b65e21ba136344e1a6",
       "classe": "CI_CHANGE"
     },
     "scripts/lib/job-log.mjs": {
@@ -4007,7 +4067,7 @@
       "classe": "CI_CHANGE"
     },
     "scripts/lib/superficie-publica.mjs": {
-      "hash": "399e4eb1c25e34be59c5bbed063852cb",
+      "hash": "53b28c6a811fe6a7b46d3363429ca8d1",
       "classe": "CI_CHANGE"
     },
     "scripts/lib/tanstack-routes.mjs": {
@@ -4150,6 +4210,10 @@
       "hash": "ec5baf2d581882c2edae243e4ad85839",
       "classe": "CI_CHANGE"
     },
+    "scripts/report-fila-enriquecimento.mjs": {
+      "hash": "360e729555cc3a4975539db3a6d3f99e",
+      "classe": "CI_CHANGE"
+    },
     "scripts/report-indexation-inventory.mjs": {
       "hash": "7d6302421b736943d6992bfcd4cdc157",
       "classe": "CI_CHANGE"
@@ -4234,6 +4298,10 @@
       "hash": "b349b3f4a2c95989a920afe8e187a484",
       "classe": "CI_CHANGE"
     },
+    "scripts/sentinel-pre-d14.mjs": {
+      "hash": "1e3f1fc9b5e16daf6ad6cc4ae2c78e62",
+      "classe": "CI_CHANGE"
+    },
     "scripts/serve-dist.mjs": {
       "hash": "3467ae2706ac268fc80e60f71abcfa08",
       "classe": "CI_CHANGE"
@@ -4286,21 +4354,33 @@
       "hash": "7b69c6e5f3da86bd24a93cf09d366abb",
       "classe": "CI_CHANGE"
     },
+    "src/__tests__/bairros-cobertura-oficial.test.ts": {
+      "hash": "151f8dccad0695d5cc25be6a5013e4b4",
+      "classe": "CI_CHANGE"
+    },
     "src/__tests__/blog-editorial-acervo.test.ts": {
       "hash": "d46800f11b65f324a6d24dc110bab1a1",
-      "classe": "PUBLIC_CHANGE"
+      "classe": "CI_CHANGE"
     },
     "src/__tests__/home-solution-flow.test.ts": {
       "hash": "de54735fb7cd8a7d314f9e8ecdd80675",
-      "classe": "PUBLIC_CHANGE"
+      "classe": "CI_CHANGE"
+    },
+    "src/__tests__/os-admin.test.ts": {
+      "hash": "aa4aecfae1eafad35c135e695fc602e6",
+      "classe": "CI_CHANGE"
+    },
+    "src/__tests__/os-privacidade-selo.test.ts": {
+      "hash": "4feb0b855b0f7769a94f2c051c9fad67",
+      "classe": "CI_CHANGE"
     },
     "src/__tests__/rodada4a-tv-placa.test.ts": {
       "hash": "1470c6248af621de1f9dd3390146f7f3",
-      "classe": "PUBLIC_CHANGE"
+      "classe": "CI_CHANGE"
     },
     "src/__tests__/routes-import-smoke.test.ts": {
       "hash": "32b875cc577c8903cc9c2e35363f3711",
-      "classe": "PUBLIC_CHANGE"
+      "classe": "CI_CHANGE"
     },
     "src/assets/blog/windows-11-kb5074105-update.jpg": {
       "hash": "d0e4d7b743887ce8387a9326059e0fe3",
@@ -5378,6 +5458,10 @@
       "hash": "96d025f990473a948ba79006b662a30a",
       "classe": "ADMIN_CHANGE"
     },
+    "src/components/admin/monitoramento/FreezeV2Status.tsx": {
+      "hash": "ee13a1c12a3bafc0b4172e7b919b4721",
+      "classe": "ADMIN_CHANGE"
+    },
     "src/components/admin/monitoramento/IntervencoesRegistradas.tsx": {
       "hash": "9df50db8d09554626c3f2b225350c248",
       "classe": "ADMIN_CHANGE"
@@ -5408,6 +5492,10 @@
     },
     "src/components/anuncie/PropostaMidiaForm.tsx": {
       "hash": "54610b096e695d525bf3cf6006fa9ccd",
+      "classe": "PUBLIC_CHANGE"
+    },
+    "src/components/areas/BairroInterlinkLocal.tsx": {
+      "hash": "b71ab0c0cdf95662f49b4e333be2f9cc",
       "classe": "PUBLIC_CHANGE"
     },
     "src/components/areas/DiretorioLocalidades.tsx": {
@@ -5963,7 +6051,7 @@
       "classe": "CI_CHANGE"
     },
     "src/integrations/supabase/types.ts": {
-      "hash": "ec49f68196e6c9962802169b52409e35",
+      "hash": "4e5282c85b978dd07320ce2b88b230e7",
       "classe": "CI_CHANGE"
     },
     "src/lib/analytics.leadDedup.test.ts": {
@@ -5985,6 +6073,10 @@
     "src/lib/bairroPhotos.ts": {
       "hash": "3004504328be9258af63d4297f9ff5f6",
       "classe": "PUBLIC_CHANGE"
+    },
+    "src/lib/bairrosBaseline.ts": {
+      "hash": "7a020f61ea8bdf156a9c07beb4fc46eb",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/lib/bairrosData.ts": {
       "hash": "89591e6158735e239dc0f603f52d70f6",
@@ -6290,12 +6382,32 @@
       "hash": "61e4025fe690ccc89ef805441e96701e",
       "classe": "PUBLIC_CHANGE"
     },
+    "src/lib/os/gatilhosOs.ts": {
+      "hash": "cf720ba2182a111fd546b6037ad12d8b",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
     "src/lib/os/os.functions.ts": {
-      "hash": "27ebc659d0975e5e968dd0e2d6e95fc6",
+      "hash": "4c0b63f6ac8241a48df0cfe467e1f992",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    "src/lib/os/osAdmin.functions.ts": {
+      "hash": "d5f05171e08b96650890ad34c5a4b636",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    "src/lib/os/osAdminPdf.ts": {
+      "hash": "318e2a05ed4bd6cf7a9b12cfd120aa55",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    "src/lib/os/statusOs.ts": {
+      "hash": "42ca0b6f2551f0f0cf10e036cc53cc38",
       "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/lib/os/termosOs.ts": {
       "hash": "f08d413ce3bede49137e2922b057bc59",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    "src/lib/os/whatsappOs.ts": {
+      "hash": "16f67228931734feaa27e9fcd7b80300",
       "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/lib/osPdf.ts": {
@@ -6647,7 +6759,7 @@
       "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/pages/OrdemDeServicoConsulta.tsx": {
-      "hash": "4e7e6f75276098cd499311511b20a0af",
+      "hash": "8bdc8f8117b5f9aa7eadd361a7b73621",
       "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/pages/PoliticaCookiesAnuncios.tsx": {
@@ -6791,11 +6903,23 @@
       "classe": "ADMIN_CHANGE"
     },
     "src/pages/admin/AdminMonitoramento.tsx": {
-      "hash": "ca59b3bd1a384947c0a81a44ad850c4e",
+      "hash": "d92864198bdaceb0adba904dd62e6231",
       "classe": "ADMIN_CHANGE"
     },
     "src/pages/admin/AdminOperacao.tsx": {
       "hash": "39596e35f36999b8e70ed9d9922a2539",
+      "classe": "ADMIN_CHANGE"
+    },
+    "src/pages/admin/AdminOrdemDetalhe.tsx": {
+      "hash": "d6c1fc5bf63a55c2b9cedba9990c9f9d",
+      "classe": "ADMIN_CHANGE"
+    },
+    "src/pages/admin/AdminOrdemNova.tsx": {
+      "hash": "31064d2b7534de601960d76a19d93cb1",
+      "classe": "ADMIN_CHANGE"
+    },
+    "src/pages/admin/AdminOrdens.tsx": {
+      "hash": "b05dd85f9cfec70385dcb7745c1547e4",
       "classe": "ADMIN_CHANGE"
     },
     "src/pages/admin/AdminOsAudit.tsx": {
@@ -6878,6 +7002,10 @@
       "hash": "84914c75a2b79bee26b53dd44bce97ae",
       "classe": "PUBLIC_CHANGE"
     },
+    "src/pages/bairros/AltoDaXV.tsx": {
+      "hash": "59d01ae4978e0b0e657402a48ebdd146",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
     "src/pages/bairros/AltoGloria.tsx": {
       "hash": "87d9678ebc6e856e081610d229bf8811",
       "classe": "PUBLIC_CHANGE"
@@ -6906,6 +7034,10 @@
       "hash": "3ae3708d08042322f44a84ab45ead2d3",
       "classe": "PUBLIC_CHANGE"
     },
+    "src/pages/bairros/AtubaCuritiba.tsx": {
+      "hash": "45d29a857d1c4f1bfb30d743fae8c245",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
     "src/pages/bairros/AtubaPinhais.tsx": {
       "hash": "4a1a780624908be5ce44703ad3cfcbff",
       "classe": "PUBLIC_CHANGE"
@@ -6918,8 +7050,12 @@
       "hash": "bb4d72cb7b2757f0757cda8f793e6c32",
       "classe": "PUBLIC_CHANGE"
     },
+    "src/pages/bairros/BairroAlto.tsx": {
+      "hash": "9c0866cf25623ca2b3f209cd4d7057d1",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
     "src/pages/bairros/BairroTemplate.tsx": {
-      "hash": "ddb824756dbf7c0aafe3750a25d25a59",
+      "hash": "0a61417865ffc247991dabec75222927",
       "classe": "PUBLIC_CHANGE"
     },
     "src/pages/bairros/BariguiAraucaria.tsx": {
@@ -6986,6 +7122,10 @@
       "hash": "a07b11402114b899b6e2331dd6ecb3c6",
       "classe": "PUBLIC_CHANGE"
     },
+    "src/pages/bairros/Butiatuvinha.tsx": {
+      "hash": "ee6ba28b56ba2d7b428b8335e54b8787",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
     "src/pages/bairros/CIC.tsx": {
       "hash": "97bc7f551af662242d8783b8a6f739f2",
       "classe": "PUBLIC_CHANGE"
@@ -7017,6 +7157,10 @@
     "src/pages/bairros/CampinaDaBarra.tsx": {
       "hash": "e444d8f64e79c3d4194983c5df1d2a06",
       "classe": "PUBLIC_CHANGE"
+    },
+    "src/pages/bairros/CampinaDoSiqueira.tsx": {
+      "hash": "b4fefb43c9a877384a0305dc79369de9",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/pages/bairros/CampinaGrandeColombo.tsx": {
       "hash": "218ae4074e4d8858ac27c1848cfcf18c",
@@ -7065,6 +7209,10 @@
     "src/pages/bairros/CentroCampoMagro.tsx": {
       "hash": "dbffd6d7d23996318eaf25b121ec63d9",
       "classe": "PUBLIC_CHANGE"
+    },
+    "src/pages/bairros/CentroCivico.tsx": {
+      "hash": "85071d61792e71b10acca1f791e2050a",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/pages/bairros/CentroColombo.tsx": {
       "hash": "5cfa4acf80e744cd6b2d2c8cb385717b",
@@ -7158,6 +7306,10 @@
       "hash": "28584d6135620f573ae4d76c9231edf6",
       "classe": "PUBLIC_CHANGE"
     },
+    "src/pages/bairros/Fanny.tsx": {
+      "hash": "95308c06fdb09c8dd4ae71fbf2f24767",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
     "src/pages/bairros/FatimaColombo.tsx": {
       "hash": "b66cdcfd0c981cb995b929ed993908f8",
       "classe": "PUBLIC_CHANGE"
@@ -7189,6 +7341,10 @@
     "src/pages/bairros/GralhaAzulFRG.tsx": {
       "hash": "2e9401c8477a78b017db7d6263980440",
       "classe": "PUBLIC_CHANGE"
+    },
+    "src/pages/bairros/Guabirotuba.tsx": {
+      "hash": "fc4fb0d1e40558d672572e765f006ee1",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/pages/bairros/GuajuviraAraucaria.tsx": {
       "hash": "d46367bded8fe6c14da17679cede365c",
@@ -7426,6 +7582,10 @@
       "hash": "4b416f63d28f3bdd2acb933d8b7fad9e",
       "classe": "PUBLIC_CHANGE"
     },
+    "src/pages/bairros/Lindoia.tsx": {
+      "hash": "fb068abefb9da80fa427bd2a55eb3fa7",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
     "src/pages/bairros/MaracanaColombo.tsx": {
       "hash": "85c883f7c7c67ffcec913743819dea31",
       "classe": "PUBLIC_CHANGE"
@@ -7522,6 +7682,10 @@
       "hash": "efe3f1aeb7571f8652489200a57f4596",
       "classe": "PUBLIC_CHANGE"
     },
+    "src/pages/bairros/PradoVelho.tsx": {
+      "hash": "eea3b8b67781cefcafbecac5458fab25",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
     "src/pages/bairros/PradoVelhoPiraquara.tsx": {
       "hash": "b1e065b90c0defccb710f1e21765b1f9",
       "classe": "PUBLIC_CHANGE"
@@ -7561,6 +7725,10 @@
     "src/pages/bairros/SantaFelicidade.tsx": {
       "hash": "a9968393648cdcf75ee8bbfb68558546",
       "classe": "PUBLIC_CHANGE"
+    },
+    "src/pages/bairros/SantaQuiteria.tsx": {
+      "hash": "027dbe3edd10b3c38da48fcae1dbdc33",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/pages/bairros/SantaTerezinhaColombo.tsx": {
       "hash": "c5f2e70c2f9af3c998d1d0e39193a2f0",
@@ -7737,6 +7905,10 @@
     "src/pages/bairros/VilaTaruma.tsx": {
       "hash": "ad59c1a9d20be3850ae8026be2153194",
       "classe": "PUBLIC_CHANGE"
+    },
+    "src/pages/bairros/VistaAlegre.tsx": {
+      "hash": "d9eb186b500893cf58fbf8855bc2225f",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/pages/bairros/WeissopolisPinhais.tsx": {
       "hash": "7075dcd164a9ad73307312e62c330a2e",
@@ -8247,8 +8419,8 @@
       "classe": "PUBLIC_CHANGE"
     },
     "src/routeTree.gen.ts": {
-      "hash": "c955c04a66d3e322625ceef0cf6d17d5",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "04282069f800a175d1c4c3c12db759c7",
+      "classe": "CI_CHANGE"
     },
     "src/router.tsx": {
       "hash": "72b68964d3f55ba4f7dcf2a04aad9d97",
@@ -8304,6 +8476,18 @@
     },
     "src/routes/admin.operacao.tsx": {
       "hash": "60e458cbe7ccf61eab6231dfe353c324",
+      "classe": "ADMIN_CHANGE"
+    },
+    "src/routes/admin.ordens.$protocolo.tsx": {
+      "hash": "1d1075789c3b65f518072156c2cdeaef",
+      "classe": "ADMIN_CHANGE"
+    },
+    "src/routes/admin.ordens.nova.tsx": {
+      "hash": "c928be084ba0d5510796f1090571f196",
+      "classe": "ADMIN_CHANGE"
+    },
+    "src/routes/admin.ordens.tsx": {
+      "hash": "af4853f856500b96492ff69d772fe483",
       "classe": "ADMIN_CHANGE"
     },
     "src/routes/admin.provas-monitor.tsx": {
@@ -8402,6 +8586,10 @@
       "hash": "d04050442952190c215cd9c1505adbb9",
       "classe": "PUBLIC_CHANGE"
     },
+    "src/routes/bairros.alto-da-xv.tsx": {
+      "hash": "8d1c6e26cff7f0f63f1d5ca60ca81073",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
     "src/routes/bairros.alto-maracana.tsx": {
       "hash": "b22c46b453a1b4c25e81dd82f347e467",
       "classe": "PUBLIC_CHANGE"
@@ -8426,6 +8614,10 @@
       "hash": "72119dcbb4885c68a915c0565f86ad40",
       "classe": "PUBLIC_CHANGE"
     },
+    "src/routes/bairros.atuba.tsx": {
+      "hash": "deb96f3eef8b40b05111588eac8c5700",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
     "src/routes/bairros.aviacao.tsx": {
       "hash": "9ea359e5155986288776d347e703ba03",
       "classe": "PUBLIC_CHANGE"
@@ -8433,6 +8625,10 @@
     "src/routes/bairros.bacacheri.tsx": {
       "hash": "b0f350f3e3f13e9f9d1bed3fa085d524",
       "classe": "PUBLIC_CHANGE"
+    },
+    "src/routes/bairros.bairro-alto.tsx": {
+      "hash": "74241bb482f191eb11d20cb0a7525d28",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.barigui-araucaria.tsx": {
       "hash": "44c31da21aeda0e11b0cf70e516e4882",
@@ -8498,6 +8694,10 @@
       "hash": "4ddd07ef5946e755ceb01313771ea092",
       "classe": "PUBLIC_CHANGE"
     },
+    "src/routes/bairros.butiatuvinha.tsx": {
+      "hash": "233847f134628ecec4fb451931f971a7",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
     "src/routes/bairros.cabral.tsx": {
       "hash": "cfaabd9e13641fad5f4af7ad571fd077",
       "classe": "PUBLIC_CHANGE"
@@ -8525,6 +8725,10 @@
     "src/routes/bairros.campina-da-barra.tsx": {
       "hash": "1a61c325b563144b82b6895f1e29004c",
       "classe": "PUBLIC_CHANGE"
+    },
+    "src/routes/bairros.campina-do-siqueira.tsx": {
+      "hash": "9fadf4f6adbc67822bcf2acedb13d42d",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.campina-grande-colombo.tsx": {
       "hash": "a3d535e50a55a1e1e7fb7015d5644817",
@@ -8573,6 +8777,10 @@
     "src/routes/bairros.centro-campo-magro.tsx": {
       "hash": "57e5c8bf6575572ccce89cf8b93a2ba0",
       "classe": "PUBLIC_CHANGE"
+    },
+    "src/routes/bairros.centro-civico.tsx": {
+      "hash": "886b9c909eab593e8976760626cf4ca7",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.centro-colombo.tsx": {
       "hash": "a6a9a0089500e4bcf9289fd48d42db8b",
@@ -8670,6 +8878,10 @@
       "hash": "3b3a45c542e3f3816d4e632ec04a621f",
       "classe": "PUBLIC_CHANGE"
     },
+    "src/routes/bairros.fanny.tsx": {
+      "hash": "3dd14153cfbe0b775c1b8e25c591faab",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
     "src/routes/bairros.fatima-colombo.tsx": {
       "hash": "121f375ec89a46fe568e5e77092757bb",
       "classe": "PUBLIC_CHANGE"
@@ -8701,6 +8913,10 @@
     "src/routes/bairros.gralha-azul.tsx": {
       "hash": "704a2054af23cdf6eef620515af37b1e",
       "classe": "PUBLIC_CHANGE"
+    },
+    "src/routes/bairros.guabirotuba.tsx": {
+      "hash": "04b7280cb0bf63e3b1e31d2ec078fb5d",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.guajuvira.tsx": {
       "hash": "c45012b3bb77d44f5511aa6e72a1c941",
@@ -8942,6 +9158,10 @@
       "hash": "125f40116937950da671f205608a946e",
       "classe": "PUBLIC_CHANGE"
     },
+    "src/routes/bairros.lindoia.tsx": {
+      "hash": "dfe8e07d8089d6509eaf435454ff5f81",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
     "src/routes/bairros.maracana-colombo.tsx": {
       "hash": "6512640c12fe5faa0e071890f022e3f8",
       "classe": "PUBLIC_CHANGE"
@@ -9042,6 +9262,10 @@
       "hash": "fd31f1bc0254e37ec6778a6d1e5d92e8",
       "classe": "PUBLIC_CHANGE"
     },
+    "src/routes/bairros.prado-velho.tsx": {
+      "hash": "e8dcdaf76357df9904463ae4bee05a98",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
     "src/routes/bairros.quississana-sjp.tsx": {
       "hash": "5372ee41cb168c150a5937d34618de2a",
       "classe": "PUBLIC_CHANGE"
@@ -9077,6 +9301,10 @@
     "src/routes/bairros.santa-felicidade.tsx": {
       "hash": "8dfe5e65759f2140974ff033602e4b59",
       "classe": "PUBLIC_CHANGE"
+    },
+    "src/routes/bairros.santa-quiteria.tsx": {
+      "hash": "5a1b234bc59b97ad3da23913dd014540",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.santa-terezinha-colombo.tsx": {
       "hash": "01247c3f925ad90f5caa3a6cb7feb432",
@@ -9257,6 +9485,10 @@
     "src/routes/bairros.vila-taruma.tsx": {
       "hash": "7c4a4f4d924c5ed8c03b21188d15d66b",
       "classe": "PUBLIC_CHANGE"
+    },
+    "src/routes/bairros.vista-alegre.tsx": {
+      "hash": "0d50a7737725a4923adfd5e184be708a",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.weissopolis.tsx": {
       "hash": "f0e958310caf81f6220f9358933e9a8e",
@@ -10212,7 +10444,7 @@
     },
     "src/test/setup.ts": {
       "hash": "9b328c4843431fa76d8de00008fc159e",
-      "classe": "PUBLIC_CHANGE"
+      "classe": "CI_CHANGE"
     },
     "src/vite-env.d.ts": {
       "hash": "b5927dcd92aefacd4b4513c074790fca",
@@ -10438,6 +10670,10 @@
       "hash": "4093671fc5a23eafe2debe8046061467",
       "classe": "CI_CHANGE"
     },
+    "supabase/migrations/20260825065103_4f8ceec1-8b2b-47dd-90cb-c1e41e0d9453.sql": {
+      "hash": "7dd081dc928ea3bf0ea1dea033264cf4",
+      "classe": "CI_CHANGE"
+    },
     "supabase/seed.sql": {
       "hash": "54d46544dfa04733d94db286cb3ea7f2",
       "classe": "CI_CHANGE"
@@ -10447,7 +10683,7 @@
       "classe": "CI_CHANGE"
     },
     "tsconfig.tsbuildinfo": {
-      "hash": "196422ccaf5ec941c12a7bd6ead58f67",
+      "hash": "2e5f8bcf84f46dfe08e8dd8a7316e12d",
       "classe": "CI_CHANGE"
     },
     "vite.config.ts": {
@@ -10459,17 +10695,6 @@
       "classe": "CI_CHANGE"
     }
   },
-  "superficieHash": "35fe64fbf8fe9da5f1a1a574c36235f84b4d972e16f30226502a034118381ec5",
-  "selo": "b12f35b4368371ba81444cffe7cbafde7d810bdda9089e87e36e056171aab709",
-  "correcoesSelo": [
-    {
-      "arquivo": "src/routes/problemas.tv-sem-som.tsx",
-      "classe": "PUBLIC_CHANGE",
-      "hashSelado": "bdedb4d554e7af35d347b6cd49817a97",
-      "hashCorreto": "03199ec0ddead62da309f04f7a4968b6",
-      "motivo": "selo capturado em estado transitório de build; arquivo idêntico ao HEAD, sem mudança pública",
-      "corrigidoEm": "2026-08-25T07:01:32.211Z",
-      "prova": "conteúdo em disco idêntico a git HEAD"
-    }
-  ]
+  "superficieHash": "34d49c1982c249c3053f6be05c55aba7bd287dab4278c187df4b90d1b4798a85",
+  "selo": "2c97c1a2fdef7dbe1a6470988845d2f2436d88f179c158a0ef7bc0c2571b9ab0"
 }
