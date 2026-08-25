@@ -270,7 +270,10 @@
     "check:post-consolidation:live": "node scripts/check-post-consolidation.mjs --live https://tecnico.curitiba.br",
     "snapshot:marco": "node scripts/snapshot-marco.mjs",
     "monitor:operacao": "node scripts/monitor-operational-alerts.mjs",
-    "monitor:operacao:notify": "node scripts/monitor-operational-alerts.mjs --notify"
+    "monitor:operacao:notify": "node scripts/monitor-operational-alerts.mjs --notify",
+    "reindex:snapshots": "node scripts/reindex-snapshots.mjs",
+    "reindex:snapshots:gate": "node scripts/reindex-snapshots.mjs --strict",
+    "report:monitoramento": "node scripts/report-monitoramento-d7-d14.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

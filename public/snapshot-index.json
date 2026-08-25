@@ -1,0 +1,147 @@
+{
+  "geradoEm": "2026-08-25T02:00:15.471Z",
+  "verificacao": {
+    "executadoEm": "2026-08-25T02:00:15.471Z",
+    "marcos": [
+      "D0"
+    ],
+    "totalEntradas": 12,
+    "memorias": 8,
+    "urlsCuradas": 130,
+    "urlsNoMarcoAtual": 130,
+    "amostragem": {
+      "solicitada": 5,
+      "conferidas": 5,
+      "ok": true,
+      "itens": [
+        {
+          "path": "reports/serp-signals-d0.json",
+          "tipo": "marco-serp",
+          "hash": "156332cde9ee5804fb7428840bc41286da4bca69",
+          "conferido": true
+        },
+        {
+          "path": ".lovable/memory/features/ambiente-local-offline.md",
+          "tipo": "memoria",
+          "hash": "ca521b7ddd66b2a9eba2fd59ae999fee026d31e1",
+          "conferido": true
+        },
+        {
+          "path": "reports/operacao-d0.md",
+          "tipo": "marco-resumo",
+          "hash": "21aea3b80f606495b61015e18f6940018ae65ec2",
+          "conferido": true
+        },
+        {
+          "path": ".lovable/memory/features/bairro-pruning-policy.md",
+          "tipo": "memoria",
+          "hash": "cad8b8b4fa58838975d08a4ada534992eccaada4",
+          "conferido": true
+        },
+        {
+          "path": ".lovable/memory/features/governanca-originalidade-ondas.md",
+          "tipo": "memoria",
+          "hash": "903ef2ddb45b6872b886e2e5b585080ae6ee0bda",
+          "conferido": true
+        }
+      ]
+    },
+    "falhas": [],
+    "avisos": [
+      "D0: snapshot de queries ausente (N/A — sem coleta GSC de queries neste marco)"
+    ],
+    "status": "ok"
+  },
+  "itens": [
+    {
+      "tipo": "memoria",
+      "path": ".lovable/memory/features/ambiente-local-offline.md",
+      "bytes": 1205,
+      "hash": "ca521b7ddd66b2a9eba2fd59ae999fee026d31e1",
+      "modificadoEm": "2026-08-24T23:44:11.579Z"
+    },
+    {
+      "tipo": "memoria",
+      "path": ".lovable/memory/features/bairro-pruning-policy.md",
+      "bytes": 1656,
+      "hash": "cad8b8b4fa58838975d08a4ada534992eccaada4",
+      "modificadoEm": "2026-08-24T23:44:11.579Z"
+    },
+    {
+      "tipo": "memoria",
+      "path": ".lovable/memory/features/governanca-originalidade-ondas.md",
+      "bytes": 2697,
+      "hash": "903ef2ddb45b6872b886e2e5b585080ae6ee0bda",
+      "modificadoEm": "2026-08-24T23:44:11.579Z"
+    },
+    {
+      "tipo": "memoria",
+      "path": ".lovable/memory/features/hubs-seo-categorias.md",
+      "bytes": 949,
+      "hash": "1d3cddaa2db9cafd8d8627039ec500174fb8aec7",
+      "modificadoEm": "2026-08-24T23:44:11.579Z"
+    },
+    {
+      "tipo": "memoria",
+      "path": ".lovable/memory/features/onda-visual-3u.md",
+      "bytes": 1582,
+      "hash": "55b2008fc1d9db8a9dbdcefff2183d191229e437",
+      "modificadoEm": "2026-08-24T23:44:11.579Z"
+    },
+    {
+      "tipo": "memoria",
+      "path": ".lovable/memory/features/triagem-pf-pj.md",
+      "bytes": 2580,
+      "hash": "611c07d464f2816ccf0fb2eeaa13bc466dcb23bd",
+      "modificadoEm": "2026-08-24T23:44:11.579Z"
+    },
+    {
+      "tipo": "memoria",
+      "path": ".lovable/memory/features/whatsapp-funnel-v2.md",
+      "bytes": 3726,
+      "hash": "a2eaa262ac2f0bda1fd189c207c6d7c87f73b3ed",
+      "modificadoEm": "2026-08-24T23:44:11.579Z"
+    },
+    {
+      "tipo": "memoria",
+      "path": ".lovable/memory/index.md",
+      "bytes": 2271,
+      "hash": "82c3b1e270409e0f38c3b9f6112f9ed1e6be2e23",
+      "modificadoEm": "2026-08-24T23:44:11.579Z"
+    },
+    {
+      "tipo": "historico",
+      "path": "reports/operacao-marcos.json",
+      "bytes": 6253,
+      "hash": "2eb03353a0b0828477d770adb9ba4d406fb91bbe",
+      "modificadoEm": "2026-08-25T01:49:17.278Z",
+      "marcos": [
+        "D0"
+      ]
+    },
+    {
+      "tipo": "inventario",
+      "path": "reports/indexation-inventory.json",
+      "bytes": 100179,
+      "hash": "70941d4f5d986c51e89ba5a3a4f163b127a2771d",
+      "modificadoEm": "2026-08-25T01:49:10.087Z",
+      "urls": 130
+    },
+    {
+      "tipo": "marco-resumo",
+      "path": "reports/operacao-d0.md",
+      "bytes": 1530,
+      "hash": "21aea3b80f606495b61015e18f6940018ae65ec2",
+      "modificadoEm": "2026-08-25T01:49:17.278Z",
+      "marco": "D0"
+    },
+    {
+      "tipo": "marco-serp",
+      "path": "reports/serp-signals-d0.json",
+      "bytes": 88744,
+      "hash": "156332cde9ee5804fb7428840bc41286da4bca69",
+      "modificadoEm": "2026-08-25T01:44:52.197Z",
+      "marco": "D0"
+    }
+  ]
+}
