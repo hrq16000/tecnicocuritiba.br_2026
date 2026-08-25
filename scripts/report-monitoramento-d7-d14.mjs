@@ -19,6 +19,8 @@
  *   node scripts/report-monitoramento-d7-d14.mjs --marco=D14
  */
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { decidirMarco } from "./lib/marco-decisao.mjs";
+import { janelasSearchPerformance } from "./lib/marco-integridade.mjs";
 
 const args = process.argv.slice(2);
 const arg = (n, d = null) => {
