@@ -1,4 +1,4 @@
-import { defineMcp } from "@lovable.dev/mcp-js";
+import { auth, defineMcp } from "@lovable.dev/mcp-js";
 import validateSeo from "./tools/validate-seo";
 import validateJsonld from "./tools/validate-jsonld";
 import checkGeoConformance from "./tools/check-geo-conformance";
