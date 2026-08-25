@@ -40,6 +40,12 @@ const ALLOW = [
   // rotas legadas/canônicas que não podem ser removidas (SEO evolutivo)
   { file: "src/App.tsx", id: "orcamento" },
   { file: "src/LegacyApp.tsx", id: "orcamento" },
+  // Módulo de O.S.: termo jurídico literal do contrato de laboratório e dado
+  // de pagamento enviado apenas na conversa privada (nunca em tela pública).
+  { file: "src/lib/os/termosOs.ts", id: "orcamento" },
+  { file: "src/lib/os/termosOs.ts", id: "cnpj" },
+  { file: "src/lib/os/termosOs.ts", id: "cnpj-palavra" },
+
 ];
 
 const files = [];
