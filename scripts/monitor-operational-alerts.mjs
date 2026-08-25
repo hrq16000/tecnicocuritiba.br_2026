@@ -191,10 +191,12 @@ const assinatura = createHash("sha1")
 const mudou = assinatura !== estadoAnterior?.assinatura;
 
 mkdirSync("reports", { recursive: true });
-writeFileSync(
-  STATE,
-  JSON.stringify({ avaliadoEm: new Date().toISOString(), assinatura, alertas, metricas }, null, 2),
-);
+const estadoAtual = { avaliadoEm: new Date().toISOString(), assinatura, alertas, metricas };
+writeFileSync(STATE, JSON.stringify(estadoAtual, null, 2));
+// Espelho público (somente leitura) consumido pelo painel /admin/monitoramento,
+// onde cada alerta é classificado como verdadeiro ou falso positivo.
+mkdirSync("public", { recursive: true });
+writeFileSync("public/operational-alerts.json", `${JSON.stringify(estadoAtual, null, 2)}\n`);
 writeFileSync(
   "reports/operational-alerts.md",
   [
