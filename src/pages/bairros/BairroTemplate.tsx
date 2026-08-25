@@ -295,7 +295,15 @@ export const BairroTemplate = ({ data }: BairroTemplateProps) => {
                             style={{ animationDelay: `${index * 80}ms` }}
                           >
                             <CheckCircle className="h-5 w-5 text-accent flex-shrink-0" />
-                            <span className="text-foreground">{servico}</span>
+                            <a
+                              href={whatsappDeepLink({ local: data.nome, servico })}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              onClick={handleWhatsAppClick}
+                              className="text-foreground underline-offset-4 hover:text-accent hover:underline"
+                            >
+                              {servico}
+                            </a>
                           </li>
                         ))}
                       </ul>
