@@ -33,3 +33,16 @@ ou disparo de IndexNow é feito para produzir relatório.
   `/admin/monitoramento?cluster=<CLUSTER>`; o painel lê esse parâmetro e pré-filtra o drilldown.
 - Backlog de quick wins persistido na tabela `quick_wins_backlog` (só admin): máx. 5 itens ativos
   e criação liberada apenas a partir do marco D14.
+
+## Ferramental D14 (bloqueio, exportação, auditoria)
+
+- `scripts/lib/marco-janela.mjs` valida janela temporal mínima (D7=7d, D14=14d desde D0) e o
+  `snapshot-marco.mjs` é fail-closed: marco fora de janela não é registrado (`--fora-de-janela`
+  só para teste, marca o registro como não comparável). D0 e D7 foram gravados no mesmo dia, então
+  D14 legítimo só depois de 14 dias reais de D0.
+- `scripts/notify-marco-decision.mjs` dispara webhook/e-mail em decisões INVESTIGATE/REGRESSION.
+- `scripts/reindex-snapshots.mjs` tem modo de contenção (`--conter-auto` ou escopo manual por
+  cluster/tier) para limitar a verificação de cobertura sem tocar no site.
+- Painel `/admin/monitoramento`: `ExportarMarco` (CSV/PDF do marco com funil, clusters, tiers,
+  transições, Tier A e alertas), `ComparacaoMarcos` (deltas D7×D14 por URL/cluster/Tier A) e
+  `ChecklistAuditoria` no drilldown, persistido em `public.url_audit_checks` (só admin).
