@@ -14,6 +14,54 @@ export type Database = {
   }
   public: {
     Tables: {
+      alerta_classificacoes: {
+        Row: {
+          alerta_id: string
+          assinatura: string | null
+          classificacao: string
+          classificado_por: string | null
+          classificado_por_email: string | null
+          cluster: string | null
+          created_at: string
+          id: string
+          justificativa: string
+          marco: string | null
+          mensagem: string | null
+          severidade: string | null
+          url_path: string | null
+        }
+        Insert: {
+          alerta_id: string
+          assinatura?: string | null
+          classificacao: string
+          classificado_por?: string | null
+          classificado_por_email?: string | null
+          cluster?: string | null
+          created_at?: string
+          id?: string
+          justificativa: string
+          marco?: string | null
+          mensagem?: string | null
+          severidade?: string | null
+          url_path?: string | null
+        }
+        Update: {
+          alerta_id?: string
+          assinatura?: string | null
+          classificacao?: string
+          classificado_por?: string | null
+          classificado_por_email?: string | null
+          cluster?: string | null
+          created_at?: string
+          id?: string
+          justificativa?: string
+          marco?: string | null
+          mensagem?: string | null
+          severidade?: string | null
+          url_path?: string | null
+        }
+        Relationships: []
+      }
       bairro_photo_proofs: {
         Row: {
           aprovada: boolean
@@ -212,6 +260,69 @@ export type Database = {
           policy_version?: string | null
           session_id?: string | null
           source?: string | null
+        }
+        Relationships: []
+      }
+      experimentos_indexacao: {
+        Row: {
+          cluster: string | null
+          conclusao: string | null
+          created_at: string
+          created_by: string | null
+          criterio_sucesso: string | null
+          encerrado_em: string | null
+          grupo_controle: Json
+          grupo_teste: Json
+          hipotese: string
+          id: string
+          iniciado_em: string | null
+          marco: string
+          metrica_sucesso: string
+          mudanca_unica: string
+          resultado: string | null
+          status: string
+          titulo: string
+          updated_at: string
+        }
+        Insert: {
+          cluster?: string | null
+          conclusao?: string | null
+          created_at?: string
+          created_by?: string | null
+          criterio_sucesso?: string | null
+          encerrado_em?: string | null
+          grupo_controle?: Json
+          grupo_teste?: Json
+          hipotese: string
+          id?: string
+          iniciado_em?: string | null
+          marco?: string
+          metrica_sucesso: string
+          mudanca_unica: string
+          resultado?: string | null
+          status?: string
+          titulo: string
+          updated_at?: string
+        }
+        Update: {
+          cluster?: string | null
+          conclusao?: string | null
+          created_at?: string
+          created_by?: string | null
+          criterio_sucesso?: string | null
+          encerrado_em?: string | null
+          grupo_controle?: Json
+          grupo_teste?: Json
+          hipotese?: string
+          id?: string
+          iniciado_em?: string | null
+          marco?: string
+          metrica_sucesso?: string
+          mudanca_unica?: string
+          resultado?: string | null
+          status?: string
+          titulo?: string
+          updated_at?: string
         }
         Relationships: []
       }
