@@ -11,6 +11,7 @@ import { CTASection } from "@/components/CTASection";
 import { Footer } from "@/components/Footer";
 import { BlocoInteligencia } from "@/components/BlocoInteligencia";
 import { WhatsAppChat } from "@/components/WhatsAppChat";
+import { BairroInterlinkLocal } from "@/components/areas/BairroInterlinkLocal";
 import { JsonLdSchema } from "@/components/JsonLdSchema";
 import { PricingBanner } from "@/components/PricingBanner";
 import { GeoSpecificFAQs, bairroFAQs } from "@/components/GeoSpecificFAQs";
