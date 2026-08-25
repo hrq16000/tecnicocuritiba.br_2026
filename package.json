@@ -6,7 +6,7 @@
   "scripts": {
     "predev": "node scripts/generate-sitemaps.mjs && node scripts/generate-llms.mjs",
     "dev": "vite dev",
-    "prebuild": "node scripts/inject-route-head.mjs && node scripts/generate-sitemaps.mjs && node scripts/generate-llms.mjs && node scripts/check-security-findings-baseline.mjs && node scripts/check-anon-data-access.mjs && node scripts/check-ads-txt.mjs && node scripts/check-policy-jsonld.mjs && node scripts/check-telemetry-transparency.mjs && node scripts/check-missing-exports.mjs && node scripts/check-motion-coverage.mjs && node scripts/check-wave-control.mjs && node scripts/check-parceiros.mjs && node scripts/generate-local-linkmap.mjs --check && npm run check:types && node scripts/check-media-assets.mjs && node scripts/report-build-gates.mjs && node scripts/check-hub-empresarial-links.mjs",
+    "prebuild": "node scripts/inject-route-head.mjs && node scripts/generate-sitemaps.mjs && node scripts/generate-llms.mjs && node scripts/check-security-findings-baseline.mjs && node scripts/check-anon-data-access.mjs && node scripts/check-ads-txt.mjs && node scripts/check-policy-jsonld.mjs && node scripts/check-telemetry-transparency.mjs && node scripts/check-missing-exports.mjs && node scripts/check-motion-coverage.mjs && node scripts/check-wave-control.mjs && node scripts/check-parceiros.mjs && node scripts/generate-local-linkmap.mjs --check && npm run check:types && node scripts/check-media-assets.mjs && node scripts/report-build-gates.mjs && node scripts/check-hub-empresarial-links.mjs && node scripts/check-sitemap-lastmod.mjs",
     "check:ads-txt": "node scripts/check-ads-txt.mjs",
     "check:policy-jsonld": "node scripts/check-policy-jsonld.mjs",
     "check:missing-exports": "node scripts/check-missing-exports.mjs",
@@ -243,7 +243,14 @@
     "gsc:inspect": "node scripts/gsc-fase4-inspect.mjs",
     "report:seo-p0p1": "node scripts/report-seo-p0p1.mjs",
     "report:query-intent": "node scripts/report-query-intent-map.mjs",
-    "report:noindex-inspection": "node scripts/report-noindex-inspection.mjs"
+    "report:noindex-inspection": "node scripts/report-noindex-inspection.mjs",
+    "report:indexation": "node scripts/report-indexation-inventory.mjs",
+    "report:indexation:fast": "node scripts/report-indexation-inventory.mjs --no-inspect",
+    "check:indexability-contract": "node scripts/check-indexability-contract.mjs dist",
+    "check:indexability-contract:live": "node scripts/check-indexability-contract.mjs --live",
+    "check:sitemap-lastmod": "node scripts/check-sitemap-lastmod.mjs",
+    "indexnow:submit": "node scripts/indexnow-submit.mjs",
+    "indexnow:submit:dry": "node scripts/indexnow-submit.mjs --dry-run"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

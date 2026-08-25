@@ -1,4 +1,6 @@
+import { Link } from "@tanstack/react-router";
 import { PageSEO } from "@/components/PageSEO";
+
 import { FastHeader } from "@/components/FastHeader";
 import { Footer } from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
@@ -77,10 +79,49 @@ const GestorResponsavelPage = () => {
 
         <GestorResponsavelSection />
 
+        {/*
+          Desalinhamento de intenção corrigido: esta página institucional vinha
+          captando consultas comerciais B2B ("suporte técnico para empresas
+          curitiba", "manutenção informática empresa curitiba") em posições
+          ruins, no lugar das páginas donas dessa intenção. O bloco abaixo
+          entrega o encaminhamento explícito com âncoras de intenção exata.
+        */}
+        <section aria-labelledby="atendimento-empresas" className="mt-12 rounded-xl border border-border bg-card/60 p-6">
+          <h2 id="atendimento-empresas" className="text-xl font-semibold">
+            Procura contrato de suporte para empresa em Curitiba?
+          </h2>
+          <p className="mt-2 max-w-3xl text-muted-foreground">
+            Esta página trata apenas da responsabilidade técnica pelos atendimentos.
+            As condições comerciais, o escopo contratado e os prazos de atendimento
+            para pessoa jurídica ficam nas páginas específicas:
+          </p>
+          <ul className="mt-4 space-y-2 text-sm">
+            <li>
+              <Link to="/empresa-de-ti-curitiba" className="text-primary underline underline-offset-4">
+                Empresa de TI em Curitiba: manutenção de informática para empresas
+              </Link>{" "}
+              — escopo, modalidades de atendimento e critérios de contrato.
+            </li>
+            <li>
+              <Link to="/servicos/suporte-tecnico-empresarial" className="text-primary underline underline-offset-4">
+                Suporte técnico empresarial em Curitiba
+              </Link>{" "}
+              — atendimento recorrente, prioridade e registro de chamados.
+            </li>
+            <li>
+              <Link to="/servicos/manutencao-preventiva-empresas" className="text-primary underline underline-offset-4">
+                Manutenção preventiva para empresas
+              </Link>{" "}
+              — rotina programada para reduzir paradas não planejadas.
+            </li>
+          </ul>
+        </section>
+
         <ClusterLinks
           titulo="Explore o atendimento por modalidade, serviço e região"
           categoria="Suporte técnico"
         />
+
       </main>
 
       <Footer />
