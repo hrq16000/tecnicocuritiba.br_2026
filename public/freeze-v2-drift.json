@@ -1,12 +1,12 @@
 {
   "schema": "freeze-v2-drift/1.0",
-  "verificadoEm": "2026-08-25T06:11:49.544Z",
+  "verificadoEm": "2026-08-25T06:26:22.092Z",
   "freezeSelo": "fb95e1e4d676e89de141409aa4103218fc2a504c979f8278f62fe16e9da9d979",
   "freezeSeladoEm": "2026-08-25T06:09:07.486Z",
-  "totalDiffs": 10,
+  "totalDiffs": 13,
   "porClasse": {
-    "OBSERVABILITY_CHANGE": 4,
-    "CI_CHANGE": 4,
+    "CI_CHANGE": 6,
+    "OBSERVABILITY_CHANGE": 5,
     "ADMIN_CHANGE": 2
   },
   "publicChangeTotal": 0,
@@ -14,6 +14,11 @@
   "alerta": null,
   "exigido": [],
   "diffs": [
+    {
+      "arquivo": ".github/workflows/ci.yml",
+      "tipo": "ALTERADO",
+      "classe": "CI_CHANGE"
+    },
     {
       "arquivo": "docs/relatorio-freeze-v2-pre-d14.md",
       "tipo": "ADICIONADO",
@@ -26,6 +31,11 @@
     },
     {
       "arquivo": "public/freeze-historico.json",
+      "tipo": "ADICIONADO",
+      "classe": "OBSERVABILITY_CHANGE"
+    },
+    {
+      "arquivo": "public/freeze-v2-drift.json",
       "tipo": "ADICIONADO",
       "classe": "OBSERVABILITY_CHANGE"
     },
@@ -46,6 +56,11 @@
     },
     {
       "arquivo": "scripts/gerar-relatorio-freeze-v2.mjs",
+      "tipo": "ADICIONADO",
+      "classe": "CI_CHANGE"
+    },
+    {
+      "arquivo": "scripts/sentinel-pre-d14.mjs",
       "tipo": "ADICIONADO",
       "classe": "CI_CHANGE"
     },
