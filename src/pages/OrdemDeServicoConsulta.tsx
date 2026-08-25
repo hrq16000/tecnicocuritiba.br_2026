@@ -43,9 +43,9 @@ const OrdemDeServicoConsulta = () => {
 
     // Debounce curto: evita disparo duplicado em remontagem/StrictMode.
     const timer = setTimeout(() => {
-      consultarOs({ data: { protocolo } })
+      consultarOs({ data: { protocolo }, signal: abort.signal })
         .then((resultado) => {
-          if (!ativo) return;
+          if (!ativo || abort.signal.aborted) return;
           if (!resultado) {
             setEstado("nao-encontrada");
             return;
@@ -54,7 +54,7 @@ const OrdemDeServicoConsulta = () => {
           setEstado("ok");
         })
         .catch((e: unknown) => {
-          if (!ativo) return;
+          if (!ativo || abort.signal.aborted) return;
           const msg = e instanceof Error ? e.message : "";
           setEstado(msg.includes(OS_ERRO_LIMITE) ? "limite" : "erro");
         });
@@ -63,6 +63,7 @@ const OrdemDeServicoConsulta = () => {
     return () => {
       ativo = false;
       clearTimeout(timer);
+      abort.abort();
     };
   }, [protocolo]);
 
