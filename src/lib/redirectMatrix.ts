@@ -12,13 +12,21 @@
 // e de variações de intenção (PF × PJ).
 // ─────────────────────────────────────────────────────────────
 
+import { CONSOLIDATED_LOCAL_URLS } from "./consolidatedLocalUrls";
+
 export interface RedirectRule {
   /** Caminho antigo/alias (sempre começando com "/"). */
   from: string;
   /** Destino canônico e indexável. */
   to: string;
   /** Por que a regra existe — documentação viva para auditoria. */
-  motivo: "url-antiga" | "variacao-slug" | "alias-pf" | "alias-pj" | "alias-institucional";
+  motivo:
+    | "url-antiga"
+    | "variacao-slug"
+    | "alias-pf"
+    | "alias-pj"
+    | "alias-institucional"
+    | "consolidacao-local";
 }
 
 export const REDIRECT_MATRIX: RedirectRule[] = [
@@ -81,6 +89,13 @@ export const REDIRECT_MATRIX: RedirectRule[] = [
   // continuam apontando para a página institucional indexável.
   { from: "/ti-para-empresas", to: "/empresa-de-ti-curitiba", motivo: "alias-pj" },
   { from: "/suporte-corporativo", to: "/empresa-de-ti-curitiba", motivo: "alias-pj" },
+
+  // ── Consolidação local (Fase Final) ─────────────────────────
+  // Landings serviço × bairro sem intenção independente comprovada. A lista é
+  // gerada por `scripts/apply-local-consolidation.mjs` a partir da auditoria.
+  ...CONSOLIDATED_LOCAL_URLS.map(
+    (r): RedirectRule => ({ from: r.from, to: r.to, motivo: "consolidacao-local" }),
+  ),
 ];
 
 /** Conjunto de aliases — nenhum deles pode entrar no sitemap. */
