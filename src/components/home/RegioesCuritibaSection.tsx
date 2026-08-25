@@ -35,6 +35,7 @@ export const RegioesCuritibaSection = () => {
                 {r.itens.map((item) => (
                   <li key={item.to}>
                     <Link
+                      preload="intent"
                       to={item.to}
                       className="inline-block rounded-full border border-accent/40 bg-background px-3 py-1 text-xs font-semibold text-foreground transition-colors hover:border-accent hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
                       aria-label={`Atendimento técnico em ${item.nome}`}
@@ -55,6 +56,7 @@ export const RegioesCuritibaSection = () => {
               {rmc.itens.map((item) => (
                 <li key={item.to}>
                   <Link
+                    preload="intent"
                     to={item.to}
                     className="inline-block rounded-full border border-accent/40 bg-background px-3 py-1 text-xs font-semibold text-foreground transition-colors hover:border-accent hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
                     aria-label={`Atendimento técnico em ${item.nome}`}
@@ -67,6 +69,7 @@ export const RegioesCuritibaSection = () => {
             <p className="mt-4 text-sm text-muted-foreground">
               Não encontrou seu bairro? A cobertura é por área de atendimento — confirme a disponibilidade na triagem.{" "}
               <Link
+                preload="intent"
                 to="/areas-atendidas"
                 className="font-semibold text-foreground underline underline-offset-4 hover:text-accent"
               >
