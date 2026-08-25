@@ -1,0 +1,342 @@
+{
+  "geradoEm": "2026-08-25T00:39:14.079Z",
+  "totais": {
+    "urls": 170,
+    "indexadas": 22,
+    "descobertas": 59,
+    "desconhecidas": 85,
+    "outras": 4
+  },
+  "clusters": [
+    {
+      "cluster": "SERVICO_BAIRRO",
+      "total": 59,
+      "indexadas": 3,
+      "descobertas": 28,
+      "desconhecidas": 28,
+      "outras": 0,
+      "cliques": 1,
+      "impressoes": 9,
+      "scoreMediano": 56
+    },
+    {
+      "cluster": "PROBLEMA",
+      "total": 36,
+      "indexadas": 2,
+      "descobertas": 14,
+      "desconhecidas": 20,
+      "outras": 0,
+      "cliques": 0,
+      "impressoes": 2,
+      "scoreMediano": 75
+    },
+    {
+      "cluster": "BAIRRO",
+      "total": 26,
+      "indexadas": 3,
+      "descobertas": 9,
+      "desconhecidas": 12,
+      "outras": 2,
+      "cliques": 0,
+      "impressoes": 41,
+      "scoreMediano": 74
+    },
+    {
+      "cluster": "SERVICO",
+      "total": 15,
+      "indexadas": 4,
+      "descobertas": 2,
+      "desconhecidas": 9,
+      "outras": 0,
+      "cliques": 2,
+      "impressoes": 113,
+      "scoreMediano": 89
+    },
+    {
+      "cluster": "INSTITUCIONAL",
+      "total": 13,
+      "indexadas": 3,
+      "descobertas": 1,
+      "desconhecidas": 9,
+      "outras": 0,
+      "cliques": 0,
+      "impressoes": 98,
+      "scoreMediano": 80
+    },
+    {
+      "cluster": "CIDADE",
+      "total": 11,
+      "indexadas": 4,
+      "descobertas": 2,
+      "desconhecidas": 4,
+      "outras": 1,
+      "cliques": 2,
+      "impressoes": 157,
+      "scoreMediano": 74
+    },
+    {
+      "cluster": "HUB",
+      "total": 5,
+      "indexadas": 2,
+      "descobertas": 2,
+      "desconhecidas": 1,
+      "outras": 0,
+      "cliques": 0,
+      "impressoes": 30,
+      "scoreMediano": 81
+    },
+    {
+      "cluster": "ARTIGO",
+      "total": 2,
+      "indexadas": 0,
+      "descobertas": 1,
+      "desconhecidas": 1,
+      "outras": 0,
+      "cliques": 0,
+      "impressoes": 0,
+      "scoreMediano": 79
+    },
+    {
+      "cluster": "HOME",
+      "total": 1,
+      "indexadas": 1,
+      "descobertas": 0,
+      "desconhecidas": 0,
+      "outras": 0,
+      "cliques": 1,
+      "impressoes": 23,
+      "scoreMediano": 89
+    },
+    {
+      "cluster": "BLOG_HUB",
+      "total": 1,
+      "indexadas": 0,
+      "descobertas": 0,
+      "desconhecidas": 0,
+      "outras": 1,
+      "cliques": 0,
+      "impressoes": 0,
+      "scoreMediano": 77
+    },
+    {
+      "cluster": "EQUIPAMENTO",
+      "total": 1,
+      "indexadas": 0,
+      "descobertas": 0,
+      "desconhecidas": 1,
+      "outras": 0,
+      "cliques": 0,
+      "impressoes": 0,
+      "scoreMediano": 88
+    }
+  ],
+  "historico": [
+    {
+      "dia": "2026-08-25",
+      "urls": 170,
+      "indexadas": 22,
+      "descobertas": 59,
+      "desconhecidas": 85,
+      "outras": 4
+    }
+  ],
+  "latencia": {
+    "escopo": "URLs DISCOVERED_NOT_INDEXED + UNKNOWN_TO_GOOGLE",
+    "limiarMs": 800,
+    "medidas": 144,
+    "p50": 45,
+    "p75": 50,
+    "p95": 64,
+    "falhas": 0
+  },
+  "indexnow": {
+    "executadoEm": "2026-08-25T00:23:29.163Z",
+    "enviadas": 170,
+    "falhas": 0,
+    "novas": 170,
+    "mudadas": 0,
+    "ignoradas": 0
+  },
+  "qualidade": {
+    "faixas": {
+      "D": 21,
+      "C": 42,
+      "B": 85,
+      "A": 22
+    },
+    "piores": [
+      {
+        "path": "/servicos/redes-wifi/alto-da-xv",
+        "score": 51,
+        "faixa": "D",
+        "causas": [
+          "LOW_INCREMENTAL_VALUE",
+          "THIN_INFORMATION",
+          "WEAK_EVIDENCE",
+          "LOCAL_DOORWAY_RISK"
+        ]
+      },
+      {
+        "path": "/servicos/redes-wifi/cajuru",
+        "score": 51,
+        "faixa": "D",
+        "causas": [
+          "LOW_INCREMENTAL_VALUE",
+          "THIN_INFORMATION",
+          "WEAK_EVIDENCE",
+          "LOCAL_DOORWAY_RISK"
+        ]
+      },
+      {
+        "path": "/servicos/redes-wifi/ecoville",
+        "score": 51,
+        "faixa": "D",
+        "causas": [
+          "LOW_INCREMENTAL_VALUE",
+          "THIN_INFORMATION",
+          "WEAK_EVIDENCE",
+          "LOCAL_DOORWAY_RISK"
+        ]
+      },
+      {
+        "path": "/servicos/redes-wifi/jardim-das-americas",
+        "score": 51,
+        "faixa": "D",
+        "causas": [
+          "LOW_INCREMENTAL_VALUE",
+          "THIN_INFORMATION",
+          "WEAK_EVIDENCE",
+          "LOCAL_DOORWAY_RISK"
+        ]
+      },
+      {
+        "path": "/servicos/redes-wifi/reboucas",
+        "score": 51,
+        "faixa": "D",
+        "causas": [
+          "LOW_INCREMENTAL_VALUE",
+          "THIN_INFORMATION",
+          "WEAK_EVIDENCE",
+          "LOCAL_DOORWAY_RISK"
+        ]
+      },
+      {
+        "path": "/servicos/conserto-pc-notebook/agua-verde",
+        "score": 53,
+        "faixa": "D",
+        "causas": [
+          "LOW_INCREMENTAL_VALUE",
+          "THIN_INFORMATION",
+          "WEAK_EVIDENCE",
+          "LOCAL_DOORWAY_RISK"
+        ]
+      },
+      {
+        "path": "/servicos/conserto-pc-notebook/alto-da-xv",
+        "score": 53,
+        "faixa": "D",
+        "causas": [
+          "LOW_INCREMENTAL_VALUE",
+          "THIN_INFORMATION",
+          "WEAK_EVIDENCE",
+          "LOCAL_DOORWAY_RISK"
+        ]
+      },
+      {
+        "path": "/servicos/conserto-pc-notebook/ecoville",
+        "score": 53,
+        "faixa": "D",
+        "causas": [
+          "LOW_INCREMENTAL_VALUE",
+          "THIN_INFORMATION",
+          "WEAK_EVIDENCE",
+          "LOCAL_DOORWAY_RISK"
+        ]
+      },
+      {
+        "path": "/servicos/conserto-pc-notebook/jardim-das-americas",
+        "score": 53,
+        "faixa": "D",
+        "causas": [
+          "LOW_INCREMENTAL_VALUE",
+          "THIN_INFORMATION",
+          "WEAK_EVIDENCE",
+          "LOCAL_DOORWAY_RISK"
+        ]
+      },
+      {
+        "path": "/servicos/conserto-pc-notebook/reboucas",
+        "score": 53,
+        "faixa": "D",
+        "causas": [
+          "LOW_INCREMENTAL_VALUE",
+          "THIN_INFORMATION",
+          "WEAK_EVIDENCE",
+          "LOCAL_DOORWAY_RISK"
+        ]
+      },
+      {
+        "path": "/servicos/redes-wifi/agua-verde",
+        "score": 53,
+        "faixa": "D",
+        "causas": [
+          "LOW_INCREMENTAL_VALUE",
+          "THIN_INFORMATION",
+          "WEAK_EVIDENCE",
+          "LOCAL_DOORWAY_RISK"
+        ]
+      },
+      {
+        "path": "/servicos/redes-wifi/boa-vista",
+        "score": 53,
+        "faixa": "D",
+        "causas": [
+          "LOW_INCREMENTAL_VALUE",
+          "THIN_INFORMATION",
+          "WEAK_EVIDENCE",
+          "LOCAL_DOORWAY_RISK"
+        ]
+      },
+      {
+        "path": "/servicos/redes-wifi/cabral",
+        "score": 53,
+        "faixa": "D",
+        "causas": [
+          "LOW_INCREMENTAL_VALUE",
+          "THIN_INFORMATION",
+          "WEAK_EVIDENCE",
+          "LOCAL_DOORWAY_RISK"
+        ]
+      },
+      {
+        "path": "/servicos/redes-wifi/cristo-rei",
+        "score": 53,
+        "faixa": "D",
+        "causas": [
+          "LOW_INCREMENTAL_VALUE",
+          "THIN_INFORMATION",
+          "WEAK_EVIDENCE",
+          "LOCAL_DOORWAY_RISK"
+        ]
+      },
+      {
+        "path": "/servicos/redes-wifi/portao",
+        "score": 53,
+        "faixa": "D",
+        "causas": [
+          "LOW_INCREMENTAL_VALUE",
+          "THIN_INFORMATION",
+          "WEAK_EVIDENCE",
+          "LOCAL_DOORWAY_RISK"
+        ]
+      }
+    ]
+  },
+  "doorway": {
+    "total": 96,
+    "alto": 42,
+    "medio": 16,
+    "baixo": 32,
+    "ok": 6
+  }
+}

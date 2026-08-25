@@ -1,0 +1,2796 @@
+{
+  "geradoEm": "2026-08-25T00:38:10.773Z",
+  "faixas": {
+    "A": 22,
+    "B": 85,
+    "C": 42,
+    "D": 21,
+    "E": 0
+  },
+  "total": 170,
+  "prioridade": [
+    {
+      "path": "/servicos/manutencao-tv/boa-vista",
+      "score": 58,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE"
+      ]
+    },
+    {
+      "path": "/faq",
+      "score": 69,
+      "causas": [
+        "INTENT_AMBIGUITY",
+        "THIN_INFORMATION"
+      ]
+    },
+    {
+      "path": "/problemas",
+      "score": 63,
+      "causas": [
+        "THIN_INFORMATION",
+        "WEAK_EVIDENCE"
+      ]
+    },
+    {
+      "path": "/contato",
+      "score": 61,
+      "causas": [
+        "THIN_INFORMATION",
+        "COMMERCIAL_ONLY",
+        "WEAK_EVIDENCE"
+      ]
+    },
+    {
+      "path": "/servicos/redes-wifi/alto-da-xv",
+      "score": 51,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE",
+        "THIN_INFORMATION",
+        "WEAK_EVIDENCE",
+        "LOCAL_DOORWAY_RISK"
+      ]
+    },
+    {
+      "path": "/servicos/redes-wifi/cajuru",
+      "score": 51,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE",
+        "THIN_INFORMATION",
+        "WEAK_EVIDENCE",
+        "LOCAL_DOORWAY_RISK"
+      ]
+    },
+    {
+      "path": "/servicos/redes-wifi/ecoville",
+      "score": 51,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE",
+        "THIN_INFORMATION",
+        "WEAK_EVIDENCE",
+        "LOCAL_DOORWAY_RISK"
+      ]
+    },
+    {
+      "path": "/servicos/redes-wifi/jardim-das-americas",
+      "score": 51,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE",
+        "THIN_INFORMATION",
+        "WEAK_EVIDENCE",
+        "LOCAL_DOORWAY_RISK"
+      ]
+    },
+    {
+      "path": "/servicos/redes-wifi/reboucas",
+      "score": 51,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE",
+        "THIN_INFORMATION",
+        "WEAK_EVIDENCE",
+        "LOCAL_DOORWAY_RISK"
+      ]
+    },
+    {
+      "path": "/servicos/conserto-pc-notebook/agua-verde",
+      "score": 53,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE",
+        "THIN_INFORMATION",
+        "WEAK_EVIDENCE",
+        "LOCAL_DOORWAY_RISK"
+      ]
+    },
+    {
+      "path": "/servicos/conserto-pc-notebook/alto-da-xv",
+      "score": 53,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE",
+        "THIN_INFORMATION",
+        "WEAK_EVIDENCE",
+        "LOCAL_DOORWAY_RISK"
+      ]
+    },
+    {
+      "path": "/servicos/conserto-pc-notebook/ecoville",
+      "score": 53,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE",
+        "THIN_INFORMATION",
+        "WEAK_EVIDENCE",
+        "LOCAL_DOORWAY_RISK"
+      ]
+    },
+    {
+      "path": "/servicos/conserto-pc-notebook/jardim-das-americas",
+      "score": 53,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE",
+        "THIN_INFORMATION",
+        "WEAK_EVIDENCE",
+        "LOCAL_DOORWAY_RISK"
+      ]
+    },
+    {
+      "path": "/servicos/conserto-pc-notebook/reboucas",
+      "score": 53,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE",
+        "THIN_INFORMATION",
+        "WEAK_EVIDENCE",
+        "LOCAL_DOORWAY_RISK"
+      ]
+    },
+    {
+      "path": "/servicos/redes-wifi/agua-verde",
+      "score": 53,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE",
+        "THIN_INFORMATION",
+        "WEAK_EVIDENCE",
+        "LOCAL_DOORWAY_RISK"
+      ]
+    }
+  ],
+  "urls": [
+    {
+      "path": "/servicos/redes-wifi/alto-da-xv",
+      "cluster": "SERVICO_BAIRRO",
+      "tier": "C",
+      "score": 51,
+      "faixa": "D",
+      "similaridadeMax": 0.438,
+      "textoExclusivoRatio": 0.08,
+      "palavras": 1159,
+      "gscStatus": "DISCOVERED_NOT_INDEXED",
+      "impressions": 0,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE",
+        "THIN_INFORMATION",
+        "WEAK_EVIDENCE",
+        "LOCAL_DOORWAY_RISK"
+      ]
+    },
+    {
+      "path": "/servicos/redes-wifi/cajuru",
+      "cluster": "SERVICO_BAIRRO",
+      "tier": "C",
+      "score": 51,
+      "faixa": "D",
+      "similaridadeMax": 0.422,
+      "textoExclusivoRatio": 0.1,
+      "palavras": 1101,
+      "gscStatus": "DISCOVERED_NOT_INDEXED",
+      "impressions": 0,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE",
+        "THIN_INFORMATION",
+        "WEAK_EVIDENCE",
+        "LOCAL_DOORWAY_RISK"
+      ]
+    },
+    {
+      "path": "/servicos/redes-wifi/ecoville",
+      "cluster": "SERVICO_BAIRRO",
+      "tier": "C",
+      "score": 51,
+      "faixa": "D",
+      "similaridadeMax": 0.435,
+      "textoExclusivoRatio": 0.092,
+      "palavras": 1135,
+      "gscStatus": "DISCOVERED_NOT_INDEXED",
+      "impressions": 0,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE",
+        "THIN_INFORMATION",
+        "WEAK_EVIDENCE",
+        "LOCAL_DOORWAY_RISK"
+      ]
+    },
+    {
+      "path": "/servicos/redes-wifi/jardim-das-americas",
+      "cluster": "SERVICO_BAIRRO",
+      "tier": "C",
+      "score": 51,
+      "faixa": "D",
+      "similaridadeMax": 0.444,
+      "textoExclusivoRatio": 0.084,
+      "palavras": 1178,
+      "gscStatus": "INDEXED",
+      "impressions": 0,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE",
+        "THIN_INFORMATION",
+        "WEAK_EVIDENCE",
+        "LOCAL_DOORWAY_RISK"
+      ]
+    },
+    {
+      "path": "/servicos/redes-wifi/reboucas",
+      "cluster": "SERVICO_BAIRRO",
+      "tier": "C",
+      "score": 51,
+      "faixa": "D",
+      "similaridadeMax": 0.423,
+      "textoExclusivoRatio": 0.077,
+      "palavras": 1106,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE",
+        "THIN_INFORMATION",
+        "WEAK_EVIDENCE",
+        "LOCAL_DOORWAY_RISK"
+      ]
+    },
+    {
+      "path": "/servicos/conserto-pc-notebook/agua-verde",
+      "cluster": "SERVICO_BAIRRO",
+      "tier": "C",
+      "score": 53,
+      "faixa": "D",
+      "similaridadeMax": 0.464,
+      "textoExclusivoRatio": 0.059,
+      "palavras": 1280,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE",
+        "THIN_INFORMATION",
+        "WEAK_EVIDENCE",
+        "LOCAL_DOORWAY_RISK"
+      ]
+    },
+    {
+      "path": "/servicos/conserto-pc-notebook/alto-da-xv",
+      "cluster": "SERVICO_BAIRRO",
+      "tier": "C",
+      "score": 53,
+      "faixa": "D",
+      "similaridadeMax": 0.477,
+      "textoExclusivoRatio": 0.054,
+      "palavras": 1322,
+      "gscStatus": "DISCOVERED_NOT_INDEXED",
+      "impressions": 0,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE",
+        "THIN_INFORMATION",
+        "WEAK_EVIDENCE",
+        "LOCAL_DOORWAY_RISK"
+      ]
+    },
+    {
+      "path": "/servicos/conserto-pc-notebook/ecoville",
+      "cluster": "SERVICO_BAIRRO",
+      "tier": "C",
+      "score": 53,
+      "faixa": "D",
+      "similaridadeMax": 0.467,
+      "textoExclusivoRatio": 0.07,
+      "palavras": 1294,
+      "gscStatus": "DISCOVERED_NOT_INDEXED",
+      "impressions": 0,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE",
+        "THIN_INFORMATION",
+        "WEAK_EVIDENCE",
+        "LOCAL_DOORWAY_RISK"
+      ]
+    },
+    {
+      "path": "/servicos/conserto-pc-notebook/jardim-das-americas",
+      "cluster": "SERVICO_BAIRRO",
+      "tier": "C",
+      "score": 53,
+      "faixa": "D",
+      "similaridadeMax": 0.483,
+      "textoExclusivoRatio": 0.058,
+      "palavras": 1339,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE",
+        "THIN_INFORMATION",
+        "WEAK_EVIDENCE",
+        "LOCAL_DOORWAY_RISK"
+      ]
+    },
+    {
+      "path": "/servicos/conserto-pc-notebook/reboucas",
+      "cluster": "SERVICO_BAIRRO",
+      "tier": "C",
+      "score": 53,
+      "faixa": "D",
+      "similaridadeMax": 0.457,
+      "textoExclusivoRatio": 0.061,
+      "palavras": 1268,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE",
+        "THIN_INFORMATION",
+        "WEAK_EVIDENCE",
+        "LOCAL_DOORWAY_RISK"
+      ]
+    },
+    {
+      "path": "/servicos/redes-wifi/agua-verde",
+      "cluster": "SERVICO_BAIRRO",
+      "tier": "C",
+      "score": 53,
+      "faixa": "D",
+      "similaridadeMax": 0.428,
+      "textoExclusivoRatio": 0.074,
+      "palavras": 1121,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE",
+        "THIN_INFORMATION",
+        "WEAK_EVIDENCE",
+        "LOCAL_DOORWAY_RISK"
+      ]
+    },
+    {
+      "path": "/servicos/redes-wifi/boa-vista",
+      "cluster": "SERVICO_BAIRRO",
+      "tier": "C",
+      "score": 53,
+      "faixa": "D",
+      "similaridadeMax": 0.426,
+      "textoExclusivoRatio": 0.097,
+      "palavras": 1121,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE",
+        "THIN_INFORMATION",
+        "WEAK_EVIDENCE",
+        "LOCAL_DOORWAY_RISK"
+      ]
+    },
+    {
+      "path": "/servicos/redes-wifi/cabral",
+      "cluster": "SERVICO_BAIRRO",
+      "tier": "C",
+      "score": 53,
+      "faixa": "D",
+      "similaridadeMax": 0.416,
+      "textoExclusivoRatio": 0.097,
+      "palavras": 1087,
+      "gscStatus": "DISCOVERED_NOT_INDEXED",
+      "impressions": 0,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE",
+        "THIN_INFORMATION",
+        "WEAK_EVIDENCE",
+        "LOCAL_DOORWAY_RISK"
+      ]
+    },
+    {
+      "path": "/servicos/redes-wifi/cristo-rei",
+      "cluster": "SERVICO_BAIRRO",
+      "tier": "C",
+      "score": 53,
+      "faixa": "D",
+      "similaridadeMax": 0.431,
+      "textoExclusivoRatio": 0.092,
+      "palavras": 1128,
+      "gscStatus": "DISCOVERED_NOT_INDEXED",
+      "impressions": 0,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE",
+        "THIN_INFORMATION",
+        "WEAK_EVIDENCE",
+        "LOCAL_DOORWAY_RISK"
+      ]
+    },
+    {
+      "path": "/servicos/redes-wifi/portao",
+      "cluster": "SERVICO_BAIRRO",
+      "tier": "C",
+      "score": 53,
+      "faixa": "D",
+      "similaridadeMax": 0.421,
+      "textoExclusivoRatio": 0.092,
+      "palavras": 1097,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE",
+        "THIN_INFORMATION",
+        "WEAK_EVIDENCE",
+        "LOCAL_DOORWAY_RISK"
+      ]
+    },
+    {
+      "path": "/servicos/remocao-virus/agua-verde",
+      "cluster": "SERVICO_BAIRRO",
+      "tier": "C",
+      "score": 53,
+      "faixa": "D",
+      "similaridadeMax": 0.463,
+      "textoExclusivoRatio": 0.06,
+      "palavras": 1287,
+      "gscStatus": "DISCOVERED_NOT_INDEXED",
+      "impressions": 0,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE",
+        "THIN_INFORMATION",
+        "WEAK_EVIDENCE",
+        "LOCAL_DOORWAY_RISK"
+      ]
+    },
+    {
+      "path": "/servicos/remocao-virus/alto-da-xv",
+      "cluster": "SERVICO_BAIRRO",
+      "tier": "C",
+      "score": 53,
+      "faixa": "D",
+      "similaridadeMax": 0.474,
+      "textoExclusivoRatio": 0.057,
+      "palavras": 1329,
+      "gscStatus": "DISCOVERED_NOT_INDEXED",
+      "impressions": 0,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE",
+        "THIN_INFORMATION",
+        "WEAK_EVIDENCE",
+        "LOCAL_DOORWAY_RISK"
+      ]
+    },
+    {
+      "path": "/servicos/remocao-virus/cic",
+      "cluster": "SERVICO_BAIRRO",
+      "tier": "C",
+      "score": 53,
+      "faixa": "D",
+      "similaridadeMax": 0.449,
+      "textoExclusivoRatio": 0.07,
+      "palavras": 1265,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE",
+        "THIN_INFORMATION",
+        "WEAK_EVIDENCE",
+        "LOCAL_DOORWAY_RISK"
+      ]
+    },
+    {
+      "path": "/servicos/remocao-virus/ecoville",
+      "cluster": "SERVICO_BAIRRO",
+      "tier": "C",
+      "score": 53,
+      "faixa": "D",
+      "similaridadeMax": 0.467,
+      "textoExclusivoRatio": 0.067,
+      "palavras": 1301,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE",
+        "THIN_INFORMATION",
+        "WEAK_EVIDENCE",
+        "LOCAL_DOORWAY_RISK"
+      ]
+    },
+    {
+      "path": "/servicos/remocao-virus/jardim-das-americas",
+      "cluster": "SERVICO_BAIRRO",
+      "tier": "C",
+      "score": 53,
+      "faixa": "D",
+      "similaridadeMax": 0.48,
+      "textoExclusivoRatio": 0.061,
+      "palavras": 1346,
+      "gscStatus": "DISCOVERED_NOT_INDEXED",
+      "impressions": 0,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE",
+        "THIN_INFORMATION",
+        "WEAK_EVIDENCE",
+        "LOCAL_DOORWAY_RISK"
+      ]
+    },
+    {
+      "path": "/servicos/remocao-virus/reboucas",
+      "cluster": "SERVICO_BAIRRO",
+      "tier": "C",
+      "score": 53,
+      "faixa": "D",
+      "similaridadeMax": 0.457,
+      "textoExclusivoRatio": 0.061,
+      "palavras": 1275,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE",
+        "THIN_INFORMATION",
+        "WEAK_EVIDENCE",
+        "LOCAL_DOORWAY_RISK"
+      ]
+    },
+    {
+      "path": "/servicos/upgrade-ssd-memoria/agua-verde",
+      "cluster": "SERVICO_BAIRRO",
+      "tier": "C",
+      "score": 55,
+      "faixa": "C",
+      "similaridadeMax": 0.464,
+      "textoExclusivoRatio": 0.053,
+      "palavras": 1296,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE",
+        "THIN_INFORMATION",
+        "WEAK_EVIDENCE"
+      ]
+    },
+    {
+      "path": "/servicos/upgrade-ssd-memoria/alto-da-xv",
+      "cluster": "SERVICO_BAIRRO",
+      "tier": "C",
+      "score": 55,
+      "faixa": "C",
+      "similaridadeMax": 0.478,
+      "textoExclusivoRatio": 0.05,
+      "palavras": 1337,
+      "gscStatus": "DISCOVERED_NOT_INDEXED",
+      "impressions": 0,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE",
+        "THIN_INFORMATION",
+        "WEAK_EVIDENCE"
+      ]
+    },
+    {
+      "path": "/servicos/upgrade-ssd-memoria/cic",
+      "cluster": "SERVICO_BAIRRO",
+      "tier": "C",
+      "score": 55,
+      "faixa": "C",
+      "similaridadeMax": 0.455,
+      "textoExclusivoRatio": 0.059,
+      "palavras": 1275,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE",
+        "THIN_INFORMATION",
+        "WEAK_EVIDENCE"
+      ]
+    },
+    {
+      "path": "/servicos/upgrade-ssd-memoria/ecoville",
+      "cluster": "SERVICO_BAIRRO",
+      "tier": "C",
+      "score": 55,
+      "faixa": "C",
+      "similaridadeMax": 0.465,
+      "textoExclusivoRatio": 0.063,
+      "palavras": 1311,
+      "gscStatus": "DISCOVERED_NOT_INDEXED",
+      "impressions": 0,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE",
+        "THIN_INFORMATION",
+        "WEAK_EVIDENCE"
+      ]
+    },
+    {
+      "path": "/servicos/upgrade-ssd-memoria/jardim-das-americas",
+      "cluster": "SERVICO_BAIRRO",
+      "tier": "C",
+      "score": 55,
+      "faixa": "C",
+      "similaridadeMax": 0.484,
+      "textoExclusivoRatio": 0.055,
+      "palavras": 1354,
+      "gscStatus": "DISCOVERED_NOT_INDEXED",
+      "impressions": 0,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE",
+        "THIN_INFORMATION",
+        "WEAK_EVIDENCE"
+      ]
+    },
+    {
+      "path": "/servicos/upgrade-ssd-memoria/portao",
+      "cluster": "SERVICO_BAIRRO",
+      "tier": "C",
+      "score": 55,
+      "faixa": "C",
+      "similaridadeMax": 0.42,
+      "textoExclusivoRatio": 0.09,
+      "palavras": 1274,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE",
+        "THIN_INFORMATION",
+        "WEAK_EVIDENCE"
+      ]
+    },
+    {
+      "path": "/servicos/upgrade-ssd-memoria/reboucas",
+      "cluster": "SERVICO_BAIRRO",
+      "tier": "C",
+      "score": 55,
+      "faixa": "C",
+      "similaridadeMax": 0.456,
+      "textoExclusivoRatio": 0.056,
+      "palavras": 1285,
+      "gscStatus": "INDEXED",
+      "impressions": 0,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE",
+        "THIN_INFORMATION",
+        "WEAK_EVIDENCE"
+      ]
+    },
+    {
+      "path": "/servicos/conserto-pc-notebook/centro",
+      "cluster": "SERVICO_BAIRRO",
+      "tier": "C",
+      "score": 56,
+      "faixa": "C",
+      "similaridadeMax": 0.448,
+      "textoExclusivoRatio": 0.068,
+      "palavras": 1257,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE",
+        "THIN_INFORMATION",
+        "LOCAL_DOORWAY_RISK"
+      ]
+    },
+    {
+      "path": "/servicos/redes-wifi/batel",
+      "cluster": "SERVICO_BAIRRO",
+      "tier": "C",
+      "score": 56,
+      "faixa": "C",
+      "similaridadeMax": 0.426,
+      "textoExclusivoRatio": 0.079,
+      "palavras": 1111,
+      "gscStatus": "DISCOVERED_NOT_INDEXED",
+      "impressions": 0,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE",
+        "THIN_INFORMATION",
+        "LOCAL_DOORWAY_RISK"
+      ]
+    },
+    {
+      "path": "/servicos/redes-wifi/bigorrilho",
+      "cluster": "SERVICO_BAIRRO",
+      "tier": "C",
+      "score": 56,
+      "faixa": "C",
+      "similaridadeMax": 0.423,
+      "textoExclusivoRatio": 0.093,
+      "palavras": 1101,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE",
+        "THIN_INFORMATION",
+        "LOCAL_DOORWAY_RISK"
+      ]
+    },
+    {
+      "path": "/servicos/redes-wifi/boqueirao",
+      "cluster": "SERVICO_BAIRRO",
+      "tier": "C",
+      "score": 56,
+      "faixa": "C",
+      "similaridadeMax": 0.419,
+      "textoExclusivoRatio": 0.108,
+      "palavras": 1090,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE",
+        "THIN_INFORMATION",
+        "LOCAL_DOORWAY_RISK"
+      ]
+    },
+    {
+      "path": "/servicos/redes-wifi/centro",
+      "cluster": "SERVICO_BAIRRO",
+      "tier": "C",
+      "score": 56,
+      "faixa": "C",
+      "similaridadeMax": 0.42,
+      "textoExclusivoRatio": 0.078,
+      "palavras": 1097,
+      "gscStatus": "DISCOVERED_NOT_INDEXED",
+      "impressions": 0,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE",
+        "THIN_INFORMATION",
+        "LOCAL_DOORWAY_RISK"
+      ]
+    },
+    {
+      "path": "/servicos/redes-wifi/santa-felicidade",
+      "cluster": "SERVICO_BAIRRO",
+      "tier": "C",
+      "score": 56,
+      "faixa": "C",
+      "similaridadeMax": 0.423,
+      "textoExclusivoRatio": 0.107,
+      "palavras": 1109,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE",
+        "THIN_INFORMATION",
+        "LOCAL_DOORWAY_RISK"
+      ]
+    },
+    {
+      "path": "/servicos/formatacao-computador/agua-verde",
+      "cluster": "SERVICO_BAIRRO",
+      "tier": "C",
+      "score": 58,
+      "faixa": "C",
+      "similaridadeMax": 0.464,
+      "textoExclusivoRatio": 0.071,
+      "palavras": 1259,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE",
+        "THIN_INFORMATION"
+      ]
+    },
+    {
+      "path": "/servicos/formatacao-computador/alto-da-xv",
+      "cluster": "SERVICO_BAIRRO",
+      "tier": "C",
+      "score": 58,
+      "faixa": "C",
+      "similaridadeMax": 0.478,
+      "textoExclusivoRatio": 0.061,
+      "palavras": 1301,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE",
+        "THIN_INFORMATION"
+      ]
+    },
+    {
+      "path": "/servicos/formatacao-computador/cic",
+      "cluster": "SERVICO_BAIRRO",
+      "tier": "C",
+      "score": 58,
+      "faixa": "C",
+      "similaridadeMax": 0.455,
+      "textoExclusivoRatio": 0.074,
+      "palavras": 1237,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE",
+        "THIN_INFORMATION"
+      ]
+    },
+    {
+      "path": "/servicos/formatacao-computador/ecoville",
+      "cluster": "SERVICO_BAIRRO",
+      "tier": "C",
+      "score": 58,
+      "faixa": "C",
+      "similaridadeMax": 0.466,
+      "textoExclusivoRatio": 0.075,
+      "palavras": 1273,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE",
+        "THIN_INFORMATION"
+      ]
+    },
+    {
+      "path": "/servicos/formatacao-computador/jardim-das-americas",
+      "cluster": "SERVICO_BAIRRO",
+      "tier": "C",
+      "score": 58,
+      "faixa": "C",
+      "similaridadeMax": 0.484,
+      "textoExclusivoRatio": 0.065,
+      "palavras": 1318,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE",
+        "THIN_INFORMATION"
+      ]
+    },
+    {
+      "path": "/servicos/formatacao-computador/reboucas",
+      "cluster": "SERVICO_BAIRRO",
+      "tier": "C",
+      "score": 58,
+      "faixa": "C",
+      "similaridadeMax": 0.456,
+      "textoExclusivoRatio": 0.07,
+      "palavras": 1247,
+      "gscStatus": "DISCOVERED_NOT_INDEXED",
+      "impressions": 0,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE",
+        "THIN_INFORMATION"
+      ]
+    },
+    {
+      "path": "/servicos/manutencao-tv/alto-da-xv",
+      "cluster": "SERVICO_BAIRRO",
+      "tier": "C",
+      "score": 58,
+      "faixa": "C",
+      "similaridadeMax": 0.438,
+      "textoExclusivoRatio": 0.09,
+      "palavras": 1170,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE"
+      ]
+    },
+    {
+      "path": "/servicos/manutencao-tv/boa-vista",
+      "cluster": "SERVICO_BAIRRO",
+      "tier": "A",
+      "score": 58,
+      "faixa": "C",
+      "similaridadeMax": 0.426,
+      "textoExclusivoRatio": 0.091,
+      "palavras": 1130,
+      "gscStatus": "INDEXED",
+      "impressions": 9,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE"
+      ]
+    },
+    {
+      "path": "/servicos/manutencao-tv/boqueirao",
+      "cluster": "SERVICO_BAIRRO",
+      "tier": "C",
+      "score": 58,
+      "faixa": "C",
+      "similaridadeMax": 0.419,
+      "textoExclusivoRatio": 0.104,
+      "palavras": 1097,
+      "gscStatus": "DISCOVERED_NOT_INDEXED",
+      "impressions": 0,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE"
+      ]
+    },
+    {
+      "path": "/servicos/manutencao-tv/cajuru",
+      "cluster": "SERVICO_BAIRRO",
+      "tier": "C",
+      "score": 58,
+      "faixa": "C",
+      "similaridadeMax": 0.422,
+      "textoExclusivoRatio": 0.098,
+      "palavras": 1108,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE"
+      ]
+    },
+    {
+      "path": "/servicos/manutencao-tv/ecoville",
+      "cluster": "SERVICO_BAIRRO",
+      "tier": "C",
+      "score": 58,
+      "faixa": "C",
+      "similaridadeMax": 0.435,
+      "textoExclusivoRatio": 0.1,
+      "palavras": 1142,
+      "gscStatus": "DISCOVERED_NOT_INDEXED",
+      "impressions": 0,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE"
+      ]
+    },
+    {
+      "path": "/servicos/manutencao-tv/jardim-das-americas",
+      "cluster": "SERVICO_BAIRRO",
+      "tier": "C",
+      "score": 58,
+      "faixa": "C",
+      "similaridadeMax": 0.444,
+      "textoExclusivoRatio": 0.091,
+      "palavras": 1186,
+      "gscStatus": "DISCOVERED_NOT_INDEXED",
+      "impressions": 0,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE"
+      ]
+    },
+    {
+      "path": "/servicos/manutencao-tv/portao",
+      "cluster": "SERVICO_BAIRRO",
+      "tier": "C",
+      "score": 58,
+      "faixa": "C",
+      "similaridadeMax": 0.421,
+      "textoExclusivoRatio": 0.096,
+      "palavras": 1104,
+      "gscStatus": "DISCOVERED_NOT_INDEXED",
+      "impressions": 0,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE"
+      ]
+    },
+    {
+      "path": "/servicos/manutencao-tv/reboucas",
+      "cluster": "SERVICO_BAIRRO",
+      "tier": "C",
+      "score": 58,
+      "faixa": "C",
+      "similaridadeMax": 0.423,
+      "textoExclusivoRatio": 0.094,
+      "palavras": 1113,
+      "gscStatus": "DISCOVERED_NOT_INDEXED",
+      "impressions": 0,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE"
+      ]
+    },
+    {
+      "path": "/servicos/upgrade-ssd-memoria/centro",
+      "cluster": "SERVICO_BAIRRO",
+      "tier": "C",
+      "score": 58,
+      "faixa": "C",
+      "similaridadeMax": 0.448,
+      "textoExclusivoRatio": 0.061,
+      "palavras": 1274,
+      "gscStatus": "DISCOVERED_NOT_INDEXED",
+      "impressions": 0,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE",
+        "THIN_INFORMATION"
+      ]
+    },
+    {
+      "path": "/servicos/formatacao-computador/batel",
+      "cluster": "SERVICO_BAIRRO",
+      "tier": "C",
+      "score": 60,
+      "faixa": "C",
+      "similaridadeMax": 0.405,
+      "textoExclusivoRatio": 0.101,
+      "palavras": 1252,
+      "gscStatus": "DISCOVERED_NOT_INDEXED",
+      "impressions": 0,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE",
+        "THIN_INFORMATION"
+      ]
+    },
+    {
+      "path": "/servicos/manutencao-tv/agua-verde",
+      "cluster": "SERVICO_BAIRRO",
+      "tier": "C",
+      "score": 60,
+      "faixa": "C",
+      "similaridadeMax": 0.428,
+      "textoExclusivoRatio": 0.087,
+      "palavras": 1130,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE"
+      ]
+    },
+    {
+      "path": "/servicos/manutencao-tv/cabral",
+      "cluster": "SERVICO_BAIRRO",
+      "tier": "C",
+      "score": 60,
+      "faixa": "C",
+      "similaridadeMax": 0.416,
+      "textoExclusivoRatio": 0.095,
+      "palavras": 1094,
+      "gscStatus": "DISCOVERED_NOT_INDEXED",
+      "impressions": 0,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE"
+      ]
+    },
+    {
+      "path": "/servicos/manutencao-tv/cristo-rei",
+      "cluster": "SERVICO_BAIRRO",
+      "tier": "C",
+      "score": 60,
+      "faixa": "C",
+      "similaridadeMax": 0.431,
+      "textoExclusivoRatio": 0.088,
+      "palavras": 1137,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE"
+      ]
+    },
+    {
+      "path": "/servicos/manutencao-tv/santa-felicidade",
+      "cluster": "SERVICO_BAIRRO",
+      "tier": "C",
+      "score": 60,
+      "faixa": "C",
+      "similaridadeMax": 0.423,
+      "textoExclusivoRatio": 0.102,
+      "palavras": 1118,
+      "gscStatus": "DISCOVERED_NOT_INDEXED",
+      "impressions": 0,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE"
+      ]
+    },
+    {
+      "path": "/contato",
+      "cluster": "INSTITUCIONAL",
+      "tier": "A",
+      "score": 61,
+      "faixa": "C",
+      "similaridadeMax": 0.006,
+      "textoExclusivoRatio": 0.968,
+      "palavras": 162,
+      "gscStatus": "DISCOVERED_NOT_INDEXED",
+      "impressions": 0,
+      "causas": [
+        "THIN_INFORMATION",
+        "COMMERCIAL_ONLY",
+        "WEAK_EVIDENCE"
+      ]
+    },
+    {
+      "path": "/servicos/manutencao-tv/cic",
+      "cluster": "SERVICO_BAIRRO",
+      "tier": "C",
+      "score": 61,
+      "faixa": "C",
+      "similaridadeMax": 0.376,
+      "textoExclusivoRatio": 0.105,
+      "palavras": 1107,
+      "gscStatus": "DISCOVERED_NOT_INDEXED",
+      "impressions": 0,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE"
+      ]
+    },
+    {
+      "path": "/servicos/manutencao-tv/batel",
+      "cluster": "SERVICO_BAIRRO",
+      "tier": "C",
+      "score": 62,
+      "faixa": "C",
+      "similaridadeMax": 0.426,
+      "textoExclusivoRatio": 0.091,
+      "palavras": 1118,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE"
+      ]
+    },
+    {
+      "path": "/servicos/manutencao-tv/bigorrilho",
+      "cluster": "SERVICO_BAIRRO",
+      "tier": "C",
+      "score": 62,
+      "faixa": "C",
+      "similaridadeMax": 0.423,
+      "textoExclusivoRatio": 0.09,
+      "palavras": 1108,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE"
+      ]
+    },
+    {
+      "path": "/servicos/manutencao-tv/centro",
+      "cluster": "SERVICO_BAIRRO",
+      "tier": "C",
+      "score": 62,
+      "faixa": "C",
+      "similaridadeMax": 0.42,
+      "textoExclusivoRatio": 0.092,
+      "palavras": 1104,
+      "gscStatus": "DISCOVERED_NOT_INDEXED",
+      "impressions": 0,
+      "causas": [
+        "LOW_INCREMENTAL_VALUE"
+      ]
+    },
+    {
+      "path": "/problemas",
+      "cluster": "HUB",
+      "tier": "A",
+      "score": 63,
+      "faixa": "C",
+      "similaridadeMax": 0.021,
+      "textoExclusivoRatio": 0.953,
+      "palavras": 1475,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": [
+        "THIN_INFORMATION",
+        "WEAK_EVIDENCE"
+      ]
+    },
+    {
+      "path": "/servicos/redes-wifi/cic",
+      "cluster": "SERVICO_BAIRRO",
+      "tier": "C",
+      "score": 67,
+      "faixa": "C",
+      "similaridadeMax": 0.177,
+      "textoExclusivoRatio": 0.589,
+      "palavras": 743,
+      "gscStatus": "DISCOVERED_NOT_INDEXED",
+      "impressions": 0,
+      "causas": [
+        "THIN_INFORMATION",
+        "WEAK_EVIDENCE",
+        "LOCAL_DOORWAY_RISK"
+      ]
+    },
+    {
+      "path": "/quando-nao-compensa",
+      "cluster": "INSTITUCIONAL",
+      "tier": "D",
+      "score": 68,
+      "faixa": "C",
+      "similaridadeMax": 0,
+      "textoExclusivoRatio": 0.999,
+      "palavras": 708,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": [
+        "THIN_INFORMATION",
+        "COMMERCIAL_ONLY",
+        "WEAK_EVIDENCE"
+      ]
+    },
+    {
+      "path": "/faq",
+      "cluster": "INSTITUCIONAL",
+      "tier": "A",
+      "score": 69,
+      "faixa": "C",
+      "similaridadeMax": 0.008,
+      "textoExclusivoRatio": 0.911,
+      "palavras": 206,
+      "gscStatus": "INDEXED",
+      "impressions": 16,
+      "causas": [
+        "INTENT_AMBIGUITY",
+        "THIN_INFORMATION"
+      ]
+    },
+    {
+      "path": "/bairros/batel",
+      "cluster": "BAIRRO",
+      "tier": "A",
+      "score": 70,
+      "faixa": "B",
+      "similaridadeMax": 0.239,
+      "textoExclusivoRatio": 0.519,
+      "palavras": 600,
+      "gscStatus": "INDEXED",
+      "impressions": 5,
+      "causas": [
+        "THIN_INFORMATION",
+        "WEAK_EVIDENCE",
+        "LOCAL_DOORWAY_RISK"
+      ]
+    },
+    {
+      "path": "/bairros/cajuru",
+      "cluster": "BAIRRO",
+      "tier": "B",
+      "score": 70,
+      "faixa": "B",
+      "similaridadeMax": 0.224,
+      "textoExclusivoRatio": 0.475,
+      "palavras": 634,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": [
+        "THIN_INFORMATION",
+        "WEAK_EVIDENCE",
+        "LOCAL_DOORWAY_RISK"
+      ]
+    },
+    {
+      "path": "/bairros/portao",
+      "cluster": "BAIRRO",
+      "tier": "A",
+      "score": 70,
+      "faixa": "B",
+      "similaridadeMax": 0.231,
+      "textoExclusivoRatio": 0.506,
+      "palavras": 631,
+      "gscStatus": "INDEXED",
+      "impressions": 22,
+      "causas": [
+        "THIN_INFORMATION",
+        "WEAK_EVIDENCE",
+        "LOCAL_DOORWAY_RISK"
+      ]
+    },
+    {
+      "path": "/problemas/mouse-nao-funciona",
+      "cluster": "PROBLEMA",
+      "tier": "B",
+      "score": 71,
+      "faixa": "B",
+      "similaridadeMax": 0.1,
+      "textoExclusivoRatio": 0.789,
+      "palavras": 1323,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": [
+        "THIN_INFORMATION",
+        "LACK_OF_EXPERTISE"
+      ]
+    },
+    {
+      "path": "/problemas/notebook-nao-conecta-no-wifi",
+      "cluster": "PROBLEMA",
+      "tier": "B",
+      "score": 71,
+      "faixa": "B",
+      "similaridadeMax": 0.085,
+      "textoExclusivoRatio": 0.814,
+      "palavras": 1335,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": [
+        "THIN_INFORMATION",
+        "LACK_OF_EXPERTISE"
+      ]
+    },
+    {
+      "path": "/problemas/tela-do-computador-piscando",
+      "cluster": "PROBLEMA",
+      "tier": "B",
+      "score": 71,
+      "faixa": "B",
+      "similaridadeMax": 0.086,
+      "textoExclusivoRatio": 0.798,
+      "palavras": 1335,
+      "gscStatus": "DISCOVERED_NOT_INDEXED",
+      "impressions": 0,
+      "causas": [
+        "THIN_INFORMATION",
+        "LACK_OF_EXPERTISE"
+      ]
+    },
+    {
+      "path": "/problemas/touchpad-nao-funciona",
+      "cluster": "PROBLEMA",
+      "tier": "B",
+      "score": 71,
+      "faixa": "B",
+      "similaridadeMax": 0.054,
+      "textoExclusivoRatio": 0.872,
+      "palavras": 1436,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": [
+        "THIN_INFORMATION",
+        "LACK_OF_EXPERTISE"
+      ]
+    },
+    {
+      "path": "/problemas/webcam-nao-funciona",
+      "cluster": "PROBLEMA",
+      "tier": "B",
+      "score": 71,
+      "faixa": "B",
+      "similaridadeMax": 0.1,
+      "textoExclusivoRatio": 0.806,
+      "palavras": 1385,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": [
+        "THIN_INFORMATION",
+        "LACK_OF_EXPERTISE"
+      ]
+    },
+    {
+      "path": "/bairros/bacacheri",
+      "cluster": "BAIRRO",
+      "tier": "B",
+      "score": 72,
+      "faixa": "B",
+      "similaridadeMax": 0.168,
+      "textoExclusivoRatio": 0.673,
+      "palavras": 797,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": [
+        "THIN_INFORMATION",
+        "WEAK_EVIDENCE",
+        "LOCAL_DOORWAY_RISK"
+      ]
+    },
+    {
+      "path": "/bairros/uberaba",
+      "cluster": "BAIRRO",
+      "tier": "B",
+      "score": 72,
+      "faixa": "B",
+      "similaridadeMax": 0.195,
+      "textoExclusivoRatio": 0.623,
+      "palavras": 680,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": [
+        "THIN_INFORMATION",
+        "WEAK_EVIDENCE",
+        "LOCAL_DOORWAY_RISK"
+      ]
+    },
+    {
+      "path": "/tecnico-informatica-campo-magro",
+      "cluster": "CIDADE",
+      "tier": "B",
+      "score": 72,
+      "faixa": "B",
+      "similaridadeMax": 0.301,
+      "textoExclusivoRatio": 0.537,
+      "palavras": 831,
+      "gscStatus": "OTHER",
+      "impressions": 0,
+      "causas": [
+        "THIN_INFORMATION",
+        "LOCAL_DOORWAY_RISK"
+      ]
+    },
+    {
+      "path": "/bairros/bigorrilho",
+      "cluster": "BAIRRO",
+      "tier": "B",
+      "score": 73,
+      "faixa": "B",
+      "similaridadeMax": 0.227,
+      "textoExclusivoRatio": 0.523,
+      "palavras": 663,
+      "gscStatus": "OTHER",
+      "impressions": 0,
+      "causas": [
+        "THIN_INFORMATION",
+        "WEAK_EVIDENCE",
+        "LOCAL_DOORWAY_RISK"
+      ]
+    },
+    {
+      "path": "/bairros/boa-vista",
+      "cluster": "BAIRRO",
+      "tier": "B",
+      "score": 73,
+      "faixa": "B",
+      "similaridadeMax": 0.227,
+      "textoExclusivoRatio": 0.524,
+      "palavras": 669,
+      "gscStatus": "DISCOVERED_NOT_INDEXED",
+      "impressions": 0,
+      "causas": [
+        "THIN_INFORMATION",
+        "WEAK_EVIDENCE",
+        "LOCAL_DOORWAY_RISK"
+      ]
+    },
+    {
+      "path": "/bairros/boqueirao",
+      "cluster": "BAIRRO",
+      "tier": "B",
+      "score": 73,
+      "faixa": "B",
+      "similaridadeMax": 0.206,
+      "textoExclusivoRatio": 0.54,
+      "palavras": 640,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": [
+        "THIN_INFORMATION",
+        "WEAK_EVIDENCE",
+        "LOCAL_DOORWAY_RISK"
+      ]
+    },
+    {
+      "path": "/bairros/cabral",
+      "cluster": "BAIRRO",
+      "tier": "B",
+      "score": 73,
+      "faixa": "B",
+      "similaridadeMax": 0.229,
+      "textoExclusivoRatio": 0.532,
+      "palavras": 635,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": [
+        "THIN_INFORMATION",
+        "WEAK_EVIDENCE",
+        "LOCAL_DOORWAY_RISK"
+      ]
+    },
+    {
+      "path": "/bairros/centro",
+      "cluster": "BAIRRO",
+      "tier": "B",
+      "score": 73,
+      "faixa": "B",
+      "similaridadeMax": 0.232,
+      "textoExclusivoRatio": 0.561,
+      "palavras": 615,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": [
+        "THIN_INFORMATION",
+        "WEAK_EVIDENCE",
+        "LOCAL_DOORWAY_RISK"
+      ]
+    },
+    {
+      "path": "/bairros/santa-felicidade",
+      "cluster": "BAIRRO",
+      "tier": "B",
+      "score": 73,
+      "faixa": "B",
+      "similaridadeMax": 0.224,
+      "textoExclusivoRatio": 0.548,
+      "palavras": 679,
+      "gscStatus": "DISCOVERED_NOT_INDEXED",
+      "impressions": 0,
+      "causas": [
+        "THIN_INFORMATION",
+        "WEAK_EVIDENCE",
+        "LOCAL_DOORWAY_RISK"
+      ]
+    },
+    {
+      "path": "/problemas/computador-sem-som",
+      "cluster": "PROBLEMA",
+      "tier": "B",
+      "score": 73,
+      "faixa": "B",
+      "similaridadeMax": 0.085,
+      "textoExclusivoRatio": 0.817,
+      "palavras": 1378,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": [
+        "LACK_OF_EXPERTISE"
+      ]
+    },
+    {
+      "path": "/problemas/computador-travando",
+      "cluster": "PROBLEMA",
+      "tier": "B",
+      "score": 73,
+      "faixa": "B",
+      "similaridadeMax": 0.054,
+      "textoExclusivoRatio": 0.854,
+      "palavras": 1447,
+      "gscStatus": "DISCOVERED_NOT_INDEXED",
+      "impressions": 0,
+      "causas": [
+        "THIN_INFORMATION",
+        "LACK_OF_EXPERTISE"
+      ]
+    },
+    {
+      "path": "/problemas/hd-nao-reconhecido",
+      "cluster": "PROBLEMA",
+      "tier": "B",
+      "score": 73,
+      "faixa": "B",
+      "similaridadeMax": 0.055,
+      "textoExclusivoRatio": 0.885,
+      "palavras": 1621,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": [
+        "THIN_INFORMATION",
+        "LACK_OF_EXPERTISE"
+      ]
+    },
+    {
+      "path": "/problemas/notebook-molhado",
+      "cluster": "PROBLEMA",
+      "tier": "B",
+      "score": 73,
+      "faixa": "B",
+      "similaridadeMax": 0.048,
+      "textoExclusivoRatio": 0.872,
+      "palavras": 1746,
+      "gscStatus": "DISCOVERED_NOT_INDEXED",
+      "impressions": 0,
+      "causas": [
+        "THIN_INFORMATION",
+        "LACK_OF_EXPERTISE"
+      ]
+    },
+    {
+      "path": "/problemas/pen-drive-nao-reconhecido",
+      "cluster": "PROBLEMA",
+      "tier": "B",
+      "score": 73,
+      "faixa": "B",
+      "similaridadeMax": 0.063,
+      "textoExclusivoRatio": 0.871,
+      "palavras": 1390,
+      "gscStatus": "DISCOVERED_NOT_INDEXED",
+      "impressions": 0,
+      "causas": [
+        "LACK_OF_EXPERTISE"
+      ]
+    },
+    {
+      "path": "/problemas/tv-travando",
+      "cluster": "PROBLEMA",
+      "tier": "B",
+      "score": 73,
+      "faixa": "B",
+      "similaridadeMax": 0.069,
+      "textoExclusivoRatio": 0.848,
+      "palavras": 1369,
+      "gscStatus": "DISCOVERED_NOT_INDEXED",
+      "impressions": 0,
+      "causas": [
+        "LACK_OF_EXPERTISE"
+      ]
+    },
+    {
+      "path": "/problemas/wifi-caindo-toda-hora",
+      "cluster": "PROBLEMA",
+      "tier": "B",
+      "score": 73,
+      "faixa": "B",
+      "similaridadeMax": 0.045,
+      "textoExclusivoRatio": 0.904,
+      "palavras": 1744,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": [
+        "THIN_INFORMATION",
+        "LACK_OF_EXPERTISE"
+      ]
+    },
+    {
+      "path": "/bairros/fazendinha",
+      "cluster": "BAIRRO",
+      "tier": "B",
+      "score": 74,
+      "faixa": "B",
+      "similaridadeMax": 0.177,
+      "textoExclusivoRatio": 0.644,
+      "palavras": 754,
+      "gscStatus": "DISCOVERED_NOT_INDEXED",
+      "impressions": 0,
+      "causas": [
+        "THIN_INFORMATION",
+        "WEAK_EVIDENCE",
+        "LOCAL_DOORWAY_RISK"
+      ]
+    },
+    {
+      "path": "/bairros/hauer",
+      "cluster": "BAIRRO",
+      "tier": "B",
+      "score": 74,
+      "faixa": "B",
+      "similaridadeMax": 0.194,
+      "textoExclusivoRatio": 0.608,
+      "palavras": 806,
+      "gscStatus": "DISCOVERED_NOT_INDEXED",
+      "impressions": 0,
+      "causas": [
+        "THIN_INFORMATION",
+        "WEAK_EVIDENCE",
+        "LOCAL_DOORWAY_RISK"
+      ]
+    },
+    {
+      "path": "/bairros/xaxim",
+      "cluster": "BAIRRO",
+      "tier": "B",
+      "score": 74,
+      "faixa": "B",
+      "similaridadeMax": 0.218,
+      "textoExclusivoRatio": 0.605,
+      "palavras": 713,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": [
+        "THIN_INFORMATION",
+        "WEAK_EVIDENCE",
+        "LOCAL_DOORWAY_RISK"
+      ]
+    },
+    {
+      "path": "/tecnico-informatica-araucaria",
+      "cluster": "CIDADE",
+      "tier": "A",
+      "score": 74,
+      "faixa": "B",
+      "similaridadeMax": 0.351,
+      "textoExclusivoRatio": 0.429,
+      "palavras": 762,
+      "gscStatus": "INDEXED",
+      "impressions": 36,
+      "causas": [
+        "THIN_INFORMATION"
+      ]
+    },
+    {
+      "path": "/tecnico-informatica-campo-largo",
+      "cluster": "CIDADE",
+      "tier": "B",
+      "score": 74,
+      "faixa": "B",
+      "similaridadeMax": 0.355,
+      "textoExclusivoRatio": 0.408,
+      "palavras": 796,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": [
+        "THIN_INFORMATION"
+      ]
+    },
+    {
+      "path": "/tecnico-informatica-colombo",
+      "cluster": "CIDADE",
+      "tier": "A",
+      "score": 74,
+      "faixa": "B",
+      "similaridadeMax": 0.353,
+      "textoExclusivoRatio": 0.43,
+      "palavras": 775,
+      "gscStatus": "INDEXED",
+      "impressions": 53,
+      "causas": [
+        "THIN_INFORMATION"
+      ]
+    },
+    {
+      "path": "/tecnico-informatica-pinhais",
+      "cluster": "CIDADE",
+      "tier": "B",
+      "score": 74,
+      "faixa": "B",
+      "similaridadeMax": 0.355,
+      "textoExclusivoRatio": 0.439,
+      "palavras": 782,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": [
+        "THIN_INFORMATION"
+      ]
+    },
+    {
+      "path": "/tecnico-informatica-sao-jose-pinhais",
+      "cluster": "CIDADE",
+      "tier": "A",
+      "score": 74,
+      "faixa": "B",
+      "similaridadeMax": 0.332,
+      "textoExclusivoRatio": 0.483,
+      "palavras": 832,
+      "gscStatus": "INDEXED",
+      "impressions": 9,
+      "causas": [
+        "THIN_INFORMATION"
+      ]
+    },
+    {
+      "path": "/bairros/agua-verde",
+      "cluster": "BAIRRO",
+      "tier": "A",
+      "score": 75,
+      "faixa": "B",
+      "similaridadeMax": 0.189,
+      "textoExclusivoRatio": 0.605,
+      "palavras": 635,
+      "gscStatus": "INDEXED",
+      "impressions": 14,
+      "causas": [
+        "THIN_INFORMATION",
+        "LOCAL_DOORWAY_RISK"
+      ]
+    },
+    {
+      "path": "/bairros/cic",
+      "cluster": "BAIRRO",
+      "tier": "B",
+      "score": 75,
+      "faixa": "B",
+      "similaridadeMax": 0.22,
+      "textoExclusivoRatio": 0.558,
+      "palavras": 650,
+      "gscStatus": "OTHER",
+      "impressions": 0,
+      "causas": [
+        "THIN_INFORMATION",
+        "WEAK_EVIDENCE",
+        "LOCAL_DOORWAY_RISK"
+      ]
+    },
+    {
+      "path": "/bairros/merces",
+      "cluster": "BAIRRO",
+      "tier": "B",
+      "score": 75,
+      "faixa": "B",
+      "similaridadeMax": 0.166,
+      "textoExclusivoRatio": 0.673,
+      "palavras": 738,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": [
+        "THIN_INFORMATION",
+        "LOCAL_DOORWAY_RISK"
+      ]
+    },
+    {
+      "path": "/bairros/novo-mundo",
+      "cluster": "BAIRRO",
+      "tier": "B",
+      "score": 75,
+      "faixa": "B",
+      "similaridadeMax": 0.177,
+      "textoExclusivoRatio": 0.662,
+      "palavras": 685,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": [
+        "THIN_INFORMATION",
+        "LOCAL_DOORWAY_RISK"
+      ]
+    },
+    {
+      "path": "/bairros/reboucas",
+      "cluster": "BAIRRO",
+      "tier": "B",
+      "score": 75,
+      "faixa": "B",
+      "similaridadeMax": 0.177,
+      "textoExclusivoRatio": 0.616,
+      "palavras": 652,
+      "gscStatus": "DISCOVERED_NOT_INDEXED",
+      "impressions": 0,
+      "causas": [
+        "THIN_INFORMATION",
+        "LOCAL_DOORWAY_RISK"
+      ]
+    },
+    {
+      "path": "/problemas/computador-fazendo-barulho",
+      "cluster": "PROBLEMA",
+      "tier": "B",
+      "score": 75,
+      "faixa": "B",
+      "similaridadeMax": 0.044,
+      "textoExclusivoRatio": 0.879,
+      "palavras": 1712,
+      "gscStatus": "DISCOVERED_NOT_INDEXED",
+      "impressions": 0,
+      "causas": [
+        "LACK_OF_EXPERTISE"
+      ]
+    },
+    {
+      "path": "/problemas/impressora-nao-imprime",
+      "cluster": "PROBLEMA",
+      "tier": "B",
+      "score": 75,
+      "faixa": "B",
+      "similaridadeMax": 0.07,
+      "textoExclusivoRatio": 0.849,
+      "palavras": 1605,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": [
+        "LACK_OF_EXPERTISE"
+      ]
+    },
+    {
+      "path": "/problemas/notebook-desligando-sozinho",
+      "cluster": "PROBLEMA",
+      "tier": "B",
+      "score": 75,
+      "faixa": "B",
+      "similaridadeMax": 0.049,
+      "textoExclusivoRatio": 0.856,
+      "palavras": 1394,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": [
+        "LACK_OF_EXPERTISE"
+      ]
+    },
+    {
+      "path": "/problemas/teclado-de-notebook-nao-funciona",
+      "cluster": "PROBLEMA",
+      "tier": "B",
+      "score": 75,
+      "faixa": "B",
+      "similaridadeMax": 0.055,
+      "textoExclusivoRatio": 0.86,
+      "palavras": 1605,
+      "gscStatus": "DISCOVERED_NOT_INDEXED",
+      "impressions": 0,
+      "causas": [
+        "LACK_OF_EXPERTISE"
+      ]
+    },
+    {
+      "path": "/problemas/tv-com-imagem-escura",
+      "cluster": "PROBLEMA",
+      "tier": "B",
+      "score": 75,
+      "faixa": "B",
+      "similaridadeMax": 0.086,
+      "textoExclusivoRatio": 0.795,
+      "palavras": 1347,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": []
+    },
+    {
+      "path": "/problemas/tv-nao-conecta-no-wifi",
+      "cluster": "PROBLEMA",
+      "tier": "B",
+      "score": 75,
+      "faixa": "B",
+      "similaridadeMax": 0.072,
+      "textoExclusivoRatio": 0.847,
+      "palavras": 1402,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": []
+    },
+    {
+      "path": "/problemas/tv-sem-som",
+      "cluster": "PROBLEMA",
+      "tier": "B",
+      "score": 75,
+      "faixa": "B",
+      "similaridadeMax": 0.128,
+      "textoExclusivoRatio": 0.755,
+      "palavras": 1540,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": [
+        "THIN_INFORMATION",
+        "LACK_OF_EXPERTISE"
+      ]
+    },
+    {
+      "path": "/tecnico-informatica-fazenda-rio-grande",
+      "cluster": "CIDADE",
+      "tier": "B",
+      "score": 75,
+      "faixa": "B",
+      "similaridadeMax": 0.294,
+      "textoExclusivoRatio": 0.545,
+      "palavras": 858,
+      "gscStatus": "DISCOVERED_NOT_INDEXED",
+      "impressions": 0,
+      "causas": [
+        "THIN_INFORMATION",
+        "LOCAL_DOORWAY_RISK"
+      ]
+    },
+    {
+      "path": "/tecnico-informatica-piraquara",
+      "cluster": "CIDADE",
+      "tier": "B",
+      "score": 75,
+      "faixa": "B",
+      "similaridadeMax": 0.316,
+      "textoExclusivoRatio": 0.515,
+      "palavras": 876,
+      "gscStatus": "DISCOVERED_NOT_INDEXED",
+      "impressions": 0,
+      "causas": [
+        "THIN_INFORMATION",
+        "LOCAL_DOORWAY_RISK"
+      ]
+    },
+    {
+      "path": "/anuncie",
+      "cluster": "INSTITUCIONAL",
+      "tier": "D",
+      "score": 76,
+      "faixa": "B",
+      "similaridadeMax": 0,
+      "textoExclusivoRatio": 1,
+      "palavras": 1004,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": [
+        "THIN_INFORMATION",
+        "WEAK_EVIDENCE"
+      ]
+    },
+    {
+      "path": "/bairros/seminario",
+      "cluster": "BAIRRO",
+      "tier": "B",
+      "score": 76,
+      "faixa": "B",
+      "similaridadeMax": 0.188,
+      "textoExclusivoRatio": 0.655,
+      "palavras": 744,
+      "gscStatus": "DISCOVERED_NOT_INDEXED",
+      "impressions": 0,
+      "causas": [
+        "THIN_INFORMATION",
+        "WEAK_EVIDENCE"
+      ]
+    },
+    {
+      "path": "/tecnico-informatica-almirante-tamandare",
+      "cluster": "CIDADE",
+      "tier": "B",
+      "score": 76,
+      "faixa": "B",
+      "similaridadeMax": 0.308,
+      "textoExclusivoRatio": 0.516,
+      "palavras": 817,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": []
+    },
+    {
+      "path": "/bairros/campo-comprido",
+      "cluster": "BAIRRO",
+      "tier": "B",
+      "score": 77,
+      "faixa": "B",
+      "similaridadeMax": 0.173,
+      "textoExclusivoRatio": 0.651,
+      "palavras": 736,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": [
+        "THIN_INFORMATION",
+        "LOCAL_DOORWAY_RISK"
+      ]
+    },
+    {
+      "path": "/bairros/capao-raso",
+      "cluster": "BAIRRO",
+      "tier": "B",
+      "score": 77,
+      "faixa": "B",
+      "similaridadeMax": 0.185,
+      "textoExclusivoRatio": 0.615,
+      "palavras": 787,
+      "gscStatus": "DISCOVERED_NOT_INDEXED",
+      "impressions": 0,
+      "causas": [
+        "THIN_INFORMATION",
+        "LOCAL_DOORWAY_RISK"
+      ]
+    },
+    {
+      "path": "/bairros/cristo-rei",
+      "cluster": "BAIRRO",
+      "tier": "B",
+      "score": 77,
+      "faixa": "B",
+      "similaridadeMax": 0.239,
+      "textoExclusivoRatio": 0.557,
+      "palavras": 660,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": [
+        "THIN_INFORMATION",
+        "WEAK_EVIDENCE"
+      ]
+    },
+    {
+      "path": "/bairros/pinheirinho",
+      "cluster": "BAIRRO",
+      "tier": "B",
+      "score": 77,
+      "faixa": "B",
+      "similaridadeMax": 0.167,
+      "textoExclusivoRatio": 0.688,
+      "palavras": 781,
+      "gscStatus": "DISCOVERED_NOT_INDEXED",
+      "impressions": 0,
+      "causas": [
+        "THIN_INFORMATION",
+        "LOCAL_DOORWAY_RISK"
+      ]
+    },
+    {
+      "path": "/blog",
+      "cluster": "BLOG_HUB",
+      "tier": "A",
+      "score": 77,
+      "faixa": "B",
+      "similaridadeMax": 0,
+      "textoExclusivoRatio": 1,
+      "palavras": 568,
+      "gscStatus": "OTHER",
+      "impressions": 0,
+      "causas": []
+    },
+    {
+      "path": "/coleta-e-entrega",
+      "cluster": "INSTITUCIONAL",
+      "tier": "D",
+      "score": 77,
+      "faixa": "B",
+      "similaridadeMax": 0.082,
+      "textoExclusivoRatio": 0.686,
+      "palavras": 716,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": [
+        "THIN_INFORMATION"
+      ]
+    },
+    {
+      "path": "/problemas/computador-lento",
+      "cluster": "PROBLEMA",
+      "tier": "B",
+      "score": 77,
+      "faixa": "B",
+      "similaridadeMax": 0.104,
+      "textoExclusivoRatio": 0.762,
+      "palavras": 2157,
+      "gscStatus": "INDEXED",
+      "impressions": 1,
+      "causas": [
+        "LACK_OF_EXPERTISE"
+      ]
+    },
+    {
+      "path": "/problemas/dobradica-do-notebook-quebrada",
+      "cluster": "PROBLEMA",
+      "tier": "B",
+      "score": 77,
+      "faixa": "B",
+      "similaridadeMax": 0.067,
+      "textoExclusivoRatio": 0.849,
+      "palavras": 1434,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": []
+    },
+    {
+      "path": "/problemas/monitor-sem-sinal",
+      "cluster": "PROBLEMA",
+      "tier": "B",
+      "score": 77,
+      "faixa": "B",
+      "similaridadeMax": 0.066,
+      "textoExclusivoRatio": 0.853,
+      "palavras": 1623,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": [
+        "LACK_OF_EXPERTISE"
+      ]
+    },
+    {
+      "path": "/problemas/notebook-com-tela-preta",
+      "cluster": "PROBLEMA",
+      "tier": "B",
+      "score": 77,
+      "faixa": "B",
+      "similaridadeMax": 0.068,
+      "textoExclusivoRatio": 0.831,
+      "palavras": 1709,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": [
+        "LACK_OF_EXPERTISE"
+      ]
+    },
+    {
+      "path": "/problemas/tv-com-linhas-na-tela",
+      "cluster": "PROBLEMA",
+      "tier": "B",
+      "score": 77,
+      "faixa": "B",
+      "similaridadeMax": 0.09,
+      "textoExclusivoRatio": 0.812,
+      "palavras": 1700,
+      "gscStatus": "DISCOVERED_NOT_INDEXED",
+      "impressions": 0,
+      "causas": [
+        "LACK_OF_EXPERTISE"
+      ]
+    },
+    {
+      "path": "/problemas/tv-com-som-sem-imagem",
+      "cluster": "PROBLEMA",
+      "tier": "B",
+      "score": 77,
+      "faixa": "B",
+      "similaridadeMax": 0.048,
+      "textoExclusivoRatio": 0.861,
+      "palavras": 1765,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": [
+        "LACK_OF_EXPERTISE"
+      ]
+    },
+    {
+      "path": "/problemas/windows-nao-inicia",
+      "cluster": "PROBLEMA",
+      "tier": "B",
+      "score": 77,
+      "faixa": "B",
+      "similaridadeMax": 0.081,
+      "textoExclusivoRatio": 0.83,
+      "palavras": 1418,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": []
+    },
+    {
+      "path": "/tecnico-informatica-quatro-barras",
+      "cluster": "CIDADE",
+      "tier": "B",
+      "score": 77,
+      "faixa": "B",
+      "similaridadeMax": 0.3,
+      "textoExclusivoRatio": 0.521,
+      "palavras": 821,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": [
+        "THIN_INFORMATION",
+        "LOCAL_DOORWAY_RISK"
+      ]
+    },
+    {
+      "path": "/areas-atendidas",
+      "cluster": "HUB",
+      "tier": "A",
+      "score": 78,
+      "faixa": "B",
+      "similaridadeMax": 0.002,
+      "textoExclusivoRatio": 0.996,
+      "palavras": 988,
+      "gscStatus": "DISCOVERED_NOT_INDEXED",
+      "impressions": 0,
+      "causas": [
+        "THIN_INFORMATION"
+      ]
+    },
+    {
+      "path": "/problemas/notebook-nao-liga",
+      "cluster": "PROBLEMA",
+      "tier": "B",
+      "score": 78,
+      "faixa": "B",
+      "similaridadeMax": 0.047,
+      "textoExclusivoRatio": 0.892,
+      "palavras": 1831,
+      "gscStatus": "INDEXED",
+      "impressions": 1,
+      "causas": [
+        "THIN_INFORMATION",
+        "LACK_OF_EXPERTISE"
+      ]
+    },
+    {
+      "path": "/bairros/juveve",
+      "cluster": "BAIRRO",
+      "tier": "B",
+      "score": 79,
+      "faixa": "B",
+      "similaridadeMax": 0.182,
+      "textoExclusivoRatio": 0.652,
+      "palavras": 741,
+      "gscStatus": "DISCOVERED_NOT_INDEXED",
+      "impressions": 0,
+      "causas": [
+        "THIN_INFORMATION"
+      ]
+    },
+    {
+      "path": "/bairros/sitio-cercado",
+      "cluster": "BAIRRO",
+      "tier": "B",
+      "score": 79,
+      "faixa": "B",
+      "similaridadeMax": 0.194,
+      "textoExclusivoRatio": 0.637,
+      "palavras": 800,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": [
+        "THIN_INFORMATION",
+        "WEAK_EVIDENCE"
+      ]
+    },
+    {
+      "path": "/blog/como-escolher-uma-workstation",
+      "cluster": "ARTIGO",
+      "tier": "B",
+      "score": 79,
+      "faixa": "B",
+      "similaridadeMax": 0.017,
+      "textoExclusivoRatio": 0.966,
+      "palavras": 1809,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": [
+        "THIN_INFORMATION"
+      ]
+    },
+    {
+      "path": "/blog/organizacao-de-ti-para-pequenos-escritorios",
+      "cluster": "ARTIGO",
+      "tier": "B",
+      "score": 79,
+      "faixa": "B",
+      "similaridadeMax": 0.017,
+      "textoExclusivoRatio": 0.969,
+      "palavras": 1957,
+      "gscStatus": "DISCOVERED_NOT_INDEXED",
+      "impressions": 0,
+      "causas": [
+        "THIN_INFORMATION"
+      ]
+    },
+    {
+      "path": "/politica-de-pecas-do-cliente",
+      "cluster": "INSTITUCIONAL",
+      "tier": "D",
+      "score": 79,
+      "faixa": "B",
+      "similaridadeMax": 0.006,
+      "textoExclusivoRatio": 0.984,
+      "palavras": 1847,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": []
+    },
+    {
+      "path": "/problemas/computador-nao-liga",
+      "cluster": "PROBLEMA",
+      "tier": "B",
+      "score": 79,
+      "faixa": "B",
+      "similaridadeMax": 0.049,
+      "textoExclusivoRatio": 0.873,
+      "palavras": 1669,
+      "gscStatus": "DISCOVERED_NOT_INDEXED",
+      "impressions": 0,
+      "causas": []
+    },
+    {
+      "path": "/problemas/tela-azul-windows",
+      "cluster": "PROBLEMA",
+      "tier": "B",
+      "score": 79,
+      "faixa": "B",
+      "similaridadeMax": 0.104,
+      "textoExclusivoRatio": 0.802,
+      "palavras": 2255,
+      "gscStatus": "DISCOVERED_NOT_INDEXED",
+      "impressions": 0,
+      "causas": []
+    },
+    {
+      "path": "/problemas/tela-de-notebook-quebrada",
+      "cluster": "PROBLEMA",
+      "tier": "B",
+      "score": 79,
+      "faixa": "B",
+      "similaridadeMax": 0.036,
+      "textoExclusivoRatio": 0.898,
+      "palavras": 1724,
+      "gscStatus": "DISCOVERED_NOT_INDEXED",
+      "impressions": 0,
+      "causas": []
+    },
+    {
+      "path": "/problemas/tv-desligando-sozinha",
+      "cluster": "PROBLEMA",
+      "tier": "B",
+      "score": 79,
+      "faixa": "B",
+      "similaridadeMax": 0.128,
+      "textoExclusivoRatio": 0.714,
+      "palavras": 1605,
+      "gscStatus": "DISCOVERED_NOT_INDEXED",
+      "impressions": 0,
+      "causas": []
+    },
+    {
+      "path": "/sobre",
+      "cluster": "INSTITUCIONAL",
+      "tier": "A",
+      "score": 80,
+      "faixa": "B",
+      "similaridadeMax": 0.047,
+      "textoExclusivoRatio": 0.857,
+      "palavras": 1034,
+      "gscStatus": "INDEXED",
+      "impressions": 6,
+      "causas": [
+        "THIN_INFORMATION"
+      ]
+    },
+    {
+      "path": "/diagnostico-tecnico",
+      "cluster": "INSTITUCIONAL",
+      "tier": "D",
+      "score": 81,
+      "faixa": "B",
+      "similaridadeMax": 0.001,
+      "textoExclusivoRatio": 0.996,
+      "palavras": 837,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": [
+        "WEAK_EVIDENCE"
+      ]
+    },
+    {
+      "path": "/guia-tecnico-informatica",
+      "cluster": "HUB",
+      "tier": "B",
+      "score": 81,
+      "faixa": "B",
+      "similaridadeMax": 0.021,
+      "textoExclusivoRatio": 0.959,
+      "palavras": 1935,
+      "gscStatus": "DISCOVERED_NOT_INDEXED",
+      "impressions": 0,
+      "causas": []
+    },
+    {
+      "path": "/problemas/notebook-lento",
+      "cluster": "PROBLEMA",
+      "tier": "B",
+      "score": 81,
+      "faixa": "B",
+      "similaridadeMax": 0.054,
+      "textoExclusivoRatio": 0.835,
+      "palavras": 1582,
+      "gscStatus": "DISCOVERED_NOT_INDEXED",
+      "impressions": 0,
+      "causas": []
+    },
+    {
+      "path": "/seguranca-dos-dados",
+      "cluster": "INSTITUCIONAL",
+      "tier": "D",
+      "score": 81,
+      "faixa": "B",
+      "similaridadeMax": 0.005,
+      "textoExclusivoRatio": 0.989,
+      "palavras": 2212,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": []
+    },
+    {
+      "path": "/problemas/computador-desliga-sozinho",
+      "cluster": "PROBLEMA",
+      "tier": "B",
+      "score": 82,
+      "faixa": "B",
+      "similaridadeMax": 0.052,
+      "textoExclusivoRatio": 0.877,
+      "palavras": 1851,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": []
+    },
+    {
+      "path": "/problemas/notebook-nao-carrega-bateria",
+      "cluster": "PROBLEMA",
+      "tier": "B",
+      "score": 82,
+      "faixa": "B",
+      "similaridadeMax": 0.058,
+      "textoExclusivoRatio": 0.844,
+      "palavras": 2092,
+      "gscStatus": "DISCOVERED_NOT_INDEXED",
+      "impressions": 0,
+      "causas": []
+    },
+    {
+      "path": "/problemas/notebook-superaquecendo",
+      "cluster": "PROBLEMA",
+      "tier": "B",
+      "score": 82,
+      "faixa": "B",
+      "similaridadeMax": 0.076,
+      "textoExclusivoRatio": 0.837,
+      "palavras": 2615,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": []
+    },
+    {
+      "path": "/problemas/tv-nao-liga",
+      "cluster": "PROBLEMA",
+      "tier": "B",
+      "score": 82,
+      "faixa": "B",
+      "similaridadeMax": 0.052,
+      "textoExclusivoRatio": 0.843,
+      "palavras": 1966,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": []
+    },
+    {
+      "path": "/atendimento-domicilio",
+      "cluster": "INSTITUCIONAL",
+      "tier": "D",
+      "score": 83,
+      "faixa": "B",
+      "similaridadeMax": 0.084,
+      "textoExclusivoRatio": 0.791,
+      "palavras": 2115,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": [
+        "THIN_INFORMATION"
+      ]
+    },
+    {
+      "path": "/tecnico-informatica-curitiba",
+      "cluster": "CIDADE",
+      "tier": "A",
+      "score": 84,
+      "faixa": "B",
+      "similaridadeMax": 0.001,
+      "textoExclusivoRatio": 0.998,
+      "palavras": 1750,
+      "gscStatus": "INDEXED",
+      "impressions": 59,
+      "causas": [
+        "THIN_INFORMATION"
+      ]
+    },
+    {
+      "path": "/servicos/redes-e-wifi",
+      "cluster": "SERVICO",
+      "tier": "A",
+      "score": 85,
+      "faixa": "A",
+      "similaridadeMax": 0.172,
+      "textoExclusivoRatio": 0.755,
+      "palavras": 3141,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": [
+        "THIN_INFORMATION"
+      ]
+    },
+    {
+      "path": "/atendimento-remoto",
+      "cluster": "INSTITUCIONAL",
+      "tier": "D",
+      "score": 87,
+      "faixa": "A",
+      "similaridadeMax": 0.084,
+      "textoExclusivoRatio": 0.821,
+      "palavras": 1851,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": [
+        "THIN_INFORMATION"
+      ]
+    },
+    {
+      "path": "/empresa-de-ti-curitiba",
+      "cluster": "HUB",
+      "tier": "A",
+      "score": 87,
+      "faixa": "A",
+      "similaridadeMax": 0.002,
+      "textoExclusivoRatio": 0.995,
+      "palavras": 2785,
+      "gscStatus": "INDEXED",
+      "impressions": 2,
+      "causas": [
+        "THIN_INFORMATION"
+      ]
+    },
+    {
+      "path": "/como-funciona",
+      "cluster": "INSTITUCIONAL",
+      "tier": "A",
+      "score": 88,
+      "faixa": "A",
+      "similaridadeMax": 0.07,
+      "textoExclusivoRatio": 0.905,
+      "palavras": 2378,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": []
+    },
+    {
+      "path": "/equipamentos-atendidos",
+      "cluster": "EQUIPAMENTO",
+      "tier": "D",
+      "score": 88,
+      "faixa": "A",
+      "similaridadeMax": 0,
+      "textoExclusivoRatio": 1,
+      "palavras": 1542,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": [
+        "THIN_INFORMATION"
+      ]
+    },
+    {
+      "path": "/servicos/conserto-monitor",
+      "cluster": "SERVICO",
+      "tier": "D",
+      "score": 88,
+      "faixa": "A",
+      "similaridadeMax": 0.119,
+      "textoExclusivoRatio": 0.798,
+      "palavras": 4017,
+      "gscStatus": "DISCOVERED_NOT_INDEXED",
+      "impressions": 0,
+      "causas": []
+    },
+    {
+      "path": "/servicos/manutencao-de-notebook",
+      "cluster": "SERVICO",
+      "tier": "A",
+      "score": 88,
+      "faixa": "A",
+      "similaridadeMax": 0.189,
+      "textoExclusivoRatio": 0.658,
+      "palavras": 2294,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": []
+    },
+    {
+      "path": "/",
+      "cluster": "HOME",
+      "tier": "A",
+      "score": 89,
+      "faixa": "A",
+      "similaridadeMax": 0,
+      "textoExclusivoRatio": 1,
+      "palavras": 1519,
+      "gscStatus": "INDEXED",
+      "impressions": 23,
+      "causas": []
+    },
+    {
+      "path": "/servicos/formatacao",
+      "cluster": "SERVICO",
+      "tier": "A",
+      "score": 89,
+      "faixa": "A",
+      "similaridadeMax": 0.22,
+      "textoExclusivoRatio": 0.617,
+      "palavras": 2116,
+      "gscStatus": "INDEXED",
+      "impressions": 19,
+      "causas": []
+    },
+    {
+      "path": "/servicos/manutencao-de-computador",
+      "cluster": "SERVICO",
+      "tier": "A",
+      "score": 89,
+      "faixa": "A",
+      "similaridadeMax": 0.207,
+      "textoExclusivoRatio": 0.659,
+      "palavras": 2353,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": []
+    },
+    {
+      "path": "/servicos/recuperacao-de-dados",
+      "cluster": "SERVICO",
+      "tier": "A",
+      "score": 89,
+      "faixa": "A",
+      "similaridadeMax": 0.192,
+      "textoExclusivoRatio": 0.641,
+      "palavras": 2150,
+      "gscStatus": "INDEXED",
+      "impressions": 45,
+      "causas": []
+    },
+    {
+      "path": "/servicos/remocao-de-virus",
+      "cluster": "SERVICO",
+      "tier": "A",
+      "score": 89,
+      "faixa": "A",
+      "similaridadeMax": 0.22,
+      "textoExclusivoRatio": 0.602,
+      "palavras": 1988,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": []
+    },
+    {
+      "path": "/servicos/suporte-home-office",
+      "cluster": "SERVICO",
+      "tier": "A",
+      "score": 89,
+      "faixa": "A",
+      "similaridadeMax": 0.156,
+      "textoExclusivoRatio": 0.757,
+      "palavras": 3132,
+      "gscStatus": "INDEXED",
+      "impressions": 2,
+      "causas": []
+    },
+    {
+      "path": "/servicos/upgrade-ssd-ram",
+      "cluster": "SERVICO",
+      "tier": "A",
+      "score": 89,
+      "faixa": "A",
+      "similaridadeMax": 0.207,
+      "textoExclusivoRatio": 0.675,
+      "palavras": 2357,
+      "gscStatus": "INDEXED",
+      "impressions": 47,
+      "causas": []
+    },
+    {
+      "path": "/servicos",
+      "cluster": "HUB",
+      "tier": "A",
+      "score": 92,
+      "faixa": "A",
+      "similaridadeMax": 0.002,
+      "textoExclusivoRatio": 0.986,
+      "palavras": 1424,
+      "gscStatus": "INDEXED",
+      "impressions": 28,
+      "causas": []
+    },
+    {
+      "path": "/servicos/manutencao-preventiva-empresas",
+      "cluster": "SERVICO",
+      "tier": "A",
+      "score": 92,
+      "faixa": "A",
+      "similaridadeMax": 0.152,
+      "textoExclusivoRatio": 0.748,
+      "palavras": 3070,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": []
+    },
+    {
+      "path": "/servicos/suporte-tecnico-empresarial",
+      "cluster": "SERVICO",
+      "tier": "A",
+      "score": 92,
+      "faixa": "A",
+      "similaridadeMax": 0.159,
+      "textoExclusivoRatio": 0.737,
+      "palavras": 3182,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": []
+    },
+    {
+      "path": "/precos-e-politicas",
+      "cluster": "INSTITUCIONAL",
+      "tier": "A",
+      "score": 93,
+      "faixa": "A",
+      "similaridadeMax": 0.041,
+      "textoExclusivoRatio": 0.933,
+      "palavras": 3422,
+      "gscStatus": "INDEXED",
+      "impressions": 76,
+      "causas": []
+    },
+    {
+      "path": "/servicos/backup-para-empresas",
+      "cluster": "SERVICO",
+      "tier": "A",
+      "score": 93,
+      "faixa": "A",
+      "similaridadeMax": 0.144,
+      "textoExclusivoRatio": 0.77,
+      "palavras": 3312,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": []
+    },
+    {
+      "path": "/servicos/conserto-placa",
+      "cluster": "SERVICO",
+      "tier": "D",
+      "score": 93,
+      "faixa": "A",
+      "similaridadeMax": 0.124,
+      "textoExclusivoRatio": 0.782,
+      "palavras": 4022,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": []
+    },
+    {
+      "path": "/servicos/conserto-tv",
+      "cluster": "SERVICO",
+      "tier": "D",
+      "score": 93,
+      "faixa": "A",
+      "similaridadeMax": 0.114,
+      "textoExclusivoRatio": 0.816,
+      "palavras": 4480,
+      "gscStatus": "UNKNOWN_TO_GOOGLE",
+      "impressions": 0,
+      "causas": []
+    },
+    {
+      "path": "/servicos/montagem-de-pc",
+      "cluster": "SERVICO",
+      "tier": "A",
+      "score": 94,
+      "faixa": "A",
+      "similaridadeMax": 0.097,
+      "textoExclusivoRatio": 0.859,
+      "palavras": 5269,
+      "gscStatus": "DISCOVERED_NOT_INDEXED",
+      "impressions": 0,
+      "causas": []
+    }
+  ]
+}

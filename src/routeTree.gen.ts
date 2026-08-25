@@ -104,6 +104,7 @@ import { Route as AdminDashboardRouteImport } from './routes/admin.dashboard'
 import { Route as AdminFotosBairrosRouteImport } from './routes/admin.fotos-bairros'
 import { Route as AdminFunnelRouteImport } from './routes/admin.funnel'
 import { Route as AdminIndexacaoRouteImport } from './routes/admin.indexacao'
+import { Route as AdminIndexacaoDiariaRouteImport } from './routes/admin.indexacao-diaria'
 import { Route as AdminLoginRouteImport } from './routes/admin.login'
 import { Route as AdminOperacaoRouteImport } from './routes/admin.operacao'
 import { Route as AdminProvasMonitorRouteImport } from './routes/admin.provas-monitor'
@@ -989,6 +990,11 @@ const AdminFunnelRoute = AdminFunnelRouteImport.update({
 const AdminIndexacaoRoute = AdminIndexacaoRouteImport.update({
   id: '/admin/indexacao',
   path: '/admin/indexacao',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminIndexacaoDiariaRoute = AdminIndexacaoDiariaRouteImport.update({
+  id: '/admin/indexacao-diaria',
+  path: '/admin/indexacao-diaria',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AdminLoginRoute = AdminLoginRouteImport.update({
@@ -3192,6 +3198,7 @@ export interface FileRoutesByFullPath {
   '/admin/fotos-bairros': typeof AdminFotosBairrosRoute
   '/admin/funnel': typeof AdminFunnelRoute
   '/admin/indexacao': typeof AdminIndexacaoRoute
+  '/admin/indexacao-diaria': typeof AdminIndexacaoDiariaRoute
   '/admin/login': typeof AdminLoginRoute
   '/admin/operacao': typeof AdminOperacaoRoute
   '/admin/provas-monitor': typeof AdminProvasMonitorRoute
@@ -3676,6 +3683,7 @@ export interface FileRoutesByTo {
   '/admin/fotos-bairros': typeof AdminFotosBairrosRoute
   '/admin/funnel': typeof AdminFunnelRoute
   '/admin/indexacao': typeof AdminIndexacaoRoute
+  '/admin/indexacao-diaria': typeof AdminIndexacaoDiariaRoute
   '/admin/login': typeof AdminLoginRoute
   '/admin/operacao': typeof AdminOperacaoRoute
   '/admin/provas-monitor': typeof AdminProvasMonitorRoute
@@ -4161,6 +4169,7 @@ export interface FileRoutesById {
   '/admin/fotos-bairros': typeof AdminFotosBairrosRoute
   '/admin/funnel': typeof AdminFunnelRoute
   '/admin/indexacao': typeof AdminIndexacaoRoute
+  '/admin/indexacao-diaria': typeof AdminIndexacaoDiariaRoute
   '/admin/login': typeof AdminLoginRoute
   '/admin/operacao': typeof AdminOperacaoRoute
   '/admin/provas-monitor': typeof AdminProvasMonitorRoute
@@ -4647,6 +4656,7 @@ export interface FileRouteTypes {
     | '/admin/fotos-bairros'
     | '/admin/funnel'
     | '/admin/indexacao'
+    | '/admin/indexacao-diaria'
     | '/admin/login'
     | '/admin/operacao'
     | '/admin/provas-monitor'
@@ -5131,6 +5141,7 @@ export interface FileRouteTypes {
     | '/admin/fotos-bairros'
     | '/admin/funnel'
     | '/admin/indexacao'
+    | '/admin/indexacao-diaria'
     | '/admin/login'
     | '/admin/operacao'
     | '/admin/provas-monitor'
@@ -5615,6 +5626,7 @@ export interface FileRouteTypes {
     | '/admin/fotos-bairros'
     | '/admin/funnel'
     | '/admin/indexacao'
+    | '/admin/indexacao-diaria'
     | '/admin/login'
     | '/admin/operacao'
     | '/admin/provas-monitor'
@@ -6100,6 +6112,7 @@ export interface RootRouteChildren {
   AdminFotosBairrosRoute: typeof AdminFotosBairrosRoute
   AdminFunnelRoute: typeof AdminFunnelRoute
   AdminIndexacaoRoute: typeof AdminIndexacaoRoute
+  AdminIndexacaoDiariaRoute: typeof AdminIndexacaoDiariaRoute
   AdminLoginRoute: typeof AdminLoginRoute
   AdminOperacaoRoute: typeof AdminOperacaoRoute
   AdminProvasMonitorRoute: typeof AdminProvasMonitorRoute
@@ -7155,6 +7168,13 @@ declare module '@tanstack/react-router' {
       path: '/admin/indexacao'
       fullPath: '/admin/indexacao'
       preLoaderRoute: typeof AdminIndexacaoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/indexacao-diaria': {
+      id: '/admin/indexacao-diaria'
+      path: '/admin/indexacao-diaria'
+      fullPath: '/admin/indexacao-diaria'
+      preLoaderRoute: typeof AdminIndexacaoDiariaRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/admin/login': {
@@ -9970,6 +9990,7 @@ const rootRouteChildren: RootRouteChildren = {
   AdminFotosBairrosRoute: AdminFotosBairrosRoute,
   AdminFunnelRoute: AdminFunnelRoute,
   AdminIndexacaoRoute: AdminIndexacaoRoute,
+  AdminIndexacaoDiariaRoute: AdminIndexacaoDiariaRoute,
   AdminLoginRoute: AdminLoginRoute,
   AdminOperacaoRoute: AdminOperacaoRoute,
   AdminProvasMonitorRoute: AdminProvasMonitorRoute,
