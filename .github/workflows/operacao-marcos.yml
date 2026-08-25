@@ -1,0 +1,83 @@
+name: operacao-marcos
+
+# Fase de operação: verificação agendada dos marcos D7 e D14 (e D30 manual).
+# O job apenas MEDE — não reforma conteúdo, não cria rota, não altera sitemap.
+# Ele coleta o inventário real do Search Console, registra o marco versionado,
+# reavalia os limiares operacionais e envia resumo se houver regressão.
+
+on:
+  schedule:
+    # D7 e D14 são disparados semanalmente; o script decide o marco pelo input
+    # padrão de agenda (segunda 07:00 UTC) e ignora marco já registrado.
+    - cron: "0 7 * * 1"
+  workflow_dispatch:
+    inputs:
+      marco:
+        description: "Marco a registrar (D0, D7, D14, D30)"
+        required: true
+        default: "D7"
+      overwrite:
+        description: "Sobrescrever marco já registrado"
+        required: false
+        default: "false"
+
+concurrency:
+  group: operacao-marcos
+  cancel-in-progress: false
+
+jobs:
+  marco:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      LOVABLE_API_KEY: ${{ secrets.LOVABLE_API_KEY }}
+      GOOGLE_SEARCH_CONSOLE_API_KEY: ${{ secrets.GOOGLE_SEARCH_CONSOLE_API_KEY }}
+      GSC_SITE_URL: sc-domain:tecnico.curitiba.br
+      SEO_ALERTS_WEBHOOK: ${{ secrets.SEO_ALERTS_WEBHOOK }}
+      SEO_ALERTS_EMAIL: ${{ secrets.SEO_ALERTS_EMAIL }}
+      RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Install deps
+        run: npm ci --no-audit --no-fund
+
+      # ── Coleta real (produção). Sem coleta não há marco: fail-closed.
+      - name: Inventário de indexação (produção + GSC)
+        run: npm run report:indexation-inventory
+
+      - name: Auditoria de qualidade local
+        run: npm run report:local-page-quality || true
+
+      - name: Escolher marco
+        id: marco
+        run: |
+          MARCO="${{ github.event.inputs.marco }}"
+          if [ -z "$MARCO" ]; then
+            # Agenda: registra o primeiro marco ainda não presente no histórico.
+            MARCO=$(node -e "const f='reports/operacao-marcos.json';const fs=require('fs');const h=fs.existsSync(f)?JSON.parse(fs.readFileSync(f,'utf8')).marcos.map(m=>m.marco):[];console.log(['D0','D7','D14','D30'].find(m=>!h.includes(m))??'')")
+          fi
+          echo "marco=$MARCO" >> "$GITHUB_OUTPUT"
+
+      - name: Registrar marco
+        if: steps.marco.outputs.marco != ''
+        run: |
+          FLAGS=""
+          if [ "${{ github.event.inputs.overwrite }}" = "true" ]; then FLAGS="--overwrite"; fi
+          node scripts/snapshot-marco.mjs --marco=${{ steps.marco.outputs.marco }} --commit=${{ github.sha }} $FLAGS
+
+      - name: Alertas operacionais (resumo só quando muda)
+        if: always()
+        run: node scripts/monitor-operational-alerts.mjs --notify
+
+      - name: Publicar relatórios do marco
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: operacao-${{ steps.marco.outputs.marco }}
+          path: |
+            reports/operacao-marcos.json
+            reports/operacao-*.md
+            reports/operational-alerts.md
