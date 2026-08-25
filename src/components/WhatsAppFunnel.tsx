@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import * as Icons from "lucide-react";
-import { ArrowRight, ArrowLeft, CheckCircle2, Lock, MessageCircle, Copy, ExternalLink } from "lucide-react";
+import { ArrowRight, ArrowLeft, CheckCircle2, Lock, MessageCircle, Copy, ExternalLink, AlertCircle } from "lucide-react";
 import { trackCTAClick } from "@/lib/analytics";
 import {
   trackFunnelOpen,
@@ -1128,13 +1128,23 @@ export const WhatsAppFunnel = () => {
                     </p>
                     <FunnelNav
                       onBack={back}
-                      onNext={handleNext}
+                      onNext={() => {
+                        if (!criteriosOk && categoriaPorEquipamento(answers.equipment)) {
+                          setInvalidReason("Confirme que leu os critérios de aceite e recusa da categoria.");
+                          return;
+                        }
+                        if (rules.route === "coleta" && !coleta.ok) {
+                          setInvalidReason("Confirme os pré-requisitos da coleta e entrega para continuar.");
+                          return;
+                        }
+                        handleNext();
+                      }}
                       canNext={
                         canAdvance &&
                         (criteriosOk || !categoriaPorEquipamento(answers.equipment)) &&
                         (rules.route !== "coleta" || coleta.ok)
                       }
-
+                      error={invalidReason}
                       nextLabel="Continuar"
                     />
                   </div>
