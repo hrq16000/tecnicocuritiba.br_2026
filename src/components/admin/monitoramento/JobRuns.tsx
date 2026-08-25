@@ -40,7 +40,7 @@ export function JobRuns() {
   }, []);
 
   return (
-    <section className="mt-10">
+    <section id="jobs" className="mt-10 scroll-mt-24">
       <h2 className="text-lg font-semibold">Execução de jobs</h2>
       {!execucoes?.length ? (
         <p className="mt-2 text-sm text-muted-foreground">

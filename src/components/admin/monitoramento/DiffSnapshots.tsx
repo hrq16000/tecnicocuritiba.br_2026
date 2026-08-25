@@ -52,7 +52,7 @@ export function DiffSnapshots() {
   }, []);
 
   return (
-    <section className="mt-10">
+    <section id="diff" className="mt-10 scroll-mt-24">
       <h2 className="text-lg font-semibold">
         Diff entre snapshots (title · H1 · canonical · schema)
       </h2>

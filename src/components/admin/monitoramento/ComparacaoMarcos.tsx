@@ -116,7 +116,7 @@ export function ComparacaoMarcos({ marcos }: { marcos: MarcoComparavel[] }) {
 
   if (comUrls.length < 2) {
     return (
-      <section className="mt-10">
+      <section id="comparacao" className="mt-10 scroll-mt-24">
         <h2 className="text-lg font-semibold">Comparação entre marcos (deltas)</h2>
         <p className="mt-2 text-sm text-muted-foreground">
           {SEM_DADO} — são necessários dois marcos com estados por URL. O
@@ -131,7 +131,7 @@ export function ComparacaoMarcos({ marcos }: { marcos: MarcoComparavel[] }) {
     : linhas;
 
   return (
-    <section className="mt-10">
+    <section id="comparacao" className="mt-10 scroll-mt-24">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <h2 className="text-lg font-semibold">
           Comparação {A?.marco} × {B?.marco}

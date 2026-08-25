@@ -83,7 +83,7 @@ export function DrilldownUrls({
 
   if (!ultimo) {
     return (
-      <section className="mt-10">
+      <section id="drilldown" className="mt-10 scroll-mt-24">
         <h2 className="text-lg font-semibold">Drilldown por URL</h2>
         <p className="mt-2 text-sm text-muted-foreground">
           {SEM_DADO} — nenhum marco registrou estados por URL ainda. Rode{" "}
@@ -94,7 +94,7 @@ export function DrilldownUrls({
   }
 
   return (
-    <section className="mt-10">
+    <section id="drilldown" className="mt-10 scroll-mt-24">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <h2 className="text-lg font-semibold">
           Drilldown por URL ({filtradas.length})
