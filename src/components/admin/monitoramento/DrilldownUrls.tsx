@@ -289,6 +289,7 @@ function FragmentRow({
                 </a>
               </Button>
             </div>
+            <ChecklistAuditoria url={url} marco={marco} />
           </td>
         </tr>
       )}
