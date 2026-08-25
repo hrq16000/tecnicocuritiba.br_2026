@@ -1,19 +1,28 @@
 {
   "schema": "freeze-v2-drift/1.0",
-  "verificadoEm": "2026-08-25T07:26:06.798Z",
+  "verificadoEm": "2026-08-25T07:28:07.450Z",
   "freezeSelo": "b12f35b4368371ba81444cffe7cbafde7d810bdda9089e87e36e056171aab709",
   "freezeSeladoEm": "2026-08-25T06:09:07.486Z",
-  "totalDiffs": 69,
+  "totalDiffs": 71,
   "porClasse": {
     "CI_CHANGE": 18,
     "OBSERVABILITY_CHANGE": 11,
     "ADMIN_CHANGE": 8,
+    "PUBLIC_CHANGE": 2,
     "NON_CURATED_PUBLIC_CHANGE": 32
   },
-  "publicChangeTotal": 0,
-  "publicChangeNaoRegistrado": 0,
-  "alerta": null,
-  "exigido": [],
+  "publicChangeTotal": 2,
+  "publicChangeNaoRegistrado": 2,
+  "alerta": "PRE_D14_PUBLIC_INTERVENTION_DETECTED",
+  "exigido": [
+    "intervention event",
+    "timestamp",
+    "URL",
+    "diff",
+    "motivo",
+    "coorte afetada",
+    "novo freeze versionado"
+  ],
   "diffs": [
     {
       "arquivo": ".github/workflows/ci.yml",
@@ -146,6 +155,11 @@
       "classe": "ADMIN_CHANGE"
     },
     {
+      "arquivo": "src/components/areas/BairroInterlinkLocal.tsx",
+      "tipo": "ADICIONADO",
+      "classe": "PUBLIC_CHANGE"
+    },
+    {
       "arquivo": "src/integrations/supabase/types.ts",
       "tipo": "ALTERADO",
       "classe": "CI_CHANGE"
@@ -224,6 +238,11 @@
       "arquivo": "src/pages/bairros/BairroAlto.tsx",
       "tipo": "ADICIONADO",
       "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/pages/bairros/BairroTemplate.tsx",
+      "tipo": "ALTERADO",
+      "classe": "PUBLIC_CHANGE"
     },
     {
       "arquivo": "src/pages/bairros/Butiatuvinha.tsx",
