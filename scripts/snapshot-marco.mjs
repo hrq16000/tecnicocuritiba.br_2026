@@ -21,8 +21,9 @@
  *   reports/serp-signals-<marco>.json  cópia imutável dos sinais de SERP
  *   public/operacao-marcos.json        payload consumido por /admin/monitoramento
  */
-import { copyFileSync, existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { copyFileSync, existsSync, mkdirSync, readFileSync, statSync, writeFileSync } from "node:fs";
 import { avaliarJanela } from "./lib/marco-janela.mjs";
+import { assinarMarco, reconciliarFunil, SCHEMA_VERSION } from "./lib/marco-integridade.mjs";
 import { registrarJob } from "./lib/job-log.mjs";
 
 
@@ -48,19 +49,56 @@ const lerJson = (p) => {
 
 /* ── Contrato temporal: um marco só é registrado quando o calendário permite ─
  * Registrar D14 antes de 14 dias do D0 não cria série temporal — cria uma
- * cópia do marco anterior com outro rótulo. Fail-closed por padrão.
+ * cópia do marco anterior com outro rótulo. Fail-closed, SEM bypass de
+ * produção: `--fora-de-janela` só é aceito em ambiente de fixture/teste
+ * (MARCO_FIXTURE=1 ou NODE_ENV=test), nunca com dados reais.
+ *
+ * Toda a aritmética temporal é feita em UTC (Date.toISOString / epoch ms):
+ * fuso do servidor, do navegador, do CI e horário de verão não participam do
+ * cálculo e portanto não conseguem antecipar nem atrasar o marco.
  */
 {
+  const AMBIENTE_FIXTURE = process.env.MARCO_FIXTURE === "1" || process.env.NODE_ENV === "test";
+  const BYPASS_PROIBIDO = ["--force", "--skip-date", "--ignore-window"];
+  const bypassTentado = args.filter((a) => BYPASS_PROIBIDO.includes(a));
+  if (bypassTentado.length) {
+    console.error(`✖ bypass não suportado: ${bypassTentado.join(", ")}. A janela temporal não tem escape em produção.`);
+    process.exit(2);
+  }
+
   const historicoJanela = lerJson("reports/operacao-marcos.json") ?? { marcos: [] };
-  const janela = avaliarJanela(MARCO, historicoJanela);
-  if (!janela.ok && !args.includes("--fora-de-janela")) {
+  const agoraUtc = new Date();
+  const janela = avaliarJanela(MARCO, historicoJanela, agoraUtc);
+  const pediuBypass = args.includes("--fora-de-janela");
+  const bypassValido = pediuBypass && AMBIENTE_FIXTURE;
+
+  if (pediuBypass && !AMBIENTE_FIXTURE) {
+    console.error("✖ --fora-de-janela só é aceito com MARCO_FIXTURE=1 ou NODE_ENV=test (dados sintéticos).");
+    process.exit(2);
+  }
+
+  if (!janela.ok && !bypassValido) {
     mkdirSync("reports", { recursive: true });
     mkdirSync("public", { recursive: true });
-    const bloqueio = { bloqueadoEm: new Date().toISOString(), ...janela };
+    const bloqueio = {
+      bloqueadoEm: agoraUtc.toISOString(),
+      marcoSolicitado: MARCO,
+      d0Timestamp: janela.baselineEm,
+      agoraUtc: agoraUtc.toISOString(),
+      permitidoAPartirDe: janela.elegivelEm,
+      faltamDias: janela.faltamDias,
+      faltamHoras: janela.faltamDias === null ? null : Math.round(janela.faltamDias * 24 * 10) / 10,
+      timezoneCalculo: "UTC",
+      ...janela,
+    };
     writeFileSync("reports/marco-janela-bloqueio.json", `${JSON.stringify(bloqueio, null, 2)}\n`);
     writeFileSync("public/marco-janela-bloqueio.json", `${JSON.stringify(bloqueio, null, 2)}\n`);
-    console.error(`✖ coleta de ${MARCO} bloqueada: ${janela.motivo}`);
-    console.error("  Nada foi registrado. Use --fora-de-janela apenas para teste explícito (marca o registro como não comparável).");
+    console.error(`✖ coleta de ${MARCO} bloqueada (FAIL CLOSED)`);
+    console.error(`  marco solicitado: ${MARCO}`);
+    console.error(`  D0 (UTC): ${bloqueio.d0Timestamp ?? "N/A"}`);
+    console.error(`  agora (UTC): ${bloqueio.agoraUtc}`);
+    console.error(`  liberado a partir de (UTC): ${bloqueio.permitidoAPartirDe ?? "N/A"}`);
+    console.error(`  tempo restante: ${bloqueio.faltamDias ?? "N/A"} dia(s) / ${bloqueio.faltamHoras ?? "N/A"} hora(s)`);
     registrarJob({
       job: "snapshot:marco",
       marco: MARCO,
@@ -72,8 +110,9 @@ const lerJson = (p) => {
     });
     process.exit(2);
   }
-  globalThis.__JANELA_MARCO__ = janela;
+  globalThis.__JANELA_MARCO__ = { ...janela, bypassFixture: bypassValido };
 }
+
 
 
 const inventario = lerJson("reports/indexation-inventory.json");
@@ -255,18 +294,74 @@ if (existsSync("reports/serp-signals-baseline.json") && !existsSync(serpMarco)) 
 }
 registro.serpSnapshot = existsSync(serpMarco) ? serpMarco : null;
 
+/* ── Procedência, freshness, reconciliação e assinatura ───────────────────
+ * Cada métrica declara de onde veio (OBSERVED × DERIVED × N/A × STALE) e o
+ * funil precisa fechar com o universo curado. Se não fechar, FAIL CLOSED:
+ * discrepância escondida corrompe toda a série temporal seguinte.
+ */
+const idadeArquivo = (p) => (existsSync(p) ? statSync(p).mtime.toISOString() : null);
+const fontes = [
+  { metrica: "google.*", fonte: "gsc", collectedAt: inventario?.geradoEm ?? idadeArquivo("reports/indexation-inventory.json"), sourceUpdatedAt: inventario?.gscAtualizadoEm ?? null },
+  { metrica: "urls[].http/ttfb/canonical", fonte: "crawl", collectedAt: inventario?.geradoEm ?? idadeArquivo("reports/indexation-inventory.json") },
+  { metrica: "sitemap.*", fonte: "sitemap", collectedAt: idadeArquivo("reports/sitemap-inclusions.json") },
+  { metrica: "grafo.*", fonte: "internal_graph", collectedAt: idadeArquivo("reports/internal-graph.json") },
+  { metrica: "indexnow.*", fonte: "indexnow", collectedAt: indexnow?.executadoEm ?? idadeArquivo("reports/indexnow-last-run.json") },
+  { metrica: "bing.*", fonte: "bing", collectedAt: bing?.coletadoEm ?? idadeArquivo("reports/bing-webmaster.json") },
+  { metrica: "serpSignals.*", fonte: "snapshot_local", collectedAt: serp?.geradoEm ?? idadeArquivo(serpMarco) },
+];
+
+const reconciliacao = reconciliarFunil(registro.google, urls.length);
+if (!reconciliacao.ok && !args.includes("--aceitar-discrepancia")) {
+  console.error(`✖ ${MARCO} não persistido: ${reconciliacao.motivo}`);
+  console.error("  Nenhum estado foi escondido: corrija a coleta ou declare o estado adicional antes de registrar o marco.");
+  registrarJob({
+    job: "snapshot:marco",
+    marco: MARCO,
+    duracaoMs: Date.now() - INICIO_JOB,
+    status: "falhou",
+    failClosed: true,
+    contagens: { universo: reconciliacao.universo, soma: reconciliacao.soma },
+    logs: [`reconciliação do funil reprovada · ${reconciliacao.motivo}`],
+  });
+  process.exit(2);
+}
+
+const registroAssinado = assinarMarco(registro, { fontes, reconciliacao });
+Object.assign(registro, registroAssinado);
+registro.janela = globalThis.__JANELA_MARCO__ ?? null;
+
 const historico = lerJson("reports/operacao-marcos.json") ?? { marcos: [] };
 const idx = historico.marcos.findIndex((m) => m.marco === MARCO);
 if (idx >= 0 && !args.includes("--overwrite")) {
-  console.log(`[marco] ${MARCO} já registrado em ${historico.marcos[idx].registradoEm}; use --overwrite para substituir.`);
+  console.log(`[marco] ${MARCO} já registrado em ${historico.marcos[idx].registradoEm}; use --overwrite para reprocessar (o original é preservado na trilha).`);
 } else {
-  if (idx >= 0) historico.marcos[idx] = registro;
-  else historico.marcos.push(registro);
+  if (idx >= 0) {
+    // Reprocessamento: o marco anterior vira evidência arquivada, nunca é apagado.
+    const anterior = historico.marcos[idx];
+    const trilhaPath = "reports/marco-reprocessamentos.json";
+    const trilha = lerJson(trilhaPath) ?? { registros: [] };
+    trilha.registros.push({
+      reprocessadoEm: new Date().toISOString(),
+      marco: MARCO,
+      motivo: arg("motivo") ?? "não informado",
+      hashAnterior: anterior?.integridade?.hash ?? null,
+      snapshotIdAnterior: anterior?.integridade?.snapshotId ?? null,
+      hashNovo: registro.integridade.hash,
+      snapshotIdNovo: registro.integridade.snapshotId,
+      original: anterior,
+    });
+    trilha.atualizadoEm = new Date().toISOString();
+    writeFileSync(trilhaPath, `${JSON.stringify(trilha, null, 2)}\n`);
+    console.log(`[marco] reprocessamento de ${MARCO} registrado em ${trilhaPath} (original preservado).`);
+    historico.marcos[idx] = registro;
+  } else historico.marcos.push(registro);
   const ordem = { D0: 0, D7: 1, D14: 2, D30: 3 };
   historico.marcos.sort((a, b) => ordem[a.marco] - ordem[b.marco]);
   historico.atualizadoEm = new Date().toISOString();
+  historico.schemaVersion = SCHEMA_VERSION;
   writeFileSync("reports/operacao-marcos.json", JSON.stringify(historico, null, 2));
 }
+
 
 mkdirSync("public", { recursive: true });
 writeFileSync("public/operacao-marcos.json", JSON.stringify(historico, null, 2));

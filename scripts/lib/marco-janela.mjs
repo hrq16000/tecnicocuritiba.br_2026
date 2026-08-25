@@ -14,8 +14,11 @@
 /** Dias mínimos de calendário entre o D0 e cada marco. */
 export const JANELA_MINIMA_DIAS = { D0: 0, D7: 7, D14: 14, D30: 30 };
 
-/** Tolerância: aceita o marco a partir de meio dia antes do limite exato. */
-const TOLERANCIA_DIAS = 0.5;
+/**
+ * Sem tolerância: o marco só existe quando o calendário passou por inteiro.
+ * D14 menos um segundo é BLOQUEADO; D14 exato é LIBERADO.
+ */
+const TOLERANCIA_DIAS = 0;
 
 const MS_DIA = 24 * 60 * 60 * 1000;
 
@@ -48,9 +51,12 @@ export function avaliarJanela(marco, historico, agora = new Date()) {
   }
 
   const base = new Date(d0.registradoEm).getTime();
-  const dias = Math.round(((agora.getTime() - base) / MS_DIA) * 100) / 100;
+  const msDecorridos = agora.getTime() - base;
+  const dias = Math.round((msDecorridos / MS_DIA) * 100) / 100;
   const elegivelEm = new Date(base + minimoDias * MS_DIA).toISOString();
-  const ok = dias >= minimoDias - TOLERANCIA_DIAS;
+  // Comparação em milissegundos (UTC), não em dias arredondados: arredondamento
+  // não pode liberar um marco que o relógio ainda não liberou.
+  const ok = msDecorridos >= (minimoDias - TOLERANCIA_DIAS) * MS_DIA;
 
   return {
     ok,

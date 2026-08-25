@@ -23,6 +23,7 @@ export type Database = {
           classificado_por_email: string | null
           cluster: string | null
           created_at: string
+          evidencia: Json
           id: string
           justificativa: string
           marco: string | null
@@ -38,6 +39,7 @@ export type Database = {
           classificado_por_email?: string | null
           cluster?: string | null
           created_at?: string
+          evidencia?: Json
           id?: string
           justificativa: string
           marco?: string | null
@@ -53,6 +55,7 @@ export type Database = {
           classificado_por_email?: string | null
           cluster?: string | null
           created_at?: string
+          evidencia?: Json
           id?: string
           justificativa?: string
           marco?: string | null
@@ -623,6 +626,51 @@ export type Database = {
           titulo?: string
           updated_at?: string
           url_path?: string
+        }
+        Relationships: []
+      }
+      reindex_solicitacoes: {
+        Row: {
+          comando: string
+          created_at: string
+          escopo_tipo: string
+          escopo_valor: string | null
+          id: string
+          marco: string | null
+          modo_contencao: boolean
+          motivo: string
+          resultado: Json
+          solicitado_por: string | null
+          solicitado_por_email: string | null
+          status: string
+        }
+        Insert: {
+          comando: string
+          created_at?: string
+          escopo_tipo: string
+          escopo_valor?: string | null
+          id?: string
+          marco?: string | null
+          modo_contencao?: boolean
+          motivo: string
+          resultado?: Json
+          solicitado_por?: string | null
+          solicitado_por_email?: string | null
+          status?: string
+        }
+        Update: {
+          comando?: string
+          created_at?: string
+          escopo_tipo?: string
+          escopo_valor?: string | null
+          id?: string
+          marco?: string | null
+          modo_contencao?: boolean
+          motivo?: string
+          resultado?: Json
+          solicitado_por?: string | null
+          solicitado_por_email?: string | null
+          status?: string
         }
         Relationships: []
       }
