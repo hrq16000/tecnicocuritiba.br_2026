@@ -1,14 +1,14 @@
 {
   "schema": "freeze/1.0",
   "versao": "FREEZE_V2",
-  "seladoEm": "2026-08-25T07:30:09.047Z",
+  "seladoEm": "2026-08-25T07:41:21.942Z",
   "base": "https://tecnico.curitiba.br",
   "deploymentId": "live:5eec352d9a7f460d",
   "origem": {
     "liveValidation": "85510cd99f64f1191a3dc3d94a14e71844a813db7487ae69255fa4002f161345",
     "executadoEm": "2026-08-25T06:05:10.617Z"
   },
-  "ledgerSelo": "72bfdd59665f65ae7631f6098027c9fffc20de55870e25a87ff67f66519cd31a",
+  "ledgerSelo": "92ee0e4daddb5370f7a7bd585f07ea8e9ebd42df8a6655a5034fc8c3c15d538b",
   "freezeV1": {
     "selo": "82f7d05473cc059042b7bbe51cfa63a6fb5e93ae1f077c09ba55f7450b18ed70",
     "preservado": true,
@@ -1975,7 +1975,7 @@
   ],
   "superficie": {
     ".github/workflows/ci.yml": {
-      "hash": "ba99c43f10f40223bdd73c0bc4a54760",
+      "hash": "947097c44582e132b32f35079b89c69c",
       "classe": "CI_CHANGE"
     },
     ".github/workflows/cloudflare-edge.yml": {
@@ -2691,7 +2691,7 @@
       "classe": "CI_CHANGE"
     },
     "package.json": {
-      "hash": "29afd163e9eb68317c3f2e5723f3136f",
+      "hash": "8dbf58036550b5df6d82c453978c2674",
       "classe": "CI_CHANGE"
     },
     "playwright-fixture.ts": {
@@ -2975,7 +2975,7 @@
       "classe": "PUBLIC_CHANGE"
     },
     "public/freeze-historico.json": {
-      "hash": "6a58098c42cd301cf6c720fafa090f1f",
+      "hash": "058f2d62bb1837e67108edd886685b0a",
       "classe": "OBSERVABILITY_CHANGE"
     },
     "public/freeze-v1.json": {
@@ -2983,11 +2983,11 @@
       "classe": "OBSERVABILITY_CHANGE"
     },
     "public/freeze-v2-drift.json": {
-      "hash": "8976ffa87375e1032e8fe280b8f23df2",
+      "hash": "97b5519157ede22374fdc1c880321170",
       "classe": "OBSERVABILITY_CHANGE"
     },
     "public/freeze-v2.json": {
-      "hash": "f85283856af4f0d7f72d73a4378dfca8",
+      "hash": "eb3356ecc4dd20a4b1ff2e854ec086ac",
       "classe": "OBSERVABILITY_CHANGE"
     },
     "public/indexation-daily.json": {
@@ -2995,7 +2995,7 @@
       "classe": "OBSERVABILITY_CHANGE"
     },
     "public/intervencoes-d0.json": {
-      "hash": "61e747e09c7ebb4236055d077536d4cb",
+      "hash": "cb6255c30efc340a59735648097a3e0b",
       "classe": "OBSERVABILITY_CHANGE"
     },
     "public/job-runs.json": {
@@ -3291,7 +3291,7 @@
       "classe": "OBSERVABILITY_CHANGE"
     },
     "reports/freeze-v2-drift.json": {
-      "hash": "8976ffa87375e1032e8fe280b8f23df2",
+      "hash": "97b5519157ede22374fdc1c880321170",
       "classe": "OBSERVABILITY_CHANGE"
     },
     "reports/intervention-impact-map.json": {
@@ -3376,6 +3376,10 @@
     },
     "scripts/check-bairro-mentions.mjs": {
       "hash": "47fa18d8f6731a5abb15dcca95d5a8d7",
+      "classe": "CI_CHANGE"
+    },
+    "scripts/check-bairros-noindex.mjs": {
+      "hash": "2141bd13fa62419c80ce0701e982d64a",
       "classe": "CI_CHANGE"
     },
     "scripts/check-blog-internal-links.mjs": {
@@ -3967,7 +3971,7 @@
       "classe": "CI_CHANGE"
     },
     "scripts/lib/intervencoes.mjs": {
-      "hash": "b75d31c055ad55b65e21ba136344e1a6",
+      "hash": "87bb50bffbabb49fea801fa1147932be",
       "classe": "CI_CHANGE"
     },
     "scripts/lib/job-log.mjs": {
@@ -5607,7 +5611,7 @@
       "classe": "PUBLIC_CHANGE"
     },
     "src/components/home/RegioesCuritibaSection.tsx": {
-      "hash": "3c441a6eebdcb7466be69adc67710e3c",
+      "hash": "61020d81f61df422ec737d749edb95d0",
       "classe": "PUBLIC_CHANGE"
     },
     "src/components/home/heroSlides.ts": {
@@ -6610,6 +6614,10 @@
       "hash": "1244501ff2dd7465f8d02f3af71b16e3",
       "classe": "PUBLIC_CHANGE"
     },
+    "src/lib/whatsappDeepLink.ts": {
+      "hash": "9ac6e64a310c251b97a750abf8d7a532",
+      "classe": "PUBLIC_CHANGE"
+    },
     "src/lib/whatsappTemplates.ts": {
       "hash": "663a6ec7ea87085128ecaa0db6dffadd",
       "classe": "PUBLIC_CHANGE"
@@ -7055,7 +7063,7 @@
       "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/pages/bairros/BairroTemplate.tsx": {
-      "hash": "0a61417865ffc247991dabec75222927",
+      "hash": "7852b645d06727635ffd09d450d9ca85",
       "classe": "PUBLIC_CHANGE"
     },
     "src/pages/bairros/BariguiAraucaria.tsx": {
@@ -8563,64 +8571,64 @@
       "classe": "PUBLIC_CHANGE"
     },
     "src/routes/bairros.academia-sjp.tsx": {
-      "hash": "45361c19807e2b648cbd2fe0541cba74",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "55e6583af2b70d581d466b6503b4e375",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.afonso-pena.tsx": {
-      "hash": "fe2a8bbc64c6d4cd1cbe2fb9755b45b8",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "8c6a9607a187fc3796bb6c7a9260829d",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.agricola-sjp.tsx": {
-      "hash": "e413a9a82f7723e735fb3212f411cb4b",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "281c4f40bd577f1ec3dab488fe7ed041",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.agua-verde.tsx": {
       "hash": "81ad3e965292368379fcb106f3278d0f",
       "classe": "PUBLIC_CHANGE"
     },
     "src/routes/bairros.alto-boqueirao.tsx": {
-      "hash": "3e7f1d7996669c044a8de09db2718fc2",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "0080a02979c90662b90d1dfb9798ef6a",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.alto-da-gloria.tsx": {
-      "hash": "d04050442952190c215cd9c1505adbb9",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "cf7645f4752eb236d8cfcb83474d26db",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.alto-da-xv.tsx": {
       "hash": "8d1c6e26cff7f0f63f1d5ca60ca81073",
       "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.alto-maracana.tsx": {
-      "hash": "b22c46b453a1b4c25e81dd82f347e467",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "01dcbdddf7fa41a799601fbb955d0ad7",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.alto-taruma.tsx": {
-      "hash": "440a1d3a6b8117d2d0f3e39e6fb19ec8",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "d538b89cf735a475e2d02a85b509c4b8",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.antonio-olivero-cm.tsx": {
-      "hash": "cb42e232fc2e754e871a5772462e532a",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "e26441f33f383ce3581d336613286625",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.aristocrata.tsx": {
-      "hash": "bf572d3791dd80c1e3c6785e339ec8f3",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "9a88a43d455429d3e46094a1f47169d3",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.atuba-colombo.tsx": {
-      "hash": "e0488ffcc28250fcc3c9ecdc472aa203",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "a2a588b4ac9e91842ff0f93977e64231",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.atuba-pinhais.tsx": {
-      "hash": "72119dcbb4885c68a915c0565f86ad40",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "74e5da92211fddf1134b4d6e47c00bcb",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.atuba.tsx": {
       "hash": "deb96f3eef8b40b05111588eac8c5700",
       "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.aviacao.tsx": {
-      "hash": "9ea359e5155986288776d347e703ba03",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "36a9031083e85d157dab002822a2c4f7",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.bacacheri.tsx": {
       "hash": "b0f350f3e3f13e9f9d1bed3fa085d524",
@@ -8631,16 +8639,16 @@
       "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.barigui-araucaria.tsx": {
-      "hash": "44c31da21aeda0e11b0cf70e516e4882",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "3b656d3f8e385c9001d8fb313778c83e",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.barro-preto.tsx": {
-      "hash": "3d0ae89c6c4b9b2f00ecd2fa1a330938",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "4c8b37f0d1317d260b44574061e1ffad",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.bateias.tsx": {
-      "hash": "73c367337726ce9e8bded2920fc8f241",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "6dd4471215bd75515722434e2fbef67a",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.batel.tsx": {
       "hash": "5e7d3af4822444ba7501f7a1c222e29a",
@@ -8651,48 +8659,48 @@
       "classe": "PUBLIC_CHANGE"
     },
     "src/routes/bairros.boa-vista-at.tsx": {
-      "hash": "17d8c6ab826d1a985eeee28884a823a4",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "ca3ab947c836c3df222b86cee35335e5",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.boa-vista.tsx": {
       "hash": "02a1cf7f983545d0d569613a26f8a971",
       "classe": "PUBLIC_CHANGE"
     },
     "src/routes/bairros.boneca-do-iguacu-sjp.tsx": {
-      "hash": "b93111e3d9bf4c9cb1525e22631023f6",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "4d6f562dfb3ba5071bf10231d3d9445f",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.boqueirao-araucaria.tsx": {
-      "hash": "2648216c4e5533259fccf3e38c1afeaa",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "a24557b67b9fceb1db7e857537fdc397",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.boqueirao.tsx": {
       "hash": "14ee6e2692f4b3a8e6826fe6058150d9",
       "classe": "PUBLIC_CHANGE"
     },
     "src/routes/bairros.borda-campo-sjp.tsx": {
-      "hash": "74999569f31a0b6151e293a434ec2f52",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "3b2f2d8575d438b9c75cad2b10d5780c",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.borda-do-campo-qb.tsx": {
-      "hash": "0e5150ca58b476ceb40c55f1c6b7f93d",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "139b801c5984434cf9caa92c03021f1d",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.borda-do-campo-sjp.tsx": {
-      "hash": "b72399aed04ff23b0efd7d427c51028c",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "49c81b936da4fddd5773a650ef804aac",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.botiatuva-cm.tsx": {
-      "hash": "04abdc8faeb339533fd89f69cf11ce5d",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "9753c91881d27d2615f99fac0c4d8d3f",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.botiatuva.tsx": {
-      "hash": "3b8056f69d202912f6423c515257e03d",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "54acca7ae73e3f03708ae6ebd44e28bb",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.braga.tsx": {
-      "hash": "4ddd07ef5946e755ceb01313771ea092",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "829a5acd41849abda27e456ef1a1a69e",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.butiatuvinha.tsx": {
       "hash": "233847f134628ecec4fb451931f971a7",
@@ -8703,600 +8711,600 @@
       "classe": "PUBLIC_CHANGE"
     },
     "src/routes/bairros.cachoeira-araucaria.tsx": {
-      "hash": "1de61fa58aef6e514504ca7458515943",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "4ba1d1ba03aea08a927973f6d0ca3c72",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.cachoeira-at.tsx": {
-      "hash": "1bce1fe510b6973c832eb45c9f24f197",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "c471348b4b01040059b5e836873320a2",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.caiua-piraquara.tsx": {
-      "hash": "eeeb23c66798c19cfff64b72b3b14a73",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "cf77afb04940b0a64045c7a03752a8bc",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.cajuru.tsx": {
       "hash": "2d4a9fb36937b744447cd1727b871227",
       "classe": "PUBLIC_CHANGE"
     },
     "src/routes/bairros.california-araucaria.tsx": {
-      "hash": "f40b7ace927efdd27169ee82dbee30c3",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "c2c7dab073a9aab3f5843bf76f06c7ad",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.campina-da-barra.tsx": {
-      "hash": "1a61c325b563144b82b6895f1e29004c",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "2ef396fff02d9b0913874588380ba799",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.campina-do-siqueira.tsx": {
       "hash": "9fadf4f6adbc67822bcf2acedb13d42d",
       "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.campina-grande-colombo.tsx": {
-      "hash": "a3d535e50a55a1e1e7fb7015d5644817",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "1cb0be0f0956384f9b5e133f9737f25d",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.campo-comprido.tsx": {
       "hash": "369031144ecf5fd867128c9f2d9145dc",
       "classe": "PUBLIC_CHANGE"
     },
     "src/routes/bairros.campo-largo-roseira-sjp.tsx": {
-      "hash": "df03df525070727525a121da83c93a3e",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "d8db32047c7422972c4f01b449fe36f0",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.campo-pequeno.tsx": {
-      "hash": "8b7c7e983fac9baa3d30b65374a3821c",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "d776ec5fe07d7f3ca9bf74d6f642c2e1",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.campo-tenente-at.tsx": {
-      "hash": "1618482df92eb5866ba5b90c8b16ead9",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "fc71231933f1781a6118426694284ffc",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.capao-da-imbuia.tsx": {
-      "hash": "3621cf83df7dae80ae9d4066087cf40c",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "15276e113187f2d541622475adf05b98",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.capao-raso.tsx": {
       "hash": "20e7dade836ce3fd8c2a9278fc32023e",
       "classe": "PUBLIC_CHANGE"
     },
     "src/routes/bairros.capela-velha.tsx": {
-      "hash": "9ec3246445ce1cd3205e07f74c58885e",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "9802dabdf30b86307f8b22b84d1e2b09",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.centro-almirante-tamandare.tsx": {
-      "hash": "cb8bd12f9883e42ed994a8d77112313c",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "3ad8c53a0cd1bbc005bf01a0c2e46947",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.centro-araucaria.tsx": {
-      "hash": "0991a9dccd916b91b368548f91337342",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "209d40396e03001c6cb8a5f65122fec3",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.centro-campo-largo.tsx": {
-      "hash": "8610e48f439976caca83c74d643beec3",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "10349d52b5f3bf3de6573b59373127b8",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.centro-campo-magro.tsx": {
-      "hash": "57e5c8bf6575572ccce89cf8b93a2ba0",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "ac7a4de2fa302dc53c18ee66161929f7",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.centro-civico.tsx": {
       "hash": "886b9c909eab593e8976760626cf4ca7",
       "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.centro-colombo.tsx": {
-      "hash": "a6a9a0089500e4bcf9289fd48d42db8b",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "a07a305988947cc36f067157c3eb6d02",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.centro-fazenda-rio-grande.tsx": {
-      "hash": "5a54cc4c396d2876ce0483e712465ba9",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "f6b46c1d549c4dff5ea59739710c32e2",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.centro-pinhais.tsx": {
-      "hash": "ec340a9280f10f3307d2025dd6883693",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "decaeca0fbfacbeb431e0e943fce5a87",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.centro-piraquara.tsx": {
-      "hash": "fd45a85285cb06c4fe8b2961be670785",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "536db8659e00b4838a66599c096a6712",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.centro-quatro-barras.tsx": {
-      "hash": "ea164256aec71947448b7bca207985ac",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "fcfe74dca9917dd8288aee26c4d9302a",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.centro.tsx": {
       "hash": "4b68085407726a35b26af6d5cd415b39",
       "classe": "PUBLIC_CHANGE"
     },
     "src/routes/bairros.chapada.tsx": {
-      "hash": "82092f785e5b2ab6e29e365b7474ca50",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "8045b05e61c740def0387a191e32fcee",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.cic.tsx": {
       "hash": "db5d3202982fb1c516380b3fae54709a",
       "classe": "PUBLIC_CHANGE"
     },
     "src/routes/bairros.cidade-jardim-sjp.tsx": {
-      "hash": "5ce24cc408e6b1930338b024ebba6a56",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "5b6cf8bc010b981f0cc258c2e2e0dfab",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.colonia-antonio-prado.tsx": {
-      "hash": "32107c924aef352274b703e28e45d496",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "4f689d0efdcda12e434327d4f6acf45f",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.colonia-malhada-cl.tsx": {
-      "hash": "53898e8185fa768983d5b694fc0164a9",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "d79d6bcef60f864c94e756c90bd13a20",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.colonia-murici-sjp.tsx": {
-      "hash": "4086ba2ae4e5666dc7bc8c6a85645e72",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "ea113a0c42f6c15545dad0745d652151",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.correia-de-freitas.tsx": {
-      "hash": "c1b79aaf218343f50fcc6fabcbc5eafb",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "ee3085433b13b281d766b3246246227c",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.costeira-araucaria.tsx": {
-      "hash": "ac1b31709d9ac02a8175dcbf8f24d0bc",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "dee962a6a847d8ed244802127071f4f4",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.costeira.tsx": {
-      "hash": "def31852de007537023978a21d1af29f",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "90490955453ec6cddd03eca7b9756416",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.cristo-rei.tsx": {
       "hash": "4d1302f89e37360d5839afb2ef9856fa",
       "classe": "PUBLIC_CHANGE"
     },
     "src/routes/bairros.cruzeiro.tsx": {
-      "hash": "4f7aa3110e3c843d3e3ad73eb6b95b2b",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "667e8a2c2063efb0080f95c487732ecb",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.del-rey.tsx": {
-      "hash": "5a14e50a9a4d1579022d8c60a0825b89",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "10d84ac7e9849012d0c6f4eed92838a0",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.embu-colombo.tsx": {
-      "hash": "4c13e7ee2d5ecb3ecf405a8e4db01570",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "41724136885be7d98bb4e2431bda3b1d",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.emiliano-perneta.tsx": {
-      "hash": "22467d1c567db9b01825e64d6b9c08fa",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "a4f63abf9b6498b9765654a4d8746168",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.espigao-alegre-cm.tsx": {
-      "hash": "33c28abe72737a780a85da369f30a45e",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "f1c23007b324d2f2c15870c8a7865f67",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.estacao-araucaria.tsx": {
-      "hash": "de462c13b53eb9b73a8cd8651d24d1f2",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "0ec31f66288228c6fa4386f16731bb74",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.estancia-pinhais.tsx": {
-      "hash": "c2aa3a73c0d02d8d37e89ea4c6be7147",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "77e0a859beb64d43d1a7a658a7698c88",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.eucaliptos-frg.tsx": {
-      "hash": "3b3a45c542e3f3816d4e632ec04a621f",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "90264554986a7ba90ce048172029c167",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.fanny.tsx": {
       "hash": "3dd14153cfbe0b775c1b8e25c591faab",
       "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.fatima-colombo.tsx": {
-      "hash": "121f375ec89a46fe568e5e77092757bb",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "7c64a160f1e6ad992a9d7651df0f300b",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.fazenda-velha-araucaria.tsx": {
-      "hash": "114819929a976284a420f8ef35c047f8",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "073b864d2320f256c369060cc16e6e63",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.fazendinha.tsx": {
       "hash": "3b6ea88abdf044ae11b791db4ba4d956",
       "classe": "PUBLIC_CHANGE"
     },
     "src/routes/bairros.ferraria.tsx": {
-      "hash": "7e67f98d7fb9de44afa5dc62819e7217",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "b4e3e23489544229a3eb6157f6c5994c",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.gabirobal.tsx": {
-      "hash": "5214df7136f62aa888004af3a747bc76",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "3ceee7c93dfd4d0ea17f4f8b02a491ef",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.graciosa-qb.tsx": {
-      "hash": "478ec30a39c03f6c7001ab30fd17e2b7",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "511d9cb25d6234ee40f601ca2674cbc3",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.graciosa.tsx": {
-      "hash": "5fc9ad1ea954111961e0f1b0fccabfd0",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "29316a6c0cfc5edd4b340a04be3e1f0b",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.gralha-azul.tsx": {
-      "hash": "704a2054af23cdf6eef620515af37b1e",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "808d51860dda4f2fbe0449b375e33cbe",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.guabirotuba.tsx": {
       "hash": "04b7280cb0bf63e3b1e31d2ec078fb5d",
       "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.guajuvira.tsx": {
-      "hash": "c45012b3bb77d44f5511aa6e72a1c941",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "8f4ffc99426d8e9337b22e2884077333",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.guaraituba-colombo.tsx": {
-      "hash": "88970ed9c10781c542548f4569d4b358",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "436712b30afcd22714445db522ea7eac",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.guarituba-piraquara.tsx": {
-      "hash": "42dd42b4b5149a5fafc728baf21d76a3",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "76182c45a1c77e7fab5bcfc3425aa50b",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.guatupe.tsx": {
-      "hash": "640505974626f2b44872dfa9c4644c07",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "eba579e680a9238373ea2e0f620fbd55",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.hauer.tsx": {
       "hash": "b4aabc26e3b8b7e9bf88c6c5ecdabd85",
       "classe": "PUBLIC_CHANGE"
     },
     "src/routes/bairros.hortencia-frg.tsx": {
-      "hash": "22a4a9c2bc9a808057ed09f0a83dd94e",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "e8a55bef766768e0f76f578f8e5842e8",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.hugo-lange.tsx": {
-      "hash": "3f219ae30604e72eee8a5fbe37267fdf",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "2e3f87f68a8b632f4a2f9e97a8ea07a2",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.iguacu-araucaria.tsx": {
-      "hash": "2cc361db99355a01a541e6c786cc14de",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "06bb5b3201bb026766bb22aecd2513a2",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.iguacu-frg.tsx": {
-      "hash": "ddae874be005e1d42d34569eac760cf5",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "a6676b6a6e5150c924f82930ff0f675a",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.independencia-sjp.tsx": {
-      "hash": "ec9ce86a0cb9d413abf8441985f63712",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "7534f881793c368f5a9fb163dec9f79a",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.industrial-araucaria.tsx": {
-      "hash": "003856e9f8c8197bea2f854a48a772b3",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "411450bd6024264215a2be74b357b17c",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.ipe-sjp.tsx": {
-      "hash": "f098a13002442605f945e1045cc205f5",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "aac70a53dd5c5820edf77f3d259e309d",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.irai-piraquara.tsx": {
-      "hash": "c9d497390038e79c121b2ecc7116bf7e",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "4e96dd1d479b618ef996aaaa7bac1f5a",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.italia-sjp.tsx": {
-      "hash": "75b579f02893229a32b32bda2e11f5f2",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "253a774bfb355299d409e55dc2e809a8",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.itaqui.tsx": {
-      "hash": "cb6e53382742db95b3b2bdb87bfbdb32",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "45bf095db36d0feec06b11cac6237af9",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.jardim-amelia.tsx": {
-      "hash": "608a966779e10eca2a6ab5020aa38fe2",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "a85755aef8f778d2d1cf4d0d3728101f",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.jardim-america-campo-largo.tsx": {
-      "hash": "be297d998c82c8592af5b52cbfb8f902",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "07c405c6dc7bb39f151d6b18fefe071f",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.jardim-bela-vista-piraquara.tsx": {
-      "hash": "05c0e9ad3a42c11b061ec95498a41f90",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "0f70236c50a7ed8d1e35e26b3cda5847",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.jardim-boa-vista-araucaria.tsx": {
-      "hash": "21e246471be53dafc0f2bdebd5879192",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "42916eac895cf776586e199727987ba2",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.jardim-boa-vista-cm.tsx": {
-      "hash": "a262d36a9307849e12da7b45cffd6c1d",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "e6090a59717ae11bd8b3b6d30b1a3b4f",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.jardim-botanico.tsx": {
-      "hash": "73bab5d6257c42764f884a7077ab7edf",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "24a5fb8dc852368eb6728864a818dd63",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.jardim-claudia-ii-pinhais.tsx": {
-      "hash": "3f220c82458d6bf163ab6e1a4f186f13",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "39721528d20c38db700c3bef06a16cf2",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.jardim-claudia.tsx": {
-      "hash": "2ff6e8dd4911ff79e15c93248afb192c",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "039a0ba26d7f6c267244f0daa620e149",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.jardim-condor-frg.tsx": {
-      "hash": "2ef9d8ae2ff4326e71516daa251be7d7",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "fc28ac963c5f8b5bf79622dde97a3de4",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.jardim-das-americas.tsx": {
-      "hash": "64d5592b4d97b247906a7eaee7a6c5ed",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "2b95a0bce34e7067e0d7c4ad6a64e9b4",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.jardim-das-pedras-frg.tsx": {
-      "hash": "9baa65aa24e289e05f339c00f1743aea",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "21f55e6a1f29778b27bfad037e2ae241",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.jardim-dona-rosa-pinhais.tsx": {
-      "hash": "b8fb09a31494415c93e219e1ddb4b77c",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "2bc0f16567493c7819a82e51ffdb9a2c",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.jardim-esperanca-cl.tsx": {
-      "hash": "5a3449a4418c12c7906c717d4c6009ae",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "471f2735fa0d3fd05cf3e5a562420577",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.jardim-esplanada-pinhais.tsx": {
-      "hash": "f73031ead4f06851047af6528f5259df",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "1abc89ceee153b5faec7231d19d4c006",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.jardim-estados.tsx": {
-      "hash": "c32e84af6ceb4dfa446fa7b54ab00c06",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "06004cfc4c369b95ec6a5d7fadc18a0c",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.jardim-florestal-qb.tsx": {
-      "hash": "b9f76c3ea111ff6d65b1256bc9452f47",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "bca5aa67e1cf45342593074ebe4280fe",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.jardim-graziela.tsx": {
-      "hash": "378177d5a4812d1dc9f961c636700105",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "e81f3531b3dd33913870179156dc165b",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.jardim-guilhermina.tsx": {
-      "hash": "bcf77cc35df1342229e4fc26b2866a3a",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "03c33196fe3917f22bd20a84f7097a0a",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.jardim-iguacu-araucaria.tsx": {
-      "hash": "16b3069b199cd266c5eaad517aa526c3",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "bce3413195ad2f74ccdb3a97a74d6cd1",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.jardim-ipe-frg.tsx": {
-      "hash": "28413387639a48240045175830aa94d6",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "674bf4e0500ab56a7ad2516420e84cdf",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.jardim-japao-qb.tsx": {
-      "hash": "bf816179fa2f2b4a971e9c434fa80e5d",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "d967978961b48312f8d0cbf5eae0edbf",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.jardim-karla-pinhais.tsx": {
-      "hash": "03970cf565ee5e8ec9c990194fc2768d",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "d7fe66eebe7cd764fa4c7701ab41ffb6",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.jardim-laranjeiras-cl.tsx": {
-      "hash": "faa84722f7d0c249935304fa898a7b7c",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "5a57400d4712f688e4e357c17c65cb91",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.jardim-menino-deus-qb.tsx": {
-      "hash": "21431d64d5919211d5423cb087c26fdd",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "da96b32bcf814c5d9f62295abdcd1cf3",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.jardim-monte-santo.tsx": {
-      "hash": "e3a0688ed91251643a37a26b08bdf89a",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "ec6f31bedeb7264ea915e64b6f9b76c4",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.jardim-novo-horizonte-cl.tsx": {
-      "hash": "95a56c02091de083feccb257e6213fbd",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "b4efa6c6b0a0031ff953526ce88800af",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.jardim-osasco.tsx": {
-      "hash": "2b8f4902356bcc9b2fc6ce571b2a8542",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "5dec434cdb3da35a014780708a951ded",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.jardim-paraiso-at.tsx": {
-      "hash": "55f077f744911a3cf5940fbfe2ca985c",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "4701baf2b3492417227df9688a74790d",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.jardim-paranagua-at.tsx": {
-      "hash": "16775789912843df7bf0d6b72f4b669b",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "f0966d665798e0d65f7d1ca0e877d24d",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.jardim-pedro-demeterco.tsx": {
-      "hash": "767b58cea7301572a96b0506b2226a80",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "1e5e3f7dd24629bbb291625e00617467",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.jardim-planalto-campo-largo.tsx": {
-      "hash": "aef37fdd62c113c9f5dc0d41b3e982bd",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "ab10d121855d1e0d842a779a0bf5829f",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.jardim-planalto-ii-cl.tsx": {
-      "hash": "00822e33a8cf122989cffff771a3f17b",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "e938c9aa7a1d0b912fe7697fd2b36fba",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.jardim-primavera-piraquara.tsx": {
-      "hash": "6e18689d52ab76333f5cd6239fa8e1ad",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "55b0bbfec9530f68f54c39a950276842",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.jardim-roma.tsx": {
-      "hash": "2b213587dbf9f8a6c20c57b7908f8369",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "d5dd615889dc1f4cc1fe7c94aca22db6",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.jardim-santo-antonio-piraquara.tsx": {
-      "hash": "e4a6d40598862f36d036392e6f18863d",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "4d47a46ed51a7e4ae29e55d46f103541",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.jardim-sao-jorge-at.tsx": {
-      "hash": "64889d0028399f4bbb1c36f98d2ca9d5",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "d0420fb6a6280e7665edc050e22b1dae",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.jardim-sao-paulo-piraquara.tsx": {
-      "hash": "891ad5e592cbb27ae346b16b468140e5",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "05c8bf76b99808ee0a339f0c913ccc93",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.jardim-shangrila-araucaria.tsx": {
-      "hash": "acef2575b13191a2147efdea4675e437",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "25688a1345dcce4a0a30bfd4578fa377",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.jardim-social.tsx": {
-      "hash": "d187f16c82fc6c1ec763990d30e8dcdb",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "7c86a5f945e16e090d13814a85a3986a",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.jardim-tropical-pinhais.tsx": {
-      "hash": "eca3171153a5e4fc1d5ceb58a294cffa",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "0073e8c389856541bd9f11b04fcef36d",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.jardim-uniao-piraquara.tsx": {
-      "hash": "d9b67a67d7d8c2182ff908c97e995389",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "68b397007fbb0408a51be6c06d0bceeb",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.jardim-wissinger-pinhais.tsx": {
-      "hash": "a5a352bb3e34e571df9771a406a40af7",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "863d976277fef6d461a9043172b065a3",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.joquei-clube-cm.tsx": {
-      "hash": "31faced52e494051136dc51c3a1b6928",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "0b6968e2a2fba896ebcb721195bb5a95",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.juveve.tsx": {
       "hash": "a0e6afe06fea26e1157a4c4b28079f78",
       "classe": "PUBLIC_CHANGE"
     },
     "src/routes/bairros.lamenha-grande-cl.tsx": {
-      "hash": "125f40116937950da671f205608a946e",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "a4469f373dac0284aef81928fbb169b9",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.lindoia.tsx": {
       "hash": "dfe8e07d8089d6509eaf435454ff5f81",
       "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.maracana-colombo.tsx": {
-      "hash": "6512640c12fe5faa0e071890f022e3f8",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "1285cb1e73613b2bf410c3cfd4df956e",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.maria-antonieta.tsx": {
-      "hash": "585c73ebd5015ed15447c92bb2e7f6ad",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "9efaf59ef673aaab350ac94501c369fd",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.merces.tsx": {
       "hash": "6e6ae38b21e6405dd9a2fd665c8dab6e",
       "classe": "PUBLIC_CHANGE"
     },
     "src/routes/bairros.monza-colombo.tsx": {
-      "hash": "c2a239a5a1d9fda54b55c42d69d86d55",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "45c25c70a7ab7c1d49d6b39806decde5",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.nacoes-frg.tsx": {
-      "hash": "28ca08d6b47516437ce24aae1e526dcd",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "e23703ae8d82562c3baaa9e914a69be6",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.novo-mundo.tsx": {
       "hash": "87f0b2321e7364fff9ff55d04925db2e",
       "classe": "PUBLIC_CHANGE"
     },
     "src/routes/bairros.osvaldo-cruz-colombo.tsx": {
-      "hash": "1d8b4dfa8fb9168c4007e5cfd822b722",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "a72bdd7de2cfe87cc3d6dd884873a37a",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.ouro-fino-sjp.tsx": {
-      "hash": "c916359a1f494647b291d1fbd58f65c8",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "c1bb78d1b9019c41122db7d934e64ebc",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.ouro-fino.tsx": {
-      "hash": "f79cf2d0c2ff1d82d89d9fcf9092d10d",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "452a0fa983538bdd5948a60644b18166",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.palmital-campo-largo.tsx": {
-      "hash": "7b5db2b8ca375ad134b3906bdce19d90",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "39b1be02c86b1c742b4649b7b23cd4b7",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.palmital-colombo.tsx": {
-      "hash": "095b2d8b8c892428da2f7e900b617a8c",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "8c0207ddc8e64c428e7bde13739473ee",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.palmital-pinhais.tsx": {
-      "hash": "b86bb7857e32c364a33b65223891eec8",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "beecf7ae738c5a93b0cd1dac655e129e",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.parque-da-fonte.tsx": {
-      "hash": "815382e9cb36c4d1d7940f96fbaaf5aa",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "288d214de4ac62e44d800dba8d192032",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.parque-industrial-frg.tsx": {
-      "hash": "7ffa09e020228f86585dd2017a0b9561",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "6bdef52bd098f9cdf4334a554a0e3a94",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.parque-nascentes-pinhais.tsx": {
-      "hash": "5ef37104c683ff921513f8cff1ce9d70",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "84facf1d6d23cb5c9252a9da40c6f451",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.passauna.tsx": {
-      "hash": "a14d979015a6624c2e371d09d30d75d5",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "ce235eb004a70f2861651e8cd9517678",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.pedro-moro-sjp.tsx": {
-      "hash": "848e4c345d71049c1cc8dd76b84c036d",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "0dd7b1476e52e937e4dc4d23a58fa56f",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.pineville.tsx": {
-      "hash": "0a4b10ffcccdc75a4eeff1f00a6660a0",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "e18253729ed2c37d792064888d0d0c69",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.pinheirinho.tsx": {
       "hash": "fb46091da6bf94ca7cc151991028fea7",
       "classe": "PUBLIC_CHANGE"
     },
     "src/routes/bairros.pioneiros-frg.tsx": {
-      "hash": "ffd2edd341bf8cc181e07b2a7821405b",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "1a12c4e875de756c77ad6df10a13f8fc",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.planta-deodoro-piraquara.tsx": {
-      "hash": "c5ae2744c1af3b93fac68f21cf40e64c",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "dd5b299e2e01bd02f1ff68dc233e0cc5",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.planta-sao-tiago-araucaria.tsx": {
-      "hash": "7fe431c4a756482aad5d8bf33bed8035",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "b6795a73c3257d0d962f327bedce623e",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.portao.tsx": {
       "hash": "b495aca58805a0deb6c106f23a013042",
       "classe": "PUBLIC_CHANGE"
     },
     "src/routes/bairros.porto-das-laranjeiras.tsx": {
-      "hash": "289be23ee334d7b6f75c8e2824dc024d",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "50a80014271e6293e28b25e7c2f0c495",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.prado-velho-piraquara.tsx": {
-      "hash": "fd31f1bc0254e37ec6778a6d1e5d92e8",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "abf22b4e417e874cb96a5e4e1c50912d",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.prado-velho.tsx": {
       "hash": "e8dcdaf76357df9904463ae4bee05a98",
       "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.quississana-sjp.tsx": {
-      "hash": "5372ee41cb168c150a5937d34618de2a",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "fbabb744d6b8c5e2e54f739786f0d6b9",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.reboucas.tsx": {
       "hash": "b591648d0ffccc5c1b0e47cafb61f8f0",
       "classe": "PUBLIC_CHANGE"
     },
     "src/routes/bairros.rio-pequeno-sjp.tsx": {
-      "hash": "d20a933f69f641e2feb25c03e7f1320c",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "8d641979c077d5cd7f763b65192a318d",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.rio-verde-cm.tsx": {
-      "hash": "9cd251143c646bcc2b5452c6b301befd",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "98b645d0b7592ad399f1c637d5cec62e",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.roca-grande.tsx": {
-      "hash": "687453d39b0f3f26fb770de3339a7b6f",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "856e6644e7a07e73deb471e3fa1d072c",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.rondinha.tsx": {
-      "hash": "44202a2ee2cc94b2757dd23f39939154",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "319adca88ed7bc2902fc6236a74cb995",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.sabia.tsx": {
-      "hash": "cd70d16ae82e92d2f4625b568be8f690",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "2c8b970120a04672b6de76b374b48ed5",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.santa-cruz-campo-largo.tsx": {
-      "hash": "ab48762f2aa56cdc48911098eaac984a",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "b2e9ac5f961ab367324b9db09c591c8c",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.santa-felicidade.tsx": {
       "hash": "8dfe5e65759f2140974ff033602e4b59",
@@ -9307,192 +9315,192 @@
       "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.santa-terezinha-colombo.tsx": {
-      "hash": "01247c3f925ad90f5caa3a6cb7feb432",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "bd0476b9398a53f8b7143e2786b5c487",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.santa-terezinha-frg.tsx": {
-      "hash": "1efc65415314ad41a986f4dba1aae22d",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "2b50deb5b4a0833b0265355495b8e947",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.sao-cristao-piraquara.tsx": {
-      "hash": "a0f3e4e2a98e7e9cd259123e3bb4a8a8",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "3d3a9154468fff09291b09eb277dc1a6",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.sao-cristovao.tsx": {
-      "hash": "4923e76fad01cd61fb6605a4b933d850",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "048781d5f2a8f4ee41dd424fbc5a698b",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.sao-dimas-colombo.tsx": {
-      "hash": "b9c2c97296160dd6d118884112f0e6c0",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "4c6dd3938c942b34713a0832791c8062",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.sao-domingos.tsx": {
-      "hash": "0eeeb0ac00d5e9dc10f7d2712a27879f",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "d412858d690e3e69defcc82884ea346b",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.sao-francisco.tsx": {
-      "hash": "10888267f419242b3f438a35bd3b4c9e",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "c598becb00420cc49a67dbe50701e769",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.sao-gabriel-colombo.tsx": {
-      "hash": "e6541f7f6c777bf6d1329602a70bfeae",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "92cb06f93f0c2760c60fccbdd2b3ae4f",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.sao-jose-campo-largo.tsx": {
-      "hash": "bde804f1df298550c974d04645b88cfb",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "6cec3aed44ce50766341cf059b0dd069",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.sao-jose-dos-pinhais.tsx": {
-      "hash": "f4801bd4bef7855c92365bbca4524fbb",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "f483ee2a49b95a936531a45b17bab9a6",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.sao-lourenco-frg.tsx": {
-      "hash": "50c196c342e47d5e8776f847ca88baf3",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "5517ee99de0d7673572fd6d1b7cbbad8",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.sao-lourenco-qb.tsx": {
-      "hash": "7ee72928f6548d9cee0401774eddfa67",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "49fcbd4640e8a3ca576902aba19f685d",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.sao-marcos-campo-largo.tsx": {
-      "hash": "af7e9ff0163f23ad3ba4299bbd5cc10c",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "8a9ff409d9f28274e4efba78a60a650c",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.sao-marcos.tsx": {
-      "hash": "7fb023848af8f9f4253578245ef05add",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "383cea43b7ea7e5828704e3e6e1f69aa",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.sao-miguel-araucaria.tsx": {
-      "hash": "10016c672821caf6998efc916bb7a2c2",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "a0d63ae70976ce21fd6907f183f5d9af",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.sao-sebastiao-cm.tsx": {
-      "hash": "51cdfda688491a037590784768931f90",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "e9039f45cef23e746752849a0d9370ec",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.sao-silvestre.tsx": {
-      "hash": "56feb8826e684f1c291b25ca395053fb",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "b3cf9266d3400db0410209d8ec11602f",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.sao-venancio.tsx": {
-      "hash": "7a89d88ea6423e529a21f91ebfcc5903",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "cf9b5451c413d2095376f73c980c3933",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.sede-campo-magro.tsx": {
-      "hash": "d96955da0842e8794682dea1420d0d32",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "10c0dd0478b5702b49db200ac3394c53",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.seminario.tsx": {
       "hash": "7276c18de038006a5ac951e437669a67",
       "classe": "PUBLIC_CHANGE"
     },
     "src/routes/bairros.sete-vilas.tsx": {
-      "hash": "8d41ad0fb245f54b843fcece199b20f8",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "479b0e82317db4c6b83b7789d4dfca67",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.sitio-cercado.tsx": {
       "hash": "5fd43868db22f857a7f84caac443f869",
       "classe": "PUBLIC_CHANGE"
     },
     "src/routes/bairros.tangua-at.tsx": {
-      "hash": "7a76f3c1fa7b3cd58deb4ad88571fab0",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "54e96cdea4562b5327d38c433ae19cd4",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.taruma.tsx": {
-      "hash": "aa2049df58066f0d65c7f9d6840cb9a2",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "b0e70fd8d4c65f6c394d451df1d16779",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.taxiqueira-colombo.tsx": {
-      "hash": "1abdc8d28436a0b5ebf159bcff08f9c3",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "8617cab0afca242c9c8bcdf838c6f688",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.thomaz-coelho-ii.tsx": {
-      "hash": "41bfb1be08a4e6773731a0bc4350bffb",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "714b4bfb57671b6861eb2255955345dd",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.thomaz-coelho.tsx": {
-      "hash": "0292eda31eb8bc64d498111fd0fcac90",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "b3a3e1a57a41bbe379c15689beeb0716",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.timbotuva-cl.tsx": {
-      "hash": "5bd6e58ac86e664e3de45cc53fe85a69",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "93a58cfb417327a75e258315b380835e",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.tindiquera.tsx": {
-      "hash": "3f0d1680a44534b86eb44e6180f5ada5",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "0afdc255b13b94822161eda9da850d18",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.tingui.tsx": {
-      "hash": "69039fd2a53a5729d27825d9e81fed4f",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "b8cab21fdf48332de0b3ddcc9bc18e3d",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.tranqueira-at.tsx": {
-      "hash": "21aa3ad93e2cfaab7b857a11d30ba02e",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "5a3a6b642bfd41c7f202f7c812d9e4ce",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.tres-corregos.tsx": {
-      "hash": "511fb7bcc2321fe9b3abf4ba2857232e",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "0e8b78a2530f7e5ceba68c97749c31bc",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.uberaba.tsx": {
       "hash": "b9d18c06b9a4ea62b362692aebca12c1",
       "classe": "PUBLIC_CHANGE"
     },
     "src/routes/bairros.vale-das-aguas.tsx": {
-      "hash": "1a3dc665dfd1314a10f6c5a99922fb14",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "f82ee8202a84477d1f3cbe148b5cafd9",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.vargem-grande.tsx": {
-      "hash": "3a7099e0a3e15f393ffa225994defe8c",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "2a0a84e13f6720f6c0db1ed08546fbd8",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.vila-amelia-pinhais.tsx": {
-      "hash": "18c52d8922d7b3919a0624f7ea3eb50b",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "44de1af5801a964369918ad01130fdc8",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.vila-candida-cl.tsx": {
-      "hash": "b2000fa0b477c90ee1e888edd979c121",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "61441c3888f86e69bd7d57f5e090ebaa",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.vila-izabel.tsx": {
-      "hash": "ec80ff242ea88dcbe7369148ee6cb373",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "e6e24abe6baa67904b63dd160963c1c2",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.vila-macedo-piraquara.tsx": {
-      "hash": "84d12cbd29b759921db55b6775484db0",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "8b3178a9fdc32685491c6c7e4a45f683",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.vila-maria-antonieta-pinhais.tsx": {
-      "hash": "8e600134f9a4d1dc69cdbc45a0c1eac7",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "1da7ef32484baae978e3e3aed64bf659",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.vila-maria-qb.tsx": {
-      "hash": "cc5e6cd272eae4418b90986f60325e9e",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "f72199dece3d857aaca6dfccd3f98a9c",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.vila-nova-araucaria.tsx": {
-      "hash": "e10a6f95df5f81b54ac70bf37e2b8971",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "527cffa1fd3b48dd96b7d01961a32c8c",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.vila-sao-jose-qb.tsx": {
-      "hash": "9031095dbf8eac5b4bc09c69402bfd3c",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "b5ab6ca7895c458a7e1a1ea4a4ff9786",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.vila-solene.tsx": {
-      "hash": "88233194cecba4dbf911ca91744fea0b",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "e5df4e3b73d56ac6a9709c8ecd82c410",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.vila-taruma.tsx": {
-      "hash": "7c4a4f4d924c5ed8c03b21188d15d66b",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "60f95d8fea6cdaf2060c9fc508a7de37",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.vista-alegre.tsx": {
       "hash": "0d50a7737725a4923adfd5e184be708a",
       "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.weissopolis.tsx": {
-      "hash": "f0e958310caf81f6220f9358933e9a8e",
-      "classe": "PUBLIC_CHANGE"
+      "hash": "9ad060845074fd5aded2791cd1feb16b",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/routes/bairros.xaxim.tsx": {
       "hash": "f3be6f3e270e97cf83447c8595a639af",
@@ -10683,7 +10691,7 @@
       "classe": "CI_CHANGE"
     },
     "tsconfig.tsbuildinfo": {
-      "hash": "2e5f8bcf84f46dfe08e8dd8a7316e12d",
+      "hash": "91c3c6fc0b78f797117fb3b932fe32e3",
       "classe": "CI_CHANGE"
     },
     "vite.config.ts": {
@@ -10695,6 +10703,6 @@
       "classe": "CI_CHANGE"
     }
   },
-  "superficieHash": "34d49c1982c249c3053f6be05c55aba7bd287dab4278c187df4b90d1b4798a85",
-  "selo": "2c97c1a2fdef7dbe1a6470988845d2f2436d88f179c158a0ef7bc0c2571b9ab0"
+  "superficieHash": "f338acdf6bc0c5d2caf5a847a79a4532ba510dad13ad500628a8346471472586",
+  "selo": "4668127078c1a836316f65f424e1595080a8da50c56080b662c61ef52d5f833b"
 }
