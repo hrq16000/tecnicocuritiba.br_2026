@@ -79,6 +79,23 @@ interface Marco {
   serpSnapshot: string | null;
 }
 
+interface SnapshotIndex {
+  geradoEm: string;
+  verificacao: {
+    status: "ok" | "falhou";
+    executadoEm: string;
+    marcos: string[];
+    totalEntradas: number;
+    memorias: number;
+    urlsCuradas: number | null;
+    urlsNoMarcoAtual: number | null;
+    amostragem: { solicitada: number; conferidas: number; ok: boolean };
+    falhas: string[];
+    avisos: string[];
+  };
+  itens: { tipo: string; path: string; marco?: string; hash: string }[];
+}
+
 interface Payload {
   atualizadoEm?: string;
   marcos: Marco[];
@@ -392,6 +409,83 @@ export default function AdminMonitoramento() {
                   <p className="mt-2 text-xl font-semibold">{c.valor === null ? SEM_DADO : c.valor}</p>
                 </div>
               ))}
+            </section>
+
+            <section className="mt-10">
+              <h2 className="text-lg font-semibold">Reindexação de memórias e snapshots</h2>
+              {!indice ? (
+                <p className="mt-2 text-sm text-muted-foreground">
+                  sem dado — rode <code>npm run reindex:snapshots</code> para gerar o índice.
+                </p>
+              ) : (
+                <>
+                  <p className="mt-2 text-sm">
+                    Status:{" "}
+                    <span className={indice.verificacao.status === "ok" ? "font-semibold text-emerald-600" : "font-semibold text-destructive"}>
+                      {indice.verificacao.status === "ok" ? "verificado" : "reprovado"}
+                    </span>{" "}
+                    em {new Date(indice.verificacao.executadoEm).toLocaleString("pt-BR")}.
+                  </p>
+                  <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                    {[
+                      { label: "Artefatos indexados", valor: indice.verificacao.totalEntradas },
+                      { label: "Memórias", valor: indice.verificacao.memorias },
+                      {
+                        label: "URLs conferidas",
+                        valor:
+                          indice.verificacao.urlsNoMarcoAtual === null
+                            ? null
+                            : `${indice.verificacao.urlsNoMarcoAtual}/${indice.verificacao.urlsCuradas ?? "?"}`,
+                      },
+                      {
+                        label: "Amostragem",
+                        valor: `${indice.verificacao.amostragem.conferidas} ${indice.verificacao.amostragem.ok ? "✓" : "⚠"}`,
+                      },
+                    ].map((c) => (
+                      <div key={c.label} className="rounded-xl border border-border bg-card p-4">
+                        <p className="text-xs uppercase tracking-wide text-muted-foreground">{c.label}</p>
+                        <p className="mt-2 text-xl font-semibold">{c.valor === null ? SEM_DADO : c.valor}</p>
+                      </div>
+                    ))}
+                  </div>
+                  {indice.verificacao.falhas.length > 0 && (
+                    <ul className="mt-4 space-y-1 text-sm text-destructive">
+                      {indice.verificacao.falhas.map((f) => (
+                        <li key={f}>✖ {f}</li>
+                      ))}
+                    </ul>
+                  )}
+                  {indice.verificacao.avisos.length > 0 && (
+                    <ul className="mt-2 space-y-1 text-xs text-muted-foreground">
+                      {indice.verificacao.avisos.map((a) => (
+                        <li key={a}>· {a}</li>
+                      ))}
+                    </ul>
+                  )}
+                  <div className="mt-4 overflow-x-auto rounded-xl border border-border">
+                    <table className="w-full text-sm">
+                      <thead className="bg-muted/50 text-left">
+                        <tr>
+                          <th className="p-3">Tipo</th>
+                          <th className="p-3">Arquivo</th>
+                          <th className="p-3">Marco</th>
+                          <th className="p-3">Hash</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {indice.itens.map((i) => (
+                          <tr key={i.path} className="border-t border-border">
+                            <td className="p-3">{i.tipo}</td>
+                            <td className="p-3 font-mono text-xs">{i.path}</td>
+                            <td className="p-3">{i.marco ?? "—"}</td>
+                            <td className="p-3 font-mono text-xs">{i.hash.slice(0, 10)}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </>
+              )}
             </section>
 
             <p className="mt-8 text-xs text-muted-foreground">
