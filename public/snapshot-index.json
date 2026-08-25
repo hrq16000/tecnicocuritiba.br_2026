@@ -1,7 +1,7 @@
 {
-  "geradoEm": "2026-08-25T04:03:18.246Z",
+  "geradoEm": "2026-08-25T04:03:35.230Z",
   "verificacao": {
-    "executadoEm": "2026-08-25T04:03:18.246Z",
+    "executadoEm": "2026-08-25T04:03:35.230Z",
     "marcos": [
       "D0",
       "D7"
@@ -16,12 +16,6 @@
       "ok": true,
       "itens": [
         {
-          "path": ".lovable/memory/features/whatsapp-funnel-v2.md",
-          "tipo": "memoria",
-          "hash": "a2eaa262ac2f0bda1fd189c207c6d7c87f73b3ed",
-          "conferido": true
-        },
-        {
           "path": ".lovable/memory/features/ambiente-local-offline.md",
           "tipo": "memoria",
           "hash": "ca521b7ddd66b2a9eba2fd59ae999fee026d31e1",
@@ -31,6 +25,12 @@
           "path": "reports/operacao-marcos.json",
           "tipo": "historico",
           "hash": "6fc1aa5a3ea89d7a4a855066a06b3ff02395606a",
+          "conferido": true
+        },
+        {
+          "path": "reports/serp-signals-d7.json",
+          "tipo": "marco-serp",
+          "hash": "156332cde9ee5804fb7428840bc41286da4bca69",
           "conferido": true
         }
       ]

@@ -1,6 +1,6 @@
 # Relatório de prontidão para o D14 — tecnico.curitiba.br
 
-Gerado em 2026-08-25T04:03:17.533Z (UTC).
+Gerado em 2026-08-25T04:03:34.582Z (UTC).
 
 > Rodada de **congelamento operacional**: nenhuma página, metadado, canonical, sitemap,
 > redirect, link interno ou disparo de IndexNow foi alterado para produzir este documento.
@@ -10,7 +10,7 @@ Gerado em 2026-08-25T04:03:17.533Z (UTC).
 
 D0 timestamp: 2026-08-25T01:49:17.273Z
 D14 earliest: 2026-09-08T01:49:17.273Z
-Current: 2026-08-25T04:03:17.533Z
+Current: 2026-08-25T04:03:34.582Z
 Status: LOCKED
 Tempo restante: 13.91 dia(s).
 
@@ -40,7 +40,7 @@ Reprocessamento nunca sobrescreve em silêncio: o registro anterior é arquivado
 | http/canonical/noindex por URL | crawl | OBSERVED | 2026-08-25T02:38:54.071Z | 1.4 | 48 |
 | URLs curadas no sitemap | sitemap | OBSERVED | 2026-08-25T01:36:05.217Z | 2.5 | 168 |
 | inbound/profundidade | internal_graph | OBSERVED | 2026-08-25T01:36:05.140Z | 2.5 | 168 |
-| submissões | indexnow | OBSERVED | 2026-08-25T01:36:20.032Z | 2.4 | 720 |
+| submissões | indexnow | OBSERVED | 2026-08-25T01:36:20.032Z | 2.5 | 720 |
 | cobertura Bing | bing | N/A | N/A | N/A | 168 |
 | identidade de SERP | snapshot_local | OBSERVED | 2026-08-25T01:34:00.527Z | 2.5 | 168 |
 
@@ -126,7 +126,7 @@ IndexNow: PASS (0 esperado)
 
 | Seção | Item | Status | Detalhe |
 | --- | --- | --- | --- |
-| TEMPORAL GATE | janela avaliada em UTC com fonte única | PASS | D0 2026-08-25T01:49:17.273Z · agora 2026-08-25T04:03:17.533Z · elegível 2026-09-08T01:49:17.273Z · status LOCKED |
+| TEMPORAL GATE | janela avaliada em UTC com fonte única | PASS | D0 2026-08-25T01:49:17.273Z · agora 2026-08-25T04:03:34.582Z · elegível 2026-09-08T01:49:17.273Z · status LOCKED |
 | TEMPORAL GATE | coleta antecipada de D14 falha fechada | PASS | exit 2 |
 | TEMPORAL GATE | bloqueio informa marco, D0, agora, mínimo e restante | PASS | mensagem de bloqueio auditada |
 | TEMPORAL GATE | bypass --force recusado | PASS | exit 2 |
