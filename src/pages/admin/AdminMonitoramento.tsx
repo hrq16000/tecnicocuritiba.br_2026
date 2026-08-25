@@ -30,6 +30,8 @@ import { TendenciasMarcos } from "@/components/admin/monitoramento/TendenciasMar
 import { ExperimentosControlados } from "@/components/admin/monitoramento/ExperimentosControlados";
 import { ClassificacaoAlertas } from "@/components/admin/monitoramento/ClassificacaoAlertas";
 import type { MarcoUrl } from "@/components/admin/monitoramento/types";
+import { Navigate } from "@/lib/router-compat";
+import { useAdminAuth } from "@/hooks/useAdminAuth";
 
 /**
  * Painel interno de monitoramento operacional D0 → D7 → D14 → D30.
@@ -145,6 +147,9 @@ function baixar(
 }
 
 export default function AdminMonitoramento() {
+  /* Evidência operacional (checklists, exports, logs de job, alertas) não é
+   * conteúdo público: sem sessão admin o painel não renderiza nada. */
+  const { loading: authLoading, session, isAdmin } = useAdminAuth();
   const [data, setData] = useState<Payload | null>(null);
   const [erro, setErro] = useState<string | null>(null);
   const [carregando, setCarregando] = useState(true);
@@ -310,6 +315,22 @@ export default function AdminMonitoramento() {
     if (typeof a !== "number" || typeof b !== "number") return null;
     return Math.round((a - b) * 100) / 100;
   };
+
+  if (authLoading) {
+    return (
+      <div className="flex min-h-screen items-center justify-center">
+        <Loader2 className="h-6 w-6 animate-spin text-primary" aria-hidden />
+      </div>
+    );
+  }
+  if (!session) return <Navigate to="/admin/login" replace />;
+  if (!isAdmin) {
+    return (
+      <div className="flex min-h-screen items-center justify-center p-6 text-center text-muted-foreground">
+        Acesso restrito a administradores.
+      </div>
+    );
+  }
 
   return (
     <>
