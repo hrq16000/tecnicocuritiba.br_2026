@@ -258,3 +258,16 @@ console.log(
   `[marco ${MARCO}] curadas=${urls.length} indexed=${buckets.indexed} unknown=${buckets.unknown} discovered=${buckets.discovered} crawled-not-indexed=${buckets.crawled_not_indexed}`,
 );
 console.log(`  → reports/operacao-marcos.json · public/operacao-marcos.json · reports/operacao-${MARCO.toLowerCase()}.md`);
+
+// Snapshot de queries do marco (quando houver coleta GSC recente) — imutável.
+const queriesFonte = "reports/gsc/queries-28d.json";
+const queriesMarco = `reports/queries-${MARCO.toLowerCase()}.json`;
+if (existsSync(queriesFonte) && !existsSync(queriesMarco)) copyFileSync(queriesFonte, queriesMarco);
+
+// Reindexa memórias/snapshots e verifica cobertura logo após registrar o marco.
+try {
+  const { execFileSync } = await import("node:child_process");
+  execFileSync(process.execPath, ["scripts/reindex-snapshots.mjs"], { stdio: "inherit" });
+} catch (e) {
+  console.warn(`[marco] reindexação falhou: ${e.message}`);
+}
