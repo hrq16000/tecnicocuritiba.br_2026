@@ -78,11 +78,29 @@ collect("src");
 collect("scripts");
 
 const problemas = [];
+const informativos = [];
 const linksBlog = [];
+
+/**
+ * Em `src/data/blogPostsContent.tsx` os corpos de artigos em revisão convivem
+ * com os aprovados. Um link para slug não aprovado só é defeito real quando
+ * está DENTRO de um artigo servido — o corpo de um artigo que responde 404
+ * nunca chega ao usuário. A dona do link é a última chave de slug anterior.
+ */
+function donoDoTrecho(src, index) {
+  let dono = null;
+  for (const m of src.matchAll(/^\s{0,4}"([a-z0-9-]+)":\s*\{/gm)) {
+    if (m.index > index) break;
+    dono = m[1];
+  }
+  return dono;
+}
+
 for (const file of fontes) {
   if (file.includes("__tests__") || file.endsWith(".test.ts") || file.endsWith(".test.tsx")) continue;
   const src = readFileSync(file, "utf8");
   const rel = file.replace(`${process.cwd()}/`, "");
+  const acervo = rel.endsWith("src/data/blogPostsContent.tsx");
   const padroes = [
     /<Link\b[^>]*\bto="(\/[^"]*)"/g,
     /<a\b[^>]*\bhref="(\/blog\/[^"]*)"/g,
@@ -91,32 +109,43 @@ for (const file of fontes) {
   for (const re of padroes) {
     for (const m of src.matchAll(re)) {
       const href = m[1].split(/[?#]/)[0].replace(/\/+$/, "") || "/";
+      if (href.includes("${") || href.includes("{")) continue; // caminho dinâmico: validado em runtime
       const linha = src.slice(0, m.index).split("\n").length;
+      const dono = acervo ? donoDoTrecho(src, m.index) : null;
+      const servido = !acervo || (dono !== null && aprovados.has(dono));
       if (href.startsWith("/blog/")) {
         const slug = href.slice("/blog/".length);
-        linksBlog.push({ file: rel, linha, href });
-        if (!aprovados.has(slug))
-          problemas.push({
-            file: rel,
-            linha,
-            href,
-            motivo: "slug de blog fora do conjunto aprovado — a rota responde 404 real",
-            correcao: "apontar para uma página publicada equivalente ou aprovar o artigo no acervo editorial",
-          });
-        continue;
-      }
-      if (href.startsWith("/admin") || href === "/" || href.startsWith("http")) continue;
-      if (!rotas.has(href) && !sitemap.has(href))
-        problemas.push({
+        linksBlog.push({ file: rel, linha, href, dono, servido });
+        if (aprovados.has(slug)) continue;
+        const registro = {
           file: rel,
           linha,
           href,
+          dono,
+          motivo: "slug de blog fora do conjunto aprovado — a rota responde 404 real",
+          correcao: "apontar para uma página publicada equivalente ou aprovar o artigo no acervo editorial",
+        };
+        if (servido) problemas.push(registro);
+        else informativos.push({ ...registro, motivo: `${registro.motivo} (dentro de artigo não servido: ${dono})` });
+        continue;
+      }
+      if (href.startsWith("/admin") || href === "/" || href.startsWith("http")) continue;
+      if (!rotas.has(href) && !sitemap.has(href)) {
+        const registro = {
+          file: rel,
+          linha,
+          href,
+          dono,
           motivo: "destino não corresponde a nenhuma rota real nem ao sitemap curado",
           correcao: "corrigir o caminho ou criar/registrar a rota antes do deploy",
-        });
+        };
+        if (servido) problemas.push(registro);
+        else informativos.push(registro);
+      }
     }
   }
 }
+
 
 // ── 5. Verificação live opcional dos links do blog servidos em produção ───
 if (live) {
