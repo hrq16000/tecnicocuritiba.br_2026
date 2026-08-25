@@ -1,16 +1,28 @@
 {
   "schema": "freeze-v2-drift/1.0",
-  "verificadoEm": "2026-08-25T07:41:22.721Z",
+  "verificadoEm": "2026-08-25T07:52:04.025Z",
   "freezeSelo": "4668127078c1a836316f65f424e1595080a8da50c56080b662c61ef52d5f833b",
   "freezeSeladoEm": "2026-08-25T07:41:21.942Z",
-  "totalDiffs": 2,
+  "totalDiffs": 16,
   "porClasse": {
-    "OBSERVABILITY_CHANGE": 2
+    "OBSERVABILITY_CHANGE": 4,
+    "PUBLIC_CHANGE": 5,
+    "CI_CHANGE": 4,
+    "NON_CURATED_PUBLIC_CHANGE": 1,
+    "ADMIN_CHANGE": 2
   },
-  "publicChangeTotal": 0,
-  "publicChangeNaoRegistrado": 0,
-  "alerta": null,
-  "exigido": [],
+  "publicChangeTotal": 5,
+  "publicChangeNaoRegistrado": 1,
+  "alerta": "PRE_D14_PUBLIC_INTERVENTION_DETECTED",
+  "exigido": [
+    "intervention event",
+    "timestamp",
+    "URL",
+    "diff",
+    "motivo",
+    "coorte afetada",
+    "novo freeze versionado"
+  ],
   "diffs": [
     {
       "arquivo": "public/freeze-historico.json",
@@ -18,9 +30,79 @@
       "classe": "OBSERVABILITY_CHANGE"
     },
     {
+      "arquivo": "public/freeze-v2-drift.json",
+      "tipo": "ALTERADO",
+      "classe": "OBSERVABILITY_CHANGE"
+    },
+    {
       "arquivo": "public/freeze-v2.json",
       "tipo": "ALTERADO",
       "classe": "OBSERVABILITY_CHANGE"
+    },
+    {
+      "arquivo": "reports/freeze-v2-drift.json",
+      "tipo": "ALTERADO",
+      "classe": "OBSERVABILITY_CHANGE"
+    },
+    {
+      "arquivo": "src/components/areas/BairroInterlinkLocal.tsx",
+      "tipo": "ALTERADO",
+      "classe": "PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/components/areas/DiretorioLocalidades.tsx",
+      "tipo": "ALTERADO",
+      "classe": "PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/components/home/RegioesCuritibaSection.tsx",
+      "tipo": "ALTERADO",
+      "classe": "PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/integrations/supabase/types.ts",
+      "tipo": "ALTERADO",
+      "classe": "CI_CHANGE"
+    },
+    {
+      "arquivo": "src/pages/OrdemDeServicoConsulta.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/pages/TecnicoInformaticaCuritiba.tsx",
+      "tipo": "ALTERADO",
+      "classe": "PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/pages/admin/AdminBairros.tsx",
+      "tipo": "ADICIONADO",
+      "classe": "ADMIN_CHANGE"
+    },
+    {
+      "arquivo": "src/pages/bairros/BairroTemplate.tsx",
+      "tipo": "ALTERADO",
+      "classe": "PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routeTree.gen.ts",
+      "tipo": "ALTERADO",
+      "classe": "CI_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/admin.bairros.tsx",
+      "tipo": "ADICIONADO",
+      "classe": "ADMIN_CHANGE"
+    },
+    {
+      "arquivo": "supabase/migrations/20260825074649_8655f0b1-27d2-44bf-b7f9-71b580f9ef06.sql",
+      "tipo": "ADICIONADO",
+      "classe": "CI_CHANGE"
+    },
+    {
+      "arquivo": "tsconfig.tsbuildinfo",
+      "tipo": "ALTERADO",
+      "classe": "CI_CHANGE"
     }
   ]
 }
