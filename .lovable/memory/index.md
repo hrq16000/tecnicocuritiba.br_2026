@@ -24,3 +24,4 @@
 - [Análise D7/D14 e reindexação](mem://features/analise-d7-d14) — Relatório analista somente-leitura, decisões D7/D14 e verificação de snapshots no painel.
 - [Intervenção pré-D14 e coortes](mem://features/intervencao-pre-d14-coortes) — Ledger selado de intervenções, coortes limpa/intervencionada/indireta e regra FREEZE_V2.
 - [Vertical Impressora 3D](mem://features/impressora-3d-minimo-500) — Mínimo pré-aprovado R$ 500,00, triagem própria e ausência de rota indexável.
+- [Gates de órfãs e MCP](mem://features/gates-orfas-e-mcp) — Baseline versionado do orphan-trend, rotas isentas e OAuth/auditoria do MCP.

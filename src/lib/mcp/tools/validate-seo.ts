@@ -1,4 +1,5 @@
 import { defineTool } from "@lovable.dev/mcp-js";
+import { logMcpToolAccess } from "../lib/audit";
 import { z } from "zod";
 import { fetchPublicPage, meta, normalizePath, textOf, SITE } from "../lib/fetchPage";
 
@@ -11,8 +12,9 @@ export default defineTool({
     path: z.string().describe("Caminho público da rota, ex.: /servicos/conserto-monitor"),
   },
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: true },
-  handler: async ({ path }) => {
+  handler: async ({ path }, ctx?: unknown) => {
     const rota = normalizePath(path);
+    logMcpToolAccess({ tool: "validate_seo", route: rota, outcome: "authorized", ctx });
     const page = await fetchPublicPage(rota);
     if (!page.ok) {
       return {

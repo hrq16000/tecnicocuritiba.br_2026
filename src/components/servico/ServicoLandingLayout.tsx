@@ -55,6 +55,12 @@ export interface ServicoLandingData {
   /** Diferenciação residencial x empresarial. */
   atendimento?: { residencial: string; empresarial: string };
   faqs: ServiceFaq[];
+  /**
+   * Perguntas conversacionais curtas que entram apenas no FAQPage: o texto
+   * visível correspondente é renderizado na seção "Respostas diretas",
+   * evitando pergunta duplicada na página e mantendo a paridade 1:1.
+   */
+  faqsSchemaExtra?: ServiceFaq[];
   relacionados: { label: string; to: string }[];
   /** Data ISO da última reescrita — atualiza dateModified do schema */
   dateModified?: string;
@@ -174,7 +180,7 @@ export const ServicoLandingLayout = ({ data }: { data: ServicoLandingData }) => 
         description={data.serviceDescription}
         path={`/servicos/${data.path}`}
         priceFrom={99.99}
-        faqs={data.faqs}
+        faqs={[...data.faqs, ...(data.faqsSchemaExtra ?? [])]}
         dateModified={data.dateModified}
       />
       <Header />
