@@ -251,6 +251,18 @@ const analise = {
   marcoAtual: MARCO_ATUAL,
   funil: { D0: funil(D0), D7: funil(D7), D14: funil(D14) },
   deltas: { "D0→D7": deltas(funil(D0), funil(D7)), "D7→D14": deltas(funil(D7), funil(D14)), "D0→D14": deltas(funil(D0), funil(D14)) },
+  // Janelas móveis de 28d se sobrepõem entre marcos: o relatório mostra o
+  // overlap em vez de tratar os períodos como independentes.
+  janelasSearchPerformance: {
+    "D0→D7": janelasSearchPerformance(D0, D7),
+    "D7→D14": janelasSearchPerformance(D7, D14),
+    "D0→D14": janelasSearchPerformance(D0, D14),
+  },
+  integridade: {
+    D0: D0?.integridade ?? null,
+    D7: D7?.integridade ?? null,
+    D14: D14?.integridade ?? null,
+  },
   tierA: { D0: tierA(D0), D7: tierA(D7), D14: tierA(D14) },
   clusters,
   tierANaoIndexadas,
@@ -294,6 +306,16 @@ const md = [
   "",
   "## SEARCH PERFORMANCE",
   "",
+  ...(() => {
+    const linhas = [];
+    for (const [rot, j] of Object.entries(analise.janelasSearchPerformance)) {
+      if (!j) { linhas.push(`${rot}: ${NA} — marco não registrado.`); continue; }
+      linhas.push(
+        `${rot}: janela A ${j.a.inicio} → ${j.a.fim} · janela B ${j.b.inicio} → ${j.b.fim} · overlap ${j.overlapDias}d (${j.overlapPct}%) · período exclusivo ${j.naoSobreposto.dias}d.`,
+      );
+    }
+    return linhas.length ? [...linhas, ""] : [];
+  })(),
   `D0 baseline: ${fmt(funil(D0)?.impressoes)} impressões / ${fmt(funil(D0)?.cliques)} cliques em 28d`,
   `D7: ${D7 ? `${funil(D7).impressoes} impressões / ${funil(D7).cliques} cliques` : NA}`,
   `D14: ${D14 ? `${funil(D14).impressoes} impressões / ${funil(D14).cliques} cliques` : NA}`,

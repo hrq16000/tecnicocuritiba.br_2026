@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-08-25T02:39:19.007Z",
+  "geradoEm": "2026-08-25T03:58:56.314Z",
   "marcoAtual": "D7",
   "funil": {
     "D0": {
@@ -61,6 +61,37 @@
     },
     "D7→D14": null,
     "D0→D14": null
+  },
+  "janelasSearchPerformance": {
+    "D0→D7": {
+      "a": {
+        "marco": "D0",
+        "inicio": "2026-07-28T01:49:17.273Z",
+        "fim": "2026-08-25T01:49:17.273Z",
+        "dias": 28
+      },
+      "b": {
+        "marco": "D7",
+        "inicio": "2026-07-28T02:42:36.065Z",
+        "fim": "2026-08-25T02:42:36.065Z",
+        "dias": 28
+      },
+      "overlapDias": 28,
+      "overlapPct": 100,
+      "naoSobreposto": {
+        "dias": 0,
+        "inicio": "2026-08-25T01:49:17.273Z",
+        "fim": "2026-08-25T02:42:36.065Z",
+        "observacao": "Período exclusivo do marco mais recente. Não substitui a janela de 28d — é comparação complementar."
+      }
+    },
+    "D7→D14": null,
+    "D0→D14": null
+  },
+  "integridade": {
+    "D0": null,
+    "D7": null,
+    "D14": null
   },
   "tierA": {
     "D0": {
@@ -481,11 +512,31 @@
     "ativos": 0
   },
   "decisaoD7": {
-    "valor": "WAIT",
-    "justificativa": "Processamento dentro do esperado sete dias após a consolidação."
+    "valor": "QUICK_WINS",
+    "decisao": "B",
+    "rotulo": "PREPARE QUICK WINS",
+    "severidade": "media",
+    "alerta": false,
+    "justificativa": "5 páginas indexadas com impressões reais em posição 5–20.",
+    "regressoes": [],
+    "sinais": {
+      "tierABase": 58.1,
+      "tierAAtual": 58.1,
+      "tierAAvanca": false,
+      "unknownBase": 56,
+      "unknownAtual": 57,
+      "unknownCai": false,
+      "indexedBase": 22,
+      "indexedAtual": 22,
+      "indexedSobe": false,
+      "crawledNaoIndexadas": 0,
+      "crawledBaixo": true,
+      "quickWinsElegiveis": 5
+    }
   },
   "decisaoD14": {
     "valor": "PENDENTE",
-    "justificativa": "Marco D14 ainda não registrado."
+    "justificativa": "Marco  ainda não registrado.",
+    "severidade": "informativa"
   }
 }
