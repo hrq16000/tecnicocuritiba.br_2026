@@ -18,7 +18,9 @@ import {
   NOTA_VISITA_AVULSA,
   QUANDO_VISITA_COMPATIVEL,
   REGRA_CANCELAMENTO,
+  REGRA_IMPRESSORA_3D,
   VALOR_COLETA_MINIMO_LABEL,
+  VALOR_IMPRESSORA_3D_MINIMO_LABEL,
   VALOR_PACOTE_2H_LABEL,
   VALOR_VISITA_LABEL,
 } from "@/lib/precosConfig";
@@ -96,6 +98,23 @@ function ficha(
     limitacoes: extra.limitacoes,
   };
 }
+
+/**
+ * Impressora 3D — vertical com mínimo pré-aprovado próprio (fonte única:
+ * VALOR_IMPRESSORA_3D_MINIMO_LABEL). Sempre por coleta e entrega, porque o
+ * reparo exige bancada, calibração e teste de impressão real.
+ */
+const IMPRESSORA_3D: Pick<
+  FichaComercial,
+  "rota" | "valorInicialLabel" | "valorInicialNota" | "tempoEstimado"
+> = {
+  rota: "coleta",
+  valorInicialLabel: `Mínimo pré-aprovado ${VALOR_IMPRESSORA_3D_MINIMO_LABEL}`,
+  valorInicialNota:
+    "Diagnóstico completo em bancada, calibração e teste de impressão, com coleta e entrega inclusas no valor mínimo pré-aprovado. Insumos e peças não inclusos.",
+  tempoEstimado:
+    "Prazo confirmado por escrito depois do diagnóstico em bancada — sem promessa de prazo antes disso.",
+};
 
 export const FICHAS_COMERCIAIS: Record<string, FichaComercial> = {
   formatacao: ficha(VISITA, {
@@ -251,7 +270,30 @@ export const FICHAS_COMERCIAIS: Record<string, FichaComercial> = {
       "Garantia de 90 dias cobre a mão de obra do ponto reparado.",
     ],
   }),
+  "conserto-impressora-3d": ficha(IMPRESSORA_3D, {
+    incluso: [
+      "Diagnóstico completo em bancada: térmico, mecânico, eletrônico e de firmware.",
+      "Calibração de nivelamento, primeira camada e fluxo para o material declarado.",
+      "Peça de validação impressa na própria máquina e registrada no laudo.",
+      "Coleta e entrega dentro da área atendida.",
+    ],
+    naoIncluso: [
+      "Filamento, resina e demais insumos de impressão.",
+      "Peças de upgrade (hotend, placa, sensor) e itens de desgaste como bico, tubo e correia.",
+      "Serviço de impressão de peças sob demanda.",
+    ],
+    observacoes: [
+      REGRA_IMPRESSORA_3D,
+      "A calibração entregue vale para o material declarado por você; trocar de material exige recalibrar.",
+    ],
+    limitacoes: [
+      "Atendimento exclusivamente por coleta e entrega: o reparo exige bancada e teste de impressão.",
+      "Impressora de resina precisa chegar com o tanque limpo, sem resina, por segurança de manuseio.",
+      "Garantia de 90 dias cobre a mão de obra do ponto reparado, sem cobrir entupimento novo por insumo inadequado.",
+    ],
+  }),
 };
+
 
 export function fichaComercialDoServico(slug: string): FichaComercial | undefined {
   return FICHAS_COMERCIAIS[slug];

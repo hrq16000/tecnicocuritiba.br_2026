@@ -19,6 +19,7 @@ type Rule = { test: RegExp; equipment?: EquipmentId; symptom?: string; source: s
 
 /** Da rota mais específica para a mais genérica. */
 const RULES: Rule[] = [
+  { test: /^\/servicos\/conserto-impressora-3d/, equipment: "impressora3d", source: "servico_impressora3d" },
   { test: /^\/servicos\/conserto-tv/, equipment: "tv", source: "servico_tv" },
   { test: /^\/servicos\/conserto-monitor/, equipment: "pc", symptom: "tela-teclado-bateria", source: "servico_monitor" },
   { test: /^\/servicos\/conserto-placa/, equipment: "pc", symptom: "nao-liga-placa", source: "servico_placa" },

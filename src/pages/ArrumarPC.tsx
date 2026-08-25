@@ -304,7 +304,7 @@ const ArrumarPC = () => {
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 text-sm">
               {[
                 ["Curitiba", "/tecnico-informatica-curitiba"],
-                ["São José dos Pinhais", "/tecnico-informatica-sao-jose-dos-pinhais"],
+                ["São José dos Pinhais", "/tecnico-informatica-sao-jose-pinhais"],
                 ["Araucária", "/tecnico-informatica-araucaria"],
                 ["Pinhais", "/tecnico-informatica-pinhais"],
                 ["Colombo", "/tecnico-informatica-colombo"],

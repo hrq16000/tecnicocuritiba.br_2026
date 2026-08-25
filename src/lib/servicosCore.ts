@@ -2124,7 +2124,91 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
     ],
     dateModified: "2026-08-07",
   },
+
+  // 16 ─────────────────────────────────────────────────────────
+  "conserto-impressora-3d": {
+    path: "conserto-impressora-3d",
+    trackingKey: "conserto-impressora-3d",
+    metaTitle: "Conserto de Impressora 3D em Curitiba | Bico, Termistor e Placa",
+    metaDescription:
+      "Manutenção e conserto de impressora 3D em Curitiba: bico entupido, extrusora, termistor, resistência, eixos, placa e firmware. Mínimo pré-aprovado de R$ 500,00, com coleta e entrega.",
+    serviceName: "Conserto e manutenção de impressora 3D",
+    serviceDescription:
+      "Diagnóstico em bancada e reparo de impressoras 3D FDM e de resina em Curitiba e região: desentupimento e troca de bico, hotend, termistor e resistência, calibração de mesa e eixos, reparo de placa controladora e recuperação de firmware, com valor mínimo pré-aprovado declarado antes da coleta.",
+    eyebrow: "Impressoras 3D em Curitiba",
+    h1: "Conserto de impressora 3D em Curitiba",
+    h1Accent: "com bancada, calibração e teste de impressão real",
+    intro:
+      "Impressora 3D que entope no meio da peça, que perde temperatura, que erra a primeira camada ou que simplesmente não liga mais depois de um travamento de firmware. Esse é um equipamento diferente de um computador: ele mistura eletrônica, mecânica e térmica no mesmo conjunto, e o diagnóstico só fecha quando a máquina imprime de novo. Por isso todo atendimento em impressora 3D tem valor mínimo pré-aprovado de R$ 500,00, com coleta e entrega inclusas e peças não inclusas — dizemos isso antes da coleta, não depois.",
+    whatsappMessage:
+      "Olá! Vim da página de conserto de impressora 3D e quero fazer a triagem. " +
+      "(1) marca e modelo: (2) tecnologia (FDM de filamento ou resina): (3) a impressora liga e a tela responde: " +
+      "(4) sintoma exato (entope, perde temperatura, não adere, eixo travado, não liga, erro na tela): " +
+      "(5) qual erro aparece na tela: (6) filamento ou resina em uso: (7) a máquina já foi aberta ou modificada: " +
+      "(8) há quanto tempo o defeito aparece: (9) bairro ou cidade para a coleta:",
+    incluso: [
+      { title: "Triagem antes da coleta", desc: "Marca, modelo, tecnologia, sintoma, erro de tela e histórico de modificações da máquina." },
+      { title: "Avaliação térmica", desc: "Medição de aquecimento do hotend e da mesa, leitura do termistor e conferência da resistência sob carga." },
+      { title: "Extrusora e caminho do filamento", desc: "Verificação de bico, tubo, engrenagem tracionadora, mola de pressão e alinhamento do conjunto de extrusão." },
+      { title: "Mecânica e eixos", desc: "Folga de correias, castanhas, fusos, rolamentos e trilhos, com conferência de esquadro e de movimento sem carga." },
+      { title: "Eletrônica de controle", desc: "Análise da placa controladora, drivers de motor, sensores de fim de curso e sensor de nivelamento." },
+      { title: "Firmware e configuração", desc: "Conferência de versão, parâmetros de passos, limites térmicos e recuperação de placa que não inicializa, quando o hardware permite." },
+      { title: "Calibração de saída", desc: "Nivelamento, ajuste de primeira camada, fluxo e temperatura para o material declarado por você." },
+      { title: "Teste de impressão documentado", desc: "Peça de validação impressa na própria máquina depois do reparo, registrada no laudo antes da devolução." },
+    ],
+    sinais: [
+      "Bico entupido, sem extrusão ou com falha intermitente de fluxo",
+      "Primeira camada que não adere ou que arrasta a peça",
+      "Erro de temperatura, thermal runaway ou aquecimento que não chega ao alvo",
+      "Extrusora fazendo clique e comendo o filamento",
+      "Eixo travado, com ruído metálico ou perdendo passos no meio da impressão",
+      "Impressora que não liga, tela apagada ou travada na inicialização",
+      "Falha de nivelamento automático mesmo depois de refazer o processo",
+      "Máquina que voltou de outra assistência ainda sem imprimir",
+    ],
+    processo: PROCESSO_PADRAO,
+    fatoresValor: [
+      { title: "Origem da falha", desc: "Entupimento simples, resistência queimada, driver de motor e placa controladora envolvem esforços de bancada bem diferentes." },
+      { title: "Tecnologia da máquina", desc: "FDM de filamento e impressora de resina têm conjuntos distintos: extrusão e aquecimento em um caso, óptica e tanque no outro." },
+      { title: "Modificações anteriores", desc: "Hotend trocado, fiação emendada, firmware alternativo e peça impressa substituindo peça original exigem revisão antes do diagnóstico." },
+      { title: "Disponibilidade de peça", desc: "Bico, termistor e correia são itens de linha; placa controladora e tela de modelo específico podem depender de fornecimento." },
+      { title: "Tamanho e transporte", desc: "Impressora de grande volume, com estrutura fechada ou com tanque de resina exige embalagem e manuseio adicionais." },
+      { title: "Material declarado", desc: "Calibrar para PLA é diferente de calibrar para material técnico com temperatura mais alta e retração maior." },
+      { title: "Logística", desc: "A coleta e a entrega seguem as faixas de distância publicadas na página de coleta." },
+    ],
+    atendimento: {
+      residencial:
+        "Máquina de uso pessoal, maker e escolar: recuperação da capacidade de imprimir com calibração feita para o material que você realmente usa.",
+      empresarial:
+        "Impressora usada em produção, prototipagem ou laboratório: registro individual por equipamento, laudo por escrito e conferência de repetibilidade no teste final.",
+    },
+    faqs: [
+      { question: "Por que o valor mínimo da impressora 3D é maior?", answer: "Porque o diagnóstico é obrigatoriamente completo. Em uma impressora 3D não existe teste rápido conclusivo: o mesmo sintoma de falha de extrusão pode vir do bico, do tubo, da engrenagem tracionadora, do termistor, da resistência, do driver do motor ou de um parâmetro de firmware. Fechar o caso exige montar a máquina em bancada, aquecer, medir sob carga, corrigir, calibrar e imprimir uma peça de validação, o que ocupa a bancada por um período longo. Por isso qualquer serviço em impressora 3D tem mínimo pré-aprovado de R$ 500,00, com coleta e entrega inclusas e peças não inclusas. Esse valor é dito na triagem, antes de a máquina sair da sua casa." },
+      { question: "Bico entupido resolve mesmo ou volta a entupir?", answer: "Resolve, e a diferença está em tratar a causa e não só o entupimento. Limpar ou trocar o bico devolve a impressão no mesmo dia, mas entupimento repetido quase sempre tem origem em outro ponto: tubo de PTFE mal assentado ou queimado na ponta, folga entre tubo e bico criando câmara de acúmulo, temperatura configurada abaixo do material, filamento úmido ou com carga abrasiva, e ventilação insuficiente no dissipador do hotend. No diagnóstico verificamos esses pontos e registramos no laudo o que estava fora. Quando a causa é o material ou a armazenagem do filamento, dizemos isso claramente — trocar peça não resolveria." },
+      { question: "Vocês mexem em impressora de resina também?", answer: "Sim, com escopo declarado. Atendemos falha elétrica, placa que não inicializa, tela LCD de exposição, motor e fuso do eixo Z, sensores e recuperação de firmware. O que não fazemos é assumir responsabilidade por resina residual, tanque perfurado e cura irregular por resina fora de validade, e também não descartamos resina do cliente. A máquina precisa chegar limpa, sem resina no tanque, por segurança de manuseio na bancada. Quando isso não é possível, orientamos na triagem antes da coleta." },
+      { question: "O atendimento é na minha casa ou por coleta?", answer: "Por coleta e entrega, sempre. Impressora 3D não é serviço de visita rápida: o reparo depende de aquecer o conjunto, medir sob carga, calibrar e imprimir uma peça de teste, o que não cabe em um atendimento no endereço sem bancada. O valor mínimo pré-aprovado já inclui a coleta e a entrega dentro da área atendida. Se a máquina foi montada no local e não pode ser movida, avaliamos o caso na triagem antes de qualquer compromisso." },
+      { question: "Qual é a garantia do conserto de impressora 3D?", answer: "90 dias sobre a mão de obra e sobre o ponto reparado, contados da entrega. Cobre o defeito tratado e o componente que substituímos. Não estão cobertos: entupimento novo por filamento úmido, abrasivo ou de baixa qualidade, desnivelamento causado por transporte ou por remontagem posterior, alteração de firmware ou de parâmetros feita depois da entrega, dano por surto elétrico, e peças de desgaste como bico, tubo e correia quando o uso as consome. A calibração entregue vale para o material que você declarou; trocar para outro material exige recalibrar, e isso é normal na tecnologia." },
+      { question: "Vocês fazem upgrade de impressora 3D?", answer: "Fazemos, dentro do que é tecnicamente sustentável: troca de hotend, extrusão direta, sensor de nivelamento, placa controladora com drivers mais silenciosos, fonte e estabilização de estrutura. O que não prometemos é ganho de velocidade ou de qualidade em número, porque o resultado depende do modelo, do material e do perfil de fatiamento. O upgrade também entra no mínimo pré-aprovado de R$ 500,00, e a peça de upgrade não está inclusa nesse valor — ela é aprovada por você por escrito antes da compra ou instalada se você já a tiver." },
+      { question: "A máquina não liga mais depois de uma atualização. Tem recuperação?", answer: "Em boa parte dos casos sim. Placa que não inicializa depois de atualização costuma estar com firmware incompleto, com arquivo incompatível com a revisão da placa ou com o carregador de inicialização corrompido. Em bancada tentamos a regravação pelos caminhos que a placa oferece, e quando existe acesso de programação recuperamos sem trocar a peça. Quando a placa tem dano elétrico associado — driver queimado, trilha aberta, conversor de tensão em curto — o caminho passa a ser reparo em nível de componente ou substituição, e você recebe as duas opções com valor antes de decidir." },
+      { question: "O que preciso enviar junto com a impressora?", answer: "A fonte de alimentação e o cabo, sempre, porque em muitos casos o defeito está na alimentação e não na máquina. Envie também uma amostra do filamento ou a informação exata do material que você usa, já que a calibração final é feita para ele. Se o problema aparece com um modelo específico, mande o arquivo fatiado ou o print da configuração — isso encurta o diagnóstico. Retire resina do tanque em impressoras de resina e remova acessórios soltos da mesa. A embalagem é orientada na triagem conforme o tamanho e o tipo da estrutura." },
+      { question: "E se a avaliação mostrar que não vale reparar?", answer: "Você recebe o laudo dizendo isso, com o que foi testado e o motivo. Acontece principalmente em máquinas de entrada muito antigas em que placa, tela e conjunto de extrusão falharam juntos: a soma das peças passa do valor de uma impressora nova equivalente, e não recomendamos o reparo nesse cenário. Nesse caso o mínimo pré-aprovado cobre a avaliação em bancada e a logística, e a máquina volta montada, com todas as peças, no mesmo estado em que chegou. Não retemos equipamento e não cobramos por reparo que não fizemos." },
+      { question: "Vocês imprimem peças ou só consertam a máquina?", answer: "Esta página é de manutenção e reparo do equipamento. Não vendemos serviço de impressão sob demanda nem prometemos produção de peças. A única impressão que fazemos é a peça de validação do reparo, feita na sua própria máquina, com o seu material, para provar no laudo que o conjunto voltou a operar de forma estável. Se o seu objetivo é obter peças impressas, e não recuperar a impressora, este não é o atendimento correto e dizemos isso na triagem." },
+    ],
+    relacionados: [
+      ...LINKS_BASE,
+      { label: "Reparo de placa eletrônica", to: "/servicos/conserto-placa" },
+      { label: "Coleta e entrega", to: "/coleta-e-entrega" },
+      { label: "Equipamentos atendidos", to: "/equipamentos-atendidos" },
+    ],
+    linksLocais: [
+      { label: "Reparo de placa eletrônica", to: "/servicos/conserto-placa" },
+      { label: "Montagem de PC e workstation", to: "/servicos/montagem-de-pc" },
+      { label: "Preços e políticas", to: "/precos-e-politicas" },
+    ],
+    dateModified: "2026-08-25",
+  },
 };
+
 
 /** Ordem canônica exibida no hub /servicos. */
 export const SERVICOS_CORE_ORDER = [
@@ -2143,4 +2227,5 @@ export const SERVICOS_CORE_ORDER = [
   "conserto-tv",
   "conserto-placa",
   "conserto-monitor",
+  "conserto-impressora-3d",
 ] as const;

@@ -295,7 +295,7 @@ const Servicos = () => {
                     <td className="px-4 py-3">Anúncios abrindo sozinhos, navegador alterado, avisos estranhos</td>
                     <td className="px-4 py-3">Programas indesejados ou infecção ativa</td>
                     <td className="px-4 py-3">
-                      <Link to="/servicos/remocao-virus" className="text-[hsl(var(--accent))] hover:underline">
+                      <Link to="/servicos/remocao-de-virus" className="text-[hsl(var(--accent))] hover:underline">
                         Remoção de vírus
                       </Link>
                     </td>
