@@ -1,19 +1,45 @@
 {
   "schema": "freeze-v2-drift/1.0",
-  "verificadoEm": "2026-08-25T07:30:20.279Z",
+  "verificadoEm": "2026-08-25T07:40:47.993Z",
   "freezeSelo": "2c97c1a2fdef7dbe1a6470988845d2f2436d88f179c158a0ef7bc0c2571b9ab0",
   "freezeSeladoEm": "2026-08-25T07:30:09.047Z",
-  "totalDiffs": 2,
+  "totalDiffs": 207,
   "porClasse": {
-    "OBSERVABILITY_CHANGE": 2
+    "CI_CHANGE": 4,
+    "OBSERVABILITY_CHANGE": 4,
+    "PUBLIC_CHANGE": 3,
+    "NON_CURATED_PUBLIC_CHANGE": 196
   },
-  "publicChangeTotal": 0,
-  "publicChangeNaoRegistrado": 0,
-  "alerta": null,
-  "exigido": [],
+  "publicChangeTotal": 3,
+  "publicChangeNaoRegistrado": 2,
+  "alerta": "PRE_D14_PUBLIC_INTERVENTION_DETECTED",
+  "exigido": [
+    "intervention event",
+    "timestamp",
+    "URL",
+    "diff",
+    "motivo",
+    "coorte afetada",
+    "novo freeze versionado"
+  ],
   "diffs": [
     {
+      "arquivo": ".github/workflows/ci.yml",
+      "tipo": "ALTERADO",
+      "classe": "CI_CHANGE"
+    },
+    {
+      "arquivo": "package.json",
+      "tipo": "ALTERADO",
+      "classe": "CI_CHANGE"
+    },
+    {
       "arquivo": "public/freeze-historico.json",
+      "tipo": "ALTERADO",
+      "classe": "OBSERVABILITY_CHANGE"
+    },
+    {
+      "arquivo": "public/freeze-v2-drift.json",
       "tipo": "ALTERADO",
       "classe": "OBSERVABILITY_CHANGE"
     },
@@ -21,6 +47,1016 @@
       "arquivo": "public/freeze-v2.json",
       "tipo": "ALTERADO",
       "classe": "OBSERVABILITY_CHANGE"
+    },
+    {
+      "arquivo": "reports/freeze-v2-drift.json",
+      "tipo": "ALTERADO",
+      "classe": "OBSERVABILITY_CHANGE"
+    },
+    {
+      "arquivo": "scripts/check-bairros-noindex.mjs",
+      "tipo": "ADICIONADO",
+      "classe": "CI_CHANGE"
+    },
+    {
+      "arquivo": "src/components/home/RegioesCuritibaSection.tsx",
+      "tipo": "ALTERADO",
+      "classe": "PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/lib/whatsappDeepLink.ts",
+      "tipo": "ADICIONADO",
+      "classe": "PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/pages/bairros/BairroTemplate.tsx",
+      "tipo": "ALTERADO",
+      "classe": "PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.academia-sjp.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.afonso-pena.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.agricola-sjp.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.alto-boqueirao.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.alto-da-gloria.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.alto-maracana.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.alto-taruma.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.antonio-olivero-cm.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.aristocrata.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.atuba-colombo.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.atuba-pinhais.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.aviacao.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.barigui-araucaria.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.barro-preto.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.bateias.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.boa-vista-at.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.boneca-do-iguacu-sjp.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.boqueirao-araucaria.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.borda-campo-sjp.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.borda-do-campo-qb.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.borda-do-campo-sjp.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.botiatuva-cm.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.botiatuva.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.braga.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.cachoeira-araucaria.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.cachoeira-at.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.caiua-piraquara.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.california-araucaria.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.campina-da-barra.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.campina-grande-colombo.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.campo-largo-roseira-sjp.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.campo-pequeno.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.campo-tenente-at.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.capao-da-imbuia.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.capela-velha.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.centro-almirante-tamandare.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.centro-araucaria.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.centro-campo-largo.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.centro-campo-magro.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.centro-colombo.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.centro-fazenda-rio-grande.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.centro-pinhais.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.centro-piraquara.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.centro-quatro-barras.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.chapada.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.cidade-jardim-sjp.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.colonia-antonio-prado.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.colonia-malhada-cl.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.colonia-murici-sjp.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.correia-de-freitas.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.costeira-araucaria.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.costeira.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.cruzeiro.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.del-rey.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.embu-colombo.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.emiliano-perneta.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.espigao-alegre-cm.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.estacao-araucaria.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.estancia-pinhais.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.eucaliptos-frg.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.fatima-colombo.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.fazenda-velha-araucaria.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.ferraria.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.gabirobal.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.graciosa-qb.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.graciosa.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.gralha-azul.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.guajuvira.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.guaraituba-colombo.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.guarituba-piraquara.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.guatupe.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.hortencia-frg.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.hugo-lange.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.iguacu-araucaria.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.iguacu-frg.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.independencia-sjp.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.industrial-araucaria.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.ipe-sjp.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.irai-piraquara.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.italia-sjp.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.itaqui.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.jardim-amelia.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.jardim-america-campo-largo.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.jardim-bela-vista-piraquara.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.jardim-boa-vista-araucaria.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.jardim-boa-vista-cm.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.jardim-botanico.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.jardim-claudia-ii-pinhais.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.jardim-claudia.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.jardim-condor-frg.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.jardim-das-americas.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.jardim-das-pedras-frg.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.jardim-dona-rosa-pinhais.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.jardim-esperanca-cl.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.jardim-esplanada-pinhais.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.jardim-estados.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.jardim-florestal-qb.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.jardim-graziela.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.jardim-guilhermina.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.jardim-iguacu-araucaria.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.jardim-ipe-frg.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.jardim-japao-qb.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.jardim-karla-pinhais.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.jardim-laranjeiras-cl.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.jardim-menino-deus-qb.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.jardim-monte-santo.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.jardim-novo-horizonte-cl.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.jardim-osasco.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.jardim-paraiso-at.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.jardim-paranagua-at.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.jardim-pedro-demeterco.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.jardim-planalto-campo-largo.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.jardim-planalto-ii-cl.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.jardim-primavera-piraquara.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.jardim-roma.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.jardim-santo-antonio-piraquara.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.jardim-sao-jorge-at.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.jardim-sao-paulo-piraquara.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.jardim-shangrila-araucaria.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.jardim-social.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.jardim-tropical-pinhais.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.jardim-uniao-piraquara.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.jardim-wissinger-pinhais.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.joquei-clube-cm.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.lamenha-grande-cl.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.maracana-colombo.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.maria-antonieta.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.monza-colombo.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.nacoes-frg.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.osvaldo-cruz-colombo.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.ouro-fino-sjp.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.ouro-fino.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.palmital-campo-largo.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.palmital-colombo.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.palmital-pinhais.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.parque-da-fonte.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.parque-industrial-frg.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.parque-nascentes-pinhais.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.passauna.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.pedro-moro-sjp.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.pineville.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.pioneiros-frg.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.planta-deodoro-piraquara.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.planta-sao-tiago-araucaria.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.porto-das-laranjeiras.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.prado-velho-piraquara.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.quississana-sjp.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.rio-pequeno-sjp.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.rio-verde-cm.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.roca-grande.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.rondinha.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.sabia.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.santa-cruz-campo-largo.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.santa-terezinha-colombo.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.santa-terezinha-frg.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.sao-cristao-piraquara.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.sao-cristovao.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.sao-dimas-colombo.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.sao-domingos.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.sao-francisco.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.sao-gabriel-colombo.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.sao-jose-campo-largo.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.sao-jose-dos-pinhais.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.sao-lourenco-frg.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.sao-lourenco-qb.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.sao-marcos-campo-largo.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.sao-marcos.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.sao-miguel-araucaria.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.sao-sebastiao-cm.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.sao-silvestre.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.sao-venancio.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.sede-campo-magro.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.sete-vilas.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.tangua-at.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.taruma.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.taxiqueira-colombo.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.thomaz-coelho-ii.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.thomaz-coelho.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.timbotuva-cl.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.tindiquera.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.tingui.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.tranqueira-at.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.tres-corregos.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.vale-das-aguas.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.vargem-grande.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.vila-amelia-pinhais.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.vila-candida-cl.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.vila-izabel.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.vila-macedo-piraquara.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.vila-maria-antonieta-pinhais.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.vila-maria-qb.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.vila-nova-araucaria.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.vila-sao-jose-qb.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.vila-solene.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.vila-taruma.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/routes/bairros.weissopolis.tsx",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "tsconfig.tsbuildinfo",
+      "tipo": "ALTERADO",
+      "classe": "CI_CHANGE"
     }
   ]
 }
