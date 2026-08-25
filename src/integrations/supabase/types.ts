@@ -65,6 +65,60 @@ export type Database = {
         }
         Relationships: []
       }
+      bairro_enriquecimento: {
+        Row: {
+          conteudo_gerado: Json
+          created_at: string
+          decidido_em: string | null
+          decidido_por: string | null
+          decidido_por_email: string | null
+          double_opt_in: boolean
+          enrichment_status: string
+          id: string
+          nome: string
+          notas: string | null
+          originalidade: number | null
+          palavras: number | null
+          regiao: string | null
+          slug: string
+          updated_at: string
+        }
+        Insert: {
+          conteudo_gerado?: Json
+          created_at?: string
+          decidido_em?: string | null
+          decidido_por?: string | null
+          decidido_por_email?: string | null
+          double_opt_in?: boolean
+          enrichment_status?: string
+          id?: string
+          nome: string
+          notas?: string | null
+          originalidade?: number | null
+          palavras?: number | null
+          regiao?: string | null
+          slug: string
+          updated_at?: string
+        }
+        Update: {
+          conteudo_gerado?: Json
+          created_at?: string
+          decidido_em?: string | null
+          decidido_por?: string | null
+          decidido_por_email?: string | null
+          double_opt_in?: boolean
+          enrichment_status?: string
+          id?: string
+          nome?: string
+          notas?: string | null
+          originalidade?: number | null
+          palavras?: number | null
+          regiao?: string | null
+          slug?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
       bairro_photo_proofs: {
         Row: {
           aprovada: boolean
