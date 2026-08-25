@@ -158,6 +158,8 @@ export const BairroTemplate = ({ data }: BairroTemplateProps) => {
       <Breadcrumbs
         items={[
           { label: `Técnico em ${data.cidade}`, href: getCityLink() },
+          { label: "Bairros atendidos", href: "/areas-atendidas" },
+          ...(regiaoAtual ? [{ label: regiaoAtual.titulo, href: "/areas-atendidas" }] : []),
           { label: data.nome },
         ]}
       />
