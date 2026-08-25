@@ -28,6 +28,11 @@ const jsonld = ler("reports/jsonld-integrity.json");
 const smoke = ler("reports/smoke-tests.json") ?? ler("reports/post-deploy-checklist.json");
 const links = ler("reports/blog-link-fixes.json");
 const local = ler("reports/local-page-quality.json");
+const auditLocal = ler("reports/audit-servico-bairro.json");
+const consolidados = (auditLocal?.decisoes ?? auditLocal?.resultados ?? []).filter(
+  (d) => d.decisao === "CONSOLIDATE",
+);
+
 
 const geradoEm = new Date().toISOString();
 
