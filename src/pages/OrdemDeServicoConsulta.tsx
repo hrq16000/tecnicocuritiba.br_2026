@@ -18,7 +18,8 @@ const Linha = ({ label, valor }: { label: string; valor?: string | null }) =>
   ) : null;
 
 const OrdemDeServicoConsulta = () => {
-  const { protocolo } = useParams({ from: "/ordem-de-servico/$protocolo" });
+  const { protocolo: protocoloParam } = useParams({ from: "/ordem-de-servico/$protocolo" });
+  const protocolo = protocoloParam.toUpperCase();
   const [estado, setEstado] = useState<"carregando" | "ok" | "nao-encontrada" | "erro">("carregando");
   const [os, setOs] = useState<OsPublica | null>(null);
 

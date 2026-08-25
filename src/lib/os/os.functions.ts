@@ -22,7 +22,8 @@ const consultarSchema = z.object({
   protocolo: z
     .string()
     .trim()
-    .regex(/^OS-\d{8}-[A-Z0-9]{4}$/, "Protocolo inválido"),
+    .regex(/^OS-\d{8}-[A-Z0-9]{4}$/i, "Protocolo inválido")
+    .transform((v) => v.toUpperCase()),
 });
 
 function gerarProtocolo(): string {

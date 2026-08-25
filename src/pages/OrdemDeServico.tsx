@@ -389,7 +389,7 @@ const OrdemDeServico = () => {
               Guarde este código. Você pode consultar esta ordem a qualquer momento em{" "}
               <Link
                 to="/ordem-de-servico/$protocolo"
-                params={{ protocolo: numero }}
+                params={{ protocolo: numero.toLowerCase() }}
                 className="text-foreground underline underline-offset-4"
               >
                 /ordem-de-servico/{numero}
@@ -416,7 +416,7 @@ const OrdemDeServico = () => {
                 toast.error("Código inválido. Confira o formato OS-AAAAMMDD-XXXX.");
                 return;
               }
-              window.location.assign(`/ordem-de-servico/${codigo}`);
+              window.location.assign(`/ordem-de-servico/${codigo.toLowerCase()}`);
             }}
           >
             <Input
