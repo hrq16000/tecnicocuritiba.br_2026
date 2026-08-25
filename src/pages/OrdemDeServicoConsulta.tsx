@@ -27,6 +27,10 @@ const OrdemDeServicoConsulta = () => {
 
   useEffect(() => {
     let ativo = true;
+    // Cada protocolo tem sua própria requisição: ao trocar de URL a anterior é
+    // abortada, evitando race condition que mostrava a O.S. errada.
+    const abort = new AbortController();
+    setOs(null);
     setEstado("carregando");
 
     // Validação local antes de gastar requisição: formato OS-AAAAMMDD-XXXX.
