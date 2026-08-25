@@ -8,7 +8,14 @@ import { createServerFn } from "@tanstack/react-start";
 import { requireSupabaseAuth } from "@/integrations/supabase/auth-middleware";
 import { z } from "zod";
 
-import { OS_STATUS, calcularValores, ehStatusOs, transicaoPermitida } from "./statusOs";
+import {
+  OS_STATUS,
+  calcularValores,
+  ehStatusOs,
+  transicaoPermitida,
+  type OsStatus,
+} from "./statusOs";
+import { gatilhoParaStatus } from "./gatilhosOs";
 import { OS_TEMPLATES } from "./whatsappOs";
 
 const pecaSchema = z.object({
