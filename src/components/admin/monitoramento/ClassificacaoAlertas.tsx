@@ -130,7 +130,7 @@ export function ClassificacaoAlertas({ marcoAtual }: { marcoAtual: string | null
 
       {!estado ? (
         <p className="mt-4 text-sm text-muted-foreground">
-          {SEM_DADO} — rode <code>npm run monitor:alerts</code> para gerar o
+          {SEM_DADO} — rode <code>npm run monitor:operacao</code> para gerar o
           estado de alertas.
         </p>
       ) : (

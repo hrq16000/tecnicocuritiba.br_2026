@@ -1,0 +1,15 @@
+{
+  "avaliadoEm": "2026-08-25T03:44:40.904Z",
+  "assinatura": "97d170e1550eee4afc0af065b78cda302a97674c",
+  "alertas": [],
+  "metricas": {
+    "clustersRegredidos": 0,
+    "tierARate": 58.1,
+    "curadas": 130,
+    "doorwayAlto": 2,
+    "indexnowEnviadas": 0,
+    "serpBaselineEm": "2026-08-25T01:34:00.526Z",
+    "decisaoD30": null,
+    "sitemapTotal": 130
+  }
+}
