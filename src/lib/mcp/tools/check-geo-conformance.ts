@@ -1,4 +1,5 @@
 import { defineTool } from "@lovable.dev/mcp-js";
+import { logMcpToolAccess } from "../lib/audit";
 import { z } from "zod";
 import { extractJsonLd, fetchPublicPage, meta, normalizePath, SITE, textOf } from "../lib/fetchPage";
 
@@ -17,9 +18,10 @@ export default defineTool({
     minPalavras: z.number().optional().describe("Mínimo de palavras no HTML estático (padrão 300)"),
   },
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: true },
-  handler: async ({ paths, minPalavras }) => {
+  handler: async ({ paths, minPalavras }, ctx?: unknown) => {
     const minimo = minPalavras && minPalavras > 0 ? Math.min(minPalavras, 2000) : 300;
     const alvos = paths.slice(0, 25).map(normalizePath);
+    logMcpToolAccess({ tool: "check_geo_conformance", route: alvos.join(","), outcome: "authorized", ctx });
     const linhas: string[] = [];
     const resultados: Record<string, unknown>[] = [];
 

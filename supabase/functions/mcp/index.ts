@@ -7,6 +7,38 @@ import { auth, defineMcp } from "npm:@lovable.dev/mcp-js@0.26.2";
 
 // src/lib/mcp/tools/validate-seo.ts
 import { defineTool } from "npm:@lovable.dev/mcp-js@0.26.2";
+
+// src/lib/mcp/lib/audit.ts
+var shortHash = (value) => {
+  let h = 2166136261;
+  for (let i = 0; i < value.length; i++) {
+    h ^= value.charCodeAt(i);
+    h = Math.imul(h, 16777619) >>> 0;
+  }
+  return h.toString(16).padStart(8, "0");
+};
+var EMAIL = /[^\s@]+@[^\s@]+/;
+var resolveOwner = (ctx) => {
+  const claims = ctx?.auth?.claims ?? ctx?.claims;
+  const raw = claims?.["sub"] ?? claims?.["client_id"];
+  if (typeof raw !== "string" || !raw) return "anonymous";
+  return `owner_${shortHash(EMAIL.test(raw) ? raw.toLowerCase() : raw)}`;
+};
+var buildMcpAuditEntry = (input) => ({
+  event: "mcp_tool_access",
+  tool: input.tool,
+  route: input.route,
+  owner: resolveOwner(input.ctx),
+  outcome: input.outcome,
+  at: (/* @__PURE__ */ new Date()).toISOString()
+});
+var logMcpToolAccess = (input) => {
+  const entry = buildMcpAuditEntry(input);
+  console.info(JSON.stringify(entry));
+  return entry;
+};
+
+// src/lib/mcp/tools/validate-seo.ts
 import { z } from "npm:zod@^3.24.2";
 
 // src/lib/mcp/lib/fetchPage.ts
@@ -62,8 +94,9 @@ var validate_seo_default = defineTool({
     path: z.string().describe("Caminho p\xFAblico da rota, ex.: /servicos/conserto-monitor")
   },
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: true },
-  handler: async ({ path }) => {
+  handler: async ({ path }, ctx) => {
     const rota = normalizePath(path);
+    logMcpToolAccess({ tool: "validate_seo", route: rota, outcome: "authorized", ctx });
     const page = await fetchPublicPage(rota);
     if (!page.ok) {
       return {
@@ -129,8 +162,9 @@ var validate_jsonld_default = defineTool2({
     tiposEsperados: z2.array(z2.string()).optional().describe("Tipos schema.org que devem existir, ex.: ['FAQPage','Service']")
   },
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: true },
-  handler: async ({ path, tiposEsperados }) => {
+  handler: async ({ path, tiposEsperados }, ctx) => {
     const rota = normalizePath(path);
+    logMcpToolAccess({ tool: "validate_jsonld", route: rota, outcome: "authorized", ctx });
     const page = await fetchPublicPage(rota);
     if (!page.ok) {
       return { content: [{ type: "text", text: `HTTP ${page.status} em ${page.url}` }], isError: true };
@@ -178,9 +212,10 @@ var check_geo_conformance_default = defineTool3({
     minPalavras: z3.number().optional().describe("M\xEDnimo de palavras no HTML est\xE1tico (padr\xE3o 300)")
   },
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: true },
-  handler: async ({ paths, minPalavras }) => {
+  handler: async ({ paths, minPalavras }, ctx) => {
     const minimo = minPalavras && minPalavras > 0 ? Math.min(minPalavras, 2e3) : 300;
     const alvos = paths.slice(0, 25).map(normalizePath);
+    logMcpToolAccess({ tool: "check_geo_conformance", route: alvos.join(","), outcome: "authorized", ctx });
     const linhas = [];
     const resultados = [];
     for (const rota of alvos) {

@@ -1,4 +1,5 @@
 import { defineTool } from "@lovable.dev/mcp-js";
+import { logMcpToolAccess } from "../lib/audit";
 import { z } from "zod";
 import { extractJsonLd, fetchPublicPage, normalizePath } from "../lib/fetchPage";
 
@@ -15,8 +16,9 @@ export default defineTool({
       .describe("Tipos schema.org que devem existir, ex.: ['FAQPage','Service']"),
   },
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: true },
-  handler: async ({ path, tiposEsperados }) => {
+  handler: async ({ path, tiposEsperados }, ctx?: unknown) => {
     const rota = normalizePath(path);
+    logMcpToolAccess({ tool: "validate_jsonld", route: rota, outcome: "authorized", ctx });
     const page = await fetchPublicPage(rota);
     if (!page.ok) {
       return { content: [{ type: "text", text: `HTTP ${page.status} em ${page.url}` }], isError: true };
