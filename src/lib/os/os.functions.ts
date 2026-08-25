@@ -1,5 +1,6 @@
 import { createServerFn } from "@tanstack/react-start";
-import { randomInt } from "crypto";
+import { getRequest } from "@tanstack/react-start/server";
+import { createHash, randomInt } from "crypto";
 import { z } from "zod";
 
 import { TERMOS_VERSAO } from "./termosOs";
