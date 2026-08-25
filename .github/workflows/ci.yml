@@ -155,6 +155,10 @@ jobs:
           retention-days: 30
       - name: Controle de ondas Wi-Fi/TV (4–6/semana + prova visual)
         run: npm run check:waves
+      - name: Reconciliação de coortes do experimento (91/2/37)
+        run: npm run check:coortes
+      - name: Freeze V2 — proibição de drift público silencioso
+        run: npm run check:seo-freeze-v2
       - name: Relatório HTML de auditoria local
         run: npm run report:local-audit
 

@@ -32,6 +32,7 @@ import { ClassificacaoAlertas } from "@/components/admin/monitoramento/Classific
 import { ResumoDiarioAlertas } from "@/components/admin/monitoramento/ResumoDiarioAlertas";
 import { ReindexContencao } from "@/components/admin/monitoramento/ReindexContencao";
 import { IntervencoesRegistradas } from "@/components/admin/monitoramento/IntervencoesRegistradas";
+import { FreezeV2Status } from "@/components/admin/monitoramento/FreezeV2Status";
 
 import type { MarcoUrl } from "@/components/admin/monitoramento/types";
 import { Navigate } from "@/lib/router-compat";
@@ -400,6 +401,15 @@ export default function AdminMonitoramento() {
             Nenhum marco registrado ainda.
           </p>
         )}
+
+        <section className="mt-8">
+          <FreezeV2Status
+            proximoMarcoEm={(() => {
+              const d0 = marcos.find((m) => m.marco === "D0")?.registradoEm;
+              return d0 ? new Date(new Date(d0).getTime() + 14 * 86400000).toISOString() : null;
+            })()}
+          />
+        </section>
 
         <section className="mt-8">
           <IntervencoesRegistradas />

@@ -1,0 +1,68 @@
+{
+  "schema": "freeze-v2-drift/1.0",
+  "verificadoEm": "2026-08-25T06:11:49.544Z",
+  "freezeSelo": "fb95e1e4d676e89de141409aa4103218fc2a504c979f8278f62fe16e9da9d979",
+  "freezeSeladoEm": "2026-08-25T06:09:07.486Z",
+  "totalDiffs": 10,
+  "porClasse": {
+    "OBSERVABILITY_CHANGE": 4,
+    "CI_CHANGE": 4,
+    "ADMIN_CHANGE": 2
+  },
+  "publicChangeTotal": 0,
+  "publicChangeNaoRegistrado": 0,
+  "alerta": null,
+  "exigido": [],
+  "diffs": [
+    {
+      "arquivo": "docs/relatorio-freeze-v2-pre-d14.md",
+      "tipo": "ADICIONADO",
+      "classe": "OBSERVABILITY_CHANGE"
+    },
+    {
+      "arquivo": "package.json",
+      "tipo": "ALTERADO",
+      "classe": "CI_CHANGE"
+    },
+    {
+      "arquivo": "public/freeze-historico.json",
+      "tipo": "ADICIONADO",
+      "classe": "OBSERVABILITY_CHANGE"
+    },
+    {
+      "arquivo": "public/freeze-v2.json",
+      "tipo": "ADICIONADO",
+      "classe": "OBSERVABILITY_CHANGE"
+    },
+    {
+      "arquivo": "reports/freeze-v2-drift.json",
+      "tipo": "ADICIONADO",
+      "classe": "OBSERVABILITY_CHANGE"
+    },
+    {
+      "arquivo": "scripts/check-seo-freeze-v2.mjs",
+      "tipo": "ALTERADO",
+      "classe": "CI_CHANGE"
+    },
+    {
+      "arquivo": "scripts/gerar-relatorio-freeze-v2.mjs",
+      "tipo": "ADICIONADO",
+      "classe": "CI_CHANGE"
+    },
+    {
+      "arquivo": "src/components/admin/monitoramento/FreezeV2Status.tsx",
+      "tipo": "ADICIONADO",
+      "classe": "ADMIN_CHANGE"
+    },
+    {
+      "arquivo": "src/pages/admin/AdminMonitoramento.tsx",
+      "tipo": "ALTERADO",
+      "classe": "ADMIN_CHANGE"
+    },
+    {
+      "arquivo": "tsconfig.tsbuildinfo",
+      "tipo": "ALTERADO",
+      "classe": "CI_CHANGE"
+    }
+  ]
+}
