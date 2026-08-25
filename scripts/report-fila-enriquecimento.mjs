@@ -21,7 +21,9 @@ const comFoto = new Set(
 );
 const aprovados = new Set(
   [
-    ...(photos.split("BAIRROS_SEM_FOTO_APROVADOS")[1] ?? "").matchAll(/"([a-z0-9-]+)"/g),
+    ...(/BAIRROS_SEM_FOTO_APROVADOS\s*=\s*\[([\s\S]*?)\]/.exec(photos)?.[1] ?? "").matchAll(
+      /"([a-z0-9-]+)"/g,
+    ),
   ].map((m) => m[1]),
 );
 const indexavel = (slug) => comFoto.has(slug) || aprovados.has(slug);
