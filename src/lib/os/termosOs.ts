@@ -112,6 +112,24 @@ export const TERMOS_LABORATORIO_RESUMO = {
   ],
 } as const;
 
+/**
+ * Impressora 3D — mínimo pré-aprovado próprio (R$ 500,00).
+ * A bancada é dedicada (extrusão, sensoriamento térmico, mecânica de eixos e
+ * eletrônica de controle), por isso o mínimo não é o de informática.
+ */
+export const TERMOS_IMPRESSORA_3D_RESUMO = {
+  titulo: "Impressora 3D — mínimo pré-aprovado R$ 500,00",
+  itens: [
+    "Cobre diagnóstico de bancada, desentupimento de bico, troca de termistor ou resistência, calibração, reparo de placa e upgrades.",
+    "Coleta e entrega inclusas no valor mínimo pré-aprovado.",
+    "Peças, bicos, hotends, sensores e placas não estão inclusos.",
+    "Reparos acima do mínimo pré-aprovado dependem de autorização por escrito.",
+    "Cancelamento ou desistência válidos somente em até 24 horas após a coleta.",
+    "Sem promessa de qualidade de impressão: o resultado depende de perfil de fatiamento, material e desgaste mecânico do equipamento.",
+  ],
+} as const;
+
+
 const PIX_LABORATORIO = "(PIX CNPJ 41.723.708/0001-58 NUBANK)";
 
 /**
