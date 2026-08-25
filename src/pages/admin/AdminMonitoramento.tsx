@@ -32,6 +32,7 @@ import { ClassificacaoAlertas } from "@/components/admin/monitoramento/Classific
 import { ResumoDiarioAlertas } from "@/components/admin/monitoramento/ResumoDiarioAlertas";
 import { ReindexContencao } from "@/components/admin/monitoramento/ReindexContencao";
 import { IntervencoesRegistradas } from "@/components/admin/monitoramento/IntervencoesRegistradas";
+import { FreezeV2Status } from "@/components/admin/monitoramento/FreezeV2Status";
 
 import type { MarcoUrl } from "@/components/admin/monitoramento/types";
 import { Navigate } from "@/lib/router-compat";
