@@ -132,7 +132,7 @@ export const REGIOES_COBERTURA: RegiaoCobertura[] = [
     id: "rmc",
     titulo: "Região Metropolitana",
     itens: [
-      { nome: "São José dos Pinhais", to: "/tecnico-informatica-sao-jose-dos-pinhais" },
+      { nome: "São José dos Pinhais", to: "/tecnico-informatica-sao-jose-pinhais" },
       { nome: "Pinhais", to: "/tecnico-informatica-pinhais" },
       { nome: "Colombo", to: "/tecnico-informatica-colombo" },
       { nome: "Araucária", to: "/tecnico-informatica-araucaria" },

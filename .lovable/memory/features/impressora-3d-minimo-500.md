@@ -19,3 +19,8 @@ type: feature
 - Ainda **não existe rota pública indexável** `/servicos/...impressora-3d`:
   promoção depende de conteúdo autoral + provas visuais reais + gates de
   originalidade e sitemap curado (política vigente).
+
+## Gates e malha (rodada atual)
+- Rota `/servicos/conserto-impressora-3d` nasce SHALLOW (`noindex, follow`), fora do sitemap e sem card no hub /servicos até virar RICH com prova visual real (nunca imagem de IA).
+- Gate `check:orphan-trend` (baseline em `reports/orphan-baseline.json`) bloqueia o build se o número de URLs curadas sem link interno crescer.
+- E2E `e2e/malha-interna-ssr.spec.ts`: nenhum link interno pode apontar para 301 ou para `noindex` sem `follow`. `e2e/bairros-varredura-200.spec.ts` varre todas as rotas /bairros/*.
