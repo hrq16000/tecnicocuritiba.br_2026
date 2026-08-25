@@ -629,6 +629,45 @@ export type Database = {
         }
         Relationships: []
       }
+      url_audit_checks: {
+        Row: {
+          conferido_em: string
+          conferido_por: string | null
+          conferido_por_email: string | null
+          evidencia: Json | null
+          id: string
+          item: string
+          marco: string | null
+          observacao: string | null
+          resultado: string
+          url_path: string
+        }
+        Insert: {
+          conferido_em?: string
+          conferido_por?: string | null
+          conferido_por_email?: string | null
+          evidencia?: Json | null
+          id?: string
+          item: string
+          marco?: string | null
+          observacao?: string | null
+          resultado: string
+          url_path: string
+        }
+        Update: {
+          conferido_em?: string
+          conferido_por?: string | null
+          conferido_por_email?: string | null
+          evidencia?: Json | null
+          id?: string
+          item?: string
+          marco?: string | null
+          observacao?: string | null
+          resultado?: string
+          url_path?: string
+        }
+        Relationships: []
+      }
       user_roles: {
         Row: {
           created_at: string

@@ -22,6 +22,8 @@ import { Header } from "@/components/Header";
 import { Button } from "@/components/ui/button";
 import { DrilldownUrls } from "@/components/admin/monitoramento/DrilldownUrls";
 import { DiffSnapshots } from "@/components/admin/monitoramento/DiffSnapshots";
+import { ComparacaoMarcos } from "@/components/admin/monitoramento/ComparacaoMarcos";
+import { ExportarMarco } from "@/components/admin/monitoramento/ExportarMarco";
 import { JobRuns } from "@/components/admin/monitoramento/JobRuns";
 import { QuickWinsBacklog } from "@/components/admin/monitoramento/QuickWinsBacklog";
 import type { MarcoUrl } from "@/components/admin/monitoramento/types";
@@ -623,6 +625,10 @@ export default function AdminMonitoramento() {
             />
 
             <DiffSnapshots />
+
+            <ComparacaoMarcos marcos={marcos} />
+
+            <ExportarMarco marcos={marcos} />
 
             <JobRuns />
 

@@ -8,6 +8,7 @@ import {
   type MarcoResumo,
   type MarcoUrl,
 } from "./types";
+import { ChecklistAuditoria } from "./ChecklistAuditoria";
 
 /**
  * Drilldown por URL: cada URL curada com o estado registrado em cada marco,
@@ -179,7 +180,7 @@ export function DrilldownUrls({
                   key={u.path}
                   url={u}
                   estados={l.estados}
-                  colunas={comUrls.length}
+                  marco={ultimo.marco}
                   expandida={expandida}
                   onToggle={() => setAberta(expandida ? null : u.path)}
                 />
@@ -205,13 +206,13 @@ export function DrilldownUrls({
 function FragmentRow({
   url,
   estados,
-  colunas,
+  marco,
   expandida,
   onToggle,
 }: {
   url: MarcoUrl;
   estados: { marco: string; estado: string | null }[];
-  colunas: number;
+  marco: string | null;
   expandida: boolean;
   onToggle: () => void;
 }) {
@@ -289,6 +290,7 @@ function FragmentRow({
                 </a>
               </Button>
             </div>
+            <ChecklistAuditoria url={url} marco={marco} />
           </td>
         </tr>
       )}

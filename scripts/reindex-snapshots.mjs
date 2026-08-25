@@ -38,6 +38,30 @@ const args = process.argv.slice(2);
 const STRICT = args.includes("--strict");
 const AMOSTRA = Number(args.find((a) => a.startsWith("--amostra="))?.split("=")[1] ?? 5);
 
+/* ── Modo de contenção ──────────────────────────────────────────────────────
+ * Quando o fail-closed reprova, a resposta correta NÃO é relaxar a verificação
+ * nem tocar no site: é conter o escopo, registrar o motivo e manter a trilha.
+ *
+ *   --conter=cluster:PROBLEMA,tier:A   contenção explícita já na entrada
+ *   --conter-auto                      contém sozinho se a verificação falhar
+ *
+ * A contenção limita apenas a COBERTURA verificada (quais URLs curadas são
+ * exigidas do marco atual). Contagem, paridade e hashes continuam integrais —
+ * eles não dependem de escopo e nunca são afastados.
+ */
+const CONTER_AUTO = args.includes("--conter-auto");
+const escopoBruto = args.find((a) => a.startsWith("--conter="))?.split("=")[1] ?? "";
+const escopoManual = escopoBruto
+  .split(",")
+  .map((p) => p.trim())
+  .filter(Boolean)
+  .map((p) => {
+    const [tipo, valor] = p.split(":");
+    return { tipo: (tipo ?? "").toLowerCase(), valor: (valor ?? "").toUpperCase() };
+  })
+  .filter((f) => ["cluster", "tier"].includes(f.tipo) && f.valor);
+
+
 const sha1 = (buf) => createHash("sha1").update(buf).digest("hex");
 const lerJson = (p) => {
   try {
@@ -115,12 +139,63 @@ const amostras = sorteio.map((i) => {
   return { path: i.path, tipo: i.tipo, hash: i.hash, conferido: ok };
 });
 
-// 4. cobertura de URLs do marco atual
+// 4. cobertura de URLs do marco atual (única dimensão sujeita a contenção)
 const inv = lerJson("reports/indexation-inventory.json");
-const curadas = (inv?.urls ?? []).filter((u) => u.sitemap).length;
+const urlsCuradasLista = (inv?.urls ?? []).filter((u) => u.sitemap);
+const curadas = urlsCuradasLista.length;
 const atual = marcos[marcos.length - 1] ?? null;
-if (atual && curadas && atual.denominador?.curadas !== curadas)
-  falhas.push(`cobertura: marco ${atual.marco} registrou ${atual.denominador?.curadas} URLs e o inventário atual tem ${curadas}`);
+const coberturaDivergente =
+  atual && curadas && atual.denominador?.curadas !== curadas
+    ? `cobertura: marco ${atual.marco} registrou ${atual.denominador?.curadas} URLs e o inventário atual tem ${curadas}`
+    : null;
+
+/** Aplica um conjunto de filtros cluster/tier e devolve o subconjunto contido. */
+const aplicarEscopo = (filtros) =>
+  urlsCuradasLista.filter((u) =>
+    filtros.some(
+      (f) =>
+        (f.tipo === "cluster" && (u.cluster ?? "").toUpperCase() === f.valor) ||
+        (f.tipo === "tier" && (u.tier ?? "").toUpperCase() === f.valor),
+    ),
+  );
+
+let contencao = null;
+if (escopoManual.length) {
+  const contidas = aplicarEscopo(escopoManual);
+  contencao = {
+    ativa: true,
+    origem: "explicita",
+    filtros: escopoManual,
+    urlsNoEscopo: contidas.length,
+    urlsForaDoEscopo: curadas - contidas.length,
+    motivo: `contenção solicitada na linha de comando (${escopoBruto})`,
+    coberturaVerificada: false,
+  };
+  avisos.push(`contenção ativa: verificação de cobertura limitada a ${contidas.length}/${curadas} URL(s) (${escopoBruto}).`);
+} else if (coberturaDivergente) {
+  if (CONTER_AUTO) {
+    // Contenção automática: mantém a falha registrada, mas restringe o escopo
+    // ao(s) cluster(s) realmente divergente(s) para preservar rastreabilidade.
+    const clustersMarco = new Set((atual?.urls ?? []).map((u) => (u.cluster ?? "OUTROS").toUpperCase()));
+    const filtros = [...new Set(urlsCuradasLista.map((u) => (u.cluster ?? "OUTROS").toUpperCase()))]
+      .filter((c) => !clustersMarco.has(c))
+      .map((valor) => ({ tipo: "cluster", valor }));
+    const contidas = filtros.length ? aplicarEscopo(filtros) : [];
+    contencao = {
+      ativa: true,
+      origem: "automatica",
+      filtros,
+      urlsNoEscopo: contidas.length,
+      urlsForaDoEscopo: curadas - contidas.length,
+      motivo: coberturaDivergente,
+      coberturaVerificada: false,
+    };
+    avisos.push(`contenção automática após fail-closed de cobertura — escopo reduzido a ${filtros.map((f) => f.valor).join(", ") || "nenhum cluster identificável"}; site intocado.`);
+  } else {
+    falhas.push(coberturaDivergente);
+  }
+}
+
 
 const verificacao = {
   executadoEm: new Date().toISOString(),
@@ -130,18 +205,29 @@ const verificacao = {
   urlsCuradas: curadas || null,
   urlsNoMarcoAtual: atual?.denominador?.curadas ?? null,
   amostragem: { solicitada: AMOSTRA, conferidas: amostras.length, ok: amostras.every((a) => a.conferido), itens: amostras },
+  contencao: contencao ?? { ativa: false, origem: null, filtros: [], motivo: null, coberturaVerificada: true },
   falhas,
   avisos,
-  status: falhas.length === 0 ? "ok" : "falhou",
+  status: falhas.length === 0 ? (contencao ? "contido" : "ok") : "falhou",
 };
 
 mkdirSync("reports", { recursive: true });
 mkdirSync("public", { recursive: true });
 writeFileSync("reports/snapshot-index-verificacao.json", `${JSON.stringify(verificacao, null, 2)}\n`);
+// Trilha dedicada da contenção: sempre gravada, mesmo quando inativa, para que
+// o painel distingua "não houve contenção" de "não há dado".
+const trilhaContencao = {
+  registradoEm: verificacao.executadoEm,
+  marco: atual?.marco ?? null,
+  ...verificacao.contencao,
+};
+writeFileSync("reports/reindex-contencao.json", `${JSON.stringify(trilhaContencao, null, 2)}\n`);
+writeFileSync("public/reindex-contencao.json", `${JSON.stringify(trilhaContencao, null, 2)}\n`);
 writeFileSync(
   "public/snapshot-index.json",
   `${JSON.stringify({ geradoEm: verificacao.executadoEm, verificacao: { ...verificacao, itens: undefined }, itens: indice }, null, 2)}\n`,
 );
+
 
 console.log(`[reindex] ${indice.length} artefato(s) · ${verificacao.memorias} memória(s) · marcos: ${verificacao.marcos.join(", ") || "nenhum"}`);
 for (const a of avisos) console.log(`  · aviso ${a}`);
@@ -153,8 +239,9 @@ registrarJob({
   job: "reindex:snapshots",
   marco: atual?.marco ?? null,
   duracaoMs: Date.now() - INICIO_JOB,
-  status: verificacao.status === "ok" ? (avisos.length ? "aviso" : "ok") : "falhou",
-  failClosed: verificacao.status === "ok",
+  status: verificacao.status === "falhou" ? "falhou" : avisos.length || contencao ? "aviso" : "ok",
+  failClosed: verificacao.status !== "falhou",
+
   contagens: {
     artefatos: indice.length,
     memorias: verificacao.memorias,

@@ -22,6 +22,9 @@
  *   public/operacao-marcos.json        payload consumido por /admin/monitoramento
  */
 import { copyFileSync, existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { avaliarJanela } from "./lib/marco-janela.mjs";
+import { registrarJob } from "./lib/job-log.mjs";
+
 
 const INICIO_JOB = Date.now();
 const args = process.argv.slice(2);
@@ -42,6 +45,36 @@ const lerJson = (p) => {
     return null;
   }
 };
+
+/* ── Contrato temporal: um marco só é registrado quando o calendário permite ─
+ * Registrar D14 antes de 14 dias do D0 não cria série temporal — cria uma
+ * cópia do marco anterior com outro rótulo. Fail-closed por padrão.
+ */
+{
+  const historicoJanela = lerJson("reports/operacao-marcos.json") ?? { marcos: [] };
+  const janela = avaliarJanela(MARCO, historicoJanela);
+  if (!janela.ok && !args.includes("--fora-de-janela")) {
+    mkdirSync("reports", { recursive: true });
+    mkdirSync("public", { recursive: true });
+    const bloqueio = { bloqueadoEm: new Date().toISOString(), ...janela };
+    writeFileSync("reports/marco-janela-bloqueio.json", `${JSON.stringify(bloqueio, null, 2)}\n`);
+    writeFileSync("public/marco-janela-bloqueio.json", `${JSON.stringify(bloqueio, null, 2)}\n`);
+    console.error(`✖ coleta de ${MARCO} bloqueada: ${janela.motivo}`);
+    console.error("  Nada foi registrado. Use --fora-de-janela apenas para teste explícito (marca o registro como não comparável).");
+    registrarJob({
+      job: "snapshot:marco",
+      marco: MARCO,
+      duracaoMs: Date.now() - INICIO_JOB,
+      status: "falhou",
+      failClosed: true,
+      contagens: { diasDesdeD0: janela.diasDesdeD0, minimoDias: janela.minimoDias },
+      logs: [`bloqueio de janela · ${janela.motivo}`],
+    });
+    process.exit(2);
+  }
+  globalThis.__JANELA_MARCO__ = janela;
+}
+
 
 const inventario = lerJson("reports/indexation-inventory.json");
 const qualidade = lerJson("reports/local-page-quality.json");
