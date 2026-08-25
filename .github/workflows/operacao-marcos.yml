@@ -89,6 +89,11 @@ jobs:
         if: always()
         run: node scripts/monitor-operational-alerts.mjs --notify
 
+      # Relatório formal do marco (fail-closed: sem marco registrado, não emite).
+      - name: Relatório do marco
+        if: steps.marco.outputs.marco != ''
+        run: node scripts/gerar-relatorio-marco.mjs --marco=${{ steps.marco.outputs.marco }} --gate
+
       - name: Publicar relatórios do marco
         if: always()
         uses: actions/upload-artifact@v4
@@ -98,8 +103,10 @@ jobs:
             reports/operacao-marcos.json
             reports/operacao-*.md
             reports/operational-alerts.md
+            reports/marco-janela-bloqueio.json
             reports/snapshot-index-verificacao.json
             reports/diff-marcos.json
             reports/diff-marcos.md
             reports/job-runs.json
             docs/relatorio-monitoramento-d7-d14.md
+            docs/relatorio-monitoramento-d*.md
