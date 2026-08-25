@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/select";
 import { useAdminAuth } from "@/hooks/useAdminAuth";
 import { OS_STATUS, OS_STATUS_LABEL, formatarBRL, type OsStatus } from "@/lib/os/statusOs";
-import { listarOrdens, type OsAdminRow } from "@/lib/os/osAdmin.functions";
+import { alterarStatusEmLote, listarOrdens, type OsAdminRow } from "@/lib/os/osAdmin.functions";
 import { AlertCircle, Inbox, RefreshCw, Search } from "lucide-react";
 
 const POR_PAGINA = 20;
@@ -37,6 +37,10 @@ const AdminOrdens = () => {
   const [desde, setDesde] = useState("");
   const [carregando, setCarregando] = useState(true);
   const [erro, setErro] = useState<string | null>(null);
+  const [selecionados, setSelecionados] = useState<string[]>([]);
+  const [statusLote, setStatusLote] = useState("");
+  const [aplicandoLote, setAplicandoLote] = useState(false);
+  const [resultadoLote, setResultadoLote] = useState<string | null>(null);
 
   const carregar = useCallback(async () => {
     setCarregando(true);
