@@ -7,6 +7,8 @@ import { FastHeader } from "@/components/FastHeader";
 import { Footer } from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { LocalFAQSection } from "@/components/LocalFAQSection";
+import { DiretorioLocalidades } from "@/components/areas/DiretorioLocalidades";
+
 import { CIDADE_LIST, MODALIDADES_ATENDIMENTO } from "@/lib/cidadesData";
 import { bairroPathPorNome } from "@/lib/bairroLinks";
 import { CIDADES_RMC_NOMES } from "@/lib/bairrosSelect";
