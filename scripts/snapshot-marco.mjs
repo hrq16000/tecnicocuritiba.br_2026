@@ -48,19 +48,56 @@ const lerJson = (p) => {
 
 /* ── Contrato temporal: um marco só é registrado quando o calendário permite ─
  * Registrar D14 antes de 14 dias do D0 não cria série temporal — cria uma
- * cópia do marco anterior com outro rótulo. Fail-closed por padrão.
+ * cópia do marco anterior com outro rótulo. Fail-closed, SEM bypass de
+ * produção: `--fora-de-janela` só é aceito em ambiente de fixture/teste
+ * (MARCO_FIXTURE=1 ou NODE_ENV=test), nunca com dados reais.
+ *
+ * Toda a aritmética temporal é feita em UTC (Date.toISOString / epoch ms):
+ * fuso do servidor, do navegador, do CI e horário de verão não participam do
+ * cálculo e portanto não conseguem antecipar nem atrasar o marco.
  */
 {
+  const AMBIENTE_FIXTURE = process.env.MARCO_FIXTURE === "1" || process.env.NODE_ENV === "test";
+  const BYPASS_PROIBIDO = ["--force", "--skip-date", "--ignore-window"];
+  const bypassTentado = args.filter((a) => BYPASS_PROIBIDO.includes(a));
+  if (bypassTentado.length) {
+    console.error(`✖ bypass não suportado: ${bypassTentado.join(", ")}. A janela temporal não tem escape em produção.`);
+    process.exit(2);
+  }
+
   const historicoJanela = lerJson("reports/operacao-marcos.json") ?? { marcos: [] };
-  const janela = avaliarJanela(MARCO, historicoJanela);
-  if (!janela.ok && !args.includes("--fora-de-janela")) {
+  const agoraUtc = new Date();
+  const janela = avaliarJanela(MARCO, historicoJanela, agoraUtc);
+  const pediuBypass = args.includes("--fora-de-janela");
+  const bypassValido = pediuBypass && AMBIENTE_FIXTURE;
+
+  if (pediuBypass && !AMBIENTE_FIXTURE) {
+    console.error("✖ --fora-de-janela só é aceito com MARCO_FIXTURE=1 ou NODE_ENV=test (dados sintéticos).");
+    process.exit(2);
+  }
+
+  if (!janela.ok && !bypassValido) {
     mkdirSync("reports", { recursive: true });
     mkdirSync("public", { recursive: true });
-    const bloqueio = { bloqueadoEm: new Date().toISOString(), ...janela };
+    const bloqueio = {
+      bloqueadoEm: agoraUtc.toISOString(),
+      marcoSolicitado: MARCO,
+      d0Timestamp: janela.baselineEm,
+      agoraUtc: agoraUtc.toISOString(),
+      permitidoAPartirDe: janela.elegivelEm,
+      faltamDias: janela.faltamDias,
+      faltamHoras: janela.faltamDias === null ? null : Math.round(janela.faltamDias * 24 * 10) / 10,
+      timezoneCalculo: "UTC",
+      ...janela,
+    };
     writeFileSync("reports/marco-janela-bloqueio.json", `${JSON.stringify(bloqueio, null, 2)}\n`);
     writeFileSync("public/marco-janela-bloqueio.json", `${JSON.stringify(bloqueio, null, 2)}\n`);
-    console.error(`✖ coleta de ${MARCO} bloqueada: ${janela.motivo}`);
-    console.error("  Nada foi registrado. Use --fora-de-janela apenas para teste explícito (marca o registro como não comparável).");
+    console.error(`✖ coleta de ${MARCO} bloqueada (FAIL CLOSED)`);
+    console.error(`  marco solicitado: ${MARCO}`);
+    console.error(`  D0 (UTC): ${bloqueio.d0Timestamp ?? "N/A"}`);
+    console.error(`  agora (UTC): ${bloqueio.agoraUtc}`);
+    console.error(`  liberado a partir de (UTC): ${bloqueio.permitidoAPartirDe ?? "N/A"}`);
+    console.error(`  tempo restante: ${bloqueio.faltamDias ?? "N/A"} dia(s) / ${bloqueio.faltamHoras ?? "N/A"} hora(s)`);
     registrarJob({
       job: "snapshot:marco",
       marco: MARCO,
@@ -72,8 +109,9 @@ const lerJson = (p) => {
     });
     process.exit(2);
   }
-  globalThis.__JANELA_MARCO__ = janela;
+  globalThis.__JANELA_MARCO__ = { ...janela, bypassFixture: bypassValido };
 }
+
 
 
 const inventario = lerJson("reports/indexation-inventory.json");
