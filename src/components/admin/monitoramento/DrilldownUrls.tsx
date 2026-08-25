@@ -8,6 +8,7 @@ import {
   type MarcoResumo,
   type MarcoUrl,
 } from "./types";
+import { ChecklistAuditoria } from "./ChecklistAuditoria";
 
 /**
  * Drilldown por URL: cada URL curada com o estado registrado em cada marco,
