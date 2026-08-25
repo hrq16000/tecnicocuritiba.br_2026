@@ -34,9 +34,24 @@ interface Payload {
   historico: Array<{ dia: string; urls: number | null; indexadas: number; descobertas: number; desconhecidas: number }>;
   latencia: { escopo: string; limiarMs: number; medidas: number; p50: number; p75: number; p95: number; falhas: number } | null;
   indexnow: { executadoEm: string | null; enviadas: number; falhas: number; novas: number; mudadas: number; ignoradas: number } | null;
-  qualidade: { faixas: Record<string, number>; piores: Array<{ path: string; score: number; faixa: string; causas: string[] }> } | null;
-  doorway: { total: number; alto: number; medio: number; baixo: number; ok: number } | null;
+  qualidade: {
+    faixas: Record<string, number>;
+    scoreMedianoGeral?: number | null;
+    piores: Array<{ path: string; score: number; faixa: string; causas: string[] }>;
+  } | null;
+  doorway: { total: number; alto: number; medio: number; baixo: number; ok: number; consolidadas?: number } | null;
+  tiers?: Array<{
+    tier: string;
+    total: number;
+    indexadas: number;
+    descobertas: number;
+    desconhecidas: number;
+    taxaIndexacao: number | null;
+  }>;
+  pisoQualidade?: { score: number; textoExclusivoRatio: number; similaridadeMax: number } | null;
+  consolidacao?: { total: number; urlsAntes: number; urlsDepois: number } | null;
 }
+
 
 const SEM_DADO = <span className="text-muted-foreground">sem dado</span>;
 
