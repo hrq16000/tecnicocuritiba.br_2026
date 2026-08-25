@@ -165,8 +165,8 @@ export const FILA_ENRIQUECIMENTO = BAIRROS_MAPEADOS.filter(
 
 /** Serviços linkados de toda página de bairro (malha interna agressiva). */
 export const SERVICOS_INTERLINK_LOCAL = [
-  { to: "/servicos/formatacao-de-computador", label: "Formatação com backup" },
-  { to: "/servicos/conserto-de-notebook", label: "Conserto de notebook" },
+  { to: "/servicos/formatacao-computador", label: "Formatação com backup" },
+  { to: "/servicos/conserto-notebook-curitiba", label: "Conserto de notebook" },
   { to: "/servicos/manutencao-de-computador", label: "Manutenção de computador" },
   { to: "/servicos/remocao-de-virus", label: "Remoção de vírus" },
   { to: "/servicos/upgrade-ssd-memoria", label: "Upgrade de SSD e memória" },
