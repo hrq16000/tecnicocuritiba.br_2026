@@ -179,7 +179,7 @@ export function DrilldownUrls({
                   key={u.path}
                   url={u}
                   estados={l.estados}
-                  colunas={comUrls.length}
+                  marco={ultimo.marco}
                   expandida={expandida}
                   onToggle={() => setAberta(expandida ? null : u.path)}
                 />
