@@ -145,7 +145,7 @@ const ConsertoImpressoraCuritiba = () => {
             </table>
           </div>
           <p className="text-xs text-muted-foreground text-center mt-3">
-            Valores orientativos para Curitiba e região. valor fechado antes do conserto.
+            Valores orientativos para Curitiba e região. Valor fechado antes do conserto.
           </p>
         </div>
       </section>

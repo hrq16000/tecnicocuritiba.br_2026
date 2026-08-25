@@ -138,7 +138,7 @@ const FAQS = [
   {
     question: "Vale a pena consertar ou é melhor comprar outra?",
     answer:
-      "A conta que usamos é simples e dita em voz alta: reparo que se aproxima do valor de um aparelho equivalente novo raramente compensa. Televisores maiores e mais recentes normalmente compensam o reparo de iluminação ou de alimentação; modelos pequenos e antigos frequentemente não. Damos essa leitura junto do orçamento, inclusive quando ela significa perder o serviço.",
+      "A conta que usamos é simples e dita em voz alta: reparo que se aproxima do valor de um aparelho equivalente novo raramente compensa. Televisores maiores e mais recentes normalmente compensam o reparo de iluminação ou de alimentação; modelos pequenos e antigos frequentemente não. Damos essa leitura junto do valor, inclusive quando ela significa perder o serviço.",
   },
 ];
 

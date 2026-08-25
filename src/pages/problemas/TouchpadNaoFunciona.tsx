@@ -18,7 +18,7 @@ import ProximosProblemas from "@/components/problemas/ProximosProblemas";
 const PATH = "/problemas/touchpad-nao-funciona";
 const TITLE = "Touchpad Não Funciona no Notebook | Curitiba";
 const DESCRIPTION =
-  "Touchpad do notebook parou de responder, funciona pela metade ou só o clique falhou? Veja como separar atalho desativado, driver, cabo flat solto e falha física antes de orçar, com avaliação técnica em Curitiba.";
+  "Touchpad do notebook parou de responder, funciona pela metade ou só o clique falhou? Veja como separar atalho desativado, driver, cabo flat solto e falha física antes de fechar valor, com avaliação técnica em Curitiba.";
 
 const WA_MESSAGE =
   "Olá! Vim da página sobre touchpad que não funciona. O touchpad do meu notebook parou de responder e quero avaliação.";
@@ -103,7 +103,7 @@ const FAQS = [
   {
     question: "O touchpad parou do nada. É defeito de fábrica?",
     answer:
-      "Raramente. Parar de uma hora para outra, sem queda e sem líquido, costuma ser o atalho de teclado que desativa o touchpad ou o driver substituído em uma atualização do sistema. Antes de qualquer orçamento vale testar o atalho de função e reinstalar o driver oficial do fabricante — são dois passos gratuitos que resolvem a maior parte dos casos.",
+      "Raramente. Parar de uma hora para outra, sem queda e sem líquido, costuma ser o atalho de teclado que desativa o touchpad ou o driver substituído em uma atualização do sistema. Antes de qualquer valor do reparo vale testar o atalho de função e reinstalar o driver oficial do fabricante — são dois passos gratuitos que resolvem a maior parte dos casos.",
   },
   {
     question: "O cursor anda mas o clique não funciona. Precisa trocar a peça?",
@@ -193,7 +193,7 @@ const TouchpadNaoFunciona = () => {
           </h1>
           <p className="mb-4 line-clamp-4 text-[0.95rem] leading-relaxed opacity-95 sm:mb-6 sm:line-clamp-none sm:text-base">
             Boa parte dos touchpads que "queimaram" está apenas desativada. Esta página mostra a sequência que separa
-            software de peça antes de qualquer orçamento.
+            software de peça antes de qualquer valor fechado.
           </p>
           <Button asChild size="lg" className="min-h-14">
             <a href={waHref} onClick={cta("hero")} data-cta-location="problema_hero">
@@ -210,7 +210,7 @@ const TouchpadNaoFunciona = () => {
         secondaryImageKey="ferramentas"
         layout="duo"
         caption="Notebook aberto em bancada para inspeção do cabo flat e do módulo do touchpad"
-        secondaryCaption="Ferramental usado na abertura controlada, sem marcar o gabinete nem forçar as travas"
+        secondaryCaption="Ferramental usado na abertura controlada, sem marcar o gabinete nem ffechar valor as travas"
       />
 
       <main className="container mx-auto max-w-4xl px-4 py-12">
@@ -280,7 +280,7 @@ const TouchpadNaoFunciona = () => {
 
         <section className="mb-12">
           <h2 className="mb-4 flex items-center gap-2 text-2xl font-bold text-foreground">
-            <MousePointer2 className="h-6 w-6 text-accent" /> Testes gratuitos antes de qualquer orçamento
+            <MousePointer2 className="h-6 w-6 text-accent" /> Testes gratuitos antes de qualquer valor fechado
           </h2>
           <p className="mb-4 text-muted-foreground">
             Siga na ordem. Os quatro primeiros itens resolvem a maior parte dos chamados sem nenhum custo e sem abrir o

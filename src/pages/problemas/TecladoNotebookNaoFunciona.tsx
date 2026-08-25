@@ -355,7 +355,7 @@ const TecladoNotebookNaoFunciona = () => {
             </div>
           </div>
           <p className="mt-5 text-sm text-muted-foreground">
-            O que não prometemos: valor fechado antes da inspeção, disponibilidade imediata de teclado para qualquer
+            O que não prometemos: Valor fechado antes da inspeção, disponibilidade imediata de teclado para qualquer
             modelo e ausência de sequela em aparelho que já teve contato com líquido.
           </p>
         </section>

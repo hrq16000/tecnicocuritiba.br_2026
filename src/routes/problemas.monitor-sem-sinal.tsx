@@ -27,7 +27,7 @@ export const Route = createFileRoute("/problemas/monitor-sem-sinal")({
       },
       {
         "question": "Vale a pena consertar o monitor ou é melhor comprar outro?",
-        "answer": "Depende do bloco defeituoso. Fonte interna e placa de sinal são reparos de componente que costumam compensar com folga. Painel com trinca, mancha ou linhas fixas não tem reparo viável: a peça sozinha se aproxima do valor de um monitor equivalente, e nesses casos orientamos não fazer o serviço em vez de empurrar orçamento."
+        "answer": "Depende do bloco defeituoso. Fonte interna e placa de sinal são reparos de componente que costumam compensar com folga. Painel com trinca, mancha ou linhas fixas não tem reparo viável: a peça sozinha se aproxima do valor de um monitor equivalente, e nesses casos orientamos não fazer o serviço em vez de empurrar serviço."
       },
       {
         "question": "Preciso levar o equipamento até vocês?",

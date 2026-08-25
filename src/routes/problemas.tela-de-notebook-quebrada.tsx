@@ -15,7 +15,7 @@ export const Route = createFileRoute("/problemas/tela-de-notebook-quebrada")({
       },
       {
         "question": "Como vocês sabem se é a tela ou a placa de vídeo?",
-        "answer": "Pelo teste com monitor externo, que separa os dois caminhos em minutos. Se a imagem externa sai limpa, a parte gráfica da placa está funcionando e a falha está no painel, no cabo flat ou no conector. Se o monitor externo repete o mesmo defeito, o problema é da placa e trocar a tela não resolveria nada. Esse teste é feito antes de qualquer orçamento de peça."
+        "answer": "Pelo teste com monitor externo, que separa os dois caminhos em minutos. Se a imagem externa sai limpa, a parte gráfica da placa está funcionando e a falha está no painel, no cabo flat ou no conector. Se o monitor externo repete o mesmo defeito, o problema é da placa e trocar a tela não resolveria nada. Esse teste é feito antes de qualquer valor fechado de peça."
       },
       {
         "question": "Quanto custa trocar a tela do meu notebook?",
@@ -35,7 +35,7 @@ export const Route = createFileRoute("/problemas/tela-de-notebook-quebrada")({
       },
       {
         "question": "Qual é a garantia da troca de tela?",
-        "answer": "90 dias sobre a mão de obra e sobre o painel aplicado, escopados ao serviço executado. A garantia cobre defeito da peça e da instalação — não cobre novo impacto, pressão sobre a tampa ou queda posterior, porque são danos novos e não falha do reparo. Esse limite é informado antes, por escrito, junto do orçamento."
+        "answer": "90 dias sobre a mão de obra e sobre o painel aplicado, escopados ao serviço executado. A garantia cobre defeito da peça e da instalação — não cobre novo impacto, pressão sobre a tampa ou queda posterior, porque são danos novos e não falha do reparo. Esse limite é informado antes, por escrito, junto do valor."
       },
       {
         "question": "Meus arquivos correm risco durante a troca?",

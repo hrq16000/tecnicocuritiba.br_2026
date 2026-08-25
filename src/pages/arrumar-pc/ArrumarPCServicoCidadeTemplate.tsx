@@ -175,7 +175,7 @@ export const ArrumarPCServicoCidadeTemplate = ({ servico, cidade }: Props) => {
               {[
                 { t: "1. WhatsApp", d: `Você chama no WhatsApp dizendo que está em ${cidade.cidade}.` },
                 { t: "2. Diagnóstico", d: "Conectamos no seu PC via AnyDesk/TeamViewer e analisamos o problema." },
-                { t: "3. valor do atendimento", d: "Passamos preço e prazo antes de executar qualquer serviço." },
+                { t: "3. Valor do atendimento", d: "Passamos preço e prazo antes de executar qualquer serviço." },
                 { t: "4. Solução", d: "Resolvemos na hora. Paga só depois, por PIX, cartão ou boleto." },
               ].map((s) => (
                 <li key={s.t} className="bg-card border border-border rounded-xl p-5">

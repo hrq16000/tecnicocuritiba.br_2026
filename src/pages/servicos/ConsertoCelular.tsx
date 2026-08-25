@@ -223,7 +223,7 @@ const ConsertoCelular = () => {
             <div className="max-w-3xl mx-auto space-y-4">
               {[
                 { q: "Vocês fazem visita técnica para celular?", a: `Não. ${REGRA_COLETA_SEM_VISITA} Organizamos coleta e entrega com taxa mínima de ${COLETA_TAXA_MINIMA_LABEL}.` },
-                { q: "Quanto custa o conserto?", a: `${REGRA_ESTIMATIVA_GRATIS}. valor preciso somente após coleta do aparelho, com taxa mínima de ${COLETA_TAXA_MINIMA_LABEL} pré-aprovada.` },
+                { q: "Quanto custa o conserto?", a: `${REGRA_ESTIMATIVA_GRATIS}. Valor preciso somente após coleta do aparelho, com taxa mínima de ${COLETA_TAXA_MINIMA_LABEL} pré-aprovada.` },
                 { q: "Trocam tela de iPhone?", a: "Sim. Trabalhamos com telas originais e compatíveis de alta qualidade para todos os modelos de iPhone." },
                 { q: "Quanto tempo leva o reparo?", a: `Prazo padrão para celular: ${PRAZO_RAPIDO}.` },
                 { q: "Quais formas de pagamento?", a: "PIX, dinheiro e cartão. Consulte condições pelo WhatsApp." },

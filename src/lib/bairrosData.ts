@@ -731,13 +731,13 @@ export const BAIRROS: Record<string, BairroLocalData> = {
       "Olá! Preciso de um técnico de informática no Novo Mundo, em Curitiba. Pode me orientar?",
     introducaoLocal: [
       "O Novo Mundo é um dos bairros mais populosos da cidade e concentra um comércio de rua vigoroso na Nossa Senhora da Luz e nas vias que cortam a região até o Portão e a Fazendinha. Lojas de material de construção, clínicas pequenas, escritórios de contabilidade e serviços de bairro convivem com quadras inteiramente residenciais.",
-      "Essa convivência aparece na nossa fila de atendimentos: metade dos chamados vem de casas — máquina que engasga, sistema desatualizado, arquivos sem backup — e metade de estabelecimentos que dependem de um computador para emitir documento fiscal, imprimir orçamento e manter o sistema do balcão de pé.",
+      "Essa convivência aparece na nossa fila de atendimentos: metade dos chamados vem de casas — máquina que engasga, sistema desatualizado, arquivos sem backup — e metade de estabelecimentos que dependem de um computador para emitir documento fiscal, imprimir proposta e manter o sistema do balcão de pé.",
       "O ponto de partida é sempre o WhatsApp. Com o relato do sintoma, apontamos o que dá para tentar por conta, o que exige visita e o que precisa ir para bancada. O valor entra depois do diagnóstico, nunca antes.",
     ],
     operacaoLocal: [
       "Triagem que separa uso doméstico de máquina crítica do comércio",
       "Backup verificado antes de reinstalar sistema de trabalho",
-      "Diagnóstico técnico antes de qualquer orçamento",
+      "Diagnóstico técnico antes de qualquer valor fechado",
       "Execução apenas com aprovação prévia do valor",
     ],
     atendimentoLocal: [
@@ -842,7 +842,7 @@ export const BAIRROS: Record<string, BairroLocalData> = {
       "Triagem pelo WhatsApp com levantamento das máquinas envolvidas",
       "Atendimento planejado para reduzir parada de equipe",
       "Diagnóstico antes de indicar upgrade ou substituição",
-      "Orçamento aprovado por escrito antes de executar",
+      "Valor aprovado por escrito antes de executar",
     ],
     atendimentoLocal: [
       "Suporte a estações de trabalho e periféricos de escritório",
@@ -990,7 +990,7 @@ export const BAIRROS: Record<string, BairroLocalData> = {
       "Técnico de informática no Bacacheri, Curitiba: conserto de notebook, manutenção de computador, formatação e rede Wi-Fi. A partir de R$ 99,99. Atendimento via WhatsApp.",
     h1: "Técnico de Informática no Bacacheri – Curitiba",
     subtitulo:
-      "Atendimento a domicílio e por coleta no Bacacheri, com triagem pelo WhatsApp e orçamento aprovado antes da execução.",
+      "Atendimento a domicílio e por coleta no Bacacheri, com triagem pelo WhatsApp e valor aprovado antes da execução.",
     whatsappMessage:
       "Olá! Preciso de um técnico de informática no Bacacheri, em Curitiba. Pode me orientar?",
     introducaoLocal: [
@@ -1152,7 +1152,7 @@ export const BAIRROS: Record<string, BairroLocalData> = {
       "Técnico de informática na Fazendinha, Curitiba: conserto de notebook, formatação, limpeza interna e configuração de Wi-Fi. A partir de R$ 99,99. Atendimento via WhatsApp.",
     h1: "Técnico de Informática na Fazendinha – Curitiba",
     subtitulo:
-      "Suporte técnico para moradores e comércio da Fazendinha, com diagnóstico antes do orçamento e aprovação por escrito.",
+      "Suporte técnico para moradores e comércio da Fazendinha, com diagnóstico antes do valor e aprovação por escrito.",
     whatsappMessage:
       "Olá! Preciso de um técnico de informática na Fazendinha, em Curitiba. Pode me orientar?",
     introducaoLocal: [
@@ -1206,7 +1206,7 @@ export const BAIRROS: Record<string, BairroLocalData> = {
       "Técnico de informática no Campo Comprido, Curitiba: suporte a home office, formatação, upgrade de SSD e rede Wi-Fi em condomínio. A partir de R$ 99,99. Via WhatsApp.",
     h1: "Técnico de Informática no Campo Comprido – Curitiba",
     subtitulo:
-      "Atendimento para condomínios, home office e escritórios do Campo Comprido, com diagnóstico antes do orçamento.",
+      "Atendimento para condomínios, home office e escritórios do Campo Comprido, com diagnóstico antes do valor.",
     whatsappMessage:
       "Olá! Preciso de um técnico de informática no Campo Comprido, em Curitiba. Pode me orientar?",
     introducaoLocal: [
@@ -1314,7 +1314,7 @@ export const BAIRROS: Record<string, BairroLocalData> = {
       "Técnico de informática no Juvevê, Curitiba: suporte a home office, formatação, upgrade de SSD, Wi-Fi e conserto de notebook. A partir de R$ 99,99. Via WhatsApp.",
     h1: "Técnico de Informática no Juvevê – Curitiba",
     subtitulo:
-      "Atendimento para apartamentos, home office e escritórios do Juvevê, com diagnóstico antes do orçamento.",
+      "Atendimento para apartamentos, home office e escritórios do Juvevê, com diagnóstico antes do valor.",
     whatsappMessage:
       "Olá! Preciso de um técnico de informática no Juvevê, em Curitiba. Pode me orientar?",
     introducaoLocal: [
@@ -1368,7 +1368,7 @@ export const BAIRROS: Record<string, BairroLocalData> = {
       "Técnico de informática no Seminário, Curitiba: formatação, remoção de vírus, upgrade de SSD, Wi-Fi e conserto de notebook. A partir de R$ 99,99. Via WhatsApp.",
     h1: "Técnico de Informática no Seminário – Curitiba",
     subtitulo:
-      "Atendimento para moradores, estudantes e escritórios do Seminário, com triagem pelo WhatsApp e orçamento após diagnóstico.",
+      "Atendimento para moradores, estudantes e escritórios do Seminário, com triagem pelo WhatsApp e valor do reparo após diagnóstico.",
     whatsappMessage:
       "Olá! Preciso de um técnico de informática no Seminário, em Curitiba. Pode me orientar?",
     introducaoLocal: [

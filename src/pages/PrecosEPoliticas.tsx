@@ -415,7 +415,7 @@ const PrecosEPoliticas = ({ path = "/precos-e-politicas" }: PrecosEPoliticasProp
               </div>
 
               <p className="text-sm text-muted-foreground mt-6 text-center">
-                * Valores sujeitos a variação conforme complexidade. valor do atendimento sempre informado antes do serviço.
+                * Valores sujeitos a variação conforme complexidade. Valor do atendimento sempre informado antes do serviço.
               </p>
             </div>
           </div>

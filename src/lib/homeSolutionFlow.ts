@@ -287,7 +287,7 @@ export const SOLUTION_FLOW: SolutionProblem[] = [
         equipamento: "Monitor sem sinal",
         solucao: { label: "Monitor sem sinal", path: "/problemas/monitor-sem-sinal" },
         modalidade: "coleta",
-        porque: "Teste cruzado separa cabo, saída de vídeo e monitor antes de qualquer orçamento.",
+        porque: "Teste cruzado separa cabo, saída de vídeo e monitor antes de qualquer valor fechado.",
         mensagem: "Meu monitor está mostrando sem sinal. Quero avaliação técnica.",
       },
       {

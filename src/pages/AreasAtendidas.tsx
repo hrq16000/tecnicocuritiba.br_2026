@@ -7,6 +7,8 @@ import { FastHeader } from "@/components/FastHeader";
 import { Footer } from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { LocalFAQSection } from "@/components/LocalFAQSection";
+import { DiretorioLocalidades } from "@/components/areas/DiretorioLocalidades";
+
 import { CIDADE_LIST, MODALIDADES_ATENDIMENTO } from "@/lib/cidadesData";
 import { bairroPathPorNome } from "@/lib/bairroLinks";
 import { CIDADES_RMC_NOMES } from "@/lib/bairrosSelect";
@@ -197,6 +199,27 @@ const AreasAtendidas = () => {
 
         <section className="py-12 md:py-16">
           <div className="container mx-auto">
+            <h2 className="text-2xl font-heading font-bold text-foreground md:text-3xl">
+              Encontre seu bairro ou cidade
+            </h2>
+            <p className="mt-3 max-w-3xl text-muted-foreground">
+              Busque pelo nome e escolha o tipo de atendimento para ver o valor real da modalidade, do menor
+              para o maior. Não há preço diferente por bairro: a tabela é única e está publicada em preços e
+              políticas.
+            </p>
+            <div className="mt-6">
+              <DiretorioLocalidades
+                regioes={REGIONAIS}
+                cidades={cidadesComPagina}
+                cidadesSemPagina={cidadesSemPagina}
+              />
+            </div>
+          </div>
+        </section>
+
+        <section className="py-12 md:py-16">
+          <div className="container mx-auto">
+
             <h2 className="text-2xl font-heading font-bold text-foreground md:text-3xl">
               Mapa de cobertura por região de Curitiba
             </h2>

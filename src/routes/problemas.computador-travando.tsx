@@ -15,7 +15,7 @@ export const Route = createFileRoute("/problemas/computador-travando")({
       },
       {
         "question": "Como saber se a memória RAM é a culpada?",
-        "answer": "O teste de memória do próprio Windows já indica erro na maioria dos módulos defeituosos e é gratuito. Em bancada vamos além: testamos módulo a módulo em slots diferentes e cruzamos com memória conhecida. Isso responde tanto se o defeito é do módulo quanto se é do slot da placa-mãe, o que muda completamente o orçamento."
+        "answer": "O teste de memória do próprio Windows já indica erro na maioria dos módulos defeituosos e é gratuito. Em bancada vamos além: testamos módulo a módulo em slots diferentes e cruzamos com memória conhecida. Isso responde tanto se o defeito é do módulo quanto se é do slot da placa-mãe, o que muda completamente o valor do reparo."
       },
       {
         "question": "Trava só quando jogo. É a placa de vídeo?",

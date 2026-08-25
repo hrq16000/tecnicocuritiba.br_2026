@@ -55,7 +55,7 @@ export const Route = createFileRoute("/servicos/manutencao-preventiva-empresas")
       },
       {
         "question": "A preventiva inclui as peças que precisarem ser trocadas?",
-        "answer": "Não. A rotina inclui inspeção, limpeza, verificações e o relatório priorizado; peças, componentes e materiais são orçados à parte e só adquiridos após autorização da empresa. Essa separação evita a impressão de que a substituição já está paga dentro do contrato de rotina."
+        "answer": "Não. A rotina inclui inspeção, limpeza, verificações e o relatório priorizado; peças, componentes e materiais têm valor informado à parte e só adquiridos após autorização da empresa. Essa separação evita a impressão de que a substituição já está paga dentro do contrato de rotina."
       }
     ]
   }),

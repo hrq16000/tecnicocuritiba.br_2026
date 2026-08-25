@@ -26,7 +26,7 @@ const RULES = [
   { id: "entidade", re: /Ping\s+Solu[çc][õo]es/i, msg: "razão social exposta" },
   { id: "email", re: /mailto:|contato@[a-z0-9.-]+/i, msg: "e-mail de contato exposto" },
   { id: "whatsapp-visivel", re: /\(?41\)?[\s.-]?9{1,2}\s?9?7\d{3}[-\s.]?\d{4}/, msg: "número de WhatsApp visível" },
-  { id: "orcamento", re: /or[çc]ament|or[çc]ad[oa]s?\b|\bor[çc]ar\b/i, msg: 'palavra proibida: usar "agendar"/"solicitar atendimento"/"valor"' },
+  { id: "orcamento", re: /\bor[çc]ament|\bor[çc]ad[oa]s?\b|\bor[çc]ar\b/i, msg: 'palavra proibida: usar "agendar"/"solicitar atendimento"/"valor"' },
 ];
 
 /** Exceções conscientes (código, não copy visível). */

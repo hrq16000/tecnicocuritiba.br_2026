@@ -157,7 +157,7 @@ const ProblemasHub = () => {
         <section id="como-usar" className="scroll-mt-24 mb-12">
           <h2 className="mb-4 text-2xl font-bold text-foreground">Como usar este índice de problemas</h2>
           <p className="mb-3 text-muted-foreground">
-            A maioria dos orçamentos errados começa com uma suspeita, não com um sintoma. Quem chega dizendo
+            A maioria dos reparos errados começa com uma suspeita, não com um sintoma. Quem chega dizendo
             &ldquo;acho que é a placa&rdquo; costuma pagar por uma peça que não era o problema. Por isso este índice está
             organizado pelo que o equipamento faz — não liga, liga sem imagem, trava, esquenta, perde rede — e não pelo
             componente que alguém imaginou estar em falha.

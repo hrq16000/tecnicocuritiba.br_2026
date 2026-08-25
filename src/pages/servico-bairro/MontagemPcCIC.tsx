@@ -2,7 +2,7 @@ import { ServicoBairroTemplate, ServicoBairroData } from "./ServicoBairroTemplat
 
 const data: ServicoBairroData = {
   metaTitle: "Montagem de PC Personalizado no CIC Curitiba | Gamer e Workstation | Técnico Curitiba",
-  metaDescription: "Montagem de PC gamer e workstation no CIC, Curitiba. Peças de qualidade, montagem profissional e teste completo. valor personalizado.",
+  metaDescription: "Montagem de PC gamer e workstation no CIC, Curitiba. Peças de qualidade, montagem profissional e teste completo. Valor personalizado.",
   
   servico: "Montagem de PC",
   servicoSlug: "montagem-pc",

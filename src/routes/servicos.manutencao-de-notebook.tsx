@@ -59,7 +59,7 @@ export const Route = createFileRoute("/servicos/manutencao-de-notebook")({
       },
       {
         "question": "Vale a pena consertar um notebook antigo?",
-        "answer": "Depende de três números: valor do reparo com peça, valor de mercado do equipamento no estado atual e o que você espera dele nos próximos meses. Reparo de teclado, bateria, refrigeração ou armazenamento costuma se pagar; reparo de placa em plataforma antiga com peça escassa nem sempre. Apresentamos os valores e a alternativa antes de qualquer execução."
+        "answer": "Depende de três números: Valor do reparo com peça, valor de mercado do equipamento no estado atual e o que você espera dele nos próximos meses. Reparo de teclado, bateria, refrigeração ou armazenamento costuma se pagar; reparo de placa em plataforma antiga com peça escassa nem sempre. Apresentamos os valores e a alternativa antes de qualquer execução."
       },
       {
         "question": "Trocar a bateria melhora o desempenho do notebook?",

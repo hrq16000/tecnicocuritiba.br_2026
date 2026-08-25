@@ -106,7 +106,7 @@ export const ValorNotebookCalculator = ({
       </div>
       <p className="text-sm text-muted-foreground mb-5">
         Em 3 cliques você vê a faixa estimada. A partir de{" "}
-        <strong>R$ 99,99 — formatação em até 30 minutos</strong>. valor fechado sempre após diagnóstico.
+        <strong>R$ 99,99 — formatação em até 30 minutos</strong>. Valor fechado sempre após diagnóstico.
       </p>
 
       <fieldset className="mb-5">
@@ -194,7 +194,7 @@ export const ValorNotebookCalculator = ({
       </Button>
 
       <p className="text-[11px] text-muted-foreground mt-3 text-center">
-        Valores estimados com base em casos atendidos em Curitiba. valor final é
+        Valores estimados com base em casos atendidos em Curitiba. Valor final é
         sempre fechado após diagnóstico — você só paga se aprovar.
       </p>
       {/* Hidden input para acessibilidade de leitores de tela com a faixa atual */}

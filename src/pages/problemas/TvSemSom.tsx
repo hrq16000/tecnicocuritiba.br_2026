@@ -18,7 +18,7 @@ import ProximosProblemas from "@/components/problemas/ProximosProblemas";
 const PATH = "/problemas/tv-sem-som";
 const TITLE = "TV Sem Som: Causas, Testes e Conserto | Curitiba";
 const DESCRIPTION =
-  "TV com imagem normal e sem áudio, som chiado ou saída de fone mudo? Veja como separar configuração de saída, falha do amplificador de áudio e alto-falante rompido antes de orçar, com avaliação por coleta em Curitiba.";
+  "TV com imagem normal e sem áudio, som chiado ou saída de fone mudo? Veja como separar configuração de saída, falha do amplificador de áudio e alto-falante rompido antes de fechar valor, com avaliação por coleta em Curitiba.";
 
 const WA_MESSAGE =
   "Olá! Vim da página sobre TV sem som. Minha televisão está com imagem normal, mas sem áudio, e preciso de avaliação.";
@@ -75,7 +75,7 @@ const VERIFICACOES = [
 const OPCOES = [
   {
     titulo: "Avaliação do bloco de áudio",
-    desc: "Medimos o sinal desde o processamento até a saída dos alto-falantes para descobrir onde ele se perde. Só depois disso existe orçamento — palpite por relato não fecha diagnóstico de áudio.",
+    desc: "Medimos o sinal desde o processamento até a saída dos alto-falantes para descobrir onde ele se perde. Só depois disso existe valor fechado — palpite por relato não fecha diagnóstico de áudio.",
     to: "/servicos/conserto-tv",
     label: "Conserto de TV",
   },
@@ -108,7 +108,7 @@ const FAQS = [
   {
     question: "Como sei se é configuração ou defeito de verdade?",
     answer:
-      "O teste decisivo é variar a fonte. Se o silêncio aparece na TV aberta, num HDMI e num aplicativo interno ao mesmo tempo, o problema é do televisor. Se só um deles fica mudo, a origem está no ajuste daquela entrada ou no aparelho conectado a ela. Forçar a saída para os alto-falantes internos no menu de som resolve uma parte real dos chamados sem qualquer custo.",
+      "O teste decisivo é variar a fonte. Se o silêncio aparece na TV aberta, num HDMI e num aplicativo interno ao mesmo tempo, o problema é do televisor. Se só um deles fica mudo, a origem está no ajuste daquela entrada ou no aparelho conectado a ela. Ffechar valor a saída para os alto-falantes internos no menu de som resolve uma parte real dos chamados sem qualquer custo.",
   },
   {
     question: "O som sai pelo fone e pela barra, mas não pelos alto-falantes. O que significa?",
@@ -193,7 +193,7 @@ const TvSemSom = () => {
           </h1>
           <p className="mb-4 line-clamp-4 text-[0.95rem] leading-relaxed opacity-95 sm:mb-6 sm:line-clamp-none sm:text-base">
             Televisor com imagem normal e nenhum áudio tem três origens bem distintas, e elas se separam com testes que
-            você mesmo faz em poucos minutos. Esta página mostra a sequência que usamos antes de qualquer orçamento.
+            você mesmo faz em poucos minutos. Esta página mostra a sequência que usamos antes de qualquer valor fechado.
           </p>
           <Button asChild size="lg" className="min-h-14">
             <a href={waHref} onClick={cta("hero")} data-cta-location="problema_hero">
@@ -233,7 +233,7 @@ const TvSemSom = () => {
             interrupção desse caminho em um desses pontos, e cada um tem um custo bem diferente.
           </p>
           <p className="mb-3 text-muted-foreground">
-            Por isso o primeiro passo não é orçamento, é teste de fonte. Silêncio em todas as entradas coloca a suspeita
+            Por isso o primeiro passo não é fechar valor, é teste de fonte. Silêncio em todas as entradas coloca a suspeita
             dentro do aparelho. Silêncio em uma só entrega o caso para ajuste de formato, cabo ou aparelho externo — sem
             reparo nenhum.
           </p>
