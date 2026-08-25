@@ -73,6 +73,10 @@ jobs:
         if: always()
         run: npm run reindex:snapshots:gate
 
+      - name: Diff de identidade de SERP entre marcos
+        if: always()
+        run: npm run report:diff-marcos
+
       - name: Análise D7/D14 (somente leitura)
         if: always()
         run: npm run report:monitoramento
@@ -91,4 +95,7 @@ jobs:
             reports/operacao-*.md
             reports/operational-alerts.md
             reports/snapshot-index-verificacao.json
+            reports/diff-marcos.json
+            reports/diff-marcos.md
+            reports/job-runs.json
             docs/relatorio-monitoramento-d7-d14.md

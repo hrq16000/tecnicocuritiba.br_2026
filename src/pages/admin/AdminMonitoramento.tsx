@@ -126,8 +126,11 @@ export default function AdminMonitoramento() {
   const [carregando, setCarregando] = useState(true);
   const [detalhe, setDetalhe] = useState<"tiers" | "clusters">("tiers");
   // Alertas por cluster linkam para /admin/monitoramento?cluster=SERVICO
-  const clusterInicial =
-    typeof window === "undefined" ? null : new URLSearchParams(window.location.search).get("cluster");
+  // (lido após a hidratação para não divergir do HTML do servidor).
+  const [clusterInicial, setClusterInicial] = useState<string | null>(null);
+  useEffect(() => {
+    setClusterInicial(new URLSearchParams(window.location.search).get("cluster"));
+  }, []);
 
   const carregar = () => {
     setCarregando(true);
@@ -421,7 +424,7 @@ export default function AdminMonitoramento() {
               ))}
             </section>
 
-            <DrilldownUrls marcos={marcos} clusterInicial={clusterInicial} />
+            <DrilldownUrls key={clusterInicial ?? "todos"} marcos={marcos} clusterInicial={clusterInicial} />
 
             <DiffSnapshots />
 
