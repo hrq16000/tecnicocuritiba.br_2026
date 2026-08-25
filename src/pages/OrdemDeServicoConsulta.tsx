@@ -120,6 +120,20 @@ const OrdemDeServicoConsulta = () => {
           </p>
         ) : null}
 
+        {estado === "invalido" ? (
+          <p className="mt-6 rounded-xl border border-border bg-card p-5 text-sm leading-relaxed text-muted-foreground">
+            Este código não está no formato de protocolo. Ele começa com <strong>OS-</strong>, seguido da data
+            e de quatro caracteres — por exemplo, <code>OS-20260808-K7QD</code>.
+          </p>
+        ) : null}
+
+        {estado === "limite" ? (
+          <p className="mt-6 rounded-xl border border-border bg-card p-5 text-sm leading-relaxed text-muted-foreground">
+            Recebemos muitas consultas deste dispositivo em pouco tempo. Aguarde alguns minutos e tente
+            novamente — ou fale com a gente pelo WhatsApp que localizamos a sua ordem.
+          </p>
+        ) : null}
+
         {estado === "erro" ? (
           <p className="mt-6 rounded-xl border border-border bg-card p-5 text-sm leading-relaxed text-muted-foreground">
             Não foi possível consultar agora. Tente novamente em instantes.
