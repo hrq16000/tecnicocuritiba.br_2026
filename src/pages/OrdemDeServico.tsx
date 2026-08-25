@@ -227,8 +227,9 @@ const OrdemDeServico = () => {
     toast.success("PDF da ordem de serviço gerado.");
   };
 
-  const baixar = () => {
-    const n = garantirNumero();
+  const baixar = async () => {
+    const n = await garantirNumero();
+    if (!n) return;
     const conteudo = resumo.replace(/^Ordem de serviço.*$/m, `Ordem de serviço ${n}`);
     const blob = new Blob([conteudo], { type: "text/plain;charset=utf-8" });
     const url = URL.createObjectURL(blob);
@@ -239,8 +240,9 @@ const OrdemDeServico = () => {
     URL.revokeObjectURL(url);
   };
 
-  const enviar = () => {
-    const n = garantirNumero();
+  const enviar = async () => {
+    const n = await garantirNumero();
+    if (!n) return;
     trackCTAClick("whatsapp", "ordem-de-servico");
     window.dispatchEvent(
       new CustomEvent("wa-funnel:open", {
@@ -250,6 +252,7 @@ const OrdemDeServico = () => {
         },
       }),
     );
+
   };
 
   return (
