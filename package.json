@@ -285,7 +285,15 @@
     "report:diff-marcos": "node scripts/diff-marcos.mjs",
     "report:diff-marcos:gate": "node scripts/diff-marcos.mjs --gate",
     "intervencao:registrar": "node scripts/registrar-intervencao.mjs",
-    "intervencao:check": "node scripts/registrar-intervencao.mjs --check"
+    "intervencao:check": "node scripts/registrar-intervencao.mjs --check",
+    "validar:producao": "node scripts/validar-producao-live.mjs",
+    "validar:producao:gate": "node scripts/validar-producao-live.mjs --gate",
+    "check:coortes": "node scripts/check-cohort-reconciliation.mjs",
+    "report:impact-map": "node scripts/generate-intervention-impact-map.mjs",
+    "freeze:v2": "node scripts/selar-freeze-v2.mjs",
+    "check:seo-freeze-v2": "node scripts/check-seo-freeze-v2.mjs",
+    "report:freeze-v2": "node scripts/gerar-relatorio-freeze-v2.mjs",
+    "governanca:pre-d14": "npm run validar:producao:gate && npm run check:coortes && npm run report:impact-map && npm run check:seo-freeze-v2 && npm run report:freeze-v2"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
