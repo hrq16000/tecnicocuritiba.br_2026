@@ -273,6 +273,7 @@
     "monitor:operacao:notify": "node scripts/monitor-operational-alerts.mjs --notify",
     "reindex:snapshots": "node scripts/reindex-snapshots.mjs",
     "reindex:snapshots:gate": "node scripts/reindex-snapshots.mjs --strict",
+    "report:fila-bairros": "node scripts/report-fila-enriquecimento.mjs",
     "report:monitoramento": "node scripts/report-monitoramento-d7-d14.mjs",
     "report:marco": "node scripts/gerar-relatorio-marco.mjs",
     "report:marco:gate": "node scripts/gerar-relatorio-marco.mjs --gate",
