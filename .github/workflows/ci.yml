@@ -67,8 +67,12 @@ jobs:
         run: npm run check:wa-number-dom
       - name: Gate de alt text das imagens (sem alt genérico/placeholder)
         run: npm run check:image-alt
+      - name: Otimização de fotos reais (WebP/AVIF) — bloqueia deploy se falhar
+        run: npm run photos:optimize
       - name: Gate de privacidade das fotos reais (EXIF/GPS)
         run: npm run check:photos
+      - name: Fotos otimizadas commitadas (sem diff pendente)
+        run: git diff --exit-code -- public src/assets
       - name: Gate de LocalBusiness unificado no cluster de informática
         run: npm run check:localbusiness-cluster
       - name: JSON-LD validation

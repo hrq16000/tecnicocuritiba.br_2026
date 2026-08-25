@@ -29,6 +29,8 @@ import { QuickWinsBacklog } from "@/components/admin/monitoramento/QuickWinsBack
 import { TendenciasMarcos } from "@/components/admin/monitoramento/TendenciasMarcos";
 import { ExperimentosControlados } from "@/components/admin/monitoramento/ExperimentosControlados";
 import { ClassificacaoAlertas } from "@/components/admin/monitoramento/ClassificacaoAlertas";
+import { ResumoDiarioAlertas } from "@/components/admin/monitoramento/ResumoDiarioAlertas";
+import { ReindexContencao } from "@/components/admin/monitoramento/ReindexContencao";
 import type { MarcoUrl } from "@/components/admin/monitoramento/types";
 import { Navigate } from "@/lib/router-compat";
 import { useAdminAuth } from "@/hooks/useAdminAuth";
@@ -669,7 +671,12 @@ export default function AdminMonitoramento() {
               urlsDisponiveis={(atual.urls ?? []).map((u) => u.path)}
             />
 
+            <ResumoDiarioAlertas />
+
             <ClassificacaoAlertas marcoAtual={atual.marco} />
+
+            <ReindexContencao marcoAtual={atual.marco} />
+
 
             <section className="mt-10">
               <h2 className="text-lg font-semibold">
