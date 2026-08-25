@@ -21,8 +21,9 @@
  *   reports/serp-signals-<marco>.json  cópia imutável dos sinais de SERP
  *   public/operacao-marcos.json        payload consumido por /admin/monitoramento
  */
-import { copyFileSync, existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { copyFileSync, existsSync, mkdirSync, readFileSync, statSync, writeFileSync } from "node:fs";
 import { avaliarJanela } from "./lib/marco-janela.mjs";
+import { assinarMarco, reconciliarFunil, SCHEMA_VERSION } from "./lib/marco-integridade.mjs";
 import { registrarJob } from "./lib/job-log.mjs";
 
 
