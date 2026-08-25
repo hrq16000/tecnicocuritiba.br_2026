@@ -169,14 +169,16 @@ for (const a of alertas) console.log(`  [${a.severidade}] ${a.id} — ${a.mensag
 if (!alertas.length) console.log("  ✔ tudo dentro do limiar.");
 
 if (notify && mudou && alertas.length) {
+  const texto = [
+    `*tecnico.curitiba.br — ${alertas.length} alerta(s) operacional(is)*`,
+    ...alertas.map((a) => `• [${a.severidade}] ${a.mensagem}`),
+    `Tier A ${tierARate ?? "N/A"}% · curadas ${metricas.curadas} · doorway ALTO ${doorwayAlto ?? "N/A"}`,
+  ].join("\n");
+
+  // Slack (ou qualquer webhook compatível).
   const webhook = process.env.SEO_ALERTS_WEBHOOK;
-  if (!webhook) console.warn("  ⚠ SEO_ALERTS_WEBHOOK ausente — resumo não enviado.");
+  if (!webhook) console.warn("  ⚠ SEO_ALERTS_WEBHOOK ausente — resumo Slack não enviado.");
   else {
-    const texto = [
-      `*tecnico.curitiba.br — ${alertas.length} alerta(s) operacional(is)*`,
-      ...alertas.map((a) => `• [${a.severidade}] ${a.mensagem}`),
-      `Tier A ${tierARate ?? "N/A"}% · curadas ${metricas.curadas} · doorway ALTO ${doorwayAlto ?? "N/A"}`,
-    ].join("\n");
     const res = await fetch(webhook, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -184,9 +186,38 @@ if (notify && mudou && alertas.length) {
     });
     console.log(`  webhook: ${res.status}`);
   }
+
+  // E-mail opcional: só envia quando destinatário e chave existem (fail-closed).
+  const email = process.env.SEO_ALERTS_EMAIL;
+  const resendKey = process.env.RESEND_API_KEY;
+  const remetente = process.env.SEO_ALERTS_FROM ?? "alertas@tecnico.curitiba.br";
+  if (email && resendKey) {
+    const html = [
+      `<h2>tecnico.curitiba.br — ${alertas.length} alerta(s) operacional(is)</h2>`,
+      "<ul>",
+      ...alertas.map((a) => `<li><strong>[${a.severidade}]</strong> ${a.mensagem}</li>`),
+      "</ul>",
+      `<p>Tier A ${tierARate ?? "N/A"}% · curadas ${metricas.curadas} · doorway ALTO ${doorwayAlto ?? "N/A"} · IndexNow ${enviadas}</p>`,
+      "<p>Painel: <a href=\"https://tecnico.curitiba.br/admin/monitoramento\">/admin/monitoramento</a></p>",
+    ].join("");
+    const res = await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: { Authorization: `Bearer ${resendKey}`, "Content-Type": "application/json" },
+      body: JSON.stringify({
+        from: remetente,
+        to: email.split(",").map((e) => e.trim()),
+        subject: `[SEO] ${alertas.length} alerta(s) operacional(is) — tecnico.curitiba.br`,
+        html,
+      }),
+    });
+    console.log(`  email: ${res.status}`);
+  } else if (email && !resendKey) {
+    console.warn("  ⚠ RESEND_API_KEY ausente — resumo por e-mail não enviado.");
+  }
 } else if (notify) {
   console.log("  (sem envio: nada mudou ou nenhum alerta ativo)");
 }
+
 
 if (gate && alertas.some((a) => a.severidade === "alta")) {
   console.error("\n✖ alerta(s) de severidade alta — operação em NO-GO.");
