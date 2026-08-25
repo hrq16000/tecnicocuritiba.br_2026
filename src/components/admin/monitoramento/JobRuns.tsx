@@ -44,8 +44,9 @@ export function JobRuns() {
       <h2 className="text-lg font-semibold">Execução de jobs</h2>
       {!execucoes?.length ? (
         <p className="mt-2 text-sm text-muted-foreground">
-          {SEM_DADO} — nenhuma execução registrada. Os jobs gravam aqui ao rodar (
-          <code>snapshot:marco</code>, <code>reindex:snapshots</code>, <code>report:diff-marcos</code>).
+          {SEM_DADO} — nenhuma execução registrada. Os jobs gravam aqui ao rodar
+          (<code>snapshot:marco</code>, <code>reindex:snapshots</code>,{" "}
+          <code>report:diff-marcos</code>).
         </p>
       ) : (
         <div className="mt-4 overflow-x-auto rounded-xl border border-border">
@@ -73,15 +74,39 @@ export function JobRuns() {
                           onClick={() => setAberta(expandida ? null : e.id)}
                           className="flex items-center gap-1 font-mono text-xs hover:underline"
                         >
-                          {expandida ? <ChevronDown className="h-3.5 w-3.5" aria-hidden="true" /> : <ChevronRight className="h-3.5 w-3.5" aria-hidden="true" />}
+                          {expandida ? (
+                            <ChevronDown
+                              className="h-3.5 w-3.5"
+                              aria-hidden="true"
+                            />
+                          ) : (
+                            <ChevronRight
+                              className="h-3.5 w-3.5"
+                              aria-hidden="true"
+                            />
+                          )}
                           {e.job}
                         </button>
                       </td>
                       <td className="p-3 text-xs">{e.marco ?? "—"}</td>
-                      <td className="p-3 text-xs">{new Date(e.executadoEm).toLocaleString("pt-BR")}</td>
-                      <td className="p-3 text-xs">{(e.duracaoMs / 1000).toFixed(1)}s</td>
-                      <td className={`p-3 text-xs font-medium ${COR[e.status]}`}>{e.status}</td>
-                      <td className="p-3 text-xs">{e.failClosed === null ? "N/A" : e.failClosed ? "passou" : "reprovou"}</td>
+                      <td className="p-3 text-xs">
+                        {new Date(e.executadoEm).toLocaleString("pt-BR")}
+                      </td>
+                      <td className="p-3 text-xs">
+                        {(e.duracaoMs / 1000).toFixed(1)}s
+                      </td>
+                      <td
+                        className={`p-3 text-xs font-medium ${COR[e.status]}`}
+                      >
+                        {e.status}
+                      </td>
+                      <td className="p-3 text-xs">
+                        {e.failClosed === null
+                          ? "N/A"
+                          : e.failClosed
+                            ? "passou"
+                            : "reprovou"}
+                      </td>
                       <td className="p-3 text-xs text-muted-foreground">
                         {Object.entries(e.contagens ?? {})
                           .map(([k, v]) => `${k}: ${v ?? "N/A"}`)
@@ -92,7 +117,9 @@ export function JobRuns() {
                       <tr className="border-t border-border bg-muted/30">
                         <td colSpan={7} className="p-4">
                           <pre className="whitespace-pre-wrap break-words font-mono text-[11px] leading-relaxed text-muted-foreground">
-                            {e.logs.length ? e.logs.join("\n") : "sem linhas de log registradas"}
+                            {e.logs.length
+                              ? e.logs.join("\n")
+                              : "sem linhas de log registradas"}
                           </pre>
                         </td>
                       </tr>

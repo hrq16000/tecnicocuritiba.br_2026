@@ -2,7 +2,12 @@ import { useMemo, useState } from "react";
 import { ChevronDown, ChevronRight, Search } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { ESTADO_LABEL, SEM_DADO, type MarcoResumo, type MarcoUrl } from "./types";
+import {
+  ESTADO_LABEL,
+  SEM_DADO,
+  type MarcoResumo,
+  type MarcoUrl,
+} from "./types";
 
 /**
  * Drilldown por URL: cada URL curada com o estado registrado em cada marco,
@@ -17,12 +22,19 @@ const ESTADOS = ["indexed", "discovered", "unknown", "crawled_not_indexed"];
 
 const corEstado = (estado: string | undefined) => {
   if (estado === "indexed") return "text-emerald-600";
-  if (estado === "crawled_not_indexed" || estado === "soft_404") return "text-destructive";
+  if (estado === "crawled_not_indexed" || estado === "soft_404")
+    return "text-destructive";
   if (estado === "discovered") return "text-amber-600";
   return "text-muted-foreground";
 };
 
-export function DrilldownUrls({ marcos, clusterInicial }: { marcos: MarcoResumo[]; clusterInicial?: string | null }) {
+export function DrilldownUrls({
+  marcos,
+  clusterInicial,
+}: {
+  marcos: MarcoResumo[];
+  clusterInicial?: string | null;
+}) {
   const [busca, setBusca] = useState("");
   const [cluster, setCluster] = useState(clusterInicial ?? "todos");
   const [tier, setTier] = useState("todos");
@@ -34,19 +46,34 @@ export function DrilldownUrls({ marcos, clusterInicial }: { marcos: MarcoResumo[
 
   const linhas = useMemo(() => {
     if (!ultimo?.urls) return [];
-    const porMarco = new Map(comUrls.map((m) => [m.marco, new Map((m.urls ?? []).map((u) => [u.path, u]))]));
+    const porMarco = new Map(
+      comUrls.map((m) => [
+        m.marco,
+        new Map((m.urls ?? []).map((u) => [u.path, u])),
+      ]),
+    );
     return ultimo.urls.map((u) => ({
       atual: u,
-      estados: comUrls.map((m) => ({ marco: m.marco, estado: porMarco.get(m.marco)?.get(u.path)?.estado ?? null })),
+      estados: comUrls.map((m) => ({
+        marco: m.marco,
+        estado: porMarco.get(m.marco)?.get(u.path)?.estado ?? null,
+      })),
     }));
   }, [comUrls, ultimo]);
 
-  const clusters = useMemo(() => [...new Set(linhas.map((l) => l.atual.cluster ?? "—"))].sort(), [linhas]);
-  const tiers = useMemo(() => [...new Set(linhas.map((l) => l.atual.tier ?? "—"))].sort(), [linhas]);
+  const clusters = useMemo(
+    () => [...new Set(linhas.map((l) => l.atual.cluster ?? "—"))].sort(),
+    [linhas],
+  );
+  const tiers = useMemo(
+    () => [...new Set(linhas.map((l) => l.atual.tier ?? "—"))].sort(),
+    [linhas],
+  );
 
   const filtradas = linhas.filter((l) => {
     const u = l.atual;
-    if (busca && !u.path.toLowerCase().includes(busca.toLowerCase())) return false;
+    if (busca && !u.path.toLowerCase().includes(busca.toLowerCase()))
+      return false;
     if (cluster !== "todos" && (u.cluster ?? "—") !== cluster) return false;
     if (tier !== "todos" && (u.tier ?? "—") !== tier) return false;
     if (estado !== "todos" && u.estado !== estado) return false;
@@ -68,10 +95,15 @@ export function DrilldownUrls({ marcos, clusterInicial }: { marcos: MarcoResumo[
   return (
     <section className="mt-10">
       <div className="flex flex-wrap items-center justify-between gap-3">
-        <h2 className="text-lg font-semibold">Drilldown por URL ({filtradas.length})</h2>
+        <h2 className="text-lg font-semibold">
+          Drilldown por URL ({filtradas.length})
+        </h2>
         <div className="flex flex-wrap items-center gap-2 print:hidden">
           <div className="relative">
-            <Search className="pointer-events-none absolute left-2 top-2.5 h-4 w-4 text-muted-foreground" aria-hidden="true" />
+            <Search
+              className="pointer-events-none absolute left-2 top-2.5 h-4 w-4 text-muted-foreground"
+              aria-hidden="true"
+            />
             <Input
               value={busca}
               onChange={(e) => setBusca(e.target.value)}
@@ -155,7 +187,10 @@ export function DrilldownUrls({ marcos, clusterInicial }: { marcos: MarcoResumo[
             })}
             {!filtradas.length && (
               <tr>
-                <td className="p-4 text-muted-foreground" colSpan={5 + comUrls.length}>
+                <td
+                  className="p-4 text-muted-foreground"
+                  colSpan={5 + comUrls.length}
+                >
                   Nenhuma URL para os filtros atuais.
                 </td>
               </tr>
@@ -182,11 +217,17 @@ function FragmentRow({
 }) {
   const evidencias: [string, string | number | null][] = [
     ["Cobertura GSC", url.gscCoverage],
-    ["Último crawl", url.lastCrawl ? new Date(url.lastCrawl).toLocaleString("pt-BR") : null],
+    [
+      "Último crawl",
+      url.lastCrawl ? new Date(url.lastCrawl).toLocaleString("pt-BR") : null,
+    ],
     ["HTTP", url.http],
     ["TTFB (ms)", url.ttfbMs],
     ["Canonical", url.canonical],
-    ["Canonical self", url.canonicalSelf === null ? null : url.canonicalSelf ? "sim" : "não"],
+    [
+      "Canonical self",
+      url.canonicalSelf === null ? null : url.canonicalSelf ? "sim" : "não",
+    ],
     ["Canonical do Google", url.googleCanonical],
     ["noindex", url.noindex === null ? null : url.noindex ? "sim" : "não"],
     ["Links internos", url.inbound],
@@ -200,16 +241,27 @@ function FragmentRow({
     <>
       <tr className="border-t border-border">
         <td className="p-3">
-          <button type="button" onClick={onToggle} className="flex items-center gap-1 text-left font-mono text-xs hover:underline">
-            {expandida ? <ChevronDown className="h-3.5 w-3.5" aria-hidden="true" /> : <ChevronRight className="h-3.5 w-3.5" aria-hidden="true" />}
+          <button
+            type="button"
+            onClick={onToggle}
+            className="flex items-center gap-1 text-left font-mono text-xs hover:underline"
+          >
+            {expandida ? (
+              <ChevronDown className="h-3.5 w-3.5" aria-hidden="true" />
+            ) : (
+              <ChevronRight className="h-3.5 w-3.5" aria-hidden="true" />
+            )}
             {url.path}
           </button>
         </td>
         <td className="p-3 text-xs">{url.cluster ?? "—"}</td>
         <td className="p-3 text-xs">{url.tier ?? "—"}</td>
         {estados.map((e) => (
-          <td key={e.marco} className={`p-3 text-xs ${corEstado(e.estado ?? undefined)}`}>
-            {e.estado ? ESTADO_LABEL[e.estado] ?? e.estado : SEM_DADO}
+          <td
+            key={e.marco}
+            className={`p-3 text-xs ${corEstado(e.estado ?? undefined)}`}
+          >
+            {e.estado ? (ESTADO_LABEL[e.estado] ?? e.estado) : SEM_DADO}
           </td>
         ))}
         <td className="p-3">{url.impressions}</td>
@@ -221,8 +273,12 @@ function FragmentRow({
             <dl className="grid gap-x-6 gap-y-2 sm:grid-cols-2 lg:grid-cols-3">
               {evidencias.map(([label, valor]) => (
                 <div key={label} className="min-w-0">
-                  <dt className="text-[11px] uppercase tracking-wide text-muted-foreground">{label}</dt>
-                  <dd className="truncate text-xs">{valor === null || valor === "" ? SEM_DADO : String(valor)}</dd>
+                  <dt className="text-[11px] uppercase tracking-wide text-muted-foreground">
+                    {label}
+                  </dt>
+                  <dd className="truncate text-xs">
+                    {valor === null || valor === "" ? SEM_DADO : String(valor)}
+                  </dd>
                 </div>
               ))}
             </dl>

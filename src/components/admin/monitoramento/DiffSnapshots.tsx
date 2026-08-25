@@ -44,18 +44,23 @@ export function DiffSnapshots() {
 
   useEffect(() => {
     fetch(`/diff-marcos.json?t=${Date.now()}`)
-      .then((r) => (r.ok ? r.json() : Promise.reject(new Error(String(r.status)))))
+      .then((r) =>
+        r.ok ? r.json() : Promise.reject(new Error(String(r.status))),
+      )
       .then(setDiff)
       .catch(() => setErro(true));
   }, []);
 
   return (
     <section className="mt-10">
-      <h2 className="text-lg font-semibold">Diff entre snapshots (title · H1 · canonical · schema)</h2>
+      <h2 className="text-lg font-semibold">
+        Diff entre snapshots (title · H1 · canonical · schema)
+      </h2>
 
       {(!diff || erro) && (
         <p className="mt-2 text-sm text-muted-foreground">
-          {SEM_DADO} — rode <code>npm run report:diff-marcos</code> para comparar os dois marcos mais recentes.
+          {SEM_DADO} — rode <code>npm run report:diff-marcos</code> para
+          comparar os dois marcos mais recentes.
         </p>
       )}
 
@@ -68,11 +73,17 @@ export function DiffSnapshots() {
                   {diff.de} × {diff.para}
                 </span>{" "}
                 · {diff.urlsComparadas ?? SEM_DADO} URL(s) comparadas ·{" "}
-                <span className={diff.total ? "font-semibold" : "font-semibold text-emerald-600"}>
+                <span
+                  className={
+                    diff.total
+                      ? "font-semibold"
+                      : "font-semibold text-emerald-600"
+                  }
+                >
                   {diff.total} mudança(s)
                 </span>{" "}
-                (alta {diff.alta} · média {diff.media} · baixa {diff.baixa}) · gerado em{" "}
-                {new Date(diff.geradoEm).toLocaleString("pt-BR")}
+                (alta {diff.alta} · média {diff.media} · baixa {diff.baixa}) ·
+                gerado em {new Date(diff.geradoEm).toLocaleString("pt-BR")}
               </>
             ) : (
               diff.motivo
@@ -81,7 +92,8 @@ export function DiffSnapshots() {
 
           {diff.disponivel && diff.total === 0 && (
             <p className="mt-3 rounded-lg border border-emerald-600/30 bg-emerald-600/5 p-3 text-sm">
-              Identidade de SERP estável entre os marcos — nenhuma alteração de title, H1, canonical, robots ou schema.
+              Identidade de SERP estável entre os marcos — nenhuma alteração de
+              title, H1, canonical, robots ou schema.
             </p>
           )}
 
@@ -99,14 +111,27 @@ export function DiffSnapshots() {
                 </thead>
                 <tbody>
                   {diff.mudancas.map((m, i) => (
-                    <tr key={`${m.path}-${m.campo}-${i}`} className="border-t border-border align-top">
+                    <tr
+                      key={`${m.path}-${m.campo}-${i}`}
+                      className="border-t border-border align-top"
+                    >
                       <td className="p-3 font-mono text-xs">{m.path}</td>
                       <td className="p-3 text-xs">{m.campo}</td>
-                      <td className={`p-3 text-xs font-medium ${COR[m.severidade]}`}>{m.severidade}</td>
-                      <td className="max-w-xs p-3 text-xs text-muted-foreground">{m.antes ?? "—"}</td>
+                      <td
+                        className={`p-3 text-xs font-medium ${COR[m.severidade]}`}
+                      >
+                        {m.severidade}
+                      </td>
+                      <td className="max-w-xs p-3 text-xs text-muted-foreground">
+                        {m.antes ?? "—"}
+                      </td>
                       <td className="max-w-xs p-3 text-xs">
                         {m.depois ?? "—"}
-                        {m.nota && <span className="block text-[11px] text-muted-foreground">{m.nota}</span>}
+                        {m.nota && (
+                          <span className="block text-[11px] text-muted-foreground">
+                            {m.nota}
+                          </span>
+                        )}
                       </td>
                     </tr>
                   ))}

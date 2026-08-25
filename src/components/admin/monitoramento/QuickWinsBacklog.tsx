@@ -53,7 +53,13 @@ const vazio = {
   prioridade: 3,
 };
 
-export function QuickWinsBacklog({ marcoAtual, podeAbrir }: { marcoAtual: string | null; podeAbrir: boolean }) {
+export function QuickWinsBacklog({
+  marcoAtual,
+  podeAbrir,
+}: {
+  marcoAtual: string | null;
+  podeAbrir: boolean;
+}) {
   const [itens, setItens] = useState<Item[] | null>(null);
   const [salvando, setSalvando] = useState(false);
   const [form, setForm] = useState({ ...vazio, marco: marcoAtual ?? "D14" });
@@ -77,7 +83,9 @@ export function QuickWinsBacklog({ marcoAtual, podeAbrir }: { marcoAtual: string
     void carregar();
   }, [carregar]);
 
-  const abertos = (itens ?? []).filter((i) => i.status === "aberto" || i.status === "em_andamento").length;
+  const abertos = (itens ?? []).filter(
+    (i) => i.status === "aberto" || i.status === "em_andamento",
+  ).length;
   const bloqueado = !podeAbrir || abertos >= LIMITE_ABERTOS;
 
   const criar = async () => {
@@ -108,13 +116,19 @@ export function QuickWinsBacklog({ marcoAtual, podeAbrir }: { marcoAtual: string
   };
 
   const atualizarStatus = async (id: string, status: Status) => {
-    const { error } = await supabase.from("quick_wins_backlog").update({ status }).eq("id", id);
+    const { error } = await supabase
+      .from("quick_wins_backlog")
+      .update({ status })
+      .eq("id", id);
     if (error) toast.error(error.message);
     else void carregar();
   };
 
   const remover = async (id: string) => {
-    const { error } = await supabase.from("quick_wins_backlog").delete().eq("id", id);
+    const { error } = await supabase
+      .from("quick_wins_backlog")
+      .delete()
+      .eq("id", id);
     if (error) toast.error(error.message);
     else void carregar();
   };
@@ -125,8 +139,11 @@ export function QuickWinsBacklog({ marcoAtual, podeAbrir }: { marcoAtual: string
         <div>
           <h2 className="text-lg font-semibold">Backlog de quick wins</h2>
           <p className="mt-1 text-xs text-muted-foreground">
-            Máximo de {LIMITE_ABERTOS} itens ativos · abertos hoje: {itens === null ? SEM_DADO : abertos}
-            {podeAbrir ? "" : " · quick wins só são abertos a partir do marco D14 (fase de observação)"}
+            Máximo de {LIMITE_ABERTOS} itens ativos · abertos hoje:{" "}
+            {itens === null ? SEM_DADO : abertos}
+            {podeAbrir
+              ? ""
+              : " · quick wins só são abertos a partir do marco D14 (fase de observação)"}
           </p>
         </div>
         <Button
@@ -143,7 +160,8 @@ export function QuickWinsBacklog({ marcoAtual, podeAbrir }: { marcoAtual: string
 
       {itens === null && (
         <p className="mt-3 text-sm text-muted-foreground">
-          {SEM_DADO} — backlog acessível apenas para administradores autenticados.
+          {SEM_DADO} — backlog acessível apenas para administradores
+          autenticados.
         </p>
       )}
 
@@ -168,7 +186,10 @@ export function QuickWinsBacklog({ marcoAtual, podeAbrir }: { marcoAtual: string
             aria-label="Cluster"
           />
           <div className="flex items-center gap-2">
-            <label htmlFor="qw-prioridade" className="text-xs text-muted-foreground">
+            <label
+              htmlFor="qw-prioridade"
+              className="text-xs text-muted-foreground"
+            >
               Prioridade (1 = maior)
             </label>
             <Input
@@ -177,7 +198,9 @@ export function QuickWinsBacklog({ marcoAtual, podeAbrir }: { marcoAtual: string
               min={1}
               max={5}
               value={form.prioridade}
-              onChange={(e) => setForm({ ...form, prioridade: Number(e.target.value) })}
+              onChange={(e) =>
+                setForm({ ...form, prioridade: Number(e.target.value) })
+              }
               className="w-20"
             />
           </div>
@@ -207,7 +230,8 @@ export function QuickWinsBacklog({ marcoAtual, podeAbrir }: { marcoAtual: string
             </Button>
             {bloqueado && (
               <span className="ml-3 text-xs text-muted-foreground">
-                Limite de {LIMITE_ABERTOS} itens ativos atingido ou marco anterior ao D14.
+                Limite de {LIMITE_ABERTOS} itens ativos atingido ou marco
+                anterior ao D14.
               </span>
             )}
           </div>
@@ -235,17 +259,27 @@ export function QuickWinsBacklog({ marcoAtual, podeAbrir }: { marcoAtual: string
                   <td className="p-3 font-mono text-xs">{i.url_path}</td>
                   <td className="p-3">
                     <span className="font-medium">{i.titulo}</span>
-                    {i.acao && <span className="block text-xs text-muted-foreground">Ação: {i.acao}</span>}
+                    {i.acao && (
+                      <span className="block text-xs text-muted-foreground">
+                        Ação: {i.acao}
+                      </span>
+                    )}
                   </td>
                   <td className="max-w-sm p-3 text-xs text-muted-foreground">
                     {i.hipotese}
-                    {i.evidencia && <span className="mt-1 block">Evidência: {i.evidencia}</span>}
+                    {i.evidencia && (
+                      <span className="mt-1 block">
+                        Evidência: {i.evidencia}
+                      </span>
+                    )}
                   </td>
                   <td className="p-3 text-xs">{i.marco}</td>
                   <td className="p-3">
                     <select
                       value={i.status}
-                      onChange={(e) => void atualizarStatus(i.id, e.target.value as Status)}
+                      onChange={(e) =>
+                        void atualizarStatus(i.id, e.target.value as Status)
+                      }
                       aria-label={`Status de ${i.titulo}`}
                       className="h-8 rounded-md border border-border bg-background px-2 text-xs"
                     >
@@ -257,7 +291,12 @@ export function QuickWinsBacklog({ marcoAtual, podeAbrir }: { marcoAtual: string
                     </select>
                   </td>
                   <td className="p-3 print:hidden">
-                    <Button variant="ghost" size="sm" onClick={() => void remover(i.id)} aria-label={`Remover ${i.titulo}`}>
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      onClick={() => void remover(i.id)}
+                      aria-label={`Remover ${i.titulo}`}
+                    >
                       <Trash2 className="h-4 w-4" />
                     </Button>
                   </td>
@@ -270,7 +309,8 @@ export function QuickWinsBacklog({ marcoAtual, podeAbrir }: { marcoAtual: string
 
       {itens && itens.length === 0 && (
         <p className="mt-3 text-sm text-muted-foreground">
-          Nenhum quick win no backlog — comportamento esperado enquanto a decisão do marco for WAIT.
+          Nenhum quick win no backlog — comportamento esperado enquanto a
+          decisão do marco for WAIT.
         </p>
       )}
     </section>
