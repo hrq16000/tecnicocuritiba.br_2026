@@ -233,6 +233,7 @@ export const WhatsAppFunnel = () => {
       setStep((s) => Math.min(s + 1, totalSteps - 1));
       setInvalidField(null);
       setInvalidReason(null);
+      setInvalidReason(null);
       isTransitioning.current = false;
     }, delay);
 
@@ -242,6 +243,7 @@ export const WhatsAppFunnel = () => {
     const v = validateStep(s, a);
     if (v.ok) {
       setInvalidField(null);
+      setInvalidReason(null);
       setInvalidReason(null);
       return;
     }
@@ -309,6 +311,7 @@ export const WhatsAppFunnel = () => {
   const setField = useCallback(
     (id: string, value: string) => {
       setInvalidField(null);
+      setInvalidReason(null);
       if (value) trackTriageFieldFill(id);
       setAnswers((prev) => {
         const next = applyField(prev, id, value);
@@ -322,6 +325,7 @@ export const WhatsAppFunnel = () => {
   const setCustomerType = useCallback(
     (value: CustomerType) => {
       setInvalidField(null);
+      setInvalidReason(null);
       // Idempotência: duplo clique/tap fantasma no mesmo ramo não pode reemitir
       // `wa_funnel_branch`, descartar respostas nem cancelar o avanço já agendado
       // (clearTimers durante a transição deixava a triagem presa na etapa 0).
@@ -350,6 +354,7 @@ export const WhatsAppFunnel = () => {
   const setEquipment = useCallback(
     (id: EquipmentId) => {
       setInvalidField(null);
+      setInvalidReason(null);
       const next = resetForEquipment(answers, id);
       commit(next);
       maybeAutoAdvance(next);
@@ -360,6 +365,7 @@ export const WhatsAppFunnel = () => {
   const setUrgency = useCallback(
     (value: string) => {
       setInvalidField(null);
+      setInvalidReason(null);
       const next = { ...answers, urgency: value };
       commit(next);
       maybeAutoAdvance(next);
@@ -370,6 +376,7 @@ export const WhatsAppFunnel = () => {
   const setTerm = useCallback(
     (id: string, checked: boolean) => {
       setInvalidField(null);
+      setInvalidReason(null);
       const next = { ...answers, termsAccepted: { ...answers.termsAccepted, [id]: checked } };
       commit(next);
     },
