@@ -157,12 +157,17 @@ export function scorePage({ path, cluster, signals, similaridadeMax, textoExclus
   else motivos.push("H1 ausente, duplicado ou curto demais");
   if (s.title.length >= 25 && s.title.length <= 70) intencao += 4;
   if (s.description.length >= 70 && s.description.length <= 170) intencao += 4;
-  const primeiro = s.paragraphs[0] ?? "";
+  // "Resposta direta" = primeiro parágrafo substantivo entre os 3 primeiros.
+  // O primeiro <p> costuma ser uma linha de apoio ("Atuação desde 1998"), que
+  // não deveria contar como falha de intenção.
+  const primeiro = s.paragraphs.slice(0, 3).find((p) => p.length >= 80) ?? s.paragraphs[0] ?? "";
   if (primeiro.length >= 140) intencao += 6;
+  else if (primeiro.length >= 80) intencao += 3;
   else {
-    motivos.push("primeiro parágrafo não entrega resposta direta (< 140 caracteres)");
+    motivos.push("nenhum dos primeiros parágrafos entrega resposta direta (< 80 caracteres)");
     causas.add("INTENT_AMBIGUITY");
   }
+
   if (headings.length >= 4) intencao += 5;
   else motivos.push("estrutura rasa: menos de 4 subtítulos");
 
