@@ -19,3 +19,17 @@ ou disparo de IndexNow é feito para produzir relatório.
   Roda automaticamente ao final de `scripts/snapshot-marco.mjs`.
 - Resultado da verificação aparece em `/admin/monitoramento` (seção "Reindexação de memórias e snapshots").
 - Dado ausente é sempre "N/A"/"sem dado" — nunca estimativa.
+
+## Instrumentação D7 (painel)
+
+- `scripts/snapshot-marco.mjs` congela também `urls[]` (estado, cobertura GSC, canonical,
+  lastCrawl, inbound, http/ttfb, impressões) por marco → base do drilldown e das transições.
+  Marco antigo sem esse campo aparece como "sem dado" (D0 não tem).
+- `npm run report:diff-marcos` (`:gate`) compara `serp-signals-<a/b>.json`:
+  canonical/robots = severidade alta, title/H1/schema = média. D0×D7: 0 mudanças.
+- `scripts/lib/job-log.mjs` grava toda execução em `reports/job-runs.json` + `public/job-runs.json`
+  (duração, status, fail-closed, contagens, logs) — seção "Execução de jobs" do painel.
+- Alertas ganharam agregação por CLUSTER (`quedaClusterPp: 5`, `quedaImpressoesPct: 30`) com link
+  `/admin/monitoramento?cluster=<CLUSTER>`; o painel lê esse parâmetro e pré-filtra o drilldown.
+- Backlog de quick wins persistido na tabela `quick_wins_backlog` (só admin): máx. 5 itens ativos
+  e criação liberada apenas a partir do marco D14.
