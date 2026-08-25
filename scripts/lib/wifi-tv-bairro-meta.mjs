@@ -8,6 +8,7 @@
 // Só entram bairros com `indexable: true` (Onda 1 de liberação de índice).
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
+import { CONSOLIDATED_LOCAL_PATHS } from "./consolidated-local-urls.mjs";
 
 const ROOT = process.cwd();
 const src = readFileSync(join(ROOT, "src/pages/servico-bairro/wifiTvBairroData.ts"), "utf8");
@@ -65,4 +66,5 @@ export const WIFI_TV_BAIRRO_ROUTES = indexaveis.flatMap((b) =>
     h1: fill(v.h1, b),
     subtitulo: fill(v.subtitulo, b),
   })),
-);
+// Fase Final: URLs consolidadas respondem 301 e saem do conjunto curado.
+).filter((r) => !CONSOLIDATED_LOCAL_PATHS.has(r.path));
