@@ -47,8 +47,12 @@ const arquivosAnalytics = ["src/lib/analytics.ts", "src/lib/funnelAnalytics.ts",
   .filter((p) => existsSync(path.join(raiz, p)));
 for (const p of arquivosAnalytics) {
   const src = ler(p);
+  // Só conta uso real do dado (propriedade lida/atribuída), não menções em
+  // listas de bloqueio de PII nem em comentários.
+  const linhas = src.split("\n").filter((l) => !/^\s*(\/\/|\*|\/\*)/.test(l));
   for (const campo of CAMPOS_PII) {
-    if (new RegExp(`\\b${campo}\\b`).test(src)) falhas.push(`Campo sensível "${campo}" em ${p}`);
+    const uso = new RegExp(`(\\.${campo}\\b|\\b${campo}\\s*[:=][^:=])`);
+    if (linhas.some((l) => uso.test(l))) falhas.push(`Campo sensível "${campo}" em ${p}`);
   }
 }
 ok.push(`${arquivosAnalytics.length} módulo(s) de analytics sem PII de O.S.`);
