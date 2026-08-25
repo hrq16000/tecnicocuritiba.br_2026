@@ -26,6 +26,9 @@ import { ComparacaoMarcos } from "@/components/admin/monitoramento/ComparacaoMar
 import { ExportarMarco } from "@/components/admin/monitoramento/ExportarMarco";
 import { JobRuns } from "@/components/admin/monitoramento/JobRuns";
 import { QuickWinsBacklog } from "@/components/admin/monitoramento/QuickWinsBacklog";
+import { TendenciasMarcos } from "@/components/admin/monitoramento/TendenciasMarcos";
+import { ExperimentosControlados } from "@/components/admin/monitoramento/ExperimentosControlados";
+import { ClassificacaoAlertas } from "@/components/admin/monitoramento/ClassificacaoAlertas";
 import type { MarcoUrl } from "@/components/admin/monitoramento/types";
 
 /**
@@ -618,6 +621,8 @@ export default function AdminMonitoramento() {
               ))}
             </section>
 
+            <TendenciasMarcos marcos={marcos} />
+
             <DrilldownUrls
               key={clusterInicial ?? "todos"}
               marcos={marcos}
@@ -636,6 +641,14 @@ export default function AdminMonitoramento() {
               marcoAtual={atual.marco}
               podeAbrir={ORDEM.indexOf(atual.marco) >= ORDEM.indexOf("D14")}
             />
+
+            <ExperimentosControlados
+              marcoAtual={atual.marco}
+              podeCriar={ORDEM.indexOf(atual.marco) >= ORDEM.indexOf("D14")}
+              urlsDisponiveis={(atual.urls ?? []).map((u) => u.path)}
+            />
+
+            <ClassificacaoAlertas marcoAtual={atual.marco} />
 
             <section className="mt-10">
               <h2 className="text-lg font-semibold">
