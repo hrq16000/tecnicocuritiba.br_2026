@@ -22,6 +22,9 @@
  *   public/operacao-marcos.json        payload consumido por /admin/monitoramento
  */
 import { copyFileSync, existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { avaliarJanela } from "./lib/marco-janela.mjs";
+import { registrarJob } from "./lib/job-log.mjs";
+
 
 const INICIO_JOB = Date.now();
 const args = process.argv.slice(2);
