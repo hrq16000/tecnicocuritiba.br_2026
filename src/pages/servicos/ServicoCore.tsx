@@ -6,6 +6,8 @@ import { blocos3U, cta3U } from "@/lib/blocos3u";
 import { Blocos3U } from "@/components/servico/Blocos3U";
 import { blocos4A, cta4A } from "@/lib/blocos4a";
 import { Blocos4A } from "@/components/servico/Blocos4A";
+import { modulosEditoriais } from "@/lib/modulosEditoriais";
+import { ModulosEditoriais } from "@/components/servico/ModulosEditoriais";
 import { ClarezaVariacao } from "@/components/servico/ClarezaVariacao";
 import { Blocos3T } from "@/components/servico/Blocos3T";
 import { FichaComercialServico } from "@/components/servico/FichaComercialServico";
@@ -157,9 +159,36 @@ const ServicoCore = ({ slug }: { slug: keyof typeof SERVICOS_CORE }) => {
       }
     : {};
 
+  // Fase de Operação — módulos editoriais variáveis do serviço prioritário.
+  // Só entram nas páginas destino das URLs consolidadas e apenas quando o
+  // conteúdo do módulo é realmente diferente do que a página já entrega.
+  const textoExistente = [
+    data.intro,
+    ...(data.sinais ?? []),
+    ...(data.incluso ?? []).flatMap((i) => [i.title, i.desc]),
+    ...(data.processo ?? []).flatMap((i) => [i.title, i.desc]),
+    ...(data.fatoresValor ?? []).flatMap((i) => [i.title, i.desc]),
+    ...(data.blocoLocal ?? []).flatMap((b) => [b.titulo, ...b.paragrafos]),
+    ...(data.faqs ?? []).flatMap((f) => [f.question, f.answer]),
+  ].join(" ");
+  const cfgModulos = modulosEditoriais(`/servicos/${slug}`, textoExistente);
+  const modulos = cfgModulos
+    ? {
+        toc: [
+          ...((visual?.toc ?? empresarial?.toc ?? (piloto as { toc?: { id: string; label: string }[] }).toc ?? []).filter(
+            (t) => t.id !== "faq",
+          )),
+          ...cfgModulos.tocExtra,
+          { id: "faq", label: "Perguntas frequentes" },
+        ],
+      }
+    : {};
+
   // Rodada 4C — ficha comercial padronizada (mesmos campos obrigatórios em
   // todas as páginas de serviço). Aditiva: entra depois dos blocos da rodada.
   const ficha = <FichaComercialServico slug={slug as string} nome={base.serviceName} />;
+
+  const modulosNode = cfgModulos ? <ModulosEditoriais cfg={cfgModulos} /> : null;
 
   const extraFinal = cfgBlocos ? (
     <>
@@ -182,6 +211,7 @@ const ServicoCore = ({ slug }: { slug: keyof typeof SERVICOS_CORE }) => {
   ) : (
     <>
       {extra}
+      {modulosNode}
       {ficha}
     </>
   );
@@ -199,6 +229,7 @@ const ServicoCore = ({ slug }: { slug: keyof typeof SERVICOS_CORE }) => {
         ...blocos3t,
         ...blocos3u,
         ...blocos4a,
+        ...modulos,
         extra: extraFinal,
       }}
     />
