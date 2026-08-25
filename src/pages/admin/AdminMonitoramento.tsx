@@ -11,9 +11,20 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
-import { AlertTriangle, Download, FileText, Loader2, RefreshCw } from "lucide-react";
+import {
+  AlertTriangle,
+  Download,
+  FileText,
+  Loader2,
+  RefreshCw,
+} from "lucide-react";
 import { Header } from "@/components/Header";
 import { Button } from "@/components/ui/button";
+import { DrilldownUrls } from "@/components/admin/monitoramento/DrilldownUrls";
+import { DiffSnapshots } from "@/components/admin/monitoramento/DiffSnapshots";
+import { JobRuns } from "@/components/admin/monitoramento/JobRuns";
+import { QuickWinsBacklog } from "@/components/admin/monitoramento/QuickWinsBacklog";
+import type { MarcoUrl } from "@/components/admin/monitoramento/types";
 
 /**
  * Painel interno de monitoramento operacional D0 → D7 → D14 → D30.
@@ -64,8 +75,17 @@ interface Marco {
   clusters: Grupo[];
   tiers: Grupo[];
   qualidade: { faixas: Record<string, number>; piso: unknown } | null;
-  doorway: { alto: number | null; medio: number | null; baixo: number | null } | null;
-  grafo: { urls: number; orfas: number; subLinkadas: number; linksParaRedirect: number } | null;
+  doorway: {
+    alto: number | null;
+    medio: number | null;
+    baixo: number | null;
+  } | null;
+  grafo: {
+    urls: number;
+    orfas: number;
+    subLinkadas: number;
+    linksParaRedirect: number;
+  } | null;
   consolidacao: { total: number; pass: number; falhas: number } | null;
   indexnow: {
     executadoEm: string | null;
@@ -77,6 +97,8 @@ interface Marco {
   bing: Record<string, unknown> | null;
   serpSignals: { geradoEm: string | null; urls: number } | null;
   serpSnapshot: string | null;
+  /** Estado por URL congelado no marco (ausente em marcos antigos). */
+  urls?: MarcoUrl[];
 }
 
 interface SnapshotIndex {
@@ -104,7 +126,11 @@ interface Payload {
 const SEM_DADO = <span className="text-muted-foreground">sem dado</span>;
 const ORDEM = ["D0", "D7", "D14", "D30"];
 
-function baixar(nome: string, conteudo: string, tipo = "text/csv;charset=utf-8") {
+function baixar(
+  nome: string,
+  conteudo: string,
+  tipo = "text/csv;charset=utf-8",
+) {
   const url = URL.createObjectURL(new Blob([conteudo], { type: tipo }));
   const a = document.createElement("a");
   a.href = url;
@@ -118,6 +144,14 @@ export default function AdminMonitoramento() {
   const [erro, setErro] = useState<string | null>(null);
   const [carregando, setCarregando] = useState(true);
   const [detalhe, setDetalhe] = useState<"tiers" | "clusters">("tiers");
+  // Alertas por cluster linkam para /admin/monitoramento?cluster=SERVICO
+  // (lido após a hidratação para não divergir do HTML do servidor).
+  const [clusterInicial, setClusterInicial] = useState<string | null>(null);
+  useEffect(() => {
+    setClusterInicial(
+      new URLSearchParams(window.location.search).get("cluster"),
+    );
+  }, []);
 
   const carregar = () => {
     setCarregando(true);
@@ -146,7 +180,10 @@ export default function AdminMonitoramento() {
   }, []);
 
   const marcos = useMemo(
-    () => (data?.marcos ?? []).slice().sort((a, b) => ORDEM.indexOf(a.marco) - ORDEM.indexOf(b.marco)),
+    () =>
+      (data?.marcos ?? [])
+        .slice()
+        .sort((a, b) => ORDEM.indexOf(a.marco) - ORDEM.indexOf(b.marco)),
     [data],
   );
   const atual = marcos[marcos.length - 1] ?? null;
@@ -172,32 +209,93 @@ export default function AdminMonitoramento() {
 
   const exportarCsv = () => {
     const cab = [
-      "marco", "registrado_em", "curadas", "indexadas", "unknown", "discovered",
-      "crawled_not_indexed", "duplicate", "redirect", "soft_404", "impressoes_28d",
-      "cliques_28d", "ctr_28d", "posicao_media_28d", "tier_a_total", "tier_a_indexadas",
-      "tier_a_taxa", "doorway_alto", "links_para_redirect", "indexnow_submitted",
+      "marco",
+      "registrado_em",
+      "curadas",
+      "indexadas",
+      "unknown",
+      "discovered",
+      "crawled_not_indexed",
+      "duplicate",
+      "redirect",
+      "soft_404",
+      "impressoes_28d",
+      "cliques_28d",
+      "ctr_28d",
+      "posicao_media_28d",
+      "tier_a_total",
+      "tier_a_indexadas",
+      "tier_a_taxa",
+      "doorway_alto",
+      "links_para_redirect",
+      "indexnow_submitted",
     ];
     const linhas = marcos.map((m) => {
       const a = m.tiers.find((t) => t.chave === "A");
       return [
-        m.marco, m.registradoEm, m.denominador.curadas, m.google.indexed, m.google.unknown,
-        m.google.discovered, m.google.crawled_not_indexed, m.google.duplicate, m.google.redirect,
-        m.google.soft_404, m.google.impressoes28d, m.google.cliques28d, m.google.ctr28d ?? "",
-        m.google.posicaoMedia28d ?? "", a?.total ?? "", a?.indexadas ?? "", a?.taxaIndexacao ?? "",
-        m.doorway?.alto ?? "", m.grafo?.linksParaRedirect ?? "", m.indexnow?.submitted ?? "",
+        m.marco,
+        m.registradoEm,
+        m.denominador.curadas,
+        m.google.indexed,
+        m.google.unknown,
+        m.google.discovered,
+        m.google.crawled_not_indexed,
+        m.google.duplicate,
+        m.google.redirect,
+        m.google.soft_404,
+        m.google.impressoes28d,
+        m.google.cliques28d,
+        m.google.ctr28d ?? "",
+        m.google.posicaoMedia28d ?? "",
+        a?.total ?? "",
+        a?.indexadas ?? "",
+        a?.taxaIndexacao ?? "",
+        m.doorway?.alto ?? "",
+        m.grafo?.linksParaRedirect ?? "",
+        m.indexnow?.submitted ?? "",
       ].join(",");
     });
-    baixar(`operacao-marcos-${new Date().toISOString().slice(0, 10)}.csv`, [cab.join(","), ...linhas].join("\n"));
+    baixar(
+      `operacao-marcos-${new Date().toISOString().slice(0, 10)}.csv`,
+      [cab.join(","), ...linhas].join("\n"),
+    );
   };
 
   const exportarDetalheCsv = () => {
     if (!atual) return;
     const lista = detalhe === "tiers" ? atual.tiers : atual.clusters;
-    const cab = ["marco", detalhe === "tiers" ? "tier" : "cluster", "total", "indexadas", "unknown", "discovered", "crawled_not_indexed", "taxa_indexacao", "impressoes", "cliques", "posicao_media"];
+    const cab = [
+      "marco",
+      detalhe === "tiers" ? "tier" : "cluster",
+      "total",
+      "indexadas",
+      "unknown",
+      "discovered",
+      "crawled_not_indexed",
+      "taxa_indexacao",
+      "impressoes",
+      "cliques",
+      "posicao_media",
+    ];
     const linhas = lista.map((g) =>
-      [atual.marco, g.chave, g.total, g.indexadas, g.unknown, g.discovered, g.crawledNaoIndexadas, g.taxaIndexacao ?? "", g.impressoes, g.cliques, g.posicaoMedia ?? ""].join(","),
+      [
+        atual.marco,
+        g.chave,
+        g.total,
+        g.indexadas,
+        g.unknown,
+        g.discovered,
+        g.crawledNaoIndexadas,
+        g.taxaIndexacao ?? "",
+        g.impressoes,
+        g.cliques,
+        g.posicaoMedia ?? "",
+      ].join(","),
     );
-    baixar(`operacao-${atual.marco.toLowerCase()}-${detalhe}.csv`, [cab.join(","), ...linhas].join("\n"));
+    baixar(
+      `operacao-${atual.marco.toLowerCase()}-${detalhe}.csv`,
+      [cab.join(","), ...linhas].join("\n"),
+    );
   };
 
   const delta = (campo: keyof Marco["google"]) => {
@@ -214,22 +312,45 @@ export default function AdminMonitoramento() {
       <main className="container mx-auto max-w-6xl px-4 py-10 print:py-2">
         <div className="flex flex-wrap items-center justify-between gap-4 print:hidden">
           <div>
-            <h1 className="text-2xl font-semibold">Monitoramento operacional D0 → D30</h1>
+            <h1 className="text-2xl font-semibold">
+              Monitoramento operacional D0 → D30
+            </h1>
             <p className="mt-1 text-sm text-muted-foreground">
               Baseline congelado e evolução de cobertura do conjunto curado.
-              {data?.atualizadoEm ? ` Atualizado em ${new Date(data.atualizadoEm).toLocaleString("pt-BR")}.` : ""}
+              {data?.atualizadoEm
+                ? ` Atualizado em ${new Date(data.atualizadoEm).toLocaleString("pt-BR")}.`
+                : ""}
             </p>
           </div>
           <div className="flex flex-wrap gap-2">
-            <Button variant="outline" size="sm" onClick={carregar} disabled={carregando}>
-              {carregando ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <RefreshCw className="mr-2 h-4 w-4" />}
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={carregar}
+              disabled={carregando}
+            >
+              {carregando ? (
+                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+              ) : (
+                <RefreshCw className="mr-2 h-4 w-4" />
+              )}
               Recarregar
             </Button>
-            <Button variant="outline" size="sm" onClick={exportarCsv} disabled={!marcos.length}>
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={exportarCsv}
+              disabled={!marcos.length}
+            >
               <Download className="mr-2 h-4 w-4" />
               CSV dos marcos
             </Button>
-            <Button variant="outline" size="sm" onClick={() => window.print()} disabled={!marcos.length}>
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => window.print()}
+              disabled={!marcos.length}
+            >
               <FileText className="mr-2 h-4 w-4" />
               PDF (imprimir)
             </Button>
@@ -254,20 +375,43 @@ export default function AdminMonitoramento() {
           <>
             <section className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {[
-                { label: "Conjunto curado", valor: atual.denominador.curadas, nota: `marco ${atual.marco}` },
-                { label: "Indexadas", valor: atual.google.indexed, nota: deltaLabel(delta("indexed")) },
-                { label: "Unknown", valor: atual.google.unknown, nota: deltaLabel(delta("unknown"), true) },
-                { label: "Crawled not indexed", valor: atual.google.crawled_not_indexed, nota: deltaLabel(delta("crawled_not_indexed"), true) },
+                {
+                  label: "Conjunto curado",
+                  valor: atual.denominador.curadas,
+                  nota: `marco ${atual.marco}`,
+                },
+                {
+                  label: "Indexadas",
+                  valor: atual.google.indexed,
+                  nota: deltaLabel(delta("indexed")),
+                },
+                {
+                  label: "Unknown",
+                  valor: atual.google.unknown,
+                  nota: deltaLabel(delta("unknown"), true),
+                },
+                {
+                  label: "Crawled not indexed",
+                  valor: atual.google.crawled_not_indexed,
+                  nota: deltaLabel(delta("crawled_not_indexed"), true),
+                },
               ].map((c) => (
-                <div key={c.label} className="rounded-xl border border-border bg-card p-4">
-                  <p className="text-xs uppercase tracking-wide text-muted-foreground">{c.label}</p>
+                <div
+                  key={c.label}
+                  className="rounded-xl border border-border bg-card p-4"
+                >
+                  <p className="text-xs uppercase tracking-wide text-muted-foreground">
+                    {c.label}
+                  </p>
                   <p className="mt-2 text-2xl font-semibold">{c.valor}</p>
                   <p className="text-xs text-muted-foreground">{c.nota}</p>
                 </div>
               ))}
             </section>
 
-            <p className="mt-3 text-xs text-muted-foreground">{atual.denominador.observacao}</p>
+            <p className="mt-3 text-xs text-muted-foreground">
+              {atual.denominador.observacao}
+            </p>
 
             <section className="mt-10 grid gap-8 lg:grid-cols-2">
               <div className="rounded-xl border border-border bg-card p-4">
@@ -279,7 +423,13 @@ export default function AdminMonitoramento() {
                       <XAxis dataKey="marco" fontSize={12} />
                       <YAxis fontSize={12} domain={[0, 100]} />
                       <Tooltip />
-                      <Line type="monotone" dataKey="Tier A indexado (%)" stroke="hsl(var(--primary))" strokeWidth={2} connectNulls />
+                      <Line
+                        type="monotone"
+                        dataKey="Tier A indexado (%)"
+                        stroke="hsl(var(--primary))"
+                        strokeWidth={2}
+                        connectNulls
+                      />
                     </LineChart>
                   </ResponsiveContainer>
                 </div>
@@ -296,8 +446,14 @@ export default function AdminMonitoramento() {
                       <Tooltip />
                       <Legend wrapperStyle={{ fontSize: 12 }} />
                       <Bar dataKey="Indexadas" fill="hsl(var(--primary))" />
-                      <Bar dataKey="Unknown" fill="hsl(var(--muted-foreground))" />
-                      <Bar dataKey="Crawled not indexed" fill="hsl(var(--destructive))" />
+                      <Bar
+                        dataKey="Unknown"
+                        fill="hsl(var(--muted-foreground))"
+                      />
+                      <Bar
+                        dataKey="Crawled not indexed"
+                        fill="hsl(var(--destructive))"
+                      />
                     </BarChart>
                   </ResponsiveContainer>
                 </div>
@@ -306,15 +462,29 @@ export default function AdminMonitoramento() {
 
             <section className="mt-10">
               <div className="flex flex-wrap items-center justify-between gap-3">
-                <h2 className="text-lg font-semibold">Detalhe do marco {atual.marco}</h2>
+                <h2 className="text-lg font-semibold">
+                  Detalhe do marco {atual.marco}
+                </h2>
                 <div className="flex gap-2 print:hidden">
-                  <Button variant={detalhe === "tiers" ? "default" : "outline"} size="sm" onClick={() => setDetalhe("tiers")}>
+                  <Button
+                    variant={detalhe === "tiers" ? "default" : "outline"}
+                    size="sm"
+                    onClick={() => setDetalhe("tiers")}
+                  >
                     Tiers
                   </Button>
-                  <Button variant={detalhe === "clusters" ? "default" : "outline"} size="sm" onClick={() => setDetalhe("clusters")}>
+                  <Button
+                    variant={detalhe === "clusters" ? "default" : "outline"}
+                    size="sm"
+                    onClick={() => setDetalhe("clusters")}
+                  >
                     Clusters
                   </Button>
-                  <Button variant="outline" size="sm" onClick={exportarDetalheCsv}>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={exportarDetalheCsv}
+                  >
                     <Download className="mr-2 h-4 w-4" />
                     CSV
                   </Button>
@@ -324,7 +494,9 @@ export default function AdminMonitoramento() {
                 <table className="w-full text-sm">
                   <thead className="bg-muted/50 text-left">
                     <tr>
-                      <th className="p-3">{detalhe === "tiers" ? "Tier" : "Cluster"}</th>
+                      <th className="p-3">
+                        {detalhe === "tiers" ? "Tier" : "Cluster"}
+                      </th>
                       <th className="p-3">URLs</th>
                       <th className="p-3">Indexadas</th>
                       <th className="p-3">Taxa</th>
@@ -336,19 +508,25 @@ export default function AdminMonitoramento() {
                     </tr>
                   </thead>
                   <tbody>
-                    {(detalhe === "tiers" ? atual.tiers : atual.clusters).map((g) => (
-                      <tr key={g.chave} className="border-t border-border">
-                        <td className="p-3 font-medium">{g.chave}</td>
-                        <td className="p-3">{g.total}</td>
-                        <td className="p-3">{g.indexadas}</td>
-                        <td className="p-3">{g.taxaIndexacao === null ? SEM_DADO : `${g.taxaIndexacao}%`}</td>
-                        <td className="p-3">{g.unknown}</td>
-                        <td className="p-3">{g.crawledNaoIndexadas}</td>
-                        <td className="p-3">{g.impressoes}</td>
-                        <td className="p-3">{g.cliques}</td>
-                        <td className="p-3">{g.posicaoMedia ?? SEM_DADO}</td>
-                      </tr>
-                    ))}
+                    {(detalhe === "tiers" ? atual.tiers : atual.clusters).map(
+                      (g) => (
+                        <tr key={g.chave} className="border-t border-border">
+                          <td className="p-3 font-medium">{g.chave}</td>
+                          <td className="p-3">{g.total}</td>
+                          <td className="p-3">{g.indexadas}</td>
+                          <td className="p-3">
+                            {g.taxaIndexacao === null
+                              ? SEM_DADO
+                              : `${g.taxaIndexacao}%`}
+                          </td>
+                          <td className="p-3">{g.unknown}</td>
+                          <td className="p-3">{g.crawledNaoIndexadas}</td>
+                          <td className="p-3">{g.impressoes}</td>
+                          <td className="p-3">{g.cliques}</td>
+                          <td className="p-3">{g.posicaoMedia ?? SEM_DADO}</td>
+                        </tr>
+                      ),
+                    )}
                   </tbody>
                 </table>
               </div>
@@ -376,15 +554,23 @@ export default function AdminMonitoramento() {
                     {marcos.map((m) => (
                       <tr key={m.marco} className="border-t border-border">
                         <td className="p-3 font-medium">{m.marco}</td>
-                        <td className="p-3">{new Date(m.registradoEm).toLocaleDateString("pt-BR")}</td>
+                        <td className="p-3">
+                          {new Date(m.registradoEm).toLocaleDateString("pt-BR")}
+                        </td>
                         <td className="p-3">{m.denominador.curadas}</td>
                         <td className="p-3">{m.google.indexed}</td>
                         <td className="p-3">{m.google.unknown}</td>
                         <td className="p-3">{m.google.crawled_not_indexed}</td>
                         <td className="p-3">{m.google.impressoes28d}</td>
                         <td className="p-3">{m.google.cliques28d}</td>
-                        <td className="p-3">{m.google.posicaoMedia28d ?? SEM_DADO}</td>
-                        <td className="p-3">{m.serpSignals ? `${m.serpSignals.urls} URLs congeladas` : SEM_DADO}</td>
+                        <td className="p-3">
+                          {m.google.posicaoMedia28d ?? SEM_DADO}
+                        </td>
+                        <td className="p-3">
+                          {m.serpSignals
+                            ? `${m.serpSignals.urls} URLs congeladas`
+                            : SEM_DADO}
+                        </td>
                       </tr>
                     ))}
                   </tbody>
@@ -392,7 +578,8 @@ export default function AdminMonitoramento() {
               </div>
               {marcos.length < 2 && (
                 <p className="mt-3 text-xs text-muted-foreground">
-                  Comparação antes/depois fica disponível a partir do segundo marco registrado.
+                  Comparação antes/depois fica disponível a partir do segundo
+                  marco registrado.
                 </p>
               )}
             </section>
@@ -400,35 +587,86 @@ export default function AdminMonitoramento() {
             <section className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {[
                 { label: "Doorway ALTO", valor: atual.doorway?.alto ?? null },
-                { label: "Links para redirect", valor: atual.grafo?.linksParaRedirect ?? null },
-                { label: "Redirects 301 validados", valor: atual.consolidacao ? `${atual.consolidacao.pass}/${atual.consolidacao.total}` : null },
-                { label: "IndexNow enviadas", valor: atual.indexnow?.submitted ?? null },
+                {
+                  label: "Links para redirect",
+                  valor: atual.grafo?.linksParaRedirect ?? null,
+                },
+                {
+                  label: "Redirects 301 validados",
+                  valor: atual.consolidacao
+                    ? `${atual.consolidacao.pass}/${atual.consolidacao.total}`
+                    : null,
+                },
+                {
+                  label: "IndexNow enviadas",
+                  valor: atual.indexnow?.submitted ?? null,
+                },
               ].map((c) => (
-                <div key={c.label} className="rounded-xl border border-border bg-card p-4">
-                  <p className="text-xs uppercase tracking-wide text-muted-foreground">{c.label}</p>
-                  <p className="mt-2 text-xl font-semibold">{c.valor === null ? SEM_DADO : c.valor}</p>
+                <div
+                  key={c.label}
+                  className="rounded-xl border border-border bg-card p-4"
+                >
+                  <p className="text-xs uppercase tracking-wide text-muted-foreground">
+                    {c.label}
+                  </p>
+                  <p className="mt-2 text-xl font-semibold">
+                    {c.valor === null ? SEM_DADO : c.valor}
+                  </p>
                 </div>
               ))}
             </section>
 
+            <DrilldownUrls
+              key={clusterInicial ?? "todos"}
+              marcos={marcos}
+              clusterInicial={clusterInicial}
+            />
+
+            <DiffSnapshots />
+
+            <JobRuns />
+
+            <QuickWinsBacklog
+              marcoAtual={atual.marco}
+              podeAbrir={ORDEM.indexOf(atual.marco) >= ORDEM.indexOf("D14")}
+            />
+
             <section className="mt-10">
-              <h2 className="text-lg font-semibold">Reindexação de memórias e snapshots</h2>
+              <h2 className="text-lg font-semibold">
+                Reindexação de memórias e snapshots
+              </h2>
               {!indice ? (
                 <p className="mt-2 text-sm text-muted-foreground">
-                  sem dado — rode <code>npm run reindex:snapshots</code> para gerar o índice.
+                  sem dado — rode <code>npm run reindex:snapshots</code> para
+                  gerar o índice.
                 </p>
               ) : (
                 <>
                   <p className="mt-2 text-sm">
                     Status:{" "}
-                    <span className={indice.verificacao.status === "ok" ? "font-semibold text-emerald-600" : "font-semibold text-destructive"}>
-                      {indice.verificacao.status === "ok" ? "verificado" : "reprovado"}
+                    <span
+                      className={
+                        indice.verificacao.status === "ok"
+                          ? "font-semibold text-emerald-600"
+                          : "font-semibold text-destructive"
+                      }
+                    >
+                      {indice.verificacao.status === "ok"
+                        ? "verificado"
+                        : "reprovado"}
                     </span>{" "}
-                    em {new Date(indice.verificacao.executadoEm).toLocaleString("pt-BR")}.
+                    em{" "}
+                    {new Date(indice.verificacao.executadoEm).toLocaleString(
+                      "pt-BR",
+                    )}
+                    .
                   </p>
                   <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
                     {[
-                      { label: "Artefatos indexados", valor: indice.verificacao.totalEntradas },
+                      {
+                        label: "Artefatos indexados",
+                        valor: indice.verificacao.totalEntradas,
+                      },
                       { label: "Memórias", valor: indice.verificacao.memorias },
                       {
                         label: "URLs conferidas",
@@ -442,9 +680,16 @@ export default function AdminMonitoramento() {
                         valor: `${indice.verificacao.amostragem.conferidas} ${indice.verificacao.amostragem.ok ? "✓" : "⚠"}`,
                       },
                     ].map((c) => (
-                      <div key={c.label} className="rounded-xl border border-border bg-card p-4">
-                        <p className="text-xs uppercase tracking-wide text-muted-foreground">{c.label}</p>
-                        <p className="mt-2 text-xl font-semibold">{c.valor === null ? SEM_DADO : c.valor}</p>
+                      <div
+                        key={c.label}
+                        className="rounded-xl border border-border bg-card p-4"
+                      >
+                        <p className="text-xs uppercase tracking-wide text-muted-foreground">
+                          {c.label}
+                        </p>
+                        <p className="mt-2 text-xl font-semibold">
+                          {c.valor === null ? SEM_DADO : c.valor}
+                        </p>
                       </div>
                     ))}
                   </div>
@@ -478,7 +723,9 @@ export default function AdminMonitoramento() {
                             <td className="p-3">{i.tipo}</td>
                             <td className="p-3 font-mono text-xs">{i.path}</td>
                             <td className="p-3">{i.marco ?? "—"}</td>
-                            <td className="p-3 font-mono text-xs">{i.hash.slice(0, 10)}</td>
+                            <td className="p-3 font-mono text-xs">
+                              {i.hash.slice(0, 10)}
+                            </td>
                           </tr>
                         ))}
                       </tbody>
@@ -489,7 +736,10 @@ export default function AdminMonitoramento() {
             </section>
 
             <p className="mt-8 text-xs text-muted-foreground">
-              Bing: {atual.bing ? JSON.stringify(atual.bing) : "N/A — sem acesso ao Bing Webmaster Tools nesta execução."}
+              Bing:{" "}
+              {atual.bing
+                ? JSON.stringify(atual.bing)
+                : "N/A — sem acesso ao Bing Webmaster Tools nesta execução."}
             </p>
           </>
         )}

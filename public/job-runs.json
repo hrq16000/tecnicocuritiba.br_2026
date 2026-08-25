@@ -1,0 +1,92 @@
+{
+  "execucoes": [
+    {
+      "id": "snapshot:marco-1787625756172",
+      "job": "snapshot:marco",
+      "marco": "D7",
+      "executadoEm": "2026-08-25T02:42:36.172Z",
+      "duracaoMs": 109,
+      "status": "ok",
+      "failClosed": null,
+      "contagens": {
+        "curadas": 130,
+        "indexed": 22,
+        "unknown": 57,
+        "discovered": 47,
+        "crawledNaoIndexadas": 0
+      },
+      "logs": [
+        "marco D7 registrado com 130 URL(s) curada(s)",
+        "serp snapshot: reports/serp-signals-d7.json"
+      ]
+    },
+    {
+      "id": "reindex:snapshots-1787625756166",
+      "job": "reindex:snapshots",
+      "marco": "D7",
+      "executadoEm": "2026-08-25T02:42:36.166Z",
+      "duracaoMs": 19,
+      "status": "aviso",
+      "failClosed": true,
+      "contagens": {
+        "artefatos": 15,
+        "memorias": 9,
+        "urlsCuradas": 130,
+        "amostrasConferidas": 5
+      },
+      "logs": [
+        "marcos: D0, D7",
+        "amostra ok · .lovable/memory/features/onda-visual-3u.md",
+        "amostra ok · .lovable/memory/index.md",
+        "amostra ok · .lovable/memory/features/governanca-originalidade-ondas.md",
+        "amostra ok · reports/operacao-d0.md",
+        "amostra ok · .lovable/memory/features/triagem-pf-pj.md",
+        "aviso · D0: snapshot de queries ausente (N/A — sem coleta GSC de queries neste marco)",
+        "aviso · D7: snapshot de queries ausente (N/A — sem coleta GSC de queries neste marco)"
+      ]
+    },
+    {
+      "id": "diff:marcos-1787625743116",
+      "job": "diff:marcos",
+      "marco": "D7",
+      "executadoEm": "2026-08-25T02:42:23.116Z",
+      "duracaoMs": 9,
+      "status": "ok",
+      "failClosed": true,
+      "contagens": {
+        "urlsComparadas": 130,
+        "mudancas": 0,
+        "alta": 0
+      },
+      "logs": [
+        "D0 × D7"
+      ]
+    },
+    {
+      "id": "reindex:snapshots-1787625722489",
+      "job": "reindex:snapshots",
+      "marco": "D7",
+      "executadoEm": "2026-08-25T02:42:02.489Z",
+      "duracaoMs": 18,
+      "status": "aviso",
+      "failClosed": true,
+      "contagens": {
+        "artefatos": 15,
+        "memorias": 9,
+        "urlsCuradas": 130,
+        "amostrasConferidas": 5
+      },
+      "logs": [
+        "marcos: D0, D7",
+        "amostra ok · .lovable/memory/features/ambiente-local-offline.md",
+        "amostra ok · .lovable/memory/features/whatsapp-funnel-v2.md",
+        "amostra ok · reports/indexation-inventory.json",
+        "amostra ok · reports/operacao-d7.md",
+        "amostra ok · reports/serp-signals-d0.json",
+        "aviso · D0: snapshot de queries ausente (N/A — sem coleta GSC de queries neste marco)",
+        "aviso · D7: snapshot de queries ausente (N/A — sem coleta GSC de queries neste marco)"
+      ]
+    }
+  ],
+  "atualizadoEm": "2026-08-25T02:42:36.172Z"
+}

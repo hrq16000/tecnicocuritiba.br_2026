@@ -30,6 +30,9 @@
 import { createHash } from "node:crypto";
 import { existsSync, mkdirSync, readFileSync, readdirSync, statSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
+import { registrarJob } from "./lib/job-log.mjs";
+
+const INICIO_JOB = Date.now();
 
 const args = process.argv.slice(2);
 const STRICT = args.includes("--strict");
@@ -145,5 +148,25 @@ for (const a of avisos) console.log(`  · aviso ${a}`);
 for (const f of falhas) console.log(`  ✖ ${f}`);
 console.log(`[verificacao] status=${verificacao.status} amostras=${amostras.length} ok=${verificacao.amostragem.ok}`);
 console.log("  → public/snapshot-index.json · reports/snapshot-index-verificacao.json");
+
+registrarJob({
+  job: "reindex:snapshots",
+  marco: atual?.marco ?? null,
+  duracaoMs: Date.now() - INICIO_JOB,
+  status: verificacao.status === "ok" ? (avisos.length ? "aviso" : "ok") : "falhou",
+  failClosed: verificacao.status === "ok",
+  contagens: {
+    artefatos: indice.length,
+    memorias: verificacao.memorias,
+    urlsCuradas: curadas || null,
+    amostrasConferidas: amostras.filter((a) => a.conferido).length,
+  },
+  logs: [
+    `marcos: ${verificacao.marcos.join(", ") || "nenhum"}`,
+    ...amostras.map((a) => `amostra ${a.conferido ? "ok" : "DIVERGENTE"} · ${a.path}`),
+    ...avisos.map((a) => `aviso · ${a}`),
+    ...falhas.map((f) => `falha · ${f}`),
+  ],
+});
 
 if (STRICT && falhas.length) process.exit(1);

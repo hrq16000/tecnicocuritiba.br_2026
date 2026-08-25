@@ -461,6 +461,60 @@ export type Database = {
         }
         Relationships: []
       }
+      quick_wins_backlog: {
+        Row: {
+          acao: string | null
+          cluster: string | null
+          created_at: string
+          created_by: string | null
+          evidencia: string | null
+          hipotese: string
+          id: string
+          marco: string
+          prioridade: number
+          responsavel: string | null
+          resultado: string | null
+          status: string
+          titulo: string
+          updated_at: string
+          url_path: string
+        }
+        Insert: {
+          acao?: string | null
+          cluster?: string | null
+          created_at?: string
+          created_by?: string | null
+          evidencia?: string | null
+          hipotese: string
+          id?: string
+          marco?: string
+          prioridade?: number
+          responsavel?: string | null
+          resultado?: string | null
+          status?: string
+          titulo: string
+          updated_at?: string
+          url_path: string
+        }
+        Update: {
+          acao?: string | null
+          cluster?: string | null
+          created_at?: string
+          created_by?: string | null
+          evidencia?: string | null
+          hipotese?: string
+          id?: string
+          marco?: string
+          prioridade?: number
+          responsavel?: string | null
+          resultado?: string | null
+          status?: string
+          titulo?: string
+          updated_at?: string
+          url_path?: string
+        }
+        Relationships: []
+      }
       reviews: {
         Row: {
           author_name: string

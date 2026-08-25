@@ -41,6 +41,8 @@ export const LIMIARES = {
   linksParaRedirect: 0,
   crawlErros: 0,
   indexnowReenvioPct: 30, // % do conjunto curado; acima disso é ruído
+  quedaClusterPp: 5, // queda de taxa de indexação tolerada por cluster entre marcos
+  quedaImpressoesPct: 30, // queda relativa de impressões tolerada por cluster
 };
 
 const inventario = lerJson("reports/indexation-inventory.json");
@@ -125,7 +127,55 @@ if (enviadas > limiteEnvio)
     { enviadas, limite: limiteEnvio },
   );
 
+// 9. Regressão agregada por cluster entre os dois marcos mais recentes.
+//    Alerta é por CLUSTER (não por URL): evita ruído de flutuação individual e
+//    aponta direto para o agrupamento que perdeu cobertura ou demanda.
+const historicoMarcos = lerJson("reports/operacao-marcos.json")?.marcos ?? [];
+const marcoAtual = historicoMarcos[historicoMarcos.length - 1] ?? null;
+const marcoAnterior = historicoMarcos[historicoMarcos.length - 2] ?? null;
+const clustersRegredidos = [];
+if (marcoAtual && marcoAnterior) {
+  const antesPorCluster = new Map((marcoAnterior.clusters ?? []).map((c) => [c.chave, c]));
+  for (const c of marcoAtual.clusters ?? []) {
+    const antes = antesPorCluster.get(c.chave);
+    if (!antes) continue;
+    const quedaIndexacao =
+      typeof antes.taxaIndexacao === "number" && typeof c.taxaIndexacao === "number"
+        ? Math.round((antes.taxaIndexacao - c.taxaIndexacao) * 10) / 10
+        : null;
+    const quedaImpressoes =
+      antes.impressoes > 0 ? Math.round(((antes.impressoes - c.impressoes) / antes.impressoes) * 1000) / 10 : null;
+    const perdeuIndexadas = (antes.indexadas ?? 0) - (c.indexadas ?? 0);
+    if (
+      (quedaIndexacao !== null && quedaIndexacao > LIMIARES.quedaClusterPp) ||
+      perdeuIndexadas > 0 ||
+      (quedaImpressoes !== null && quedaImpressoes > LIMIARES.quedaImpressoesPct)
+    ) {
+      clustersRegredidos.push({
+        cluster: c.chave,
+        de: marcoAnterior.marco,
+        para: marcoAtual.marco,
+        indexadasAntes: antes.indexadas ?? null,
+        indexadasDepois: c.indexadas ?? null,
+        quedaIndexacaoPp: quedaIndexacao,
+        quedaImpressoesPct: quedaImpressoes,
+        painel: `/admin/monitoramento?cluster=${encodeURIComponent(c.chave)}`,
+      });
+    }
+  }
+}
+if (clustersRegredidos.length)
+  add(
+    "cluster-regressao",
+    clustersRegredidos.some((c) => (c.indexadasAntes ?? 0) > (c.indexadasDepois ?? 0)) ? "alta" : "media",
+    `${clustersRegredidos.length} cluster(s) em regressão entre ${marcoAnterior?.marco} e ${marcoAtual?.marco}: ${clustersRegredidos
+      .map((c) => c.cluster)
+      .join(", ")}.`,
+    clustersRegredidos,
+  );
+
 const metricas = {
+  clustersRegredidos: clustersRegredidos.length,
   tierARate,
   curadas: curadas.length,
   doorwayAlto,
