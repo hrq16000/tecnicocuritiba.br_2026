@@ -239,8 +239,9 @@ registrarJob({
   job: "reindex:snapshots",
   marco: atual?.marco ?? null,
   duracaoMs: Date.now() - INICIO_JOB,
-  status: verificacao.status === "ok" ? (avisos.length ? "aviso" : "ok") : "falhou",
-  failClosed: verificacao.status === "ok",
+  status: verificacao.status === "falhou" ? "falhou" : avisos.length || contencao ? "aviso" : "ok",
+  failClosed: verificacao.status !== "falhou",
+
   contagens: {
     artefatos: indice.length,
     memorias: verificacao.memorias,
