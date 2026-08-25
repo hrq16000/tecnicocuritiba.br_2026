@@ -205,13 +205,13 @@ export function DrilldownUrls({
 function FragmentRow({
   url,
   estados,
-  colunas,
+  marco,
   expandida,
   onToggle,
 }: {
   url: MarcoUrl;
   estados: { marco: string; estado: string | null }[];
-  colunas: number;
+  marco: string | null;
   expandida: boolean;
   onToggle: () => void;
 }) {
