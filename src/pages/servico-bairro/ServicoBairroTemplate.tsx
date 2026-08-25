@@ -15,6 +15,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import { trackPageView } from "@/lib/analytics";
 import { trackWaClick } from "@/lib/funnelAnalytics";
 import { buildCategoryMessage, type TemplateCategory } from "@/lib/whatsappTemplates";
+import { CONSOLIDATED_LOCAL_PATHS } from "@/lib/consolidatedLocalUrls";
 
 const CANONICAL_BASE = "https://tecnico.curitiba.br";
 
@@ -58,6 +59,15 @@ export interface ServicoBairroData {
 export const ServicoBairroTemplate = ({ data }: { data: ServicoBairroData }) => {
   const path = `/servicos/${data.servicoSlug}/${data.bairroSlug}`;
   const canonical = `${CANONICAL_BASE}${path}`;
+
+  // Nenhum link interno pode apontar para URL consolidada (301): os destinos
+  // removidos na antidoorway saem da malha antes de renderizar.
+  const servicosRelacionados = data.servicosRelacionados.filter(
+    (s) => !CONSOLIDATED_LOCAL_PATHS.has(`/servicos/${s.slug}/${data.bairroSlug}`),
+  );
+  const bairrosProximos = data.bairrosProximos.filter(
+    (b) => !CONSOLIDATED_LOCAL_PATHS.has(`/servicos/${data.servicoSlug}/${b.slug}`),
+  );
 
   useEffect(() => {
     trackPageView(path, `${data.servico} - ${data.bairro}`);
@@ -358,7 +368,7 @@ export const ServicoBairroTemplate = ({ data }: { data: ServicoBairroData }) => 
               Outros Serviços no {data.bairro}
             </h2>
             <div className="flex flex-wrap justify-center gap-3 mb-12">
-              {data.servicosRelacionados.map((servico, index) => (
+              {servicosRelacionados.map((servico, index) => (
                 <Link 
                   key={index}
                   to={`/servicos/${servico.slug}/${data.bairroSlug}`} 
@@ -374,7 +384,7 @@ export const ServicoBairroTemplate = ({ data }: { data: ServicoBairroData }) => 
               {data.servico} em Bairros Próximos
             </h2>
             <div className="flex flex-wrap justify-center gap-3">
-              {data.bairrosProximos.map((bairro, index) => (
+              {bairrosProximos.map((bairro, index) => (
                 <Link 
                   key={index}
                   to={`/servicos/${data.servicoSlug}/${bairro.slug}`} 
