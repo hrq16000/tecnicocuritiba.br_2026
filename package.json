@@ -293,7 +293,9 @@
     "freeze:v2": "node scripts/selar-freeze-v2.mjs",
     "check:seo-freeze-v2": "node scripts/check-seo-freeze-v2.mjs",
     "report:freeze-v2": "node scripts/gerar-relatorio-freeze-v2.mjs",
-    "governanca:pre-d14": "npm run validar:producao:gate && npm run check:coortes && npm run report:impact-map && npm run check:seo-freeze-v2 && npm run report:freeze-v2"
+    "governanca:pre-d14": "npm run validar:producao:gate && npm run check:coortes && npm run report:impact-map && npm run check:seo-freeze-v2 && npm run report:freeze-v2",
+    "sentinel:pre-d14": "node scripts/sentinel-pre-d14.mjs",
+    "check:sentinel-pre-d14": "node scripts/sentinel-pre-d14.mjs --gate"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

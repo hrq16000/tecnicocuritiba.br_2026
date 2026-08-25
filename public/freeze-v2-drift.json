@@ -1,11 +1,11 @@
 {
   "schema": "freeze-v2-drift/1.0",
-  "verificadoEm": "2026-08-25T06:24:47.171Z",
+  "verificadoEm": "2026-08-25T06:26:22.092Z",
   "freezeSelo": "fb95e1e4d676e89de141409aa4103218fc2a504c979f8278f62fe16e9da9d979",
   "freezeSeladoEm": "2026-08-25T06:09:07.486Z",
-  "totalDiffs": 12,
+  "totalDiffs": 13,
   "porClasse": {
-    "CI_CHANGE": 5,
+    "CI_CHANGE": 6,
     "OBSERVABILITY_CHANGE": 5,
     "ADMIN_CHANGE": 2
   },
@@ -56,6 +56,11 @@
     },
     {
       "arquivo": "scripts/gerar-relatorio-freeze-v2.mjs",
+      "tipo": "ADICIONADO",
+      "classe": "CI_CHANGE"
+    },
+    {
+      "arquivo": "scripts/sentinel-pre-d14.mjs",
       "tipo": "ADICIONADO",
       "classe": "CI_CHANGE"
     },
