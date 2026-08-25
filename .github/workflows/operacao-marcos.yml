@@ -46,10 +46,10 @@ jobs:
 
       # ── Coleta real (produção). Sem coleta não há marco: fail-closed.
       - name: Inventário de indexação (produção + GSC)
-        run: npm run report:indexation-inventory
+        run: npm run report:indexation
 
       - name: Auditoria de qualidade local
-        run: npm run report:local-page-quality || true
+        run: npm run check:local-page-quality || true
 
       - name: Escolher marco
         id: marco

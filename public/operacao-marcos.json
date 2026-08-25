@@ -2,18 +2,18 @@
   "marcos": [
     {
       "marco": "D0",
-      "registradoEm": "2026-08-25T01:44:52.193Z",
+      "registradoEm": "2026-08-25T01:49:17.273Z",
       "nota": "baseline pós-deploy operacional",
       "deploymentId": null,
       "commit": null,
       "denominador": {
-        "curadas": 170,
+        "curadas": 130,
         "observacao": "Percentuais deste marco usam o conjunto curado atual; não são comparáveis com denominadores anteriores (170 URLs) sem conversão explícita."
       },
       "google": {
         "indexed": 22,
-        "unknown": 85,
-        "discovered": 59,
+        "unknown": 56,
+        "discovered": 48,
         "crawled_not_indexed": 0,
         "duplicate": 0,
         "redirect": 0,
@@ -28,23 +28,11 @@
       },
       "clusters": [
         {
-          "chave": "SERVICO_BAIRRO",
-          "total": 59,
-          "indexadas": 3,
-          "unknown": 28,
-          "discovered": 28,
-          "crawledNaoIndexadas": 0,
-          "taxaIndexacao": 5.1,
-          "impressoes": 9,
-          "cliques": 1,
-          "posicaoMedia": 15.33
-        },
-        {
           "chave": "PROBLEMA",
           "total": 36,
           "indexadas": 2,
-          "unknown": 20,
-          "discovered": 14,
+          "unknown": 21,
+          "discovered": 13,
           "crawledNaoIndexadas": 0,
           "taxaIndexacao": 5.6,
           "impressoes": 2,
@@ -55,8 +43,8 @@
           "chave": "BAIRRO",
           "total": 26,
           "indexadas": 3,
-          "unknown": 12,
-          "discovered": 9,
+          "unknown": 10,
+          "discovered": 11,
           "crawledNaoIndexadas": 0,
           "taxaIndexacao": 11.5,
           "impressoes": 41,
@@ -64,11 +52,23 @@
           "posicaoMedia": 8.24
         },
         {
+          "chave": "SERVICO_BAIRRO",
+          "total": 19,
+          "indexadas": 3,
+          "unknown": 7,
+          "discovered": 9,
+          "crawledNaoIndexadas": 0,
+          "taxaIndexacao": 15.8,
+          "impressoes": 9,
+          "cliques": 1,
+          "posicaoMedia": 15.33
+        },
+        {
           "chave": "SERVICO",
           "total": 15,
           "indexadas": 4,
-          "unknown": 9,
-          "discovered": 2,
+          "unknown": 6,
+          "discovered": 5,
           "crawledNaoIndexadas": 0,
           "taxaIndexacao": 26.7,
           "impressoes": 113,
@@ -79,8 +79,8 @@
           "chave": "INSTITUCIONAL",
           "total": 13,
           "indexadas": 3,
-          "unknown": 9,
-          "discovered": 1,
+          "unknown": 6,
+          "discovered": 4,
           "crawledNaoIndexadas": 0,
           "taxaIndexacao": 23.1,
           "impressoes": 98,
@@ -91,8 +91,8 @@
           "chave": "CIDADE",
           "total": 11,
           "indexadas": 4,
-          "unknown": 4,
-          "discovered": 2,
+          "unknown": 2,
+          "discovered": 4,
           "crawledNaoIndexadas": 0,
           "taxaIndexacao": 36.4,
           "impressoes": 157,
@@ -103,8 +103,8 @@
           "chave": "HUB",
           "total": 5,
           "indexadas": 2,
-          "unknown": 1,
-          "discovered": 2,
+          "unknown": 2,
+          "discovered": 1,
           "crawledNaoIndexadas": 0,
           "taxaIndexacao": 40,
           "impressoes": 30,
@@ -115,8 +115,8 @@
           "chave": "ARTIGO",
           "total": 2,
           "indexadas": 0,
-          "unknown": 1,
-          "discovered": 1,
+          "unknown": 2,
+          "discovered": 0,
           "crawledNaoIndexadas": 0,
           "taxaIndexacao": 0,
           "impressoes": 0,
@@ -151,8 +151,8 @@
           "chave": "EQUIPAMENTO",
           "total": 1,
           "indexadas": 0,
-          "unknown": 1,
-          "discovered": 0,
+          "unknown": 0,
+          "discovered": 1,
           "crawledNaoIndexadas": 0,
           "taxaIndexacao": 0,
           "impressoes": 0,
@@ -165,8 +165,8 @@
           "chave": "B",
           "total": 69,
           "indexadas": 2,
-          "unknown": 37,
-          "discovered": 27,
+          "unknown": 36,
+          "discovered": 28,
           "crawledNaoIndexadas": 0,
           "taxaIndexacao": 2.9,
           "impressoes": 2,
@@ -174,23 +174,11 @@
           "posicaoMedia": 26
         },
         {
-          "chave": "C",
-          "total": 58,
-          "indexadas": 2,
-          "unknown": 28,
-          "discovered": 28,
-          "crawledNaoIndexadas": 0,
-          "taxaIndexacao": 3.4,
-          "impressoes": 0,
-          "cliques": 0,
-          "posicaoMedia": null
-        },
-        {
           "chave": "A",
           "total": 31,
           "indexadas": 18,
-          "unknown": 9,
-          "discovered": 3,
+          "unknown": 6,
+          "discovered": 6,
           "crawledNaoIndexadas": 0,
           "taxaIndexacao": 58.1,
           "impressoes": 471,
@@ -198,11 +186,23 @@
           "posicaoMedia": 18.24
         },
         {
+          "chave": "C",
+          "total": 18,
+          "indexadas": 2,
+          "unknown": 7,
+          "discovered": 9,
+          "crawledNaoIndexadas": 0,
+          "taxaIndexacao": 11.1,
+          "impressoes": 0,
+          "cliques": 0,
+          "posicaoMedia": null
+        },
+        {
           "chave": "D",
           "total": 12,
           "indexadas": 0,
-          "unknown": 11,
-          "discovered": 1,
+          "unknown": 7,
+          "discovered": 5,
           "crawledNaoIndexadas": 0,
           "taxaIndexacao": 0,
           "impressoes": 0,
@@ -232,7 +232,7 @@
         "urls": null
       },
       "sitemap": {
-        "total": 170,
+        "total": 130,
         "bloqueadas": 0
       },
       "indexnow": {
@@ -250,5 +250,5 @@
       "serpSnapshot": "reports/serp-signals-d0.json"
     }
   ],
-  "atualizadoEm": "2026-08-25T01:44:52.197Z"
+  "atualizadoEm": "2026-08-25T01:49:17.277Z"
 }
