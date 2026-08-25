@@ -202,34 +202,46 @@ const quickWins =
         }))
     : [];
 
-/* ── decisões ──────────────────────────────────────────────────────────── */
-function decisaoD7() {
-  if (!D7) return { valor: "PENDENTE", justificativa: "Marco D7 ainda não registrado." };
-  const dl = deltas(funil(D0), funil(D7));
-  const regressao =
-    (D7.grafo?.linksParaRedirect ?? 0) > 0 ||
-    (D7.sitemap?.bloqueadas ?? 0) > 0 ||
-    (dl?.indexed?.abs ?? 0) < -2;
-  if (regressao) return { valor: "REGRESSION", justificativa: "Sinal técnico objetivo detectado (links para consolidadas, sitemap bloqueado ou perda de indexadas)." };
-  const anormal = (D7.google.crawled_not_indexed ?? 0) > (D0?.google.crawled_not_indexed ?? 0) + 5;
-  if (anormal) return { valor: "INVESTIGATE", justificativa: "Crawled-not-indexed cresceu acima do limiar operacional." };
-  return { valor: "WAIT", justificativa: "Processamento dentro do esperado sete dias após a consolidação." };
+/* ── decisões ──────────────────────────────────────────────────────────────
+ * A regra vive em scripts/lib/marco-decisao.mjs (função pura, testada com
+ * fixtures sintéticas). Aqui só montamos a entrada e traduzimos a saída.
+ */
+const urlsDoMarco = (m) =>
+  (m?.urls ?? []).map((u) => ({
+    path: u.path,
+    estado: u.estado,
+    tier: u.tier,
+    cluster: u.cluster,
+    impressions: u.impressions ?? 0,
+    clicks: u.clicks ?? 0,
+    position: typeof u.position === "number" ? u.position : null,
+  }));
+
+const serpDiff = lerJson("reports/diff-marcos.json");
+
+function decidir(marcoAlvo, anteriorMarco) {
+  if (!marcoAlvo) return { valor: "PENDENTE", justificativa: `Marco ${marcoAlvo?.marco ?? ""} ainda não registrado.`.trim(), severidade: "informativa" };
+  const r = decidirMarco({
+    d0: D0,
+    anterior: anteriorMarco,
+    atual: marcoAlvo,
+    urls: urlsDoMarco(marcoAlvo),
+    serpDiff,
+  });
+  return {
+    valor: marcoAlvo.marco === "D7" ? (r.decisao === "A" ? "WAIT" : r.decisao === "C" ? "INVESTIGATE" : r.decisao === "D" ? "REGRESSION" : "QUICK_WINS") : r.decisao,
+    decisao: r.decisao,
+    rotulo: r.rotulo,
+    severidade: r.severidade,
+    alerta: r.alerta,
+    justificativa: r.justificativa,
+    regressoes: r.regressoes,
+    sinais: r.sinais,
+  };
 }
-function decisaoD14() {
-  if (!D14) return { valor: "PENDENTE", justificativa: "Marco D14 ainda não registrado." };
-  const dl = deltas(funil(D0), funil(D14));
-  if ((D14.grafo?.linksParaRedirect ?? 0) > 0 || (D14.sitemap?.bloqueadas ?? 0) > 0)
-    return { valor: "D", justificativa: "Regressão técnica objetiva — correção mínima autorizada." };
-  const tierAD0 = tierA(D0)?.taxaIndexacao ?? null;
-  const tierAD14 = tierA(D14)?.taxaIndexacao ?? null;
-  const tierAAvanca = tierAD0 !== null && tierAD14 !== null && tierAD14 > tierAD0;
-  const unknownCai = (dl?.unknown?.abs ?? 0) < 0;
-  const crawledBaixo = (D14.google.crawled_not_indexed ?? 0) <= 3;
-  if (!tierAAvanca && !unknownCai) return { valor: "C", justificativa: "Tier A estagnado e unknown sem redução relevante — investigar gargalo antes de alterar." };
-  if (quickWins.length >= 3) return { valor: "B", justificativa: `${quickWins.length} páginas indexadas com impressões reais em posição 5–20.` };
-  if (tierAAvanca && unknownCai && crawledBaixo) return { valor: "A", justificativa: "Tier A avançando, unknown caindo e crawled-not-indexed baixo — não mexer." };
-  return { valor: "A", justificativa: "Sistema saudável sem oportunidade concreta o bastante para abrir backlog." };
-}
+const decisaoD7 = () => decidir(D7, D0);
+const decisaoD14 = () => decidir(D14, D7 ?? D0);
+
 
 /* ── payload + markdown ────────────────────────────────────────────────── */
 const analise = {
