@@ -1,14 +1,14 @@
 {
   "schema": "freeze/1.0",
   "versao": "FREEZE_V2",
-  "seladoEm": "2026-08-25T07:41:21.942Z",
+  "seladoEm": "2026-08-25T07:52:52.303Z",
   "base": "https://tecnico.curitiba.br",
   "deploymentId": "live:5eec352d9a7f460d",
   "origem": {
     "liveValidation": "85510cd99f64f1191a3dc3d94a14e71844a813db7487ae69255fa4002f161345",
     "executadoEm": "2026-08-25T06:05:10.617Z"
   },
-  "ledgerSelo": "92ee0e4daddb5370f7a7bd585f07ea8e9ebd42df8a6655a5034fc8c3c15d538b",
+  "ledgerSelo": "a9053ce4273adeeeeec9a3a4d24df12d5d416effe791b955d2a3657a7e2b6c1e",
   "freezeV1": {
     "selo": "82f7d05473cc059042b7bbe51cfa63a6fb5e93ae1f077c09ba55f7450b18ed70",
     "preservado": true,
@@ -17,8 +17,8 @@
   "universoCurado": 130,
   "coortes": {
     "CLEAN_COHORT": 91,
-    "DIRECT_INTERVENTION": 28,
-    "INDIRECT_DISCOVERY_INTERVENTION": 11
+    "DIRECT_INTERVENTION": 29,
+    "INDIRECT_DISCOVERY_INTERVENTION": 10
   },
   "regra": "Qualquer PUBLIC_CHANGE em superfície curada após este selo exige novo evento de intervenção no ledger.",
   "urls": [
@@ -829,7 +829,7 @@
       "internalLinkSetHash": "f55720ac864bd6592dfb1a2f7c5ccaa2",
       "sitemapMembro": true,
       "lastmod": null,
-      "cohort": "INDIRECT_DISCOVERY_INTERVENTION",
+      "cohort": "DIRECT_INTERVENTION",
       "deploymentId": "live:5eec352d9a7f460d"
     },
     {
@@ -2975,7 +2975,7 @@
       "classe": "PUBLIC_CHANGE"
     },
     "public/freeze-historico.json": {
-      "hash": "058f2d62bb1837e67108edd886685b0a",
+      "hash": "e1ba3c3bb89e7a5d44f4d7e02590a042",
       "classe": "OBSERVABILITY_CHANGE"
     },
     "public/freeze-v1.json": {
@@ -2983,11 +2983,11 @@
       "classe": "OBSERVABILITY_CHANGE"
     },
     "public/freeze-v2-drift.json": {
-      "hash": "97b5519157ede22374fdc1c880321170",
+      "hash": "a6da901fb4618b3fe27060b56abbb1c1",
       "classe": "OBSERVABILITY_CHANGE"
     },
     "public/freeze-v2.json": {
-      "hash": "eb3356ecc4dd20a4b1ff2e854ec086ac",
+      "hash": "19f88155aad44f093d4dd39d9ba4bdb0",
       "classe": "OBSERVABILITY_CHANGE"
     },
     "public/indexation-daily.json": {
@@ -2995,7 +2995,7 @@
       "classe": "OBSERVABILITY_CHANGE"
     },
     "public/intervencoes-d0.json": {
-      "hash": "cb6255c30efc340a59735648097a3e0b",
+      "hash": "7e4c418c9f9ca37e5e3e6a36155457cb",
       "classe": "OBSERVABILITY_CHANGE"
     },
     "public/job-runs.json": {
@@ -3291,7 +3291,7 @@
       "classe": "OBSERVABILITY_CHANGE"
     },
     "reports/freeze-v2-drift.json": {
-      "hash": "97b5519157ede22374fdc1c880321170",
+      "hash": "a6da901fb4618b3fe27060b56abbb1c1",
       "classe": "OBSERVABILITY_CHANGE"
     },
     "reports/intervention-impact-map.json": {
@@ -3971,7 +3971,7 @@
       "classe": "CI_CHANGE"
     },
     "scripts/lib/intervencoes.mjs": {
-      "hash": "87bb50bffbabb49fea801fa1147932be",
+      "hash": "c44915e9e34d62ada38daead61c9e0bd",
       "classe": "CI_CHANGE"
     },
     "scripts/lib/job-log.mjs": {
@@ -5499,11 +5499,11 @@
       "classe": "PUBLIC_CHANGE"
     },
     "src/components/areas/BairroInterlinkLocal.tsx": {
-      "hash": "b71ab0c0cdf95662f49b4e333be2f9cc",
+      "hash": "16c87a910a7931681af37402e3540d25",
       "classe": "PUBLIC_CHANGE"
     },
     "src/components/areas/DiretorioLocalidades.tsx": {
-      "hash": "6927e2d24bea33b789752263325b3638",
+      "hash": "962b1b607511c87766fae3b6f9fabb66",
       "classe": "PUBLIC_CHANGE"
     },
     "src/components/bairro/BairroLocalLayout.tsx": {
@@ -5611,7 +5611,7 @@
       "classe": "PUBLIC_CHANGE"
     },
     "src/components/home/RegioesCuritibaSection.tsx": {
-      "hash": "61020d81f61df422ec737d749edb95d0",
+      "hash": "0633f839ed260f7ecb067115ba269e39",
       "classe": "PUBLIC_CHANGE"
     },
     "src/components/home/heroSlides.ts": {
@@ -6055,7 +6055,7 @@
       "classe": "CI_CHANGE"
     },
     "src/integrations/supabase/types.ts": {
-      "hash": "4e5282c85b978dd07320ce2b88b230e7",
+      "hash": "a5f0a62720622fd5b66c6583129a671d",
       "classe": "CI_CHANGE"
     },
     "src/lib/analytics.leadDedup.test.ts": {
@@ -6767,7 +6767,7 @@
       "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/pages/OrdemDeServicoConsulta.tsx": {
-      "hash": "8bdc8f8117b5f9aa7eadd361a7b73621",
+      "hash": "c399bbb7f8e066d6a10ea6e171ca9d60",
       "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/pages/PoliticaCookiesAnuncios.tsx": {
@@ -6851,7 +6851,7 @@
       "classe": "PUBLIC_CHANGE"
     },
     "src/pages/TecnicoInformaticaCuritiba.tsx": {
-      "hash": "a79ff36a9d828dc99b9a2e0dbee970c9",
+      "hash": "0437aa3854a3b83c8e9befbdd7ae9707",
       "classe": "PUBLIC_CHANGE"
     },
     "src/pages/TecnicoInformaticaFazendaRioGrande.tsx": {
@@ -6877,6 +6877,10 @@
     "src/pages/TermosCondicoes.tsx": {
       "hash": "137a68c6234127ae268587d816e6751d",
       "classe": "PUBLIC_CHANGE"
+    },
+    "src/pages/admin/AdminBairros.tsx": {
+      "hash": "f16338fed1669c0641d334cdbf280c29",
+      "classe": "ADMIN_CHANGE"
     },
     "src/pages/admin/AdminCasos.tsx": {
       "hash": "35ce57e92c6483982b7c26153a51c44a",
@@ -7063,7 +7067,7 @@
       "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     "src/pages/bairros/BairroTemplate.tsx": {
-      "hash": "7852b645d06727635ffd09d450d9ca85",
+      "hash": "e2acf56948d43eca89c9c54258ea1960",
       "classe": "PUBLIC_CHANGE"
     },
     "src/pages/bairros/BariguiAraucaria.tsx": {
@@ -8427,7 +8431,7 @@
       "classe": "PUBLIC_CHANGE"
     },
     "src/routeTree.gen.ts": {
-      "hash": "04282069f800a175d1c4c3c12db759c7",
+      "hash": "fcb823d4fe1bcba8c860466d5067a38f",
       "classe": "CI_CHANGE"
     },
     "src/router.tsx": {
@@ -8440,6 +8444,10 @@
     },
     "src/routes/admin.auditoria-os.tsx": {
       "hash": "3adf336dfc2f14332c0c88050c6446e7",
+      "classe": "ADMIN_CHANGE"
+    },
+    "src/routes/admin.bairros.tsx": {
+      "hash": "eb1e8b50c5dc755bfd698dc80746ddb7",
       "classe": "ADMIN_CHANGE"
     },
     "src/routes/admin.casos.tsx": {
@@ -10682,6 +10690,10 @@
       "hash": "7dd081dc928ea3bf0ea1dea033264cf4",
       "classe": "CI_CHANGE"
     },
+    "supabase/migrations/20260825074649_8655f0b1-27d2-44bf-b7f9-71b580f9ef06.sql": {
+      "hash": "923e480000b801972a99dd7cf0abc517",
+      "classe": "CI_CHANGE"
+    },
     "supabase/seed.sql": {
       "hash": "54d46544dfa04733d94db286cb3ea7f2",
       "classe": "CI_CHANGE"
@@ -10691,7 +10703,7 @@
       "classe": "CI_CHANGE"
     },
     "tsconfig.tsbuildinfo": {
-      "hash": "91c3c6fc0b78f797117fb3b932fe32e3",
+      "hash": "62953f0ced90a0f060d3691da7e50189",
       "classe": "CI_CHANGE"
     },
     "vite.config.ts": {
@@ -10703,6 +10715,6 @@
       "classe": "CI_CHANGE"
     }
   },
-  "superficieHash": "f338acdf6bc0c5d2caf5a847a79a4532ba510dad13ad500628a8346471472586",
-  "selo": "4668127078c1a836316f65f424e1595080a8da50c56080b662c61ef52d5f833b"
+  "superficieHash": "1e5b9129e6723ad90b73d47754cd3a92ddc3b41ce4e207f7fd62340917b427c8",
+  "selo": "b832bbdf095e97fc856f127728fad773063061e55ee6eed4b9b3678d7eaadb37"
 }

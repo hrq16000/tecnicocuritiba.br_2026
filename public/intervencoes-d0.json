@@ -1,6 +1,6 @@
 {
   "schema": "intervencao/1.0",
-  "atualizadoEm": "2026-08-25T07:41:11.840Z",
+  "atualizadoEm": "2026-08-25T07:52:51.752Z",
   "baseline": {
     "marco": "D0",
     "registradoEm": "2026-08-25T01:49:17.273Z",
@@ -11,11 +11,11 @@
   },
   "politica": {
     "freeze_v1": "baseline original D0 — ZERO_PUBLIC_SEO_DIFF",
-    "intervention_event": "4 intervenção(ões) pública(s) registrada(s) na janela WAIT",
+    "intervention_event": "5 intervenção(ões) pública(s) registrada(s) na janela WAIT",
     "freeze_v2": "estado público pós-intervenção; nenhuma nova alteração pública até o D14 real",
     "d14Valido": true,
     "d14Earliest": "2026-09-08T01:49:17.273Z",
-    "declaracaoObrigatoriaNoD14": "Experimento global possui intervenção controlada em 28 URL(s) diretas e 11 URL(s) de descoberta indireta."
+    "declaracaoObrigatoriaNoD14": "Experimento global possui intervenção controlada em 29 URL(s) diretas e 10 URL(s) de descoberta indireta."
   },
   "eventos": [
     {
@@ -212,6 +212,40 @@
       "ordem": 4,
       "hashAnterior": "6148225d6770a327d5b705520f98f0b01af9ae3888e018e48d58a46e23ec1514",
       "hash": "06145c463cd9eb3dd67c7d4f40f118530cb8eee0b5884b352577c3c7ed9cdb17"
+    },
+    {
+      "id": "INT-2026-08-25-005",
+      "tipo": "PUBLIC_INTERVENTION",
+      "timestamp": "2026-08-25T08:40:00.000Z",
+      "deploymentId": null,
+      "commit": null,
+      "urlsDiretas": [
+        "/tecnico-informatica-curitiba"
+      ],
+      "urlsIndiretas": [],
+      "arquivos": [
+        "src/pages/TecnicoInformaticaCuritiba.tsx",
+        "src/pages/bairros/BairroTemplate.tsx",
+        "src/components/areas/BairroInterlinkLocal.tsx",
+        "src/components/areas/DiretorioLocalidades.tsx",
+        "src/components/home/RegioesCuritibaSection.tsx"
+      ],
+      "mudanca": "INTERNAL_LINKS",
+      "motivo": "Bloco 'Principais regiões de Curitiba atendidas' passou de lista estática de texto para malha real de links por bairro/RMC, com prefetch por intenção; BreadcrumbList das páginas de bairro ganhou o nível de região.",
+      "impacto": {
+        "seo": "Profundidade de clique reduzida para as localidades. Title/description/canonical/robots inalterados.",
+        "internalLinking": "54 destinos de localidade descobríveis a partir do pilar de Curitiba.",
+        "conteudo": "Sem texto editorial novo.",
+        "schema": "BreadcrumbList das páginas de bairro passa a ter Home > Cidade > Bairros > Região > Bairro.",
+        "metadata": "Sem alteração de metadata.",
+        "lastmod": "Elegível para /tecnico-informatica-curitiba e páginas de bairro curadas.",
+        "conversao": "Sem CTA novo."
+      },
+      "coorte": "INTERVENTION_COHORT",
+      "experimentalStatus": "INTERVENED",
+      "ordem": 5,
+      "hashAnterior": "06145c463cd9eb3dd67c7d4f40f118530cb8eee0b5884b352577c3c7ed9cdb17",
+      "hash": "dcef5a957313e9c2b414f8314d8662343d4abc5a2c347e4db68cadba02d98bad"
     }
   ],
   "coortes": {
@@ -312,7 +346,7 @@
       ]
     },
     "INTERVENTION_COHORT": {
-      "total": 28,
+      "total": 29,
       "urls": [
         {
           "url": "/",
@@ -453,11 +487,16 @@
           "url": "/bairros/xaxim",
           "experimental_status": "INTERVENED",
           "intervention_at": "2026-08-25T07:30:00.000Z"
+        },
+        {
+          "url": "/tecnico-informatica-curitiba",
+          "experimental_status": "INTERVENED",
+          "intervention_at": "2026-08-25T08:40:00.000Z"
         }
       ]
     },
     "INDIRECT_DISCOVERY_COHORT": {
-      "total": 11,
+      "total": 10,
       "motivo": "novo inbound recebido do diretório de localidades em /areas-atendidas",
       "urls": [
         {
@@ -478,10 +517,6 @@
         },
         {
           "url": "/tecnico-informatica-colombo",
-          "experimental_status": "INDIRECT_DISCOVERY_INTERVENTION"
-        },
-        {
-          "url": "/tecnico-informatica-curitiba",
           "experimental_status": "INDIRECT_DISCOVERY_INTERVENTION"
         },
         {
@@ -509,10 +544,10 @@
   },
   "universoCurado": 130,
   "freezeV2": {
-    "criadoEm": "2026-08-25T07:41:11.842Z",
+    "criadoEm": "2026-08-25T07:52:51.752Z",
     "contentHashesRef": "a3cb748b0f14a57da20d7bb25d4efff4545029085ab186d4acc0edc925dc5a71",
     "curadoHash": "e8f8544eba7c928d6268c32cda10d4b6d355f4be0c1e10812d712fa7a0f72a7e",
     "regra": "Qualquer alteração pública após este selo exige NOVO evento de intervenção."
   },
-  "selo": "92ee0e4daddb5370f7a7bd585f07ea8e9ebd42df8a6655a5034fc8c3c15d538b"
+  "selo": "a9053ce4273adeeeeec9a3a4d24df12d5d416effe791b955d2a3657a7e2b6c1e"
 }
