@@ -17,7 +17,13 @@
       "selo": "b12f35b4368371ba81444cffe7cbafde7d810bdda9089e87e36e056171aab709",
       "seladoEm": "2026-08-25T07:01:32.222Z",
       "nota": "correção de impressão digital sem mudança pública: src/routes/problemas.tv-sem-som.tsx"
+    },
+    {
+      "versao": "FREEZE_V2.3",
+      "selo": "2c97c1a2fdef7dbe1a6470988845d2f2436d88f179c158a0ef7bc0c2571b9ab0",
+      "seladoEm": "2026-08-25T07:30:09.047Z",
+      "nota": "reselo após novo estado público"
     }
   ],
-  "atualizadoEm": "2026-08-25T07:01:32.222Z"
+  "atualizadoEm": "2026-08-25T07:30:09.069Z"
 }

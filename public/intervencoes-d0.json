@@ -1,6 +1,6 @@
 {
   "schema": "intervencao/1.0",
-  "atualizadoEm": "2026-08-25T05:28:44.589Z",
+  "atualizadoEm": "2026-08-25T07:29:24.630Z",
   "baseline": {
     "marco": "D0",
     "registradoEm": "2026-08-25T01:49:17.273Z",
@@ -11,11 +11,11 @@
   },
   "politica": {
     "freeze_v1": "baseline original D0 — ZERO_PUBLIC_SEO_DIFF",
-    "intervention_event": "2 intervenção(ões) pública(s) registrada(s) na janela WAIT",
+    "intervention_event": "3 intervenção(ões) pública(s) registrada(s) na janela WAIT",
     "freeze_v2": "estado público pós-intervenção; nenhuma nova alteração pública até o D14 real",
     "d14Valido": true,
     "d14Earliest": "2026-09-08T01:49:17.273Z",
-    "declaracaoObrigatoriaNoD14": "Experimento global possui intervenção controlada em 2 URL(s) diretas e 37 URL(s) de descoberta indireta."
+    "declaracaoObrigatoriaNoD14": "Experimento global possui intervenção controlada em 28 URL(s) diretas e 11 URL(s) de descoberta indireta."
   },
   "eventos": [
     {
@@ -120,6 +120,65 @@
       "ordem": 2,
       "hashAnterior": "59eebe1a77e71c38ee3eb31901978395a9ff2c11b045f56fcbaa30ba7afdf0bd",
       "hash": "a53c0c8517d7cdc035a6d76f2139e77e214a84cd5710360b3581812d149840a9"
+    },
+    {
+      "id": "INT-2026-08-25-003",
+      "tipo": "PUBLIC_INTERVENTION",
+      "timestamp": "2026-08-25T07:30:00.000Z",
+      "deploymentId": null,
+      "commit": null,
+      "urlsDiretas": [
+        "/bairros/cic",
+        "/bairros/batel",
+        "/bairros/agua-verde",
+        "/bairros/centro",
+        "/bairros/portao",
+        "/bairros/bigorrilho",
+        "/bairros/santa-felicidade",
+        "/bairros/cabral",
+        "/bairros/cristo-rei",
+        "/bairros/boa-vista",
+        "/bairros/cajuru",
+        "/bairros/boqueirao",
+        "/bairros/xaxim",
+        "/bairros/novo-mundo",
+        "/bairros/uberaba",
+        "/bairros/reboucas",
+        "/bairros/hauer",
+        "/bairros/pinheirinho",
+        "/bairros/bacacheri",
+        "/bairros/capao-raso",
+        "/bairros/sitio-cercado",
+        "/bairros/fazendinha",
+        "/bairros/campo-comprido",
+        "/bairros/merces",
+        "/bairros/juveve",
+        "/bairros/seminario"
+      ],
+      "urlsIndiretas": [],
+      "arquivos": [
+        "src/components/areas/BairroInterlinkLocal.tsx",
+        "src/pages/bairros/BairroTemplate.tsx",
+        "src/lib/bairrosBaseline.ts",
+        "scripts/check-rotas-localidades.mjs",
+        ".github/workflows/ci.yml"
+      ],
+      "mudanca": "INTERNAL_LINKS",
+      "motivo": "Interlinking básico obrigatório do template de localidade (servicos, bairros vizinhos, hub) e correção de dois destinos de serviço que apontavam para rotas inexistentes (404): /servicos/formatacao-de-computador e /servicos/conserto-de-notebook.",
+      "impacto": {
+        "seo": "Malha interna alterada em páginas de bairro. Title/description/canonical/robots inalterados.",
+        "internalLinking": "Novos links bairro→serviços e bairro→bairros vizinhos da mesma região; dois links quebrados eliminados.",
+        "conteudo": "Bloco de navegação adicionado ao rodapé do conteúdo, sem texto editorial novo.",
+        "schema": "Sem alteração de JSON-LD.",
+        "metadata": "Sem alteração de metadata.",
+        "lastmod": "Elegível apenas para as URLs de bairro curadas.",
+        "conversao": "Sem CTA novo."
+      },
+      "coorte": "INTERVENTION_COHORT",
+      "experimentalStatus": "INTERVENED",
+      "ordem": 3,
+      "hashAnterior": "a53c0c8517d7cdc035a6d76f2139e77e214a84cd5710360b3581812d149840a9",
+      "hash": "6148225d6770a327d5b705520f98f0b01af9ae3888e018e48d58a46e23ec1514"
     }
   ],
   "coortes": {
@@ -220,7 +279,7 @@
       ]
     },
     "INTERVENTION_COHORT": {
-      "total": 2,
+      "total": 28,
       "urls": [
         {
           "url": "/",
@@ -231,117 +290,143 @@
           "url": "/areas-atendidas",
           "experimental_status": "INTERVENED",
           "intervention_at": "2026-08-25T04:40:00.000Z"
+        },
+        {
+          "url": "/bairros/agua-verde",
+          "experimental_status": "INTERVENED",
+          "intervention_at": "2026-08-25T07:30:00.000Z"
+        },
+        {
+          "url": "/bairros/bacacheri",
+          "experimental_status": "INTERVENED",
+          "intervention_at": "2026-08-25T07:30:00.000Z"
+        },
+        {
+          "url": "/bairros/batel",
+          "experimental_status": "INTERVENED",
+          "intervention_at": "2026-08-25T07:30:00.000Z"
+        },
+        {
+          "url": "/bairros/bigorrilho",
+          "experimental_status": "INTERVENED",
+          "intervention_at": "2026-08-25T07:30:00.000Z"
+        },
+        {
+          "url": "/bairros/boa-vista",
+          "experimental_status": "INTERVENED",
+          "intervention_at": "2026-08-25T07:30:00.000Z"
+        },
+        {
+          "url": "/bairros/boqueirao",
+          "experimental_status": "INTERVENED",
+          "intervention_at": "2026-08-25T07:30:00.000Z"
+        },
+        {
+          "url": "/bairros/cabral",
+          "experimental_status": "INTERVENED",
+          "intervention_at": "2026-08-25T07:30:00.000Z"
+        },
+        {
+          "url": "/bairros/cajuru",
+          "experimental_status": "INTERVENED",
+          "intervention_at": "2026-08-25T07:30:00.000Z"
+        },
+        {
+          "url": "/bairros/campo-comprido",
+          "experimental_status": "INTERVENED",
+          "intervention_at": "2026-08-25T07:30:00.000Z"
+        },
+        {
+          "url": "/bairros/capao-raso",
+          "experimental_status": "INTERVENED",
+          "intervention_at": "2026-08-25T07:30:00.000Z"
+        },
+        {
+          "url": "/bairros/centro",
+          "experimental_status": "INTERVENED",
+          "intervention_at": "2026-08-25T07:30:00.000Z"
+        },
+        {
+          "url": "/bairros/cic",
+          "experimental_status": "INTERVENED",
+          "intervention_at": "2026-08-25T07:30:00.000Z"
+        },
+        {
+          "url": "/bairros/cristo-rei",
+          "experimental_status": "INTERVENED",
+          "intervention_at": "2026-08-25T07:30:00.000Z"
+        },
+        {
+          "url": "/bairros/fazendinha",
+          "experimental_status": "INTERVENED",
+          "intervention_at": "2026-08-25T07:30:00.000Z"
+        },
+        {
+          "url": "/bairros/hauer",
+          "experimental_status": "INTERVENED",
+          "intervention_at": "2026-08-25T07:30:00.000Z"
+        },
+        {
+          "url": "/bairros/juveve",
+          "experimental_status": "INTERVENED",
+          "intervention_at": "2026-08-25T07:30:00.000Z"
+        },
+        {
+          "url": "/bairros/merces",
+          "experimental_status": "INTERVENED",
+          "intervention_at": "2026-08-25T07:30:00.000Z"
+        },
+        {
+          "url": "/bairros/novo-mundo",
+          "experimental_status": "INTERVENED",
+          "intervention_at": "2026-08-25T07:30:00.000Z"
+        },
+        {
+          "url": "/bairros/pinheirinho",
+          "experimental_status": "INTERVENED",
+          "intervention_at": "2026-08-25T07:30:00.000Z"
+        },
+        {
+          "url": "/bairros/portao",
+          "experimental_status": "INTERVENED",
+          "intervention_at": "2026-08-25T07:30:00.000Z"
+        },
+        {
+          "url": "/bairros/reboucas",
+          "experimental_status": "INTERVENED",
+          "intervention_at": "2026-08-25T07:30:00.000Z"
+        },
+        {
+          "url": "/bairros/santa-felicidade",
+          "experimental_status": "INTERVENED",
+          "intervention_at": "2026-08-25T07:30:00.000Z"
+        },
+        {
+          "url": "/bairros/seminario",
+          "experimental_status": "INTERVENED",
+          "intervention_at": "2026-08-25T07:30:00.000Z"
+        },
+        {
+          "url": "/bairros/sitio-cercado",
+          "experimental_status": "INTERVENED",
+          "intervention_at": "2026-08-25T07:30:00.000Z"
+        },
+        {
+          "url": "/bairros/uberaba",
+          "experimental_status": "INTERVENED",
+          "intervention_at": "2026-08-25T07:30:00.000Z"
+        },
+        {
+          "url": "/bairros/xaxim",
+          "experimental_status": "INTERVENED",
+          "intervention_at": "2026-08-25T07:30:00.000Z"
         }
       ]
     },
     "INDIRECT_DISCOVERY_COHORT": {
-      "total": 37,
+      "total": 11,
       "motivo": "novo inbound recebido do diretório de localidades em /areas-atendidas",
       "urls": [
-        {
-          "url": "/bairros/agua-verde",
-          "experimental_status": "INDIRECT_DISCOVERY_INTERVENTION"
-        },
-        {
-          "url": "/bairros/bacacheri",
-          "experimental_status": "INDIRECT_DISCOVERY_INTERVENTION"
-        },
-        {
-          "url": "/bairros/batel",
-          "experimental_status": "INDIRECT_DISCOVERY_INTERVENTION"
-        },
-        {
-          "url": "/bairros/bigorrilho",
-          "experimental_status": "INDIRECT_DISCOVERY_INTERVENTION"
-        },
-        {
-          "url": "/bairros/boa-vista",
-          "experimental_status": "INDIRECT_DISCOVERY_INTERVENTION"
-        },
-        {
-          "url": "/bairros/boqueirao",
-          "experimental_status": "INDIRECT_DISCOVERY_INTERVENTION"
-        },
-        {
-          "url": "/bairros/cabral",
-          "experimental_status": "INDIRECT_DISCOVERY_INTERVENTION"
-        },
-        {
-          "url": "/bairros/cajuru",
-          "experimental_status": "INDIRECT_DISCOVERY_INTERVENTION"
-        },
-        {
-          "url": "/bairros/campo-comprido",
-          "experimental_status": "INDIRECT_DISCOVERY_INTERVENTION"
-        },
-        {
-          "url": "/bairros/capao-raso",
-          "experimental_status": "INDIRECT_DISCOVERY_INTERVENTION"
-        },
-        {
-          "url": "/bairros/centro",
-          "experimental_status": "INDIRECT_DISCOVERY_INTERVENTION"
-        },
-        {
-          "url": "/bairros/cic",
-          "experimental_status": "INDIRECT_DISCOVERY_INTERVENTION"
-        },
-        {
-          "url": "/bairros/cristo-rei",
-          "experimental_status": "INDIRECT_DISCOVERY_INTERVENTION"
-        },
-        {
-          "url": "/bairros/fazendinha",
-          "experimental_status": "INDIRECT_DISCOVERY_INTERVENTION"
-        },
-        {
-          "url": "/bairros/hauer",
-          "experimental_status": "INDIRECT_DISCOVERY_INTERVENTION"
-        },
-        {
-          "url": "/bairros/juveve",
-          "experimental_status": "INDIRECT_DISCOVERY_INTERVENTION"
-        },
-        {
-          "url": "/bairros/merces",
-          "experimental_status": "INDIRECT_DISCOVERY_INTERVENTION"
-        },
-        {
-          "url": "/bairros/novo-mundo",
-          "experimental_status": "INDIRECT_DISCOVERY_INTERVENTION"
-        },
-        {
-          "url": "/bairros/pinheirinho",
-          "experimental_status": "INDIRECT_DISCOVERY_INTERVENTION"
-        },
-        {
-          "url": "/bairros/portao",
-          "experimental_status": "INDIRECT_DISCOVERY_INTERVENTION"
-        },
-        {
-          "url": "/bairros/reboucas",
-          "experimental_status": "INDIRECT_DISCOVERY_INTERVENTION"
-        },
-        {
-          "url": "/bairros/santa-felicidade",
-          "experimental_status": "INDIRECT_DISCOVERY_INTERVENTION"
-        },
-        {
-          "url": "/bairros/seminario",
-          "experimental_status": "INDIRECT_DISCOVERY_INTERVENTION"
-        },
-        {
-          "url": "/bairros/sitio-cercado",
-          "experimental_status": "INDIRECT_DISCOVERY_INTERVENTION"
-        },
-        {
-          "url": "/bairros/uberaba",
-          "experimental_status": "INDIRECT_DISCOVERY_INTERVENTION"
-        },
-        {
-          "url": "/bairros/xaxim",
-          "experimental_status": "INDIRECT_DISCOVERY_INTERVENTION"
-        },
         {
           "url": "/tecnico-informatica-almirante-tamandare",
           "experimental_status": "INDIRECT_DISCOVERY_INTERVENTION"
@@ -391,10 +476,10 @@
   },
   "universoCurado": 130,
   "freezeV2": {
-    "criadoEm": "2026-08-25T05:28:44.590Z",
+    "criadoEm": "2026-08-25T07:29:24.630Z",
     "contentHashesRef": "a3cb748b0f14a57da20d7bb25d4efff4545029085ab186d4acc0edc925dc5a71",
     "curadoHash": "e8f8544eba7c928d6268c32cda10d4b6d355f4be0c1e10812d712fa7a0f72a7e",
     "regra": "Qualquer alteração pública após este selo exige NOVO evento de intervenção."
   },
-  "selo": "bff936e327fd72f159e3d54347e8986bed312cdd83332ea5a0595055f5aba1d3"
+  "selo": "72bfdd59665f65ae7631f6098027c9fffc20de55870e25a87ff67f66519cd31a"
 }

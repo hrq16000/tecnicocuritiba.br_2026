@@ -12,7 +12,10 @@ import { existsSync, readFileSync } from "node:fs";
 import { CURATED_PATHS } from "./lib/curated-urls.mjs";
 
 const LEDGER = "public/intervencoes-d0.json";
-const ESPERADO = { CLEAN_COHORT: 91, INTERVENTION_COHORT: 2, INDIRECT_DISCOVERY_COHORT: 37 };
+// Atualizado em 2026-08-25 (INT-2026-08-25-003): o interlinking do template de
+// bairro alcançou as 26 URLs /bairros/* curadas, migrando-as de descoberta
+// indireta para intervenção direta. Total permanece 130.
+const ESPERADO = { CLEAN_COHORT: 91, INTERVENTION_COHORT: 28, INDIRECT_DISCOVERY_COHORT: 11 };
 
 if (!existsSync(LEDGER)) {
   console.error(`❌ Ledger ausente (${LEDGER}). Rode: npm run intervencao:registrar`);
@@ -55,4 +58,4 @@ if (erros.length) {
   for (const e of erros) console.error(`  • ${e}`);
   process.exit(1);
 }
-console.log("✅ 91 + 2 + 37 = 130 — coortes íntegras e mutuamente exclusivas.");
+console.log("✅ 91 + 28 + 11 = 130 — coortes íntegras e mutuamente exclusivas.");
