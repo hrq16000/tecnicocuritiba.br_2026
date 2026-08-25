@@ -536,6 +536,60 @@ export type Database = {
         }
         Relationships: []
       }
+      os_publicas: {
+        Row: {
+          acessorios: string | null
+          created_at: string
+          equipamento: string
+          id: string
+          ip_hash: string | null
+          local: string | null
+          marca_modelo: string | null
+          modalidade_id: string
+          nome: string
+          protocolo: string
+          sintoma: string
+          status: string
+          termos_versao: string
+          tipo: string
+          valor_label: string
+        }
+        Insert: {
+          acessorios?: string | null
+          created_at?: string
+          equipamento: string
+          id?: string
+          ip_hash?: string | null
+          local?: string | null
+          marca_modelo?: string | null
+          modalidade_id: string
+          nome: string
+          protocolo: string
+          sintoma: string
+          status?: string
+          termos_versao: string
+          tipo: string
+          valor_label: string
+        }
+        Update: {
+          acessorios?: string | null
+          created_at?: string
+          equipamento?: string
+          id?: string
+          ip_hash?: string | null
+          local?: string | null
+          marca_modelo?: string | null
+          modalidade_id?: string
+          nome?: string
+          protocolo?: string
+          sintoma?: string
+          status?: string
+          termos_versao?: string
+          tipo?: string
+          valor_label?: string
+        }
+        Relationships: []
+      }
       os_verification_codes: {
         Row: {
           attempts: number
