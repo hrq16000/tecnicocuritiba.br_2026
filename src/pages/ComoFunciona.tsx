@@ -7,6 +7,8 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { InterlinkingBlock } from "@/components/InterlinkingBlock";
 import { JsonLdSchema } from "@/components/JsonLdSchema";
+import { SCHEMA_SLOTS, SLOT_PRIORITY, useJsonLdSlot } from "@/lib/jsonLdSlots";
+import { siteConfig, absoluteUrl } from "@/lib/siteConfig";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { ExperienciaBadge } from "@/components/social-proof/ExperienciaBadge";
 import { trackPageView, trackCTAClick } from "@/lib/analytics";
@@ -46,7 +48,8 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-const WHATSAPP_NUMBER = "5541997086380";
+const WHATSAPP_NUMBER = siteConfig.whatsappNumber;
+
 
 const ComoFunciona = () => {
   useEffect(() => {
@@ -60,6 +63,29 @@ const ComoFunciona = () => {
     }
     trackPageView("/como-funciona", "Como Funciona");
   }, []);
+
+  useJsonLdSlot(
+    SCHEMA_SLOTS.howTo,
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "@id": `${absoluteUrl("/como-funciona")}#howto`,
+      name: "Como funciona o atendimento técnico de informática em Curitiba",
+      description:
+        "Passo a passo do atendimento: triagem, agendamento, diagnóstico, aprovação do valor, execução e pós-serviço.",
+      totalTime: "PT1H",
+      supply: [],
+      tool: [],
+      step: etapas.map((e, i) => ({
+        "@type": "HowToStep",
+        position: i + 1,
+        name: e.title,
+        text: e.detail,
+        url: `${absoluteUrl("/como-funciona")}#passo-${i + 1}`,
+      })),
+    },
+    SLOT_PRIORITY.page,
+  );
 
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Olá! Gostaria de entender como funciona o atendimento técnico.")}`;
 
@@ -166,7 +192,7 @@ const ComoFunciona = () => {
                 {etapas.map((etapa, i) => {
                   const Icon = etapa.icon;
                   return (
-                    <div key={i} className="relative flex gap-4 md:gap-6">
+                    <div key={i} id={`passo-${i + 1}`} className="relative flex gap-4 md:gap-6">
                       {/* Timeline line */}
                       {i < etapas.length - 1 && (
                         <div className="absolute left-5 md:left-6 top-14 bottom-0 w-0.5 bg-border" />

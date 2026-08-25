@@ -36,6 +36,13 @@ export const TriageField = forwardRef<HTMLDivElement, Props>(
           {field.label}
           {field.required && <span className="text-destructive"> *</span>}
         </label>
+        {invalid && (
+          <p role="alert" className="text-xs font-medium text-destructive">
+            {field.minLength
+              ? `Obrigatório — descreva com pelo menos ${field.minLength} caracteres.`
+              : "Campo obrigatório — preencha para continuar."}
+          </p>
+        )}
         {field.helper && (
           <p id={describedById} className="text-xs text-muted-foreground">
             {field.helper}
