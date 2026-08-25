@@ -65,6 +65,9 @@ jobs:
           SENTRY_PROJECT: ${{ secrets.SENTRY_PROJECT }}
       - name: Gate de WhatsApp oculto no HTML renderizado
         run: npm run check:wa-number-dom
+      - name: Gate de imagens geradas por IA / placeholders no HTML renderizado
+        run: npm run check:ai-images
+
       - name: Gate de alt text das imagens (sem alt genérico/placeholder)
         run: npm run check:image-alt
       - name: Otimização de fotos reais (WebP/AVIF) — bloqueia deploy se falhar
