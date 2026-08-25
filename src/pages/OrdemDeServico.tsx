@@ -38,6 +38,9 @@ const OrdemDeServico = () => {
     modalidadeId: MODALIDADES[0].id,
   }));
   const [numero, setNumero] = useState<string | null>(null);
+  const [salvando, setSalvando] = useState(false);
+  const [modalidadeTocada, setModalidadeTocada] = useState(false);
+  const [consulta, setConsulta] = useState("");
 
   // Pré-preenche bairro/cidade assim que a detecção (IP ou precisa) resolver,
   // sem sobrescrever o que o usuário já digitou.
@@ -54,7 +57,18 @@ const OrdemDeServico = () => {
 
   const set = (k: keyof OsForm) => (v: string) => setForm((p) => ({ ...p, [k]: v }));
 
+  // Classificação automática: eletrônicos de bancada e falhas de energia vão
+  // para coleta; o restante começa como visita técnica de inspeção.
+  const tipo = classificarAtendimento(form.equipamento, form.sintoma);
+
+  useEffect(() => {
+    if (modalidadeTocada || numero) return;
+    const sugerida = tipo === "laboratorio" ? "coleta-diagnostico" : "visita-avulsa";
+    setForm((p) => (p.modalidadeId === sugerida ? p : { ...p, modalidadeId: sugerida }));
+  }, [tipo, modalidadeTocada, numero]);
+
   const modalidade = MODALIDADES.find((m) => m.id === form.modalidadeId) ?? MODALIDADES[0];
+
 
   const pronta =
     form.nome.trim().length >= 2 && form.equipamento.trim().length >= 2 && form.sintoma.trim().length >= 5;
