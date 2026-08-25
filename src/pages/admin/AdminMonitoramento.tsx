@@ -31,6 +31,8 @@ import { ExperimentosControlados } from "@/components/admin/monitoramento/Experi
 import { ClassificacaoAlertas } from "@/components/admin/monitoramento/ClassificacaoAlertas";
 import { ResumoDiarioAlertas } from "@/components/admin/monitoramento/ResumoDiarioAlertas";
 import { ReindexContencao } from "@/components/admin/monitoramento/ReindexContencao";
+import { IntervencoesRegistradas } from "@/components/admin/monitoramento/IntervencoesRegistradas";
+
 import type { MarcoUrl } from "@/components/admin/monitoramento/types";
 import { Navigate } from "@/lib/router-compat";
 import { useAdminAuth } from "@/hooks/useAdminAuth";
@@ -398,6 +400,12 @@ export default function AdminMonitoramento() {
             Nenhum marco registrado ainda.
           </p>
         )}
+
+        <section className="mt-8">
+          <IntervencoesRegistradas />
+        </section>
+
+
 
         {atual && (
           <>
