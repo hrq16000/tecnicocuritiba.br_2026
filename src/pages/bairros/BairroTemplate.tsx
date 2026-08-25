@@ -35,7 +35,6 @@ import {
   Zap
 } from "lucide-react";
 
-const WHATSAPP_NUMBER = "5541997086380";
 
 interface BairroData {
   nome: string;
