@@ -190,6 +190,92 @@ export default function AdminIndexDaily() {
               </div>
             </section>
 
+            {/* Tier A é o compromisso real de indexação: comercial + sintoma. */}
+            <section className="mt-10 grid gap-6 lg:grid-cols-2">
+              <div>
+                <h2 className="text-lg font-semibold">Indexação por Tier</h2>
+                {data.tiers?.length ? (
+                  <div className="mt-4 space-y-3">
+                    {data.tiers.map((t) => (
+                      <div key={t.tier} className="rounded-xl border border-border bg-card p-4">
+                        <div className="flex flex-wrap items-baseline justify-between gap-2">
+                          <p className="text-sm font-medium">
+                            Tier {t.tier}
+                            {t.tier === "A" && (
+                              <span className="ml-2 rounded bg-primary/15 px-2 py-0.5 text-xs text-primary">
+                                compromisso
+                              </span>
+                            )}
+                          </p>
+                          <p className="text-sm text-muted-foreground">
+                            {t.indexadas}/{t.total} indexadas
+                            {t.taxaIndexacao !== null ? ` · ${t.taxaIndexacao}%` : ""}
+                          </p>
+                        </div>
+                        <div className="mt-2 h-2 overflow-hidden rounded-full bg-muted">
+                          <div
+                            className={`h-full rounded-full ${t.tier === "A" ? "bg-primary" : "bg-foreground/40"}`}
+                            style={{ width: `${t.taxaIndexacao ?? 0}%` }}
+                          />
+                        </div>
+                        <p className="mt-2 text-xs text-muted-foreground">
+                          {t.descobertas} descoberta(s) sem indexar · {t.desconhecidas} desconhecida(s)
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  <p className="mt-4 text-sm">{SEM_DADO}</p>
+                )}
+              </div>
+
+              <div>
+                <h2 className="text-lg font-semibold">Distribuição de qualidade</h2>
+                {data.qualidade ? (
+                  <div className="mt-4 rounded-xl border border-border bg-card p-4">
+                    <div className="space-y-3">
+                      {["A", "B", "C", "D", "E"].map((faixa) => {
+                        const n = data.qualidade?.faixas[faixa] ?? 0;
+                        const total = Object.values(data.qualidade?.faixas ?? {}).reduce((a, b) => a + b, 0) || 1;
+                        return (
+                          <div key={faixa}>
+                            <div className="flex items-baseline justify-between text-sm">
+                              <span className="font-medium">Faixa {faixa}</span>
+                              <span className="text-muted-foreground">
+                                {n} URL(s) · {((n / total) * 100).toFixed(0)}%
+                              </span>
+                            </div>
+                            <div className="mt-1 h-2 overflow-hidden rounded-full bg-muted">
+                              <div
+                                className={`h-full rounded-full ${faixa === "D" || faixa === "E" ? "bg-destructive/70" : "bg-primary"}`}
+                                style={{ width: `${(n / total) * 100}%` }}
+                              />
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                    <p className="mt-4 text-xs text-muted-foreground">
+                      Score mediano geral: {data.qualidade.scoreMedianoGeral ?? "—"}
+                      {data.pisoQualidade
+                        ? ` · piso de qualidade local: score ${data.pisoQualidade.score}, exclusividade ${(data.pisoQualidade.textoExclusivoRatio * 100).toFixed(0)}%, similaridade ≤ ${data.pisoQualidade.similaridadeMax}`
+                        : ""}
+                    </p>
+                    {data.consolidacao && (
+                      <p className="mt-2 text-xs text-muted-foreground">
+                        Consolidação da Fase Final: {data.consolidacao.urlsAntes} → {data.consolidacao.urlsDepois} URLs
+                        curadas ({data.consolidacao.total} redirecionadas 301).
+                      </p>
+                    )}
+                  </div>
+                ) : (
+                  <p className="mt-4 text-sm">{SEM_DADO}</p>
+                )}
+              </div>
+            </section>
+
+
+
             <section className="mt-10 grid gap-4 md:grid-cols-3">
               <div className="rounded-xl border border-border bg-card p-4">
                 <p className="flex items-center gap-2 text-sm font-medium">
