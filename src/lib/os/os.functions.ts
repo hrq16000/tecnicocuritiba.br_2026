@@ -1,5 +1,5 @@
-import { createServerFn, getRequestHeader } from "@tanstack/react-start";
-import { createHash, randomInt } from "crypto";
+import { createServerFn } from "@tanstack/react-start";
+import { randomInt } from "crypto";
 import { z } from "zod";
 
 import { TERMOS_VERSAO } from "./termosOs";
@@ -25,16 +25,6 @@ const consultarSchema = z.object({
     .regex(/^OS-\d{8}-[A-Z0-9]{4}$/, "Protocolo inválido"),
 });
 
-function hashOrigem(): string | null {
-  const ip =
-    getRequestHeader("cf-connecting-ip") ??
-    getRequestHeader("x-forwarded-for")?.split(",")[0]?.trim() ??
-    null;
-  if (!ip) return null;
-  const salt = process.env["SUPABASE_URL"] ?? "os";
-  return createHash("sha256").update(`${salt}:${ip}`).digest("hex").slice(0, 32);
-}
-
 function gerarProtocolo(): string {
   const d = new Date();
   const p = (n: number) => String(n).padStart(2, "0");
@@ -49,18 +39,14 @@ export const criarOs = createServerFn({ method: "POST" })
   .inputValidator((input: unknown) => criarSchema.parse(input))
   .handler(async ({ data }) => {
     const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
-    const ipHash = hashOrigem();
-
-    if (ipHash) {
-      const desde = new Date(Date.now() - 60 * 60 * 1000).toISOString();
-      const { count } = await supabaseAdmin
-        .from("os_publicas")
-        .select("id", { count: "exact", head: true })
-        .eq("ip_hash", ipHash)
-        .gte("created_at", desde);
-      if ((count ?? 0) >= 8) {
-        throw new Error("Muitas ordens abertas em sequência. Tente novamente em alguns minutos.");
-      }
+    // Contenção simples de abuso: limite global de aberturas por janela curta.
+    const desde = new Date(Date.now() - 10 * 60 * 1000).toISOString();
+    const { count } = await supabaseAdmin
+      .from("os_publicas")
+      .select("id", { count: "exact", head: true })
+      .gte("created_at", desde);
+    if ((count ?? 0) >= 30) {
+      throw new Error("Muitas ordens abertas em sequência. Tente novamente em alguns minutos.");
     }
 
     let ultimoErro: string | null = null;
@@ -78,7 +64,6 @@ export const criarOs = createServerFn({ method: "POST" })
         modalidade_id: data.modalidadeId,
         valor_label: data.valorLabel,
         termos_versao: TERMOS_VERSAO,
-        ip_hash: ipHash,
       });
       if (!error) return { protocolo };
       ultimoErro = error.message;
