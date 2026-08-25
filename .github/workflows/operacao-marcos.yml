@@ -73,9 +73,9 @@ jobs:
           node scripts/snapshot-marco.mjs --marco=${{ steps.marco.outputs.marco }} --commit=${{ github.sha }} $FLAGS
 
       # ── Reindexa memórias/snapshots e confirma cobertura do marco atual.
-      - name: Reindexar e verificar snapshots
+      - name: Reindexar e verificar snapshots (com contenção automática)
         if: always()
-        run: npm run reindex:snapshots:gate
+        run: node scripts/reindex-snapshots.mjs --strict --conter-auto
 
       - name: Diff de identidade de SERP entre marcos
         if: always()
