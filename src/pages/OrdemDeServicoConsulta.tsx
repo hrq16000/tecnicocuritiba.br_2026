@@ -20,27 +20,45 @@ const Linha = ({ label, valor }: { label: string; valor?: string | null }) =>
 const OrdemDeServicoConsulta = () => {
   const { protocolo: protocoloParam } = useParams({ from: "/ordem-de-servico/$protocolo" });
   const protocolo = protocoloParam.toUpperCase();
-  const [estado, setEstado] = useState<"carregando" | "ok" | "nao-encontrada" | "erro">("carregando");
+  const [estado, setEstado] = useState<
+    "carregando" | "ok" | "nao-encontrada" | "erro" | "limite" | "invalido"
+  >("carregando");
   const [os, setOs] = useState<OsPublica | null>(null);
 
   useEffect(() => {
     let ativo = true;
     setEstado("carregando");
-    consultarOs({ data: { protocolo } })
-      .then((resultado) => {
-        if (!ativo) return;
-        if (!resultado) {
-          setEstado("nao-encontrada");
-          return;
-        }
-        setOs(resultado);
-        setEstado("ok");
-      })
-      .catch(() => {
-        if (ativo) setEstado("erro");
-      });
+
+    // Validação local antes de gastar requisição: formato OS-AAAAMMDD-XXXX.
+    if (!/^OS-\d{8}-[A-Z0-9]{4}$/.test(protocolo)) {
+      setEstado("invalido");
+      return () => {
+        ativo = false;
+      };
+    }
+
+    // Debounce curto: evita disparo duplicado em remontagem/StrictMode.
+    const timer = setTimeout(() => {
+      consultarOs({ data: { protocolo } })
+        .then((resultado) => {
+          if (!ativo) return;
+          if (!resultado) {
+            setEstado("nao-encontrada");
+            return;
+          }
+          setOs(resultado);
+          setEstado("ok");
+        })
+        .catch((e: unknown) => {
+          if (!ativo) return;
+          const msg = e instanceof Error ? e.message : "";
+          setEstado(msg.includes(OS_ERRO_LIMITE) ? "limite" : "erro");
+        });
+    }, 250);
+
     return () => {
       ativo = false;
+      clearTimeout(timer);
     };
   }, [protocolo]);
 
