@@ -293,18 +293,74 @@ if (existsSync("reports/serp-signals-baseline.json") && !existsSync(serpMarco)) 
 }
 registro.serpSnapshot = existsSync(serpMarco) ? serpMarco : null;
 
+/* ── Procedência, freshness, reconciliação e assinatura ───────────────────
+ * Cada métrica declara de onde veio (OBSERVED × DERIVED × N/A × STALE) e o
+ * funil precisa fechar com o universo curado. Se não fechar, FAIL CLOSED:
+ * discrepância escondida corrompe toda a série temporal seguinte.
+ */
+const idadeArquivo = (p) => (existsSync(p) ? statSync(p).mtime.toISOString() : null);
+const fontes = [
+  { metrica: "google.*", fonte: "gsc", collectedAt: inventario?.geradoEm ?? idadeArquivo("reports/indexation-inventory.json"), sourceUpdatedAt: inventario?.gscAtualizadoEm ?? null },
+  { metrica: "urls[].http/ttfb/canonical", fonte: "crawl", collectedAt: inventario?.geradoEm ?? idadeArquivo("reports/indexation-inventory.json") },
+  { metrica: "sitemap.*", fonte: "sitemap", collectedAt: idadeArquivo("reports/sitemap-inclusions.json") },
+  { metrica: "grafo.*", fonte: "internal_graph", collectedAt: idadeArquivo("reports/internal-graph.json") },
+  { metrica: "indexnow.*", fonte: "indexnow", collectedAt: indexnow?.executadoEm ?? idadeArquivo("reports/indexnow-last-run.json") },
+  { metrica: "bing.*", fonte: "bing", collectedAt: bing?.coletadoEm ?? idadeArquivo("reports/bing-webmaster.json") },
+  { metrica: "serpSignals.*", fonte: "snapshot_local", collectedAt: serp?.geradoEm ?? idadeArquivo(serpMarco) },
+];
+
+const reconciliacao = reconciliarFunil(registro.google, urls.length);
+if (!reconciliacao.ok && !args.includes("--aceitar-discrepancia")) {
+  console.error(`✖ ${MARCO} não persistido: ${reconciliacao.motivo}`);
+  console.error("  Nenhum estado foi escondido: corrija a coleta ou declare o estado adicional antes de registrar o marco.");
+  registrarJob({
+    job: "snapshot:marco",
+    marco: MARCO,
+    duracaoMs: Date.now() - INICIO_JOB,
+    status: "falhou",
+    failClosed: true,
+    contagens: { universo: reconciliacao.universo, soma: reconciliacao.soma },
+    logs: [`reconciliação do funil reprovada · ${reconciliacao.motivo}`],
+  });
+  process.exit(2);
+}
+
+const registroAssinado = assinarMarco(registro, { fontes, reconciliacao });
+Object.assign(registro, registroAssinado);
+registro.janela = globalThis.__JANELA_MARCO__ ?? null;
+
 const historico = lerJson("reports/operacao-marcos.json") ?? { marcos: [] };
 const idx = historico.marcos.findIndex((m) => m.marco === MARCO);
 if (idx >= 0 && !args.includes("--overwrite")) {
-  console.log(`[marco] ${MARCO} já registrado em ${historico.marcos[idx].registradoEm}; use --overwrite para substituir.`);
+  console.log(`[marco] ${MARCO} já registrado em ${historico.marcos[idx].registradoEm}; use --overwrite para reprocessar (o original é preservado na trilha).`);
 } else {
-  if (idx >= 0) historico.marcos[idx] = registro;
-  else historico.marcos.push(registro);
+  if (idx >= 0) {
+    // Reprocessamento: o marco anterior vira evidência arquivada, nunca é apagado.
+    const anterior = historico.marcos[idx];
+    const trilhaPath = "reports/marco-reprocessamentos.json";
+    const trilha = lerJson(trilhaPath) ?? { registros: [] };
+    trilha.registros.push({
+      reprocessadoEm: new Date().toISOString(),
+      marco: MARCO,
+      motivo: arg("motivo") ?? "não informado",
+      hashAnterior: anterior?.integridade?.hash ?? null,
+      snapshotIdAnterior: anterior?.integridade?.snapshotId ?? null,
+      hashNovo: registro.integridade.hash,
+      snapshotIdNovo: registro.integridade.snapshotId,
+      original: anterior,
+    });
+    trilha.atualizadoEm = new Date().toISOString();
+    writeFileSync(trilhaPath, `${JSON.stringify(trilha, null, 2)}\n`);
+    console.log(`[marco] reprocessamento de ${MARCO} registrado em ${trilhaPath} (original preservado).`);
+    historico.marcos[idx] = registro;
+  } else historico.marcos.push(registro);
   const ordem = { D0: 0, D7: 1, D14: 2, D30: 3 };
   historico.marcos.sort((a, b) => ordem[a.marco] - ordem[b.marco]);
   historico.atualizadoEm = new Date().toISOString();
+  historico.schemaVersion = SCHEMA_VERSION;
   writeFileSync("reports/operacao-marcos.json", JSON.stringify(historico, null, 2));
 }
+
 
 mkdirSync("public", { recursive: true });
 writeFileSync("public/operacao-marcos.json", JSON.stringify(historico, null, 2));
