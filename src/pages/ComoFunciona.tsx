@@ -50,33 +50,6 @@ import {
 
 const WHATSAPP_NUMBER = siteConfig.whatsappNumber;
 
-/** Passo a passo real do atendimento — fonte única do HowTo e do texto da página. */
-const PASSOS_ATENDIMENTO = [
-  {
-    name: "Triagem pelo WhatsApp",
-    text: "Você descreve equipamento, sintoma e localidade na triagem. Já nessa etapa definimos se o caso é remoto, visita ou coleta.",
-  },
-  {
-    name: "Agendamento",
-    text: "Confirmamos janela de atendimento conforme a disponibilidade da agenda e a região atendida em Curitiba e cidades vizinhas.",
-  },
-  {
-    name: "Diagnóstico técnico",
-    text: "O equipamento é testado antes de qualquer proposta: energia, inicialização, armazenamento, memória e temperatura, conforme o sintoma.",
-  },
-  {
-    name: "Aprovação do valor",
-    text: "Apresentamos o escopo e o valor por escrito. Nada é executado sem sua aprovação, e recusamos o serviço quando o reparo não compensa.",
-  },
-  {
-    name: "Execução do serviço",
-    text: "Serviço realizado a domicílio, remotamente ou em bancada, com registro do que foi feito em cada equipamento.",
-  },
-  {
-    name: "Entrega e pós-serviço",
-    text: "Testes de conferência com você, orientações de uso e garantia escopada ao serviço executado.",
-  },
-] as const;
 
 const ComoFunciona = () => {
   useEffect(() => {
@@ -103,11 +76,11 @@ const ComoFunciona = () => {
       totalTime: "PT1H",
       supply: [],
       tool: [],
-      step: PASSOS_ATENDIMENTO.map((p, i) => ({
+      step: etapas.map((e, i) => ({
         "@type": "HowToStep",
         position: i + 1,
-        name: p.name,
-        text: p.text,
+        name: e.title,
+        text: e.detail,
         url: `${absoluteUrl("/como-funciona")}#passo-${i + 1}`,
       })),
     },
@@ -219,7 +192,7 @@ const ComoFunciona = () => {
                 {etapas.map((etapa, i) => {
                   const Icon = etapa.icon;
                   return (
-                    <div key={i} className="relative flex gap-4 md:gap-6">
+                    <div key={i} id={`passo-${i + 1}`} className="relative flex gap-4 md:gap-6">
                       {/* Timeline line */}
                       {i < etapas.length - 1 && (
                         <div className="absolute left-5 md:left-6 top-14 bottom-0 w-0.5 bg-border" />
