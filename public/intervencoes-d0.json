@@ -1,6 +1,6 @@
 {
   "schema": "intervencao/1.0",
-  "atualizadoEm": "2026-08-25T07:29:24.630Z",
+  "atualizadoEm": "2026-08-25T07:41:11.840Z",
   "baseline": {
     "marco": "D0",
     "registradoEm": "2026-08-25T01:49:17.273Z",
@@ -11,7 +11,7 @@
   },
   "politica": {
     "freeze_v1": "baseline original D0 — ZERO_PUBLIC_SEO_DIFF",
-    "intervention_event": "3 intervenção(ões) pública(s) registrada(s) na janela WAIT",
+    "intervention_event": "4 intervenção(ões) pública(s) registrada(s) na janela WAIT",
     "freeze_v2": "estado público pós-intervenção; nenhuma nova alteração pública até o D14 real",
     "d14Valido": true,
     "d14Earliest": "2026-09-08T01:49:17.273Z",
@@ -179,6 +179,39 @@
       "ordem": 3,
       "hashAnterior": "a53c0c8517d7cdc035a6d76f2139e77e214a84cd5710360b3581812d149840a9",
       "hash": "6148225d6770a327d5b705520f98f0b01af9ae3888e018e48d58a46e23ec1514"
+    },
+    {
+      "id": "INT-2026-08-25-004",
+      "tipo": "PUBLIC_INTERVENTION",
+      "timestamp": "2026-08-25T07:40:00.000Z",
+      "deploymentId": null,
+      "commit": null,
+      "urlsDiretas": [
+        "/"
+      ],
+      "urlsIndiretas": [],
+      "arquivos": [
+        "src/components/home/RegioesCuritibaSection.tsx",
+        "src/lib/whatsappDeepLink.ts",
+        "src/pages/bairros/BairroTemplate.tsx",
+        "scripts/check-bairros-noindex.mjs"
+      ],
+      "mudanca": "INTERNAL_LINKS",
+      "motivo": "Grid de regiões da home passou a linkar as 45 localidades de Curitiba + 9 municípios da RMC (antes só 5 chips eram clicáveis) e os CTAs de bairro receberam deep link contextual de WhatsApp (local + serviço).",
+      "impacto": {
+        "seo": "Malha interna da home ampliada. Title/description/canonical/robots inalterados.",
+        "internalLinking": "54 destinos de localidade agora descobríveis a partir de /.",
+        "conteudo": "Sem texto editorial novo; chips passaram de span para Link.",
+        "schema": "Sem alteração de JSON-LD.",
+        "metadata": "Sem alteração de metadata.",
+        "lastmod": "Elegível apenas para /.",
+        "conversao": "Deep links de WhatsApp com serviço e bairro pré-preenchidos."
+      },
+      "coorte": "INTERVENTION_COHORT",
+      "experimentalStatus": "INTERVENED",
+      "ordem": 4,
+      "hashAnterior": "6148225d6770a327d5b705520f98f0b01af9ae3888e018e48d58a46e23ec1514",
+      "hash": "06145c463cd9eb3dd67c7d4f40f118530cb8eee0b5884b352577c3c7ed9cdb17"
     }
   ],
   "coortes": {
@@ -476,10 +509,10 @@
   },
   "universoCurado": 130,
   "freezeV2": {
-    "criadoEm": "2026-08-25T07:29:24.630Z",
+    "criadoEm": "2026-08-25T07:41:11.842Z",
     "contentHashesRef": "a3cb748b0f14a57da20d7bb25d4efff4545029085ab186d4acc0edc925dc5a71",
     "curadoHash": "e8f8544eba7c928d6268c32cda10d4b6d355f4be0c1e10812d712fa7a0f72a7e",
     "regra": "Qualquer alteração pública após este selo exige NOVO evento de intervenção."
   },
-  "selo": "72bfdd59665f65ae7631f6098027c9fffc20de55870e25a87ff67f66519cd31a"
+  "selo": "92ee0e4daddb5370f7a7bd585f07ea8e9ebd42df8a6655a5034fc8c3c15d538b"
 }
