@@ -10,6 +10,10 @@ on:
     # D7 e D14 são disparados semanalmente; o script decide o marco pelo input
     # padrão de agenda (segunda 07:00 UTC) e ignora marco já registrado.
     - cron: "0 7 * * 1"
+    # D30: tentativa diária às 08:00 UTC. A guarda de janela temporal
+    # (scripts/lib/marco-janela.mjs) é fail-closed — enquanto não houver 30 dias
+    # reais desde o D0 a coleta é recusada e nada é registrado.
+    - cron: "0 8 * * *"
   workflow_dispatch:
     inputs:
       marco:
