@@ -91,6 +91,37 @@ export const INTERVENCOES = [
     coorte: "INTERVENTION_COHORT",
     experimentalStatus: "INTERVENED",
   },
+  {
+    id: "INT-2026-08-25-003",
+    tipo: "PUBLIC_INTERVENTION",
+    timestamp: "2026-08-25T07:30:00.000Z",
+    deploymentId: null,
+    commit: null,
+    urlsDiretas: ["/bairros/*"],
+    urlsIndiretas: "DERIVAR_DO_DIRETORIO",
+    arquivos: [
+      "src/components/areas/BairroInterlinkLocal.tsx",
+      "src/pages/bairros/BairroTemplate.tsx",
+      "src/lib/bairrosBaseline.ts",
+      "scripts/check-rotas-localidades.mjs",
+      ".github/workflows/ci.yml",
+    ],
+    mudanca: "INTERNAL_LINKS",
+    motivo:
+      "Interlinking básico obrigatório do template de localidade (servicos, bairros vizinhos, hub) e correção de dois destinos de serviço que apontavam para rotas inexistentes (404): /servicos/formatacao-de-computador e /servicos/conserto-de-notebook.",
+    impacto: {
+      seo: "Malha interna alterada em páginas de bairro. Title/description/canonical/robots inalterados.",
+      internalLinking:
+        "Novos links bairro→serviços e bairro→bairros vizinhos da mesma região; dois links quebrados eliminados.",
+      conteudo: "Bloco de navegação adicionado ao rodapé do conteúdo, sem texto editorial novo.",
+      schema: "Sem alteração de JSON-LD.",
+      metadata: "Sem alteração de metadata.",
+      lastmod: "Elegível apenas para as URLs de bairro curadas.",
+      conversao: "Sem CTA novo.",
+    },
+    coorte: "INTERVENTION_COHORT",
+    experimentalStatus: "INTERVENED",
+  },
 ];
 
 export default { LEDGER_SCHEMA, D0, INTERVENCOES };
