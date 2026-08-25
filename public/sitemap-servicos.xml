@@ -15,63 +15,23 @@
   <url><loc>https://tecnico.curitiba.br/servicos/conserto-tv</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
   <url><loc>https://tecnico.curitiba.br/servicos/conserto-placa</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
   <url><loc>https://tecnico.curitiba.br/servicos/conserto-monitor</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://tecnico.curitiba.br/servicos/formatacao-computador/cic</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://tecnico.curitiba.br/servicos/formatacao-computador/batel</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://tecnico.curitiba.br/servicos/formatacao-computador/agua-verde</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://tecnico.curitiba.br/servicos/formatacao-computador/jardim-das-americas</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://tecnico.curitiba.br/servicos/formatacao-computador/ecoville</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://tecnico.curitiba.br/servicos/formatacao-computador/alto-da-xv</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://tecnico.curitiba.br/servicos/formatacao-computador/reboucas</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://tecnico.curitiba.br/servicos/remocao-virus/cic</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://tecnico.curitiba.br/servicos/remocao-virus/agua-verde</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://tecnico.curitiba.br/servicos/remocao-virus/jardim-das-americas</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://tecnico.curitiba.br/servicos/remocao-virus/ecoville</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://tecnico.curitiba.br/servicos/remocao-virus/alto-da-xv</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://tecnico.curitiba.br/servicos/remocao-virus/reboucas</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://tecnico.curitiba.br/servicos/conserto-pc-notebook/centro</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://tecnico.curitiba.br/servicos/conserto-pc-notebook/agua-verde</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://tecnico.curitiba.br/servicos/conserto-pc-notebook/jardim-das-americas</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://tecnico.curitiba.br/servicos/conserto-pc-notebook/ecoville</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://tecnico.curitiba.br/servicos/conserto-pc-notebook/alto-da-xv</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://tecnico.curitiba.br/servicos/conserto-pc-notebook/reboucas</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://tecnico.curitiba.br/servicos/upgrade-ssd-memoria/cic</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://tecnico.curitiba.br/servicos/upgrade-ssd-memoria/centro</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://tecnico.curitiba.br/servicos/upgrade-ssd-memoria/agua-verde</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://tecnico.curitiba.br/servicos/upgrade-ssd-memoria/portao</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://tecnico.curitiba.br/servicos/upgrade-ssd-memoria/jardim-das-americas</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://tecnico.curitiba.br/servicos/upgrade-ssd-memoria/ecoville</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://tecnico.curitiba.br/servicos/upgrade-ssd-memoria/alto-da-xv</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://tecnico.curitiba.br/servicos/upgrade-ssd-memoria/reboucas</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://tecnico.curitiba.br/servicos/redes-wifi/jardim-das-americas</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://tecnico.curitiba.br/servicos/manutencao-tv/jardim-das-americas</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://tecnico.curitiba.br/servicos/redes-wifi/ecoville</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://tecnico.curitiba.br/servicos/manutencao-tv/ecoville</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://tecnico.curitiba.br/servicos/redes-wifi/alto-da-xv</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://tecnico.curitiba.br/servicos/manutencao-tv/alto-da-xv</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://tecnico.curitiba.br/servicos/redes-wifi/reboucas</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://tecnico.curitiba.br/servicos/manutencao-tv/reboucas</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://tecnico.curitiba.br/servicos/redes-wifi/batel</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://tecnico.curitiba.br/servicos/manutencao-tv/batel</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://tecnico.curitiba.br/servicos/redes-wifi/centro</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://tecnico.curitiba.br/servicos/manutencao-tv/centro</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://tecnico.curitiba.br/servicos/redes-wifi/agua-verde</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://tecnico.curitiba.br/servicos/manutencao-tv/agua-verde</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://tecnico.curitiba.br/servicos/redes-wifi/cic</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://tecnico.curitiba.br/servicos/manutencao-tv/cic</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://tecnico.curitiba.br/servicos/redes-wifi/portao</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://tecnico.curitiba.br/servicos/manutencao-tv/portao</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://tecnico.curitiba.br/servicos/redes-wifi/bigorrilho</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://tecnico.curitiba.br/servicos/manutencao-tv/bigorrilho</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://tecnico.curitiba.br/servicos/redes-wifi/cabral</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://tecnico.curitiba.br/servicos/manutencao-tv/cabral</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://tecnico.curitiba.br/servicos/redes-wifi/santa-felicidade</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://tecnico.curitiba.br/servicos/manutencao-tv/santa-felicidade</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://tecnico.curitiba.br/servicos/redes-wifi/boa-vista</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://tecnico.curitiba.br/servicos/manutencao-tv/boa-vista</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://tecnico.curitiba.br/servicos/redes-wifi/cristo-rei</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://tecnico.curitiba.br/servicos/manutencao-tv/cristo-rei</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://tecnico.curitiba.br/servicos/redes-wifi/cajuru</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://tecnico.curitiba.br/servicos/manutencao-tv/cajuru</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://tecnico.curitiba.br/servicos/redes-wifi/boqueirao</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://tecnico.curitiba.br/servicos/manutencao-tv/boqueirao</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 </urlset>
