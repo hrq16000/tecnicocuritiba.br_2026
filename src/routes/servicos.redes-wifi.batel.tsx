@@ -1,14 +1,8 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { seoHead } from "@/lib/seo/routeHead";
-import RedesWifiBatel from "@/pages/servico-bairro/RedesWifiBatel";
+import { createFileRoute, redirect } from "@tanstack/react-router";
 
+// Consolidada na Fase Final: sem intenção independente comprovada.
 export const Route = createFileRoute("/servicos/redes-wifi/batel")({
-  /* seo:auto-start */
-  head: () => seoHead({
-    "path": "/servicos/redes-wifi/batel",
-    "title": "Configuração de Wi-Fi no Batel | Curitiba",
-    "description": "Wi-Fi, mesh e roteadores no Batel, Curitiba. Instalação e configuração presencial, com valor combinado pelo WhatsApp a partir de R$ 99,99."
-  }),
-  /* seo:auto-end */
-  component: RedesWifiBatel,
+  beforeLoad: () => {
+    throw redirect({ to: "/servicos/redes-e-wifi", statusCode: 301 });
+  },
 });
