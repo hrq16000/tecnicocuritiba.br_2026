@@ -99,3 +99,14 @@ export const REGRA_SEM_BALCAO =
 /** Quando a coleta substitui a visita — gatilho objetivo de tempo de serviço. */
 export const GATILHO_COLETA_SEM_CUSTO =
   "Quando o serviço passa de 1 hora de trabalho técnico, a visita deixa de ser vantajosa e oferecemos coleta e entrega sem custo, com mínimo pré-aprovado de R$ 299,99 — reparos compatíveis dentro desse valor já saem executados.";
+
+/**
+ * IMPRESSORA 3D — vertical com bancada dedicada.
+ * Extrusão, sensoriamento térmico, mecânica de eixos e eletrônica de controle
+ * exigem instrumentos e tempo próprios, por isso o mínimo pré-aprovado é maior
+ * que o de informática. Valor único usado em CTAs, triagem e termos da O.S.
+ */
+export const VALOR_IMPRESSORA_3D_MINIMO_LABEL = "R$ 500,00";
+
+export const REGRA_IMPRESSORA_3D =
+  "Qualquer serviço em impressora 3D — diagnóstico de bancada, desentupimento de bico, troca de termistor ou resistência, calibração, reparo de placa e upgrades — tem valor mínimo pré-aprovado de R$ 500,00, com coleta e entrega inclusas e peças não inclusas. Reparos acima desse mínimo dependem da sua autorização por escrito.";

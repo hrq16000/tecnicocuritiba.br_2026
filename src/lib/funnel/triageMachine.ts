@@ -274,6 +274,20 @@ export function getPricingRules(a: TriageAnswers): PricingRules {
 
   let explanation = "";
 
+  // Impressora 3D: bancada dedicada, mínimo pré-aprovado próprio (R$ 500,00).
+  if (a.equipment === "impressora3d") {
+    return {
+      route: "coleta",
+      routeLabel: ROUTE_LABEL.coleta,
+      minPrice: PRICING.impressora3dMin,
+      prazo: ROUTE_PRAZO.coleta,
+      priceHint: meta?.priceHint,
+      explanation: `Impressora 3D é avaliada em bancada dedicada${
+        meta?.category ? `, com indício de ${meta.category}` : ""
+      }. O mínimo pré-aprovado é de ${PRICING.impressora3dMin}, com coleta e entrega inclusas e peças não inclusas. Qualquer valor acima disso é informado antes da execução.`,
+    };
+  }
+
   if (route === "remoto") {
     explanation =
       "Pelas informações fornecidas, o serviço pode ser compatível com atendimento remoto, pois o computador está funcionando e a solicitação envolve instalação ou configuração. A confirmação será feita no WhatsApp.";
@@ -295,6 +309,7 @@ export function getPricingRules(a: TriageAnswers): PricingRules {
     explanation,
   };
 }
+
 
 // ─────────────────────────────────────────────────────────────
 // TERMOS / ACEITES (dependem da rota)
