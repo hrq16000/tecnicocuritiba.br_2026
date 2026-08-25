@@ -15,7 +15,7 @@ export const Route = createFileRoute("/problemas/tv-sem-som")({
       },
       {
         "question": "Como sei se é configuração ou defeito de verdade?",
-        "answer": "O teste decisivo é variar a fonte. Se o silêncio aparece na TV aberta, num HDMI e num aplicativo interno ao mesmo tempo, o problema é do televisor. Se só um deles fica mudo, a origem está no ajuste daquela entrada ou no aparelho conectado a ela. Forçar a saída para os alto-falantes internos no menu de som resolve uma parte real dos chamados sem qualquer custo."
+        "answer": "O teste decisivo é variar a fonte. Se o silêncio aparece na TV aberta, num HDMI e num aplicativo interno ao mesmo tempo, o problema é do televisor. Se só um deles fica mudo, a origem está no ajuste daquela entrada ou no aparelho conectado a ela. Ffechar valor a saída para os alto-falantes internos no menu de som resolve uma parte real dos chamados sem qualquer custo."
       },
       {
         "question": "O som sai pelo fone e pela barra, mas não pelos alto-falantes. O que significa?",

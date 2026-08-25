@@ -122,14 +122,17 @@ import { Route as BairrosAgricolaSjpRouteImport } from './routes/bairros.agricol
 import { Route as BairrosAguaVerdeRouteImport } from './routes/bairros.agua-verde'
 import { Route as BairrosAltoBoqueiraoRouteImport } from './routes/bairros.alto-boqueirao'
 import { Route as BairrosAltoDaGloriaRouteImport } from './routes/bairros.alto-da-gloria'
+import { Route as BairrosAltoDaXvRouteImport } from './routes/bairros.alto-da-xv'
 import { Route as BairrosAltoMaracanaRouteImport } from './routes/bairros.alto-maracana'
 import { Route as BairrosAltoTarumaRouteImport } from './routes/bairros.alto-taruma'
 import { Route as BairrosAntonioOliveroCmRouteImport } from './routes/bairros.antonio-olivero-cm'
 import { Route as BairrosAristocrataRouteImport } from './routes/bairros.aristocrata'
+import { Route as BairrosAtubaRouteImport } from './routes/bairros.atuba'
 import { Route as BairrosAtubaColomboRouteImport } from './routes/bairros.atuba-colombo'
 import { Route as BairrosAtubaPinhaisRouteImport } from './routes/bairros.atuba-pinhais'
 import { Route as BairrosAviacaoRouteImport } from './routes/bairros.aviacao'
 import { Route as BairrosBacacheriRouteImport } from './routes/bairros.bacacheri'
+import { Route as BairrosBairroAltoRouteImport } from './routes/bairros.bairro-alto'
 import { Route as BairrosBariguiAraucariaRouteImport } from './routes/bairros.barigui-araucaria'
 import { Route as BairrosBarroPretoRouteImport } from './routes/bairros.barro-preto'
 import { Route as BairrosBateiasRouteImport } from './routes/bairros.bateias'
@@ -146,6 +149,7 @@ import { Route as BairrosBordaDoCampoSjpRouteImport } from './routes/bairros.bor
 import { Route as BairrosBotiatuvaRouteImport } from './routes/bairros.botiatuva'
 import { Route as BairrosBotiatuvaCmRouteImport } from './routes/bairros.botiatuva-cm'
 import { Route as BairrosBragaRouteImport } from './routes/bairros.braga'
+import { Route as BairrosButiatuvinhaRouteImport } from './routes/bairros.butiatuvinha'
 import { Route as BairrosCabralRouteImport } from './routes/bairros.cabral'
 import { Route as BairrosCachoeiraAraucariaRouteImport } from './routes/bairros.cachoeira-araucaria'
 import { Route as BairrosCachoeiraAtRouteImport } from './routes/bairros.cachoeira-at'
@@ -153,6 +157,7 @@ import { Route as BairrosCaiuaPiraquaraRouteImport } from './routes/bairros.caiu
 import { Route as BairrosCajuruRouteImport } from './routes/bairros.cajuru'
 import { Route as BairrosCaliforniaAraucariaRouteImport } from './routes/bairros.california-araucaria'
 import { Route as BairrosCampinaDaBarraRouteImport } from './routes/bairros.campina-da-barra'
+import { Route as BairrosCampinaDoSiqueiraRouteImport } from './routes/bairros.campina-do-siqueira'
 import { Route as BairrosCampinaGrandeColomboRouteImport } from './routes/bairros.campina-grande-colombo'
 import { Route as BairrosCampoCompridoRouteImport } from './routes/bairros.campo-comprido'
 import { Route as BairrosCampoLargoRoseiraSjpRouteImport } from './routes/bairros.campo-largo-roseira-sjp'
@@ -166,6 +171,7 @@ import { Route as BairrosCentroAlmiranteTamandareRouteImport } from './routes/ba
 import { Route as BairrosCentroAraucariaRouteImport } from './routes/bairros.centro-araucaria'
 import { Route as BairrosCentroCampoLargoRouteImport } from './routes/bairros.centro-campo-largo'
 import { Route as BairrosCentroCampoMagroRouteImport } from './routes/bairros.centro-campo-magro'
+import { Route as BairrosCentroCivicoRouteImport } from './routes/bairros.centro-civico'
 import { Route as BairrosCentroColomboRouteImport } from './routes/bairros.centro-colombo'
 import { Route as BairrosCentroFazendaRioGrandeRouteImport } from './routes/bairros.centro-fazenda-rio-grande'
 import { Route as BairrosCentroPinhaisRouteImport } from './routes/bairros.centro-pinhais'
@@ -189,6 +195,7 @@ import { Route as BairrosEspigaoAlegreCmRouteImport } from './routes/bairros.esp
 import { Route as BairrosEstacaoAraucariaRouteImport } from './routes/bairros.estacao-araucaria'
 import { Route as BairrosEstanciaPinhaisRouteImport } from './routes/bairros.estancia-pinhais'
 import { Route as BairrosEucaliptosFrgRouteImport } from './routes/bairros.eucaliptos-frg'
+import { Route as BairrosFannyRouteImport } from './routes/bairros.fanny'
 import { Route as BairrosFatimaColomboRouteImport } from './routes/bairros.fatima-colombo'
 import { Route as BairrosFazendaVelhaAraucariaRouteImport } from './routes/bairros.fazenda-velha-araucaria'
 import { Route as BairrosFazendinhaRouteImport } from './routes/bairros.fazendinha'
@@ -197,6 +204,7 @@ import { Route as BairrosGabirobalRouteImport } from './routes/bairros.gabirobal
 import { Route as BairrosGraciosaRouteImport } from './routes/bairros.graciosa'
 import { Route as BairrosGraciosaQbRouteImport } from './routes/bairros.graciosa-qb'
 import { Route as BairrosGralhaAzulRouteImport } from './routes/bairros.gralha-azul'
+import { Route as BairrosGuabirotubaRouteImport } from './routes/bairros.guabirotuba'
 import { Route as BairrosGuajuviraRouteImport } from './routes/bairros.guajuvira'
 import { Route as BairrosGuaraitubaColomboRouteImport } from './routes/bairros.guaraituba-colombo'
 import { Route as BairrosGuaritubaPiraquaraRouteImport } from './routes/bairros.guarituba-piraquara'
@@ -257,6 +265,7 @@ import { Route as BairrosJardimWissingerPinhaisRouteImport } from './routes/bair
 import { Route as BairrosJoqueiClubeCmRouteImport } from './routes/bairros.joquei-clube-cm'
 import { Route as BairrosJuveveRouteImport } from './routes/bairros.juveve'
 import { Route as BairrosLamenhaGrandeClRouteImport } from './routes/bairros.lamenha-grande-cl'
+import { Route as BairrosLindoiaRouteImport } from './routes/bairros.lindoia'
 import { Route as BairrosMaracanaColomboRouteImport } from './routes/bairros.maracana-colombo'
 import { Route as BairrosMariaAntonietaRouteImport } from './routes/bairros.maria-antonieta'
 import { Route as BairrosMercesRouteImport } from './routes/bairros.merces'
@@ -281,6 +290,7 @@ import { Route as BairrosPlantaDeodoroPiraquaraRouteImport } from './routes/bair
 import { Route as BairrosPlantaSaoTiagoAraucariaRouteImport } from './routes/bairros.planta-sao-tiago-araucaria'
 import { Route as BairrosPortaoRouteImport } from './routes/bairros.portao'
 import { Route as BairrosPortoDasLaranjeirasRouteImport } from './routes/bairros.porto-das-laranjeiras'
+import { Route as BairrosPradoVelhoRouteImport } from './routes/bairros.prado-velho'
 import { Route as BairrosPradoVelhoPiraquaraRouteImport } from './routes/bairros.prado-velho-piraquara'
 import { Route as BairrosQuississanaSjpRouteImport } from './routes/bairros.quississana-sjp'
 import { Route as BairrosReboucasRouteImport } from './routes/bairros.reboucas'
@@ -291,6 +301,7 @@ import { Route as BairrosRondinhaRouteImport } from './routes/bairros.rondinha'
 import { Route as BairrosSabiaRouteImport } from './routes/bairros.sabia'
 import { Route as BairrosSantaCruzCampoLargoRouteImport } from './routes/bairros.santa-cruz-campo-largo'
 import { Route as BairrosSantaFelicidadeRouteImport } from './routes/bairros.santa-felicidade'
+import { Route as BairrosSantaQuiteriaRouteImport } from './routes/bairros.santa-quiteria'
 import { Route as BairrosSantaTerezinhaColomboRouteImport } from './routes/bairros.santa-terezinha-colombo'
 import { Route as BairrosSantaTerezinhaFrgRouteImport } from './routes/bairros.santa-terezinha-frg'
 import { Route as BairrosSaoCristaoPiraquaraRouteImport } from './routes/bairros.sao-cristao-piraquara'
@@ -336,6 +347,7 @@ import { Route as BairrosVilaNovaAraucariaRouteImport } from './routes/bairros.v
 import { Route as BairrosVilaSaoJoseQbRouteImport } from './routes/bairros.vila-sao-jose-qb'
 import { Route as BairrosVilaSoleneRouteImport } from './routes/bairros.vila-solene'
 import { Route as BairrosVilaTarumaRouteImport } from './routes/bairros.vila-taruma'
+import { Route as BairrosVistaAlegreRouteImport } from './routes/bairros.vista-alegre'
 import { Route as BairrosWeissopolisRouteImport } from './routes/bairros.weissopolis'
 import { Route as BairrosXaximRouteImport } from './routes/bairros.xaxim'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
@@ -1085,6 +1097,11 @@ const BairrosAltoDaGloriaRoute = BairrosAltoDaGloriaRouteImport.update({
   path: '/bairros/alto-da-gloria',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BairrosAltoDaXvRoute = BairrosAltoDaXvRouteImport.update({
+  id: '/bairros/alto-da-xv',
+  path: '/bairros/alto-da-xv',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BairrosAltoMaracanaRoute = BairrosAltoMaracanaRouteImport.update({
   id: '/bairros/alto-maracana',
   path: '/bairros/alto-maracana',
@@ -1105,6 +1122,11 @@ const BairrosAristocrataRoute = BairrosAristocrataRouteImport.update({
   path: '/bairros/aristocrata',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BairrosAtubaRoute = BairrosAtubaRouteImport.update({
+  id: '/bairros/atuba',
+  path: '/bairros/atuba',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BairrosAtubaColomboRoute = BairrosAtubaColomboRouteImport.update({
   id: '/bairros/atuba-colombo',
   path: '/bairros/atuba-colombo',
@@ -1123,6 +1145,11 @@ const BairrosAviacaoRoute = BairrosAviacaoRouteImport.update({
 const BairrosBacacheriRoute = BairrosBacacheriRouteImport.update({
   id: '/bairros/bacacheri',
   path: '/bairros/bacacheri',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BairrosBairroAltoRoute = BairrosBairroAltoRouteImport.update({
+  id: '/bairros/bairro-alto',
+  path: '/bairros/bairro-alto',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BairrosBariguiAraucariaRoute = BairrosBariguiAraucariaRouteImport.update({
@@ -1207,6 +1234,11 @@ const BairrosBragaRoute = BairrosBragaRouteImport.update({
   path: '/bairros/braga',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BairrosButiatuvinhaRoute = BairrosButiatuvinhaRouteImport.update({
+  id: '/bairros/butiatuvinha',
+  path: '/bairros/butiatuvinha',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BairrosCabralRoute = BairrosCabralRouteImport.update({
   id: '/bairros/cabral',
   path: '/bairros/cabral',
@@ -1244,6 +1276,12 @@ const BairrosCampinaDaBarraRoute = BairrosCampinaDaBarraRouteImport.update({
   path: '/bairros/campina-da-barra',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BairrosCampinaDoSiqueiraRoute =
+  BairrosCampinaDoSiqueiraRouteImport.update({
+    id: '/bairros/campina-do-siqueira',
+    path: '/bairros/campina-do-siqueira',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const BairrosCampinaGrandeColomboRoute =
   BairrosCampinaGrandeColomboRouteImport.update({
     id: '/bairros/campina-grande-colombo',
@@ -1310,6 +1348,11 @@ const BairrosCentroCampoLargoRoute = BairrosCentroCampoLargoRouteImport.update({
 const BairrosCentroCampoMagroRoute = BairrosCentroCampoMagroRouteImport.update({
   id: '/bairros/centro-campo-magro',
   path: '/bairros/centro-campo-magro',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BairrosCentroCivicoRoute = BairrosCentroCivicoRouteImport.update({
+  id: '/bairros/centro-civico',
+  path: '/bairros/centro-civico',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BairrosCentroColomboRoute = BairrosCentroColomboRouteImport.update({
@@ -1431,6 +1474,11 @@ const BairrosEucaliptosFrgRoute = BairrosEucaliptosFrgRouteImport.update({
   path: '/bairros/eucaliptos-frg',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BairrosFannyRoute = BairrosFannyRouteImport.update({
+  id: '/bairros/fanny',
+  path: '/bairros/fanny',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BairrosFatimaColomboRoute = BairrosFatimaColomboRouteImport.update({
   id: '/bairros/fatima-colombo',
   path: '/bairros/fatima-colombo',
@@ -1470,6 +1518,11 @@ const BairrosGraciosaQbRoute = BairrosGraciosaQbRouteImport.update({
 const BairrosGralhaAzulRoute = BairrosGralhaAzulRouteImport.update({
   id: '/bairros/gralha-azul',
   path: '/bairros/gralha-azul',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BairrosGuabirotubaRoute = BairrosGuabirotubaRouteImport.update({
+  id: '/bairros/guabirotuba',
+  path: '/bairros/guabirotuba',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BairrosGuajuviraRoute = BairrosGuajuviraRouteImport.update({
@@ -1802,6 +1855,11 @@ const BairrosLamenhaGrandeClRoute = BairrosLamenhaGrandeClRouteImport.update({
   path: '/bairros/lamenha-grande-cl',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BairrosLindoiaRoute = BairrosLindoiaRouteImport.update({
+  id: '/bairros/lindoia',
+  path: '/bairros/lindoia',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BairrosMaracanaColomboRoute = BairrosMaracanaColomboRouteImport.update({
   id: '/bairros/maracana-colombo',
   path: '/bairros/maracana-colombo',
@@ -1929,6 +1987,11 @@ const BairrosPortoDasLaranjeirasRoute =
     path: '/bairros/porto-das-laranjeiras',
     getParentRoute: () => rootRouteImport,
   } as any)
+const BairrosPradoVelhoRoute = BairrosPradoVelhoRouteImport.update({
+  id: '/bairros/prado-velho',
+  path: '/bairros/prado-velho',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BairrosPradoVelhoPiraquaraRoute =
   BairrosPradoVelhoPiraquaraRouteImport.update({
     id: '/bairros/prado-velho-piraquara',
@@ -1979,6 +2042,11 @@ const BairrosSantaCruzCampoLargoRoute =
 const BairrosSantaFelicidadeRoute = BairrosSantaFelicidadeRouteImport.update({
   id: '/bairros/santa-felicidade',
   path: '/bairros/santa-felicidade',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BairrosSantaQuiteriaRoute = BairrosSantaQuiteriaRouteImport.update({
+  id: '/bairros/santa-quiteria',
+  path: '/bairros/santa-quiteria',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BairrosSantaTerezinhaColomboRoute =
@@ -2217,6 +2285,11 @@ const BairrosVilaSoleneRoute = BairrosVilaSoleneRouteImport.update({
 const BairrosVilaTarumaRoute = BairrosVilaTarumaRouteImport.update({
   id: '/bairros/vila-taruma',
   path: '/bairros/vila-taruma',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BairrosVistaAlegreRoute = BairrosVistaAlegreRouteImport.update({
+  id: '/bairros/vista-alegre',
+  path: '/bairros/vista-alegre',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BairrosWeissopolisRoute = BairrosWeissopolisRouteImport.update({
@@ -3227,14 +3300,17 @@ export interface FileRoutesByFullPath {
   '/bairros/agua-verde': typeof BairrosAguaVerdeRoute
   '/bairros/alto-boqueirao': typeof BairrosAltoBoqueiraoRoute
   '/bairros/alto-da-gloria': typeof BairrosAltoDaGloriaRoute
+  '/bairros/alto-da-xv': typeof BairrosAltoDaXvRoute
   '/bairros/alto-maracana': typeof BairrosAltoMaracanaRoute
   '/bairros/alto-taruma': typeof BairrosAltoTarumaRoute
   '/bairros/antonio-olivero-cm': typeof BairrosAntonioOliveroCmRoute
   '/bairros/aristocrata': typeof BairrosAristocrataRoute
+  '/bairros/atuba': typeof BairrosAtubaRoute
   '/bairros/atuba-colombo': typeof BairrosAtubaColomboRoute
   '/bairros/atuba-pinhais': typeof BairrosAtubaPinhaisRoute
   '/bairros/aviacao': typeof BairrosAviacaoRoute
   '/bairros/bacacheri': typeof BairrosBacacheriRoute
+  '/bairros/bairro-alto': typeof BairrosBairroAltoRoute
   '/bairros/barigui-araucaria': typeof BairrosBariguiAraucariaRoute
   '/bairros/barro-preto': typeof BairrosBarroPretoRoute
   '/bairros/bateias': typeof BairrosBateiasRoute
@@ -3251,6 +3327,7 @@ export interface FileRoutesByFullPath {
   '/bairros/botiatuva': typeof BairrosBotiatuvaRoute
   '/bairros/botiatuva-cm': typeof BairrosBotiatuvaCmRoute
   '/bairros/braga': typeof BairrosBragaRoute
+  '/bairros/butiatuvinha': typeof BairrosButiatuvinhaRoute
   '/bairros/cabral': typeof BairrosCabralRoute
   '/bairros/cachoeira-araucaria': typeof BairrosCachoeiraAraucariaRoute
   '/bairros/cachoeira-at': typeof BairrosCachoeiraAtRoute
@@ -3258,6 +3335,7 @@ export interface FileRoutesByFullPath {
   '/bairros/cajuru': typeof BairrosCajuruRoute
   '/bairros/california-araucaria': typeof BairrosCaliforniaAraucariaRoute
   '/bairros/campina-da-barra': typeof BairrosCampinaDaBarraRoute
+  '/bairros/campina-do-siqueira': typeof BairrosCampinaDoSiqueiraRoute
   '/bairros/campina-grande-colombo': typeof BairrosCampinaGrandeColomboRoute
   '/bairros/campo-comprido': typeof BairrosCampoCompridoRoute
   '/bairros/campo-largo-roseira-sjp': typeof BairrosCampoLargoRoseiraSjpRoute
@@ -3271,6 +3349,7 @@ export interface FileRoutesByFullPath {
   '/bairros/centro-araucaria': typeof BairrosCentroAraucariaRoute
   '/bairros/centro-campo-largo': typeof BairrosCentroCampoLargoRoute
   '/bairros/centro-campo-magro': typeof BairrosCentroCampoMagroRoute
+  '/bairros/centro-civico': typeof BairrosCentroCivicoRoute
   '/bairros/centro-colombo': typeof BairrosCentroColomboRoute
   '/bairros/centro-fazenda-rio-grande': typeof BairrosCentroFazendaRioGrandeRoute
   '/bairros/centro-pinhais': typeof BairrosCentroPinhaisRoute
@@ -3294,6 +3373,7 @@ export interface FileRoutesByFullPath {
   '/bairros/estacao-araucaria': typeof BairrosEstacaoAraucariaRoute
   '/bairros/estancia-pinhais': typeof BairrosEstanciaPinhaisRoute
   '/bairros/eucaliptos-frg': typeof BairrosEucaliptosFrgRoute
+  '/bairros/fanny': typeof BairrosFannyRoute
   '/bairros/fatima-colombo': typeof BairrosFatimaColomboRoute
   '/bairros/fazenda-velha-araucaria': typeof BairrosFazendaVelhaAraucariaRoute
   '/bairros/fazendinha': typeof BairrosFazendinhaRoute
@@ -3302,6 +3382,7 @@ export interface FileRoutesByFullPath {
   '/bairros/graciosa': typeof BairrosGraciosaRoute
   '/bairros/graciosa-qb': typeof BairrosGraciosaQbRoute
   '/bairros/gralha-azul': typeof BairrosGralhaAzulRoute
+  '/bairros/guabirotuba': typeof BairrosGuabirotubaRoute
   '/bairros/guajuvira': typeof BairrosGuajuviraRoute
   '/bairros/guaraituba-colombo': typeof BairrosGuaraitubaColomboRoute
   '/bairros/guarituba-piraquara': typeof BairrosGuaritubaPiraquaraRoute
@@ -3362,6 +3443,7 @@ export interface FileRoutesByFullPath {
   '/bairros/joquei-clube-cm': typeof BairrosJoqueiClubeCmRoute
   '/bairros/juveve': typeof BairrosJuveveRoute
   '/bairros/lamenha-grande-cl': typeof BairrosLamenhaGrandeClRoute
+  '/bairros/lindoia': typeof BairrosLindoiaRoute
   '/bairros/maracana-colombo': typeof BairrosMaracanaColomboRoute
   '/bairros/maria-antonieta': typeof BairrosMariaAntonietaRoute
   '/bairros/merces': typeof BairrosMercesRoute
@@ -3386,6 +3468,7 @@ export interface FileRoutesByFullPath {
   '/bairros/planta-sao-tiago-araucaria': typeof BairrosPlantaSaoTiagoAraucariaRoute
   '/bairros/portao': typeof BairrosPortaoRoute
   '/bairros/porto-das-laranjeiras': typeof BairrosPortoDasLaranjeirasRoute
+  '/bairros/prado-velho': typeof BairrosPradoVelhoRoute
   '/bairros/prado-velho-piraquara': typeof BairrosPradoVelhoPiraquaraRoute
   '/bairros/quississana-sjp': typeof BairrosQuississanaSjpRoute
   '/bairros/reboucas': typeof BairrosReboucasRoute
@@ -3396,6 +3479,7 @@ export interface FileRoutesByFullPath {
   '/bairros/sabia': typeof BairrosSabiaRoute
   '/bairros/santa-cruz-campo-largo': typeof BairrosSantaCruzCampoLargoRoute
   '/bairros/santa-felicidade': typeof BairrosSantaFelicidadeRoute
+  '/bairros/santa-quiteria': typeof BairrosSantaQuiteriaRoute
   '/bairros/santa-terezinha-colombo': typeof BairrosSantaTerezinhaColomboRoute
   '/bairros/santa-terezinha-frg': typeof BairrosSantaTerezinhaFrgRoute
   '/bairros/sao-cristao-piraquara': typeof BairrosSaoCristaoPiraquaraRoute
@@ -3441,6 +3525,7 @@ export interface FileRoutesByFullPath {
   '/bairros/vila-sao-jose-qb': typeof BairrosVilaSaoJoseQbRoute
   '/bairros/vila-solene': typeof BairrosVilaSoleneRoute
   '/bairros/vila-taruma': typeof BairrosVilaTarumaRoute
+  '/bairros/vista-alegre': typeof BairrosVistaAlegreRoute
   '/bairros/weissopolis': typeof BairrosWeissopolisRoute
   '/bairros/xaxim': typeof BairrosXaximRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -3714,14 +3799,17 @@ export interface FileRoutesByTo {
   '/bairros/agua-verde': typeof BairrosAguaVerdeRoute
   '/bairros/alto-boqueirao': typeof BairrosAltoBoqueiraoRoute
   '/bairros/alto-da-gloria': typeof BairrosAltoDaGloriaRoute
+  '/bairros/alto-da-xv': typeof BairrosAltoDaXvRoute
   '/bairros/alto-maracana': typeof BairrosAltoMaracanaRoute
   '/bairros/alto-taruma': typeof BairrosAltoTarumaRoute
   '/bairros/antonio-olivero-cm': typeof BairrosAntonioOliveroCmRoute
   '/bairros/aristocrata': typeof BairrosAristocrataRoute
+  '/bairros/atuba': typeof BairrosAtubaRoute
   '/bairros/atuba-colombo': typeof BairrosAtubaColomboRoute
   '/bairros/atuba-pinhais': typeof BairrosAtubaPinhaisRoute
   '/bairros/aviacao': typeof BairrosAviacaoRoute
   '/bairros/bacacheri': typeof BairrosBacacheriRoute
+  '/bairros/bairro-alto': typeof BairrosBairroAltoRoute
   '/bairros/barigui-araucaria': typeof BairrosBariguiAraucariaRoute
   '/bairros/barro-preto': typeof BairrosBarroPretoRoute
   '/bairros/bateias': typeof BairrosBateiasRoute
@@ -3738,6 +3826,7 @@ export interface FileRoutesByTo {
   '/bairros/botiatuva': typeof BairrosBotiatuvaRoute
   '/bairros/botiatuva-cm': typeof BairrosBotiatuvaCmRoute
   '/bairros/braga': typeof BairrosBragaRoute
+  '/bairros/butiatuvinha': typeof BairrosButiatuvinhaRoute
   '/bairros/cabral': typeof BairrosCabralRoute
   '/bairros/cachoeira-araucaria': typeof BairrosCachoeiraAraucariaRoute
   '/bairros/cachoeira-at': typeof BairrosCachoeiraAtRoute
@@ -3745,6 +3834,7 @@ export interface FileRoutesByTo {
   '/bairros/cajuru': typeof BairrosCajuruRoute
   '/bairros/california-araucaria': typeof BairrosCaliforniaAraucariaRoute
   '/bairros/campina-da-barra': typeof BairrosCampinaDaBarraRoute
+  '/bairros/campina-do-siqueira': typeof BairrosCampinaDoSiqueiraRoute
   '/bairros/campina-grande-colombo': typeof BairrosCampinaGrandeColomboRoute
   '/bairros/campo-comprido': typeof BairrosCampoCompridoRoute
   '/bairros/campo-largo-roseira-sjp': typeof BairrosCampoLargoRoseiraSjpRoute
@@ -3758,6 +3848,7 @@ export interface FileRoutesByTo {
   '/bairros/centro-araucaria': typeof BairrosCentroAraucariaRoute
   '/bairros/centro-campo-largo': typeof BairrosCentroCampoLargoRoute
   '/bairros/centro-campo-magro': typeof BairrosCentroCampoMagroRoute
+  '/bairros/centro-civico': typeof BairrosCentroCivicoRoute
   '/bairros/centro-colombo': typeof BairrosCentroColomboRoute
   '/bairros/centro-fazenda-rio-grande': typeof BairrosCentroFazendaRioGrandeRoute
   '/bairros/centro-pinhais': typeof BairrosCentroPinhaisRoute
@@ -3781,6 +3872,7 @@ export interface FileRoutesByTo {
   '/bairros/estacao-araucaria': typeof BairrosEstacaoAraucariaRoute
   '/bairros/estancia-pinhais': typeof BairrosEstanciaPinhaisRoute
   '/bairros/eucaliptos-frg': typeof BairrosEucaliptosFrgRoute
+  '/bairros/fanny': typeof BairrosFannyRoute
   '/bairros/fatima-colombo': typeof BairrosFatimaColomboRoute
   '/bairros/fazenda-velha-araucaria': typeof BairrosFazendaVelhaAraucariaRoute
   '/bairros/fazendinha': typeof BairrosFazendinhaRoute
@@ -3789,6 +3881,7 @@ export interface FileRoutesByTo {
   '/bairros/graciosa': typeof BairrosGraciosaRoute
   '/bairros/graciosa-qb': typeof BairrosGraciosaQbRoute
   '/bairros/gralha-azul': typeof BairrosGralhaAzulRoute
+  '/bairros/guabirotuba': typeof BairrosGuabirotubaRoute
   '/bairros/guajuvira': typeof BairrosGuajuviraRoute
   '/bairros/guaraituba-colombo': typeof BairrosGuaraitubaColomboRoute
   '/bairros/guarituba-piraquara': typeof BairrosGuaritubaPiraquaraRoute
@@ -3849,6 +3942,7 @@ export interface FileRoutesByTo {
   '/bairros/joquei-clube-cm': typeof BairrosJoqueiClubeCmRoute
   '/bairros/juveve': typeof BairrosJuveveRoute
   '/bairros/lamenha-grande-cl': typeof BairrosLamenhaGrandeClRoute
+  '/bairros/lindoia': typeof BairrosLindoiaRoute
   '/bairros/maracana-colombo': typeof BairrosMaracanaColomboRoute
   '/bairros/maria-antonieta': typeof BairrosMariaAntonietaRoute
   '/bairros/merces': typeof BairrosMercesRoute
@@ -3873,6 +3967,7 @@ export interface FileRoutesByTo {
   '/bairros/planta-sao-tiago-araucaria': typeof BairrosPlantaSaoTiagoAraucariaRoute
   '/bairros/portao': typeof BairrosPortaoRoute
   '/bairros/porto-das-laranjeiras': typeof BairrosPortoDasLaranjeirasRoute
+  '/bairros/prado-velho': typeof BairrosPradoVelhoRoute
   '/bairros/prado-velho-piraquara': typeof BairrosPradoVelhoPiraquaraRoute
   '/bairros/quississana-sjp': typeof BairrosQuississanaSjpRoute
   '/bairros/reboucas': typeof BairrosReboucasRoute
@@ -3883,6 +3978,7 @@ export interface FileRoutesByTo {
   '/bairros/sabia': typeof BairrosSabiaRoute
   '/bairros/santa-cruz-campo-largo': typeof BairrosSantaCruzCampoLargoRoute
   '/bairros/santa-felicidade': typeof BairrosSantaFelicidadeRoute
+  '/bairros/santa-quiteria': typeof BairrosSantaQuiteriaRoute
   '/bairros/santa-terezinha-colombo': typeof BairrosSantaTerezinhaColomboRoute
   '/bairros/santa-terezinha-frg': typeof BairrosSantaTerezinhaFrgRoute
   '/bairros/sao-cristao-piraquara': typeof BairrosSaoCristaoPiraquaraRoute
@@ -3928,6 +4024,7 @@ export interface FileRoutesByTo {
   '/bairros/vila-sao-jose-qb': typeof BairrosVilaSaoJoseQbRoute
   '/bairros/vila-solene': typeof BairrosVilaSoleneRoute
   '/bairros/vila-taruma': typeof BairrosVilaTarumaRoute
+  '/bairros/vista-alegre': typeof BairrosVistaAlegreRoute
   '/bairros/weissopolis': typeof BairrosWeissopolisRoute
   '/bairros/xaxim': typeof BairrosXaximRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -4202,14 +4299,17 @@ export interface FileRoutesById {
   '/bairros/agua-verde': typeof BairrosAguaVerdeRoute
   '/bairros/alto-boqueirao': typeof BairrosAltoBoqueiraoRoute
   '/bairros/alto-da-gloria': typeof BairrosAltoDaGloriaRoute
+  '/bairros/alto-da-xv': typeof BairrosAltoDaXvRoute
   '/bairros/alto-maracana': typeof BairrosAltoMaracanaRoute
   '/bairros/alto-taruma': typeof BairrosAltoTarumaRoute
   '/bairros/antonio-olivero-cm': typeof BairrosAntonioOliveroCmRoute
   '/bairros/aristocrata': typeof BairrosAristocrataRoute
+  '/bairros/atuba': typeof BairrosAtubaRoute
   '/bairros/atuba-colombo': typeof BairrosAtubaColomboRoute
   '/bairros/atuba-pinhais': typeof BairrosAtubaPinhaisRoute
   '/bairros/aviacao': typeof BairrosAviacaoRoute
   '/bairros/bacacheri': typeof BairrosBacacheriRoute
+  '/bairros/bairro-alto': typeof BairrosBairroAltoRoute
   '/bairros/barigui-araucaria': typeof BairrosBariguiAraucariaRoute
   '/bairros/barro-preto': typeof BairrosBarroPretoRoute
   '/bairros/bateias': typeof BairrosBateiasRoute
@@ -4226,6 +4326,7 @@ export interface FileRoutesById {
   '/bairros/botiatuva': typeof BairrosBotiatuvaRoute
   '/bairros/botiatuva-cm': typeof BairrosBotiatuvaCmRoute
   '/bairros/braga': typeof BairrosBragaRoute
+  '/bairros/butiatuvinha': typeof BairrosButiatuvinhaRoute
   '/bairros/cabral': typeof BairrosCabralRoute
   '/bairros/cachoeira-araucaria': typeof BairrosCachoeiraAraucariaRoute
   '/bairros/cachoeira-at': typeof BairrosCachoeiraAtRoute
@@ -4233,6 +4334,7 @@ export interface FileRoutesById {
   '/bairros/cajuru': typeof BairrosCajuruRoute
   '/bairros/california-araucaria': typeof BairrosCaliforniaAraucariaRoute
   '/bairros/campina-da-barra': typeof BairrosCampinaDaBarraRoute
+  '/bairros/campina-do-siqueira': typeof BairrosCampinaDoSiqueiraRoute
   '/bairros/campina-grande-colombo': typeof BairrosCampinaGrandeColomboRoute
   '/bairros/campo-comprido': typeof BairrosCampoCompridoRoute
   '/bairros/campo-largo-roseira-sjp': typeof BairrosCampoLargoRoseiraSjpRoute
@@ -4246,6 +4348,7 @@ export interface FileRoutesById {
   '/bairros/centro-araucaria': typeof BairrosCentroAraucariaRoute
   '/bairros/centro-campo-largo': typeof BairrosCentroCampoLargoRoute
   '/bairros/centro-campo-magro': typeof BairrosCentroCampoMagroRoute
+  '/bairros/centro-civico': typeof BairrosCentroCivicoRoute
   '/bairros/centro-colombo': typeof BairrosCentroColomboRoute
   '/bairros/centro-fazenda-rio-grande': typeof BairrosCentroFazendaRioGrandeRoute
   '/bairros/centro-pinhais': typeof BairrosCentroPinhaisRoute
@@ -4269,6 +4372,7 @@ export interface FileRoutesById {
   '/bairros/estacao-araucaria': typeof BairrosEstacaoAraucariaRoute
   '/bairros/estancia-pinhais': typeof BairrosEstanciaPinhaisRoute
   '/bairros/eucaliptos-frg': typeof BairrosEucaliptosFrgRoute
+  '/bairros/fanny': typeof BairrosFannyRoute
   '/bairros/fatima-colombo': typeof BairrosFatimaColomboRoute
   '/bairros/fazenda-velha-araucaria': typeof BairrosFazendaVelhaAraucariaRoute
   '/bairros/fazendinha': typeof BairrosFazendinhaRoute
@@ -4277,6 +4381,7 @@ export interface FileRoutesById {
   '/bairros/graciosa': typeof BairrosGraciosaRoute
   '/bairros/graciosa-qb': typeof BairrosGraciosaQbRoute
   '/bairros/gralha-azul': typeof BairrosGralhaAzulRoute
+  '/bairros/guabirotuba': typeof BairrosGuabirotubaRoute
   '/bairros/guajuvira': typeof BairrosGuajuviraRoute
   '/bairros/guaraituba-colombo': typeof BairrosGuaraitubaColomboRoute
   '/bairros/guarituba-piraquara': typeof BairrosGuaritubaPiraquaraRoute
@@ -4337,6 +4442,7 @@ export interface FileRoutesById {
   '/bairros/joquei-clube-cm': typeof BairrosJoqueiClubeCmRoute
   '/bairros/juveve': typeof BairrosJuveveRoute
   '/bairros/lamenha-grande-cl': typeof BairrosLamenhaGrandeClRoute
+  '/bairros/lindoia': typeof BairrosLindoiaRoute
   '/bairros/maracana-colombo': typeof BairrosMaracanaColomboRoute
   '/bairros/maria-antonieta': typeof BairrosMariaAntonietaRoute
   '/bairros/merces': typeof BairrosMercesRoute
@@ -4361,6 +4467,7 @@ export interface FileRoutesById {
   '/bairros/planta-sao-tiago-araucaria': typeof BairrosPlantaSaoTiagoAraucariaRoute
   '/bairros/portao': typeof BairrosPortaoRoute
   '/bairros/porto-das-laranjeiras': typeof BairrosPortoDasLaranjeirasRoute
+  '/bairros/prado-velho': typeof BairrosPradoVelhoRoute
   '/bairros/prado-velho-piraquara': typeof BairrosPradoVelhoPiraquaraRoute
   '/bairros/quississana-sjp': typeof BairrosQuississanaSjpRoute
   '/bairros/reboucas': typeof BairrosReboucasRoute
@@ -4371,6 +4478,7 @@ export interface FileRoutesById {
   '/bairros/sabia': typeof BairrosSabiaRoute
   '/bairros/santa-cruz-campo-largo': typeof BairrosSantaCruzCampoLargoRoute
   '/bairros/santa-felicidade': typeof BairrosSantaFelicidadeRoute
+  '/bairros/santa-quiteria': typeof BairrosSantaQuiteriaRoute
   '/bairros/santa-terezinha-colombo': typeof BairrosSantaTerezinhaColomboRoute
   '/bairros/santa-terezinha-frg': typeof BairrosSantaTerezinhaFrgRoute
   '/bairros/sao-cristao-piraquara': typeof BairrosSaoCristaoPiraquaraRoute
@@ -4416,6 +4524,7 @@ export interface FileRoutesById {
   '/bairros/vila-sao-jose-qb': typeof BairrosVilaSaoJoseQbRoute
   '/bairros/vila-solene': typeof BairrosVilaSoleneRoute
   '/bairros/vila-taruma': typeof BairrosVilaTarumaRoute
+  '/bairros/vista-alegre': typeof BairrosVistaAlegreRoute
   '/bairros/weissopolis': typeof BairrosWeissopolisRoute
   '/bairros/xaxim': typeof BairrosXaximRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -4691,14 +4800,17 @@ export interface FileRouteTypes {
     | '/bairros/agua-verde'
     | '/bairros/alto-boqueirao'
     | '/bairros/alto-da-gloria'
+    | '/bairros/alto-da-xv'
     | '/bairros/alto-maracana'
     | '/bairros/alto-taruma'
     | '/bairros/antonio-olivero-cm'
     | '/bairros/aristocrata'
+    | '/bairros/atuba'
     | '/bairros/atuba-colombo'
     | '/bairros/atuba-pinhais'
     | '/bairros/aviacao'
     | '/bairros/bacacheri'
+    | '/bairros/bairro-alto'
     | '/bairros/barigui-araucaria'
     | '/bairros/barro-preto'
     | '/bairros/bateias'
@@ -4715,6 +4827,7 @@ export interface FileRouteTypes {
     | '/bairros/botiatuva'
     | '/bairros/botiatuva-cm'
     | '/bairros/braga'
+    | '/bairros/butiatuvinha'
     | '/bairros/cabral'
     | '/bairros/cachoeira-araucaria'
     | '/bairros/cachoeira-at'
@@ -4722,6 +4835,7 @@ export interface FileRouteTypes {
     | '/bairros/cajuru'
     | '/bairros/california-araucaria'
     | '/bairros/campina-da-barra'
+    | '/bairros/campina-do-siqueira'
     | '/bairros/campina-grande-colombo'
     | '/bairros/campo-comprido'
     | '/bairros/campo-largo-roseira-sjp'
@@ -4735,6 +4849,7 @@ export interface FileRouteTypes {
     | '/bairros/centro-araucaria'
     | '/bairros/centro-campo-largo'
     | '/bairros/centro-campo-magro'
+    | '/bairros/centro-civico'
     | '/bairros/centro-colombo'
     | '/bairros/centro-fazenda-rio-grande'
     | '/bairros/centro-pinhais'
@@ -4758,6 +4873,7 @@ export interface FileRouteTypes {
     | '/bairros/estacao-araucaria'
     | '/bairros/estancia-pinhais'
     | '/bairros/eucaliptos-frg'
+    | '/bairros/fanny'
     | '/bairros/fatima-colombo'
     | '/bairros/fazenda-velha-araucaria'
     | '/bairros/fazendinha'
@@ -4766,6 +4882,7 @@ export interface FileRouteTypes {
     | '/bairros/graciosa'
     | '/bairros/graciosa-qb'
     | '/bairros/gralha-azul'
+    | '/bairros/guabirotuba'
     | '/bairros/guajuvira'
     | '/bairros/guaraituba-colombo'
     | '/bairros/guarituba-piraquara'
@@ -4826,6 +4943,7 @@ export interface FileRouteTypes {
     | '/bairros/joquei-clube-cm'
     | '/bairros/juveve'
     | '/bairros/lamenha-grande-cl'
+    | '/bairros/lindoia'
     | '/bairros/maracana-colombo'
     | '/bairros/maria-antonieta'
     | '/bairros/merces'
@@ -4850,6 +4968,7 @@ export interface FileRouteTypes {
     | '/bairros/planta-sao-tiago-araucaria'
     | '/bairros/portao'
     | '/bairros/porto-das-laranjeiras'
+    | '/bairros/prado-velho'
     | '/bairros/prado-velho-piraquara'
     | '/bairros/quississana-sjp'
     | '/bairros/reboucas'
@@ -4860,6 +4979,7 @@ export interface FileRouteTypes {
     | '/bairros/sabia'
     | '/bairros/santa-cruz-campo-largo'
     | '/bairros/santa-felicidade'
+    | '/bairros/santa-quiteria'
     | '/bairros/santa-terezinha-colombo'
     | '/bairros/santa-terezinha-frg'
     | '/bairros/sao-cristao-piraquara'
@@ -4905,6 +5025,7 @@ export interface FileRouteTypes {
     | '/bairros/vila-sao-jose-qb'
     | '/bairros/vila-solene'
     | '/bairros/vila-taruma'
+    | '/bairros/vista-alegre'
     | '/bairros/weissopolis'
     | '/bairros/xaxim'
     | '/blog/$slug'
@@ -5178,14 +5299,17 @@ export interface FileRouteTypes {
     | '/bairros/agua-verde'
     | '/bairros/alto-boqueirao'
     | '/bairros/alto-da-gloria'
+    | '/bairros/alto-da-xv'
     | '/bairros/alto-maracana'
     | '/bairros/alto-taruma'
     | '/bairros/antonio-olivero-cm'
     | '/bairros/aristocrata'
+    | '/bairros/atuba'
     | '/bairros/atuba-colombo'
     | '/bairros/atuba-pinhais'
     | '/bairros/aviacao'
     | '/bairros/bacacheri'
+    | '/bairros/bairro-alto'
     | '/bairros/barigui-araucaria'
     | '/bairros/barro-preto'
     | '/bairros/bateias'
@@ -5202,6 +5326,7 @@ export interface FileRouteTypes {
     | '/bairros/botiatuva'
     | '/bairros/botiatuva-cm'
     | '/bairros/braga'
+    | '/bairros/butiatuvinha'
     | '/bairros/cabral'
     | '/bairros/cachoeira-araucaria'
     | '/bairros/cachoeira-at'
@@ -5209,6 +5334,7 @@ export interface FileRouteTypes {
     | '/bairros/cajuru'
     | '/bairros/california-araucaria'
     | '/bairros/campina-da-barra'
+    | '/bairros/campina-do-siqueira'
     | '/bairros/campina-grande-colombo'
     | '/bairros/campo-comprido'
     | '/bairros/campo-largo-roseira-sjp'
@@ -5222,6 +5348,7 @@ export interface FileRouteTypes {
     | '/bairros/centro-araucaria'
     | '/bairros/centro-campo-largo'
     | '/bairros/centro-campo-magro'
+    | '/bairros/centro-civico'
     | '/bairros/centro-colombo'
     | '/bairros/centro-fazenda-rio-grande'
     | '/bairros/centro-pinhais'
@@ -5245,6 +5372,7 @@ export interface FileRouteTypes {
     | '/bairros/estacao-araucaria'
     | '/bairros/estancia-pinhais'
     | '/bairros/eucaliptos-frg'
+    | '/bairros/fanny'
     | '/bairros/fatima-colombo'
     | '/bairros/fazenda-velha-araucaria'
     | '/bairros/fazendinha'
@@ -5253,6 +5381,7 @@ export interface FileRouteTypes {
     | '/bairros/graciosa'
     | '/bairros/graciosa-qb'
     | '/bairros/gralha-azul'
+    | '/bairros/guabirotuba'
     | '/bairros/guajuvira'
     | '/bairros/guaraituba-colombo'
     | '/bairros/guarituba-piraquara'
@@ -5313,6 +5442,7 @@ export interface FileRouteTypes {
     | '/bairros/joquei-clube-cm'
     | '/bairros/juveve'
     | '/bairros/lamenha-grande-cl'
+    | '/bairros/lindoia'
     | '/bairros/maracana-colombo'
     | '/bairros/maria-antonieta'
     | '/bairros/merces'
@@ -5337,6 +5467,7 @@ export interface FileRouteTypes {
     | '/bairros/planta-sao-tiago-araucaria'
     | '/bairros/portao'
     | '/bairros/porto-das-laranjeiras'
+    | '/bairros/prado-velho'
     | '/bairros/prado-velho-piraquara'
     | '/bairros/quississana-sjp'
     | '/bairros/reboucas'
@@ -5347,6 +5478,7 @@ export interface FileRouteTypes {
     | '/bairros/sabia'
     | '/bairros/santa-cruz-campo-largo'
     | '/bairros/santa-felicidade'
+    | '/bairros/santa-quiteria'
     | '/bairros/santa-terezinha-colombo'
     | '/bairros/santa-terezinha-frg'
     | '/bairros/sao-cristao-piraquara'
@@ -5392,6 +5524,7 @@ export interface FileRouteTypes {
     | '/bairros/vila-sao-jose-qb'
     | '/bairros/vila-solene'
     | '/bairros/vila-taruma'
+    | '/bairros/vista-alegre'
     | '/bairros/weissopolis'
     | '/bairros/xaxim'
     | '/blog/$slug'
@@ -5665,14 +5798,17 @@ export interface FileRouteTypes {
     | '/bairros/agua-verde'
     | '/bairros/alto-boqueirao'
     | '/bairros/alto-da-gloria'
+    | '/bairros/alto-da-xv'
     | '/bairros/alto-maracana'
     | '/bairros/alto-taruma'
     | '/bairros/antonio-olivero-cm'
     | '/bairros/aristocrata'
+    | '/bairros/atuba'
     | '/bairros/atuba-colombo'
     | '/bairros/atuba-pinhais'
     | '/bairros/aviacao'
     | '/bairros/bacacheri'
+    | '/bairros/bairro-alto'
     | '/bairros/barigui-araucaria'
     | '/bairros/barro-preto'
     | '/bairros/bateias'
@@ -5689,6 +5825,7 @@ export interface FileRouteTypes {
     | '/bairros/botiatuva'
     | '/bairros/botiatuva-cm'
     | '/bairros/braga'
+    | '/bairros/butiatuvinha'
     | '/bairros/cabral'
     | '/bairros/cachoeira-araucaria'
     | '/bairros/cachoeira-at'
@@ -5696,6 +5833,7 @@ export interface FileRouteTypes {
     | '/bairros/cajuru'
     | '/bairros/california-araucaria'
     | '/bairros/campina-da-barra'
+    | '/bairros/campina-do-siqueira'
     | '/bairros/campina-grande-colombo'
     | '/bairros/campo-comprido'
     | '/bairros/campo-largo-roseira-sjp'
@@ -5709,6 +5847,7 @@ export interface FileRouteTypes {
     | '/bairros/centro-araucaria'
     | '/bairros/centro-campo-largo'
     | '/bairros/centro-campo-magro'
+    | '/bairros/centro-civico'
     | '/bairros/centro-colombo'
     | '/bairros/centro-fazenda-rio-grande'
     | '/bairros/centro-pinhais'
@@ -5732,6 +5871,7 @@ export interface FileRouteTypes {
     | '/bairros/estacao-araucaria'
     | '/bairros/estancia-pinhais'
     | '/bairros/eucaliptos-frg'
+    | '/bairros/fanny'
     | '/bairros/fatima-colombo'
     | '/bairros/fazenda-velha-araucaria'
     | '/bairros/fazendinha'
@@ -5740,6 +5880,7 @@ export interface FileRouteTypes {
     | '/bairros/graciosa'
     | '/bairros/graciosa-qb'
     | '/bairros/gralha-azul'
+    | '/bairros/guabirotuba'
     | '/bairros/guajuvira'
     | '/bairros/guaraituba-colombo'
     | '/bairros/guarituba-piraquara'
@@ -5800,6 +5941,7 @@ export interface FileRouteTypes {
     | '/bairros/joquei-clube-cm'
     | '/bairros/juveve'
     | '/bairros/lamenha-grande-cl'
+    | '/bairros/lindoia'
     | '/bairros/maracana-colombo'
     | '/bairros/maria-antonieta'
     | '/bairros/merces'
@@ -5824,6 +5966,7 @@ export interface FileRouteTypes {
     | '/bairros/planta-sao-tiago-araucaria'
     | '/bairros/portao'
     | '/bairros/porto-das-laranjeiras'
+    | '/bairros/prado-velho'
     | '/bairros/prado-velho-piraquara'
     | '/bairros/quississana-sjp'
     | '/bairros/reboucas'
@@ -5834,6 +5977,7 @@ export interface FileRouteTypes {
     | '/bairros/sabia'
     | '/bairros/santa-cruz-campo-largo'
     | '/bairros/santa-felicidade'
+    | '/bairros/santa-quiteria'
     | '/bairros/santa-terezinha-colombo'
     | '/bairros/santa-terezinha-frg'
     | '/bairros/sao-cristao-piraquara'
@@ -5879,6 +6023,7 @@ export interface FileRouteTypes {
     | '/bairros/vila-sao-jose-qb'
     | '/bairros/vila-solene'
     | '/bairros/vila-taruma'
+    | '/bairros/vista-alegre'
     | '/bairros/weissopolis'
     | '/bairros/xaxim'
     | '/blog/$slug'
@@ -6153,14 +6298,17 @@ export interface RootRouteChildren {
   BairrosAguaVerdeRoute: typeof BairrosAguaVerdeRoute
   BairrosAltoBoqueiraoRoute: typeof BairrosAltoBoqueiraoRoute
   BairrosAltoDaGloriaRoute: typeof BairrosAltoDaGloriaRoute
+  BairrosAltoDaXvRoute: typeof BairrosAltoDaXvRoute
   BairrosAltoMaracanaRoute: typeof BairrosAltoMaracanaRoute
   BairrosAltoTarumaRoute: typeof BairrosAltoTarumaRoute
   BairrosAntonioOliveroCmRoute: typeof BairrosAntonioOliveroCmRoute
   BairrosAristocrataRoute: typeof BairrosAristocrataRoute
+  BairrosAtubaRoute: typeof BairrosAtubaRoute
   BairrosAtubaColomboRoute: typeof BairrosAtubaColomboRoute
   BairrosAtubaPinhaisRoute: typeof BairrosAtubaPinhaisRoute
   BairrosAviacaoRoute: typeof BairrosAviacaoRoute
   BairrosBacacheriRoute: typeof BairrosBacacheriRoute
+  BairrosBairroAltoRoute: typeof BairrosBairroAltoRoute
   BairrosBariguiAraucariaRoute: typeof BairrosBariguiAraucariaRoute
   BairrosBarroPretoRoute: typeof BairrosBarroPretoRoute
   BairrosBateiasRoute: typeof BairrosBateiasRoute
@@ -6177,6 +6325,7 @@ export interface RootRouteChildren {
   BairrosBotiatuvaRoute: typeof BairrosBotiatuvaRoute
   BairrosBotiatuvaCmRoute: typeof BairrosBotiatuvaCmRoute
   BairrosBragaRoute: typeof BairrosBragaRoute
+  BairrosButiatuvinhaRoute: typeof BairrosButiatuvinhaRoute
   BairrosCabralRoute: typeof BairrosCabralRoute
   BairrosCachoeiraAraucariaRoute: typeof BairrosCachoeiraAraucariaRoute
   BairrosCachoeiraAtRoute: typeof BairrosCachoeiraAtRoute
@@ -6184,6 +6333,7 @@ export interface RootRouteChildren {
   BairrosCajuruRoute: typeof BairrosCajuruRoute
   BairrosCaliforniaAraucariaRoute: typeof BairrosCaliforniaAraucariaRoute
   BairrosCampinaDaBarraRoute: typeof BairrosCampinaDaBarraRoute
+  BairrosCampinaDoSiqueiraRoute: typeof BairrosCampinaDoSiqueiraRoute
   BairrosCampinaGrandeColomboRoute: typeof BairrosCampinaGrandeColomboRoute
   BairrosCampoCompridoRoute: typeof BairrosCampoCompridoRoute
   BairrosCampoLargoRoseiraSjpRoute: typeof BairrosCampoLargoRoseiraSjpRoute
@@ -6197,6 +6347,7 @@ export interface RootRouteChildren {
   BairrosCentroAraucariaRoute: typeof BairrosCentroAraucariaRoute
   BairrosCentroCampoLargoRoute: typeof BairrosCentroCampoLargoRoute
   BairrosCentroCampoMagroRoute: typeof BairrosCentroCampoMagroRoute
+  BairrosCentroCivicoRoute: typeof BairrosCentroCivicoRoute
   BairrosCentroColomboRoute: typeof BairrosCentroColomboRoute
   BairrosCentroFazendaRioGrandeRoute: typeof BairrosCentroFazendaRioGrandeRoute
   BairrosCentroPinhaisRoute: typeof BairrosCentroPinhaisRoute
@@ -6220,6 +6371,7 @@ export interface RootRouteChildren {
   BairrosEstacaoAraucariaRoute: typeof BairrosEstacaoAraucariaRoute
   BairrosEstanciaPinhaisRoute: typeof BairrosEstanciaPinhaisRoute
   BairrosEucaliptosFrgRoute: typeof BairrosEucaliptosFrgRoute
+  BairrosFannyRoute: typeof BairrosFannyRoute
   BairrosFatimaColomboRoute: typeof BairrosFatimaColomboRoute
   BairrosFazendaVelhaAraucariaRoute: typeof BairrosFazendaVelhaAraucariaRoute
   BairrosFazendinhaRoute: typeof BairrosFazendinhaRoute
@@ -6228,6 +6380,7 @@ export interface RootRouteChildren {
   BairrosGraciosaRoute: typeof BairrosGraciosaRoute
   BairrosGraciosaQbRoute: typeof BairrosGraciosaQbRoute
   BairrosGralhaAzulRoute: typeof BairrosGralhaAzulRoute
+  BairrosGuabirotubaRoute: typeof BairrosGuabirotubaRoute
   BairrosGuajuviraRoute: typeof BairrosGuajuviraRoute
   BairrosGuaraitubaColomboRoute: typeof BairrosGuaraitubaColomboRoute
   BairrosGuaritubaPiraquaraRoute: typeof BairrosGuaritubaPiraquaraRoute
@@ -6288,6 +6441,7 @@ export interface RootRouteChildren {
   BairrosJoqueiClubeCmRoute: typeof BairrosJoqueiClubeCmRoute
   BairrosJuveveRoute: typeof BairrosJuveveRoute
   BairrosLamenhaGrandeClRoute: typeof BairrosLamenhaGrandeClRoute
+  BairrosLindoiaRoute: typeof BairrosLindoiaRoute
   BairrosMaracanaColomboRoute: typeof BairrosMaracanaColomboRoute
   BairrosMariaAntonietaRoute: typeof BairrosMariaAntonietaRoute
   BairrosMercesRoute: typeof BairrosMercesRoute
@@ -6312,6 +6466,7 @@ export interface RootRouteChildren {
   BairrosPlantaSaoTiagoAraucariaRoute: typeof BairrosPlantaSaoTiagoAraucariaRoute
   BairrosPortaoRoute: typeof BairrosPortaoRoute
   BairrosPortoDasLaranjeirasRoute: typeof BairrosPortoDasLaranjeirasRoute
+  BairrosPradoVelhoRoute: typeof BairrosPradoVelhoRoute
   BairrosPradoVelhoPiraquaraRoute: typeof BairrosPradoVelhoPiraquaraRoute
   BairrosQuississanaSjpRoute: typeof BairrosQuississanaSjpRoute
   BairrosReboucasRoute: typeof BairrosReboucasRoute
@@ -6322,6 +6477,7 @@ export interface RootRouteChildren {
   BairrosSabiaRoute: typeof BairrosSabiaRoute
   BairrosSantaCruzCampoLargoRoute: typeof BairrosSantaCruzCampoLargoRoute
   BairrosSantaFelicidadeRoute: typeof BairrosSantaFelicidadeRoute
+  BairrosSantaQuiteriaRoute: typeof BairrosSantaQuiteriaRoute
   BairrosSantaTerezinhaColomboRoute: typeof BairrosSantaTerezinhaColomboRoute
   BairrosSantaTerezinhaFrgRoute: typeof BairrosSantaTerezinhaFrgRoute
   BairrosSaoCristaoPiraquaraRoute: typeof BairrosSaoCristaoPiraquaraRoute
@@ -6367,6 +6523,7 @@ export interface RootRouteChildren {
   BairrosVilaSaoJoseQbRoute: typeof BairrosVilaSaoJoseQbRoute
   BairrosVilaSoleneRoute: typeof BairrosVilaSoleneRoute
   BairrosVilaTarumaRoute: typeof BairrosVilaTarumaRoute
+  BairrosVistaAlegreRoute: typeof BairrosVistaAlegreRoute
   BairrosWeissopolisRoute: typeof BairrosWeissopolisRoute
   BairrosXaximRoute: typeof BairrosXaximRoute
   BlogSlugRoute: typeof BlogSlugRoute
@@ -7322,6 +7479,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BairrosAltoDaGloriaRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/bairros/alto-da-xv': {
+      id: '/bairros/alto-da-xv'
+      path: '/bairros/alto-da-xv'
+      fullPath: '/bairros/alto-da-xv'
+      preLoaderRoute: typeof BairrosAltoDaXvRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/bairros/alto-maracana': {
       id: '/bairros/alto-maracana'
       path: '/bairros/alto-maracana'
@@ -7350,6 +7514,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BairrosAristocrataRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/bairros/atuba': {
+      id: '/bairros/atuba'
+      path: '/bairros/atuba'
+      fullPath: '/bairros/atuba'
+      preLoaderRoute: typeof BairrosAtubaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/bairros/atuba-colombo': {
       id: '/bairros/atuba-colombo'
       path: '/bairros/atuba-colombo'
@@ -7376,6 +7547,13 @@ declare module '@tanstack/react-router' {
       path: '/bairros/bacacheri'
       fullPath: '/bairros/bacacheri'
       preLoaderRoute: typeof BairrosBacacheriRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/bairros/bairro-alto': {
+      id: '/bairros/bairro-alto'
+      path: '/bairros/bairro-alto'
+      fullPath: '/bairros/bairro-alto'
+      preLoaderRoute: typeof BairrosBairroAltoRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/bairros/barigui-araucaria': {
@@ -7490,6 +7668,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BairrosBragaRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/bairros/butiatuvinha': {
+      id: '/bairros/butiatuvinha'
+      path: '/bairros/butiatuvinha'
+      fullPath: '/bairros/butiatuvinha'
+      preLoaderRoute: typeof BairrosButiatuvinhaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/bairros/cabral': {
       id: '/bairros/cabral'
       path: '/bairros/cabral'
@@ -7537,6 +7722,13 @@ declare module '@tanstack/react-router' {
       path: '/bairros/campina-da-barra'
       fullPath: '/bairros/campina-da-barra'
       preLoaderRoute: typeof BairrosCampinaDaBarraRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/bairros/campina-do-siqueira': {
+      id: '/bairros/campina-do-siqueira'
+      path: '/bairros/campina-do-siqueira'
+      fullPath: '/bairros/campina-do-siqueira'
+      preLoaderRoute: typeof BairrosCampinaDoSiqueiraRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/bairros/campina-grande-colombo': {
@@ -7628,6 +7820,13 @@ declare module '@tanstack/react-router' {
       path: '/bairros/centro-campo-magro'
       fullPath: '/bairros/centro-campo-magro'
       preLoaderRoute: typeof BairrosCentroCampoMagroRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/bairros/centro-civico': {
+      id: '/bairros/centro-civico'
+      path: '/bairros/centro-civico'
+      fullPath: '/bairros/centro-civico'
+      preLoaderRoute: typeof BairrosCentroCivicoRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/bairros/centro-colombo': {
@@ -7791,6 +7990,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BairrosEucaliptosFrgRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/bairros/fanny': {
+      id: '/bairros/fanny'
+      path: '/bairros/fanny'
+      fullPath: '/bairros/fanny'
+      preLoaderRoute: typeof BairrosFannyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/bairros/fatima-colombo': {
       id: '/bairros/fatima-colombo'
       path: '/bairros/fatima-colombo'
@@ -7845,6 +8051,13 @@ declare module '@tanstack/react-router' {
       path: '/bairros/gralha-azul'
       fullPath: '/bairros/gralha-azul'
       preLoaderRoute: typeof BairrosGralhaAzulRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/bairros/guabirotuba': {
+      id: '/bairros/guabirotuba'
+      path: '/bairros/guabirotuba'
+      fullPath: '/bairros/guabirotuba'
+      preLoaderRoute: typeof BairrosGuabirotubaRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/bairros/guajuvira': {
@@ -8267,6 +8480,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BairrosLamenhaGrandeClRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/bairros/lindoia': {
+      id: '/bairros/lindoia'
+      path: '/bairros/lindoia'
+      fullPath: '/bairros/lindoia'
+      preLoaderRoute: typeof BairrosLindoiaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/bairros/maracana-colombo': {
       id: '/bairros/maracana-colombo'
       path: '/bairros/maracana-colombo'
@@ -8435,6 +8655,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BairrosPortoDasLaranjeirasRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/bairros/prado-velho': {
+      id: '/bairros/prado-velho'
+      path: '/bairros/prado-velho'
+      fullPath: '/bairros/prado-velho'
+      preLoaderRoute: typeof BairrosPradoVelhoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/bairros/prado-velho-piraquara': {
       id: '/bairros/prado-velho-piraquara'
       path: '/bairros/prado-velho-piraquara'
@@ -8503,6 +8730,13 @@ declare module '@tanstack/react-router' {
       path: '/bairros/santa-felicidade'
       fullPath: '/bairros/santa-felicidade'
       preLoaderRoute: typeof BairrosSantaFelicidadeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/bairros/santa-quiteria': {
+      id: '/bairros/santa-quiteria'
+      path: '/bairros/santa-quiteria'
+      fullPath: '/bairros/santa-quiteria'
+      preLoaderRoute: typeof BairrosSantaQuiteriaRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/bairros/santa-terezinha-colombo': {
@@ -8818,6 +9052,13 @@ declare module '@tanstack/react-router' {
       path: '/bairros/vila-taruma'
       fullPath: '/bairros/vila-taruma'
       preLoaderRoute: typeof BairrosVilaTarumaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/bairros/vista-alegre': {
+      id: '/bairros/vista-alegre'
+      path: '/bairros/vista-alegre'
+      fullPath: '/bairros/vista-alegre'
+      preLoaderRoute: typeof BairrosVistaAlegreRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/bairros/weissopolis': {
@@ -10047,14 +10288,17 @@ const rootRouteChildren: RootRouteChildren = {
   BairrosAguaVerdeRoute: BairrosAguaVerdeRoute,
   BairrosAltoBoqueiraoRoute: BairrosAltoBoqueiraoRoute,
   BairrosAltoDaGloriaRoute: BairrosAltoDaGloriaRoute,
+  BairrosAltoDaXvRoute: BairrosAltoDaXvRoute,
   BairrosAltoMaracanaRoute: BairrosAltoMaracanaRoute,
   BairrosAltoTarumaRoute: BairrosAltoTarumaRoute,
   BairrosAntonioOliveroCmRoute: BairrosAntonioOliveroCmRoute,
   BairrosAristocrataRoute: BairrosAristocrataRoute,
+  BairrosAtubaRoute: BairrosAtubaRoute,
   BairrosAtubaColomboRoute: BairrosAtubaColomboRoute,
   BairrosAtubaPinhaisRoute: BairrosAtubaPinhaisRoute,
   BairrosAviacaoRoute: BairrosAviacaoRoute,
   BairrosBacacheriRoute: BairrosBacacheriRoute,
+  BairrosBairroAltoRoute: BairrosBairroAltoRoute,
   BairrosBariguiAraucariaRoute: BairrosBariguiAraucariaRoute,
   BairrosBarroPretoRoute: BairrosBarroPretoRoute,
   BairrosBateiasRoute: BairrosBateiasRoute,
@@ -10071,6 +10315,7 @@ const rootRouteChildren: RootRouteChildren = {
   BairrosBotiatuvaRoute: BairrosBotiatuvaRoute,
   BairrosBotiatuvaCmRoute: BairrosBotiatuvaCmRoute,
   BairrosBragaRoute: BairrosBragaRoute,
+  BairrosButiatuvinhaRoute: BairrosButiatuvinhaRoute,
   BairrosCabralRoute: BairrosCabralRoute,
   BairrosCachoeiraAraucariaRoute: BairrosCachoeiraAraucariaRoute,
   BairrosCachoeiraAtRoute: BairrosCachoeiraAtRoute,
@@ -10078,6 +10323,7 @@ const rootRouteChildren: RootRouteChildren = {
   BairrosCajuruRoute: BairrosCajuruRoute,
   BairrosCaliforniaAraucariaRoute: BairrosCaliforniaAraucariaRoute,
   BairrosCampinaDaBarraRoute: BairrosCampinaDaBarraRoute,
+  BairrosCampinaDoSiqueiraRoute: BairrosCampinaDoSiqueiraRoute,
   BairrosCampinaGrandeColomboRoute: BairrosCampinaGrandeColomboRoute,
   BairrosCampoCompridoRoute: BairrosCampoCompridoRoute,
   BairrosCampoLargoRoseiraSjpRoute: BairrosCampoLargoRoseiraSjpRoute,
@@ -10091,6 +10337,7 @@ const rootRouteChildren: RootRouteChildren = {
   BairrosCentroAraucariaRoute: BairrosCentroAraucariaRoute,
   BairrosCentroCampoLargoRoute: BairrosCentroCampoLargoRoute,
   BairrosCentroCampoMagroRoute: BairrosCentroCampoMagroRoute,
+  BairrosCentroCivicoRoute: BairrosCentroCivicoRoute,
   BairrosCentroColomboRoute: BairrosCentroColomboRoute,
   BairrosCentroFazendaRioGrandeRoute: BairrosCentroFazendaRioGrandeRoute,
   BairrosCentroPinhaisRoute: BairrosCentroPinhaisRoute,
@@ -10114,6 +10361,7 @@ const rootRouteChildren: RootRouteChildren = {
   BairrosEstacaoAraucariaRoute: BairrosEstacaoAraucariaRoute,
   BairrosEstanciaPinhaisRoute: BairrosEstanciaPinhaisRoute,
   BairrosEucaliptosFrgRoute: BairrosEucaliptosFrgRoute,
+  BairrosFannyRoute: BairrosFannyRoute,
   BairrosFatimaColomboRoute: BairrosFatimaColomboRoute,
   BairrosFazendaVelhaAraucariaRoute: BairrosFazendaVelhaAraucariaRoute,
   BairrosFazendinhaRoute: BairrosFazendinhaRoute,
@@ -10122,6 +10370,7 @@ const rootRouteChildren: RootRouteChildren = {
   BairrosGraciosaRoute: BairrosGraciosaRoute,
   BairrosGraciosaQbRoute: BairrosGraciosaQbRoute,
   BairrosGralhaAzulRoute: BairrosGralhaAzulRoute,
+  BairrosGuabirotubaRoute: BairrosGuabirotubaRoute,
   BairrosGuajuviraRoute: BairrosGuajuviraRoute,
   BairrosGuaraitubaColomboRoute: BairrosGuaraitubaColomboRoute,
   BairrosGuaritubaPiraquaraRoute: BairrosGuaritubaPiraquaraRoute,
@@ -10183,6 +10432,7 @@ const rootRouteChildren: RootRouteChildren = {
   BairrosJoqueiClubeCmRoute: BairrosJoqueiClubeCmRoute,
   BairrosJuveveRoute: BairrosJuveveRoute,
   BairrosLamenhaGrandeClRoute: BairrosLamenhaGrandeClRoute,
+  BairrosLindoiaRoute: BairrosLindoiaRoute,
   BairrosMaracanaColomboRoute: BairrosMaracanaColomboRoute,
   BairrosMariaAntonietaRoute: BairrosMariaAntonietaRoute,
   BairrosMercesRoute: BairrosMercesRoute,
@@ -10207,6 +10457,7 @@ const rootRouteChildren: RootRouteChildren = {
   BairrosPlantaSaoTiagoAraucariaRoute: BairrosPlantaSaoTiagoAraucariaRoute,
   BairrosPortaoRoute: BairrosPortaoRoute,
   BairrosPortoDasLaranjeirasRoute: BairrosPortoDasLaranjeirasRoute,
+  BairrosPradoVelhoRoute: BairrosPradoVelhoRoute,
   BairrosPradoVelhoPiraquaraRoute: BairrosPradoVelhoPiraquaraRoute,
   BairrosQuississanaSjpRoute: BairrosQuississanaSjpRoute,
   BairrosReboucasRoute: BairrosReboucasRoute,
@@ -10217,6 +10468,7 @@ const rootRouteChildren: RootRouteChildren = {
   BairrosSabiaRoute: BairrosSabiaRoute,
   BairrosSantaCruzCampoLargoRoute: BairrosSantaCruzCampoLargoRoute,
   BairrosSantaFelicidadeRoute: BairrosSantaFelicidadeRoute,
+  BairrosSantaQuiteriaRoute: BairrosSantaQuiteriaRoute,
   BairrosSantaTerezinhaColomboRoute: BairrosSantaTerezinhaColomboRoute,
   BairrosSantaTerezinhaFrgRoute: BairrosSantaTerezinhaFrgRoute,
   BairrosSaoCristaoPiraquaraRoute: BairrosSaoCristaoPiraquaraRoute,
@@ -10262,6 +10514,7 @@ const rootRouteChildren: RootRouteChildren = {
   BairrosVilaSaoJoseQbRoute: BairrosVilaSaoJoseQbRoute,
   BairrosVilaSoleneRoute: BairrosVilaSoleneRoute,
   BairrosVilaTarumaRoute: BairrosVilaTarumaRoute,
+  BairrosVistaAlegreRoute: BairrosVistaAlegreRoute,
   BairrosWeissopolisRoute: BairrosWeissopolisRoute,
   BairrosXaximRoute: BairrosXaximRoute,
   BlogSlugRoute: BlogSlugRoute,
