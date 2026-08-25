@@ -35,7 +35,7 @@ test("classificador é idempotente para a mesma entrada", () => {
 });
 
 test("reconciliação do funil reprova contagem que não fecha", () => {
-  assert.equal(reconciliarFunil({ indexed: 22, unknown: 56, discovered: 48 }, 130).ok, true);
+  assert.equal(reconciliarFunil({ indexed: 26, unknown: 56, discovered: 48 }, 130).ok, true);
   assert.equal(reconciliarFunil({ indexed: 22, unknown: 56, discovered: 40 }, 130).ok, false);
 });
 
