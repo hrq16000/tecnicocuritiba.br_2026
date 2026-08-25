@@ -1,14 +1,14 @@
 {
   "schema": "freeze-v2-drift/1.0",
-  "verificadoEm": "2026-08-25T07:01:33.042Z",
+  "verificadoEm": "2026-08-25T07:26:06.798Z",
   "freezeSelo": "b12f35b4368371ba81444cffe7cbafde7d810bdda9089e87e36e056171aab709",
   "freezeSeladoEm": "2026-08-25T06:09:07.486Z",
-  "totalDiffs": 61,
+  "totalDiffs": 69,
   "porClasse": {
-    "CI_CHANGE": 16,
-    "OBSERVABILITY_CHANGE": 8,
+    "CI_CHANGE": 18,
+    "OBSERVABILITY_CHANGE": 11,
     "ADMIN_CHANGE": 8,
-    "NON_CURATED_PUBLIC_CHANGE": 29
+    "NON_CURATED_PUBLIC_CHANGE": 32
   },
   "publicChangeTotal": 0,
   "publicChangeNaoRegistrado": 0,
@@ -26,7 +26,17 @@
       "classe": "OBSERVABILITY_CHANGE"
     },
     {
+      "arquivo": "docs/auditoria-noindex-gsc.md",
+      "tipo": "ADICIONADO",
+      "classe": "OBSERVABILITY_CHANGE"
+    },
+    {
       "arquivo": "docs/relatorio-freeze-v2-pre-d14.md",
+      "tipo": "ADICIONADO",
+      "classe": "OBSERVABILITY_CHANGE"
+    },
+    {
+      "arquivo": "docs/relatorio-operacao-os-pre-d14.md",
       "tipo": "ADICIONADO",
       "classe": "OBSERVABILITY_CHANGE"
     },
@@ -51,6 +61,11 @@
       "classe": "OBSERVABILITY_CHANGE"
     },
     {
+      "arquivo": "reports/auditoria-noindex-live.json",
+      "tipo": "ADICIONADO",
+      "classe": "OBSERVABILITY_CHANGE"
+    },
+    {
       "arquivo": "reports/fila-enriquecimento-bairros.md",
       "tipo": "ADICIONADO",
       "classe": "OBSERVABILITY_CHANGE"
@@ -66,7 +81,17 @@
       "classe": "OBSERVABILITY_CHANGE"
     },
     {
+      "arquivo": "scripts/auditar-noindex-live.mjs",
+      "tipo": "ADICIONADO",
+      "classe": "CI_CHANGE"
+    },
+    {
       "arquivo": "scripts/check-os-privacidade.mjs",
+      "tipo": "ADICIONADO",
+      "classe": "CI_CHANGE"
+    },
+    {
+      "arquivo": "scripts/check-rotas-localidades.mjs",
       "tipo": "ADICIONADO",
       "classe": "CI_CHANGE"
     },
@@ -131,6 +156,16 @@
       "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     {
+      "arquivo": "src/lib/os/gatilhosOs.ts",
+      "tipo": "ADICIONADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/lib/os/os.functions.ts",
+      "tipo": "ALTERADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
       "arquivo": "src/lib/os/osAdmin.functions.ts",
       "tipo": "ADICIONADO",
       "classe": "NON_CURATED_PUBLIC_CHANGE"
@@ -148,6 +183,11 @@
     {
       "arquivo": "src/lib/os/whatsappOs.ts",
       "tipo": "ADICIONADO",
+      "classe": "NON_CURATED_PUBLIC_CHANGE"
+    },
+    {
+      "arquivo": "src/pages/OrdemDeServicoConsulta.tsx",
+      "tipo": "ALTERADO",
       "classe": "NON_CURATED_PUBLIC_CHANGE"
     },
     {
