@@ -8,7 +8,14 @@ import { createServerFn } from "@tanstack/react-start";
 import { requireSupabaseAuth } from "@/integrations/supabase/auth-middleware";
 import { z } from "zod";
 
-import { OS_STATUS, calcularValores, ehStatusOs, transicaoPermitida } from "./statusOs";
+import {
+  OS_STATUS,
+  calcularValores,
+  ehStatusOs,
+  transicaoPermitida,
+  type OsStatus,
+} from "./statusOs";
+import { gatilhoParaStatus } from "./gatilhosOs";
 import { OS_TEMPLATES } from "./whatsappOs";
 
 const pecaSchema = z.object({
@@ -403,7 +410,111 @@ export const alterarStatusOrdem = createServerFn({ method: "POST" })
       data.nota ? `Status alterado. ${data.nota}` : "Status alterado.",
       { de, para: data.status },
     );
+    await criarLembreteDeGatilho(context, atual.id, data.status);
     return { ok: true };
+  });
+
+/**
+ * Cria (uma única vez por ordem) o lembrete operacional associado ao marco.
+ * Idempotente: se já existe lembrete pendente do mesmo tipo, não duplica.
+ * Nunca envia mensagem — apenas registra a tarefa para o operador.
+ */
+async function criarLembreteDeGatilho(
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  context: { supabase: any; userId: string },
+  ordemId: string,
+  status: OsStatus,
+): Promise<void> {
+  const gatilho = gatilhoParaStatus(status);
+  if (!gatilho) return;
+
+  const { data: existente } = await context.supabase
+    .from("os_lembretes")
+    .select("id")
+    .eq("ordem_id", ordemId)
+    .eq("tipo", gatilho.tipo)
+    .eq("status", "pendente")
+    .limit(1);
+  if (existente && existente.length > 0) return;
+
+  const quando = new Date(Date.now() + gatilho.atrasoMinutos * 60_000).toISOString();
+  const { error } = await context.supabase.from("os_lembretes").insert({
+    ordem_id: ordemId,
+    tipo: gatilho.tipo,
+    quando,
+    observacao: gatilho.observacao,
+    created_by: context.userId,
+  });
+  if (error) {
+    console.error("[os] falha ao criar lembrete automático", error.message);
+    return;
+  }
+  await registrarEvento(
+    context,
+    ordemId,
+    "LEMBRETE",
+    `Lembrete automático criado (${gatilho.tipo}).`,
+  );
+}
+
+/**
+ * Ação em lote: aplica o mesmo status a várias ordens.
+ * Cada ordem é validada individualmente pela máquina de estados; ordens
+ * com transição inválida são reportadas, nunca forçadas.
+ */
+export const alterarStatusEmLote = createServerFn({ method: "POST" })
+  .middleware([requireSupabaseAuth])
+  .inputValidator((input: unknown) =>
+    z
+      .object({
+        protocolos: z.array(protocoloSchema.shape.protocolo).min(1).max(50),
+        status: z.enum(OS_STATUS),
+        nota: z.string().trim().max(300).optional().default(""),
+      })
+      .parse(input),
+  )
+  .handler(async ({ data, context }) => {
+    await exigirAdmin(context);
+    const aplicados: string[] = [];
+    const falhas: { protocolo: string; motivo: string }[] = [];
+
+    for (const protocolo of data.protocolos) {
+      const { data: atual } = await context.supabase
+        .from("ordens_servico")
+        .select("id, status")
+        .eq("protocolo", protocolo)
+        .maybeSingle();
+      if (!atual) {
+        falhas.push({ protocolo, motivo: "Ordem não encontrada." });
+        continue;
+      }
+      const de = ehStatusOs(atual.status) ? atual.status : "ABERTA";
+      if (!transicaoPermitida(de, data.status)) {
+        falhas.push({ protocolo, motivo: `Transição inválida: ${de} → ${data.status}.` });
+        continue;
+      }
+      const patch: Record<string, unknown> = { status: data.status };
+      if (data.status === "CONCLUIDA") patch["concluida_em"] = new Date().toISOString();
+      const { error } = await context.supabase
+        .from("ordens_servico")
+        .update(patch)
+        .eq("id", atual.id);
+      if (error) {
+        falhas.push({ protocolo, motivo: error.message });
+        continue;
+      }
+      await registrarEvento(
+        context,
+        atual.id,
+        "STATUS",
+        data.nota ? `Status alterado em lote. ${data.nota}` : "Status alterado em lote.",
+        { de, para: data.status },
+      );
+      await criarLembreteDeGatilho(context, atual.id, data.status);
+      aplicados.push(protocolo);
+    }
+
+    return { aplicados, falhas };
   });
 
 export const registrarMensagemPreparada = createServerFn({ method: "POST" })

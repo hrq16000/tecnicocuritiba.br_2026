@@ -1,5 +1,6 @@
 import { createServerFn } from "@tanstack/react-start";
-import { randomInt } from "crypto";
+import { getRequest } from "@tanstack/react-start/server";
+import { createHash, randomInt } from "crypto";
 import { z } from "zod";
 
 import { TERMOS_VERSAO } from "./termosOs";
@@ -90,11 +91,61 @@ export interface OsPublica {
   criadoEm: string;
 }
 
+/** Erro tipado de limite: a UI mostra mensagem amigável, não genérica. */
+export const OS_ERRO_LIMITE = "OS_RATE_LIMIT";
+
+const LIMITE_CONSULTAS = 20;
+const JANELA_MS = 10 * 60 * 1000;
+
+/** Identificação aproximada do cliente, sempre em hash — nunca IP em claro. */
+function hashCurto(valor: string): string {
+  return createHash("sha256").update(valor).digest("hex").slice(0, 32);
+}
+
+function ipDaRequisicao(): string {
+  try {
+    const req = getRequest();
+    const h = req?.headers;
+    const bruto =
+      h?.get("cf-connecting-ip") ??
+      h?.get("x-real-ip") ??
+      h?.get("x-forwarded-for")?.split(",")[0]?.trim() ??
+      "desconhecido";
+    return bruto || "desconhecido";
+  } catch {
+    return "desconhecido";
+  }
+}
+
 /** Consulta pública por protocolo — devolve apenas campos seguros. */
 export const consultarOs = createServerFn({ method: "POST" })
   .inputValidator((input: unknown) => consultarSchema.parse(input))
   .handler(async ({ data }): Promise<OsPublica | null> => {
     const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
+    const inicio = Date.now();
+    const ipHash = hashCurto(ipDaRequisicao());
+    const protocoloHash = hashCurto(data.protocolo);
+    const desde = new Date(Date.now() - JANELA_MS).toISOString();
+
+    // Contenção de abuso por origem: enumerar protocolos fica inviável.
+    const { count } = await supabaseAdmin
+      .from("os_lookup_attempts")
+      .select("id", { count: "exact", head: true })
+      .eq("ip_hash", ipHash)
+      .gte("created_at", desde);
+
+    if ((count ?? 0) >= LIMITE_CONSULTAS) {
+      await supabaseAdmin.from("os_lookup_attempts").insert({
+        ip_hash: ipHash,
+        telefone_hash: protocoloHash,
+        found: false,
+        path: "/ordem-de-servico",
+        outcome: "rate_limited",
+        latency_ms: Date.now() - inicio,
+      });
+      throw new Error(OS_ERRO_LIMITE);
+    }
+
     const { data: row, error } = await supabaseAdmin
       .from("os_publicas")
       .select(
@@ -102,6 +153,15 @@ export const consultarOs = createServerFn({ method: "POST" })
       )
       .eq("protocolo", data.protocolo)
       .maybeSingle();
+
+    await supabaseAdmin.from("os_lookup_attempts").insert({
+      ip_hash: ipHash,
+      telefone_hash: protocoloHash,
+      found: Boolean(row),
+      path: "/ordem-de-servico",
+      outcome: error ? "erro" : row ? "encontrada" : "nao_encontrada",
+      latency_ms: Date.now() - inicio,
+    });
 
     if (error) {
       console.error("[os] falha ao consultar ordem de serviço", error.message);

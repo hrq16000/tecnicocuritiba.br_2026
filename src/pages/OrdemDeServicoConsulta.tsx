@@ -4,7 +4,7 @@ import { useParams, Link } from "@tanstack/react-router";
 import { PageSEO } from "@/components/PageSEO";
 import { Button } from "@/components/ui/button";
 import { TermosOsView } from "@/components/os/TermosOsView";
-import { consultarOs, type OsPublica } from "@/lib/os/os.functions";
+import { consultarOs, OS_ERRO_LIMITE, type OsPublica } from "@/lib/os/os.functions";
 import { mensagemWhatsAppOs } from "@/lib/os/termosOs";
 import { trackCTAClick } from "@/lib/analytics";
 import { MODALIDADES } from "@/lib/precosConfig";
@@ -20,27 +20,45 @@ const Linha = ({ label, valor }: { label: string; valor?: string | null }) =>
 const OrdemDeServicoConsulta = () => {
   const { protocolo: protocoloParam } = useParams({ from: "/ordem-de-servico/$protocolo" });
   const protocolo = protocoloParam.toUpperCase();
-  const [estado, setEstado] = useState<"carregando" | "ok" | "nao-encontrada" | "erro">("carregando");
+  const [estado, setEstado] = useState<
+    "carregando" | "ok" | "nao-encontrada" | "erro" | "limite" | "invalido"
+  >("carregando");
   const [os, setOs] = useState<OsPublica | null>(null);
 
   useEffect(() => {
     let ativo = true;
     setEstado("carregando");
-    consultarOs({ data: { protocolo } })
-      .then((resultado) => {
-        if (!ativo) return;
-        if (!resultado) {
-          setEstado("nao-encontrada");
-          return;
-        }
-        setOs(resultado);
-        setEstado("ok");
-      })
-      .catch(() => {
-        if (ativo) setEstado("erro");
-      });
+
+    // Validação local antes de gastar requisição: formato OS-AAAAMMDD-XXXX.
+    if (!/^OS-\d{8}-[A-Z0-9]{4}$/.test(protocolo)) {
+      setEstado("invalido");
+      return () => {
+        ativo = false;
+      };
+    }
+
+    // Debounce curto: evita disparo duplicado em remontagem/StrictMode.
+    const timer = setTimeout(() => {
+      consultarOs({ data: { protocolo } })
+        .then((resultado) => {
+          if (!ativo) return;
+          if (!resultado) {
+            setEstado("nao-encontrada");
+            return;
+          }
+          setOs(resultado);
+          setEstado("ok");
+        })
+        .catch((e: unknown) => {
+          if (!ativo) return;
+          const msg = e instanceof Error ? e.message : "";
+          setEstado(msg.includes(OS_ERRO_LIMITE) ? "limite" : "erro");
+        });
+    }, 250);
+
     return () => {
       ativo = false;
+      clearTimeout(timer);
     };
   }, [protocolo]);
 
@@ -99,6 +117,20 @@ const OrdemDeServicoConsulta = () => {
           <p className="mt-6 rounded-xl border border-border bg-card p-5 text-sm leading-relaxed text-muted-foreground">
             Não encontramos nenhuma ordem de serviço com este código. Confira o protocolo recebido ou abra uma
             nova ordem.
+          </p>
+        ) : null}
+
+        {estado === "invalido" ? (
+          <p className="mt-6 rounded-xl border border-border bg-card p-5 text-sm leading-relaxed text-muted-foreground">
+            Este código não está no formato de protocolo. Ele começa com <strong>OS-</strong>, seguido da data
+            e de quatro caracteres — por exemplo, <code>OS-20260808-K7QD</code>.
+          </p>
+        ) : null}
+
+        {estado === "limite" ? (
+          <p className="mt-6 rounded-xl border border-border bg-card p-5 text-sm leading-relaxed text-muted-foreground">
+            Recebemos muitas consultas deste dispositivo em pouco tempo. Aguarde alguns minutos e tente
+            novamente — ou fale com a gente pelo WhatsApp que localizamos a sua ordem.
           </p>
         ) : null}
 

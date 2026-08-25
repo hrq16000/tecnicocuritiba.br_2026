@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/select";
 import { useAdminAuth } from "@/hooks/useAdminAuth";
 import { OS_STATUS, OS_STATUS_LABEL, formatarBRL, type OsStatus } from "@/lib/os/statusOs";
-import { listarOrdens, type OsAdminRow } from "@/lib/os/osAdmin.functions";
+import { alterarStatusEmLote, listarOrdens, type OsAdminRow } from "@/lib/os/osAdmin.functions";
 import { AlertCircle, Inbox, RefreshCw, Search } from "lucide-react";
 
 const POR_PAGINA = 20;
@@ -37,6 +37,10 @@ const AdminOrdens = () => {
   const [desde, setDesde] = useState("");
   const [carregando, setCarregando] = useState(true);
   const [erro, setErro] = useState<string | null>(null);
+  const [selecionados, setSelecionados] = useState<string[]>([]);
+  const [statusLote, setStatusLote] = useState("");
+  const [aplicandoLote, setAplicandoLote] = useState(false);
+  const [resultadoLote, setResultadoLote] = useState<string | null>(null);
 
   const carregar = useCallback(async () => {
     setCarregando(true);
@@ -64,6 +68,38 @@ const AdminOrdens = () => {
   useEffect(() => {
     if (isAdmin) void carregar();
   }, [isAdmin, carregar]);
+
+  const alternarSelecao = useCallback((protocolo: string) => {
+    setSelecionados((atual) =>
+      atual.includes(protocolo)
+        ? atual.filter((p) => p !== protocolo)
+        : [...atual, protocolo],
+    );
+  }, []);
+
+  const aplicarLote = useCallback(async () => {
+    if (!statusLote || selecionados.length === 0) return;
+    setAplicandoLote(true);
+    setResultadoLote(null);
+    try {
+      const r = await alterarStatusEmLote({
+        data: { protocolos: selecionados, status: statusLote as OsStatus, nota: "" },
+      });
+      const falhas = r.falhas
+        .map((f) => `${f.protocolo}: ${f.motivo}`)
+        .join(" · ");
+      setResultadoLote(
+        `${r.aplicados.length} atualizada(s).` +
+          (r.falhas.length ? ` ${r.falhas.length} recusada(s) — ${falhas}` : ""),
+      );
+      setSelecionados([]);
+      await carregar();
+    } catch (e) {
+      setResultadoLote(e instanceof Error ? e.message : "Falha ao aplicar em lote.");
+    } finally {
+      setAplicandoLote(false);
+    }
+  }, [statusLote, selecionados, carregar]);
 
   const paginas = useMemo(() => Math.max(1, Math.ceil(total / POR_PAGINA)), [total]);
 
@@ -169,35 +205,88 @@ const AdminOrdens = () => {
             </p>
           </Card>
         ) : (
-          <ul className="space-y-3">
-            {itens.map((os) => (
-              <li key={os.id}>
-                <Link
-                  to={`/admin/ordens/${os.protocolo}`}
-                  className="block rounded-xl border border-border bg-card p-4 transition-colors hover:border-primary/50"
+          <>
+            {selecionados.length > 0 && (
+              <Card className="mb-4 flex flex-wrap items-center gap-3 border-primary/40 p-4">
+                <span className="text-sm font-medium text-foreground">
+                  {selecionados.length} ordem(ns) selecionada(s)
+                </span>
+                <Select value={statusLote} onValueChange={setStatusLote}>
+                  <SelectTrigger className="w-56">
+                    <SelectValue placeholder="Novo status" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {OS_STATUS.map((s) => (
+                      <SelectItem key={s} value={s}>{OS_STATUS_LABEL[s]}</SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+                <Button
+                  size="sm"
+                  disabled={!statusLote || aplicandoLote}
+                  onClick={() => void aplicarLote()}
                 >
-                  <div className="flex flex-wrap items-center justify-between gap-2">
-                    <span className="font-mono text-sm font-semibold text-foreground">
-                      {os.protocolo}
-                    </span>
-                    <Badge className={tomStatus(os.status)} variant="secondary">
-                      {OS_STATUS_LABEL[os.status as OsStatus] ?? os.status}
-                    </Badge>
-                  </div>
-                  <p className="mt-2 text-sm text-foreground">
-                    {os.clienteNome || "Cliente não informado"}
-                    {os.equipamento ? ` · ${os.equipamento}` : ""}
-                    {os.marcaModelo ? ` ${os.marcaModelo}` : ""}
-                  </p>
-                  <div className="mt-1 flex flex-wrap gap-x-4 text-xs text-muted-foreground">
-                    <span>Aberta em {new Date(os.abertaEm).toLocaleDateString("pt-BR")}</span>
-                    {os.tecnicoResponsavel && <span>Técnico: {os.tecnicoResponsavel}</span>}
-                    <span>Total: {formatarBRL(os.total)}</span>
-                  </div>
-                </Link>
-              </li>
-            ))}
-          </ul>
+                  {aplicandoLote ? "Aplicando…" : "Aplicar status"}
+                </Button>
+                <Button variant="ghost" size="sm" onClick={() => setSelecionados([])}>
+                  Limpar seleção
+                </Button>
+                {resultadoLote && (
+                  <p className="w-full text-xs text-muted-foreground">{resultadoLote}</p>
+                )}
+              </Card>
+            )}
+
+            <div className="mb-3 flex items-center gap-2 text-sm text-muted-foreground">
+              <input
+                type="checkbox"
+                id="selecionar-todos"
+                className="h-4 w-4 accent-primary"
+                checked={selecionados.length === itens.length && itens.length > 0}
+                onChange={(e) =>
+                  setSelecionados(e.target.checked ? itens.map((o) => o.protocolo) : [])
+                }
+              />
+              <label htmlFor="selecionar-todos">Selecionar todas desta página</label>
+            </div>
+
+            <ul className="space-y-3">
+              {itens.map((os) => (
+                <li key={os.id} className="flex items-start gap-3">
+                  <input
+                    type="checkbox"
+                    aria-label={`Selecionar ordem ${os.protocolo}`}
+                    className="mt-5 h-4 w-4 shrink-0 accent-primary"
+                    checked={selecionados.includes(os.protocolo)}
+                    onChange={() => alternarSelecao(os.protocolo)}
+                  />
+                  <Link
+                    to={`/admin/ordens/${os.protocolo}`}
+                    className="block flex-1 rounded-xl border border-border bg-card p-4 transition-colors hover:border-primary/50"
+                  >
+                    <div className="flex flex-wrap items-center justify-between gap-2">
+                      <span className="font-mono text-sm font-semibold text-foreground">
+                        {os.protocolo}
+                      </span>
+                      <Badge className={tomStatus(os.status)} variant="secondary">
+                        {OS_STATUS_LABEL[os.status as OsStatus] ?? os.status}
+                      </Badge>
+                    </div>
+                    <p className="mt-2 text-sm text-foreground">
+                      {os.clienteNome || "Cliente não informado"}
+                      {os.equipamento ? ` · ${os.equipamento}` : ""}
+                      {os.marcaModelo ? ` ${os.marcaModelo}` : ""}
+                    </p>
+                    <div className="mt-1 flex flex-wrap gap-x-4 text-xs text-muted-foreground">
+                      <span>Aberta em {new Date(os.abertaEm).toLocaleDateString("pt-BR")}</span>
+                      {os.tecnicoResponsavel && <span>Técnico: {os.tecnicoResponsavel}</span>}
+                      <span>Total: {formatarBRL(os.total)}</span>
+                    </div>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </>
         )}
 
         {paginas > 1 && (
