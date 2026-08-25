@@ -1,0 +1,400 @@
+{
+  "schema": "intervencao/1.0",
+  "atualizadoEm": "2026-08-25T05:28:44.589Z",
+  "baseline": {
+    "marco": "D0",
+    "registradoEm": "2026-08-25T01:49:17.273Z",
+    "universoCurado": 130,
+    "politica": "ZERO_PUBLIC_SEO_DIFF",
+    "freeze": "freeze_v1",
+    "imutavel": true
+  },
+  "politica": {
+    "freeze_v1": "baseline original D0 — ZERO_PUBLIC_SEO_DIFF",
+    "intervention_event": "2 intervenção(ões) pública(s) registrada(s) na janela WAIT",
+    "freeze_v2": "estado público pós-intervenção; nenhuma nova alteração pública até o D14 real",
+    "d14Valido": true,
+    "d14Earliest": "2026-09-08T01:49:17.273Z",
+    "declaracaoObrigatoriaNoD14": "Experimento global possui intervenção controlada em 2 URL(s) diretas e 37 URL(s) de descoberta indireta."
+  },
+  "eventos": [
+    {
+      "id": "INT-2026-08-25-001",
+      "tipo": "PUBLIC_INTERVENTION",
+      "timestamp": "2026-08-25T04:40:00.000Z",
+      "deploymentId": null,
+      "commit": null,
+      "urlsDiretas": [
+        "/areas-atendidas"
+      ],
+      "urlsIndiretas": [
+        "/bairros/agua-verde",
+        "/bairros/bacacheri",
+        "/bairros/batel",
+        "/bairros/bigorrilho",
+        "/bairros/boa-vista",
+        "/bairros/boqueirao",
+        "/bairros/cabral",
+        "/bairros/cajuru",
+        "/bairros/campo-comprido",
+        "/bairros/capao-raso",
+        "/bairros/centro",
+        "/bairros/cic",
+        "/bairros/cristo-rei",
+        "/bairros/fazendinha",
+        "/bairros/hauer",
+        "/bairros/juveve",
+        "/bairros/merces",
+        "/bairros/novo-mundo",
+        "/bairros/pinheirinho",
+        "/bairros/portao",
+        "/bairros/reboucas",
+        "/bairros/santa-felicidade",
+        "/bairros/seminario",
+        "/bairros/sitio-cercado",
+        "/bairros/uberaba",
+        "/bairros/xaxim",
+        "/tecnico-informatica-almirante-tamandare",
+        "/tecnico-informatica-araucaria",
+        "/tecnico-informatica-campo-largo",
+        "/tecnico-informatica-campo-magro",
+        "/tecnico-informatica-colombo",
+        "/tecnico-informatica-curitiba",
+        "/tecnico-informatica-fazenda-rio-grande",
+        "/tecnico-informatica-pinhais",
+        "/tecnico-informatica-piraquara",
+        "/tecnico-informatica-quatro-barras",
+        "/tecnico-informatica-sao-jose-pinhais"
+      ],
+      "arquivos": [
+        "src/components/areas/DiretorioLocalidades.tsx",
+        "src/pages/AreasAtendidas.tsx",
+        ".github/workflows/ci.yml"
+      ],
+      "mudanca": "CONTENT_AND_INTERNAL_LINKS",
+      "motivo": "Diretório de localidades com busca acento-insensível, filtro por modalidade e valores vindos de precosConfig, atendendo pedido de usabilidade do usuário durante a janela WAIT.",
+      "impacto": {
+        "seo": "Conteúdo público novo em um hub. Title/description/canonical/robots inalterados; corpo e malha interna alterados.",
+        "internalLinking": "Novos links internos para páginas de bairro e cidade já curadas — aumenta inbound e pode acelerar descoberta.",
+        "conteudo": "Bloco 'Encontre seu bairro ou cidade' adicionado acima do mapa de cobertura.",
+        "schema": "Sem alteração de JSON-LD.",
+        "metadata": "Sem alteração de metadata.",
+        "lastmod": "Elegível para atualização apenas nesta URL.",
+        "conversao": "CTA adicional abrindo a triagem com localidade e modalidade no contexto."
+      },
+      "coorte": "INTERVENTION_COHORT",
+      "experimentalStatus": "INTERVENED",
+      "ordem": 1,
+      "hashAnterior": "e14808f7f596d6857951703dd0e05833aa71942e010a6c4349ca217b83dc1e4b",
+      "hash": "59eebe1a77e71c38ee3eb31901978395a9ff2c11b045f56fcbaa30ba7afdf0bd"
+    },
+    {
+      "id": "INT-2026-08-25-002",
+      "tipo": "PUBLIC_INTERVENTION",
+      "timestamp": "2026-08-25T05:30:00.000Z",
+      "deploymentId": null,
+      "commit": null,
+      "urlsDiretas": [
+        "/"
+      ],
+      "urlsIndiretas": [],
+      "arquivos": [
+        "src/lib/galeriaIlustrativa.ts",
+        "src/components/home/GaleriaIlustrativaSection.tsx",
+        "src/components/home/HomeSections.tsx",
+        "public/fotos/galeria/*"
+      ],
+      "mudanca": "CONTENT_AND_MEDIA",
+      "motivo": "Substituição da galeria vazia por fotografias reais licenciadas (Pexels) em AVIF/WebP, declaradas como ilustrativas. Prova fotográfica própria (provasBancada) segue fail-closed.",
+      "impacto": {
+        "seo": "Conteúdo e mídia novos na home. Title/description/canonical/robots inalterados.",
+        "internalLinking": "Nenhum link interno novo.",
+        "conteudo": "Seção 'Bancada, notebook, desktop e rede' com 6 figuras e legendas factuais.",
+        "schema": "Sem alteração de JSON-LD.",
+        "metadata": "Sem alteração de metadata.",
+        "lastmod": "Elegível para atualização apenas nesta URL.",
+        "conversao": "Nenhum CTA novo."
+      },
+      "coorte": "INTERVENTION_COHORT",
+      "experimentalStatus": "INTERVENED",
+      "ordem": 2,
+      "hashAnterior": "59eebe1a77e71c38ee3eb31901978395a9ff2c11b045f56fcbaa30ba7afdf0bd",
+      "hash": "a53c0c8517d7cdc035a6d76f2139e77e214a84cd5710360b3581812d149840a9"
+    }
+  ],
+  "coortes": {
+    "CLEAN_COHORT": {
+      "total": 91,
+      "urls": [
+        "/anuncie",
+        "/atendimento-domicilio",
+        "/atendimento-remoto",
+        "/blog",
+        "/blog/como-escolher-uma-workstation",
+        "/blog/organizacao-de-ti-para-pequenos-escritorios",
+        "/coleta-e-entrega",
+        "/como-funciona",
+        "/contato",
+        "/diagnostico-tecnico",
+        "/empresa-de-ti-curitiba",
+        "/equipamentos-atendidos",
+        "/faq",
+        "/guia-tecnico-informatica",
+        "/politica-de-pecas-do-cliente",
+        "/precos-e-politicas",
+        "/problemas",
+        "/problemas/computador-desliga-sozinho",
+        "/problemas/computador-fazendo-barulho",
+        "/problemas/computador-lento",
+        "/problemas/computador-nao-liga",
+        "/problemas/computador-sem-som",
+        "/problemas/computador-travando",
+        "/problemas/dobradica-do-notebook-quebrada",
+        "/problemas/hd-nao-reconhecido",
+        "/problemas/impressora-nao-imprime",
+        "/problemas/monitor-sem-sinal",
+        "/problemas/mouse-nao-funciona",
+        "/problemas/notebook-com-tela-preta",
+        "/problemas/notebook-desligando-sozinho",
+        "/problemas/notebook-lento",
+        "/problemas/notebook-molhado",
+        "/problemas/notebook-nao-carrega-bateria",
+        "/problemas/notebook-nao-conecta-no-wifi",
+        "/problemas/notebook-nao-liga",
+        "/problemas/notebook-superaquecendo",
+        "/problemas/pen-drive-nao-reconhecido",
+        "/problemas/teclado-de-notebook-nao-funciona",
+        "/problemas/tela-azul-windows",
+        "/problemas/tela-de-notebook-quebrada",
+        "/problemas/tela-do-computador-piscando",
+        "/problemas/touchpad-nao-funciona",
+        "/problemas/tv-com-imagem-escura",
+        "/problemas/tv-com-linhas-na-tela",
+        "/problemas/tv-com-som-sem-imagem",
+        "/problemas/tv-desligando-sozinha",
+        "/problemas/tv-nao-conecta-no-wifi",
+        "/problemas/tv-nao-liga",
+        "/problemas/tv-sem-som",
+        "/problemas/tv-travando",
+        "/problemas/webcam-nao-funciona",
+        "/problemas/wifi-caindo-toda-hora",
+        "/problemas/windows-nao-inicia",
+        "/quando-nao-compensa",
+        "/seguranca-dos-dados",
+        "/servicos",
+        "/servicos/backup-para-empresas",
+        "/servicos/conserto-monitor",
+        "/servicos/conserto-placa",
+        "/servicos/conserto-tv",
+        "/servicos/formatacao",
+        "/servicos/manutencao-de-computador",
+        "/servicos/manutencao-de-notebook",
+        "/servicos/manutencao-preventiva-empresas",
+        "/servicos/manutencao-tv/agua-verde",
+        "/servicos/manutencao-tv/alto-da-xv",
+        "/servicos/manutencao-tv/batel",
+        "/servicos/manutencao-tv/bigorrilho",
+        "/servicos/manutencao-tv/boa-vista",
+        "/servicos/manutencao-tv/boqueirao",
+        "/servicos/manutencao-tv/cabral",
+        "/servicos/manutencao-tv/cajuru",
+        "/servicos/manutencao-tv/centro",
+        "/servicos/manutencao-tv/cic",
+        "/servicos/manutencao-tv/cristo-rei",
+        "/servicos/manutencao-tv/ecoville",
+        "/servicos/manutencao-tv/jardim-das-americas",
+        "/servicos/manutencao-tv/portao",
+        "/servicos/manutencao-tv/reboucas",
+        "/servicos/manutencao-tv/santa-felicidade",
+        "/servicos/montagem-de-pc",
+        "/servicos/recuperacao-de-dados",
+        "/servicos/redes-e-wifi",
+        "/servicos/redes-wifi/cic",
+        "/servicos/redes-wifi/jardim-das-americas",
+        "/servicos/remocao-de-virus",
+        "/servicos/suporte-home-office",
+        "/servicos/suporte-tecnico-empresarial",
+        "/servicos/upgrade-ssd-memoria/reboucas",
+        "/servicos/upgrade-ssd-ram",
+        "/sobre"
+      ]
+    },
+    "INTERVENTION_COHORT": {
+      "total": 2,
+      "urls": [
+        {
+          "url": "/",
+          "experimental_status": "INTERVENED",
+          "intervention_at": "2026-08-25T05:30:00.000Z"
+        },
+        {
+          "url": "/areas-atendidas",
+          "experimental_status": "INTERVENED",
+          "intervention_at": "2026-08-25T04:40:00.000Z"
+        }
+      ]
+    },
+    "INDIRECT_DISCOVERY_COHORT": {
+      "total": 37,
+      "motivo": "novo inbound recebido do diretório de localidades em /areas-atendidas",
+      "urls": [
+        {
+          "url": "/bairros/agua-verde",
+          "experimental_status": "INDIRECT_DISCOVERY_INTERVENTION"
+        },
+        {
+          "url": "/bairros/bacacheri",
+          "experimental_status": "INDIRECT_DISCOVERY_INTERVENTION"
+        },
+        {
+          "url": "/bairros/batel",
+          "experimental_status": "INDIRECT_DISCOVERY_INTERVENTION"
+        },
+        {
+          "url": "/bairros/bigorrilho",
+          "experimental_status": "INDIRECT_DISCOVERY_INTERVENTION"
+        },
+        {
+          "url": "/bairros/boa-vista",
+          "experimental_status": "INDIRECT_DISCOVERY_INTERVENTION"
+        },
+        {
+          "url": "/bairros/boqueirao",
+          "experimental_status": "INDIRECT_DISCOVERY_INTERVENTION"
+        },
+        {
+          "url": "/bairros/cabral",
+          "experimental_status": "INDIRECT_DISCOVERY_INTERVENTION"
+        },
+        {
+          "url": "/bairros/cajuru",
+          "experimental_status": "INDIRECT_DISCOVERY_INTERVENTION"
+        },
+        {
+          "url": "/bairros/campo-comprido",
+          "experimental_status": "INDIRECT_DISCOVERY_INTERVENTION"
+        },
+        {
+          "url": "/bairros/capao-raso",
+          "experimental_status": "INDIRECT_DISCOVERY_INTERVENTION"
+        },
+        {
+          "url": "/bairros/centro",
+          "experimental_status": "INDIRECT_DISCOVERY_INTERVENTION"
+        },
+        {
+          "url": "/bairros/cic",
+          "experimental_status": "INDIRECT_DISCOVERY_INTERVENTION"
+        },
+        {
+          "url": "/bairros/cristo-rei",
+          "experimental_status": "INDIRECT_DISCOVERY_INTERVENTION"
+        },
+        {
+          "url": "/bairros/fazendinha",
+          "experimental_status": "INDIRECT_DISCOVERY_INTERVENTION"
+        },
+        {
+          "url": "/bairros/hauer",
+          "experimental_status": "INDIRECT_DISCOVERY_INTERVENTION"
+        },
+        {
+          "url": "/bairros/juveve",
+          "experimental_status": "INDIRECT_DISCOVERY_INTERVENTION"
+        },
+        {
+          "url": "/bairros/merces",
+          "experimental_status": "INDIRECT_DISCOVERY_INTERVENTION"
+        },
+        {
+          "url": "/bairros/novo-mundo",
+          "experimental_status": "INDIRECT_DISCOVERY_INTERVENTION"
+        },
+        {
+          "url": "/bairros/pinheirinho",
+          "experimental_status": "INDIRECT_DISCOVERY_INTERVENTION"
+        },
+        {
+          "url": "/bairros/portao",
+          "experimental_status": "INDIRECT_DISCOVERY_INTERVENTION"
+        },
+        {
+          "url": "/bairros/reboucas",
+          "experimental_status": "INDIRECT_DISCOVERY_INTERVENTION"
+        },
+        {
+          "url": "/bairros/santa-felicidade",
+          "experimental_status": "INDIRECT_DISCOVERY_INTERVENTION"
+        },
+        {
+          "url": "/bairros/seminario",
+          "experimental_status": "INDIRECT_DISCOVERY_INTERVENTION"
+        },
+        {
+          "url": "/bairros/sitio-cercado",
+          "experimental_status": "INDIRECT_DISCOVERY_INTERVENTION"
+        },
+        {
+          "url": "/bairros/uberaba",
+          "experimental_status": "INDIRECT_DISCOVERY_INTERVENTION"
+        },
+        {
+          "url": "/bairros/xaxim",
+          "experimental_status": "INDIRECT_DISCOVERY_INTERVENTION"
+        },
+        {
+          "url": "/tecnico-informatica-almirante-tamandare",
+          "experimental_status": "INDIRECT_DISCOVERY_INTERVENTION"
+        },
+        {
+          "url": "/tecnico-informatica-araucaria",
+          "experimental_status": "INDIRECT_DISCOVERY_INTERVENTION"
+        },
+        {
+          "url": "/tecnico-informatica-campo-largo",
+          "experimental_status": "INDIRECT_DISCOVERY_INTERVENTION"
+        },
+        {
+          "url": "/tecnico-informatica-campo-magro",
+          "experimental_status": "INDIRECT_DISCOVERY_INTERVENTION"
+        },
+        {
+          "url": "/tecnico-informatica-colombo",
+          "experimental_status": "INDIRECT_DISCOVERY_INTERVENTION"
+        },
+        {
+          "url": "/tecnico-informatica-curitiba",
+          "experimental_status": "INDIRECT_DISCOVERY_INTERVENTION"
+        },
+        {
+          "url": "/tecnico-informatica-fazenda-rio-grande",
+          "experimental_status": "INDIRECT_DISCOVERY_INTERVENTION"
+        },
+        {
+          "url": "/tecnico-informatica-pinhais",
+          "experimental_status": "INDIRECT_DISCOVERY_INTERVENTION"
+        },
+        {
+          "url": "/tecnico-informatica-piraquara",
+          "experimental_status": "INDIRECT_DISCOVERY_INTERVENTION"
+        },
+        {
+          "url": "/tecnico-informatica-quatro-barras",
+          "experimental_status": "INDIRECT_DISCOVERY_INTERVENTION"
+        },
+        {
+          "url": "/tecnico-informatica-sao-jose-pinhais",
+          "experimental_status": "INDIRECT_DISCOVERY_INTERVENTION"
+        }
+      ]
+    }
+  },
+  "universoCurado": 130,
+  "freezeV2": {
+    "criadoEm": "2026-08-25T05:28:44.590Z",
+    "contentHashesRef": "a3cb748b0f14a57da20d7bb25d4efff4545029085ab186d4acc0edc925dc5a71",
+    "curadoHash": "e8f8544eba7c928d6268c32cda10d4b6d355f4be0c1e10812d712fa7a0f72a7e",
+    "regra": "Qualquer alteração pública após este selo exige NOVO evento de intervenção."
+  },
+  "selo": "bff936e327fd72f159e3d54347e8986bed312cdd83332ea5a0595055f5aba1d3"
+}

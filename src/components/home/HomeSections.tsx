@@ -4,6 +4,8 @@ import { HOME_FAQS, HOME_SERVICES } from "@/lib/home/homeContent";
 import { EeatProofsSection } from "@/components/EeatProofsSection";
 import { AtendimentoFluxoSection } from "@/components/home/AtendimentoFluxoSection";
 import { BancadaRealSection } from "@/components/home/BancadaRealSection";
+import { GaleriaIlustrativaSection } from "@/components/home/GaleriaIlustrativaSection";
+
 import { RegioesCuritibaSection } from "@/components/home/RegioesCuritibaSection";
 
 import {
@@ -309,6 +311,10 @@ export const HomeSections = () => {
 
       {/* 5B. PROVA REAL — bancada, técnico identificado e atendimento (fail-closed) */}
       <BancadaRealSection />
+
+      {/* 5C. GALERIA ILUSTRATIVA — fotos licenciadas (Pexels), declaradas como ilustrativas */}
+      <GaleriaIlustrativaSection />
+
 
 
       {/* 6. PREÇOS E POLÍTICAS */}

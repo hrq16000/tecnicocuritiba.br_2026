@@ -283,7 +283,9 @@
     "check:prontidao-d14": "node scripts/check-prontidao-d14.mjs --gate",
     "marco:d30": "node scripts/snapshot-marco.mjs --marco=D30 && node scripts/reindex-snapshots.mjs --strict --conter-auto && node scripts/gerar-relatorio-marco.mjs --marco=D30 --gate",
     "report:diff-marcos": "node scripts/diff-marcos.mjs",
-    "report:diff-marcos:gate": "node scripts/diff-marcos.mjs --gate"
+    "report:diff-marcos:gate": "node scripts/diff-marcos.mjs --gate",
+    "intervencao:registrar": "node scripts/registrar-intervencao.mjs",
+    "intervencao:check": "node scripts/registrar-intervencao.mjs --check"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
