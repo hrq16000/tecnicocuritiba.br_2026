@@ -137,3 +137,49 @@ commit any e-mail, password, or token:
 > Do not paste credentials into any script, test, `.env`, or commit. The manual
 > step exists precisely so no login secret ever enters version control.
 
+
+## Gate `check:orphan-trend` (páginas órfãs indexáveis)
+
+O gate conta quantas URLs **curadas e indexáveis** (`index, follow`) não recebem
+nenhum link interno a partir do código-fonte e falha o build quando esse número
+**cresce** em relação ao baseline.
+
+- **Baseline canônico (versionado em git):** `scripts/data/orphan-baseline.json`
+- **Cópia publicada no build (paridade staging/produção):** `public/orphan-baseline.json`
+  — regravada automaticamente em cada execução do gate.
+
+Comandos:
+
+```bash
+npm run check:orphan-trend        # gate (compara com o baseline)
+npm run check:orphan-baseline     # falha se o baseline não estiver commitado
+npm run orphan:update             # regrava o baseline — COMMITE o arquivo
+```
+
+Quando usar `--update` (`npm run orphan:update`):
+
+1. ao **remover** uma URL da lista curada ou ao consolidar rotas com 301;
+2. ao **reduzir** o número de órfãs (o novo patamar precisa ser selado);
+3. nunca para "silenciar" o gate: se órfãs subiram, adicione o link interno real
+   (hub, cluster ou grade local) em vez de reescrever o baseline.
+
+Rotas isentas por contrato (não dependem de link estático e não fazem parte do
+funil orgânico): segmentos dinâmicos (`$param`), `/admin/*`,
+`/ordem-de-servico/*` e âncoras/modais. O ajuste reduz falso positivo sem
+relaxar a checagem estrutural das páginas de conteúdo.
+
+O `prebuild` executa `--assert-baseline` **antes** do gate: se o arquivo estiver
+ausente, o build para com instrução explícita de rodar `npm run orphan:update` e
+commitar o resultado. O mesmo passo roda no workflow de segurança do CI.
+
+## Ferramentas MCP — autorização e auditoria
+
+- O servidor MCP exige OAuth (token emitido pelo backend do projeto, audiência
+  `authenticated`). Sem token válido a resposta é `401`.
+- Testes automatizados: `src/lib/mcp/__tests__/mcp-auth-audit.test.ts`
+  (configuração de auth + auditoria) e `e2e/mcp-oauth.spec.ts` (negado sem token,
+  negado com token inválido, permitido com token válido quando
+  `MCP_TEST_ACCESS_TOKEN` existe no ambiente).
+- Cada execução de ferramenta emite um log estruturado de uma linha com
+  `tool`, `route`, `owner` (hash curto, jamais o identificador em claro) e
+  `outcome`. É proibido registrar PII, token, cabeçalhos ou payload do usuário.

@@ -100,6 +100,18 @@ jobs:
 
 
 
+      # 5f) Baseline de páginas órfãs precisa estar versionado no repositório.
+      - name: Verify orphan-trend baseline is committed
+        run: node scripts/check-orphan-trend.mjs --assert-baseline
+
+      # 5g) Tendência de páginas órfãs (bloqueia crescimento de órfãs indexáveis).
+      - name: Orphan trend gate
+        run: node scripts/check-orphan-trend.mjs
+
+      # 5h) Controle de acesso às ferramentas MCP + auditoria privacy-first.
+      - name: MCP OAuth + audit tests
+        run: bunx vitest run src/lib/mcp/__tests__/mcp-auth-audit.test.ts
+
       # 6) Guard against SEO regressions on the landing shell (title / desc / unique H1).
       - name: Verify SEO basics on index.html
         run: bun scripts/check-seo-basics.ts index.html
