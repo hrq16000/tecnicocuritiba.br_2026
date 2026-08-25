@@ -143,7 +143,7 @@ const M = {
         titulo: "Como o serviço é executado",
         passos: [
           "Triagem pelo WhatsApp com modelo, sintoma e histórico de uso",
-          "Coleta no endereço informado — não há balcão de atendimento ao público",
+          "Coleta no endereço informado: não trabalhamos com balcão de atendimento ao público.",
           "Diagnóstico na bancada com registro do que foi medido",
           "Envio do escopo e do valor antes de qualquer execução",
           "Execução somente após autorização explícita",
@@ -266,7 +266,7 @@ const M = {
         id: "limites-dados",
         titulo: "Limites honestos deste serviço",
         destaque:
-          "Não existe recuperação garantida. Quem garante resultado antes de abrir o caso está vendendo expectativa, não serviço técnico.",
+          "Nenhum caso é aceito com promessa de resultado. Quem garante resultado antes de abrir o caso está vendendo expectativa, não serviço técnico.",
         listas: [
           {
             titulo: "Casos com baixa probabilidade",
