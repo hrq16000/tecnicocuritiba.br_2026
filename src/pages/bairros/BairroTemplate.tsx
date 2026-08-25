@@ -12,6 +12,7 @@ import { Footer } from "@/components/Footer";
 import { BlocoInteligencia } from "@/components/BlocoInteligencia";
 import { WhatsAppChat } from "@/components/WhatsAppChat";
 import { BairroInterlinkLocal } from "@/components/areas/BairroInterlinkLocal";
+import { whatsappDeepLink } from "@/lib/whatsappDeepLink";
 import { JsonLdSchema } from "@/components/JsonLdSchema";
 import { PricingBanner } from "@/components/PricingBanner";
 import { GeoSpecificFAQs, bairroFAQs } from "@/components/GeoSpecificFAQs";
