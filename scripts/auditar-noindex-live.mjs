@@ -22,7 +22,7 @@ import { CURATED_PATHS, BASE_URL } from "./lib/curated-urls.mjs";
 
 const argBase = process.argv.find((a) => a.startsWith("--base="));
 const base = argBase ? argBase.split("=")[1] : BASE_URL;
-const extras = process.argv
+const extras = process.argv.slice(2)
   .filter((a) => a.startsWith("/"))
   .map((a) => a.trim());
 
