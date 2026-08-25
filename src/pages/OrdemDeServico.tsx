@@ -81,35 +81,55 @@ const OrdemDeServico = () => {
     return linhas.join("\n");
   }, [form, numero, modalidade]);
 
-  const garantirNumero = () => {
-    const n = numero ?? gerarNumero();
-    if (!numero) setNumero(n);
-    return n;
+  const garantirNumero = async (): Promise<string | null> => {
+    if (numero) return numero;
+    if (!pronta) return null;
+    setSalvando(true);
+    try {
+      const { protocolo } = await criarOs({
+        data: {
+          tipo,
+          nome: form.nome.trim(),
+          local: form.local.trim(),
+          equipamento: form.equipamento.trim(),
+          marcaModelo: form.marcaModelo.trim(),
+          acessorios: form.acessorios.trim(),
+          sintoma: form.sintoma.trim(),
+          modalidadeId: modalidade.id,
+          valorLabel: modalidade.valorLabel,
+        },
+      });
+      setNumero(protocolo);
+      return protocolo;
+    } catch {
+      toast.error("Não foi possível registrar a ordem de serviço agora. Tente novamente.");
+      return null;
+    } finally {
+      setSalvando(false);
+    }
   };
 
   const gerar = () => {
-    if (!pronta) return;
-    garantirNumero();
+    void garantirNumero();
   };
 
   const mensagemWhatsApp = (n: string) =>
-    [
-      `Olá! Registrei a ordem de serviço ${n}.`,
-      "",
-      `Modalidade: ${modalidade.titulo}`,
-      `Valor: ${modalidade.valorLabel} (${modalidade.unidade})`,
-      form.local ? `Bairro/cidade: ${form.local}` : "",
-      `Equipamento: ${form.equipamento}${form.marcaModelo ? ` (${form.marcaModelo})` : ""}`,
-      `Problema: ${form.sintoma}`,
-      "",
-      "Registro completo:",
-      resumo.replace(/^Ordem de serviço.*$/m, `Ordem de serviço ${n}`),
-    ]
-      .filter(Boolean)
-      .join("\n");
+    mensagemWhatsAppOs({
+      protocolo: n,
+      tipo,
+      nome: form.nome,
+      local: form.local,
+      equipamento: form.equipamento,
+      marcaModelo: form.marcaModelo,
+      acessorios: form.acessorios,
+      sintoma: form.sintoma,
+      modalidadeTitulo: modalidade.titulo,
+      valorLabel: `${modalidade.valorLabel} (${modalidade.unidade})`,
+    });
 
   const copiar = async () => {
-    const n = garantirNumero();
+    const n = await garantirNumero();
+    if (!n) return;
     try {
       await navigator.clipboard.writeText(mensagemWhatsApp(n));
       toast.success("Conteúdo copiado — cole no WhatsApp.");
@@ -117,6 +137,7 @@ const OrdemDeServico = () => {
       toast.error("Não foi possível copiar automaticamente. Selecione o texto abaixo.");
     }
   };
+
 
   const baixarPdf = async () => {
     const n = garantirNumero();
