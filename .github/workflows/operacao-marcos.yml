@@ -68,6 +68,15 @@ jobs:
           if [ "${{ github.event.inputs.overwrite }}" = "true" ]; then FLAGS="--overwrite"; fi
           node scripts/snapshot-marco.mjs --marco=${{ steps.marco.outputs.marco }} --commit=${{ github.sha }} $FLAGS
 
+      # ── Reindexa memórias/snapshots e confirma cobertura do marco atual.
+      - name: Reindexar e verificar snapshots
+        if: always()
+        run: npm run reindex:snapshots:gate
+
+      - name: Análise D7/D14 (somente leitura)
+        if: always()
+        run: npm run report:monitoramento
+
       - name: Alertas operacionais (resumo só quando muda)
         if: always()
         run: node scripts/monitor-operational-alerts.mjs --notify
