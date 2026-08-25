@@ -29,7 +29,7 @@ export interface MarcoExportavel extends MarcoResumo {
   nota?: string | null;
   commit?: string | null;
   denominador?: { curadas: number };
-  google?: Record<string, number | null>;
+  google?: Record<string, number | string | null>;
   clusters?: Grupo[];
   tiers?: Grupo[];
 }
@@ -168,7 +168,7 @@ export function ExportarMarco({
 
       pdf.heading("Funil de indexação");
       for (const [k, v] of Object.entries(marco.google ?? {}))
-        pdf.keyValue(ESTADO_LABEL[k] ?? k, v === null ? SEM_DADO : String(v));
+        pdf.keyValue(ESTADO_LABEL[k] ?? k, v === null || v === "" ? SEM_DADO : String(v));
 
       pdf.heading("Clusters");
       for (const c of marco.clusters ?? [])
