@@ -311,11 +311,17 @@ const OrdemDeServico = () => {
           </div>
           <div className="grid gap-2">
             <Label htmlFor="os-modalidade">Modalidade de atendimento</Label>
+            <p className="text-sm leading-relaxed text-muted-foreground" data-testid="os-classificacao">
+              {MOTIVO_CLASSIFICACAO[tipo]}
+            </p>
             <select
               id="os-modalidade"
               className="h-10 rounded-md border border-input bg-background px-3 text-sm text-foreground"
               value={form.modalidadeId}
-              onChange={(e) => set("modalidadeId")(e.target.value)}
+              onChange={(e) => {
+                setModalidadeTocada(true);
+                set("modalidadeId")(e.target.value);
+              }}
             >
               {MODALIDADES.map((m) => (
                 <option key={m.id} value={m.id}>
@@ -349,10 +355,10 @@ const OrdemDeServico = () => {
           </div>
 
           <div className="flex flex-wrap gap-3">
-            <Button onClick={gerar} disabled={!pronta} variant="secondary">
-              Gerar ordem de serviço
+            <Button onClick={gerar} disabled={!pronta || salvando} variant="secondary">
+              {salvando ? "Registrando..." : "Gerar ordem de serviço"}
             </Button>
-            <Button onClick={enviar} disabled={!pronta} data-cta-location="ordem-de-servico">
+            <Button onClick={enviar} disabled={!pronta || salvando} data-cta-location="ordem-de-servico">
               Enviar esta ordem no WhatsApp
             </Button>
             {numero ? (
@@ -379,10 +385,52 @@ const OrdemDeServico = () => {
         {numero ? (
           <section className="mt-10 rounded-xl border border-border bg-card p-6" data-testid="os-documento">
             <h2 className="font-heading text-xl font-semibold text-foreground">Registro {numero}</h2>
+            <p className="mt-2 text-sm text-muted-foreground">
+              Guarde este código. Você pode consultar esta ordem a qualquer momento em{" "}
+              <Link
+                to="/ordem-de-servico/$protocolo"
+                params={{ protocolo: numero }}
+                className="text-foreground underline underline-offset-4"
+              >
+                /ordem-de-servico/{numero}
+              </Link>
+              .
+            </p>
             <pre className="mt-4 whitespace-pre-wrap font-sans text-sm text-muted-foreground">{resumo}</pre>
+            <TermosOsView tipo={tipo} protocolo={numero} />
             <p className="mt-4 text-xs text-muted-foreground">{REGRA_CANCELAMENTO}</p>
           </section>
         ) : null}
+
+        <section className="mt-12 rounded-xl border border-border bg-muted/30 p-6">
+          <h2 className="font-heading text-xl font-semibold text-foreground">Consultar uma ordem existente</h2>
+          <p className="mt-2 text-sm text-muted-foreground">
+            Informe o código recebido (formato OS-AAAAMMDD-XXXX) para ver os dados e os termos aplicáveis.
+          </p>
+          <form
+            className="mt-4 flex flex-col gap-3 sm:flex-row"
+            onSubmit={(e) => {
+              e.preventDefault();
+              const codigo = consulta.trim().toUpperCase();
+              if (!/^OS-\d{8}-[A-Z0-9]{4}$/.test(codigo)) {
+                toast.error("Código inválido. Confira o formato OS-AAAAMMDD-XXXX.");
+                return;
+              }
+              window.location.assign(`/ordem-de-servico/${codigo}`);
+            }}
+          >
+            <Input
+              aria-label="Código da ordem de serviço"
+              value={consulta}
+              onChange={(e) => setConsulta(e.target.value)}
+              placeholder="OS-20260908-A1B2"
+            />
+            <Button type="submit" variant="outline">
+              Consultar
+            </Button>
+          </form>
+        </section>
+
       </main>
     </div>
   );
