@@ -89,7 +89,17 @@
     {
       "file": "src/lib/politicaComercial.ts",
       "rule": "plano-mensal",
-      "why": "Fonte central declara explicitamente que NÃO há plano mensal."
+      "why": "Fonte única dos planos mensais de suporte gerenciado, com preços e condição mínima confirmados pelo responsável em 26/08/2026."
+    },
+    {
+      "file": "src/components/servico/SuporteEmpresarialBlocos.tsx",
+      "rule": "plano-mensal",
+      "why": "Exibe os planos publicados a partir da fonte central politicaComercial."
+    },
+    {
+      "file": "src/pages/PrecosEPoliticas.tsx",
+      "rule": "plano-mensal",
+      "why": "Tabela pública de valores deriva da fonte central dos planos de suporte gerenciado."
     },
     {
       "file": "src/lib/politicaComercial.ts",

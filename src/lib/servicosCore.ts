@@ -1098,7 +1098,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { title: "Impressoras", desc: "Instalação, compartilhamento e solução de problemas de impressão." },
       { title: "Rotinas de backup", desc: "Estruturação de backup para reduzir risco de perda de dados." },
       { title: "Manutenção preventiva", desc: "Rotinas para evitar falhas e paradas inesperadas." },
-      { title: "Atendimento recorrente", desc: "Planos de acompanhamento sob consulta, conforme a necessidade." },
+        { title: "Suporte gerenciado", desc: "Planos por computador para empresas com quatro ou mais máquinas, com escopo definido." },
     ],
     sinais: [
       "Estações de trabalho lentas ou instáveis",
@@ -1135,7 +1135,7 @@ export const SERVICOS_CORE: Record<string, ServicoLandingData> = {
       { question: "Vocês atendem empresas de qual porte?", answer: "Atendemos principalmente autônomos, escritórios, comércios e micro e pequenas empresas em Curitiba e região, de forma avulsa ou recorrente, dentro da nossa capacidade operacional." },
       { question: "Quando uma pequena empresa precisa terceirizar o suporte de TI?", answer: "Quando as falhas começam a consumir tempo da equipe, não existe responsável claro pelas máquinas e rede, ou os mesmos incidentes voltam sem registro. Terceirizar não significa contratar suporte ilimitado: significa definir um escopo, uma rotina e uma referência técnica para diagnosticar, priorizar e documentar as decisões." },
       { question: "O que preparar antes de pedir suporte técnico empresarial?", answer: "Informe quantas pessoas foram afetadas, qual equipamento ou setor parou, mensagem de erro, horário de início, o que mudou, impacto na operação e se existe backup recente. Não envie senhas ou códigos de autenticação por mensagem. Com esse contexto, a triagem diferencia urgência real de ajuste simples e orienta se o caso pode começar remotamente." },
-      { question: "Como funciona o atendimento recorrente?", answer: "Definimos escopo, itens acompanhados e periodicidade conforme a necessidade da empresa. Não é suporte ilimitado: o que está incluído e o que é cobrado à parte fica registrado antes de começar." },
+        { question: "Como funcionam os planos de suporte gerenciado?", answer: "Para empresas com quatro ou mais computadores, existem os planos Essencial, Pro e Premium, cobrados por máquina gerenciada. Antes de contratar, registramos os ativos, o escopo, os horários, as responsabilidades e o que fica fora. Os planos não significam suporte ilimitado ou plantão 24 horas." },
       { question: "Fazem atendimento de emergência?", answer: "Avaliamos situações com operação parada e priorizamos o restabelecimento conforme a disponibilidade da agenda. Não mantemos plantão em regime ininterrupto." },
       { question: "Resolvem problemas de rede e impressão?", answer: "Sim, esses estão entre os chamados mais comuns. Casos que envolvem cobertura, cabeamento ou reestruturação da conectividade são conduzidos pela página de redes e Wi-Fi." },
       { question: "Vocês acessam sistemas e contas de terceiros da empresa?", answer: "Somente quando a empresa autoriza, com credenciais fornecidas por quem tem poder para isso e apenas pelo tempo do atendimento. Atuamos na camada de acesso e configuração local: instalar, conectar, corrigir sessão, ajustar navegador, impressora ou permissão do sistema operacional. Não administramos a conta, não respondemos pelo funcionamento interno da plataforma e não substituímos o suporte do fornecedor dela." },

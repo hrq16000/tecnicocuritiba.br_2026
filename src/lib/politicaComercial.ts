@@ -9,7 +9,7 @@
  * GOVERNANÇA (não negociável):
  *  - Nada aqui pode ser inventado. Toda regra publicada precisa refletir a
  *    operação real (valor, ordem de serviço, política publicada).
- *  - Proibido: SLA, prazo garantido, plano/preço mensal, "garantia total",
+ *  - Proibido: SLA, prazo garantido, preço recorrente fora da fonte de verdade,
  *    "nota fiscal garantida", certificação/credenciamento sem emissor,
  *    número de clientes, percentual de satisfação, avaliação inventada.
  *  - Divergência entre páginas deve ser resolvida AQUI, e a página passa a
@@ -83,6 +83,59 @@ export const PAGAMENTO = {
     "Não solicitamos pagamento antecipado por links enviados de números desconhecidos nem depósito em conta de terceiros. Na dúvida, confirme pelo WhatsApp oficial do site",
 } as const;
 
+// ─────────────────────────────────────────────────────────────
+// SUPORTE GERENCIADO PARA EMPRESAS
+// ─────────────────────────────────────────────────────────────
+// Valores e condição mínima confirmados para a operação em 26/08/2026.
+// Todo plano é delimitado: visita, licença, peça, nuvem e projeto que não
+// estejam escritos no escopo são avaliados separadamente.
+export const SUPORTE_GERENCIADO = {
+  minimoEquipamentos: 4,
+  unidadeCobranca: "por computador gerenciado, por mês",
+  planos: [
+    {
+      nome: "Essencial",
+      valorLabel: "R$ 69,99",
+      valorMensalPorMaquina: 69.99,
+      destaque: "Base para equipes pequenas",
+      recursos: [
+        "Triagem e suporte remoto para as estações cadastradas",
+        "Registro dos atendimentos e orientações para a equipe",
+        "Inventário inicial dos computadores incluídos",
+        "Revisão de atualizações e cuidados preventivos em rotina combinada",
+      ],
+    },
+    {
+      nome: "Pro",
+      valorLabel: "R$ 99,99",
+      valorMensalPorMaquina: 99.99,
+      destaque: "Para operação que já depende da TI diariamente",
+      recursos: [
+        "Tudo do Essencial",
+        "Rotina preventiva planejada para os equipamentos cadastrados",
+        "Acompanhamento de incidentes recorrentes e recomendações de correção",
+        "Organização técnica do ambiente para reduzir retrabalho nas próximas solicitações",
+      ],
+    },
+    {
+      nome: "Premium",
+      valorLabel: "R$ 199,00",
+      valorMensalPorMaquina: 199,
+      destaque: "Para ambientes que exigem escopo ampliado",
+      recursos: [
+        "Tudo do Pro",
+        "Revisão periódica de continuidade, rede e cópia dos dados dentro do escopo contratado",
+        "Acompanhamento preventivo acordado para ativos compatíveis",
+        "Planejamento técnico para mudanças de equipamentos e crescimento da equipe",
+      ],
+    },
+  ],
+  exclusoesLabel:
+    "Visitas presenciais, peças, licenças, equipamentos de rede, serviços em nuvem, recuperação de dados, servidores e projetos fora do escopo são avaliados separadamente.",
+  limitesLabel:
+    "Os planos não representam plantão 24 horas, suporte ilimitado ou prazo de resposta garantido. Horários, itens atendidos e responsabilidades ficam registrados na contratação.",
+} as const;
+
 
 // ─────────────────────────────────────────────────────────────
 // DADOS, BACKUP E PRIVACIDADE (Etapa 7)
@@ -123,7 +176,7 @@ export const PROCESSO_POR_MODALIDADE = {
   domicilio: "Avaliação no endereço, valor informado na hora e execução após aprovação. Casos que exigem bancada são convertidos em coleta.",
   coleta: "Retirada, avaliação em bancada, valor por escrito, execução após aprovação e devolução.",
   bancada: "Casos que exigem ferramenta de bancada: prazo depende da disponibilidade de peça e da complexidade, informado após a avaliação.",
-  empresarial: "Triagem por chamado, priorização combinada com o responsável e registro do que foi executado. Sem plano mensal padronizado.",
+  empresarial: "Triagem por chamado, priorização combinada com o responsável e registro do que foi executado. Para quatro ou mais computadores, há planos mensais por máquina com escopo definido.",
 } as const;
 
 // ─────────────────────────────────────────────────────────────
@@ -153,6 +206,7 @@ export default {
   GARANTIA,
   NOTA_FISCAL,
   PAGAMENTO,
+  SUPORTE_GERENCIADO,
   POLITICA_DADOS,
   PROCESSO_ATENDIMENTO,
   PROCESSO_POR_MODALIDADE,

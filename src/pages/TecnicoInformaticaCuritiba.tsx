@@ -99,6 +99,7 @@ const EQUIPAMENTOS = [
 
 const SERVICOS_PRIORITARIOS = [
   { nome: "Manutenção de computador", href: "/servicos/manutencao-de-computador" },
+  { nome: "Assistência técnica para PC Gamer", href: "/pc-gamer-curitiba" },
   { nome: "Formatação com backup", href: "/servicos/formatacao" },
   { nome: "Upgrade de SSD e memória RAM", href: "/servicos/upgrade-ssd-ram" },
   { nome: "Recuperação de dados", href: "/servicos/recuperacao-de-dados" },
@@ -179,6 +180,29 @@ const PERFIS = [
     titulo: "Pequenos negócios",
     texto:
       "Comércios e escritórios com poucas máquinas, uma impressora compartilhada e rede improvisada. O atendimento é pontual e pode evoluir para avaliação empresarial em /empresa-de-ti-curitiba.",
+  },
+];
+
+const CARREIRA_E_FORMACAO = [
+  {
+    titulo: "Técnico em informática: o que faz?",
+    texto:
+      "É o profissional que diagnostica, instala, configura e mantém computadores, sistemas, redes e periféricos. Na prática, a atuação varia entre assistência técnica, suporte ao usuário, infraestrutura, manutenção, redes e áreas especializadas de TI.",
+  },
+  {
+    titulo: "Técnico de informática é TI?",
+    texto:
+      "Sim. É uma atuação dentro de Tecnologia da Informação, normalmente voltada à operação e ao suporte de equipamentos, sistemas e conectividade. Desenvolvimento de software, dados e segurança também são áreas de TI, mas têm rotinas e formações próprias.",
+  },
+  {
+    titulo: "Curso, Senac, formação gratuita e Técnico em Informática para Internet",
+    texto:
+      "O site presta assistência técnica e não oferece curso, bolsa ou matrícula. Para comparar Técnico em Informática, Técnico em Informática para Internet, cursos do Senac ou opções gratuitas, consulte diretamente a instituição responsável: grade, pré-requisitos, duração, turmas e critérios de gratuidade mudam com frequência.",
+  },
+  {
+    titulo: "Quanto tempo dura o curso, qual é o salário e onde há vagas?",
+    texto:
+      "Não existe uma duração ou salário único: ambos variam por instituição, cidade, nível da vaga, experiência e área de atuação. Também não publicamos vagas de técnico de informática nesta página. Quem procura emprego deve verificar plataformas de vagas e canais oficiais das empresas; quem procura atendimento em Curitiba encontra abaixo as modalidades de suporte.",
   },
 ];
 
@@ -564,6 +588,26 @@ const TecnicoInformaticaCuritiba = () => {
             >
               Necessidade empresarial mais ampla
             </Link>
+          </div>
+        </section>
+
+        {/* 12B. Intenções educacionais — resposta útil sem simular curso ou vaga. */}
+        <section className="border-t border-border/60 bg-secondary/20 py-12 md:py-16">
+          <div className="container mx-auto max-w-4xl">
+            <h2 className="font-heading text-2xl font-bold text-foreground md:text-3xl">
+              Para quem pesquisa profissão, curso ou vaga de técnico em informática
+            </h2>
+            <p className="mt-4 max-w-3xl text-muted-foreground">
+              “Técnico em informática” pode significar uma profissão, uma formação ou o atendimento para um computador com problema. Esta página é de assistência técnica em Curitiba; as respostas abaixo ajudam a separar essas intenções antes do próximo passo.
+            </p>
+            <div className="mt-8 grid gap-5 md:grid-cols-2">
+              {CARREIRA_E_FORMACAO.map((item) => (
+                <article key={item.titulo} className="rounded-xl border border-border/60 bg-card p-6">
+                  <h3 className="font-heading text-lg font-semibold text-foreground">{item.titulo}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{item.texto}</p>
+                </article>
+              ))}
+            </div>
           </div>
         </section>
 

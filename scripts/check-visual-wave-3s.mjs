@@ -97,7 +97,7 @@ check(!/TI para (advogad|clínic|contad|arquitet)/i.test(hubBlocos), "hub: conte
 check(core.includes("SuporteEmpresarialBlocos"), "serviço: indicadores, fluxo e impacto aplicados");
 check(/id="escopo-empresarial"/.test(servicoBlocos) && /id="fluxo-empresarial"/.test(servicoBlocos) && /id="impacto"/.test(servicoBlocos), "serviço: âncoras de escopo, fluxo e impacto");
 check(/prazo e prioridade dependem de/i.test(servicoBlocos), "serviço: aviso de que prazo e prioridade não são automáticos");
-check(!/(sla|24 ?horas|tempo de resposta|chamados ilimitados)/i.test(semComentarios(servicoBlocos)), "serviço: sem SLA, cobertura 24h ou chamados ilimitados");
+check(!/(\bSLA\b|24 ?horas|tempo de resposta|chamados ilimitados)/i.test(semComentarios(servicoBlocos)), "serviço: sem SLA, cobertura 24h ou chamados ilimitados");
 check(!/R\$/.test(servicoBlocos) && !/R\$/.test(hubBlocos), "blocos 3S sem preço novo");
 check(/avulso/i.test(modalidades) && /recorrente/i.test(modalidades) && /não trabalhamos com suporte ilimitado/i.test(modalidades), "serviço: comparação avulso × recorrente sem promessa de ilimitado");
 

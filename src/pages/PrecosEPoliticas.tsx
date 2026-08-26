@@ -15,7 +15,7 @@ import { TermosConteudo } from "@/components/TermosConteudo";
 import { ExperienciaBadge } from "@/components/social-proof/ExperienciaBadge";
 import { PageTableOfContents } from "@/components/ui/PageTableOfContents";
 
-import { PAGAMENTO, NOTA_FISCAL } from "@/lib/politicaComercial";
+import { PAGAMENTO, NOTA_FISCAL, SUPORTE_GERENCIADO } from "@/lib/politicaComercial";
 
 import { trackPageView, trackCTAClick } from "@/lib/analytics";
 import { 
@@ -102,7 +102,9 @@ const servicosPrecos = [
     icon: Building2,
     servicos: [
       { nome: "Suporte técnico remoto", valor: "a partir de R$ 99,99", obs: "Para problemas resolvíveis à distância" },
-      { nome: "Suporte técnico empresarial", valor: "sob consulta", obs: "Atendimento pontual ou escopo recorrente" },
+      { nome: "Plano Essencial de suporte gerenciado", valor: `${SUPORTE_GERENCIADO.planos[0].valorLabel}/mês`, obs: `Por computador gerenciado • mínimo de ${SUPORTE_GERENCIADO.minimoEquipamentos} computadores` },
+      { nome: "Plano Pro de suporte gerenciado", valor: `${SUPORTE_GERENCIADO.planos[1].valorLabel}/mês`, obs: `Por computador gerenciado • mínimo de ${SUPORTE_GERENCIADO.minimoEquipamentos} computadores` },
+      { nome: "Plano Premium de suporte gerenciado", valor: `${SUPORTE_GERENCIADO.planos[2].valorLabel}/mês`, obs: `Por computador gerenciado • mínimo de ${SUPORTE_GERENCIADO.minimoEquipamentos} computadores` },
       { nome: "Consultoria de TI", valor: "sob consulta", obs: "Projetos específicos" },
     ]
   },

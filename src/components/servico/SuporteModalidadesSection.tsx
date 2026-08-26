@@ -3,7 +3,8 @@ import { CheckCircle2, Repeat, ShieldAlert, Wrench } from "lucide-react";
 
 /**
  * RODADA 3N — Atendimento avulso ou recorrente + limites por contexto.
- * Sem plano mensal, sem preço, sem franquia de horas, sem prazo garantido.
+ * Planos mensais por máquina são exibidos no bloco de suporte gerenciado.
+ * Sem franquia de horas, sem prazo garantido e sem promessa de plantão.
  */
 
 const AVULSO = [
@@ -50,7 +51,7 @@ const COMPARATIVO = [
   { criterio: "Histórico", avulso: "Por atendimento", recorrente: "Acompanhamento organizado" },
   { criterio: "Preventiva", avulso: "Contratada separadamente", recorrente: "Pode fazer parte do escopo" },
   { criterio: "Prioridade", avulso: "Conforme agenda", recorrente: "Conforme regra contratada" },
-  { criterio: "Valor", avulso: "Conforme serviço", recorrente: "Conforme levantamento" },
+  { criterio: "Valor", avulso: "Conforme serviço", recorrente: "Plano por máquina ou escopo levantado" },
 ];
 
 const PODE = [
@@ -170,8 +171,8 @@ export const SuporteModalidadesSection = () => (
           </div>
 
           <p className="mt-4 text-sm text-muted-foreground">
-            Não trabalhamos com suporte ilimitado, plantão permanente nem monitoramento contínuo. As
-            condições comerciais aplicáveis estão em{" "}
+            Não trabalhamos com suporte ilimitado, plantão permanente nem prazo de resposta garantido. O
+            acompanhamento preventivo e os itens atendidos dependem do plano ou escopo registrado. As condições comerciais aplicáveis estão em{" "}
             <Link to="/precos-e-politicas" className="font-semibold text-accent hover:underline">
               preços e políticas
             </Link>

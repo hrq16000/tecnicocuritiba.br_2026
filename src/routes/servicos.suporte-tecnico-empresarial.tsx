@@ -54,8 +54,8 @@ export const Route = createFileRoute("/servicos/suporte-tecnico-empresarial")({
         "answer": "Informe quantas pessoas foram afetadas, qual equipamento ou setor parou, mensagem de erro, horário de início, o que mudou, impacto na operação e se existe backup recente. Não envie senhas ou códigos de autenticação por mensagem. Com esse contexto, a triagem diferencia urgência real de ajuste simples e orienta se o caso pode começar remotamente."
       },
       {
-        "question": "Como funciona o atendimento recorrente?",
-        "answer": "Definimos escopo, itens acompanhados e periodicidade conforme a necessidade da empresa. Não é suporte ilimitado: o que está incluído e o que é cobrado à parte fica registrado antes de começar."
+        "question": "Como funcionam os planos de suporte gerenciado?",
+        "answer": "Para empresas com quatro ou mais computadores, existem os planos Essencial, Pro e Premium, cobrados por máquina gerenciada. Antes de contratar, registramos os ativos, o escopo, os horários, as responsabilidades e o que fica fora. Os planos não significam suporte ilimitado ou plantão 24 horas."
       },
       {
         "question": "Fazem atendimento de emergência?",

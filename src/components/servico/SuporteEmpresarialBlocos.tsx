@@ -1,5 +1,6 @@
 import { Link } from "@/lib/router-compat";
-import { Users, Laptop, MapPinned, FileCheck2, ArrowRight } from "lucide-react";
+import { Users, Laptop, MapPinned, FileCheck2, ArrowRight, CheckCircle2 } from "lucide-react";
+import { SUPORTE_GERENCIADO } from "@/lib/politicaComercial";
 
 /**
  * RODADA 3S — blocos visuais exclusivos da página de serviço empresarial
@@ -62,6 +63,54 @@ export const SuporteEmpresarialBlocos = () => (
             </li>
           ))}
         </ul>
+      </div>
+    </section>
+
+    <section id="planos-suporte-gerenciado" className="scroll-mt-24 bg-background py-12 md:py-14">
+      <div className="container mx-auto px-4">
+        <div className="mx-auto max-w-5xl">
+          <div className="max-w-3xl">
+            <p className="text-sm font-semibold uppercase tracking-wide text-accent">Suporte gerenciado de TI</p>
+            <h2 className="mt-2 text-2xl font-heading font-bold text-foreground md:text-3xl">
+              Planos proativos para empresas a partir de {SUPORTE_GERENCIADO.minimoEquipamentos} computadores
+            </h2>
+            <p className="mt-3 text-muted-foreground leading-relaxed">
+              O objetivo é organizar a rotina de tecnologia antes que cada problema vire uma urgência. A cobertura é
+              definida por máquina cadastrada e o escopo fica documentado: assim a empresa sabe o que está incluído,
+              o que precisa de avaliação e quem acompanha cada decisão técnica.
+            </p>
+          </div>
+
+          <div className="mt-8 grid gap-5 md:grid-cols-3">
+            {SUPORTE_GERENCIADO.planos.map((plano) => (
+              <article
+                key={plano.nome}
+                className={`rounded-xl border bg-card p-6 ${plano.nome === "Pro" ? "border-accent shadow-[0_12px_32px_-18px_hsl(var(--accent)/0.65)]" : "border-border"}`}
+              >
+                <p className="text-sm font-semibold text-accent">{plano.destaque}</p>
+                <h3 className="mt-2 text-xl font-heading font-bold text-foreground">Plano {plano.nome}</h3>
+                <p className="mt-4 text-3xl font-heading font-bold text-foreground">
+                  {plano.valorLabel}
+                  <span className="ml-1 text-sm font-medium text-muted-foreground">/ máquina / mês</span>
+                </p>
+                <p className="mt-2 text-xs text-muted-foreground">Mínimo de {SUPORTE_GERENCIADO.minimoEquipamentos} computadores gerenciados.</p>
+                <ul className="mt-6 space-y-3">
+                  {plano.recursos.map((recurso) => (
+                    <li key={recurso} className="flex gap-2 text-sm text-muted-foreground">
+                      <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-accent" aria-hidden="true" />
+                      <span>{recurso}</span>
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+          </div>
+
+          <div className="mt-6 grid gap-3 rounded-xl border border-border bg-secondary p-5 text-sm text-muted-foreground md:grid-cols-2">
+            <p><strong className="text-foreground">O que é avaliado à parte:</strong> {SUPORTE_GERENCIADO.exclusoesLabel}</p>
+            <p><strong className="text-foreground">Limites transparentes:</strong> {SUPORTE_GERENCIADO.limitesLabel}</p>
+          </div>
+        </div>
       </div>
     </section>
 
