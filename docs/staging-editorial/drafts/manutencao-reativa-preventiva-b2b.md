@@ -16,7 +16,7 @@ Falta separar contorno, correção e investigação de causa-raiz em ambiente em
 # Proposta editorial
 Manutenção reativa responde à falha; preventiva observa riscos antes da interrupção; acompanhamento recorrente só deve ser descrito se existir serviço real. Registre sintomas, recorrência, mudanças, equipamentos críticos, backups e acessos. Um contorno que retorna repetidamente pede investigação da causa.
 # Segurança e limites
-Não inventar monitoramento contínuo, SLA ou disponibilidade.
+Não inventar acompanhamento operacional, SLA ou disponibilidade.
 # Relações futuras
 - Manutenção → /servicos/manutencao-preventiva-empresas
 - Empresa → /empresas
