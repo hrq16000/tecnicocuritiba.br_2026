@@ -58,6 +58,31 @@ export const REDIRECT_MATRIX: RedirectRule[] = [
   { from: "/assistencia-tecnica-empresas-curitiba", to: "/servicos/suporte-tecnico-empresarial", motivo: "url-antiga" },
   { from: "/suporte-empresas", to: "/servicos/suporte-tecnico-empresarial", motivo: "url-antiga" },
 
+  // ── Artigos editoriais antigos consolidados ─────────────────
+  // Estes slugs existiram no acervo, mas não pertencem à onda editorial
+  // aprovada. Links externos não devem terminar em 404: cada URL aponta
+  // para a página canônica que responde à mesma necessidade.
+  { from: "/blog/quando-trocar-hd-por-ssd", to: "/servicos/upgrade-ssd-ram", motivo: "url-antiga" },
+  { from: "/blog/como-instalar-segundo-ssd-notebook", to: "/servicos/upgrade-ssd-ram", motivo: "url-antiga" },
+  { from: "/blog/como-clonar-hd-para-ssd", to: "/servicos/upgrade-ssd-ram", motivo: "url-antiga" },
+  { from: "/blog/erros-comuns-upgrade-computador", to: "/servicos/upgrade-ssd-ram", motivo: "url-antiga" },
+  { from: "/blog/como-saber-se-pc-tem-virus-malware", to: "/servicos/remocao-de-virus", motivo: "url-antiga" },
+  { from: "/blog/backup-como-proteger-seus-arquivos", to: "/seguranca-dos-dados", motivo: "url-antiga" },
+  { from: "/blog/backup-nuvem-empresas-qual-escolher", to: "/servicos/backup-para-empresas", motivo: "url-antiga" },
+  { from: "/blog/notebook-superaquecendo-o-que-fazer", to: "/problemas/notebook-superaquecendo", motivo: "url-antiga" },
+  { from: "/blog/como-trocar-pasta-termica-notebook", to: "/problemas/notebook-superaquecendo", motivo: "url-antiga" },
+  { from: "/blog/como-limpar-notebook-por-dentro", to: "/servicos/manutencao-de-notebook", motivo: "url-antiga" },
+  { from: "/blog/como-diagnosticar-placa-mae-defeituosa", to: "/servicos/conserto-placa", motivo: "url-antiga" },
+  { from: "/blog/como-testar-fonte-de-alimentacao-pc", to: "/problemas/computador-nao-liga", motivo: "url-antiga" },
+  { from: "/blog/wifi-lento-como-melhorar", to: "/servicos/redes-e-wifi", motivo: "url-antiga" },
+  { from: "/blog/como-configurar-rede-wifi-empresarial", to: "/empresa-de-ti-curitiba", motivo: "url-antiga" },
+  { from: "/blog/como-montar-pc-do-zero-guia-completo", to: "/servicos/montagem-de-pc", motivo: "url-antiga" },
+  { from: "/blog/como-configurar-bios-uefi-corretamente", to: "/servicos/montagem-de-pc", motivo: "url-antiga" },
+  { from: "/blog/preciso-de-um-plataforma-prestadores", to: "/seja-parceiro", motivo: "url-antiga" },
+  { from: "/blog/como-cadastrar-preciso-de-um", to: "/seja-parceiro", motivo: "url-antiga" },
+  { from: "/blog/preciso-de-um-todos-os-ramos", to: "/seja-parceiro", motivo: "url-antiga" },
+  { from: "/blog/preciso-de-um-vagas-oportunidades", to: "/seja-parceiro", motivo: "url-antiga" },
+
   // ── Procedimentos migrados para /procedimentos/* ────────────
   { from: "/reflow-bga-curitiba", to: "/procedimentos/reflow-bga-curitiba", motivo: "url-antiga" },
   { from: "/reballing-bga-curitiba", to: "/procedimentos/reballing-bga-curitiba", motivo: "url-antiga" },

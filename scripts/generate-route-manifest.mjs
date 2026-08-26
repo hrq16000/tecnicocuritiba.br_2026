@@ -18,15 +18,20 @@ const DESC_404 =
   "A página que você tentou acessar não existe ou foi movida. Veja os serviços disponíveis ou volte para a página inicial.";
 
 const BODY_404 = `
-        <div style="min-height:100vh;background:linear-gradient(155deg,hsl(205,58%,15%) 0%,hsl(200,45%,22%) 100%);color:#fff;padding:32px 20px;font-family:Arial,sans-serif;max-width:720px;margin:0 auto">
-          <img src="/logo.webp" alt="Técnico em Curitiba" width="240" height="78" style="max-width:60vw;height:auto" />
-          <h1 style="font-size:1.6rem;line-height:1.25;margin:20px 0 12px">Página não encontrada</h1>
-          <p style="margin:0 0 20px;font-size:1rem;opacity:.94">O endereço acessado não existe ou foi movido. Use os links abaixo para continuar.</p>
-          <ul style="line-height:2;padding-left:20px">
-            <li><a href="/" style="color:#7fd4ec">Página inicial</a></li>
-            <li><a href="/servicos" style="color:#7fd4ec">Serviços disponíveis</a></li>
-          </ul>
-        </div>`;
+  <main style="min-height:100vh;box-sizing:border-box;display:grid;place-items:center;padding:24px;background:radial-gradient(circle at 88% 8%,rgba(45,181,218,.24),transparent 32%),linear-gradient(145deg,#082534 0%,#0d3b4d 55%,#092c3c 100%);color:#f8fcff;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif">
+    <section aria-labelledby="not-found-title" style="box-sizing:border-box;width:min(100%,760px);padding:clamp(28px,6vw,56px);border:1px solid rgba(255,255,255,.18);border-radius:24px;background:rgba(5,28,40,.64);box-shadow:0 26px 70px rgba(0,0,0,.28);backdrop-filter:blur(10px)">
+      <a href="/" style="display:inline-flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-weight:800;letter-spacing:-.02em"><span aria-hidden="true" style="display:grid;place-items:center;width:32px;height:32px;border-radius:10px;background:#26b9dc;color:#073143">TC</span>Técnico em Curitiba</a>
+      <p style="margin:38px 0 10px;color:#8ce6ff;font-size:.82rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase">Erro 404</p>
+      <h1 id="not-found-title" style="max-width:560px;margin:0;font-size:clamp(2rem,6vw,3.8rem);line-height:1.04;letter-spacing:-.045em">Esta página não está mais neste endereço.</h1>
+      <p style="max-width:610px;margin:22px 0 0;color:rgba(248,252,255,.82);font-size:1.06rem;line-height:1.7">O conteúdo pode ter sido movido, atualizado ou digitado com outro endereço. Escolha um caminho abaixo para continuar no site.</p>
+      <nav aria-label="Caminhos para continuar" style="display:flex;flex-wrap:wrap;gap:12px;margin-top:30px">
+        <a href="/" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 19px;border-radius:12px;background:#26b9dc;color:#073143;font-weight:800;text-decoration:none">Ir para o início</a>
+        <a href="/servicos" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 19px;border:1px solid rgba(255,255,255,.28);border-radius:12px;color:#fff;font-weight:700;text-decoration:none">Ver serviços</a>
+        <a href="/tecnico-informatica-curitiba" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 19px;border:1px solid rgba(255,255,255,.28);border-radius:12px;color:#fff;font-weight:700;text-decoration:none">Técnico em Curitiba</a>
+      </nav>
+      <div style="margin-top:32px;padding-top:22px;border-top:1px solid rgba(255,255,255,.16);color:rgba(248,252,255,.7);font-size:.92rem;line-height:1.6">Procurava um artigo técnico? Veja o <a href="/blog" style="color:#8ce6ff;font-weight:700">blog</a> ou use a lista de serviços para encontrar a solução adequada.</div>
+    </section>
+  </main>`;
 
 /** Remove canonical, hreflang, JSON-LD e metadados comerciais herdados da home. */
 function build404Html(baseHtml) {
