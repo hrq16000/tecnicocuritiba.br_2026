@@ -21,6 +21,7 @@ import {
   PROCESSO_ATENDIMENTO,
   MODALIDADES_ATENDIMENTO,
   CURITIBA_BAIRROS,
+  CIDADES,
   type CidadeData,
 } from "@/lib/cidadesData";
 
@@ -36,6 +37,9 @@ export const CidadeLandingLayout = ({ data }: { data: CidadeData }) => {
   }, [path, data.h1]);
 
   const handleCta = (location: string) => trackCTAClick("whatsapp", location);
+  const cidadesRelacionadas = Object.values(CIDADES)
+    .filter((cidade) => cidade.slug !== data.slug)
+    .slice(0, 6);
 
   const localBusinessSchema = {
     "@context": "https://schema.org",
@@ -246,6 +250,43 @@ export const CidadeLandingLayout = ({ data }: { data: CidadeData }) => {
                   <h3 className="font-semibold text-foreground">{q.title}</h3>
                   <p className="mt-1 text-sm text-muted-foreground">{q.desc}</p>
                 </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Intenção técnica: cidade → diagnóstico específico, sem duplicar serviço. */}
+        <section className="border-y border-border/60 bg-secondary/40 py-12 md:py-16">
+          <div className="container mx-auto">
+            <h2 className="text-2xl font-heading font-bold text-foreground md:text-3xl">Diagnósticos para problemas comuns</h2>
+            <p className="mt-2 max-w-2xl text-muted-foreground">Antes de decidir entre formatar, trocar peça ou substituir a máquina, identifique o sintoma predominante.</p>
+            <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              {[
+                { to: "/problemas/computador-lento", title: "Computador lento", desc: "Desempenho, disco, memória e aquecimento." },
+                { to: "/problemas/notebook-superaquecendo", title: "Notebook aquecendo", desc: "Sinais de risco e manutenção adequada." },
+                { to: "/problemas/computador-nao-liga", title: "Computador não liga", desc: "Verificações seguras antes do diagnóstico." },
+                { to: "/problemas/tela-azul-windows", title: "Tela azul", desc: "Drivers, memória e armazenamento." },
+              ].map((item) => (
+                <Link key={item.to} to={item.to} className="group rounded-xl border border-border bg-card p-5 transition-colors hover:border-accent/50 hover:bg-accent/5">
+                  <h3 className="font-semibold text-foreground group-hover:text-accent">{item.title}</h3>
+                  <p className="mt-2 text-sm text-muted-foreground">{item.desc}</p>
+                  <span className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-accent">Ver diagnóstico <ArrowRight className="h-3.5 w-3.5" /></span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Cidade → demais cidades realmente atendidas da RMC. */}
+        <section className="py-12 md:py-16">
+          <div className="container mx-auto">
+            <h2 className="text-2xl font-heading font-bold text-foreground md:text-3xl">Também atendemos outras cidades da região</h2>
+            <p className="mt-2 max-w-2xl text-muted-foreground">A modalidade e a logística são definidas conforme o problema e a agenda. Consulte a página da cidade para conhecer serviços e formas de atendimento.</p>
+            <div className="mt-7 flex flex-wrap gap-3">
+              {cidadesRelacionadas.map((cidade) => (
+                <Link key={cidade.slug} to={`/tecnico-informatica-${cidade.slug}`} className="inline-flex items-center gap-1 rounded-full border border-border px-4 py-2 text-sm font-semibold text-muted-foreground transition-colors hover:border-accent hover:text-accent">
+                  Técnico em {cidade.cidade} <ArrowRight className="h-3.5 w-3.5" />
+                </Link>
               ))}
             </div>
           </div>
