@@ -1,0 +1,81 @@
+{
+  "status": "staging_only",
+  "methodology": "contagem de evidências no inventário editorial; revisar antes de promoção",
+  "pillars": [
+    {
+      "pillar": "DIAGNÓSTICO",
+      "evidence_count": 25,
+      "status": "STRONG"
+    },
+    {
+      "pillar": "NOTEBOOK",
+      "evidence_count": 8,
+      "status": "STRONG"
+    },
+    {
+      "pillar": "COMPUTADOR",
+      "evidence_count": 11,
+      "status": "STRONG"
+    },
+    {
+      "pillar": "WINDOWS",
+      "evidence_count": 4,
+      "status": "STRONG"
+    },
+    {
+      "pillar": "ARMAZENAMENTO",
+      "evidence_count": 1,
+      "status": "WEAK"
+    },
+    {
+      "pillar": "DADOS",
+      "evidence_count": 5,
+      "status": "STRONG"
+    },
+    {
+      "pillar": "RAM",
+      "evidence_count": 9,
+      "status": "STRONG"
+    },
+    {
+      "pillar": "SSD",
+      "evidence_count": 8,
+      "status": "STRONG"
+    },
+    {
+      "pillar": "REDES",
+      "evidence_count": 2,
+      "status": "ADEQUATE"
+    },
+    {
+      "pillar": "WI-FI",
+      "evidence_count": 5,
+      "status": "STRONG"
+    },
+    {
+      "pillar": "MALWARE",
+      "evidence_count": 2,
+      "status": "ADEQUATE"
+    },
+    {
+      "pillar": "BACKUP",
+      "evidence_count": 4,
+      "status": "STRONG"
+    },
+    {
+      "pillar": "MANUTENÇÃO",
+      "evidence_count": 5,
+      "status": "STRONG"
+    },
+    {
+      "pillar": "UPGRADES",
+      "evidence_count": 4,
+      "status": "STRONG"
+    },
+    {
+      "pillar": "B2B",
+      "evidence_count": 11,
+      "status": "STRONG"
+    }
+  ]
+}

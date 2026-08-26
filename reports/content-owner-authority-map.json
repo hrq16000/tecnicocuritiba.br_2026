@@ -1,0 +1,163 @@
+{
+  "status": "staging_only",
+  "methodology": "média dos sinais editoriais existentes; não é previsão de ranking",
+  "owners": [
+    {
+      "owner": "/servicos/backup-para-empresas",
+      "primary_intents": [
+        "PROTEGER_DADOS_ANTES_DE_INTERVENCAO"
+      ],
+      "clusters": [
+        "B2B"
+      ],
+      "questions_answered": 1,
+      "related_drafts": [
+        "backup-sincronizacao"
+      ],
+      "information_gain": 5,
+      "diagnostic_gain": 5,
+      "decision_gain": 5,
+      "safety_gain": 5,
+      "duplication_risk": "baixo",
+      "first_page_readiness": 97,
+      "readiness": "PROMOTION_CANDIDATE"
+    },
+    {
+      "owner": "/empresas",
+      "primary_intents": [
+        "PROTEGER_DADOS_EMPRESARIAIS",
+        "ISOLAR_CAMADA_DE_REDE_B2B",
+        "ESCOLHER_MODALIDADE_DE_SUPORTE",
+        "DECIDIR_TERCEIRIZACAO_B2B",
+        "ORGANIZAR_TRIAGEM_EMPRESARIAL",
+        "DEFINIR_ESCOPO_DO_INCIDENTE"
+      ],
+      "clusters": [
+        "B2B"
+      ],
+      "questions_answered": 6,
+      "related_drafts": [
+        "backup-pequenas-empresas",
+        "rede-instabilidade-empresa",
+        "suporte-remoto-ou-presencial-b2b",
+        "terceirizar-suporte-ti",
+        "triagem-ti-pequena-empresa",
+        "um-ou-todos-computadores-problema"
+      ],
+      "information_gain": 4.7,
+      "diagnostic_gain": 4.7,
+      "decision_gain": 4.7,
+      "safety_gain": 5,
+      "duplication_risk": "médio",
+      "first_page_readiness": 92,
+      "readiness": "PROMOTION_CANDIDATE"
+    },
+    {
+      "owner": "/servicos/redes-e-wifi",
+      "primary_intents": [
+        "DIFERENCIAR_COBERTURA_DE_VELOCIDADE",
+        "ISOLAR_GARGALO_DE_CONECTIVIDADE"
+      ],
+      "clusters": [
+        "REDES"
+      ],
+      "questions_answered": 2,
+      "related_drafts": [
+        "cobertura-sinal-wifi",
+        "internet-lenta-provedor-wifi-dispositivo"
+      ],
+      "information_gain": 4.5,
+      "diagnostic_gain": 4.5,
+      "decision_gain": 4.5,
+      "safety_gain": 5,
+      "duplication_risk": "médio",
+      "first_page_readiness": 89,
+      "readiness": "PROMOTION_CANDIDATE"
+    },
+    {
+      "owner": "/servicos/upgrade-ssd-ram",
+      "primary_intents": [
+        "AVALIAR_UPGRADE_DE_MEMORIA",
+        "AVALIAR_UPGRADE_DE_ARMAZENAMENTO",
+        "IDENTIFICAR_GARGALO_ANTES_DO_UPGRADE",
+        "DECIDIR_UPGRADE_OU_SUBSTITUICAO"
+      ],
+      "clusters": [
+        "UPGRADES"
+      ],
+      "questions_answered": 4,
+      "related_drafts": [
+        "quando-aumentar-ram",
+        "quando-ssd-melhora-computador",
+        "ssd-ou-ram-gargalo",
+        "upgrade-computador-antigo"
+      ],
+      "information_gain": 4.5,
+      "diagnostic_gain": 4.5,
+      "decision_gain": 4.5,
+      "safety_gain": 5,
+      "duplication_risk": "médio",
+      "first_page_readiness": 89,
+      "readiness": "PROMOTION_CANDIDATE"
+    },
+    {
+      "owner": "/servicos/manutencao-de-computador",
+      "primary_intents": [
+        "ESCOLHER_FAIXA_COM_CONTEXTO",
+        "DIFERENCIAR_FALHA_DE_ALIMENTACAO",
+        "ENTENDER_CAUSA",
+        "DIFERENCIAR_REDE_LOCAL_E_INTERNET",
+        "DECIDIR_REPARO",
+        "DECIDIR_REPARAR_OU_REINSTALAR",
+        "AVALIAR_LIMPEZA_E_TEMPERATURA",
+        "DECIDIR_MANUTENCAO_PREVENTIVA",
+        "REDUZIR_RECORRENCIA_OPERACIONAL",
+        "TRIAR_DESLIGAMENTO",
+        "DIAGNOSTICAR_PROBLEMA",
+        "DIFERENCIAR_TEMPERATURA_E_DESEMPENHO",
+        "DECIDIR_PROXIMA_INTERVENCAO",
+        "DECIDIR_EXPANSAO_DA_REDE",
+        "INTERPRETAR_ERRO_DO_SISTEMA",
+        "DIFERENCIAR_SEGURANCA_DE_DESEMPENHO",
+        "DIFERENCIAR_FALHA_DE_INICIALIZACAO"
+      ],
+      "clusters": [
+        "DIAGNOSTICO"
+      ],
+      "questions_answered": 24,
+      "related_drafts": [
+        "24ghz-vs-5ghz",
+        "bateria-carregador-notebook",
+        "computador-lento",
+        "conectado-sem-internet",
+        "formatacao-computador",
+        "formatacao-quando-faz-sentido",
+        "hdd-sinais-de-falha",
+        "limpeza-refrigeracao-computador",
+        "manutencao-preventiva-o-que-faz-sentido",
+        "manutencao-reativa-preventiva-b2b",
+        "notebook-desligando-sozinho",
+        "notebook-nao-liga",
+        "notebook-superaquecendo",
+        "ram-insuficiente-ou-defeituosa",
+        "recuperacao-de-dados",
+        "reparar-atualizar-substituir",
+        "repetidor-mesh-cabo",
+        "ssd-nao-reconhecido",
+        "tela-azul-travamentos",
+        "upgrade-ssd-ram",
+        "virus-malware-sintomas",
+        "wifi-caindo",
+        "windows-nao-inicia-diagnostico",
+        "windows-nao-inicia"
+      ],
+      "information_gain": 4.4,
+      "diagnostic_gain": 4.4,
+      "decision_gain": 4.4,
+      "safety_gain": 5,
+      "duplication_risk": "médio",
+      "first_page_readiness": 87,
+      "readiness": "PROMOTION_CANDIDATE"
+    }
+  ]
+}
