@@ -14,3 +14,7 @@ Varredura inicial de claims e de padrões de conteúdo das rotas prioritárias. 
 | COMMERCIAL | Acervo legado | Há menção a outra marca e a garantia escrita sem suporte no registro atual. | Remover ou consolidar em revisão própria; não promover esse material. |
 
 Safety critical: 1. Technical: 2. Commercial: 2. Minor: 1.
+
+## Triagem automatizada P0.2
+
+O relatório `reports/p0-storage-memory-article-audit.json` marcou 16 artigos como `CONFLITANTE` por conter percentuais, promessas de resultado ou linguagem que precisa de fonte. Esse marcador é bloqueador de promoção; não representa diagnóstico definitivo de cada artigo.

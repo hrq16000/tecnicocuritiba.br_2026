@@ -31,6 +31,7 @@ Após autorização explícita, houve promoção seletiva em URLs já existentes
 
 - URLs/intents auditadas: **6 donas de intenção** (`recuperação`, `SSD/HDD`, `RAM`, `lentidão/travamento`, `Windows não inicia` e `formatação`).
 - Artigos auxiliares relacionados: **159 no acervo**, com classificação temática inicial registrada no mapa de cobertura; nenhum foi promovido automaticamente.
+- Auditoria temática individual inicial: **86 artigos relacionados** aos sete temas P0.2; 46 reutilizáveis, 16 conflitantes, 19 fora do core e 5 complementares. A classificação é heurística de triagem e os conflitantes exigem revisão humana.
 - Drafts produzidos nesta onda: **7** (limite respeitado).
 - Information Gain médio antes: **2,4/5**; depois: **4,3/5**.
 - Safety critical contradictions: **1**; ela bloqueia promoção até revisão editorial específica.

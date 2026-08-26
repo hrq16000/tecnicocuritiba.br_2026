@@ -141,6 +141,7 @@
     "check:editorial-cluster": "node scripts/check-editorial-cluster.mjs",
     "check:editorial-no-direct-wa": "node scripts/check-editorial-no-direct-wa.mjs",
     "report:editorial": "node scripts/report-editorial-inventory.mjs",
+    "report:p0-storage-audit": "node scripts/report-p0-storage-memory-audit.mjs",
     "check:index-health": "node scripts/check-index-health.mjs",
     "check:index-health:ci": "node scripts/check-index-health.mjs --base=http://localhost:8080",
     "check:index-health:strict": "node scripts/check-index-health.mjs --strict",

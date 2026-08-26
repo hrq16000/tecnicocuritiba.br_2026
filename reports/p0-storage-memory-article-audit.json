@@ -1,0 +1,1037 @@
+{
+  "status": "staging_only",
+  "method": "heuristic_first_pass",
+  "total_related_articles": 86,
+  "topic_counts": {
+    "recuperacao_dados": 26,
+    "ssd_hdd": 63,
+    "memoria_ram": 38,
+    "backup": 60,
+    "travamentos": 17,
+    "windows": 25,
+    "computador_lento": 12
+  },
+  "classification_counts": {
+    "REUTILIZAVEL": 46,
+    "CONFLITANTE": 16,
+    "OUT_OF_CORE": 19,
+    "COMPLEMENTAR": 5
+  },
+  "records": [
+    {
+      "slug": "organizacao-de-ti-para-pequenos-escritorios",
+      "title": "Organização de TI para pequenos escritórios: o guia prático",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "recuperacao_dados",
+        "ssd_hdd",
+        "memoria_ram",
+        "backup"
+      ],
+      "classification": "REUTILIZAVEL",
+      "bodyChars": 12300
+    },
+    {
+      "slug": "como-escolher-uma-workstation",
+      "title": "Como escolher uma workstation: checklist de requisitos",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "ssd_hdd",
+        "memoria_ram",
+        "travamentos",
+        "backup"
+      ],
+      "classification": "CONFLITANTE",
+      "bodyChars": 11280
+    },
+    {
+      "slug": "linux-vs-windows-diferencas-qual-escolher",
+      "title": "Linux vs Windows: Diferenças Reais e Qual Escolher em 2026",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "memoria_ram",
+        "windows"
+      ],
+      "classification": "OUT_OF_CORE",
+      "bodyChars": 6437
+    },
+    {
+      "slug": "comandos-linux-essenciais-iniciantes",
+      "title": "50 Comandos Linux Essenciais Para Iniciantes e Técnicos",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "ssd_hdd",
+        "memoria_ram",
+        "backup"
+      ],
+      "classification": "OUT_OF_CORE",
+      "bodyChars": 4931
+    },
+    {
+      "slug": "como-instalar-ubuntu-do-zero",
+      "title": "Como Instalar Ubuntu do Zero: Guia Completo 2026",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "ssd_hdd",
+        "memoria_ram",
+        "backup"
+      ],
+      "classification": "REUTILIZAVEL",
+      "bodyChars": 4395
+    },
+    {
+      "slug": "distribuicoes-linux-qual-melhor-para-voce",
+      "title": "Distribuições Linux: Qual a Melhor Para Você?",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "ssd_hdd",
+        "memoria_ram"
+      ],
+      "classification": "OUT_OF_CORE",
+      "bodyChars": 4451
+    },
+    {
+      "slug": "trocar-windows-por-linux-vale-a-pena",
+      "title": "Trocar o Windows Por Linux: Vale a Pena?",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "ssd_hdd",
+        "memoria_ram",
+        "computador_lento",
+        "windows",
+        "backup"
+      ],
+      "classification": "OUT_OF_CORE",
+      "bodyChars": 3791
+    },
+    {
+      "slug": "linux-para-pc-antigo-leve-rapido",
+      "title": "Linux Para PC Antigo: 5 Distros Leves Que Ressuscitam Seu Computador",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "ssd_hdd",
+        "memoria_ram"
+      ],
+      "classification": "OUT_OF_CORE",
+      "bodyChars": 3896
+    },
+    {
+      "slug": "computador-lento-causas-solucoes",
+      "title": "Computador lento: causas possíveis e como decidir o próximo passo",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "ssd_hdd",
+        "memoria_ram",
+        "computador_lento",
+        "travamentos",
+        "windows",
+        "backup"
+      ],
+      "classification": "REUTILIZAVEL",
+      "bodyChars": 9002
+    },
+    {
+      "slug": "como-saber-se-pc-tem-virus-malware",
+      "title": "Como saber se o computador está com vírus ou malware",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "recuperacao_dados",
+        "computador_lento",
+        "backup"
+      ],
+      "classification": "REUTILIZAVEL",
+      "bodyChars": 6851
+    },
+    {
+      "slug": "notebook-nao-liga-o-que-fazer",
+      "title": "Notebook não liga: o que verificar antes da assistência",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "ssd_hdd",
+        "memoria_ram",
+        "backup"
+      ],
+      "classification": "REUTILIZAVEL",
+      "bodyChars": 7551
+    },
+    {
+      "slug": "diferenca-camera-wifi-dvr-qual-escolher",
+      "title": "Câmera Wi-Fi ou DVR: Qual a Diferença e Qual Escolher?",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "ssd_hdd"
+      ],
+      "classification": "OUT_OF_CORE",
+      "bodyChars": 4115
+    },
+    {
+      "slug": "seguranca-casas-praia-itapoa-guaratuba",
+      "title": "Segurança em Casas de Praia: Como Proteger Seu Imóvel em Itapoá e Guaratuba",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "ssd_hdd"
+      ],
+      "classification": "REUTILIZAVEL",
+      "bodyChars": 2804
+    },
+    {
+      "slug": "como-escolher-melhor-kit-cameras-seguranca",
+      "title": "Como Escolher o Melhor Kit de Câmeras de Segurança Para Sua Casa ou Comércio",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "ssd_hdd"
+      ],
+      "classification": "OUT_OF_CORE",
+      "bodyChars": 3089
+    },
+    {
+      "slug": "monitoramento-24-horas-como-funciona",
+      "title": "Monitoramento 24 Horas: Como Funciona e Por Que Você Precisa",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "ssd_hdd"
+      ],
+      "classification": "CONFLITANTE",
+      "bodyChars": 2305
+    },
+    {
+      "slug": "windows-11-atualizacao-kb5074105-novidades",
+      "title": "Windows 11 KB5074105: Todas as Novidades da Atualização de Janeiro 2026",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "ssd_hdd",
+        "travamentos",
+        "windows",
+        "backup"
+      ],
+      "classification": "REUTILIZAVEL",
+      "bodyChars": 8545
+    },
+    {
+      "slug": "como-escolher-um-bom-antivirus",
+      "title": "Como Escolher um Bom Antivírus em 2024 (Sem Cair em Pegadinhas)",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "computador_lento"
+      ],
+      "classification": "REUTILIZAVEL",
+      "bodyChars": 3665
+    },
+    {
+      "slug": "dicas-manter-notebook-funcionando-bem",
+      "title": "Dicas Para Manter o Notebook Funcionando Bem (E Evitar Assistência)",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "ssd_hdd",
+        "memoria_ram",
+        "travamentos"
+      ],
+      "classification": "REUTILIZAVEL",
+      "bodyChars": 2796
+    },
+    {
+      "slug": "como-deixar-computador-mais-rapido",
+      "title": "Como Deixar o Computador Mais Rápido: 7 Dicas Práticas",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "ssd_hdd",
+        "memoria_ram",
+        "windows"
+      ],
+      "classification": "REUTILIZAVEL",
+      "bodyChars": 2641
+    },
+    {
+      "slug": "sinais-computador-com-virus",
+      "title": "5 Sinais de Que Seu Computador Está com Vírus",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "computador_lento"
+      ],
+      "classification": "REUTILIZAVEL",
+      "bodyChars": 2156
+    },
+    {
+      "slug": "quando-trocar-hd-por-ssd",
+      "title": "Vale a pena trocar o HD por SSD? Como avaliar o upgrade",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "ssd_hdd",
+        "memoria_ram",
+        "computador_lento",
+        "travamentos",
+        "windows",
+        "backup"
+      ],
+      "classification": "REUTILIZAVEL",
+      "bodyChars": 6396
+    },
+    {
+      "slug": "backup-como-proteger-seus-arquivos",
+      "title": "Como evitar perder arquivos: guia de backup preventivo",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "recuperacao_dados",
+        "ssd_hdd",
+        "backup"
+      ],
+      "classification": "REUTILIZAVEL",
+      "bodyChars": 6373
+    },
+    {
+      "slug": "notebook-superaquecendo-o-que-fazer",
+      "title": "Notebook superaquecendo: sinais, prevenção e o que fazer",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "ssd_hdd",
+        "computador_lento",
+        "travamentos",
+        "backup"
+      ],
+      "classification": "REUTILIZAVEL",
+      "bodyChars": 8262
+    },
+    {
+      "slug": "erros-comuns-upgrade-computador",
+      "title": "5 Erros Comuns ao Fazer Upgrade no Computador (e Como Evitar Prejuízo)",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "ssd_hdd",
+        "memoria_ram",
+        "computador_lento",
+        "travamentos",
+        "windows"
+      ],
+      "classification": "REUTILIZAVEL",
+      "bodyChars": 3751
+    },
+    {
+      "slug": "quando-trocar-computador-ou-reparar",
+      "title": "Quando Trocar o Computador e Quando Vale a Pena Reparar (Guia Técnico)",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "ssd_hdd",
+        "memoria_ram"
+      ],
+      "classification": "REUTILIZAVEL",
+      "bodyChars": 2545
+    },
+    {
+      "slug": "manutencao-preventiva-computador-guia",
+      "title": "Manutenção Preventiva do Computador: O Guia Que Evita 80% dos Problemas",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "ssd_hdd",
+        "travamentos",
+        "backup"
+      ],
+      "classification": "REUTILIZAVEL",
+      "bodyChars": 2345
+    },
+    {
+      "slug": "diagnostico-tecnico-por-que-e-pago",
+      "title": "Por Que o Diagnóstico Técnico é Pago? Entenda de Uma Vez",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "ssd_hdd",
+        "memoria_ram"
+      ],
+      "classification": "REUTILIZAVEL",
+      "bodyChars": 1949
+    },
+    {
+      "slug": "como-instalar-windows-11-pc-antigo",
+      "title": "Como Instalar Windows 11 em PC Antigo Sem TPM 2.0",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "memoria_ram"
+      ],
+      "classification": "REUTILIZAVEL",
+      "bodyChars": 2031
+    },
+    {
+      "slug": "windows-11-lento-como-resolver",
+      "title": "Windows 11 Lento? 10 Soluções Para Acelerar",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "ssd_hdd",
+        "memoria_ram",
+        "computador_lento",
+        "windows"
+      ],
+      "classification": "REUTILIZAVEL",
+      "bodyChars": 2317
+    },
+    {
+      "slug": "windows-11-vale-a-pena-atualizar",
+      "title": "Windows 11: Vale a Pena Atualizar?",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "backup"
+      ],
+      "classification": "REUTILIZAVEL",
+      "bodyChars": 1921
+    },
+    {
+      "slug": "office-365-guia-completo-empresas",
+      "title": "Office 365 Para Empresas: Guia Completo",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "ssd_hdd",
+        "backup"
+      ],
+      "classification": "REUTILIZAVEL",
+      "bodyChars": 1981
+    },
+    {
+      "slug": "office-365-vs-office-tradicional",
+      "title": "Office 365 vs Office Tradicional: Qual Escolher?",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "ssd_hdd",
+        "backup"
+      ],
+      "classification": "COMPLEMENTAR",
+      "bodyChars": 1780
+    },
+    {
+      "slug": "configurar-email-outlook-office-365",
+      "title": "Como Configurar Email Empresarial no Outlook 365",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "backup"
+      ],
+      "classification": "COMPLEMENTAR",
+      "bodyChars": 1771
+    },
+    {
+      "slug": "seguranca-digital-empresas-guia-2024",
+      "title": "Segurança Digital Para Empresas: Guia Essencial",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "ssd_hdd",
+        "backup"
+      ],
+      "classification": "REUTILIZAVEL",
+      "bodyChars": 2039
+    },
+    {
+      "slug": "ransomware-como-proteger-empresa",
+      "title": "Ransomware: Como Proteger Sua Empresa",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "recuperacao_dados",
+        "ssd_hdd",
+        "backup"
+      ],
+      "classification": "CONFLITANTE",
+      "bodyChars": 2030
+    },
+    {
+      "slug": "backup-nuvem-empresas-qual-escolher",
+      "title": "Backup na Nuvem Para Empresas: Qual Escolher?",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "backup"
+      ],
+      "classification": "REUTILIZAVEL",
+      "bodyChars": 2201
+    },
+    {
+      "slug": "como-trocar-pasta-termica-notebook",
+      "title": "Como Trocar a Pasta Térmica do Notebook: Guia Técnico Completo",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "recuperacao_dados"
+      ],
+      "classification": "CONFLITANTE",
+      "bodyChars": 5268
+    },
+    {
+      "slug": "como-clonar-hd-para-ssd",
+      "title": "Como Clonar HD Para SSD Sem Perder Dados: Procedimento Técnico",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "ssd_hdd",
+        "memoria_ram",
+        "windows",
+        "backup"
+      ],
+      "classification": "CONFLITANTE",
+      "bodyChars": 5059
+    },
+    {
+      "slug": "como-testar-fonte-de-alimentacao-pc",
+      "title": "Como Testar a Fonte de Alimentação do PC com Multímetro",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "travamentos"
+      ],
+      "classification": "CONFLITANTE",
+      "bodyChars": 4396
+    },
+    {
+      "slug": "como-limpar-notebook-por-dentro",
+      "title": "Como Limpar o Notebook Por Dentro: Desmontagem e Limpeza Profissional",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "memoria_ram",
+        "travamentos"
+      ],
+      "classification": "CONFLITANTE",
+      "bodyChars": 4366
+    },
+    {
+      "slug": "como-recuperar-dados-hd-defeituoso",
+      "title": "Como Recuperar Dados de HD Defeituoso: Métodos e Ferramentas",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "recuperacao_dados",
+        "ssd_hdd",
+        "travamentos",
+        "windows",
+        "backup"
+      ],
+      "classification": "CONFLITANTE",
+      "bodyChars": 4831
+    },
+    {
+      "slug": "como-diagnosticar-placa-mae-defeituosa",
+      "title": "Como Diagnosticar Placa-Mãe Defeituosa: Testes e Sinais",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "ssd_hdd",
+        "memoria_ram",
+        "travamentos"
+      ],
+      "classification": "REUTILIZAVEL",
+      "bodyChars": 5195
+    },
+    {
+      "slug": "como-instalar-segundo-ssd-notebook",
+      "title": "Como Instalar um Segundo SSD no Notebook (Caddy ou M.2)",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "ssd_hdd",
+        "memoria_ram",
+        "windows"
+      ],
+      "classification": "COMPLEMENTAR",
+      "bodyChars": 4283
+    },
+    {
+      "slug": "como-crimpar-cabo-de-rede-rj45",
+      "title": "Como Crimpar Cabo de Rede RJ45: Padrão T568A e T568B",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "computador_lento"
+      ],
+      "classification": "REUTILIZAVEL",
+      "bodyChars": 4885
+    },
+    {
+      "slug": "como-configurar-bios-uefi-corretamente",
+      "title": "Como Configurar BIOS/UEFI Corretamente: Guia Para Técnicos",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "ssd_hdd",
+        "memoria_ram",
+        "computador_lento",
+        "travamentos",
+        "windows"
+      ],
+      "classification": "REUTILIZAVEL",
+      "bodyChars": 5026
+    },
+    {
+      "slug": "como-montar-pc-do-zero-guia-completo",
+      "title": "Como Montar um PC do Zero: Guia Técnico Passo a Passo",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "ssd_hdd",
+        "memoria_ram"
+      ],
+      "classification": "REUTILIZAVEL",
+      "bodyChars": 5294
+    },
+    {
+      "slug": "como-instalar-linux-dual-boot-windows",
+      "title": "Como Instalar Linux em Dual Boot com Windows: Procedimento Seguro",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "ssd_hdd",
+        "memoria_ram",
+        "windows",
+        "backup"
+      ],
+      "classification": "OUT_OF_CORE",
+      "bodyChars": 4515
+    },
+    {
+      "slug": "como-configurar-backup-automatizado",
+      "title": "Como Configurar Backup Automatizado: Local e Nuvem",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "recuperacao_dados",
+        "ssd_hdd",
+        "backup"
+      ],
+      "classification": "REUTILIZAVEL",
+      "bodyChars": 4806
+    },
+    {
+      "slug": "preciso-de-um-para-tecnicos-informatica",
+      "title": "Preciso de Um Para Técnicos em Informática: Amplie Sua Atuação",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "recuperacao_dados",
+        "ssd_hdd",
+        "memoria_ram",
+        "windows",
+        "backup"
+      ],
+      "classification": "CONFLITANTE",
+      "bodyChars": 3945
+    },
+    {
+      "slug": "como-configurar-servidor-de-arquivos",
+      "title": "Como Configurar Servidor de Arquivos em Rede Local (Windows e Linux)",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "ssd_hdd",
+        "backup"
+      ],
+      "classification": "OUT_OF_CORE",
+      "bodyChars": 5120
+    },
+    {
+      "slug": "como-configurar-firewall-pfsense",
+      "title": "Como Configurar Firewall pfSense: Guia Completo Para Redes Empresariais",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "ssd_hdd",
+        "memoria_ram",
+        "backup"
+      ],
+      "classification": "REUTILIZAVEL",
+      "bodyChars": 8718
+    },
+    {
+      "slug": "como-configurar-active-directory",
+      "title": "Como Configurar Active Directory no Windows Server: Passo a Passo",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "ssd_hdd",
+        "memoria_ram",
+        "backup"
+      ],
+      "classification": "REUTILIZAVEL",
+      "bodyChars": 8790
+    },
+    {
+      "slug": "como-fazer-upgrade-ssd-nvme",
+      "title": "Como Fazer Upgrade Para SSD NVMe: Guia Técnico Completo",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "recuperacao_dados",
+        "ssd_hdd",
+        "memoria_ram",
+        "backup"
+      ],
+      "classification": "REUTILIZAVEL",
+      "bodyChars": 10059
+    },
+    {
+      "slug": "como-recuperar-dados-hd-com-defeito",
+      "title": "Como Recuperar Dados de HD Com Defeito: Procedimento Profissional",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "recuperacao_dados",
+        "ssd_hdd",
+        "memoria_ram",
+        "backup"
+      ],
+      "classification": "REUTILIZAVEL",
+      "bodyChars": 10091
+    },
+    {
+      "slug": "como-trocar-tela-notebook-passo-a-passo",
+      "title": "Como Trocar a Tela do Notebook: Passo a Passo Profissional",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "recuperacao_dados",
+        "ssd_hdd",
+        "memoria_ram",
+        "backup"
+      ],
+      "classification": "REUTILIZAVEL",
+      "bodyChars": 10062
+    },
+    {
+      "slug": "como-fazer-backup-completo-windows-11",
+      "title": "Como Fazer Backup Completo do Windows 11: Imagem do Sistema e Arquivos",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "recuperacao_dados",
+        "ssd_hdd",
+        "memoria_ram",
+        "windows",
+        "backup"
+      ],
+      "classification": "REUTILIZAVEL",
+      "bodyChars": 10093
+    },
+    {
+      "slug": "como-instalar-windows-11-do-zero",
+      "title": "Como preparar uma instalação limpa do Windows 11",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "recuperacao_dados",
+        "ssd_hdd",
+        "memoria_ram",
+        "windows",
+        "backup"
+      ],
+      "classification": "REUTILIZAVEL",
+      "bodyChars": 5383
+    },
+    {
+      "slug": "como-resolver-tela-azul-windows",
+      "title": "Como Resolver Tela Azul do Windows (BSOD): Diagnóstico e Solução",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "recuperacao_dados",
+        "ssd_hdd",
+        "memoria_ram",
+        "travamentos",
+        "backup"
+      ],
+      "classification": "REUTILIZAVEL",
+      "bodyChars": 10093
+    },
+    {
+      "slug": "como-fazer-overclock-cpu-com-seguranca",
+      "title": "Como Fazer Overclock de CPU com Segurança: Procedimento Técnico",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "recuperacao_dados",
+        "ssd_hdd",
+        "memoria_ram",
+        "backup"
+      ],
+      "classification": "REUTILIZAVEL",
+      "bodyChars": 10088
+    },
+    {
+      "slug": "como-montar-pc-gamer-2026",
+      "title": "Como Montar um PC Gamer em 2026: Guia Técnico Completo",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "recuperacao_dados",
+        "ssd_hdd",
+        "memoria_ram",
+        "backup"
+      ],
+      "classification": "REUTILIZAVEL",
+      "bodyChars": 10046
+    },
+    {
+      "slug": "como-criar-script-bash-iniciantes",
+      "title": "Como Criar Scripts Bash no Linux: Guia Para Iniciantes e Técnicos",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "ssd_hdd",
+        "windows",
+        "backup"
+      ],
+      "classification": "OUT_OF_CORE",
+      "bodyChars": 8695
+    },
+    {
+      "slug": "como-monitorar-servidor-linux",
+      "title": "Como Monitorar Servidor Linux: htop, Glances, Netdata e Prometheus",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "ssd_hdd",
+        "memoria_ram",
+        "windows",
+        "backup"
+      ],
+      "classification": "OUT_OF_CORE",
+      "bodyChars": 8692
+    },
+    {
+      "slug": "como-configurar-cron-jobs-linux",
+      "title": "Como Configurar Cron Jobs no Linux: Agendamento de Tarefas",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "ssd_hdd",
+        "windows",
+        "backup"
+      ],
+      "classification": "OUT_OF_CORE",
+      "bodyChars": 8689
+    },
+    {
+      "slug": "como-instalar-postgresql-linux",
+      "title": "Como Instalar e Configurar PostgreSQL no Linux: Guia Profissional",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "ssd_hdd",
+        "windows",
+        "backup"
+      ],
+      "classification": "OUT_OF_CORE",
+      "bodyChars": 8712
+    },
+    {
+      "slug": "como-usar-systemd-linux",
+      "title": "Como Usar systemd no Linux: Serviços, Logs e Boot Otimizado",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "ssd_hdd",
+        "windows",
+        "backup"
+      ],
+      "classification": "OUT_OF_CORE",
+      "bodyChars": 8673
+    },
+    {
+      "slug": "como-configurar-rede-linux-netplan",
+      "title": "Como Configurar Rede no Linux com Netplan: Guia Completo",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "ssd_hdd",
+        "windows",
+        "backup"
+      ],
+      "classification": "OUT_OF_CORE",
+      "bodyChars": 8691
+    },
+    {
+      "slug": "como-instalar-lamp-stack-ubuntu",
+      "title": "Como Instalar LAMP Stack no Ubuntu: Apache, MySQL e PHP",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "ssd_hdd",
+        "windows",
+        "backup"
+      ],
+      "classification": "REUTILIZAVEL",
+      "bodyChars": 8684
+    },
+    {
+      "slug": "como-usar-rsync-backup-linux",
+      "title": "Como Usar rsync Para Backup no Linux: Guia Definitivo",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "ssd_hdd",
+        "windows",
+        "backup"
+      ],
+      "classification": "OUT_OF_CORE",
+      "bodyChars": 8694
+    },
+    {
+      "slug": "como-configurar-firewall-ufw-linux",
+      "title": "Como Configurar Firewall UFW no Linux: Guia Definitivo",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "recuperacao_dados",
+        "backup"
+      ],
+      "classification": "OUT_OF_CORE",
+      "bodyChars": 10214
+    },
+    {
+      "slug": "como-proteger-rede-wifi-empresa",
+      "title": "Como Proteger a Rede Wi-Fi da Sua Empresa: Guia Técnico",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "recuperacao_dados",
+        "backup"
+      ],
+      "classification": "CONFLITANTE",
+      "bodyChars": 10221
+    },
+    {
+      "slug": "como-detectar-invasao-rede",
+      "title": "Como Detectar Invasão na Rede: IDS/IPS, Logs e Análise de Tráfego",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "recuperacao_dados",
+        "backup"
+      ],
+      "classification": "CONFLITANTE",
+      "bodyChars": 10235
+    },
+    {
+      "slug": "como-configurar-2fa-em-tudo",
+      "title": "Como Configurar 2FA (Autenticação de Dois Fatores) em Tudo",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "recuperacao_dados",
+        "backup"
+      ],
+      "classification": "CONFLITANTE",
+      "bodyChars": 10242
+    },
+    {
+      "slug": "melhores-antivirus-2026-comparativo",
+      "title": "Melhores Antivírus em 2026: Comparativo Real Para Casa e Empresa",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "recuperacao_dados",
+        "backup"
+      ],
+      "classification": "CONFLITANTE",
+      "bodyChars": 10219
+    },
+    {
+      "slug": "como-configurar-vlan-rede-corporativa",
+      "title": "Como Configurar VLAN em Rede Corporativa: Guia Profissional",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "recuperacao_dados",
+        "backup"
+      ],
+      "classification": "CONFLITANTE",
+      "bodyChars": 10228
+    },
+    {
+      "slug": "como-fazer-pentest-basico-rede",
+      "title": "Como Fazer Pentest Básico na Sua Rede: Ferramentas e Procedimento",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "recuperacao_dados",
+        "backup"
+      ],
+      "classification": "CONFLITANTE",
+      "bodyChars": 10234
+    },
+    {
+      "slug": "como-recuperar-conta-hackeada",
+      "title": "Como Recuperar Conta Hackeada: Procedimento de Emergência",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "recuperacao_dados",
+        "backup"
+      ],
+      "classification": "CONFLITANTE",
+      "bodyChars": 10214
+    },
+    {
+      "slug": "como-deixar-windows-11-mais-rapido-iniciantes",
+      "title": "Como Deixar o Windows 11 Mais Rápido em 2026: Guia Passo a Passo (Curitiba)",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "ssd_hdd",
+        "memoria_ram",
+        "computador_lento",
+        "travamentos"
+      ],
+      "classification": "REUTILIZAVEL",
+      "bodyChars": 2625
+    },
+    {
+      "slug": "como-fazer-backup-fotos-windows-iniciantes",
+      "title": "Como Fazer Backup de Fotos no Windows 11: 3 Métodos Seguros (Guia 2026)",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "ssd_hdd",
+        "backup"
+      ],
+      "classification": "REUTILIZAVEL",
+      "bodyChars": 2574
+    },
+    {
+      "slug": "como-organizar-arquivos-windows-iniciantes",
+      "title": "Como Organizar Arquivos no Windows 11: Método Simples Para Achar Tudo Rápido",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "backup"
+      ],
+      "classification": "COMPLEMENTAR",
+      "bodyChars": 2065
+    },
+    {
+      "slug": "como-atualizar-windows-corretamente",
+      "title": "Como Atualizar o Windows 11 Sem Travar: Guia Seguro 2026",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "ssd_hdd",
+        "travamentos"
+      ],
+      "classification": "REUTILIZAVEL",
+      "bodyChars": 1937
+    },
+    {
+      "slug": "como-recuperar-arquivos-apagados-windows",
+      "title": "Como Recuperar Arquivos Apagados no Windows 11: 3 Métodos Que Funcionam",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "recuperacao_dados",
+        "ssd_hdd",
+        "windows",
+        "backup"
+      ],
+      "classification": "REUTILIZAVEL",
+      "bodyChars": 2604
+    },
+    {
+      "slug": "como-criar-conta-usuario-windows-criancas",
+      "title": "Como Criar Conta de Usuário Para Crianças no Windows 11 (Controle Parental)",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "backup"
+      ],
+      "classification": "COMPLEMENTAR",
+      "bodyChars": 2319
+    },
+    {
+      "slug": "como-deixar-celular-android-mais-rapido",
+      "title": "Como Deixar o Celular Android Mais Rápido em 2026: 8 Ajustes Que Funcionam",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "ssd_hdd",
+        "travamentos",
+        "backup"
+      ],
+      "classification": "OUT_OF_CORE",
+      "bodyChars": 2675
+    },
+    {
+      "slug": "como-fazer-backup-celular-android",
+      "title": "Como Fazer Backup do Celular Android Completo: Fotos, Contatos e WhatsApp (2026)",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "ssd_hdd",
+        "backup"
+      ],
+      "classification": "OUT_OF_CORE",
+      "bodyChars": 2665
+    },
+    {
+      "slug": "como-usar-google-fotos-iniciantes",
+      "title": "Como Usar o Google Fotos em 2026: Guia Completo Para Iniciantes",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "ssd_hdd",
+        "backup"
+      ],
+      "classification": "REUTILIZAVEL",
+      "bodyChars": 2728
+    },
+    {
+      "slug": "como-recuperar-conta-google-bloqueada",
+      "title": "Como Recuperar Conta Google Bloqueada ou Esquecida: Guia Oficial 2026",
+      "source": "src/data/blogPostsContent.tsx",
+      "topics": [
+        "recuperacao_dados",
+        "backup"
+      ],
+      "classification": "REUTILIZAVEL",
+      "bodyChars": 2497
+    }
+  ]
+}
