@@ -1450,7 +1450,7 @@ const BASE_ROUTES = [
         "titulo": "Checklist antes de chamar o técnico",
         "paragrafos": [
           "Nenhum item exige abrir o equipamento: anotar quando o problema começou e o que mudou antes, testar outra tomada aterrada, desconectar periféricos, observar LEDs e ruídos, conferir o espaço livre do disco e notar se a lentidão aparece logo ou depois de alguns minutos.",
-          "O que evitar: abrir fonte, insistir em ligar equipamento que teve contato com líquido, ffechar valor conectores, instalar otimizadores baixados por anúncio e reinstalar o sistema com suspeita de disco falhando."
+          "O que evitar: abrir fonte, insistir em ligar equipamento que teve contato com líquido, forçar conectores, instalar otimizadores baixados por anúncio e reinstalar o sistema com suspeita de disco falhando."
         ]
       },
       {
@@ -1564,7 +1564,7 @@ const BASE_ROUTES = [
         "titulo": "O que você pode registrar antes do atendimento",
         "paragrafos": [
           "Fotografar o código de erro, registrar o que estava sendo feito, lembrar de instalações e atualizações recentes, observar aquecimento antes do reinício e contar quantas vezes a falha ocorre por dia.",
-          "O que não recomendamos: reinstalar o Windows por conta própria com suspeita de disco, aplicar \"correções de registro\" baixadas por anúncio e ffechar valor atualização de BIOS sem confirmar o modelo da placa."
+          "O que não recomendamos: reinstalar o Windows por conta própria com suspeita de disco, aplicar \"correções de registro\" baixadas por anúncio e forçar atualização de BIOS sem confirmar o modelo da placa."
         ]
       },
       {
@@ -1987,7 +1987,7 @@ const BASE_ROUTES = [
       "titulo": "Testes antes de comprar suprimento",
       "paragrafos": [
         "Cancele a fila e reinicie a impressora pela tomada, confira se a impressora padrão é o aparelho físico e não um dispositivo virtual de PDF, imprima a página de teste pelo painel e tente imprimir pelo celular na mesma rede.",
-        "O que não recomendamos: ffechar valor o carro de impressão com a mão, lavar cabeçote com produtos improvisados e puxar papel preso contra o sentido do mecanismo, o que costuma quebrar dentes de engrenagem."
+        "O que não recomendamos: forçar o carro de impressão com a mão, lavar cabeçote com produtos improvisados e puxar papel preso contra o sentido do mecanismo, o que costuma quebrar dentes de engrenagem."
       ]
     },
     {
@@ -2177,7 +2177,7 @@ const BASE_ROUTES = [
       "titulo": "Verificações seguras antes de qualquer tentativa",
       "paragrafos": [
         "Pare de abrir e fechar o equipamento, observe se a carcaça está estufando, verifique se a tela pisca ao movimentar a tampa e confira se a moldura descolou em algum canto. Todos esses passos são de observação e não exigem abrir o notebook.",
-        "O que não recomendamos: colar a carcaça, apertar parafusos com força em plástico já arrancado, ffechar valor a tampa até o fim do curso e transportar o notebook aberto."
+        "O que não recomendamos: colar a carcaça, apertar parafusos com força em plástico já arrancado, forçar a tampa até o fim do curso e transportar o notebook aberto."
       ]
     },
     {
@@ -2291,7 +2291,7 @@ const BASE_ROUTES = [
       "titulo": "Verificações seguras antes de comprar câmera externa",
       "paragrafos": [
         "Confira obturador físico sobre a lente, teste o aplicativo de câmera nativo, revise as permissões do sistema, feche programas de vídeo concorrentes e reinicie uma vez. Em câmera externa, troque de porta USB e teste em outro computador.",
-        "O que não recomendamos: instalar programas que prometem recuperar drivers automaticamente, ffechar valor a moldura da tela para chegar ao módulo e desativar o antivírus inteiro para testar a câmera."
+        "O que não recomendamos: instalar programas que prometem recuperar drivers automaticamente, forçar a moldura da tela para chegar ao módulo e desativar o antivírus inteiro para testar a câmera."
       ]
     },
     {
@@ -2543,7 +2543,7 @@ const BASE_ROUTES = [
       "titulo": "Verificações seguras antes de comprar outro mouse",
       "paragrafos": [
         "Teste o mouse em outra máquina, troque de porta USB preferindo as traseiras, troque a pilha em modelos sem fio, aproxime o receptor, limpe o sensor e teste sobre superfície fosca. Nenhum passo exige abrir equipamento.",
-        "O que não recomendamos: instalar programas que prometem consertar drivers automaticamente, ffechar valor o conector em porta com folga e abrir o mouse para mexer no switch sem experiência."
+        "O que não recomendamos: instalar programas que prometem consertar drivers automaticamente, forçar o conector em porta com folga e abrir o mouse para mexer no switch sem experiência."
       ]
     },
     {
@@ -2581,7 +2581,7 @@ const BASE_ROUTES = [
       "titulo": "Verificações seguras antes de trocar qualquer peça",
       "paragrafos": [
         "Confira o dispositivo de saída, abra o mixer de volume, teste um fone conhecido nas saídas frontal e traseira, teste a caixa em outro equipamento e verifique o gerenciador de dispositivos. Nenhum passo exige abrir o gabinete.",
-        "O que não recomendamos: instalar pacotes automáticos de driver baixados de sites genéricos, comprar caixa de som antes de testar a saída e ffechar valor o plugue em jack com folga."
+        "O que não recomendamos: instalar pacotes automáticos de driver baixados de sites genéricos, comprar caixa de som antes de testar a saída e forçar o plugue em jack com folga."
       ]
     },
     {

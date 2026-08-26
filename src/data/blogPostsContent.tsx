@@ -1686,7 +1686,7 @@ docker run -d --name db --network minha-rede postgres
 
         <h2>Causas possíveis, por grupo</h2>
         <h3>Armazenamento</h3>
-        <p>Um disco rígido mecânico (HD) antigo é uma das razões mais frequentes de lentidão geral. HDs também se desgastam e podem apresentar setores com falha, o que trava a leitura. Migrar para um SSD costuma trazer o ganho mais perceptível — mas isso <Link to="/blog/quando-trocar-hd-por-ssd" className="text-accent">precisa ser avaliado caso a caso</Link>.</p>
+        <p>Um disco rígido mecânico (HD) antigo é uma das razões mais frequentes de lentidão geral. HDs também se desgastam e podem apresentar setores com falha, o que trava a leitura. Migrar para um SSD costuma trazer o ganho mais perceptível — mas isso <Link to="/servicos/upgrade-ssd-ram" className="text-accent">precisa ser avaliado caso a caso</Link>.</p>
         <h3>Memória (RAM)</h3>
         <p>Pouca memória faz o sistema recorrer ao disco como memória virtual, e tudo fica arrastado, principalmente com várias abas ou programas abertos.</p>
         <h3>Software e inicialização</h3>
@@ -1694,7 +1694,7 @@ docker run -d --name db --network minha-rede postgres
         <h3>Temperatura</h3>
         <p>Quando o processador aquece demais, ele reduz a velocidade para se proteger. Poeira e ventilação obstruída são causas comuns de aquecimento.</p>
         <h3>Segurança</h3>
-        <p>Alguns programas maliciosos consomem processamento e rede em silêncio. Se a lentidão veio junto com comportamento estranho, vale <Link to="/blog/como-saber-se-pc-tem-virus-malware" className="text-accent">investigar sinais de vírus</Link> e considerar a <Link to="/servicos/remocao-de-virus" className="text-accent">remoção profissional</Link>.</p>
+        <p>Alguns programas maliciosos consomem processamento e rede em silêncio. Se a lentidão veio junto com comportamento estranho, vale <Link to="/servicos/remocao-de-virus" className="text-accent">investigar sinais de vírus</Link> e considerar a <Link to="/servicos/remocao-de-virus" className="text-accent">remoção profissional</Link>.</p>
         <h3>Sistema desgastado</h3>
         <p>Com o tempo, o sistema acumula configurações, restos de programas e arquivos que degradam o desempenho.</p>
         <h3>Hardware limitado para o uso atual</h3>
@@ -1810,7 +1810,7 @@ docker run -d --name db --network minha-rede postgres
           <ul className="mb-0">
             <li><Link to="/servicos/remocao-de-virus" className="text-accent">Remoção de vírus e malware</Link></li>
             <li><Link to="/servicos/recuperacao-de-dados" className="text-accent">Recuperação de dados</Link></li>
-            <li><Link to="/blog/backup-como-proteger-seus-arquivos" className="text-accent">Como manter um backup preventivo</Link></li>
+            <li><Link to="/seguranca-dos-dados" className="text-accent">Como manter um backup preventivo</Link></li>
           </ul>
         </div>
 
@@ -3631,10 +3631,10 @@ docker run -d --name db --network minha-rede postgres
 
         <p><strong>Leia também:</strong></p>
         <ul>
-          <li><Link to="/blog/preciso-de-um-plataforma-prestadores" className="text-accent">O que é o Preciso de Um?</Link></li>
-          <li><Link to="/blog/como-cadastrar-preciso-de-um" className="text-accent">Como se cadastrar passo a passo</Link></li>
-          <li><Link to="/blog/preciso-de-um-todos-os-ramos" className="text-accent">Quais ramos são aceitos?</Link></li>
-          <li><Link to="/blog/preciso-de-um-vagas-oportunidades" className="text-accent">Vagas e oportunidades na plataforma</Link></li>
+          <li><Link to="/seja-parceiro" className="text-accent">Conheça a rede de parceiros</Link></li>
+          <li><Link to="/seja-parceiro" className="text-accent">Como funciona para parceiros</Link></li>
+          <li><Link to="/seja-parceiro" className="text-accent">Áreas de atuação para parceiros</Link></li>
+          <li><Link to="/seja-parceiro" className="text-accent">Oportunidades de parceria</Link></li>
           <li><Link to="/seja-parceiro" className="text-accent">Seja parceiro da Técnico Curitiba</Link></li>
         </ul>
       </>
@@ -3721,8 +3721,8 @@ docker run -d --name db --network minha-rede postgres
 
         <p><strong>Leia também:</strong></p>
         <ul>
-          <li><Link to="/blog/como-limpar-notebook-por-dentro" className="text-accent">Como limpar o notebook por dentro</Link></li>
-          <li><Link to="/blog/notebook-superaquecendo-o-que-fazer" className="text-accent">Notebook superaquecendo: o que fazer?</Link></li>
+          <li><Link to="/servicos/manutencao-de-notebook" className="text-accent">Como limpar o notebook por dentro</Link></li>
+          <li><Link to="/problemas/notebook-superaquecendo" className="text-accent">Notebook superaquecendo: o que fazer?</Link></li>
           <li><Link to="/servicos/manutencao-de-computador" className="text-accent">Manutenção de computador e notebook</Link></li>
         </ul>
       </>
@@ -3805,8 +3805,8 @@ docker run -d --name db --network minha-rede postgres
 
         <p><strong>Leia também:</strong></p>
         <ul>
-          <li><Link to="/blog/quando-trocar-hd-por-ssd" className="text-accent">Quando vale trocar HD por SSD?</Link></li>
-          <li><Link to="/blog/como-instalar-segundo-ssd-notebook" className="text-accent">Como instalar segundo SSD no notebook</Link></li>
+          <li><Link to="/servicos/upgrade-ssd-ram" className="text-accent">Quando vale trocar HD por SSD?</Link></li>
+          <li><Link to="/servicos/upgrade-ssd-ram" className="text-accent">Como instalar segundo SSD no notebook</Link></li>
           <li><Link to="/servicos/upgrade-ssd-ram" className="text-accent">Upgrade de SSD e memória RAM</Link></li>
         </ul>
       </>
@@ -3888,7 +3888,7 @@ docker run -d --name db --network minha-rede postgres
 
         <p><strong>Leia também:</strong></p>
         <ul>
-          <li><Link to="/blog/como-diagnosticar-placa-mae-defeituosa" className="text-accent">Como diagnosticar placa-mãe defeituosa</Link></li>
+          <li><Link to="/servicos/conserto-placa" className="text-accent">Como diagnosticar placa-mãe defeituosa</Link></li>
           <li><Link to="/servicos/computador-nao-liga" className="text-accent">Computador não liga: causas e soluções</Link></li>
         </ul>
       </>
@@ -3947,7 +3947,7 @@ docker run -d --name db --network minha-rede postgres
         <p>Com o pincel antiestático, remova poeira acumulada sobre a placa-mãe, slots de RAM, conectores e ao redor dos capacitores. <strong>Nunca use aspirador de pó</strong> — a eletricidade estática pode danificar componentes.</p>
 
         <h3>7. Troca da Pasta Térmica (Opcional mas Recomendado)</h3>
-        <p>Se já abriu o notebook, aproveite para trocar a pasta térmica. Veja nosso <Link to="/blog/como-trocar-pasta-termica-notebook" className="text-accent">guia completo de troca de pasta térmica</Link>.</p>
+        <p>Se já abriu o notebook, aproveite para trocar a pasta térmica. Veja como a <Link to="/problemas/notebook-superaquecendo" className="text-accent">manutenção preventiva ajuda a controlar o aquecimento</Link>.</p>
 
         <h3>8. Remontagem</h3>
         <p>Reconecte a bateria, recoloque a tampa e aperte os parafusos. Ligue e verifique se o ventilador funciona normalmente e as temperaturas caíram.</p>
@@ -4043,7 +4043,7 @@ docker run -d --name db --network minha-rede postgres
 
         <p><strong>Leia também:</strong></p>
         <ul>
-          <li><Link to="/blog/backup-como-proteger-seus-arquivos" className="text-accent">Backup: como proteger seus arquivos</Link></li>
+          <li><Link to="/seguranca-dos-dados" className="text-accent">Backup: como proteger seus arquivos</Link></li>
           <li><Link to="/servicos/recuperacao-de-dados" className="text-accent">Recuperação de dados e backup</Link></li>
         </ul>
       </>
@@ -4132,7 +4132,7 @@ docker run -d --name db --network minha-rede postgres
 
         <p><strong>Leia também:</strong></p>
         <ul>
-          <li><Link to="/blog/wifi-lento-como-melhorar" className="text-accent">Wi-Fi lento: como melhorar o sinal</Link></li>
+          <li><Link to="/servicos/redes-e-wifi" className="text-accent">Wi-Fi lento: como melhorar o sinal</Link></li>
           <li><Link to="/servicos/redes-e-wifi" className="text-accent">Redes e Wi-Fi</Link></li>
           <li><Link to="/servicos/suporte-tecnico-empresarial" className="text-accent">Suporte técnico empresarial</Link></li>
         </ul>
@@ -4191,7 +4191,7 @@ docker run -d --name db --network minha-rede postgres
         </ul>
 
         <h3>3. Teste de Fonte</h3>
-        <p>Teste a fonte com multímetro (veja nosso <Link to="/blog/como-testar-fonte-de-alimentacao-pc" className="text-accent">guia de teste de fonte</Link>) ou substitua por uma fonte sabidamente boa.</p>
+        <p>Teste a fonte com multímetro apenas se tiver experiência e ferramenta adequada; em caso de dúvida, consulte a página sobre <Link to="/problemas/computador-nao-liga" className="text-accent">diagnóstico de computador que não liga</Link>.</p>
 
         <h3>4. Códigos de Bip (Beep Codes)</h3>
         <p>Se a placa tem speaker interno, os bips indicam o problema:</p>
@@ -4222,7 +4222,7 @@ docker run -d --name db --network minha-rede postgres
 
         <p><strong>Leia também:</strong></p>
         <ul>
-          <li><Link to="/blog/como-testar-fonte-de-alimentacao-pc" className="text-accent">Como testar a fonte de alimentação</Link></li>
+          <li><Link to="/problemas/computador-nao-liga" className="text-accent">Diagnóstico de fonte e alimentação</Link></li>
           <li><Link to="/servicos/conserto-placa" className="text-accent">Conserto de placa-mãe</Link></li>
           <li><Link to="/servicos/computador-nao-liga" className="text-accent">Computador não liga: causas</Link></li>
         </ul>
@@ -4303,8 +4303,8 @@ docker run -d --name db --network minha-rede postgres
 
         <p><strong>Leia também:</strong></p>
         <ul>
-          <li><Link to="/blog/como-clonar-hd-para-ssd" className="text-accent">Como clonar HD para SSD</Link></li>
-          <li><Link to="/blog/quando-trocar-hd-por-ssd" className="text-accent">Quando vale trocar HD por SSD?</Link></li>
+          <li><Link to="/servicos/upgrade-ssd-ram" className="text-accent">Como planejar a migração de HD para SSD</Link></li>
+          <li><Link to="/servicos/upgrade-ssd-ram" className="text-accent">Quando vale trocar HD por SSD?</Link></li>
           <li><Link to="/servicos/upgrade-ssd-ram" className="text-accent">Upgrade de SSD e memória RAM</Link></li>
         </ul>
       </>
@@ -4401,7 +4401,7 @@ docker run -d --name db --network minha-rede postgres
 
         <p><strong>Leia também:</strong></p>
         <ul>
-          <li><Link to="/blog/como-configurar-rede-wifi-empresarial" className="text-accent">Como configurar rede Wi-Fi empresarial</Link></li>
+          <li><Link to="/empresa-de-ti-curitiba" className="text-accent">Planejamento de rede Wi-Fi empresarial</Link></li>
           <li><Link to="/servicos/redes-e-wifi" className="text-accent">Redes e Wi-Fi</Link></li>
         </ul>
       </>
@@ -4487,8 +4487,8 @@ docker run -d --name db --network minha-rede postgres
 
         <p><strong>Leia também:</strong></p>
         <ul>
-          <li><Link to="/blog/como-diagnosticar-placa-mae-defeituosa" className="text-accent">Como diagnosticar placa-mãe defeituosa</Link></li>
-          <li><Link to="/blog/como-montar-pc-do-zero-guia-completo" className="text-accent">Como montar um PC do zero</Link></li>
+          <li><Link to="/servicos/conserto-placa" className="text-accent">Como diagnosticar placa-mãe defeituosa</Link></li>
+          <li><Link to="/servicos/montagem-de-pc" className="text-accent">Como montar um PC do zero</Link></li>
           <li><Link to="/servicos/computador-nao-liga" className="text-accent">Computador não liga: causas e soluções</Link></li>
         </ul>
       </>
@@ -4576,8 +4576,8 @@ docker run -d --name db --network minha-rede postgres
 
         <p><strong>Leia também:</strong></p>
         <ul>
-          <li><Link to="/blog/como-configurar-bios-uefi-corretamente" className="text-accent">Como configurar BIOS/UEFI corretamente</Link></li>
-          <li><Link to="/blog/erros-comuns-upgrade-computador" className="text-accent">5 erros comuns ao fazer upgrade</Link></li>
+          <li><Link to="/servicos/montagem-pc" className="text-accent">Configuração de BIOS/UEFI com segurança</Link></li>
+          <li><Link to="/servicos/upgrade-ssd-ram" className="text-accent">Cuidados antes de fazer upgrade</Link></li>
           <li><Link to="/servicos/montagem-pc" className="text-accent">Serviço de Montagem de PC</Link></li>
         </ul>
       </>
@@ -4746,8 +4746,8 @@ docker run -d --name db --network minha-rede postgres
 
         <p><strong>Leia também:</strong></p>
         <ul>
-          <li><Link to="/blog/backup-como-proteger-seus-arquivos" className="text-accent">Backup: como proteger seus arquivos</Link></li>
-          <li><Link to="/blog/backup-nuvem-empresas-qual-escolher" className="text-accent">Backup na nuvem para empresas</Link></li>
+          <li><Link to="/seguranca-dos-dados" className="text-accent">Backup: como proteger seus arquivos</Link></li>
+          <li><Link to="/servicos/backup-para-empresas" className="text-accent">Backup na nuvem para empresas</Link></li>
           <li><Link to="/servicos/recuperacao-de-dados" className="text-accent">Recuperação de dados e backup</Link></li>
         </ul>
       </>
@@ -4921,8 +4921,8 @@ docker run -d --name db --network minha-rede postgres
 
         <p><strong>Leia também:</strong></p>
         <ul>
-          <li><Link to="/blog/preciso-de-um-plataforma-prestadores" className="text-accent">O que é o Preciso de Um?</Link></li>
-          <li><Link to="/blog/como-cadastrar-preciso-de-um" className="text-accent">Como se cadastrar passo a passo</Link></li>
+          <li><Link to="/seja-parceiro" className="text-accent">Conheça a rede de parceiros</Link></li>
+          <li><Link to="/seja-parceiro" className="text-accent">Como funciona para parceiros</Link></li>
           <li><Link to="/seja-parceiro" className="text-accent">Seja parceiro da Técnico Curitiba</Link></li>
         </ul>
       </>

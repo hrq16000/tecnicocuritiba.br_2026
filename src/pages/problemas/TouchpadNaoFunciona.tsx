@@ -210,7 +210,7 @@ const TouchpadNaoFunciona = () => {
         secondaryImageKey="ferramentas"
         layout="duo"
         caption="Notebook aberto em bancada para inspeção do cabo flat e do módulo do touchpad"
-        secondaryCaption="Ferramental usado na abertura controlada, sem marcar o gabinete nem ffechar valor as travas"
+        secondaryCaption="Ferramental usado na abertura controlada, sem marcar o gabinete nem forçar as travas"
       />
 
       <main className="container mx-auto max-w-4xl px-4 py-12">

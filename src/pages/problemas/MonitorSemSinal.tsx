@@ -295,7 +295,7 @@ const MonitorSemSinal = () => {
             ))}
           </ol>
           <p className="mt-4 text-sm text-muted-foreground">
-            O que não recomendamos em nenhuma hipótese: abrir a carcaça do monitor, ffechar valor conector com pino torto e
+            O que não recomendamos em nenhuma hipótese: abrir a carcaça do monitor, forçar o conector com pino torto e
             trocar placa de vídeo por palpite antes do teste cruzado.
           </p>
         </section>

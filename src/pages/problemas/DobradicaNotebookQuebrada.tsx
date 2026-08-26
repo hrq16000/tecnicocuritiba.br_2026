@@ -299,7 +299,7 @@ const DobradicaNotebookQuebrada = () => {
             ))}
           </ol>
           <p className="mt-4 text-sm text-muted-foreground">
-            O que não recomendamos: colar a carcaça, apertar parafusos com força em plástico já arrancado, ffechar valor a
+            O que não recomendamos: colar a carcaça, apertar parafusos com força em plástico já arrancado, forçar a
             tampa até o fim do curso e continuar usando o notebook aberto quando a tela pisca ao movimentar.
           </p>
         </section>

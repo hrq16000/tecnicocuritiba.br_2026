@@ -295,7 +295,7 @@ const WebcamNaoFunciona = () => {
             ))}
           </ol>
           <p className="mt-4 text-sm text-muted-foreground">
-            O que não recomendamos: instalar programas que prometem recuperar drivers automaticamente, ffechar valor a
+            O que não recomendamos: instalar programas que prometem recuperar drivers automaticamente, forçar a
             moldura da tela para chegar ao módulo e desativar o antivírus inteiro para testar a câmera.
           </p>
         </section>

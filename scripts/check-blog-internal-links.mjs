@@ -109,7 +109,7 @@ for (const file of fontes) {
   for (const re of padroes) {
     for (const m of src.matchAll(re)) {
       const href = m[1].split(/[?#]/)[0].replace(/\/+$/, "") || "/";
-      if (href.includes("${") || href.includes("{")) continue; // caminho dinâmico: validado em runtime
+      if (href.includes("${") || href.includes("{") || href.includes("$")) continue; // caminho dinâmico: validado em runtime
       const linha = src.slice(0, m.index).split("\n").length;
       const dono = acervo ? donoDoTrecho(src, m.index) : null;
       const servido = !acervo || (dono !== null && aprovados.has(dono));
