@@ -19,6 +19,7 @@ import { MODALIDADES_ATENDIMENTO } from "@/lib/cidadesData";
 import { servicoByPath, type BairroLocalData } from "@/lib/bairrosData";
 import { SCHEMA_SLOTS, SLOT_PRIORITY, useJsonLdSlot } from "@/lib/jsonLdSlots";
 import { bairroPhotos, bairroIndexavel } from "@/lib/bairroPhotos";
+import { BairroInterlinkLocal } from "@/components/areas/BairroInterlinkLocal";
 
 const CTA_CLASS =
   "inline-flex min-h-14 items-center justify-center gap-2 rounded-lg bg-accent px-7 text-base font-bold text-accent-foreground shadow-[0_14px_34px_-10px_hsl(var(--accent)/0.6)] transition-transform hover:scale-[1.02]";
@@ -209,6 +210,9 @@ export const BairroLocalLayout = ({ data }: { data: BairroLocalData }) => {
             </div>
           </div>
         </section>
+
+        {/* Malha local: bairro → serviços, vizinhança e diretório regional. */}
+        <BairroInterlinkLocal slug={data.slug} nome={data.nome} />
 
         {/* Quando no local × quando bancada */}
         <section className="cv-section py-12 md:py-16">
