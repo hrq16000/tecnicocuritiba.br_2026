@@ -288,6 +288,41 @@ const M = {
       },
     ],
   },
+
+  upgradeSsdRam: {
+    tocExtra: [
+      { id: "ssd-ram-decidir", label: "SSD, RAM e o gargalo real" },
+      { id: "migracao-dados", label: "Dados antes da migração" },
+    ],
+    secoes: [
+      {
+        kind: "matriz",
+        id: "ssd-ram-decidir",
+        titulo: "SSD, RAM e armazenamento: o que cada sinal pode indicar",
+        colunas: ["Comportamento observado", "Hipóteses a avaliar", "Próximo passo seguro"],
+        linhas: [
+          ["Demora para ligar e abrir arquivos", "Armazenamento lento, pouco espaço ou sistema", "Verificar espaço e saúde do armazenamento sem apagar dados"],
+          ["Trava com muitos programas ou abas", "Uso alto de RAM, software pesado ou CPU", "Observar quais programas estavam abertos e a memória em uso"],
+          ["Lentidão que piora com calor", "Temperatura e ventilação", "Evitar atribuir o sintoma ao SSD ou à RAM sem avaliação"],
+          ["Erros de leitura, arquivos inacessíveis ou disco que some", "Falha do armazenamento ou conexão", "Priorizar cópia e parar mudanças que gravem na unidade"],
+        ],
+        nota: "A tabela organiza hipóteses; compatibilidade e benefício só são definidos depois de avaliar o equipamento e o uso real.",
+      },
+      {
+        kind: "fluxo",
+        id: "migracao-dados",
+        titulo: "Antes de migrar para SSD ou ampliar a memória",
+        passos: [
+          "Mapear arquivos, acessos e programas que precisam continuar disponíveis",
+          "Verificar se há uma cópia independente dos dados importantes",
+          "Confirmar interface, capacidade suportada e compatibilidade do modelo",
+          "Avaliar o estado do armazenamento atual antes de qualquer clonagem",
+          "Migrar ou instalar conforme o cenário aprovado e testar a inicialização",
+        ],
+        nota: "Migração não substitui backup. Se a unidade atual apresenta falhas, preservar os dados vem antes de tentar acelerar o computador.",
+      },
+    ],
+  },
 };
 
 /** Módulos por path de serviço já existente (nunca cria rota). */
@@ -296,6 +331,7 @@ export const MODULOS_EDITORIAIS = {
   "/servicos/manutencao-de-notebook": M.manutencaoNotebook,
   "/servicos/formatacao": M.formatacao,
   "/servicos/recuperacao-de-dados": M.recuperacaoDados,
+  "/servicos/upgrade-ssd-ram": M.upgradeSsdRam,
 };
 
 export const MODULOS_EDITORIAIS_PATHS = Object.keys(MODULOS_EDITORIAIS);

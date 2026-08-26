@@ -25,7 +25,7 @@ Os melhores ganhos não estão em ampliar textos locais. Estão nas intenções 
 
 ## Publicação
 
-Publicados: **0**. FREEZE V2: **PASS**. D14: **LOCKED**.
+Após autorização explícita, houve promoção seletiva em URLs já existentes: módulo de decisão para `/servicos/upgrade-ssd-ram` e correções de precisão em `/problemas/hd-nao-reconhecido`. Não foram criadas URLs, nem alterados sitemap, `lastmod` ou IndexNow.
 
 ## ONDA P0.2 — DADOS / SSD / RAM
 
@@ -35,7 +35,7 @@ Publicados: **0**. FREEZE V2: **PASS**. D14: **LOCKED**.
 - Information Gain médio antes: **2,4/5**; depois: **4,3/5**.
 - Safety critical contradictions: **1**; ela bloqueia promoção até revisão editorial específica.
 - Duplicações evitadas: **2** intenções registradas apenas como candidatas futuras, sem URL nova.
-- Publicados: **0** URLs e **0** alterações de HTML público.
+- Publicados: **0** URLs novas; **2** superfícies públicas existentes receberam melhoria editorial controlada.
 
 ### Backlog recomendado para a próxima onda
 

@@ -26,11 +26,11 @@ const WA_MESSAGE =
 const SINTOMAS = [
   {
     titulo: "O disco some da BIOS",
-    desc: "Se o equipamento não enxerga a unidade antes mesmo do sistema carregar, o problema é físico ou de conexão. Nenhum programa de recuperação instalado no Windows resolve esse cenário.",
+    desc: "Se o equipamento não enxerga a unidade antes mesmo do sistema carregar, conexão, interface ou a própria unidade entram na avaliação. Programas instalados no Windows não resolvem essa etapa de reconhecimento.",
   },
   {
     titulo: "Aparece na BIOS, mas o Windows não abre",
-    desc: "Costuma ser tabela de partição corrompida ou setor de inicialização danificado. Os arquivos normalmente ainda existem e a leitura em outro equipamento confirma isso.",
+    desc: "Pode envolver tabela de partição, inicialização ou leitura do armazenamento. A presença na BIOS não confirma que os arquivos estejam acessíveis; ela apenas orienta a próxima avaliação.",
   },
   {
     titulo: "Pede formatação ao conectar",
@@ -56,7 +56,7 @@ const CAUSAS = [
   "Tabela de partição corrompida após desligamento abrupto",
   "Setores defeituosos que travam a leitura do início do disco",
   "Falha mecânica em disco rígido, com cabeça de leitura comprometida",
-  "Controladora do SSD queimada por pico de energia",
+  "Falha de controladora do SSD ou efeito de instabilidade elétrica",
   "Alimentação insuficiente em gaveta externa sem fonte própria",
   "Desgaste natural de disco com muitos anos de uso contínuo",
 ];
