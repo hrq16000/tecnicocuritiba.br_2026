@@ -1,0 +1,32 @@
+{
+  "buildCycles": "CLOSED",
+  "editorialExpansion": "CLOSED",
+  "nationalContentGraph": "STABLE",
+  "measurementMode": "ACTIVE",
+  "externalAuthorityPhase": "READY",
+  "newPublicUrlsPlanned": 0,
+  "actionableContentGaps": 0,
+  "defaultDecision": "NO_CHANGE_UNTIL_EVIDENCE",
+  "checks": {
+    "corpus_curated": {
+      "status": "PASS",
+      "detail": "130 URLs curadas"
+    },
+    "priority_owners": {
+      "status": "PASS",
+      "detail": "10/10 owners live"
+    },
+    "no_actionable_gaps": {
+      "status": "PASS",
+      "detail": "0 gaps acionáveis"
+    },
+    "no_new_urls": {
+      "status": "PASS",
+      "detail": "nenhuma nova URL planejada"
+    },
+    "national_graph": {
+      "status": "PASS",
+      "detail": "grafo nacional estável"
+    }
+  }
+}

@@ -18,7 +18,7 @@ import { readFileSync, existsSync, readdirSync } from "node:fs";
 import { join } from "node:path";
 
 const DIST = process.argv[2] && !process.argv[2].startsWith("--") ? process.argv[2] : "dist";
-const ROUTER = "src/LegacyApp.tsx";
+const ROUTER = existsSync("src/LegacyApp.tsx") ? "src/LegacyApp.tsx" : "src/routeTree.gen.ts";
 const MOTHER = "/tecnico-informatica-curitiba";
 const BASE = "https://tecnico.curitiba.br";
 const SITEMAPS = ["public/sitemap-bairros.xml", "public/sitemap-regioes.xml"];
@@ -39,6 +39,9 @@ for (const m of router.matchAll(/<Route\s+path="([^"]+)"\s+element=\{([^}]*)\}/g
   const [, path, element] = m;
   if (/<Navigate\b/.test(element)) redirectRoutes.add(path);
   else canonicalRoutes.add(path);
+}
+if (!canonicalRoutes.size && ROUTER.endsWith("routeTree.gen.ts")) {
+  for (const m of router.matchAll(/path:\s*'([^']+)'/g)) canonicalRoutes.add(m[1]);
 }
 const dynamicRoutes = [...canonicalRoutes].filter((r) => r.includes(":"));
 const isCanonical = (p) =>
@@ -72,11 +75,17 @@ for (const f of SITEMAPS) {
 }
 notes.push(`páginas locais indexáveis: ${localPaths.length}`);
 
-const IGNORE = /\.(png|jpe?g|webp|svg|css|js|json|xml|txt|ico|woff2?)$/i;
+const IGNORE = /\.(png|jpe?g|webp|svg|css|js|json|xml|txt|pdf|ico|woff2?)$/i;
 
 function linksOf(path) {
-  const file = join(DIST, path.replace(/^\//, ""), "index.html");
-  if (!existsSync(file)) return null;
+  // TanStack/Nitro builds emit the static client tree under dist/client;
+  // retain compatibility with callers that provide a flat dist directory.
+  const candidates = [
+    join(DIST, path.replace(/^\//, ""), "index.html"),
+    join(DIST, "client", path.replace(/^\//, ""), "index.html"),
+  ];
+  const file = candidates.find((candidate) => existsSync(candidate));
+  if (!file) return null;
   const html = readFileSync(file, "utf8");
   const body = html.slice(html.indexOf("<body"));
   const set = new Set();

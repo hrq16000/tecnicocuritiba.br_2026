@@ -19,7 +19,7 @@
 import { readFileSync, existsSync, readdirSync } from "node:fs";
 import { join } from "node:path";
 
-const ROUTER = "src/LegacyApp.tsx";
+const ROUTER = existsSync("src/LegacyApp.tsx") ? "src/LegacyApp.tsx" : "src/routeTree.gen.ts";
 const SITEMAPS = ["public/sitemap-bairros.xml", "public/sitemap-regioes.xml", "public/sitemap-main.xml"];
 const MOTHER = "/tecnico-informatica-curitiba";
 const BASE = "https://tecnico.curitiba.br";
@@ -36,6 +36,9 @@ for (const m of router.matchAll(/<Route\s+path="([^"]+)"\s+element=\{([^}]*)\}/g
   const [, path, element] = m;
   if (/<Navigate\b/.test(element)) redirectRoutes.add(path);
   else canonicalRoutes.add(path);
+}
+if (!canonicalRoutes.size && ROUTER.endsWith("routeTree.gen.ts")) {
+  for (const m of router.matchAll(/path:\s*'([^']+)'/g)) canonicalRoutes.add(m[1]);
 }
 notes.push(`rotas canônicas: ${canonicalRoutes.size} · redirects: ${redirectRoutes.size}`);
 
