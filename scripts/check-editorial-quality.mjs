@@ -29,6 +29,13 @@ const UNSAFE = [
   /\binternet lenta\b.{0,35}\b(?:alguém está usando|provedor está reduzindo)\b/i,
   /\bmesh\b.{0,25}\b(?:qualquer problema|sempre resolve|solução universal)\b/i,
   /\bsincroniza(?:ção|r).{0,35}\b(?:é|como)\s+backup\s+(?:completo|total)\b/i,
+  /\b(?:coloque|instale|troque)\s+(?:um\s+)?ssd.{0,45}\b(?:ficará|vai ficar|deixa).{0,20}\brápid[oa]\b/i,
+  /\b8\s*gb\b.{0,35}\b(?:suficiente|serve)\s+para\s+qualquer\b/i,
+  /\btrocar\s+(?:a\s+)?pasta térmica.{0,35}\bresolve\b/i,
+  /\blimpeza.{0,35}\b(?:deve ser feita|faça)\s+a\s+cada\s+(?:6|seis)\s+meses\b/i,
+  /\bformata(?:ção|r).{0,35}\b(?:como novo|igual a novo)\b/i,
+  /\bcomputadores?\s+com\s+mais\s+de\s+5\s+anos.{0,35}\b(?:devem|precisam)\s+ser\s+troca/i,
+  /\bmais\s+ram.{0,35}\b(?:aumenta|melhora)\s+a\s+velocidade\s+do\s+processador\b/i,
 ];
 
 function unsafeReasons(body) {

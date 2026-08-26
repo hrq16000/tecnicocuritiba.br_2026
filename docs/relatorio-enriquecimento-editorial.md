@@ -87,3 +87,22 @@ Artefatos: `reports/p0-network-backup-coverage.json`, `reports/editorial-content
 ### Freeze P0.4
 
 `PUBLIC_DRAFTS_PROMOTED = 0` · `PUBLIC_HTML_DIFF = 0` · `PUBLIC_LINK_DIFF = 0` · `SITEMAP_DIFF = 0` · `LASTMOD_DIFF = 0` · `INDEXNOW = 0` · `D14 = LOCKED`.
+
+## ONDA P0.5 — MANUTENÇÃO / UPGRADES / DECISÃO
+
+- Estado P0.4 verificado: **PASS** nos gates editoriais, técnicos, ondas e JSON.
+- Conteúdos auditados: **159** artigos auxiliares, drafts P0 e owners curados.
+- Intenções analisadas: **7**; manutenção preventiva, limpeza/refrigeração, gargalo SSD/RAM, SSD, RAM, equipamento antigo e reparar/atualizar/substituir.
+- Drafts criados: **6**; o draft combinado de SSD/RAM foi preservado como owner existente.
+- Drafts acumulados: **29**.
+- Information Gain médio dos novos: **2,3/5 → 4,6/5**.
+- Contradições críticas: **0 novas**.
+- Claims perigosos bloqueados: **7** novas regras no quality gate, com fixtures negativos.
+- Duplicatas evitadas: **46** auxiliares mantidos fora de promoção automática.
+- NO_MORE_CONTENT_NEEDED: **SSD/RAM combinado** (owner já suficiente para esta etapa).
+- Drafts READY: **0**; NEEDS_REVIEW: **6**.
+- Publicados: **0**.
+
+### Freeze P0.5
+
+`PUBLIC_DRAFTS_PROMOTED = 0` · `PUBLIC_HTML_DIFF = 0` · `PUBLIC_LINK_DIFF = 0` · `SITEMAP_DIFF = 0` · `LASTMOD_DIFF = 0` · `PUBLIC_SCHEMA_DIFF = 0` · `INDEXNOW = 0` · `D14 = LOCKED`.

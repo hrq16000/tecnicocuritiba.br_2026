@@ -10,5 +10,8 @@
 | Segurança | ADEQUATE | Malware e segurança Wi-Fi são responsáveis; falta prevenção organizada. |
 | Diagnóstico | STRONG | Árvores, evidência observável e ações seguras são o eixo. |
 | Prevenção | WEAK | Ainda não há pilar dedicado de manutenção e redundância. |
+| Manutenção | ADEQUATE | P0.5 criou owners de prevenção, limpeza e refrigeração; promoção ainda bloqueada. |
+| Upgrades | STRONG | SSD/RAM, compatibilidade e limites têm cobertura em drafts e serviço existente. |
+| Decisão | ADEQUATE | Reparar, atualizar ou substituir foi estruturado; falta validação com casos reais. |
 
 Mede conhecimento útil e consistência, não quantidade de páginas ou keywords.
