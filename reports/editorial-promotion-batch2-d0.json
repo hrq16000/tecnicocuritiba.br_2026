@@ -1,0 +1,99 @@
+{
+  "release_id": "EDITORIAL_RELEASE_BATCH_2",
+  "status": "PUBLISHED_GOVERNANCE_RELEASE",
+  "owners": [
+    {
+      "url": "/problemas/notebook-desligando-sozinho",
+      "source_file": "src/pages/problemas/NotebookDesligandoSozinho.tsx",
+      "source_draft": "docs/staging-editorial/drafts/notebook-desligando-sozinho.md",
+      "content_hash": "e1dbd3732427f4bfc42c08418dae4cc121a042685de410b39f4db4e3375d5966",
+      "information_gain": {
+        "before": 2,
+        "after": 5
+      },
+      "first_page_readiness": 100,
+      "release_status": "PROMOTED_EXISTING_OWNER",
+      "http": 200,
+      "h1_count": 1,
+      "indexability": "preserve_existing",
+      "new_public_url": false
+    },
+    {
+      "url": "/problemas/notebook-superaquecendo",
+      "source_file": "src/pages/problemas/NotebookSuperaquecendo.tsx",
+      "source_draft": "docs/staging-editorial/drafts/notebook-superaquecendo.md",
+      "content_hash": "e92bf7bd14aeadbc8ed428fa2d8484d26e3bb373893f2870de8ad94fae964ec7",
+      "information_gain": {
+        "before": 2,
+        "after": 5
+      },
+      "first_page_readiness": 100,
+      "release_status": "PROMOTED_EXISTING_OWNER",
+      "http": 200,
+      "h1_count": 1,
+      "indexability": "preserve_existing",
+      "new_public_url": false
+    },
+    {
+      "url": "/problemas/hd-nao-reconhecido",
+      "source_file": "src/pages/problemas/HdNaoReconhecido.tsx",
+      "source_draft": "docs/staging-editorial/drafts/hdd-sinais-de-falha.md",
+      "content_hash": "a6ea3323e04346309c223a9fefe7ced47089192333123f643371fb8baa28c813",
+      "information_gain": {
+        "before": 2,
+        "after": 4
+      },
+      "first_page_readiness": 100,
+      "release_status": "PROMOTED_EXISTING_OWNER",
+      "http": 200,
+      "h1_count": 1,
+      "indexability": "preserve_existing",
+      "new_public_url": false
+    },
+    {
+      "url": "/problemas/windows-nao-inicia",
+      "source_file": "src/pages/problemas/WindowsNaoInicia.tsx",
+      "source_draft": "docs/staging-editorial/drafts/windows-nao-inicia-diagnostico.md",
+      "content_hash": "ab7ea59b478744203510c8007671d98f4e5ac3d49f11db0297c45e0d7d231da1",
+      "information_gain": {
+        "before": 3,
+        "after": 5
+      },
+      "first_page_readiness": 100,
+      "release_status": "PROMOTED_EXISTING_OWNER",
+      "http": 200,
+      "h1_count": 1,
+      "indexability": "preserve_existing",
+      "new_public_url": false
+    },
+    {
+      "url": "/servicos/backup-para-empresas",
+      "source_file": "src/routes/servicos.backup-para-empresas.tsx",
+      "source_draft": "docs/staging-editorial/drafts/backup-pequenas-empresas.md",
+      "content_hash": "f4c24d8cfc47dc2647238f00a219549d8a9148c511980ba535a026fcd05d0fc9",
+      "information_gain": {
+        "before": 3,
+        "after": 5
+      },
+      "first_page_readiness": 100,
+      "release_status": "PROMOTED_EXISTING_OWNER",
+      "http": 200,
+      "h1_count": 1,
+      "indexability": "preserve_existing",
+      "new_public_url": false
+    }
+  ],
+  "gates": {
+    "editorial_quality": "PASS",
+    "promotion_readiness": "PASS",
+    "live_http_h1": "PASS",
+    "new_urls": 0,
+    "indexnow_eligible": 0,
+    "indexnow_submitted": 0
+  },
+  "observability": {
+    "gsc": "NOT_COLLECTED",
+    "bing": "NOT_COLLECTED",
+    "d14": "HISTORICAL_ONLY"
+  }
+}

@@ -55,6 +55,7 @@
     "report:precanary-readiness": "node scripts/precanary-readiness.mjs",
     "editorial:promote-canary": "node scripts/editorial-promote-canary.mjs",
     "editorial:release-batch1": "node scripts/editorial-release-batch1.mjs",
+    "editorial:release-batch2": "node scripts/editorial-release-batch2.mjs",
     "check:editorial-pilot": "node scripts/check-editorial-pilot.mjs",
     "check:editorial-technical-review": "node scripts/check-editorial-technical-review.mjs",
     "check:ficha-comercial": "node scripts/check-ficha-comercial.mjs",
