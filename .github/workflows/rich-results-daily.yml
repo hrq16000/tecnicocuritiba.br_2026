@@ -45,22 +45,39 @@ jobs:
             reports/crawl-metrics*.json
             reports/crawl-metrics.md
 
-      - name: Abrir issue em queda de Rich Results
+      - name: Abrir/atualizar issue em alerta de Rich Results
         if: steps.rich.outcome == 'failure'
         uses: actions/github-script@v7
         with:
           script: |
             const fs = require('fs');
-            const corpo = fs.existsSync('reports/rich-results.md')
+            const report = fs.existsSync('reports/rich-results.json')
+              ? JSON.parse(fs.readFileSync('reports/rich-results.json', 'utf8'))
+              : null;
+            const linhas = (report?.results || []).flatMap((row) =>
+              (row.detalhes || []).filter((d) => d.comErro || d.comAviso || d.status !== 'ok').map((d) => {
+                const sev = d.comErro ? 'ERROR' : d.comAviso ? 'WARNING' : 'REGRESSÃO';
+                const url = `https://tecnico.curitiba.br${row.path}`;
+                const diff = d.diff ? `antes=${d.diff.detectados.antes ?? '—'} depois=${d.diff.detectados.depois}; erros=${d.diff.erros.antes ?? '—'}→${d.diff.erros.depois}; avisos=${d.diff.avisos.antes ?? '—'}→${d.diff.avisos.depois}` : 'diff indisponível';
+                return `- **${sev}** [${d.schema}](${url}) — ${diff}`;
+              })
+            );
+            const corpo = [
+              `Execução: ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`,
+              `Artefato: ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}#artifacts`,
+              '',
+              '## Alertas por URL e schema',
+              linhas.join('\n') || 'Relatório sem linhas detalhadas.',
+              '',
+              fs.existsSync('reports/rich-results.md')
               ? fs.readFileSync('reports/rich-results.md', 'utf8').slice(0, 60000)
-              : 'Relatório indisponível.';
-            await github.rest.issues.create({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              title: `Queda de Rich Results detectada (${new Date().toISOString().slice(0, 10)})`,
-              body: corpo,
-              labels: ['seo', 'rich-results'],
-            });
+              : 'Relatório indisponível.',
+            ].join('\n');
+            const titulo = 'Alerta de Rich Results — ERROR/WARNING';
+            const { data: abertas } = await github.rest.issues.listForRepo({ ...context.repo, state: 'open', labels: 'seo,rich-results' });
+            const existente = abertas.find((i) => i.title === titulo);
+            if (existente) await github.rest.issues.createComment({ ...context.repo, issue_number: existente.number, body: corpo });
+            else await github.rest.issues.create({ ...context.repo, title: titulo, body: corpo, labels: ['seo', 'rich-results'] });
 
       - name: Alerta no Slack
         if: steps.rich.outcome == 'failure' && env.SLACK_WEBHOOK_URL != ''

@@ -55,6 +55,7 @@ const antesPorPath = new Map((anterior?.results ?? []).map((r) => [r.path, r]));
 const results = [];
 const quedas = [];
 const erros = [];
+const avisos = [];
 
 for (const page of COMERCIAL_ONDA2) {
   const url = `${BASE_URL}${page.path}`;
@@ -86,7 +87,14 @@ for (const page of COMERCIAL_ONDA2) {
       quedas.push(`${page.path} · ${schema}: ${previo?.detectados ?? 0} → ${detectados}`);
     }
     if (atual?.comErro) quedas.push(`${page.path} · ${schema}: ${atual.comErro} item(ns) com ERROR`);
-    return { schema, detectados, comErro: atual?.comErro ?? 0, comAviso: atual?.comAviso ?? 0, status };
+    if (atual?.comAviso) avisos.push(`${page.path} · ${schema}: ${atual.comAviso} item(ns) com WARNING`);
+    const diff = {
+      detectados: { antes: previo?.detectados ?? null, depois: detectados },
+      erros: { antes: previo?.comErro ?? null, depois: atual?.comErro ?? 0 },
+      avisos: { antes: previo?.comAviso ?? null, depois: atual?.comAviso ?? 0 },
+      status,
+    };
+    return { schema, detectados, comErro: atual?.comErro ?? 0, comAviso: atual?.comAviso ?? 0, status, diff };
   });
 
   results.push(row);
@@ -99,6 +107,7 @@ const report = {
   total: results.length,
   comTodosOsSchemas: cobertos,
   quedas,
+  avisos,
   erros,
   results,
 };
@@ -124,7 +133,8 @@ writeFileSync(
       return `| ${r.path} | ${r.richVerdict ?? "—"} | ${cel("FAQPage")} | ${cel("LocalBusiness")} | ${cel("Service")} | ${r.error ?? "-"} |`;
     }),
     "",
-    quedas.length ? `## ⚠️ Quedas detectadas\n\n${quedas.map((q) => `- ${q}`).join("\n")}` : "Sem quedas em relação ao baseline.",
+    quedas.length ? `## ⚠️ Quedas/ERROR detectados\n\n${quedas.map((q) => `- ${q}`).join("\n")}` : "Sem quedas ou ERROR em relação ao baseline.",
+    avisos.length ? `\n## ⚠️ WARNING detectados\n\n${avisos.map((q) => `- ${q}`).join("\n")}` : "",
     "",
   ].join("\n"),
 );
@@ -133,4 +143,4 @@ if (SAVE) writeFileSync(BASELINE, `${JSON.stringify(report, null, 2)}\n`);
 
 console.log(`rich results: ${cobertos}/${results.length} completos · ${quedas.length} quedas · ${erros.length} erros`);
 for (const q of quedas) console.log(`  QUEDA ${q}`);
-if (ALERT && quedas.length) process.exit(1);
+if (ALERT && (quedas.length || avisos.length || erros.length)) process.exit(1);
