@@ -1,0 +1,14 @@
+{
+  "status": "RESOLVED",
+  "failedCommand": "tsx scripts/dump-dynamic-slugs.ts dist/dynamic-slugs.json",
+  "failedStage": "postbuild",
+  "observedError": "uv_os_get_passwd returned ENOMEM",
+  "rootCause": ["PROCESS_OVERHEAD", "LARGE_IMPORT_GRAPH", "ENVIRONMENT_LIMIT"],
+  "evidence": "The TypeScript utility imported brandsData and problemaPagesData through tsx, initializing the application module graph after all heavy SSR audits had completed.",
+  "correction": "Replaced the tsx subprocess with dump-dynamic-slugs.mjs, which extracts the same slug fields directly from the two source registries without bootstrapping the application.",
+  "coverage": { "dynamicRoutesGenerated": 404, "method": "source-registry extraction", "urlsSkipped": 0 },
+  "determinism": { "buildRuns": 2, "result": "PASS" },
+  "heapIncrease": false,
+  "indexNowSubmitted": 0,
+  "publicSeoDiff": 0
+}
