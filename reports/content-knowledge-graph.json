@@ -7,6 +7,9 @@
     { "id": "problem:wifi-instavel", "type": "problem" },
     { "id": "service:manutencao-computador", "type": "service" },
     { "id": "service:redes-wifi", "type": "service" },
+    { "id": "service:recuperacao-dados", "type": "service" },
+    { "id": "service:upgrade-ssd-ram", "type": "service" },
+    { "id": "service:formatacao", "type": "service" },
     { "id": "concept:backup", "type": "procedure" },
     { "id": "concept:ssd", "type": "equipment" },
     { "id": "decision:avaliacao-presencial", "type": "decision" }
@@ -17,6 +20,9 @@
     { "from": "problem:computador-lento", "to": "concept:ssd", "relation": "may_be_related_to" },
     { "from": "problem:computador-lento", "to": "service:manutencao-computador", "relation": "may_lead_to" },
     { "from": "problem:wifi-instavel", "to": "service:redes-wifi", "relation": "may_lead_to" },
+    { "from": "concept:backup", "to": "service:recuperacao-dados", "relation": "is_distinct_from" },
+    { "from": "concept:ssd", "to": "service:upgrade-ssd-ram", "relation": "may_lead_to" },
+    { "from": "concept:backup", "to": "service:formatacao", "relation": "should_precede_when_needed" },
     { "from": "problem:wifi-instavel", "to": "decision:avaliacao-presencial", "relation": "depends_on_evidence" }
   ]
 }

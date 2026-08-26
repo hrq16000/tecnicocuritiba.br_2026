@@ -1,0 +1,14 @@
+{
+  "status": "staging_only",
+  "new_public_urls": 0,
+  "topics": [
+    { "topic": "recuperacao_perda_de_dados", "primary_owner": "/servicos/recuperacao-de-dados", "supporting_content": ["/problemas/hd-nao-reconhecido", "/seguranca-dos-dados"], "auxiliary_assessment": "COMPLEMENTAR_E_CONFLITANTE", "information_gain": 5, "gap": "Separar perda lógica, falha física e preservação", "recommended_destination": "draft recuperacao-de-dados" },
+    { "topic": "ssd_hdd_reconhecimento", "primary_owner": "/problemas/hd-nao-reconhecido", "supporting_content": ["/servicos/recuperacao-de-dados", "/servicos/upgrade-ssd-ram"], "auxiliary_assessment": "REUTILIZAVEL_COM_REVISAO", "information_gain": 4, "gap": "Distinguir BIOS/UEFI, sistema e dados", "recommended_destination": "draft ssd-nao-reconhecido" },
+    { "topic": "hdd_sinais_de_falha", "primary_owner": "/problemas/hd-nao-reconhecido", "supporting_content": ["/servicos/recuperacao-de-dados"], "auxiliary_assessment": "COMPLEMENTAR", "information_gain": 4, "gap": "Ruído, erro de leitura e quando parar", "recommended_destination": "draft hdd-sinais-de-falha" },
+    { "topic": "ram_vs_armazenamento", "primary_owner": "/servicos/upgrade-ssd-ram", "supporting_content": ["/problemas/computador-lento", "/problemas/computador-travando"], "auxiliary_assessment": "SUPERFICIAL", "information_gain": 4, "gap": "Pouca RAM versus RAM defeituosa", "recommended_destination": "draft ram-insuficiente-ou-defeituosa" },
+    { "topic": "computador_travando", "primary_owner": "/problemas/computador-travando", "supporting_content": ["/problemas/computador-lento", "/servicos/manutencao-de-computador"], "auxiliary_assessment": "COMPLEMENTAR", "information_gain": 4, "gap": "Travamento, reinício, temperatura e dados", "recommended_destination": "draft computador-travando" },
+    { "topic": "windows_nao_inicia", "primary_owner": "/problemas/windows-nao-inicia", "supporting_content": ["/servicos/formatacao", "/servicos/recuperacao-de-dados"], "auxiliary_assessment": "DUPLICADO_PARCIAL", "information_gain": 4, "gap": "Reparo do sistema versus preservação", "recommended_destination": "draft windows-nao-inicia" }
+  ],
+  "future_content_candidates": ["ssd-nao-reconhecido-com-dados-importantes", "ram-insuficiente-versus-ram-defeituosa"],
+  "note": "Candidates are backlog only; no route is created or promoted."
+}

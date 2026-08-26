@@ -21,6 +21,13 @@ Este documento orienta drafts; não é conteúdo público e não autoriza public
 
 Para páginas de problema, usar somente os módulos pertinentes: significado do sintoma, causas possíveis, verificações seguras, o que não fazer, evidências, limites, decisão e prevenção. Em serviços, explicar escopo, diagnóstico, fatores de complexidade, dados e próximo passo.
 
+## Classes de recomendação
+
+- **SAFE_FOR_USER:** observar mensagem, comparar comportamento, conferir cópia existente.
+- **CAUTION:** reiniciar uma vez, testar outro dispositivo ou tomada conhecida, sempre sem apagar dados.
+- **TECHNICIAN_ONLY:** abrir equipamento, substituir componente, alterar firmware ou investigar hardware interno.
+- **DESTRUCTIVE_RISK:** formatar, inicializar unidade, apagar partições ou gravar sobre mídia com dados importantes.
+
 ## Política de claims e localidade
 
 Não usar liderança, garantias, estatísticas, experiência de campo, certificações ou prazo sem evidência interna. Contexto local só pode informar cobertura e modalidade operacional comprovadas; não atribuir sintomas a moradores ou bairros.
