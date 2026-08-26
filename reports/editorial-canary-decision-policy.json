@@ -1,0 +1,28 @@
+{
+  "status": "staging_only",
+  "states": [
+    "PROMOTE",
+    "PROMOTE_WITH_CAUTION",
+    "HOLD",
+    "INVESTIGATE",
+    "ROLLBACK_TECHNICAL",
+    "INSUFFICIENT_DATA"
+  ],
+  "rules": {
+    "d7": "early signal",
+    "d14": "first consistent evaluation",
+    "d30": "primary evaluation when data sufficient",
+    "low_volume": "INSUFFICIENT_DATA",
+    "daily_fluctuation": "never decisive"
+  },
+  "guardrails": [
+    "canonical integrity",
+    "robots integrity",
+    "HTTP 200",
+    "schema integrity",
+    "no cannibalization",
+    "no graph regression",
+    "no duplication regression",
+    "no safety regression"
+  ]
+}

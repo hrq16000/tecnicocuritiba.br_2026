@@ -79,6 +79,12 @@ Após autorização explícita, houve promoção seletiva em URLs já existentes
 - `PUBLICATION = 0`, `INDEXNOW = 0`; nenhuma alteração pública executada.
 - Decisão: **CANARY NOT READY — FIX STAGING ONLY**.
 
+## PRÉ-CANARY — EVIDÊNCIA
+
+- D14 permanece `LOCKED`; GSC/Bing aguardando coleta real.
+- Scorecard, baseline técnico, mapa de buscadores, política de decisão e dry-run preparados.
+- `AUTHORIZED = FALSE`; `PUBLIC_HTML_DIFF = 0`; `INDEXNOW = 0`.
+
 ### Backlog da próxima onda (sem execução)
 
 1. prevenção e manutenção; 2. backup e redundância; 3. rede avançada/Wi-Fi; 4. suporte empresarial; 5. impressoras e periféricos.

@@ -1,0 +1,14 @@
+{
+  "AUTHORIZED": false,
+  "experiment_id": "EDITORIAL_CANARY_1",
+  "reason": "D14_LOCKED; baseline GSC/Bing ausente",
+  "required_fields": [
+    "d14_snapshot_id",
+    "d14_decision",
+    "batch_id",
+    "patch_hashes",
+    "baseline_id",
+    "authorized_at",
+    "gate_results"
+  ]
+}

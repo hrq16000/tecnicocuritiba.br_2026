@@ -1,0 +1,64 @@
+{
+  "status": "staging_only",
+  "experiment_id": "EDITORIAL_CANARY_1",
+  "d14": {
+    "status": "D14_LOCKED",
+    "source": "scripts/check-prontidao-d14.mjs",
+    "last_collection": null,
+    "required": true,
+    "blocks_canary": true,
+    "action": "aguardar janela temporal real"
+  },
+  "dependencies": [
+    {
+      "name": "D14 temporal",
+      "source": "marco-ledger/prontidao-d14",
+      "status": "WAITING_TEMPORAL",
+      "required": true,
+      "blocks_canary": true
+    },
+    {
+      "name": "GSC performance",
+      "source": "Search Console API",
+      "status": "WAITING_GSC",
+      "required": true,
+      "blocks_canary": true
+    },
+    {
+      "name": "GSC URL Inspection",
+      "source": "URL Inspection API",
+      "status": "WAITING_GSC",
+      "required": true,
+      "blocks_canary": true
+    },
+    {
+      "name": "Bing baseline",
+      "source": "Bing Webmaster API",
+      "status": "WAITING_BING",
+      "required": true,
+      "blocks_canary": true
+    },
+    {
+      "name": "technical baseline",
+      "source": "local route/build gates",
+      "status": "READY",
+      "required": true,
+      "blocks_canary": false
+    },
+    {
+      "name": "IndexNow readiness",
+      "source": "official endpoint dry-run",
+      "status": "READY",
+      "required": false,
+      "blocks_canary": false
+    },
+    {
+      "name": "visual/mobile/accessibility review",
+      "source": "staging patch review",
+      "status": "READY",
+      "required": false,
+      "blocks_canary": false
+    }
+  ],
+  "submitted": 0
+}

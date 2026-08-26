@@ -1,0 +1,45 @@
+{
+  "status": "staging_only",
+  "engines": {
+    "GOOGLE": {
+      "discovery_mechanism": "sitemap + links + natural crawl",
+      "sitemap_relevance": "high",
+      "indexnow_relevance": "none",
+      "direct_submission_available": "URL Inspection limited",
+      "measurement_source": "Search Console",
+      "action": "collect after D14"
+    },
+    "BING": {
+      "discovery_mechanism": "sitemap + links + IndexNow",
+      "sitemap_relevance": "high",
+      "indexnow_relevance": "high",
+      "direct_submission_available": "official APIs only",
+      "measurement_source": "Bing Webmaster when configured",
+      "action": "collect after D14"
+    },
+    "YAHOO": {
+      "discovery_mechanism": "partner/index inheritance",
+      "sitemap_relevance": "indirect",
+      "indexnow_relevance": "none",
+      "direct_submission_available": "not used",
+      "measurement_source": "NOT_AVAILABLE_FROM_SOURCE",
+      "action": "document only"
+    },
+    "DUCKDUCKGO": {
+      "discovery_mechanism": "external indexes and crawl",
+      "sitemap_relevance": "indirect",
+      "indexnow_relevance": "none",
+      "direct_submission_available": "none",
+      "measurement_source": "NOT_AVAILABLE_FROM_SOURCE",
+      "action": "natural discovery"
+    },
+    "OUTROS_RELEVANTES": {
+      "discovery_mechanism": "natural crawl/partner indexes",
+      "sitemap_relevance": "variable",
+      "indexnow_relevance": "variable",
+      "direct_submission_available": "not assumed",
+      "measurement_source": "NOT_AVAILABLE_FROM_SOURCE",
+      "action": "no artificial submission"
+    }
+  }
+}

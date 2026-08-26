@@ -1,0 +1,19 @@
+{
+  "status": "staging_only",
+  "experiment_id": "EDITORIAL_CANARY_1",
+  "classification": "ACCEPTABLE_CONTROL",
+  "comparability": {
+    "cluster": "pending GSC",
+    "tier": "pending GSC",
+    "index_state": "pending GSC",
+    "impressions": "pending GSC",
+    "depth": "pending technical snapshot",
+    "inbound": "pending technical snapshot",
+    "content_quality": "reviewed",
+    "intent_type": "compatible",
+    "history": "pending"
+  },
+  "controls_valid": 0,
+  "controls_total": 5,
+  "decision": "do not infer impact until baseline exists"
+}

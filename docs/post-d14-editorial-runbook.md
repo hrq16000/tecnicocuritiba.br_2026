@@ -28,3 +28,7 @@ IndexNow somente para URL alterada, hash diferente, resposta 200, canonical pró
 8. Registrar `PROMO_D0` e medir `PROMO_D7`, `PROMO_D14` e `PROMO_D30`.
 
 Rollback usa hash anterior, conteúdo anterior, patch e commit. Só ocorre por erro factual, regressão técnica, UX ou bug — não por flutuação isolada de ranking.
+
+## Fail-closed pré-canário
+
+O comando `npm run editorial:promote-canary -- --dry-run` apenas gera o preview. A promoção real deve recusar execução se D14 não estiver selado, se a autorização não for verdadeira, se faltar baseline GSC/Bing, houver patch/owner drift, falha técnica ou public drift prévio.
