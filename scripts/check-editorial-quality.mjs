@@ -36,6 +36,12 @@ const UNSAFE = [
   /\bformata(?:ção|r).{0,35}\b(?:como novo|igual a novo)\b/i,
   /\bcomputadores?\s+com\s+mais\s+de\s+5\s+anos.{0,35}\b(?:devem|precisam)\s+ser\s+troca/i,
   /\bmais\s+ram.{0,35}\b(?:aumenta|melhora)\s+a\s+velocidade\s+do\s+processador\b/i,
+  /\bsuporte\s+24\s+horas\b/i,
+  /\bSLA\s+garantid[oa]\b/i,
+  /\bmonitoramento\s+contínuo\b/i,
+  /\batendimento\s+imediato\b/i,
+  /\bequipe\s+especializada\s+certificada\b/i,
+  /\bgarantimos\s+(?:a\s+)?disponibilidade\b/i,
 ];
 
 function unsafeReasons(body) {

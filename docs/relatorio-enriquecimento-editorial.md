@@ -106,3 +106,19 @@ Artefatos: `reports/p0-network-backup-coverage.json`, `reports/editorial-content
 ### Freeze P0.5
 
 `PUBLIC_DRAFTS_PROMOTED = 0` · `PUBLIC_HTML_DIFF = 0` · `PUBLIC_LINK_DIFF = 0` · `SITEMAP_DIFF = 0` · `LASTMOD_DIFF = 0` · `PUBLIC_SCHEMA_DIFF = 0` · `INDEXNOW = 0` · `D14 = LOCKED`.
+
+## ONDA P0.6 — SUPORTE EMPRESARIAL
+
+- Estado P0.5 verificado: **PASS**.
+- Conteúdo auditado: **159** artigos auxiliares e owners B2B existentes.
+- Artigos auxiliares B2B: **38** candidatos; 12 duplicados/marketing genérico mantidos fora de promoção.
+- Intenções: **7**; suporte remoto/presencial, escopo, triagem, backup, rede, manutenção e terceirização.
+- Drafts criados: **7**; acumulados: **37**.
+- Information Gain médio: **2,1/5 → 4,6/5**.
+- Claims empresariais bloqueados: **6** padrões adicionados ao gate.
+- Duplicatas evitadas: **12**.
+- Nobreak: **SUPPORTING_KNOWLEDGE**; sem nova rota.
+- B2B owner: **`/empresas`**. `/gestor-responsavel` permanece sem canibalização comercial.
+- Readiness B2B: **ADEQUATE**; continuidade e operações ainda requerem revisão factual.
+- CORE_EDITORIAL_SUFFICIENT: **NÃO** — decisão: `C — TECHNICAL REVIEW BEFORE MORE CONTENT`.
+- Publicados: **0** drafts; páginas públicas preservadas.
