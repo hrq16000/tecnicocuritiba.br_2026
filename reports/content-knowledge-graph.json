@@ -18,6 +18,10 @@
     { "id": "concept:malware", "type": "security" },
     { "id": "concept:bateria-degradada", "type": "equipment" },
     { "id": "concept:formatacao", "type": "procedure" },
+    { "id": "concept:internet", "type": "network" },
+    { "id": "concept:wifi", "type": "network" },
+    { "id": "concept:ethernet", "type": "network" },
+    { "id": "concept:sincronizacao", "type": "procedure" },
     { "id": "decision:avaliacao-presencial", "type": "decision" }
   ],
   "edges": [
@@ -36,5 +40,9 @@
     { "from": "problem:tela-azul", "to": "concept:erro-contexto", "relation": "requires_evidence" },
     { "from": "problem:computador-lento", "to": "concept:malware", "relation": "does_not_confirm" },
     { "from": "concept:formatacao", "to": "concept:falha-hardware", "relation": "does_not_correct" }
+    ,{ "from": "concept:wifi", "to": "concept:internet", "relation": "does_not_equal" }
+    ,{ "from": "concept:ethernet", "to": "concept:wifi", "relation": "can_isolate" }
+    ,{ "from": "concept:sincronizacao", "to": "concept:backup", "relation": "does_not_equal" }
+    ,{ "from": "concept:backup", "to": "concept:perda-de-dados", "relation": "reduces_risk" }
   ]
 }

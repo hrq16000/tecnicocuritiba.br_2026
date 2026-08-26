@@ -4,5 +4,6 @@
     { "start": "dispositivo_nao_reconhecido", "steps": ["entender_o_sintoma", "verificar_sem_alterar", "preservar_dados", "parar_se_houver_sinais_fisicos", "solicitar_diagnostico"], "owner": "/problemas/hd-nao-reconhecido" },
     { "start": "computador_lento_ou_travando", "steps": ["observar_padrao", "diferenciar_memoria_armazenamento_sistema_temperatura", "fazer_backup_se_houver_risco", "avaliar_reparo_ou_upgrade"], "owner": "/problemas/computador-lento" },
     { "start": "windows_nao_inicia", "steps": ["confirmar_sintoma", "evitar_formatacao_precipitada", "preservar_dados", "avaliar_sistema_ou_hardware"], "owner": "/problemas/windows-nao-inicia" }
+    ,{ "start": "problema_de_conectividade", "steps": ["definir_escopo_um_ou_varios_dispositivos", "isolar_cabo_ou_wifi", "observar_velocidade_latencia_estabilidade_cobertura", "fazer_teste_seguro", "decidir_rede_provedor_dispositivo_ou_suporte"], "owner": "/problemas/internet-lenta" }
   ]
 }

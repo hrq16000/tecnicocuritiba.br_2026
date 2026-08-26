@@ -22,6 +22,13 @@ const UNSAFE = [
   /\b(?:formate|formatar)\b.{0,35}\b(?:para resolver|resolve)\b.{0,35}(?:lentidão|tela azul|vírus|erro)/i,
   /\b(?:lentidão|computador lento).{0,35}\b(?:provavelmente está com vírus|é vírus)\b/i,
   /\b(?:troque|trocar)\s+(?:o\s+)?(?:ssd|hd|disco|bateria).{0,35}\b(?:ficará|vai ficar|resolve)\b/i,
+  /\b5\s*ghz\b.{0,35}\b(?:sempre|é sempre)\b.{0,20}\b(?:melhor|mais rápido)\b/i,
+  /\b(?:troque|trocar)\s+(?:o\s+)?roteador.{0,35}\b(?:melhorar|resolve)\b/i,
+  /\b(?:dns|usar outro dns).{0,35}\b(?:aumenta|melhora)\s+(?:o\s+)?sinal\b/i,
+  /\b(?:resetar|reiniciar)\s+(?:o\s+)?roteador.{0,35}\bresolve\b/i,
+  /\binternet lenta\b.{0,35}\b(?:alguém está usando|provedor está reduzindo)\b/i,
+  /\bmesh\b.{0,25}\b(?:qualquer problema|sempre resolve|solução universal)\b/i,
+  /\bsincroniza(?:ção|r).{0,35}\b(?:é|como)\s+backup\s+(?:completo|total)\b/i,
 ];
 
 function unsafeReasons(body) {

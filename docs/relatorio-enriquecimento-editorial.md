@@ -70,3 +70,20 @@ Após autorização explícita, houve promoção seletiva em URLs já existentes
 ### Freeze P0.3
 
 `FREEZE V2 = PASS` · `PUBLIC_CHANGE = 0` · `SITEMAP_DIFF = 0` · `LASTMOD_DIFF = 0` · `INDEXNOW = 0` · `D14 = LOCKED`.
+
+## ONDA P0.4 — REDES / BACKUP
+
+- Intenções auditadas: **7**; o draft existente de Wi-Fi foi revisado e enriquecido.
+- Artigos auxiliares relacionados: **159**; 46 duplicações temáticas foram identificadas para consolidação futura.
+- Drafts novos: **6**; total da onda (incluindo Wi-Fi revisado): **7**.
+- Information Gain médio: **2,1/5 → 4,4/5**.
+- Contradições críticas novas: **0**; o quality gate passou a bloquear generalizações sobre DNS, mesh, 5 GHz, provedor e sincronização.
+- Duplicatas evitadas: **46** artigos auxiliares não promovidos automaticamente.
+- Drafts READY: **0**; NEEDS_REVIEW: **7**.
+- Publicados: **0**.
+
+Artefatos: `reports/p0-network-backup-coverage.json`, `reports/editorial-content-debt.json` e `reports/reference-readiness.md`.
+
+### Freeze P0.4
+
+`PUBLIC_DRAFTS_PROMOTED = 0` · `PUBLIC_HTML_DIFF = 0` · `PUBLIC_LINK_DIFF = 0` · `SITEMAP_DIFF = 0` · `LASTMOD_DIFF = 0` · `INDEXNOW = 0` · `D14 = LOCKED`.

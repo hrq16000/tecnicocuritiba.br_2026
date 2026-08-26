@@ -2,7 +2,7 @@
 
 STATUS: STAGING_ONLY
 INFORMATION_GAIN_BEFORE: 2
-INFORMATION_GAIN_AFTER: 4
+INFORMATION_GAIN_AFTER: 5
 PRIMARY_INTENT: DIAGNOSTICAR_PROBLEMA
 USER_DECISION: OBSERVAR_TESTAR_COM_SEGURANCA_OU_AVALIAR
 EXISTING_INFORMATION: Sintoma de instabilidade e orientação inicial.
@@ -21,13 +21,13 @@ Falta um critério simples para não confundir velocidade contratada com cobertu
 
 # Proposta editorial
 
-## Cobertura, velocidade e queda são problemas diferentes
+## Onde está o gargalo?
 
-Se todos os dispositivos caem ao mesmo tempo, a investigação começa pela conexão e pelo roteador. Se apenas um cômodo ou aparelho falha, alcance, obstáculos, interferência e o dispositivo cliente ganham relevância. Uma conexão rápida perto do roteador não prova boa cobertura em toda a residência.
+Se todos os dispositivos caem ao mesmo tempo, a investigação começa por modem/ONT, roteador e provedor. Se apenas um cômodo ou aparelho falha, alcance, obstáculos, interferência e o dispositivo cliente ganham relevância. Wi-Fi é o meio local sem fio; internet é a conectividade externa. Um aparelho pode permanecer conectado ao Wi-Fi e estar sem internet.
 
 ## Verificações seguras
 
-Compare dois dispositivos no mesmo local e um dispositivo perto e longe do roteador. Observe se a rede desaparece, se permanece conectada sem acesso ou se fica apenas lenta. Reiniciar o roteador uma vez pode ser uma verificação; repetir resets de fábrica pode apagar configurações úteis.
+Compare dois dispositivos no mesmo local e, quando possível, um teste por Ethernet. Observe se a rede desaparece, se permanece conectada sem acesso ou se fica apenas lenta. Reiniciar uma vez pode recuperar estado temporário, mas não identifica a causa; reset de fábrica pode apagar credenciais e configurações.
 
 ## Como a avaliação diferencia causas
 
