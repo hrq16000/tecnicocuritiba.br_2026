@@ -15,3 +15,16 @@ Suspender expansão, revisar intenção, duplicação, qualidade e seleção de 
 ## Política comum
 
 IndexNow somente para URL alterada, hash diferente, resposta 200, canonical próprio e indexabilidade confirmada. Não solicitar indexação individual em massa.
+
+## Sequência do canário EDITORIAL_CANARY_1
+
+1. Confirmar decisão D14 e batch autorizado.
+2. Fazer snapshot público pré-promoção.
+3. Aplicar apenas os patches especificados para até cinco owners.
+4. Rodar quality, revisão técnica, SSR/schema, grafo interno e build.
+5. Validar o site ao vivo.
+6. Atualizar `lastmod` somente nas URLs alteradas.
+7. Enviar IndexNow somente para URLs alteradas.
+8. Registrar `PROMO_D0` e medir `PROMO_D7`, `PROMO_D14` e `PROMO_D30`.
+
+Rollback usa hash anterior, conteúdo anterior, patch e commit. Só ocorre por erro factual, regressão técnica, UX ou bug — não por flutuação isolada de ranking.

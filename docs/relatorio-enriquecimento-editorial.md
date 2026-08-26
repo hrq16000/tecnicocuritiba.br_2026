@@ -72,6 +72,13 @@ Após autorização explícita, houve promoção seletiva em URLs já existentes
 - Primeira promoção futura limitada a **5 owners públicos**, sem execução nesta rodada.
 - `PUBLIC_HTML_DIFF = 0`, `PUBLIC_SCHEMA_DIFF = 0`, `SITEMAP_DIFF = 0`, `INDEXNOW = 0`.
 
+## TRANSIÇÃO PÓS-P0.7 — CANARY PRÉ-D14
+
+- `EDITORIAL_CANARY_1` preparado para no máximo 5 owners.
+- D14 oficial: **LOCKED**; baseline GSC/Bing ainda não disponível.
+- `PUBLICATION = 0`, `INDEXNOW = 0`; nenhuma alteração pública executada.
+- Decisão: **CANARY NOT READY — FIX STAGING ONLY**.
+
 ### Backlog da próxima onda (sem execução)
 
 1. prevenção e manutenção; 2. backup e redundância; 3. rede avançada/Wi-Fi; 4. suporte empresarial; 5. impressoras e periféricos.
