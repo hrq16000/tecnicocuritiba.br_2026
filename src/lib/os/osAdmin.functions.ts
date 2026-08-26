@@ -399,7 +399,7 @@ export const alterarStatusOrdem = createServerFn({ method: "POST" })
 
     const { error } = await context.supabase
       .from("ordens_servico")
-      .update(patch)
+      .update(patch as never)
       .eq("id", atual.id);
     if (error) throw new Error(error.message);
 
@@ -497,7 +497,7 @@ export const alterarStatusEmLote = createServerFn({ method: "POST" })
       if (data.status === "CONCLUIDA") patch["concluida_em"] = new Date().toISOString();
       const { error } = await context.supabase
         .from("ordens_servico")
-        .update(patch)
+        .update(patch as never)
         .eq("id", atual.id);
       if (error) {
         falhas.push({ protocolo, motivo: error.message });

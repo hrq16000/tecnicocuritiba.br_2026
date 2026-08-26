@@ -158,7 +158,7 @@ export function ExperimentosControlados({
   };
 
   const atualizar = async (id: string, patch: Record<string, unknown>) => {
-    const { error } = await supabase.from("experimentos_indexacao").update(patch).eq("id", id);
+    const { error } = await supabase.from("experimentos_indexacao").update(patch as never).eq("id", id);
     if (error) toast.error(error.message);
     else void carregar();
   };
