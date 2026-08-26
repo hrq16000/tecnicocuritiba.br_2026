@@ -51,3 +51,22 @@ Após autorização explícita, houve promoção seletiva em URLs já existentes
 ## Veredito
 
 `EDITORIAL ENRICHMENT READY IN STAGING — ZERO PUBLIC DRIFT`
+
+## ONDA P0.3 — NOTEBOOK / WINDOWS / SEGURANÇA
+
+- Temas auditados: **7** intenções (superaquecimento, desligamento, bateria/carregador, Windows, tela azul/travamentos, malware e formatação versus reparo).
+- Artigos auxiliares analisados: **159** no acervo; triagem por owner e risco, sem promoção automática.
+- Drafts novos: **7**, todos `STAGING_ONLY`.
+- Information gain médio: **2,3/5 → 4,6/5**.
+- Contradições safety-critical: **0 novas**; padrões perigosos foram adicionados ao gate automatizado.
+- Conteúdo duplicado evitado: **7 intenções consolidadas**, sem URL nova.
+- Drafts READY: **0**; NEEDS_REVIEW: **7**.
+- Publicados: **0**.
+
+### Backlog da próxima onda (sem execução)
+
+1. prevenção e manutenção; 2. backup e redundância; 3. rede avançada/Wi-Fi; 4. suporte empresarial; 5. impressoras e periféricos.
+
+### Freeze P0.3
+
+`FREEZE V2 = PASS` · `PUBLIC_CHANGE = 0` · `SITEMAP_DIFF = 0` · `LASTMOD_DIFF = 0` · `INDEXNOW = 0` · `D14 = LOCKED`.

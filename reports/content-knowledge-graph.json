@@ -12,6 +12,12 @@
     { "id": "service:formatacao", "type": "service" },
     { "id": "concept:backup", "type": "procedure" },
     { "id": "concept:ssd", "type": "equipment" },
+    { "id": "problem:notebook-superaquecendo", "type": "problem" },
+    { "id": "problem:notebook-desligando-sozinho", "type": "problem" },
+    { "id": "problem:tela-azul", "type": "problem" },
+    { "id": "concept:malware", "type": "security" },
+    { "id": "concept:bateria-degradada", "type": "equipment" },
+    { "id": "concept:formatacao", "type": "procedure" },
     { "id": "decision:avaliacao-presencial", "type": "decision" }
   ],
   "edges": [
@@ -23,6 +29,12 @@
     { "from": "concept:backup", "to": "service:recuperacao-dados", "relation": "is_distinct_from" },
     { "from": "concept:ssd", "to": "service:upgrade-ssd-ram", "relation": "may_lead_to" },
     { "from": "concept:backup", "to": "service:formatacao", "relation": "should_precede_when_needed" },
-    { "from": "problem:wifi-instavel", "to": "decision:avaliacao-presencial", "relation": "depends_on_evidence" }
+    { "from": "problem:wifi-instavel", "to": "decision:avaliacao-presencial", "relation": "depends_on_evidence" },
+    { "from": "problem:notebook-superaquecendo", "to": "concept:throttling", "relation": "may_cause" },
+    { "from": "problem:notebook-superaquecendo", "to": "problem:notebook-desligando-sozinho", "relation": "may_lead_to" },
+    { "from": "problem:notebook-desligando-sozinho", "to": "concept:bateria-degradada", "relation": "may_be_related_to" },
+    { "from": "problem:tela-azul", "to": "concept:erro-contexto", "relation": "requires_evidence" },
+    { "from": "problem:computador-lento", "to": "concept:malware", "relation": "does_not_confirm" },
+    { "from": "concept:formatacao", "to": "concept:falha-hardware", "relation": "does_not_correct" }
   ]
 }

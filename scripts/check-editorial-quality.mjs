@@ -18,6 +18,10 @@ const UNSAFE = [
   /\b(?:99|100)%\s+(?:de\s+)?(?:sucesso|recupera)/i,
   /(?:recuperad[oa]|arquivos).{0,40}\b(?:com certeza|garantid[oa])\b/i,
   /\b(?:r\$|reais)\s*\d/i,
+  /(?:desliga|desligou|desligando).{0,35}\bporque\b.{0,35}(?:pasta térmica|vírus|ram|ssd|hd)/i,
+  /\b(?:formate|formatar)\b.{0,35}\b(?:para resolver|resolve)\b.{0,35}(?:lentidão|tela azul|vírus|erro)/i,
+  /\b(?:lentidão|computador lento).{0,35}\b(?:provavelmente está com vírus|é vírus)\b/i,
+  /\b(?:troque|trocar)\s+(?:o\s+)?(?:ssd|hd|disco|bateria).{0,35}\b(?:ficará|vai ficar|resolve)\b/i,
 ];
 
 function unsafeReasons(body) {
