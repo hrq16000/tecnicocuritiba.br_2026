@@ -1,0 +1,634 @@
+{
+  "status": "staging_only",
+  "items": [
+    {
+      "draft": "24ghz-vs-5ghz",
+      "owner": "/servicos/manutencao-de-computador",
+      "checks": {
+        "technical": true,
+        "intent": true,
+        "owner": true,
+        "duplication": true,
+        "claims": true,
+        "safety": true,
+        "answer_first": true,
+        "decision": true,
+        "new_information": true,
+        "human_final": false
+      },
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "draft": "backup-pequenas-empresas",
+      "owner": "/empresas",
+      "checks": {
+        "technical": true,
+        "intent": true,
+        "owner": true,
+        "duplication": true,
+        "claims": true,
+        "safety": true,
+        "answer_first": true,
+        "decision": true,
+        "new_information": true,
+        "human_final": false
+      },
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "draft": "backup-sincronizacao",
+      "owner": "/servicos/backup-para-empresas",
+      "checks": {
+        "technical": true,
+        "intent": true,
+        "owner": true,
+        "duplication": true,
+        "claims": true,
+        "safety": true,
+        "answer_first": true,
+        "decision": true,
+        "new_information": true,
+        "human_final": false
+      },
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "draft": "bateria-carregador-notebook",
+      "owner": "/servicos/manutencao-de-computador",
+      "checks": {
+        "technical": true,
+        "intent": true,
+        "owner": true,
+        "duplication": true,
+        "claims": true,
+        "safety": true,
+        "answer_first": true,
+        "decision": true,
+        "new_information": true,
+        "human_final": false
+      },
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "draft": "cobertura-sinal-wifi",
+      "owner": "/servicos/redes-e-wifi",
+      "checks": {
+        "technical": true,
+        "intent": true,
+        "owner": true,
+        "duplication": true,
+        "claims": true,
+        "safety": true,
+        "answer_first": true,
+        "decision": true,
+        "new_information": true,
+        "human_final": false
+      },
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "draft": "computador-lento",
+      "owner": "/servicos/manutencao-de-computador",
+      "checks": {
+        "technical": true,
+        "intent": true,
+        "owner": true,
+        "duplication": true,
+        "claims": true,
+        "safety": true,
+        "answer_first": true,
+        "decision": true,
+        "new_information": true,
+        "human_final": false
+      },
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "draft": "conectado-sem-internet",
+      "owner": "/servicos/manutencao-de-computador",
+      "checks": {
+        "technical": true,
+        "intent": true,
+        "owner": true,
+        "duplication": true,
+        "claims": true,
+        "safety": true,
+        "answer_first": true,
+        "decision": true,
+        "new_information": true,
+        "human_final": false
+      },
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "draft": "formatacao-computador",
+      "owner": "/servicos/manutencao-de-computador",
+      "checks": {
+        "technical": true,
+        "intent": true,
+        "owner": true,
+        "duplication": true,
+        "claims": true,
+        "safety": true,
+        "answer_first": true,
+        "decision": true,
+        "new_information": true,
+        "human_final": false
+      },
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "draft": "formatacao-quando-faz-sentido",
+      "owner": "/servicos/manutencao-de-computador",
+      "checks": {
+        "technical": true,
+        "intent": true,
+        "owner": true,
+        "duplication": true,
+        "claims": true,
+        "safety": true,
+        "answer_first": true,
+        "decision": true,
+        "new_information": true,
+        "human_final": false
+      },
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "draft": "hdd-sinais-de-falha",
+      "owner": "/servicos/manutencao-de-computador",
+      "checks": {
+        "technical": true,
+        "intent": true,
+        "owner": true,
+        "duplication": true,
+        "claims": true,
+        "safety": true,
+        "answer_first": true,
+        "decision": true,
+        "new_information": true,
+        "human_final": false
+      },
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "draft": "internet-lenta-provedor-wifi-dispositivo",
+      "owner": "/servicos/redes-e-wifi",
+      "checks": {
+        "technical": true,
+        "intent": true,
+        "owner": true,
+        "duplication": true,
+        "claims": true,
+        "safety": true,
+        "answer_first": true,
+        "decision": true,
+        "new_information": true,
+        "human_final": false
+      },
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "draft": "limpeza-refrigeracao-computador",
+      "owner": "/servicos/manutencao-de-computador",
+      "checks": {
+        "technical": true,
+        "intent": true,
+        "owner": true,
+        "duplication": true,
+        "claims": true,
+        "safety": true,
+        "answer_first": true,
+        "decision": true,
+        "new_information": true,
+        "human_final": false
+      },
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "draft": "manutencao-preventiva-o-que-faz-sentido",
+      "owner": "/servicos/manutencao-de-computador",
+      "checks": {
+        "technical": true,
+        "intent": true,
+        "owner": true,
+        "duplication": true,
+        "claims": true,
+        "safety": true,
+        "answer_first": true,
+        "decision": true,
+        "new_information": true,
+        "human_final": false
+      },
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "draft": "manutencao-reativa-preventiva-b2b",
+      "owner": "/servicos/manutencao-de-computador",
+      "checks": {
+        "technical": true,
+        "intent": true,
+        "owner": true,
+        "duplication": true,
+        "claims": true,
+        "safety": true,
+        "answer_first": true,
+        "decision": true,
+        "new_information": true,
+        "human_final": false
+      },
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "draft": "notebook-desligando-sozinho",
+      "owner": "/servicos/manutencao-de-computador",
+      "checks": {
+        "technical": true,
+        "intent": true,
+        "owner": true,
+        "duplication": true,
+        "claims": true,
+        "safety": true,
+        "answer_first": true,
+        "decision": true,
+        "new_information": true,
+        "human_final": false
+      },
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "draft": "notebook-nao-liga",
+      "owner": "/servicos/manutencao-de-computador",
+      "checks": {
+        "technical": true,
+        "intent": true,
+        "owner": true,
+        "duplication": true,
+        "claims": true,
+        "safety": true,
+        "answer_first": true,
+        "decision": true,
+        "new_information": true,
+        "human_final": false
+      },
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "draft": "notebook-superaquecendo",
+      "owner": "/servicos/manutencao-de-computador",
+      "checks": {
+        "technical": true,
+        "intent": true,
+        "owner": true,
+        "duplication": true,
+        "claims": true,
+        "safety": true,
+        "answer_first": true,
+        "decision": true,
+        "new_information": true,
+        "human_final": false
+      },
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "draft": "quando-aumentar-ram",
+      "owner": "/servicos/upgrade-ssd-ram",
+      "checks": {
+        "technical": true,
+        "intent": true,
+        "owner": true,
+        "duplication": true,
+        "claims": true,
+        "safety": true,
+        "answer_first": true,
+        "decision": true,
+        "new_information": true,
+        "human_final": false
+      },
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "draft": "quando-ssd-melhora-computador",
+      "owner": "/servicos/upgrade-ssd-ram",
+      "checks": {
+        "technical": true,
+        "intent": true,
+        "owner": true,
+        "duplication": true,
+        "claims": true,
+        "safety": true,
+        "answer_first": true,
+        "decision": true,
+        "new_information": true,
+        "human_final": false
+      },
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "draft": "ram-insuficiente-ou-defeituosa",
+      "owner": "/servicos/manutencao-de-computador",
+      "checks": {
+        "technical": true,
+        "intent": true,
+        "owner": true,
+        "duplication": true,
+        "claims": true,
+        "safety": true,
+        "answer_first": true,
+        "decision": true,
+        "new_information": true,
+        "human_final": false
+      },
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "draft": "recuperacao-de-dados",
+      "owner": "/servicos/manutencao-de-computador",
+      "checks": {
+        "technical": true,
+        "intent": true,
+        "owner": true,
+        "duplication": true,
+        "claims": true,
+        "safety": true,
+        "answer_first": true,
+        "decision": true,
+        "new_information": true,
+        "human_final": false
+      },
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "draft": "rede-instabilidade-empresa",
+      "owner": "/empresas",
+      "checks": {
+        "technical": true,
+        "intent": true,
+        "owner": true,
+        "duplication": true,
+        "claims": true,
+        "safety": true,
+        "answer_first": true,
+        "decision": true,
+        "new_information": true,
+        "human_final": false
+      },
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "draft": "reparar-atualizar-substituir",
+      "owner": "/servicos/manutencao-de-computador",
+      "checks": {
+        "technical": true,
+        "intent": true,
+        "owner": true,
+        "duplication": true,
+        "claims": true,
+        "safety": true,
+        "answer_first": true,
+        "decision": true,
+        "new_information": true,
+        "human_final": false
+      },
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "draft": "repetidor-mesh-cabo",
+      "owner": "/servicos/manutencao-de-computador",
+      "checks": {
+        "technical": true,
+        "intent": true,
+        "owner": true,
+        "duplication": true,
+        "claims": true,
+        "safety": true,
+        "answer_first": true,
+        "decision": true,
+        "new_information": true,
+        "human_final": false
+      },
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "draft": "ssd-nao-reconhecido",
+      "owner": "/servicos/manutencao-de-computador",
+      "checks": {
+        "technical": true,
+        "intent": true,
+        "owner": true,
+        "duplication": true,
+        "claims": true,
+        "safety": true,
+        "answer_first": true,
+        "decision": true,
+        "new_information": true,
+        "human_final": false
+      },
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "draft": "ssd-ou-ram-gargalo",
+      "owner": "/servicos/upgrade-ssd-ram",
+      "checks": {
+        "technical": true,
+        "intent": true,
+        "owner": true,
+        "duplication": true,
+        "claims": true,
+        "safety": true,
+        "answer_first": true,
+        "decision": true,
+        "new_information": true,
+        "human_final": false
+      },
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "draft": "suporte-remoto-ou-presencial-b2b",
+      "owner": "/empresas",
+      "checks": {
+        "technical": true,
+        "intent": true,
+        "owner": true,
+        "duplication": true,
+        "claims": true,
+        "safety": true,
+        "answer_first": true,
+        "decision": true,
+        "new_information": true,
+        "human_final": false
+      },
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "draft": "tela-azul-travamentos",
+      "owner": "/servicos/manutencao-de-computador",
+      "checks": {
+        "technical": true,
+        "intent": true,
+        "owner": true,
+        "duplication": true,
+        "claims": true,
+        "safety": true,
+        "answer_first": true,
+        "decision": true,
+        "new_information": true,
+        "human_final": false
+      },
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "draft": "terceirizar-suporte-ti",
+      "owner": "/empresas",
+      "checks": {
+        "technical": true,
+        "intent": true,
+        "owner": true,
+        "duplication": true,
+        "claims": true,
+        "safety": true,
+        "answer_first": true,
+        "decision": true,
+        "new_information": true,
+        "human_final": false
+      },
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "draft": "triagem-ti-pequena-empresa",
+      "owner": "/empresas",
+      "checks": {
+        "technical": true,
+        "intent": true,
+        "owner": true,
+        "duplication": true,
+        "claims": true,
+        "safety": true,
+        "answer_first": true,
+        "decision": true,
+        "new_information": true,
+        "human_final": false
+      },
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "draft": "um-ou-todos-computadores-problema",
+      "owner": "/empresas",
+      "checks": {
+        "technical": true,
+        "intent": true,
+        "owner": true,
+        "duplication": true,
+        "claims": true,
+        "safety": true,
+        "answer_first": true,
+        "decision": true,
+        "new_information": true,
+        "human_final": false
+      },
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "draft": "upgrade-computador-antigo",
+      "owner": "/servicos/upgrade-ssd-ram",
+      "checks": {
+        "technical": true,
+        "intent": true,
+        "owner": true,
+        "duplication": true,
+        "claims": true,
+        "safety": true,
+        "answer_first": true,
+        "decision": true,
+        "new_information": true,
+        "human_final": false
+      },
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "draft": "upgrade-ssd-ram",
+      "owner": "/servicos/manutencao-de-computador",
+      "checks": {
+        "technical": true,
+        "intent": true,
+        "owner": true,
+        "duplication": true,
+        "claims": true,
+        "safety": true,
+        "answer_first": true,
+        "decision": true,
+        "new_information": true,
+        "human_final": false
+      },
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "draft": "virus-malware-sintomas",
+      "owner": "/servicos/manutencao-de-computador",
+      "checks": {
+        "technical": true,
+        "intent": true,
+        "owner": true,
+        "duplication": true,
+        "claims": true,
+        "safety": true,
+        "answer_first": true,
+        "decision": true,
+        "new_information": true,
+        "human_final": false
+      },
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "draft": "wifi-caindo",
+      "owner": "/servicos/manutencao-de-computador",
+      "checks": {
+        "technical": true,
+        "intent": true,
+        "owner": true,
+        "duplication": true,
+        "claims": true,
+        "safety": true,
+        "answer_first": true,
+        "decision": true,
+        "new_information": true,
+        "human_final": false
+      },
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "draft": "windows-nao-inicia-diagnostico",
+      "owner": "/servicos/manutencao-de-computador",
+      "checks": {
+        "technical": true,
+        "intent": true,
+        "owner": true,
+        "duplication": true,
+        "claims": true,
+        "safety": true,
+        "answer_first": true,
+        "decision": true,
+        "new_information": true,
+        "human_final": false
+      },
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "draft": "windows-nao-inicia",
+      "owner": "/servicos/manutencao-de-computador",
+      "checks": {
+        "technical": true,
+        "intent": true,
+        "owner": true,
+        "duplication": true,
+        "claims": true,
+        "safety": true,
+        "answer_first": true,
+        "decision": true,
+        "new_information": true,
+        "human_final": false
+      },
+      "status": "NEEDS_REVIEW"
+    }
+  ]
+}

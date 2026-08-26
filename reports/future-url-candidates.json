@@ -1,0 +1,21 @@
+{
+  "status": "staging_only",
+  "candidates": [
+    {
+      "intent": "nobreak e energia empresarial",
+      "evidence": "sinal de Search Console não consolidado",
+      "why_existing_owner_is_insufficient": "owner atual cobre backup e rede, não energia",
+      "expected_value": 3,
+      "cannibalization_risk": "alto",
+      "recommendation": "FUTURE_CANDIDATE após evidência"
+    },
+    {
+      "intent": "decisão de compra de equipamento",
+      "evidence": "queries shopping",
+      "why_existing_owner_is_insufficient": "fora do core de suporte",
+      "expected_value": 2,
+      "cannibalization_risk": "alto",
+      "recommendation": "NON_CORE_OR_SHOPPING_INTENT"
+    }
+  ]
+}

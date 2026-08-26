@@ -1,0 +1,35 @@
+{
+  "status": "staging_only",
+  "claims": [
+    {
+      "claim": "SSD e RAM resolvem limitações diferentes",
+      "drafts": [
+        "ssd-ou-ram-gargalo",
+        "upgrade-ssd-ram"
+      ],
+      "confidence": "VERIFIED",
+      "source_internal": "EDITORIAL_KNOWLEDGE.md",
+      "decision": "preserve as canonical distinction"
+    },
+    {
+      "claim": "sincronização não equivale a backup",
+      "drafts": [
+        "backup-sincronizacao",
+        "backup-pequenas-empresas"
+      ],
+      "confidence": "VERIFIED",
+      "source_internal": "P0.4 knowledge graph",
+      "decision": "preserve with data-risk warning"
+    },
+    {
+      "claim": "múltiplos usuários podem indicar componente compartilhado",
+      "drafts": [
+        "um-ou-todos-computadores-problema",
+        "rede-instabilidade-empresa"
+      ],
+      "confidence": "CONTEXT_REQUIRED",
+      "source_internal": "P0.6 diagnostic framework",
+      "decision": "use probabilistic language"
+    }
+  ]
+}

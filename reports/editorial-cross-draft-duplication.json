@@ -1,0 +1,48 @@
+{
+  "status": "staging_only",
+  "method": "intent and owner review; lexical similarity is advisory",
+  "pairs": [
+    [
+      "upgrade-ssd-ram",
+      "ssd-ou-ram-gargalo",
+      "COMPLEMENTARY"
+    ],
+    [
+      "upgrade-ssd-ram",
+      "quando-ssd-melhora-computador",
+      "OVERLAPPING"
+    ],
+    [
+      "upgrade-ssd-ram",
+      "quando-aumentar-ram",
+      "OVERLAPPING"
+    ],
+    [
+      "wifi-caindo",
+      "internet-lenta-provedor-wifi-dispositivo",
+      "COMPLEMENTARY"
+    ],
+    [
+      "backup-sincronizacao",
+      "backup-pequenas-empresas",
+      "COMPLEMENTARY"
+    ],
+    [
+      "formatacao-computador",
+      "formatacao-quando-faz-sentido",
+      "OVERLAPPING"
+    ],
+    [
+      "notebook-superaquecendo",
+      "limpeza-refrigeracao-computador",
+      "COMPLEMENTARY"
+    ],
+    [
+      "manutencao-preventiva-o-que-faz-sentido",
+      "manutencao-reativa-preventiva-b2b",
+      "COMPLEMENTARY"
+    ]
+  ],
+  "high_duplication": 0,
+  "consolidations_recommended": 8
+}

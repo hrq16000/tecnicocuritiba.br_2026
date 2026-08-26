@@ -63,6 +63,15 @@ Após autorização explícita, houve promoção seletiva em URLs já existentes
 - Drafts READY: **0**; NEEDS_REVIEW: **7**.
 - Publicados: **0**.
 
+## ONDA P0.7 — CONSOLIDAÇÃO FINAL
+
+- Estado comprovado: **37 drafts**, `NEW_DRAFTS = 0`.
+- Inventário mestre, duplicação, evidências, fila humana e fingerprints gerados.
+- Resultado: **11 PROMOTE**, **14 MERGE**, **12 KEEP_STAGING**; nenhum REJECT ou OUT_OF_CORE.
+- `CORE_EDITORIAL_SUFFICIENT = TRUE` para novas ondas P0; `STOP_CONTENT_WAVES = TRUE`.
+- Primeira promoção futura limitada a **5 owners públicos**, sem execução nesta rodada.
+- `PUBLIC_HTML_DIFF = 0`, `PUBLIC_SCHEMA_DIFF = 0`, `SITEMAP_DIFF = 0`, `INDEXNOW = 0`.
+
 ### Backlog da próxima onda (sem execução)
 
 1. prevenção e manutenção; 2. backup e redundância; 3. rede avançada/Wi-Fi; 4. suporte empresarial; 5. impressoras e periféricos.
