@@ -1,4 +1,13 @@
-# Readiness de referência temática — P0.4
+# Readiness de referência temática — estado pós-Batch 2
+
+## Estado atual (LIVE)
+
+Os 10 owners editoriais estão publicados e foram validados em produção (10/10
+HTTP 200, um H1 e SSR). O núcleo público atingiu **LIVE CORE CONTENT MAXIMIZED**;
+não há autorização para Batch 3 ou novas URLs. As linhas históricas abaixo são
+mantidas como registro da fase P0.4.
+
+# Readiness de referência temática — P0.4 (histórico)
 
 | Pilar | Estado | Evidência e lacuna |
 | --- | --- | --- |

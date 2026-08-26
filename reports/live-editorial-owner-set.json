@@ -1,0 +1,3168 @@
+{
+  "status": "PASS",
+  "owner_count": 10,
+  "owners": [
+    {
+      "url": "/problemas/computador-lento",
+      "batch": 1,
+      "primary_intent": "ENTENDER_CAUSA",
+      "cluster": "DIAGNOSTICO",
+      "http": 200,
+      "title": "Computador Lento? Diagnóstico Técnico em Curitiba",
+      "description": "Computador ou notebook lento para ligar e abrir programas? Veja os sintomas, as causas possíveis, quando SSD ou memória resolvem, quando formatar e quando trocar.",
+      "h1_count": 1,
+      "headings": [
+        {
+          "level": 1,
+          "text": "Computador lento: sintomas, causas possíveis e o que realmente resolve"
+        },
+        {
+          "level": 2,
+          "text": "Lentidão é sintoma, não diagnóstico"
+        },
+        {
+          "level": 2,
+          "text": "Checklist de diagnóstico rápido em PDF"
+        },
+        {
+          "level": 2,
+          "text": "Sintomas que ajudam a separar as causas"
+        },
+        {
+          "level": 3,
+          "text": "Demora muito para ligar e chegar à área de trabalho"
+        },
+        {
+          "level": 3,
+          "text": "Trava ao abrir navegador, planilha ou vários programas"
+        },
+        {
+          "level": 3,
+          "text": "Fica lento depois de alguns minutos de uso"
+        },
+        {
+          "level": 3,
+          "text": "Disco em 100% ou ruído constante de leitura"
+        },
+        {
+          "level": 3,
+          "text": "Anúncios, abas e programas abrindo sozinhos"
+        },
+        {
+          "level": 3,
+          "text": "Lentidão apenas na internet"
+        },
+        {
+          "level": 2,
+          "text": "Causas possíveis, sem afirmar diagnóstico"
+        },
+        {
+          "level": 2,
+          "text": "O que você pode observar antes do atendimento"
+        },
+        {
+          "level": 2,
+          "text": "Opções que resolvem cada tipo de causa"
+        },
+        {
+          "level": 3,
+          "text": "Instalação de SSD"
+        },
+        {
+          "level": 3,
+          "text": "Ampliação de memória RAM"
+        },
+        {
+          "level": 3,
+          "text": "Limpeza interna e manutenção preventiva"
+        },
+        {
+          "level": 3,
+          "text": "Formatação com reinstalação limpa"
+        },
+        {
+          "level": 3,
+          "text": "Remoção de programas indesejados"
+        },
+        {
+          "level": 2,
+          "text": "Quando lentidão é sinal de alerta"
+        },
+        {
+          "level": 2,
+          "text": "Como é feito o diagnóstico e o que influencia o valor"
+        },
+        {
+          "level": 2,
+          "text": "Sintomas relacionados"
+        },
+        {
+          "level": 2,
+          "text": "Critérios objetivos antes de você decidir"
+        },
+        {
+          "level": 3,
+          "text": "Processo em etapas"
+        },
+        {
+          "level": 3,
+          "text": "Tempo estimado"
+        },
+        {
+          "level": 3,
+          "text": "Garantia declarada"
+        },
+        {
+          "level": 2,
+          "text": "Serviços relacionados a este problema"
+        },
+        {
+          "level": 3,
+          "text": "Upgrade de SSD e memória"
+        },
+        {
+          "level": 3,
+          "text": "Manutenção de computador"
+        },
+        {
+          "level": 3,
+          "text": "Formatação com backup"
+        },
+        {
+          "level": 3,
+          "text": "Guia técnico de informática"
+        },
+        {
+          "level": 2,
+          "text": "Perguntas frequentes"
+        },
+        {
+          "level": 3,
+          "text": "Por que o computador fica lento com o tempo?"
+        },
+        {
+          "level": 3,
+          "text": "Vírus pode deixar o computador lento?"
+        },
+        {
+          "level": 3,
+          "text": "Travamentos podem indicar falha no HD ou no SSD?"
+        },
+        {
+          "level": 3,
+          "text": "É seguro continuar usando o computador enquanto está lento?"
+        },
+        {
+          "level": 3,
+          "text": "Computador lento precisa sempre de formatação?"
+        },
+        {
+          "level": 3,
+          "text": "Trocar o HD por SSD resolve mesmo?"
+        },
+        {
+          "level": 3,
+          "text": "Quanta memória RAM é suficiente?"
+        },
+        {
+          "level": 3,
+          "text": "Posso perder arquivos ao resolver a lentidão?"
+        },
+        {
+          "level": 3,
+          "text": "Quando vale mais trocar o computador do que investir nele?"
+        },
+        {
+          "level": 3,
+          "text": "O valor pode ser informado antes do diagnóstico?"
+        },
+        {
+          "level": 2,
+          "text": "Próximos passos"
+        },
+        {
+          "level": 2,
+          "text": "Descreva quando a lentidão aparece"
+        },
+        {
+          "level": 3,
+          "text": "Serviços"
+        },
+        {
+          "level": 3,
+          "text": "Atendimento"
+        },
+        {
+          "level": 3,
+          "text": "Regiões"
+        },
+        {
+          "level": 3,
+          "text": "Institucional"
+        }
+      ],
+      "word_count": 2491,
+      "answer_latency": "EXCELLENT",
+      "schemas": [
+        "Organization",
+        "WebSite",
+        "LocalBusiness",
+        "ProfessionalService",
+        "ComputerRepairService",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "internal_links": [
+        "/logo.webp",
+        "/assets/styles-DQ26NYR5.css",
+        "/assets/index-roJZwPv4.js",
+        "/assets/rolldown-runtime-hePW80VL.js",
+        "/assets/react-CwJFpaho.js",
+        "/assets/react-dom-DX3XddaT.js",
+        "/assets/link-Bq6WqGT3.js",
+        "/assets/jsx-runtime-NZYk81nU.js",
+        "/assets/siteConfig-D3NkB-tm.js",
+        "/assets/problemaPagesData-C4HVtkgt.js",
+        "/assets/wifiTvBairroData-DJcjzZUP.js",
+        "/assets/consolidatedLocalUrls-CsV1tY4t.js",
+        "/assets/problemas.computador-lento-DqzSCX80.js",
+        "/assets/router-compat-DXSQEqSz.js",
+        "/assets/arrow-right-D0Ig8638.js",
+        "/assets/circle-check-DgC7xBEn.js",
+        "/assets/gauge-CavGGnID.js",
+        "/assets/message-circle-BlGNFDwI.js",
+        "/assets/shield-check-DSeaQ15I.js",
+        "/assets/triangle-alert-QTI_PPKw.js",
+        "/assets/button-Cs_rTu4H.js",
+        "/assets/jsonLdSlots-DCBZQI4g.js",
+        "/assets/analytics-CqVltpIU.js",
+        "/assets/Header-DwkViz_I.js",
+        "/assets/Footer-Bm1USooy.js",
+        "/assets/RealImageSection-sv8JFKjq.js",
+        "/assets/Breadcrumbs-BVonttI8.js",
+        "/assets/PageSEO-B8N0ryLM.js",
+        "/assets/TrustStrip-Dakr8kmM.js",
+        "/assets/PageTableOfContents-C7_N6du_.js",
+        "/assets/ServicosCorrelatos-BDlQ8v1g.js",
+        "/assets/ProximosPassos-Bn_vbSG9.js",
+        "/assets/ProximosProblemas-BQO_icAU.js",
+        "/assets/diagnosticoChecklists-Dk1bq3Sv.js",
+        "/fonts/montserrat-var.woff2",
+        "/fonts/poppins-700.woff2",
+        "/apple-touch-icon-20260624.png",
+        "/manifest.json",
+        "/",
+        "/servicos",
+        "/como-funciona",
+        "/precos-e-politicas",
+        "/faq",
+        "/contato",
+        "/problemas",
+        "/servicos/upgrade-ssd-ram",
+        "/servicos/manutencao-de-computador",
+        "/servicos/formatacao",
+        "/servicos/remocao-de-virus",
+        "/servicos/recuperacao-de-dados",
+        "/quando-nao-compensa",
+        "/problemas/notebook-nao-liga",
+        "/servicos/manutencao-de-notebook",
+        "/diagnostico-tecnico",
+        "/guia-tecnico-informatica",
+        "/servicos/redes-e-wifi",
+        "/servicos/suporte-tecnico-empresarial",
+        "/atendimento-domicilio",
+        "/atendimento-remoto",
+        "/areas-atendidas",
+        "/tecnico-informatica-curitiba",
+        "/tecnico-informatica-sao-jose-pinhais",
+        "/tecnico-informatica-pinhais",
+        "/tecnico-informatica-colombo",
+        "/tecnico-informatica-araucaria",
+        "/tecnico-informatica-campo-largo",
+        "/sobre",
+        "/status-da-ordem-de-servico",
+        "/depoimentos",
+        "/como-avaliar",
+        "/termos-e-condicoes",
+        "/politica-de-privacidade",
+        "/politica-de-cookies-e-anuncios",
+        "/status-de-anuncios",
+        "/anuncie",
+        "/midia-kit-tecnico-curitiba.pdf"
+      ],
+      "internal_link_count": 76,
+      "content_hash": "54c197fdbec728372c125f9e26a8f4dcc86bc7aa89b1b938c68f878e81485be6",
+      "fetched_at": "2026-08-26T17:50:08.399Z",
+      "live_validation": "PASS"
+    },
+    {
+      "url": "/problemas/wifi-caindo-toda-hora",
+      "batch": 1,
+      "primary_intent": "DIFERENCIAR_FALHA_DE_REDE",
+      "cluster": "WI-FI",
+      "http": 200,
+      "title": "Wi-Fi Caindo Toda Hora? Diagnóstico de Rede em Curitiba",
+      "description": "Wi-Fi que cai toda hora, sinal que some em um cômodo ou internet lenta só à noite: entenda a diferença entre falha do provedor, do roteador e da cobertura.",
+      "h1_count": 1,
+      "headings": [
+        {
+          "level": 1,
+          "text": "Wi-Fi caindo toda hora: provedor, roteador ou cobertura"
+        },
+        {
+          "level": 2,
+          "text": "Os três cenários por trás de &quot;o Wi-Fi cai&quot;"
+        },
+        {
+          "level": 2,
+          "text": "Sintomas que ajudam a separar as causas"
+        },
+        {
+          "level": 3,
+          "text": "Cai em todos os aparelhos ao mesmo tempo"
+        },
+        {
+          "level": 3,
+          "text": "Só um cômodo perde o sinal"
+        },
+        {
+          "level": 3,
+          "text": "Conecta, mas fica sem internet"
+        },
+        {
+          "level": 3,
+          "text": "Piora à noite e nos fins de semana"
+        },
+        {
+          "level": 3,
+          "text": "Chamada de vídeo trava mesmo com sinal cheio"
+        },
+        {
+          "level": 3,
+          "text": "Cai sempre que alguém liga um aparelho pesado"
+        },
+        {
+          "level": 2,
+          "text": "Causas possíveis, sem afirmar diagnóstico"
+        },
+        {
+          "level": 2,
+          "text": "O que você pode testar antes do atendimento"
+        },
+        {
+          "level": 2,
+          "text": "O que resolve cada tipo de causa"
+        },
+        {
+          "level": 3,
+          "text": "Reposicionamento e ajuste do roteador"
+        },
+        {
+          "level": 3,
+          "text": "Rede com pontos adicionais interligados"
+        },
+        {
+          "level": 3,
+          "text": "Cabeamento estruturado para pontos fixos"
+        },
+        {
+          "level": 3,
+          "text": "Separação de rede de casa e de trabalho"
+        },
+        {
+          "level": 2,
+          "text": "Critérios objetivos antes de você decidir"
+        },
+        {
+          "level": 3,
+          "text": "Avaliação no local"
+        },
+        {
+          "level": 3,
+          "text": "Sem venda casada"
+        },
+        {
+          "level": 3,
+          "text": "Garantia declarada"
+        },
+        {
+          "level": 2,
+          "text": "Serviços relacionados a este problema"
+        },
+        {
+          "level": 3,
+          "text": "Redes e Wi-Fi"
+        },
+        {
+          "level": 3,
+          "text": "Suporte técnico empresarial"
+        },
+        {
+          "level": 3,
+          "text": "Suporte para home office"
+        },
+        {
+          "level": 3,
+          "text": "Como funciona o atendimento"
+        },
+        {
+          "level": 2,
+          "text": "Perguntas frequentes"
+        },
+        {
+          "level": 3,
+          "text": "Wi-Fi caindo é sempre culpa do provedor?"
+        },
+        {
+          "level": 3,
+          "text": "Repetidor de sinal resolve?"
+        },
+        {
+          "level": 3,
+          "text": "Por que o sinal aparece cheio e mesmo assim trava?"
+        },
+        {
+          "level": 3,
+          "text": "Trocar o roteador da operadora por um melhor adianta?"
+        },
+        {
+          "level": 3,
+          "text": "Vocês atendem rede em apartamento?"
+        },
+        {
+          "level": 3,
+          "text": "Preciso comprar equipamento antes do atendimento?"
+        },
+        {
+          "level": 3,
+          "text": "Esse serviço é feito na minha casa ou por coleta?"
+        },
+        {
+          "level": 3,
+          "text": "Qual a garantia do serviço de rede?"
+        },
+        {
+          "level": 2,
+          "text": "Próximos passos"
+        },
+        {
+          "level": 2,
+          "text": "Descreva como a sua rede está caindo"
+        },
+        {
+          "level": 3,
+          "text": "Serviços"
+        },
+        {
+          "level": 3,
+          "text": "Atendimento"
+        },
+        {
+          "level": 3,
+          "text": "Regiões"
+        },
+        {
+          "level": 3,
+          "text": "Institucional"
+        }
+      ],
+      "word_count": 2076,
+      "answer_latency": "EXCELLENT",
+      "schemas": [
+        "Organization",
+        "WebSite",
+        "LocalBusiness",
+        "ProfessionalService",
+        "ComputerRepairService",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "internal_links": [
+        "/logo.webp",
+        "/assets/styles-DQ26NYR5.css",
+        "/assets/index-roJZwPv4.js",
+        "/assets/rolldown-runtime-hePW80VL.js",
+        "/assets/react-CwJFpaho.js",
+        "/assets/react-dom-DX3XddaT.js",
+        "/assets/link-Bq6WqGT3.js",
+        "/assets/jsx-runtime-NZYk81nU.js",
+        "/assets/siteConfig-D3NkB-tm.js",
+        "/assets/problemaPagesData-C4HVtkgt.js",
+        "/assets/wifiTvBairroData-DJcjzZUP.js",
+        "/assets/consolidatedLocalUrls-CsV1tY4t.js",
+        "/assets/problemas.wifi-caindo-toda-hora-BNFpKdMq.js",
+        "/assets/router-compat-DXSQEqSz.js",
+        "/assets/arrow-right-D0Ig8638.js",
+        "/assets/circle-check-DgC7xBEn.js",
+        "/assets/message-circle-BlGNFDwI.js",
+        "/assets/wifi-B67GD4lY.js",
+        "/assets/button-Cs_rTu4H.js",
+        "/assets/jsonLdSlots-DCBZQI4g.js",
+        "/assets/analytics-CqVltpIU.js",
+        "/assets/Header-DwkViz_I.js",
+        "/assets/Footer-Bm1USooy.js",
+        "/assets/RealImageSection-sv8JFKjq.js",
+        "/assets/Breadcrumbs-BVonttI8.js",
+        "/assets/PageSEO-B8N0ryLM.js",
+        "/assets/TrustStrip-Dakr8kmM.js",
+        "/assets/PageTableOfContents-C7_N6du_.js",
+        "/assets/ServicosCorrelatos-BDlQ8v1g.js",
+        "/assets/ProximosPassos-Bn_vbSG9.js",
+        "/assets/ProximosProblemas-BQO_icAU.js",
+        "/fonts/montserrat-var.woff2",
+        "/fonts/poppins-700.woff2",
+        "/apple-touch-icon-20260624.png",
+        "/manifest.json",
+        "/",
+        "/servicos",
+        "/como-funciona",
+        "/precos-e-politicas",
+        "/faq",
+        "/contato",
+        "/problemas",
+        "/servicos/redes-e-wifi",
+        "/servicos/suporte-tecnico-empresarial",
+        "/servicos/suporte-home-office",
+        "/guia-tecnico-informatica",
+        "/servicos/formatacao",
+        "/servicos/manutencao-de-notebook",
+        "/servicos/upgrade-ssd-ram",
+        "/servicos/remocao-de-virus",
+        "/servicos/recuperacao-de-dados",
+        "/atendimento-domicilio",
+        "/atendimento-remoto",
+        "/areas-atendidas",
+        "/tecnico-informatica-curitiba",
+        "/tecnico-informatica-sao-jose-pinhais",
+        "/tecnico-informatica-pinhais",
+        "/tecnico-informatica-colombo",
+        "/tecnico-informatica-araucaria",
+        "/tecnico-informatica-campo-largo",
+        "/sobre",
+        "/status-da-ordem-de-servico",
+        "/depoimentos",
+        "/como-avaliar",
+        "/termos-e-condicoes",
+        "/politica-de-privacidade",
+        "/politica-de-cookies-e-anuncios",
+        "/status-de-anuncios",
+        "/anuncie",
+        "/midia-kit-tecnico-curitiba.pdf"
+      ],
+      "internal_link_count": 70,
+      "content_hash": "6b74406b1d63f14622bee5a553786d3c43c39722b054ce633421626d6b221990",
+      "fetched_at": "2026-08-26T17:50:08.841Z",
+      "live_validation": "PASS"
+    },
+    {
+      "url": "/servicos/upgrade-ssd-ram",
+      "batch": 1,
+      "primary_intent": "DECIDIR_UPGRADE",
+      "cluster": "UPGRADES",
+      "http": 200,
+      "title": "Instalação de SSD e Upgrade de Memória em Curitiba",
+      "description": "Instalação de SSD e upgrade de memória RAM em Curitiba com avaliação de compatibilidade, clonagem e backup. Ganho real de desempenho, sem promessa de milagre.",
+      "h1_count": 1,
+      "headings": [
+        {
+          "level": 1,
+          "text": "Instalação de SSD e upgrade de memória RAM em Curitiba ganho real de desempenho"
+        },
+        {
+          "level": 2,
+          "text": "O que está incluso"
+        },
+        {
+          "level": 3,
+          "text": "Avaliação de compatibilidade"
+        },
+        {
+          "level": 3,
+          "text": "Instalação de SSD"
+        },
+        {
+          "level": 3,
+          "text": "Ampliação de memória"
+        },
+        {
+          "level": 3,
+          "text": "Clonagem do sistema"
+        },
+        {
+          "level": 3,
+          "text": "Backup preventivo"
+        },
+        {
+          "level": 3,
+          "text": "Teste de desempenho"
+        },
+        {
+          "level": 2,
+          "text": "Quando faz sentido chamar o técnico"
+        },
+        {
+          "level": 2,
+          "text": "Compatibilidade e limites do upgrade"
+        },
+        {
+          "level": 3,
+          "text": "Quando o upgrade pode ajudar"
+        },
+        {
+          "level": 3,
+          "text": "Compatibilidade antes da compra"
+        },
+        {
+          "level": 3,
+          "text": "O que ainda pode limitar o desempenho"
+        },
+        {
+          "level": 2,
+          "text": "Como funciona"
+        },
+        {
+          "level": 3,
+          "text": "Triagem"
+        },
+        {
+          "level": 3,
+          "text": "Avaliação"
+        },
+        {
+          "level": 3,
+          "text": "Orientação"
+        },
+        {
+          "level": 3,
+          "text": "Valor do atendimento"
+        },
+        {
+          "level": 3,
+          "text": "Execução"
+        },
+        {
+          "level": 3,
+          "text": "Entrega e validação"
+        },
+        {
+          "level": 2,
+          "text": "O que pode influenciar o valor"
+        },
+        {
+          "level": 3,
+          "text": "Capacidade das peças"
+        },
+        {
+          "level": 3,
+          "text": "Tipo de SSD"
+        },
+        {
+          "level": 3,
+          "text": "Clonagem ou reinstalação"
+        },
+        {
+          "level": 3,
+          "text": "Volume de dados"
+        },
+        {
+          "level": 3,
+          "text": "Compatibilidade do equipamento"
+        },
+        {
+          "level": 3,
+          "text": "Deslocamento"
+        },
+        {
+          "level": 2,
+          "text": "Atendimento residencial e empresarial em Curitiba e região"
+        },
+        {
+          "level": 3,
+          "text": "Residencial"
+        },
+        {
+          "level": 3,
+          "text": "Empresarial"
+        },
+        {
+          "level": 2,
+          "text": "SSD, RAM e armazenamento: o que cada sinal pode indicar"
+        },
+        {
+          "level": 2,
+          "text": "Antes de migrar para SSD ou ampliar a memória"
+        },
+        {
+          "level": 2,
+          "text": "Condições do atendimento de upgrade de ssd e memória ram"
+        },
+        {
+          "level": 2,
+          "text": "Conteúdo relacionado"
+        },
+        {
+          "level": 2,
+          "text": "Upgrade de SSD e memória RAM em Curitiba"
+        },
+        {
+          "level": 2,
+          "text": "Vale a pena dar upgrade no seu computador?"
+        },
+        {
+          "level": 2,
+          "text": "Perguntas frequentes"
+        },
+        {
+          "level": 3,
+          "text": "SSD deixa qualquer computador rápido?"
+        },
+        {
+          "level": 3,
+          "text": "Quantos gigabytes de memória eu preciso?"
+        },
+        {
+          "level": 3,
+          "text": "É possível manter meus arquivos?"
+        },
+        {
+          "level": 3,
+          "text": "Clonagem é sempre recomendada?"
+        },
+        {
+          "level": 3,
+          "text": "Notebook aceita qualquer SSD?"
+        },
+        {
+          "level": 3,
+          "text": "A peça está incluída?"
+        },
+        {
+          "level": 3,
+          "text": "Vale a pena fazer upgrade em computador antigo?"
+        },
+        {
+          "level": 3,
+          "text": "SSD ou RAM: qual upgrade fazer primeiro?"
+        },
+        {
+          "level": 3,
+          "text": "SSD vale a pena em notebook?"
+        },
+        {
+          "level": 3,
+          "text": "Qual a diferença real entre HD e SSD?"
+        },
+        {
+          "level": 3,
+          "text": "O serviço possui garantia?"
+        },
+        {
+          "level": 3,
+          "text": "Onde fazer upgrade de SSD em Curitiba?"
+        },
+        {
+          "level": 3,
+          "text": "O upgrade de SSD deixa o computador mais rápido mesmo?"
+        },
+        {
+          "level": 3,
+          "text": "Vou perder meus arquivos ao trocar para SSD?"
+        },
+        {
+          "level": 2,
+          "text": "Vamos resolver isso hoje?"
+        },
+        {
+          "level": 2,
+          "text": "Serviços relacionados"
+        },
+        {
+          "level": 2,
+          "text": "Atendimento local em Curitiba e região"
+        },
+        {
+          "level": 2,
+          "text": "Prova local: como o atendimento de Upgrade de SSD e Memória RAM acontece em Curitiba"
+        },
+        {
+          "level": 3,
+          "text": "Locais atendidos"
+        },
+        {
+          "level": 3,
+          "text": "Contexto do atendimento"
+        },
+        {
+          "level": 2,
+          "text": "Entenda Mais Sobre Nosso Atendimento"
+        },
+        {
+          "level": 3,
+          "text": "Como Funciona"
+        },
+        {
+          "level": 3,
+          "text": "Preços e Políticas"
+        },
+        {
+          "level": 3,
+          "text": "Diagnóstico Técnico"
+        },
+        {
+          "level": 3,
+          "text": "Equipamentos"
+        },
+        {
+          "level": 3,
+          "text": "Coleta e Entrega"
+        },
+        {
+          "level": 3,
+          "text": "Quando Não Compensa"
+        },
+        {
+          "level": 3,
+          "text": "Casos Reais"
+        },
+        {
+          "level": 3,
+          "text": "Contato"
+        },
+        {
+          "level": 2,
+          "text": "Nossos Serviços"
+        },
+        {
+          "level": 3,
+          "text": "Formatação"
+        },
+        {
+          "level": 3,
+          "text": "Manutenção de Notebook"
+        },
+        {
+          "level": 3,
+          "text": "Manutenção de Computador"
+        },
+        {
+          "level": 3,
+          "text": "Upgrade SSD/RAM"
+        },
+        {
+          "level": 3,
+          "text": "Remoção de Vírus"
+        },
+        {
+          "level": 3,
+          "text": "Recuperação de Dados"
+        },
+        {
+          "level": 3,
+          "text": "Redes e Wi-Fi"
+        },
+        {
+          "level": 3,
+          "text": "Suporte Empresarial"
+        },
+        {
+          "level": 2,
+          "text": "Regiões Atendidas"
+        },
+        {
+          "level": 2,
+          "text": "Problemas Mais Comuns"
+        },
+        {
+          "level": 3,
+          "text": "Serviços"
+        },
+        {
+          "level": 3,
+          "text": "Atendimento"
+        },
+        {
+          "level": 3,
+          "text": "Regiões"
+        },
+        {
+          "level": 3,
+          "text": "Institucional"
+        }
+      ],
+      "word_count": 2770,
+      "answer_latency": "EXCELLENT",
+      "schemas": [
+        "Organization",
+        "WebSite",
+        "LocalBusiness",
+        "ProfessionalService",
+        "ComputerRepairService",
+        "FAQPage",
+        "BreadcrumbList",
+        "Service"
+      ],
+      "internal_links": [
+        "/logo.webp",
+        "/assets/styles-DQ26NYR5.css",
+        "/assets/index-roJZwPv4.js",
+        "/assets/rolldown-runtime-hePW80VL.js",
+        "/assets/react-CwJFpaho.js",
+        "/assets/react-dom-DX3XddaT.js",
+        "/assets/link-Bq6WqGT3.js",
+        "/assets/jsx-runtime-NZYk81nU.js",
+        "/assets/siteConfig-D3NkB-tm.js",
+        "/assets/problemaPagesData-C4HVtkgt.js",
+        "/assets/wifiTvBairroData-DJcjzZUP.js",
+        "/assets/consolidatedLocalUrls-CsV1tY4t.js",
+        "/assets/servicos.upgrade-ssd-ram-CkEI7t6n.js",
+        "/assets/ServicoCore-BN3hpGW4.js",
+        "/fonts/montserrat-var.woff2",
+        "/fonts/poppins-700.woff2",
+        "/apple-touch-icon-20260624.png",
+        "/manifest.json",
+        "/",
+        "/servicos",
+        "/como-funciona",
+        "/precos-e-politicas",
+        "/faq",
+        "/contato",
+        "/termos-e-condicoes",
+        "/blog/como-escolher-uma-workstation",
+        "/problemas/notebook-lento",
+        "/problemas/computador-lento",
+        "/servicos/manutencao-de-notebook",
+        "/servicos/manutencao-de-computador",
+        "/servicos/formatacao",
+        "/servicos/montagem-de-pc",
+        "/servicos/recuperacao-de-dados",
+        "/quando-nao-compensa",
+        "/tecnico-informatica-curitiba",
+        "/empresa-de-ti-curitiba",
+        "/bairros/batel",
+        "/bairros/cic",
+        "/bairros/agua-verde",
+        "/bairros/centro",
+        "/bairros/portao",
+        "/tecnico-informatica-sao-jose-pinhais",
+        "/tecnico-informatica-pinhais",
+        "/tecnico-informatica-colombo",
+        "/tecnico-informatica-araucaria",
+        "/servicos/upgrade-ssd-memoria/reboucas",
+        "/bairros/uberaba",
+        "/bairros/xaxim",
+        "/bairros/bacacheri",
+        "/bairros/bigorrilho",
+        "/bairros/boa-vista",
+        "/diagnostico-tecnico",
+        "/equipamentos-atendidos",
+        "/coleta-e-entrega",
+        "/problemas-reais-e-casos",
+        "/servicos/remocao-de-virus",
+        "/servicos/redes-e-wifi",
+        "/servicos/suporte-tecnico-empresarial",
+        "/tecnico-informatica-campo-largo",
+        "/tecnico-informatica-fazenda-rio-grande",
+        "/tecnico-informatica-almirante-tamandare",
+        "/tecnico-informatica-piraquara",
+        "/tecnico-informatica-campo-magro",
+        "/tecnico-informatica-quatro-barras",
+        "/problemas/computador-nao-liga-curitiba",
+        "/problemas/computador-lento-curitiba",
+        "/problemas/computador-travando-curitiba",
+        "/problemas/computador-com-tela-preta-curitiba",
+        "/problemas/pc-superaquecendo-curitiba",
+        "/problemas/notebook-nao-liga-curitiba",
+        "/problemas/notebook-lento-curitiba",
+        "/problemas/notebook-com-agua-ou-liquido-curitiba",
+        "/problemas/notebook-com-tela-quebrada-curitiba",
+        "/problemas/tv-nao-liga-curitiba",
+        "/problemas/tv-com-som-sem-imagem-curitiba",
+        "/problemas/placa-mae-queimada",
+        "/problemas/gpu-desgastada",
+        "/problemas/upgrade-deu-problema",
+        "/problemas/computador-com-virus-curitiba",
+        "/problemas/windows-lento-curitiba"
+      ],
+      "internal_link_count": 95,
+      "content_hash": "065a80a71361b9c666e3bd72d693a3a36c85b978d924ad3b45ea45c3dda12c6d",
+      "fetched_at": "2026-08-26T17:50:08.947Z",
+      "live_validation": "PASS"
+    },
+    {
+      "url": "/servicos/manutencao-de-computador",
+      "batch": 1,
+      "primary_intent": "AVALIAR_MANUTENCAO",
+      "cluster": "MANUTENCAO",
+      "http": 200,
+      "title": "Assistência Técnica de Computador em Curitiba | PC",
+      "description": "Assistência técnica de computador em Curitiba: travamentos, fonte, memória, HD/SSD e placa-mãe. Casa e empresa.",
+      "h1_count": 1,
+      "headings": [
+        {
+          "level": 1,
+          "text": "Manutenção e assistência técnica de computador em Curitiba sem troca de peça desnecessária"
+        },
+        {
+          "level": 2,
+          "text": "O que está incluso"
+        },
+        {
+          "level": 3,
+          "text": "Diagnóstico completo"
+        },
+        {
+          "level": 3,
+          "text": "Limpeza interna"
+        },
+        {
+          "level": 3,
+          "text": "Travamentos e erros"
+        },
+        {
+          "level": 3,
+          "text": "Armazenamento"
+        },
+        {
+          "level": 3,
+          "text": "Energia"
+        },
+        {
+          "level": 3,
+          "text": "Teste final"
+        },
+        {
+          "level": 2,
+          "text": "Quando faz sentido chamar o técnico"
+        },
+        {
+          "level": 2,
+          "text": "Pontos de atenção antes de autorizar"
+        },
+        {
+          "level": 3,
+          "text": "O que verificamos"
+        },
+        {
+          "level": 3,
+          "text": "Quando o equipamento precisa de bancada"
+        },
+        {
+          "level": 3,
+          "text": "Peças e autorização"
+        },
+        {
+          "level": 2,
+          "text": "Como funciona"
+        },
+        {
+          "level": 3,
+          "text": "Triagem"
+        },
+        {
+          "level": 3,
+          "text": "Avaliação"
+        },
+        {
+          "level": 3,
+          "text": "Orientação"
+        },
+        {
+          "level": 3,
+          "text": "Valor do atendimento"
+        },
+        {
+          "level": 3,
+          "text": "Execução"
+        },
+        {
+          "level": 3,
+          "text": "Entrega e validação"
+        },
+        {
+          "level": 2,
+          "text": "O que pode influenciar o valor"
+        },
+        {
+          "level": 3,
+          "text": "Componente afetado"
+        },
+        {
+          "level": 3,
+          "text": "Necessidade de peça"
+        },
+        {
+          "level": 3,
+          "text": "Complexidade do reparo"
+        },
+        {
+          "level": 3,
+          "text": "Estado do sistema"
+        },
+        {
+          "level": 3,
+          "text": "Urgência"
+        },
+        {
+          "level": 3,
+          "text": "Deslocamento"
+        },
+        {
+          "level": 2,
+          "text": "Atendimento residencial e empresarial em Curitiba e região"
+        },
+        {
+          "level": 3,
+          "text": "Residencial"
+        },
+        {
+          "level": 3,
+          "text": "Empresarial"
+        },
+        {
+          "level": 2,
+          "text": "O que medimos antes de falar em orçamento"
+        },
+        {
+          "level": 3,
+          "text": "Alimentação e estabilidade"
+        },
+        {
+          "level": 3,
+          "text": "Memória e armazenamento"
+        },
+        {
+          "level": 3,
+          "text": "Térmica sob carga"
+        },
+        {
+          "level": 3,
+          "text": "Sistema e inicialização"
+        },
+        {
+          "level": 2,
+          "text": "Sintoma, causa provável e como confirmamos"
+        },
+        {
+          "level": 2,
+          "text": "O que este serviço não resolve"
+        },
+        {
+          "level": 3,
+          "text": "Fora do escopo"
+        },
+        {
+          "level": 3,
+          "text": "Quando não compensa"
+        },
+        {
+          "level": 2,
+          "text": "Condições do atendimento de manutenção de computador (desktop)"
+        },
+        {
+          "level": 2,
+          "text": "O que é manutenção de computador, na prática"
+        },
+        {
+          "level": 3,
+          "text": "O que está incluído em uma manutenção de computador?"
+        },
+        {
+          "level": 3,
+          "text": "O que diferencia manutenção preventiva de manutenção corretiva?"
+        },
+        {
+          "level": 2,
+          "text": "Como identificar o que o seu computador está pedindo"
+        },
+        {
+          "level": 3,
+          "text": "Como saber se o problema é do disco, da memória ou da fonte?"
+        },
+        {
+          "level": 3,
+          "text": "Como é feito o backup antes da manutenção?"
+        },
+        {
+          "level": 2,
+          "text": "Onde a manutenção acontece em Curitiba"
+        },
+        {
+          "level": 3,
+          "text": "Onde fazer manutenção de computador em Curitiba sem sair de casa?"
+        },
+        {
+          "level": 2,
+          "text": "Por que o computador piora com o tempo"
+        },
+        {
+          "level": 3,
+          "text": "Por que meu computador desliga sozinho quando abro jogos?"
+        },
+        {
+          "level": 3,
+          "text": "Por que a máquina fica lenta mesmo depois de formatar?"
+        },
+        {
+          "level": 2,
+          "text": "Manutenção e conserto de computador de mesa em Curitiba"
+        },
+        {
+          "level": 2,
+          "text": "Computador lento ou travando: quando é manutenção e quando é upgrade"
+        },
+        {
+          "level": 2,
+          "text": "Assistência técnica de computador para casa e empresa"
+        },
+        {
+          "level": 2,
+          "text": "Perguntas frequentes"
+        },
+        {
+          "level": 3,
+          "text": "Meu PC liga mas não dá imagem, o que pode ser?"
+        },
+        {
+          "level": 3,
+          "text": "O computador reinicia sozinho, é grave?"
+        },
+        {
+          "level": 3,
+          "text": "Vocês fazem limpeza e troca de pasta térmica?"
+        },
+        {
+          "level": 3,
+          "text": "Atendem em domicílio?"
+        },
+        {
+          "level": 3,
+          "text": "Vale a pena consertar um PC antigo?"
+        },
+        {
+          "level": 3,
+          "text": "Computador lento precisa ser formatado?"
+        },
+        {
+          "level": 3,
+          "text": "Como saber se o problema é fonte ou placa-mãe?"
+        },
+        {
+          "level": 3,
+          "text": "O computador pode ser avaliado no local?"
+        },
+        {
+          "level": 3,
+          "text": "Vale a pena trocar HD por SSD?"
+        },
+        {
+          "level": 3,
+          "text": "O diagnóstico inclui peças?"
+        },
+        {
+          "level": 3,
+          "text": "O serviço possui garantia?"
+        },
+        {
+          "level": 3,
+          "text": "Trocar a fonte resolve computador que desliga sozinho?"
+        },
+        {
+          "level": 3,
+          "text": "Limpeza interna resolve superaquecimento?"
+        },
+        {
+          "level": 3,
+          "text": "Vocês fazem manutenção de computador a domicílio em Curitiba?"
+        },
+        {
+          "level": 3,
+          "text": "Meu PC vive travando em Curitiba, o que pode ser?"
+        },
+        {
+          "level": 3,
+          "text": "A assistência técnica de computador atende empresas?"
+        },
+        {
+          "level": 3,
+          "text": "Quanto custa a manutenção de computador em Curitiba?"
+        },
+        {
+          "level": 2,
+          "text": "Vamos resolver isso hoje?"
+        },
+        {
+          "level": 2,
+          "text": "Serviços relacionados"
+        },
+        {
+          "level": 2,
+          "text": "Atendimento local em Curitiba e região"
+        },
+        {
+          "level": 2,
+          "text": "Prova local: como o atendimento de Manutenção de Computador (Desktop) acontece em Curitiba"
+        },
+        {
+          "level": 3,
+          "text": "Locais atendidos"
+        },
+        {
+          "level": 3,
+          "text": "Contexto do atendimento"
+        },
+        {
+          "level": 2,
+          "text": "Entenda Mais Sobre Nosso Atendimento"
+        },
+        {
+          "level": 3,
+          "text": "Como Funciona"
+        },
+        {
+          "level": 3,
+          "text": "Preços e Políticas"
+        },
+        {
+          "level": 3,
+          "text": "Diagnóstico Técnico"
+        },
+        {
+          "level": 3,
+          "text": "Equipamentos"
+        },
+        {
+          "level": 3,
+          "text": "Coleta e Entrega"
+        },
+        {
+          "level": 3,
+          "text": "Quando Não Compensa"
+        },
+        {
+          "level": 3,
+          "text": "Casos Reais"
+        },
+        {
+          "level": 3,
+          "text": "Contato"
+        },
+        {
+          "level": 2,
+          "text": "Nossos Serviços"
+        },
+        {
+          "level": 3,
+          "text": "Formatação"
+        },
+        {
+          "level": 3,
+          "text": "Manutenção de Notebook"
+        },
+        {
+          "level": 3,
+          "text": "Manutenção de Computador"
+        },
+        {
+          "level": 3,
+          "text": "Upgrade SSD/RAM"
+        },
+        {
+          "level": 3,
+          "text": "Remoção de Vírus"
+        },
+        {
+          "level": 3,
+          "text": "Recuperação de Dados"
+        },
+        {
+          "level": 3,
+          "text": "Redes e Wi-Fi"
+        },
+        {
+          "level": 3,
+          "text": "Suporte Empresarial"
+        },
+        {
+          "level": 2,
+          "text": "Regiões Atendidas"
+        },
+        {
+          "level": 2,
+          "text": "Problemas Mais Comuns"
+        },
+        {
+          "level": 3,
+          "text": "Serviços"
+        },
+        {
+          "level": 3,
+          "text": "Atendimento"
+        },
+        {
+          "level": 3,
+          "text": "Regiões"
+        },
+        {
+          "level": 3,
+          "text": "Institucional"
+        }
+      ],
+      "word_count": 3326,
+      "answer_latency": "EXCELLENT",
+      "schemas": [
+        "Organization",
+        "WebSite",
+        "LocalBusiness",
+        "ProfessionalService",
+        "ComputerRepairService",
+        "FAQPage",
+        "BreadcrumbList",
+        "Service"
+      ],
+      "internal_links": [
+        "/logo.webp",
+        "/assets/styles-DQ26NYR5.css",
+        "/assets/index-roJZwPv4.js",
+        "/assets/rolldown-runtime-hePW80VL.js",
+        "/assets/react-CwJFpaho.js",
+        "/assets/react-dom-DX3XddaT.js",
+        "/assets/link-Bq6WqGT3.js",
+        "/assets/jsx-runtime-NZYk81nU.js",
+        "/assets/siteConfig-D3NkB-tm.js",
+        "/assets/problemaPagesData-C4HVtkgt.js",
+        "/assets/wifiTvBairroData-DJcjzZUP.js",
+        "/assets/consolidatedLocalUrls-CsV1tY4t.js",
+        "/assets/servicos.manutencao-de-computador-CViKdcIU.js",
+        "/assets/ServicoCore-BN3hpGW4.js",
+        "/fonts/montserrat-var.woff2",
+        "/fonts/poppins-700.woff2",
+        "/apple-touch-icon-20260624.png",
+        "/manifest.json",
+        "/",
+        "/servicos",
+        "/como-funciona",
+        "/precos-e-politicas",
+        "/faq",
+        "/contato",
+        "/termos-e-condicoes",
+        "/servicos/formatacao",
+        "/servicos/montagem-de-pc",
+        "/servicos/upgrade-ssd-ram",
+        "/servicos/remocao-de-virus",
+        "/servicos/recuperacao-de-dados",
+        "/problemas/computador-lento",
+        "/problemas/computador-nao-liga",
+        "/empresa-de-ti-curitiba",
+        "/atendimento-domicilio",
+        "/tecnico-informatica-curitiba",
+        "/bairros/batel",
+        "/bairros/cic",
+        "/bairros/agua-verde",
+        "/bairros/centro",
+        "/bairros/portao",
+        "/tecnico-informatica-sao-jose-pinhais",
+        "/tecnico-informatica-pinhais",
+        "/tecnico-informatica-colombo",
+        "/tecnico-informatica-araucaria",
+        "/bairros/cabral",
+        "/bairros/cajuru",
+        "/bairros/campo-comprido",
+        "/bairros/capao-raso",
+        "/bairros/cristo-rei",
+        "/bairros/fazendinha",
+        "/diagnostico-tecnico",
+        "/equipamentos-atendidos",
+        "/coleta-e-entrega",
+        "/quando-nao-compensa",
+        "/problemas-reais-e-casos",
+        "/servicos/manutencao-de-notebook",
+        "/servicos/redes-e-wifi",
+        "/servicos/suporte-tecnico-empresarial",
+        "/tecnico-informatica-campo-largo",
+        "/tecnico-informatica-fazenda-rio-grande",
+        "/tecnico-informatica-almirante-tamandare",
+        "/tecnico-informatica-piraquara",
+        "/tecnico-informatica-campo-magro",
+        "/tecnico-informatica-quatro-barras",
+        "/problemas/computador-nao-liga-curitiba",
+        "/problemas/computador-lento-curitiba",
+        "/problemas/computador-travando-curitiba",
+        "/problemas/computador-com-tela-preta-curitiba",
+        "/problemas/pc-superaquecendo-curitiba",
+        "/problemas/notebook-nao-liga-curitiba",
+        "/problemas/notebook-lento-curitiba",
+        "/problemas/notebook-com-agua-ou-liquido-curitiba",
+        "/problemas/notebook-com-tela-quebrada-curitiba",
+        "/problemas/tv-nao-liga-curitiba",
+        "/problemas/tv-com-som-sem-imagem-curitiba",
+        "/problemas/placa-mae-queimada",
+        "/problemas/gpu-desgastada",
+        "/problemas/upgrade-deu-problema",
+        "/problemas/computador-com-virus-curitiba",
+        "/problemas/windows-lento-curitiba"
+      ],
+      "internal_link_count": 94,
+      "content_hash": "a97b86f77b263c2a589fbfb8529e54e53dc79c434d5e3ee77c2621711c0e8671",
+      "fetched_at": "2026-08-26T17:50:09.055Z",
+      "live_validation": "PASS"
+    },
+    {
+      "url": "/empresas",
+      "batch": 1,
+      "primary_intent": "SUPORTE_B2B",
+      "cluster": "B2B",
+      "http": 200,
+      "title": "Técnico em Curitiba | Assistência Técnica e Suporte Local",
+      "description": "Assistência técnica em Curitiba com diagnóstico honesto: atendimento a domicílio, remoto ou com coleta. Escolha o serviço e continue pelo WhatsApp.",
+      "h1_count": 1,
+      "headings": [
+        {
+          "level": 1,
+          "text": "Atendimento empresarial de TI em Curitiba"
+        },
+        {
+          "level": 2,
+          "text": "Necessidades empresariais mais comuns"
+        },
+        {
+          "level": 3,
+          "text": "Rede e Wi-Fi instáveis"
+        },
+        {
+          "level": 3,
+          "text": "Estações de trabalho lentas"
+        },
+        {
+          "level": 3,
+          "text": "Backup e continuidade"
+        },
+        {
+          "level": 2,
+          "text": "Solicitar atendimento empresarial"
+        },
+        {
+          "level": 2,
+          "text": "Como funciona da solicitação até a execução"
+        },
+        {
+          "level": 2,
+          "text": "Perguntas frequentes sobre atendimento empresarial"
+        },
+        {
+          "level": 3,
+          "text": "Serviços"
+        },
+        {
+          "level": 3,
+          "text": "Atendimento"
+        },
+        {
+          "level": 3,
+          "text": "Regiões"
+        },
+        {
+          "level": 3,
+          "text": "Institucional"
+        }
+      ],
+      "word_count": 591,
+      "answer_latency": "EXCELLENT",
+      "schemas": [],
+      "internal_links": [
+        "/logo.webp",
+        "/assets/styles-DQ26NYR5.css",
+        "/assets/index-roJZwPv4.js",
+        "/assets/rolldown-runtime-hePW80VL.js",
+        "/assets/react-CwJFpaho.js",
+        "/assets/react-dom-DX3XddaT.js",
+        "/assets/link-Bq6WqGT3.js",
+        "/assets/jsx-runtime-NZYk81nU.js",
+        "/assets/siteConfig-D3NkB-tm.js",
+        "/assets/problemaPagesData-C4HVtkgt.js",
+        "/assets/wifiTvBairroData-DJcjzZUP.js",
+        "/assets/consolidatedLocalUrls-CsV1tY4t.js",
+        "/assets/empresas-Bel7OL3z.js",
+        "/assets/router-compat-DXSQEqSz.js",
+        "/assets/arrow-right-D0Ig8638.js",
+        "/assets/tag-2f9kBqy6.js",
+        "/assets/circle-check-DgC7xBEn.js",
+        "/assets/message-circle-BlGNFDwI.js",
+        "/assets/network-Ba5xkcWz.js",
+        "/assets/shield-check-DSeaQ15I.js",
+        "/assets/button-Cs_rTu4H.js",
+        "/assets/jsonLdSlots-DCBZQI4g.js",
+        "/assets/analytics-CqVltpIU.js",
+        "/assets/textarea-CQp3WzAB.js",
+        "/assets/funnelAnalytics-4wxEG8Fn.js",
+        "/assets/input-CyFG4G73.js",
+        "/assets/Header-DwkViz_I.js",
+        "/assets/Footer-Bm1USooy.js",
+        "/assets/Breadcrumbs-BVonttI8.js",
+        "/assets/PageSEO-B8N0ryLM.js",
+        "/assets/label-_ZH_1Mpe.js",
+        "/assets/AnimatedSection-DGvwEI9s.js",
+        "/fonts/montserrat-var.woff2",
+        "/fonts/poppins-700.woff2",
+        "/apple-touch-icon-20260624.png",
+        "/manifest.json",
+        "/",
+        "/servicos",
+        "/como-funciona",
+        "/precos-e-politicas",
+        "/faq",
+        "/contato",
+        "/empresa-de-ti-curitiba",
+        "/servicos/formatacao",
+        "/servicos/manutencao-de-notebook",
+        "/servicos/upgrade-ssd-ram",
+        "/servicos/remocao-de-virus",
+        "/servicos/recuperacao-de-dados",
+        "/servicos/redes-e-wifi",
+        "/servicos/suporte-tecnico-empresarial",
+        "/atendimento-domicilio",
+        "/atendimento-remoto",
+        "/problemas",
+        "/areas-atendidas",
+        "/tecnico-informatica-curitiba",
+        "/tecnico-informatica-sao-jose-pinhais",
+        "/tecnico-informatica-pinhais",
+        "/tecnico-informatica-colombo",
+        "/tecnico-informatica-araucaria",
+        "/tecnico-informatica-campo-largo",
+        "/sobre",
+        "/status-da-ordem-de-servico",
+        "/depoimentos",
+        "/como-avaliar",
+        "/termos-e-condicoes",
+        "/politica-de-privacidade",
+        "/politica-de-cookies-e-anuncios",
+        "/status-de-anuncios",
+        "/anuncie",
+        "/midia-kit-tecnico-curitiba.pdf"
+      ],
+      "internal_link_count": 70,
+      "content_hash": "019e18f7267050bb2f4e340b5aa2e37098498a6afe4624423d83eeca25600744",
+      "fetched_at": "2026-08-26T17:50:09.182Z",
+      "live_validation": "PASS"
+    },
+    {
+      "url": "/problemas/notebook-desligando-sozinho",
+      "batch": 2,
+      "primary_intent": "ENTENDER_CAUSA",
+      "cluster": "NOTEBOOK",
+      "http": 200,
+      "title": "Notebook Desligando Sozinho: Causas | Curitiba",
+      "description": "Notebook desligando sozinho do nada, só em jogos ou quando tira da tomada? Veja como separar superaquecimento, bateria em fim de vida, carregador fraco e falha.",
+      "h1_count": 1,
+      "headings": [
+        {
+          "level": 1,
+          "text": "Notebook desligando sozinho: temperatura, bateria, carregador ou placa"
+        },
+        {
+          "level": 2,
+          "text": "O momento do desligamento resolve metade do caso"
+        },
+        {
+          "level": 2,
+          "text": "Sintomas e o que cada um costuma indicar"
+        },
+        {
+          "level": 3,
+          "text": "Desliga depois de alguns minutos ligado"
+        },
+        {
+          "level": 3,
+          "text": "Desliga só em jogos ou programas pesados"
+        },
+        {
+          "level": 3,
+          "text": "Desliga ao tirar da tomada"
+        },
+        {
+          "level": 3,
+          "text": "Desliga com estalo ou cheiro"
+        },
+        {
+          "level": 3,
+          "text": "Desliga em qualquer situação, sem padrão"
+        },
+        {
+          "level": 3,
+          "text": "Desliga e demora para religar"
+        },
+        {
+          "level": 2,
+          "text": "Causas mais comuns nos casos que recebemos"
+        },
+        {
+          "level": 2,
+          "text": "Verificações gratuitas antes de qualquer valor fechado"
+        },
+        {
+          "level": 2,
+          "text": "O que resolve cada cenário"
+        },
+        {
+          "level": 3,
+          "text": "Limpeza interna e troca de pasta térmica"
+        },
+        {
+          "level": 3,
+          "text": "Avaliação de bateria e carregador"
+        },
+        {
+          "level": 3,
+          "text": "Reparo do circuito de energia"
+        },
+        {
+          "level": 3,
+          "text": "Comparativo com o notebook que não liga"
+        },
+        {
+          "level": 2,
+          "text": "Critérios objetivos antes de você decidir"
+        },
+        {
+          "level": 3,
+          "text": "Medição, não suposição"
+        },
+        {
+          "level": 3,
+          "text": "Valor aprovado antes"
+        },
+        {
+          "level": 3,
+          "text": "Coleta e garantia"
+        },
+        {
+          "level": 2,
+          "text": "Perguntas frequentes"
+        },
+        {
+          "level": 3,
+          "text": "Notebook desligando sozinho é sempre superaquecimento?"
+        },
+        {
+          "level": 3,
+          "text": "Desliga só quando tiro da tomada. É a bateria?"
+        },
+        {
+          "level": 3,
+          "text": "Limpeza resolve mesmo ou é só paliativo?"
+        },
+        {
+          "level": 3,
+          "text": "Posso continuar usando enquanto não conserto?"
+        },
+        {
+          "level": 3,
+          "text": "Comprei um carregador genérico. Pode ser a causa?"
+        },
+        {
+          "level": 3,
+          "text": "Vale a pena consertar ou é melhor trocar de notebook?"
+        },
+        {
+          "level": 3,
+          "text": "Preciso levar o notebook até vocês?"
+        },
+        {
+          "level": 2,
+          "text": "Próximos passos"
+        },
+        {
+          "level": 2,
+          "text": "Diga em que momento ele desliga"
+        },
+        {
+          "level": 3,
+          "text": "Serviços"
+        },
+        {
+          "level": 3,
+          "text": "Atendimento"
+        },
+        {
+          "level": 3,
+          "text": "Regiões"
+        },
+        {
+          "level": 3,
+          "text": "Institucional"
+        }
+      ],
+      "word_count": 1684,
+      "answer_latency": "EXCELLENT",
+      "schemas": [
+        "Organization",
+        "WebSite",
+        "LocalBusiness",
+        "ProfessionalService",
+        "ComputerRepairService",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "internal_links": [
+        "/logo.webp",
+        "/assets/styles-DQ26NYR5.css",
+        "/assets/index-roJZwPv4.js",
+        "/assets/rolldown-runtime-hePW80VL.js",
+        "/assets/react-CwJFpaho.js",
+        "/assets/react-dom-DX3XddaT.js",
+        "/assets/link-Bq6WqGT3.js",
+        "/assets/jsx-runtime-NZYk81nU.js",
+        "/assets/siteConfig-D3NkB-tm.js",
+        "/assets/problemaPagesData-C4HVtkgt.js",
+        "/assets/wifiTvBairroData-DJcjzZUP.js",
+        "/assets/consolidatedLocalUrls-CsV1tY4t.js",
+        "/assets/problemas.notebook-desligando-sozinho-DFYz90my.js",
+        "/assets/router-compat-DXSQEqSz.js",
+        "/assets/arrow-right-D0Ig8638.js",
+        "/assets/circle-check-DgC7xBEn.js",
+        "/assets/message-circle-BlGNFDwI.js",
+        "/assets/power-off-Dqk1FjwP.js",
+        "/assets/button-Cs_rTu4H.js",
+        "/assets/jsonLdSlots-DCBZQI4g.js",
+        "/assets/analytics-CqVltpIU.js",
+        "/assets/Header-DwkViz_I.js",
+        "/assets/Footer-Bm1USooy.js",
+        "/assets/RealImageSection-sv8JFKjq.js",
+        "/assets/Breadcrumbs-BVonttI8.js",
+        "/assets/PageSEO-B8N0ryLM.js",
+        "/assets/TrustStrip-Dakr8kmM.js",
+        "/assets/PageTableOfContents-C7_N6du_.js",
+        "/assets/ProximosPassos-Bn_vbSG9.js",
+        "/assets/ProximosProblemas-BQO_icAU.js",
+        "/fonts/montserrat-var.woff2",
+        "/fonts/poppins-700.woff2",
+        "/apple-touch-icon-20260624.png",
+        "/manifest.json",
+        "/",
+        "/servicos",
+        "/como-funciona",
+        "/precos-e-politicas",
+        "/faq",
+        "/contato",
+        "/problemas",
+        "/problemas/notebook-superaquecendo",
+        "/problemas/notebook-nao-liga",
+        "/servicos/manutencao-de-notebook",
+        "/problemas/notebook-nao-carrega-bateria",
+        "/servicos/conserto-placa",
+        "/guia-tecnico-informatica",
+        "/servicos/formatacao",
+        "/servicos/upgrade-ssd-ram",
+        "/servicos/remocao-de-virus",
+        "/servicos/recuperacao-de-dados",
+        "/servicos/redes-e-wifi",
+        "/servicos/suporte-tecnico-empresarial",
+        "/atendimento-domicilio",
+        "/atendimento-remoto",
+        "/areas-atendidas",
+        "/tecnico-informatica-curitiba",
+        "/tecnico-informatica-sao-jose-pinhais",
+        "/tecnico-informatica-pinhais",
+        "/tecnico-informatica-colombo",
+        "/tecnico-informatica-araucaria",
+        "/tecnico-informatica-campo-largo",
+        "/sobre",
+        "/status-da-ordem-de-servico",
+        "/depoimentos",
+        "/como-avaliar",
+        "/termos-e-condicoes",
+        "/politica-de-privacidade",
+        "/politica-de-cookies-e-anuncios",
+        "/status-de-anuncios",
+        "/anuncie",
+        "/midia-kit-tecnico-curitiba.pdf"
+      ],
+      "internal_link_count": 72,
+      "content_hash": "0f12d1d6e00c099cca10ef1c9e6cf8847d9acf39d01bb06800220d7404eee84d",
+      "fetched_at": "2026-08-26T17:50:09.320Z",
+      "live_validation": "PASS"
+    },
+    {
+      "url": "/problemas/notebook-superaquecendo",
+      "batch": 2,
+      "primary_intent": "DIAGNOSTICAR_TEMPERATURA",
+      "cluster": "NOTEBOOK",
+      "http": 200,
+      "title": "Notebook Superaquecendo? Diagnóstico Técnico em Curitiba",
+      "description": "Notebook esquentando, com cooler acelerado ou desligando sozinho: entenda o que é temperatura normal, quais causas são de poeira, pasta térmica, uso ou falha.",
+      "h1_count": 1,
+      "headings": [
+        {
+          "level": 1,
+          "text": "Notebook superaquecendo: o que investigar antes de trocar qualquer peça"
+        },
+        {
+          "level": 2,
+          "text": "Quente ou superaquecendo? A diferença prática"
+        },
+        {
+          "level": 2,
+          "text": "Sintomas que ajudam a separar as causas"
+        },
+        {
+          "level": 3,
+          "text": "Base quente e cooler acelerado em uso leve"
+        },
+        {
+          "level": 3,
+          "text": "Desempenho cai depois de alguns minutos ligado"
+        },
+        {
+          "level": 3,
+          "text": "Desligamento repentino sob esforço"
+        },
+        {
+          "level": 3,
+          "text": "Cooler sempre no máximo, com ruído constante"
+        },
+        {
+          "level": 3,
+          "text": "Cooler silencioso demais e equipamento muito quente"
+        },
+        {
+          "level": 3,
+          "text": "Cheiro de plástico aquecido, deformação ou bateria estufada"
+        },
+        {
+          "level": 2,
+          "text": "Causas possíveis, sem afirmar diagnóstico"
+        },
+        {
+          "level": 2,
+          "text": "Quando o calor aparece: um quadro para localizar o seu caso"
+        },
+        {
+          "level": 2,
+          "text": "O que você pode observar antes do atendimento"
+        },
+        {
+          "level": 2,
+          "text": "O que resolve cada tipo de causa"
+        },
+        {
+          "level": 3,
+          "text": "Limpeza interna com troca de pasta térmica"
+        },
+        {
+          "level": 3,
+          "text": "Substituição de ventoinha"
+        },
+        {
+          "level": 3,
+          "text": "Revisão de carga de sistema e programas em segundo plano"
+        },
+        {
+          "level": 3,
+          "text": "Avaliação de bateria e alimentação"
+        },
+        {
+          "level": 3,
+          "text": "Reinstalação limpa quando o consumo vem do sistema"
+        },
+        {
+          "level": 2,
+          "text": "Quando parar de usar imediatamente"
+        },
+        {
+          "level": 2,
+          "text": "Como é feito o diagnóstico e o que influencia o valor"
+        },
+        {
+          "level": 2,
+          "text": "Sintomas relacionados"
+        },
+        {
+          "level": 2,
+          "text": "Critérios objetivos antes de você decidir"
+        },
+        {
+          "level": 3,
+          "text": "Processo em etapas"
+        },
+        {
+          "level": 3,
+          "text": "Tempo estimado"
+        },
+        {
+          "level": 3,
+          "text": "Garantia declarada"
+        },
+        {
+          "level": 2,
+          "text": "Serviços relacionados a este problema"
+        },
+        {
+          "level": 3,
+          "text": "Manutenção de notebook"
+        },
+        {
+          "level": 3,
+          "text": "Manutenção de computador"
+        },
+        {
+          "level": 3,
+          "text": "Upgrade de SSD e memória"
+        },
+        {
+          "level": 3,
+          "text": "Guia técnico de informática"
+        },
+        {
+          "level": 2,
+          "text": "Perguntas frequentes"
+        },
+        {
+          "level": 3,
+          "text": "Qual temperatura é considerada normal em um notebook?"
+        },
+        {
+          "level": 3,
+          "text": "Base de refrigeração resolve superaquecimento?"
+        },
+        {
+          "level": 3,
+          "text": "De quanto em quanto tempo o notebook precisa de limpeza interna?"
+        },
+        {
+          "level": 3,
+          "text": "Superaquecimento pode danificar o notebook de forma permanente?"
+        },
+        {
+          "level": 3,
+          "text": "Trocar a pasta térmica é arriscado?"
+        },
+        {
+          "level": 3,
+          "text": "Notebook desligando sozinho é sempre superaquecimento?"
+        },
+        {
+          "level": 3,
+          "text": "Usar o notebook na cama estraga o equipamento?"
+        },
+        {
+          "level": 3,
+          "text": "Preciso trocar a bateria se ela estiver estufada?"
+        },
+        {
+          "level": 3,
+          "text": "Meus arquivos correm risco durante a limpeza interna?"
+        },
+        {
+          "level": 3,
+          "text": "Notebook esquenta e desliga só em jogos. É defeito?"
+        },
+        {
+          "level": 3,
+          "text": "Por que o notebook esquenta mais quando está carregando?"
+        },
+        {
+          "level": 3,
+          "text": "O valor pode ser informado antes do diagnóstico?"
+        },
+        {
+          "level": 2,
+          "text": "Próximos passos"
+        },
+        {
+          "level": 2,
+          "text": "Descreva quando o notebook esquenta"
+        },
+        {
+          "level": 3,
+          "text": "Serviços"
+        },
+        {
+          "level": 3,
+          "text": "Atendimento"
+        },
+        {
+          "level": 3,
+          "text": "Regiões"
+        },
+        {
+          "level": 3,
+          "text": "Institucional"
+        }
+      ],
+      "word_count": 2941,
+      "answer_latency": "EXCELLENT",
+      "schemas": [
+        "Organization",
+        "WebSite",
+        "LocalBusiness",
+        "ProfessionalService",
+        "ComputerRepairService",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "internal_links": [
+        "/logo.webp",
+        "/assets/styles-DQ26NYR5.css",
+        "/assets/index-roJZwPv4.js",
+        "/assets/rolldown-runtime-hePW80VL.js",
+        "/assets/react-CwJFpaho.js",
+        "/assets/react-dom-DX3XddaT.js",
+        "/assets/link-Bq6WqGT3.js",
+        "/assets/jsx-runtime-NZYk81nU.js",
+        "/assets/siteConfig-D3NkB-tm.js",
+        "/assets/problemaPagesData-C4HVtkgt.js",
+        "/assets/wifiTvBairroData-DJcjzZUP.js",
+        "/assets/consolidatedLocalUrls-CsV1tY4t.js",
+        "/assets/problemas.notebook-superaquecendo-ByeS_AxL.js",
+        "/assets/router-compat-DXSQEqSz.js",
+        "/assets/arrow-right-D0Ig8638.js",
+        "/assets/circle-check-DgC7xBEn.js",
+        "/assets/gauge-CavGGnID.js",
+        "/assets/message-circle-BlGNFDwI.js",
+        "/assets/shield-check-DSeaQ15I.js",
+        "/assets/triangle-alert-QTI_PPKw.js",
+        "/assets/button-Cs_rTu4H.js",
+        "/assets/jsonLdSlots-DCBZQI4g.js",
+        "/assets/analytics-CqVltpIU.js",
+        "/assets/Header-DwkViz_I.js",
+        "/assets/Footer-Bm1USooy.js",
+        "/assets/RealImageSection-sv8JFKjq.js",
+        "/assets/Breadcrumbs-BVonttI8.js",
+        "/assets/PageSEO-B8N0ryLM.js",
+        "/assets/TrustStrip-Dakr8kmM.js",
+        "/assets/PageTableOfContents-C7_N6du_.js",
+        "/assets/ServicosCorrelatos-BDlQ8v1g.js",
+        "/assets/ProximosPassos-Bn_vbSG9.js",
+        "/assets/ProximosProblemas-BQO_icAU.js",
+        "/fonts/montserrat-var.woff2",
+        "/fonts/poppins-700.woff2",
+        "/apple-touch-icon-20260624.png",
+        "/manifest.json",
+        "/",
+        "/servicos",
+        "/como-funciona",
+        "/precos-e-politicas",
+        "/faq",
+        "/contato",
+        "/problemas",
+        "/servicos/manutencao-de-notebook",
+        "/servicos/remocao-de-virus",
+        "/servicos/formatacao",
+        "/servicos/recuperacao-de-dados",
+        "/quando-nao-compensa",
+        "/problemas/computador-lento",
+        "/problemas/tela-azul-windows",
+        "/problemas/notebook-nao-liga",
+        "/diagnostico-tecnico",
+        "/servicos/manutencao-de-computador",
+        "/servicos/upgrade-ssd-ram",
+        "/guia-tecnico-informatica",
+        "/servicos/redes-e-wifi",
+        "/servicos/suporte-tecnico-empresarial",
+        "/atendimento-domicilio",
+        "/atendimento-remoto",
+        "/areas-atendidas",
+        "/tecnico-informatica-curitiba",
+        "/tecnico-informatica-sao-jose-pinhais",
+        "/tecnico-informatica-pinhais",
+        "/tecnico-informatica-colombo",
+        "/tecnico-informatica-araucaria",
+        "/tecnico-informatica-campo-largo",
+        "/sobre",
+        "/status-da-ordem-de-servico",
+        "/depoimentos",
+        "/como-avaliar",
+        "/termos-e-condicoes",
+        "/politica-de-privacidade",
+        "/politica-de-cookies-e-anuncios",
+        "/status-de-anuncios",
+        "/anuncie",
+        "/midia-kit-tecnico-curitiba.pdf"
+      ],
+      "internal_link_count": 77,
+      "content_hash": "cd5f8f2d9484e6ea92326cebcb5cd278b1bc5519ae72934fd2fd445b0ea1a497",
+      "fetched_at": "2026-08-26T17:50:09.457Z",
+      "live_validation": "PASS"
+    },
+    {
+      "url": "/problemas/hd-nao-reconhecido",
+      "batch": 2,
+      "primary_intent": "PRESERVAR_DADOS",
+      "cluster": "ARMAZENAMENTO",
+      "http": 200,
+      "title": "HD ou SSD Não é Reconhecido: O Que Fazer | Curitiba",
+      "description": "O computador não reconhece o HD ou SSD? Entenda a diferença entre falha de cabo, de partição e de mecânica, por que insistir reduz a chance de recuperar arquivos.",
+      "h1_count": 1,
+      "headings": [
+        {
+          "level": 1,
+          "text": "HD ou SSD não reconhecido: o que fazer antes de perder os arquivos"
+        },
+        {
+          "level": 2,
+          "text": "Por que a ordem importa mais que a ferramenta"
+        },
+        {
+          "level": 2,
+          "text": "Sintomas e o que cada um costuma indicar"
+        },
+        {
+          "level": 3,
+          "text": "O disco some da BIOS"
+        },
+        {
+          "level": 3,
+          "text": "Aparece na BIOS, mas o Windows não abre"
+        },
+        {
+          "level": 3,
+          "text": "Pede formatação ao conectar"
+        },
+        {
+          "level": 3,
+          "text": "Clique ritmado ou zumbido no HD"
+        },
+        {
+          "level": 3,
+          "text": "Conecta, desconecta e reconecta sozinho"
+        },
+        {
+          "level": 3,
+          "text": "SSD desapareceu de uma vez, sem aviso"
+        },
+        {
+          "level": 2,
+          "text": "Causas mais comuns nos casos que recebemos"
+        },
+        {
+          "level": 2,
+          "text": "Sequência segura antes de qualquer tentativa"
+        },
+        {
+          "level": 2,
+          "text": "O que resolve cada cenário"
+        },
+        {
+          "level": 3,
+          "text": "Verificação de conexão e porta"
+        },
+        {
+          "level": 3,
+          "text": "Recuperação lógica de dados"
+        },
+        {
+          "level": 3,
+          "text": "Avaliação de falha física"
+        },
+        {
+          "level": 3,
+          "text": "Substituição por SSD e rotina de backup"
+        },
+        {
+          "level": 2,
+          "text": "Critérios objetivos antes de você decidir"
+        },
+        {
+          "level": 3,
+          "text": "Trabalho sobre cópia"
+        },
+        {
+          "level": 3,
+          "text": "Coleta e entrega"
+        },
+        {
+          "level": 3,
+          "text": "Sigilo dos seus dados"
+        },
+        {
+          "level": 2,
+          "text": "Perguntas frequentes"
+        },
+        {
+          "level": 3,
+          "text": "O computador pede para formatar o disco. Posso aceitar?"
+        },
+        {
+          "level": 3,
+          "text": "Como saber se o problema é o disco ou o computador?"
+        },
+        {
+          "level": 3,
+          "text": "Meu HD está fazendo barulho de clique. Isso tem conserto?"
+        },
+        {
+          "level": 3,
+          "text": "Programas de recuperação que eu baixo funcionam?"
+        },
+        {
+          "level": 3,
+          "text": "Quanto custa recuperar os dados?"
+        },
+        {
+          "level": 3,
+          "text": "Como o disco chega até vocês?"
+        },
+        {
+          "level": 3,
+          "text": "Os arquivos recuperados vêm de que forma?"
+        },
+        {
+          "level": 3,
+          "text": "Existe garantia em recuperação de dados?"
+        },
+        {
+          "level": 2,
+          "text": "Próximos passos"
+        },
+        {
+          "level": 2,
+          "text": "Conte o que aconteceu com o seu disco"
+        },
+        {
+          "level": 3,
+          "text": "Serviços"
+        },
+        {
+          "level": 3,
+          "text": "Atendimento"
+        },
+        {
+          "level": 3,
+          "text": "Regiões"
+        },
+        {
+          "level": 3,
+          "text": "Institucional"
+        }
+      ],
+      "word_count": 1956,
+      "answer_latency": "EXCELLENT",
+      "schemas": [
+        "Organization",
+        "WebSite",
+        "LocalBusiness",
+        "ProfessionalService",
+        "ComputerRepairService",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "internal_links": [
+        "/logo.webp",
+        "/assets/styles-DQ26NYR5.css",
+        "/assets/index-roJZwPv4.js",
+        "/assets/rolldown-runtime-hePW80VL.js",
+        "/assets/react-CwJFpaho.js",
+        "/assets/react-dom-DX3XddaT.js",
+        "/assets/link-Bq6WqGT3.js",
+        "/assets/jsx-runtime-NZYk81nU.js",
+        "/assets/siteConfig-D3NkB-tm.js",
+        "/assets/problemaPagesData-C4HVtkgt.js",
+        "/assets/wifiTvBairroData-DJcjzZUP.js",
+        "/assets/consolidatedLocalUrls-CsV1tY4t.js",
+        "/assets/problemas.hd-nao-reconhecido-CUUVLuSB.js",
+        "/assets/router-compat-DXSQEqSz.js",
+        "/assets/arrow-right-D0Ig8638.js",
+        "/assets/circle-check-DgC7xBEn.js",
+        "/assets/hard-drive-YG-cwiJL.js",
+        "/assets/message-circle-BlGNFDwI.js",
+        "/assets/button-Cs_rTu4H.js",
+        "/assets/jsonLdSlots-DCBZQI4g.js",
+        "/assets/analytics-CqVltpIU.js",
+        "/assets/Header-DwkViz_I.js",
+        "/assets/Footer-Bm1USooy.js",
+        "/assets/RealImageSection-sv8JFKjq.js",
+        "/assets/Breadcrumbs-BVonttI8.js",
+        "/assets/PageSEO-B8N0ryLM.js",
+        "/assets/TrustStrip-Dakr8kmM.js",
+        "/assets/PageTableOfContents-C7_N6du_.js",
+        "/assets/ProximosPassos-Bn_vbSG9.js",
+        "/assets/ProximosProblemas-BQO_icAU.js",
+        "/fonts/montserrat-var.woff2",
+        "/fonts/poppins-700.woff2",
+        "/apple-touch-icon-20260624.png",
+        "/manifest.json",
+        "/",
+        "/servicos",
+        "/como-funciona",
+        "/precos-e-politicas",
+        "/faq",
+        "/contato",
+        "/problemas",
+        "/servicos/recuperacao-de-dados",
+        "/servicos/manutencao-de-computador",
+        "/servicos/upgrade-ssd-ram",
+        "/guia-tecnico-informatica",
+        "/servicos/formatacao",
+        "/servicos/manutencao-de-notebook",
+        "/servicos/remocao-de-virus",
+        "/servicos/redes-e-wifi",
+        "/servicos/suporte-tecnico-empresarial",
+        "/atendimento-domicilio",
+        "/atendimento-remoto",
+        "/areas-atendidas",
+        "/tecnico-informatica-curitiba",
+        "/tecnico-informatica-sao-jose-pinhais",
+        "/tecnico-informatica-pinhais",
+        "/tecnico-informatica-colombo",
+        "/tecnico-informatica-araucaria",
+        "/tecnico-informatica-campo-largo",
+        "/sobre",
+        "/status-da-ordem-de-servico",
+        "/depoimentos",
+        "/como-avaliar",
+        "/termos-e-condicoes",
+        "/politica-de-privacidade",
+        "/politica-de-cookies-e-anuncios",
+        "/status-de-anuncios",
+        "/anuncie",
+        "/midia-kit-tecnico-curitiba.pdf"
+      ],
+      "internal_link_count": 69,
+      "content_hash": "6b636f8d67f02f59d420aba635231c54170e1649ad5b59af81d3c419cdd01ded",
+      "fetched_at": "2026-08-26T17:50:09.534Z",
+      "live_validation": "PASS"
+    },
+    {
+      "url": "/problemas/windows-nao-inicia",
+      "batch": 2,
+      "primary_intent": "RECUPERAR_BOOT",
+      "cluster": "WINDOWS",
+      "http": 200,
+      "title": "Windows Não Inicia: Como Recuperar o Sistema | Curitiba",
+      "description": "Windows travado no logo, reparo automático em loop ou mensagem de disco de inicialização não encontrado? Veja como separar falha de sistema, disco com setor ruim.",
+      "h1_count": 1,
+      "headings": [
+        {
+          "level": 1,
+          "text": "Windows não inicia: sistema, disco ou configuração de boot"
+        },
+        {
+          "level": 2,
+          "text": "A ordem certa de investigar um sistema que não carrega"
+        },
+        {
+          "level": 2,
+          "text": "Sintomas e o que cada um costuma indicar"
+        },
+        {
+          "level": 3,
+          "text": "Trava no logo do Windows com a bolinha girando"
+        },
+        {
+          "level": 3,
+          "text": "Reparo automático em loop"
+        },
+        {
+          "level": 3,
+          "text": "Mensagem de dispositivo de boot não encontrado"
+        },
+        {
+          "level": 3,
+          "text": "Tela preta com cursor piscando"
+        },
+        {
+          "level": 3,
+          "text": "Reinicia sozinho antes da tela de login"
+        },
+        {
+          "level": 3,
+          "text": "Erro logo após uma atualização"
+        },
+        {
+          "level": 2,
+          "text": "Causas mais comuns nos casos que recebemos"
+        },
+        {
+          "level": 2,
+          "text": "Verificações seguras antes de reinstalar qualquer sistema"
+        },
+        {
+          "level": 2,
+          "text": "O que resolve cada cenário"
+        },
+        {
+          "level": 3,
+          "text": "Recuperação do sistema sem perder arquivos"
+        },
+        {
+          "level": 3,
+          "text": "Cópia dos dados antes de qualquer intervenção"
+        },
+        {
+          "level": 3,
+          "text": "Troca de disco e migração"
+        },
+        {
+          "level": 3,
+          "text": "Quando o computador nem chega a ligar"
+        },
+        {
+          "level": 2,
+          "text": "Critérios objetivos antes de você decidir"
+        },
+        {
+          "level": 3,
+          "text": "Dados antes de sistema"
+        },
+        {
+          "level": 3,
+          "text": "Recusa declarada"
+        },
+        {
+          "level": 3,
+          "text": "Garantia do serviço executado"
+        },
+        {
+          "level": 2,
+          "text": "Perguntas frequentes"
+        },
+        {
+          "level": 3,
+          "text": "Windows não inicia significa que vou perder meus arquivos?"
+        },
+        {
+          "level": 3,
+          "text": "Formatar resolve o problema?"
+        },
+        {
+          "level": 3,
+          "text": "O que é o reparo automático em loop?"
+        },
+        {
+          "level": 3,
+          "text": "Pode ser problema de memória RAM?"
+        },
+        {
+          "level": 3,
+          "text": "Consigo resolver por atendimento remoto?"
+        },
+        {
+          "level": 3,
+          "text": "Vale a pena consertar um computador antigo com esse problema?"
+        },
+        {
+          "level": 3,
+          "text": "Como funciona o atendimento?"
+        },
+        {
+          "level": 2,
+          "text": "Próximos passos"
+        },
+        {
+          "level": 2,
+          "text": "Descreva a tela que aparece ao ligar"
+        },
+        {
+          "level": 3,
+          "text": "Serviços"
+        },
+        {
+          "level": 3,
+          "text": "Atendimento"
+        },
+        {
+          "level": 3,
+          "text": "Regiões"
+        },
+        {
+          "level": 3,
+          "text": "Institucional"
+        }
+      ],
+      "word_count": 1711,
+      "answer_latency": "EXCELLENT",
+      "schemas": [
+        "Organization",
+        "WebSite",
+        "LocalBusiness",
+        "ProfessionalService",
+        "ComputerRepairService",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "internal_links": [
+        "/logo.webp",
+        "/assets/styles-DQ26NYR5.css",
+        "/assets/index-roJZwPv4.js",
+        "/assets/rolldown-runtime-hePW80VL.js",
+        "/assets/react-CwJFpaho.js",
+        "/assets/react-dom-DX3XddaT.js",
+        "/assets/link-Bq6WqGT3.js",
+        "/assets/jsx-runtime-NZYk81nU.js",
+        "/assets/siteConfig-D3NkB-tm.js",
+        "/assets/problemaPagesData-C4HVtkgt.js",
+        "/assets/wifiTvBairroData-DJcjzZUP.js",
+        "/assets/consolidatedLocalUrls-CsV1tY4t.js",
+        "/assets/problemas.windows-nao-inicia-C-coLZ3a.js",
+        "/assets/router-compat-DXSQEqSz.js",
+        "/assets/arrow-right-D0Ig8638.js",
+        "/assets/circle-check-DgC7xBEn.js",
+        "/assets/hard-drive-YG-cwiJL.js",
+        "/assets/message-circle-BlGNFDwI.js",
+        "/assets/button-Cs_rTu4H.js",
+        "/assets/jsonLdSlots-DCBZQI4g.js",
+        "/assets/analytics-CqVltpIU.js",
+        "/assets/Header-DwkViz_I.js",
+        "/assets/Footer-Bm1USooy.js",
+        "/assets/RealImageSection-sv8JFKjq.js",
+        "/assets/Breadcrumbs-BVonttI8.js",
+        "/assets/PageSEO-B8N0ryLM.js",
+        "/assets/TrustStrip-Dakr8kmM.js",
+        "/assets/PageTableOfContents-C7_N6du_.js",
+        "/assets/ProximosPassos-Bn_vbSG9.js",
+        "/assets/ProximosProblemas-BQO_icAU.js",
+        "/fonts/montserrat-var.woff2",
+        "/fonts/poppins-700.woff2",
+        "/apple-touch-icon-20260624.png",
+        "/manifest.json",
+        "/",
+        "/servicos",
+        "/como-funciona",
+        "/precos-e-politicas",
+        "/faq",
+        "/contato",
+        "/problemas",
+        "/problemas/computador-desliga-sozinho",
+        "/problemas/computador-lento",
+        "/servicos/formatacao",
+        "/servicos/recuperacao-de-dados",
+        "/servicos/upgrade-ssd-ram",
+        "/problemas/computador-nao-liga",
+        "/guia-tecnico-informatica",
+        "/servicos/manutencao-de-notebook",
+        "/servicos/remocao-de-virus",
+        "/servicos/redes-e-wifi",
+        "/servicos/suporte-tecnico-empresarial",
+        "/atendimento-domicilio",
+        "/atendimento-remoto",
+        "/areas-atendidas",
+        "/tecnico-informatica-curitiba",
+        "/tecnico-informatica-sao-jose-pinhais",
+        "/tecnico-informatica-pinhais",
+        "/tecnico-informatica-colombo",
+        "/tecnico-informatica-araucaria",
+        "/tecnico-informatica-campo-largo",
+        "/sobre",
+        "/status-da-ordem-de-servico",
+        "/depoimentos",
+        "/como-avaliar",
+        "/termos-e-condicoes",
+        "/politica-de-privacidade",
+        "/politica-de-cookies-e-anuncios",
+        "/status-de-anuncios",
+        "/anuncie",
+        "/midia-kit-tecnico-curitiba.pdf"
+      ],
+      "internal_link_count": 71,
+      "content_hash": "999a64f37ff4e09669627af6177951554b1846b7dc034e3788e150c639c6d525",
+      "fetched_at": "2026-08-26T17:50:09.625Z",
+      "live_validation": "PASS"
+    },
+    {
+      "url": "/servicos/backup-para-empresas",
+      "batch": 2,
+      "primary_intent": "PROTEGER_DADOS_B2B",
+      "cluster": "BACKUP",
+      "http": 200,
+      "title": "Backup para Empresas em Curitiba | Proteção de Arquivos",
+      "description": "Backup para empresas em Curitiba: avaliação do que existe hoje, cópia local, cópia externa, nuvem, retenção, versionamento e teste de restauração.",
+      "h1_count": 1,
+      "headings": [
+        {
+          "level": 1,
+          "text": "Backup para empresas em Curitiba cópia separada e restauração testada"
+        },
+        {
+          "level": 2,
+          "text": "O que entra no escopo"
+        },
+        {
+          "level": 2,
+          "text": "Acessos e credenciais"
+        },
+        {
+          "level": 2,
+          "text": "Limites de sistemas de terceiros"
+        },
+        {
+          "level": 2,
+          "text": "O que está incluso"
+        },
+        {
+          "level": 3,
+          "text": "Diagnóstico do que existe"
+        },
+        {
+          "level": 3,
+          "text": "Mapa dos dados críticos"
+        },
+        {
+          "level": 3,
+          "text": "Cópia local"
+        },
+        {
+          "level": 3,
+          "text": "Cópia externa"
+        },
+        {
+          "level": 3,
+          "text": "Backup em nuvem"
+        },
+        {
+          "level": 3,
+          "text": "Frequência e retenção"
+        },
+        {
+          "level": 3,
+          "text": "Teste de restauração"
+        },
+        {
+          "level": 3,
+          "text": "Registro do processo"
+        },
+        {
+          "level": 2,
+          "text": "Quando faz sentido chamar o técnico"
+        },
+        {
+          "level": 2,
+          "text": "Como funciona"
+        },
+        {
+          "level": 3,
+          "text": "Triagem"
+        },
+        {
+          "level": 3,
+          "text": "Avaliação"
+        },
+        {
+          "level": 3,
+          "text": "Orientação"
+        },
+        {
+          "level": 3,
+          "text": "Valor do atendimento"
+        },
+        {
+          "level": 3,
+          "text": "Execução"
+        },
+        {
+          "level": 3,
+          "text": "Entrega e validação"
+        },
+        {
+          "level": 2,
+          "text": "O que pode influenciar o valor"
+        },
+        {
+          "level": 3,
+          "text": "Volume de dados"
+        },
+        {
+          "level": 3,
+          "text": "Número de origens"
+        },
+        {
+          "level": 3,
+          "text": "Camadas escolhidas"
+        },
+        {
+          "level": 3,
+          "text": "Frequência e retenção"
+        },
+        {
+          "level": 3,
+          "text": "Recursos já existentes"
+        },
+        {
+          "level": 3,
+          "text": "Teste e acompanhamento"
+        },
+        {
+          "level": 2,
+          "text": "Atendimento residencial e empresarial em Curitiba e região"
+        },
+        {
+          "level": 3,
+          "text": "Residencial"
+        },
+        {
+          "level": 3,
+          "text": "Empresarial"
+        },
+        {
+          "level": 2,
+          "text": "O que estruturamos na rotina de cópias"
+        },
+        {
+          "level": 3,
+          "text": "O que proteger"
+        },
+        {
+          "level": 3,
+          "text": "Onde copiar"
+        },
+        {
+          "level": 3,
+          "text": "Frequência e retenção"
+        },
+        {
+          "level": 3,
+          "text": "Restauração e responsabilidade"
+        },
+        {
+          "level": 2,
+          "text": "Sincronização, backup e recuperação não são a mesma coisa"
+        },
+        {
+          "level": 3,
+          "text": "Sincronização"
+        },
+        {
+          "level": 3,
+          "text": "Backup"
+        },
+        {
+          "level": 3,
+          "text": "Recuperação de dados"
+        },
+        {
+          "level": 2,
+          "text": "Como a rotina de backup é definida"
+        },
+        {
+          "level": 2,
+          "text": "Teste de restauração"
+        },
+        {
+          "level": 3,
+          "text": "O teste pode depender de"
+        },
+        {
+          "level": 2,
+          "text": "Quem responde por cada parte"
+        },
+        {
+          "level": 3,
+          "text": "Empresa"
+        },
+        {
+          "level": 3,
+          "text": "Técnico"
+        },
+        {
+          "level": 3,
+          "text": "Fornecedor externo"
+        },
+        {
+          "level": 2,
+          "text": "Limites declarados"
+        },
+        {
+          "level": 3,
+          "text": "O que não fazemos"
+        },
+        {
+          "level": 2,
+          "text": "Condições do atendimento de backup para empresas"
+        },
+        {
+          "level": 2,
+          "text": "Conteúdo relacionado"
+        },
+        {
+          "level": 2,
+          "text": "Quando backup não é a resposta certa"
+        },
+        {
+          "level": 2,
+          "text": "Cópia local, cópia externa e nuvem: o papel de cada uma"
+        },
+        {
+          "level": 2,
+          "text": "Sincronizar não é copiar: a confusão que mais causa perda de arquivo"
+        },
+        {
+          "level": 2,
+          "text": "Camadas de cópia, frequência e retenção no cenário de uma pequena empresa"
+        },
+        {
+          "level": 2,
+          "text": "Backup previne, recuperação de dados é a tentativa depois da perda"
+        },
+        {
+          "level": 2,
+          "text": "Perguntas frequentes"
+        },
+        {
+          "level": 3,
+          "text": "Google Drive ou OneDrive já são backup?"
+        },
+        {
+          "level": 3,
+          "text": "Quantas cópias a empresa deve ter?"
+        },
+        {
+          "level": 3,
+          "text": "O backup precisa ficar fora da empresa?"
+        },
+        {
+          "level": 3,
+          "text": "Como saber se a restauração funciona?"
+        },
+        {
+          "level": 3,
+          "text": "Backup protege contra ransomware?"
+        },
+        {
+          "level": 3,
+          "text": "Quem deve ter acesso?"
+        },
+        {
+          "level": 3,
+          "text": "O serviço inclui armazenamento?"
+        },
+        {
+          "level": 3,
+          "text": "Vocês garantem que os arquivos sempre voltam?"
+        },
+        {
+          "level": 3,
+          "text": "Backup atende às exigências da LGPD?"
+        },
+        {
+          "level": 3,
+          "text": "Com que frequência a cópia deve ser feita?"
+        },
+        {
+          "level": 3,
+          "text": "Sincronização em nuvem já é backup?"
+        },
+        {
+          "level": 3,
+          "text": "Com backup, ransomware deixa de ser um problema?"
+        },
+        {
+          "level": 2,
+          "text": "Quer organizar o suporte da sua empresa?"
+        },
+        {
+          "level": 2,
+          "text": "Serviços relacionados"
+        },
+        {
+          "level": 2,
+          "text": "Atendimento local em Curitiba e região"
+        },
+        {
+          "level": 2,
+          "text": "Prova local: como o atendimento de Backup para Empresas acontece em Curitiba"
+        },
+        {
+          "level": 3,
+          "text": "Locais atendidos"
+        },
+        {
+          "level": 3,
+          "text": "Contexto do atendimento"
+        },
+        {
+          "level": 2,
+          "text": "Entenda Mais Sobre Nosso Atendimento"
+        },
+        {
+          "level": 3,
+          "text": "Como Funciona"
+        },
+        {
+          "level": 3,
+          "text": "Preços e Políticas"
+        },
+        {
+          "level": 3,
+          "text": "Diagnóstico Técnico"
+        },
+        {
+          "level": 3,
+          "text": "Equipamentos"
+        },
+        {
+          "level": 3,
+          "text": "Coleta e Entrega"
+        },
+        {
+          "level": 3,
+          "text": "Quando Não Compensa"
+        },
+        {
+          "level": 3,
+          "text": "Casos Reais"
+        },
+        {
+          "level": 3,
+          "text": "Contato"
+        },
+        {
+          "level": 2,
+          "text": "Nossos Serviços"
+        },
+        {
+          "level": 3,
+          "text": "Formatação"
+        },
+        {
+          "level": 3,
+          "text": "Manutenção de Notebook"
+        },
+        {
+          "level": 3,
+          "text": "Manutenção de Computador"
+        },
+        {
+          "level": 3,
+          "text": "Upgrade SSD/RAM"
+        },
+        {
+          "level": 3,
+          "text": "Remoção de Vírus"
+        },
+        {
+          "level": 3,
+          "text": "Recuperação de Dados"
+        },
+        {
+          "level": 3,
+          "text": "Redes e Wi-Fi"
+        },
+        {
+          "level": 3,
+          "text": "Suporte Empresarial"
+        },
+        {
+          "level": 2,
+          "text": "Regiões Atendidas"
+        },
+        {
+          "level": 2,
+          "text": "Problemas Mais Comuns"
+        },
+        {
+          "level": 3,
+          "text": "Serviços"
+        },
+        {
+          "level": 3,
+          "text": "Atendimento"
+        },
+        {
+          "level": 3,
+          "text": "Regiões"
+        },
+        {
+          "level": 3,
+          "text": "Institucional"
+        }
+      ],
+      "word_count": 3540,
+      "answer_latency": "EXCELLENT",
+      "schemas": [
+        "Organization",
+        "WebSite",
+        "LocalBusiness",
+        "ProfessionalService",
+        "ComputerRepairService",
+        "FAQPage",
+        "BreadcrumbList",
+        "Service"
+      ],
+      "internal_links": [
+        "/logo.webp",
+        "/assets/styles-DQ26NYR5.css",
+        "/assets/index-roJZwPv4.js",
+        "/assets/rolldown-runtime-hePW80VL.js",
+        "/assets/react-CwJFpaho.js",
+        "/assets/react-dom-DX3XddaT.js",
+        "/assets/link-Bq6WqGT3.js",
+        "/assets/jsx-runtime-NZYk81nU.js",
+        "/assets/siteConfig-D3NkB-tm.js",
+        "/assets/problemaPagesData-C4HVtkgt.js",
+        "/assets/wifiTvBairroData-DJcjzZUP.js",
+        "/assets/consolidatedLocalUrls-CsV1tY4t.js",
+        "/assets/servicos.backup-para-empresas-BPORQi1P.js",
+        "/assets/ServicoCore-BN3hpGW4.js",
+        "/fonts/montserrat-var.woff2",
+        "/fonts/poppins-700.woff2",
+        "/apple-touch-icon-20260624.png",
+        "/manifest.json",
+        "/",
+        "/servicos",
+        "/como-funciona",
+        "/precos-e-politicas",
+        "/faq",
+        "/contato",
+        "/empresa-de-ti-curitiba",
+        "/termos-e-condicoes",
+        "/blog/organizacao-de-ti-para-pequenos-escritorios",
+        "/servicos/suporte-tecnico-empresarial",
+        "/servicos/recuperacao-de-dados",
+        "/servicos/manutencao-preventiva-empresas",
+        "/atendimento-remoto",
+        "/bairros/agua-verde",
+        "/bairros/bacacheri",
+        "/bairros/batel",
+        "/bairros/bigorrilho",
+        "/bairros/boa-vista",
+        "/bairros/boqueirao",
+        "/bairros/cabral",
+        "/bairros/cajuru",
+        "/diagnostico-tecnico",
+        "/equipamentos-atendidos",
+        "/coleta-e-entrega",
+        "/quando-nao-compensa",
+        "/problemas-reais-e-casos",
+        "/servicos/formatacao",
+        "/servicos/manutencao-de-notebook",
+        "/servicos/manutencao-de-computador",
+        "/servicos/upgrade-ssd-ram",
+        "/servicos/remocao-de-virus",
+        "/servicos/redes-e-wifi",
+        "/tecnico-informatica-curitiba",
+        "/tecnico-informatica-sao-jose-pinhais",
+        "/tecnico-informatica-araucaria",
+        "/tecnico-informatica-campo-largo",
+        "/tecnico-informatica-pinhais",
+        "/tecnico-informatica-colombo",
+        "/tecnico-informatica-fazenda-rio-grande",
+        "/tecnico-informatica-almirante-tamandare",
+        "/tecnico-informatica-piraquara",
+        "/tecnico-informatica-campo-magro",
+        "/tecnico-informatica-quatro-barras",
+        "/problemas/computador-nao-liga-curitiba",
+        "/problemas/computador-lento-curitiba",
+        "/problemas/computador-travando-curitiba",
+        "/problemas/computador-com-tela-preta-curitiba",
+        "/problemas/pc-superaquecendo-curitiba",
+        "/problemas/notebook-nao-liga-curitiba",
+        "/problemas/notebook-lento-curitiba",
+        "/problemas/notebook-com-agua-ou-liquido-curitiba",
+        "/problemas/notebook-com-tela-quebrada-curitiba",
+        "/problemas/tv-nao-liga-curitiba",
+        "/problemas/tv-com-som-sem-imagem-curitiba",
+        "/problemas/placa-mae-queimada",
+        "/problemas/gpu-desgastada",
+        "/problemas/upgrade-deu-problema",
+        "/problemas/computador-com-virus-curitiba",
+        "/problemas/windows-lento-curitiba",
+        "/problemas/vale-a-pena-consertar-computador",
+        "/problemas/assistencia-tecnica-urgente-curitiba",
+        "/atendimento-domicilio"
+      ],
+      "internal_link_count": 91,
+      "content_hash": "ea56bda2bd209a53230ef269fd08a8db8f3abe02627029ddd2e6daa2b88b776e",
+      "fetched_at": "2026-08-26T17:50:09.768Z",
+      "live_validation": "PASS"
+    }
+  ]
+}

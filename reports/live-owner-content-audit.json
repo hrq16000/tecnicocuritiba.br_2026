@@ -1,0 +1,85 @@
+{
+  "status": "PASS",
+  "owners": [
+    {
+      "url": "/problemas/computador-lento",
+      "answer_latency": "EXCELLENT",
+      "answer_first": true,
+      "diagnostic_or_decision_content": true,
+      "safety_review": "REQUIRED_BY_EDITORIAL_GATE",
+      "live_validation": "PASS"
+    },
+    {
+      "url": "/problemas/wifi-caindo-toda-hora",
+      "answer_latency": "EXCELLENT",
+      "answer_first": true,
+      "diagnostic_or_decision_content": true,
+      "safety_review": "REQUIRED_BY_EDITORIAL_GATE",
+      "live_validation": "PASS"
+    },
+    {
+      "url": "/servicos/upgrade-ssd-ram",
+      "answer_latency": "EXCELLENT",
+      "answer_first": true,
+      "diagnostic_or_decision_content": true,
+      "safety_review": "REQUIRED_BY_EDITORIAL_GATE",
+      "live_validation": "PASS"
+    },
+    {
+      "url": "/servicos/manutencao-de-computador",
+      "answer_latency": "EXCELLENT",
+      "answer_first": true,
+      "diagnostic_or_decision_content": true,
+      "safety_review": "REQUIRED_BY_EDITORIAL_GATE",
+      "live_validation": "PASS"
+    },
+    {
+      "url": "/empresas",
+      "answer_latency": "EXCELLENT",
+      "answer_first": true,
+      "diagnostic_or_decision_content": true,
+      "safety_review": "REQUIRED_BY_EDITORIAL_GATE",
+      "live_validation": "PASS"
+    },
+    {
+      "url": "/problemas/notebook-desligando-sozinho",
+      "answer_latency": "EXCELLENT",
+      "answer_first": true,
+      "diagnostic_or_decision_content": true,
+      "safety_review": "REQUIRED_BY_EDITORIAL_GATE",
+      "live_validation": "PASS"
+    },
+    {
+      "url": "/problemas/notebook-superaquecendo",
+      "answer_latency": "EXCELLENT",
+      "answer_first": true,
+      "diagnostic_or_decision_content": true,
+      "safety_review": "REQUIRED_BY_EDITORIAL_GATE",
+      "live_validation": "PASS"
+    },
+    {
+      "url": "/problemas/hd-nao-reconhecido",
+      "answer_latency": "EXCELLENT",
+      "answer_first": true,
+      "diagnostic_or_decision_content": true,
+      "safety_review": "REQUIRED_BY_EDITORIAL_GATE",
+      "live_validation": "PASS"
+    },
+    {
+      "url": "/problemas/windows-nao-inicia",
+      "answer_latency": "EXCELLENT",
+      "answer_first": true,
+      "diagnostic_or_decision_content": true,
+      "safety_review": "REQUIRED_BY_EDITORIAL_GATE",
+      "live_validation": "PASS"
+    },
+    {
+      "url": "/servicos/backup-para-empresas",
+      "answer_latency": "EXCELLENT",
+      "answer_first": true,
+      "diagnostic_or_decision_content": true,
+      "safety_review": "REQUIRED_BY_EDITORIAL_GATE",
+      "live_validation": "PASS"
+    }
+  ]
+}
