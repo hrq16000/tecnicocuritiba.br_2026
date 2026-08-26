@@ -17,6 +17,9 @@ const data = {
   pontosReferencia: ["Terminal Bairro Alto","Av. Paraná","Boa Vista (divisa)","Atuba (divisa)","Tarumã (divisa)","Cajuru (próx.)"],
   tempoDeslocamento: "Atendimento por agendamento",
   servicosDestaque: ["Formatação de computador","Remoção de vírus e malware","Conserto de notebook","Upgrade SSD e memória","Configuração de rede Wi-Fi","Backup e recuperação de dados"],
+  problemasComuns: ["Computador compartilhado pela família ficando lento ou sem espaço", "Notebook que não carrega, aquece ou desliga sozinho", "Wi-Fi com quedas em cômodos afastados", "Vírus, anúncios e navegador com comportamento inesperado"],
+  conteudoExclusivo: "No Bairro Alto, um mesmo computador pode ser usado para atividades de casa, estudo, trabalho e serviços digitais. Isso aumenta a importância de diferenciar lentidão causada por programas e armazenamento cheio de falhas reais de hardware. O diagnóstico verifica os sinais antes de indicar formatação, limpeza ou upgrade.\n\nQuando há suspeita de vírus, a avaliação também procura extensões, programas instalados sem consentimento e mudanças no navegador. Se a correção envolver reinstalação, identificamos antes os arquivos, contas e programas que precisam ser preservados. Para notebook que não carrega ou desliga sozinho, informamos se o caso exige avaliação de bateria, carregador, conector, ventilação ou bancada.\n\nEm redes domésticas, o objetivo é entender onde a conexão falha e quantos dispositivos dependem dela. Essa informação permite orientar a configuração e a cobertura sem transformar uma questão de sinal em uma compra desnecessária.",
+  dicasLocais: ["Não instale vários antivírus para tentar resolver anúncios ou lentidão; isso pode dificultar o diagnóstico.", "Em computador compartilhado, crie usuários separados quando possível para reduzir alterações acidentais.", "Se o notebook não carrega, teste outra tomada e relate se o indicador de carga acende."],
   indexavel: false,
 };
 
