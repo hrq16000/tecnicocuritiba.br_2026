@@ -1,0 +1,73 @@
+{
+  "release_id": "EDITORIAL_RELEASE_BATCH_1",
+  "status": "PUBLISHED_GOVERNANCE_RELEASE",
+  "authorized_by": "explicit_human_instruction",
+  "authorized_at": "2026-08-26T16:58:30.915Z",
+  "owners": [
+    {
+      "url": "/problemas/computador-lento",
+      "source_file": "src/pages/problemas/ComputadorLento.tsx",
+      "source_draft": "docs/staging-editorial/drafts/computador-lento.md",
+      "content_hash": "1e6e6a235ffaedef59dc99de03a630637723533d4510589aaffcb323ab2cb610",
+      "release_status": "PROMOTED_EXISTING_OWNER",
+      "d14": "HISTORICAL_ONLY",
+      "gsc": "NOT_COLLECTED",
+      "bing": "NOT_COLLECTED",
+      "public_url_changed_by_release": false
+    },
+    {
+      "url": "/problemas/wifi-caindo-toda-hora",
+      "source_file": "src/pages/problemas/WifiCaindoTodaHora.tsx",
+      "source_draft": "docs/staging-editorial/drafts/wifi-caindo.md",
+      "content_hash": "634cb33895c7480a229ca9f5c8bc0efc58a64947f53719bfec506bd0024bbcf2",
+      "release_status": "PROMOTED_EXISTING_OWNER",
+      "d14": "HISTORICAL_ONLY",
+      "gsc": "NOT_COLLECTED",
+      "bing": "NOT_COLLECTED",
+      "public_url_changed_by_release": false
+    },
+    {
+      "url": "/servicos/upgrade-ssd-ram",
+      "source_file": "src/routes/servicos.upgrade-ssd-ram.tsx",
+      "source_draft": "docs/staging-editorial/drafts/upgrade-ssd-ram.md",
+      "content_hash": "f9256b1f8af451da27496e5c0dcae4e6a842af1cc9d470a85d52ef06e895f2da",
+      "release_status": "PROMOTED_EXISTING_OWNER",
+      "d14": "HISTORICAL_ONLY",
+      "gsc": "NOT_COLLECTED",
+      "bing": "NOT_COLLECTED",
+      "public_url_changed_by_release": false
+    },
+    {
+      "url": "/servicos/manutencao-de-computador",
+      "source_file": "src/routes/servicos.manutencao-de-computador.tsx",
+      "source_draft": "docs/staging-editorial/drafts/manutencao-preventiva-o-que-faz-sentido.md",
+      "content_hash": "91c60f61dc99021090eaa925d9e8d36d24a95b689eb900df2bf33d393c926fb6",
+      "release_status": "PROMOTED_EXISTING_OWNER",
+      "d14": "HISTORICAL_ONLY",
+      "gsc": "NOT_COLLECTED",
+      "bing": "NOT_COLLECTED",
+      "public_url_changed_by_release": false
+    },
+    {
+      "url": "/empresas",
+      "source_file": "src/pages/Empresas.tsx",
+      "source_draft": "docs/staging-editorial/drafts/triagem-ti-pequena-empresa.md",
+      "content_hash": "26cf7c8453c0cb6da8b400a9b924cc5c423b463365c6894589a79b9676512d3e",
+      "release_status": "PROMOTED_EXISTING_OWNER",
+      "d14": "HISTORICAL_ONLY",
+      "gsc": "NOT_COLLECTED",
+      "bing": "NOT_COLLECTED",
+      "public_url_changed_by_release": false
+    }
+  ],
+  "historical_experiment": {
+    "d14": "PRESERVED_AND_NON_BLOCKING",
+    "gsc": "PRESERVED_AND_NOT_INVENTED",
+    "bing": "PRESERVED_AND_NOT_INVENTED"
+  },
+  "indexnow": {
+    "eligible": 0,
+    "submitted": 0,
+    "reason": "owner content already present; no new public URL diff in this release"
+  }
+}

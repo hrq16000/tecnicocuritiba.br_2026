@@ -1,0 +1,12 @@
+{
+  "type": "HUMAN_EDITORIAL_RELEASE_AUTHORIZATION",
+  "reason": "Editorial improvements are technically and editorially approved; D14/GSC/Bing evidence remains unavailable and will no longer block safe content publication.",
+  "scope": "EDITORIAL_CANARY_1_BATCH_1",
+  "maxOwners": 5,
+  "d14Fabricated": false,
+  "gscFabricated": false,
+  "bingFabricated": false,
+  "historicalSnapshotsPreserved": true,
+  "authorizationSource": "explicit_human_instruction",
+  "authorized": true
+}
