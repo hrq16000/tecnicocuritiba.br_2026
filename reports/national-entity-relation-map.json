@@ -1,0 +1,9 @@
+{
+  "status": "derived_from_public_html",
+  "relations": [
+    "poeira -> reduz fluxo de ar -> eleva temperatura -> pode causar throttling",
+    "armazenamento lento -> aumenta tempo de inicialização -> pode exigir diagnóstico de SSD/RAM",
+    "sinal Wi-Fi -> não equivale a velocidade da internet -> teste por cabo diferencia camadas",
+    "backup -> permite recuperação -> sincronização isolada não substitui cópia independente"
+  ]
+}

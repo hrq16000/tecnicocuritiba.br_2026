@@ -1,0 +1,139 @@
+{
+  "status": "audit_only",
+  "links": [
+    {
+      "source": "/problemas/computador-lento",
+      "target": "/servicos/upgrade-ssd-ram",
+      "type": "SERVICE_LINK",
+      "anchor": "contextual",
+      "user_value": "aprofundamento relacionado"
+    },
+    {
+      "source": "/problemas/computador-lento",
+      "target": "/servicos/manutencao-de-computador",
+      "type": "SERVICE_LINK",
+      "anchor": "contextual",
+      "user_value": "aprofundamento relacionado"
+    },
+    {
+      "source": "/problemas/wifi-caindo-toda-hora",
+      "target": "/servicos/upgrade-ssd-ram",
+      "type": "SERVICE_LINK",
+      "anchor": "contextual",
+      "user_value": "aprofundamento relacionado"
+    },
+    {
+      "source": "/servicos/upgrade-ssd-ram",
+      "target": "/problemas/computador-lento",
+      "type": "DIAGNOSTIC_LINK",
+      "anchor": "contextual",
+      "user_value": "aprofundamento relacionado"
+    },
+    {
+      "source": "/servicos/upgrade-ssd-ram",
+      "target": "/servicos/manutencao-de-computador",
+      "type": "SERVICE_LINK",
+      "anchor": "contextual",
+      "user_value": "aprofundamento relacionado"
+    },
+    {
+      "source": "/servicos/manutencao-de-computador",
+      "target": "/servicos/upgrade-ssd-ram",
+      "type": "SERVICE_LINK",
+      "anchor": "contextual",
+      "user_value": "aprofundamento relacionado"
+    },
+    {
+      "source": "/servicos/manutencao-de-computador",
+      "target": "/problemas/computador-lento",
+      "type": "DIAGNOSTIC_LINK",
+      "anchor": "contextual",
+      "user_value": "aprofundamento relacionado"
+    },
+    {
+      "source": "/empresas",
+      "target": "/servicos/upgrade-ssd-ram",
+      "type": "SERVICE_LINK",
+      "anchor": "contextual",
+      "user_value": "aprofundamento relacionado"
+    },
+    {
+      "source": "/problemas/notebook-desligando-sozinho",
+      "target": "/problemas/notebook-superaquecendo",
+      "type": "DIAGNOSTIC_LINK",
+      "anchor": "contextual",
+      "user_value": "aprofundamento relacionado"
+    },
+    {
+      "source": "/problemas/notebook-desligando-sozinho",
+      "target": "/servicos/upgrade-ssd-ram",
+      "type": "SERVICE_LINK",
+      "anchor": "contextual",
+      "user_value": "aprofundamento relacionado"
+    },
+    {
+      "source": "/problemas/notebook-superaquecendo",
+      "target": "/problemas/computador-lento",
+      "type": "DIAGNOSTIC_LINK",
+      "anchor": "contextual",
+      "user_value": "aprofundamento relacionado"
+    },
+    {
+      "source": "/problemas/notebook-superaquecendo",
+      "target": "/servicos/manutencao-de-computador",
+      "type": "SERVICE_LINK",
+      "anchor": "contextual",
+      "user_value": "aprofundamento relacionado"
+    },
+    {
+      "source": "/problemas/notebook-superaquecendo",
+      "target": "/servicos/upgrade-ssd-ram",
+      "type": "SERVICE_LINK",
+      "anchor": "contextual",
+      "user_value": "aprofundamento relacionado"
+    },
+    {
+      "source": "/problemas/hd-nao-reconhecido",
+      "target": "/servicos/manutencao-de-computador",
+      "type": "SERVICE_LINK",
+      "anchor": "contextual",
+      "user_value": "aprofundamento relacionado"
+    },
+    {
+      "source": "/problemas/hd-nao-reconhecido",
+      "target": "/servicos/upgrade-ssd-ram",
+      "type": "SERVICE_LINK",
+      "anchor": "contextual",
+      "user_value": "aprofundamento relacionado"
+    },
+    {
+      "source": "/problemas/windows-nao-inicia",
+      "target": "/problemas/computador-lento",
+      "type": "DIAGNOSTIC_LINK",
+      "anchor": "contextual",
+      "user_value": "aprofundamento relacionado"
+    },
+    {
+      "source": "/problemas/windows-nao-inicia",
+      "target": "/servicos/upgrade-ssd-ram",
+      "type": "SERVICE_LINK",
+      "anchor": "contextual",
+      "user_value": "aprofundamento relacionado"
+    },
+    {
+      "source": "/servicos/backup-para-empresas",
+      "target": "/servicos/manutencao-de-computador",
+      "type": "SERVICE_LINK",
+      "anchor": "contextual",
+      "user_value": "aprofundamento relacionado"
+    },
+    {
+      "source": "/servicos/backup-para-empresas",
+      "target": "/servicos/upgrade-ssd-ram",
+      "type": "SERVICE_LINK",
+      "anchor": "contextual",
+      "user_value": "aprofundamento relacionado"
+    }
+  ],
+  "new_public_urls": 0
+}

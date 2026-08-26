@@ -1,0 +1,55 @@
+{
+  "status": "derived_public_only",
+  "owners": [
+    {
+      "url": "/problemas/computador-lento",
+      "internal_link_count": 76,
+      "depth": "OWNER_RELATED"
+    },
+    {
+      "url": "/problemas/wifi-caindo-toda-hora",
+      "internal_link_count": 70,
+      "depth": "OWNER_RELATED"
+    },
+    {
+      "url": "/servicos/upgrade-ssd-ram",
+      "internal_link_count": 95,
+      "depth": "OWNER_RELATED"
+    },
+    {
+      "url": "/servicos/manutencao-de-computador",
+      "internal_link_count": 94,
+      "depth": "OWNER_RELATED"
+    },
+    {
+      "url": "/empresas",
+      "internal_link_count": 70,
+      "depth": "OWNER_RELATED"
+    },
+    {
+      "url": "/problemas/notebook-desligando-sozinho",
+      "internal_link_count": 72,
+      "depth": "OWNER_RELATED"
+    },
+    {
+      "url": "/problemas/notebook-superaquecendo",
+      "internal_link_count": 77,
+      "depth": "OWNER_RELATED"
+    },
+    {
+      "url": "/problemas/hd-nao-reconhecido",
+      "internal_link_count": 69,
+      "depth": "OWNER_RELATED"
+    },
+    {
+      "url": "/problemas/windows-nao-inicia",
+      "internal_link_count": 71,
+      "depth": "OWNER_RELATED"
+    },
+    {
+      "url": "/servicos/backup-para-empresas",
+      "internal_link_count": 91,
+      "depth": "OWNER_RELATED"
+    }
+  ]
+}

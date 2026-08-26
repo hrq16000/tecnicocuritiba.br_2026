@@ -1,0 +1,85 @@
+{
+  "status": "heuristic_public_graph",
+  "owners": [
+    {
+      "url": "/problemas/computador-lento",
+      "intent_fit": "PASS",
+      "answer_quality": "STRONG",
+      "internal_authority": "SUPPORTED",
+      "discovery": "STRONG",
+      "first_page_readiness": 100
+    },
+    {
+      "url": "/problemas/wifi-caindo-toda-hora",
+      "intent_fit": "PASS",
+      "answer_quality": "STRONG",
+      "internal_authority": "SUPPORTED",
+      "discovery": "STRONG",
+      "first_page_readiness": 100
+    },
+    {
+      "url": "/servicos/upgrade-ssd-ram",
+      "intent_fit": "PASS",
+      "answer_quality": "STRONG",
+      "internal_authority": "SUPPORTED",
+      "discovery": "STRONG",
+      "first_page_readiness": 100
+    },
+    {
+      "url": "/servicos/manutencao-de-computador",
+      "intent_fit": "PASS",
+      "answer_quality": "STRONG",
+      "internal_authority": "SUPPORTED",
+      "discovery": "STRONG",
+      "first_page_readiness": 100
+    },
+    {
+      "url": "/empresas",
+      "intent_fit": "PASS",
+      "answer_quality": "STRONG",
+      "internal_authority": "SUPPORTED",
+      "discovery": "REVIEW",
+      "first_page_readiness": 100
+    },
+    {
+      "url": "/problemas/notebook-desligando-sozinho",
+      "intent_fit": "PASS",
+      "answer_quality": "STRONG",
+      "internal_authority": "SUPPORTED",
+      "discovery": "STRONG",
+      "first_page_readiness": 100
+    },
+    {
+      "url": "/problemas/notebook-superaquecendo",
+      "intent_fit": "PASS",
+      "answer_quality": "STRONG",
+      "internal_authority": "SUPPORTED",
+      "discovery": "STRONG",
+      "first_page_readiness": 100
+    },
+    {
+      "url": "/problemas/hd-nao-reconhecido",
+      "intent_fit": "PASS",
+      "answer_quality": "STRONG",
+      "internal_authority": "SUPPORTED",
+      "discovery": "STRONG",
+      "first_page_readiness": 100
+    },
+    {
+      "url": "/problemas/windows-nao-inicia",
+      "intent_fit": "PASS",
+      "answer_quality": "STRONG",
+      "internal_authority": "SUPPORTED",
+      "discovery": "STRONG",
+      "first_page_readiness": 100
+    },
+    {
+      "url": "/servicos/backup-para-empresas",
+      "intent_fit": "PASS",
+      "answer_quality": "STRONG",
+      "internal_authority": "SUPPORTED",
+      "discovery": "STRONG",
+      "first_page_readiness": 100
+    }
+  ]
+}

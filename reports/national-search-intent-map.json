@@ -1,0 +1,163 @@
+{
+  "status": "derived_public_only",
+  "intents": [
+    {
+      "primary_owner": "/problemas/computador-lento",
+      "primary_intent": "INFORMACAO_TECNICA",
+      "secondary_support": [
+        "/servicos/upgrade-ssd-ram",
+        "/servicos/manutencao-de-computador"
+      ],
+      "related_owners": [
+        "/servicos/upgrade-ssd-ram",
+        "/servicos/manutencao-de-computador"
+      ],
+      "out_of_scope": [
+        "novas páginas locais",
+        "promessa de atendimento nacional"
+      ]
+    },
+    {
+      "primary_owner": "/problemas/wifi-caindo-toda-hora",
+      "primary_intent": "INFORMACAO_TECNICA",
+      "secondary_support": [
+        "/servicos/upgrade-ssd-ram"
+      ],
+      "related_owners": [
+        "/servicos/upgrade-ssd-ram"
+      ],
+      "out_of_scope": [
+        "novas páginas locais",
+        "promessa de atendimento nacional"
+      ]
+    },
+    {
+      "primary_owner": "/servicos/upgrade-ssd-ram",
+      "primary_intent": "SERVICO_COM_CONTEXTUALIZACAO",
+      "secondary_support": [
+        "/problemas/computador-lento",
+        "/servicos/manutencao-de-computador"
+      ],
+      "related_owners": [
+        "/problemas/computador-lento",
+        "/servicos/manutencao-de-computador"
+      ],
+      "out_of_scope": [
+        "novas páginas locais",
+        "promessa de atendimento nacional"
+      ]
+    },
+    {
+      "primary_owner": "/servicos/manutencao-de-computador",
+      "primary_intent": "SERVICO_COM_CONTEXTUALIZACAO",
+      "secondary_support": [
+        "/servicos/upgrade-ssd-ram",
+        "/problemas/computador-lento"
+      ],
+      "related_owners": [
+        "/servicos/upgrade-ssd-ram",
+        "/problemas/computador-lento"
+      ],
+      "out_of_scope": [
+        "novas páginas locais",
+        "promessa de atendimento nacional"
+      ]
+    },
+    {
+      "primary_owner": "/empresas",
+      "primary_intent": "SERVICO_COM_CONTEXTUALIZACAO",
+      "secondary_support": [
+        "/servicos/upgrade-ssd-ram"
+      ],
+      "related_owners": [
+        "/servicos/upgrade-ssd-ram"
+      ],
+      "out_of_scope": [
+        "novas páginas locais",
+        "promessa de atendimento nacional"
+      ]
+    },
+    {
+      "primary_owner": "/problemas/notebook-desligando-sozinho",
+      "primary_intent": "INFORMACAO_TECNICA",
+      "secondary_support": [
+        "/problemas/notebook-superaquecendo",
+        "/servicos/upgrade-ssd-ram"
+      ],
+      "related_owners": [
+        "/problemas/notebook-superaquecendo",
+        "/servicos/upgrade-ssd-ram"
+      ],
+      "out_of_scope": [
+        "novas páginas locais",
+        "promessa de atendimento nacional"
+      ]
+    },
+    {
+      "primary_owner": "/problemas/notebook-superaquecendo",
+      "primary_intent": "INFORMACAO_TECNICA",
+      "secondary_support": [
+        "/problemas/computador-lento",
+        "/servicos/manutencao-de-computador",
+        "/servicos/upgrade-ssd-ram"
+      ],
+      "related_owners": [
+        "/problemas/computador-lento",
+        "/servicos/manutencao-de-computador",
+        "/servicos/upgrade-ssd-ram"
+      ],
+      "out_of_scope": [
+        "novas páginas locais",
+        "promessa de atendimento nacional"
+      ]
+    },
+    {
+      "primary_owner": "/problemas/hd-nao-reconhecido",
+      "primary_intent": "INFORMACAO_TECNICA",
+      "secondary_support": [
+        "/servicos/manutencao-de-computador",
+        "/servicos/upgrade-ssd-ram"
+      ],
+      "related_owners": [
+        "/servicos/manutencao-de-computador",
+        "/servicos/upgrade-ssd-ram"
+      ],
+      "out_of_scope": [
+        "novas páginas locais",
+        "promessa de atendimento nacional"
+      ]
+    },
+    {
+      "primary_owner": "/problemas/windows-nao-inicia",
+      "primary_intent": "INFORMACAO_TECNICA",
+      "secondary_support": [
+        "/problemas/computador-lento",
+        "/servicos/upgrade-ssd-ram"
+      ],
+      "related_owners": [
+        "/problemas/computador-lento",
+        "/servicos/upgrade-ssd-ram"
+      ],
+      "out_of_scope": [
+        "novas páginas locais",
+        "promessa de atendimento nacional"
+      ]
+    },
+    {
+      "primary_owner": "/servicos/backup-para-empresas",
+      "primary_intent": "SERVICO_COM_CONTEXTUALIZACAO",
+      "secondary_support": [
+        "/servicos/manutencao-de-computador",
+        "/servicos/upgrade-ssd-ram"
+      ],
+      "related_owners": [
+        "/servicos/manutencao-de-computador",
+        "/servicos/upgrade-ssd-ram"
+      ],
+      "out_of_scope": [
+        "novas páginas locais",
+        "promessa de atendimento nacional"
+      ]
+    }
+  ]
+}

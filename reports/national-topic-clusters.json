@@ -1,0 +1,27 @@
+{
+  "status": "derived_public_only",
+  "clusters": {
+    "NOTEBOOK": [
+      "/problemas/notebook-desligando-sozinho",
+      "/problemas/notebook-superaquecendo"
+    ],
+    "WINDOWS": [
+      "/problemas/windows-nao-inicia"
+    ],
+    "DADOS": [
+      "/problemas/hd-nao-reconhecido",
+      "/servicos/backup-para-empresas"
+    ],
+    "PERFORMANCE": [
+      "/problemas/computador-lento",
+      "/servicos/upgrade-ssd-ram"
+    ],
+    "REDES": [
+      "/problemas/wifi-caindo-toda-hora"
+    ],
+    "B2B": [
+      "/empresas",
+      "/servicos/backup-para-empresas"
+    ]
+  }
+}

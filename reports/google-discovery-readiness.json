@@ -1,0 +1,105 @@
+{
+  "status": "derived_without_external_api",
+  "owners": [
+    {
+      "url": "/problemas/computador-lento",
+      "http": 200,
+      "ssr": true,
+      "canonical": true,
+      "indexable": true,
+      "sitemap": "preserve_existing",
+      "internal_links": 76,
+      "status": "STRONG"
+    },
+    {
+      "url": "/problemas/wifi-caindo-toda-hora",
+      "http": 200,
+      "ssr": true,
+      "canonical": true,
+      "indexable": true,
+      "sitemap": "preserve_existing",
+      "internal_links": 70,
+      "status": "STRONG"
+    },
+    {
+      "url": "/servicos/upgrade-ssd-ram",
+      "http": 200,
+      "ssr": true,
+      "canonical": true,
+      "indexable": true,
+      "sitemap": "preserve_existing",
+      "internal_links": 95,
+      "status": "STRONG"
+    },
+    {
+      "url": "/servicos/manutencao-de-computador",
+      "http": 200,
+      "ssr": true,
+      "canonical": true,
+      "indexable": true,
+      "sitemap": "preserve_existing",
+      "internal_links": 94,
+      "status": "STRONG"
+    },
+    {
+      "url": "/empresas",
+      "http": 200,
+      "ssr": true,
+      "canonical": false,
+      "indexable": true,
+      "sitemap": "preserve_existing",
+      "internal_links": 70,
+      "status": "REVIEW"
+    },
+    {
+      "url": "/problemas/notebook-desligando-sozinho",
+      "http": 200,
+      "ssr": true,
+      "canonical": true,
+      "indexable": true,
+      "sitemap": "preserve_existing",
+      "internal_links": 72,
+      "status": "STRONG"
+    },
+    {
+      "url": "/problemas/notebook-superaquecendo",
+      "http": 200,
+      "ssr": true,
+      "canonical": true,
+      "indexable": true,
+      "sitemap": "preserve_existing",
+      "internal_links": 77,
+      "status": "STRONG"
+    },
+    {
+      "url": "/problemas/hd-nao-reconhecido",
+      "http": 200,
+      "ssr": true,
+      "canonical": true,
+      "indexable": true,
+      "sitemap": "preserve_existing",
+      "internal_links": 69,
+      "status": "STRONG"
+    },
+    {
+      "url": "/problemas/windows-nao-inicia",
+      "http": 200,
+      "ssr": true,
+      "canonical": true,
+      "indexable": true,
+      "sitemap": "preserve_existing",
+      "internal_links": 71,
+      "status": "STRONG"
+    },
+    {
+      "url": "/servicos/backup-para-empresas",
+      "http": 200,
+      "ssr": true,
+      "canonical": true,
+      "indexable": true,
+      "sitemap": "preserve_existing",
+      "internal_links": 91,
+      "status": "STRONG"
+    }
+  ]
+}
