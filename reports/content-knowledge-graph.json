@@ -1,0 +1,22 @@
+{
+  "status": "staging_only",
+  "scope": "Seed graph for editorial review; not public JSON-LD.",
+  "nodes": [
+    { "id": "problem:notebook-nao-liga", "type": "problem" },
+    { "id": "problem:computador-lento", "type": "problem" },
+    { "id": "problem:wifi-instavel", "type": "problem" },
+    { "id": "service:manutencao-computador", "type": "service" },
+    { "id": "service:redes-wifi", "type": "service" },
+    { "id": "concept:backup", "type": "procedure" },
+    { "id": "concept:ssd", "type": "equipment" },
+    { "id": "decision:avaliacao-presencial", "type": "decision" }
+  ],
+  "edges": [
+    { "from": "problem:notebook-nao-liga", "to": "concept:backup", "relation": "requires_data_risk_warning" },
+    { "from": "problem:notebook-nao-liga", "to": "decision:avaliacao-presencial", "relation": "may_require" },
+    { "from": "problem:computador-lento", "to": "concept:ssd", "relation": "may_be_related_to" },
+    { "from": "problem:computador-lento", "to": "service:manutencao-computador", "relation": "may_lead_to" },
+    { "from": "problem:wifi-instavel", "to": "service:redes-wifi", "relation": "may_lead_to" },
+    { "from": "problem:wifi-instavel", "to": "decision:avaliacao-presencial", "relation": "depends_on_evidence" }
+  ]
+}

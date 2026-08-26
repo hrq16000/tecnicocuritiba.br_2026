@@ -48,6 +48,7 @@
     "indexnow:ping": "node scripts/indexnow-ping.mjs",
     "check:cta-funnel": "bun scripts/check-cta-funnel.ts",
     "check:editorial-governance": "node scripts/check-editorial-governance.mjs",
+    "check:editorial-quality": "node scripts/check-editorial-quality.mjs",
     "check:editorial-pilot": "node scripts/check-editorial-pilot.mjs",
     "check:editorial-technical-review": "node scripts/check-editorial-technical-review.mjs",
     "check:ficha-comercial": "node scripts/check-ficha-comercial.mjs",
