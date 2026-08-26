@@ -18,6 +18,7 @@ const normalizar = (s: string) =>
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "")
     .replace(/\(.*?\)/g, " ")
+    .replace(/\b(divisa|proximo|proxima|prox)\b/g, " ")
     .replace(/[^a-z0-9]+/g, " ")
     .trim();
 
@@ -29,6 +30,11 @@ const APELIDOS: Record<string, string> = {
   centro: "centro",
   "centro de curitiba": "centro",
   "sitio cercado": "sitio-cercado",
+  "terminal portao": "portao",
+  "avenida winston churchill": "portao",
+  "av winston churchill": "portao",
+  "winston churchill": "portao",
+  "terminal capao raso": "capao-raso",
 };
 
 const INDICE = new Map<string, string>();

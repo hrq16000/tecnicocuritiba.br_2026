@@ -12,6 +12,7 @@ import { Footer } from "@/components/Footer";
 import { BlocoInteligencia } from "@/components/BlocoInteligencia";
 import { WhatsAppChat } from "@/components/WhatsAppChat";
 import { BairroInterlinkLocal } from "@/components/areas/BairroInterlinkLocal";
+import { bairroPathPorNome } from "@/lib/bairroLinks";
 import { REGIOES_COBERTURA } from "@/lib/bairrosBaseline";
 import { whatsappDeepLink } from "@/lib/whatsappDeepLink";
 import { JsonLdSchema } from "@/components/JsonLdSchema";
@@ -59,6 +60,18 @@ interface BairroData {
 interface BairroTemplateProps {
   data: BairroData;
 }
+
+const servicePath = (label: string) => {
+  const key = label.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+  if (key.includes("format")) return "/servicos/formatacao";
+  if (key.includes("virus") || key.includes("malware")) return "/servicos/remocao-de-virus";
+  if (key.includes("ssd") || key.includes("memoria")) return "/servicos/upgrade-ssd-ram";
+  if (key.includes("notebook")) return "/servicos/manutencao-de-notebook";
+  if (key.includes("backup") || key.includes("recuperacao")) return "/servicos/recuperacao-de-dados";
+  if (key.includes("wifi") || key.includes("rede")) return "/servicos/redes-e-wifi";
+  if (key.includes("computador") || key.includes("manutencao")) return "/servicos/manutencao-de-computador";
+  return null;
+};
 
 export const BairroTemplate = ({ data }: BairroTemplateProps) => {
   const whatsappUrl = whatsappDeepLink({
@@ -277,16 +290,20 @@ export const BairroTemplate = ({ data }: BairroTemplateProps) => {
                         Regiões Atendidas Próximas:
                       </h3>
                       <div className="flex flex-wrap gap-2">
-                        {data.pontosReferencia.map((ponto, index) => (
-                          <span 
-                            key={index} 
-                            className="bg-secondary text-muted-foreground px-3 py-1.5 rounded-full text-sm border border-border hover:border-accent/30 hover:bg-accent/5 transition-colors stagger-item"
-                            style={{ animationDelay: `${index * 60}ms` }}
-                          >
-                            <MapPin className="inline h-3 w-3 mr-1 text-accent" />
-                            {ponto}
-                          </span>
-                        ))}
+                        {data.pontosReferencia.map((ponto, index) => {
+                          const destino = bairroPathPorNome(ponto);
+                          const classes = "inline-flex items-center bg-secondary text-muted-foreground px-3 py-1.5 rounded-full text-sm border border-border hover:border-accent/50 hover:bg-accent/5 hover:text-accent transition-colors stagger-item";
+                          const conteudo = <><MapPin className="h-3 w-3 mr-1 text-accent" />{ponto}</>;
+                          return destino ? (
+                            <Link key={index} to={destino} className={classes} style={{ animationDelay: `${index * 60}ms` }}>
+                              {conteudo}
+                            </Link>
+                          ) : (
+                            <span key={index} className={classes} style={{ animationDelay: `${index * 60}ms` }}>
+                              {conteudo}
+                            </span>
+                          );
+                        })}
                       </div>
                     </div>
                   </div>
@@ -305,15 +322,15 @@ export const BairroTemplate = ({ data }: BairroTemplateProps) => {
                             style={{ animationDelay: `${index * 80}ms` }}
                           >
                             <CheckCircle className="h-5 w-5 text-accent flex-shrink-0" />
-                            <a
-                              href={whatsappDeepLink({ local: data.nome, servico })}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              onClick={handleWhatsAppClick}
-                              className="text-foreground underline-offset-4 hover:text-accent hover:underline"
-                            >
-                              {servico}
-                            </a>
+                            {servicePath(servico) ? (
+                              <Link to={servicePath(servico)!} className="text-foreground underline-offset-4 hover:text-accent hover:underline">
+                                {servico}
+                              </Link>
+                            ) : (
+                              <a href={whatsappDeepLink({ local: data.nome, servico })} target="_blank" rel="noopener noreferrer" onClick={handleWhatsAppClick} className="text-foreground underline-offset-4 hover:text-accent hover:underline">
+                                {servico}
+                              </a>
+                            )}
                           </li>
                         ))}
                       </ul>
@@ -404,6 +421,27 @@ export const BairroTemplate = ({ data }: BairroTemplateProps) => {
                     Atendemos com horário agendado e resolvemos a maioria dos casos na primeira visita.
                   </p>
                 </div>
+
+                <section aria-labelledby="rotas-tecnicas" className="mb-8 rounded-xl border border-border bg-card p-6 md:p-8">
+                  <h3 id="rotas-tecnicas" className="text-xl font-bold text-foreground">Entenda o sintoma antes de decidir</h3>
+                  <p className="mt-2 text-sm text-muted-foreground">
+                    Cada falha tem causas diferentes. Estes guias ajudam a separar uma configuração simples de um caso que precisa de diagnóstico, coleta ou bancada.
+                  </p>
+                  <div className="mt-5 grid gap-3 sm:grid-cols-2">
+                    {[
+                      { to: "/problemas/computador-lento", title: "Computador lento", desc: "HD, memória, programas ou aquecimento: veja por onde começar." },
+                      { to: "/problemas/notebook-superaquecendo", title: "Notebook superaquecendo", desc: "Entenda riscos, sinais de parada e opções de manutenção." },
+                      { to: "/problemas/computador-nao-liga", title: "Computador não liga", desc: "Fonte, cabo, memória ou placa: confira verificações seguras." },
+                      { to: "/problemas/tela-azul-windows", title: "Tela azul no Windows", desc: "Erros de driver, disco e memória exigem abordagens diferentes." },
+                    ].map((item) => (
+                      <Link key={item.to} to={item.to} className="group rounded-lg border border-border/70 p-4 transition-colors hover:border-accent/50 hover:bg-accent/5">
+                        <span className="font-semibold text-foreground group-hover:text-accent">{item.title}</span>
+                        <span className="mt-1 block text-sm text-muted-foreground">{item.desc}</span>
+                        <span className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-accent">Ver diagnóstico <ArrowRight className="h-3.5 w-3.5" /></span>
+                      </Link>
+                    ))}
+                  </div>
+                </section>
 
                 {/* Second image with hover zoom */}
                 <div className="mb-8 rounded-xl overflow-hidden shadow-lg group">
