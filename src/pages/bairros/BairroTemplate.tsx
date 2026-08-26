@@ -52,7 +52,7 @@ interface BairroData {
   servicosDestaque: string[];
   conteudoExclusivo?: string;
   problemasComuns?: string[];
-  dicasLocais?: string;
+  dicasLocais?: string[];
   /** Quando true, o bairro é âncora indexável (conteúdo único ≥300 palavras) */
   indexavel?: boolean;
 }
@@ -502,7 +502,14 @@ export const BairroTemplate = ({ data }: BairroTemplateProps) => {
                         <MapPin className="h-5 w-5 text-accent" />
                         Dicas para quem é do {data.nome}
                       </h3>
-                      <p className="text-muted-foreground whitespace-pre-line">{data.dicasLocais}</p>
+                      <ul className="space-y-2 text-muted-foreground">
+                        {data.dicasLocais.map((dica) => (
+                          <li key={dica} className="flex gap-2">
+                            <CheckCircle className="mt-0.5 h-4 w-4 shrink-0 text-accent" aria-hidden="true" />
+                            <span>{dica}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
                   )}
                 </div>
