@@ -20,6 +20,9 @@ import { PricingBanner } from "@/components/PricingBanner";
 import { GeoSpecificFAQs, bairroFAQs } from "@/components/GeoSpecificFAQs";
 import { LocalFAQSection } from "@/components/LocalFAQSection";
 import { ServiceLocalLinks } from "@/components/ServiceLocalLinks";
+import { DicasLocaisList } from "@/components/bairro/DicasLocaisList";
+import { BairroDataSchema, type BairroData } from "@/lib/bairroDataSchema";
+export type { BairroData } from "@/lib/bairroDataSchema";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { trackPageView, trackCTAClick } from "@/lib/analytics";
 import { Button } from "@/components/ui/button";
@@ -38,25 +41,6 @@ import {
 } from "lucide-react";
 
 
-interface BairroData {
-  nome: string;
-  slug: string;
-  cidade: string;
-  metaTitle: string;
-  metaDescription: string;
-  h1: string;
-  subtitulo: string;
-  descricaoLonga: string;
-  pontosReferencia: string[];
-  tempoDeslocamento: string;
-  servicosDestaque: string[];
-  conteudoExclusivo?: string;
-  problemasComuns?: string[];
-  dicasLocais?: string[];
-  /** Quando true, o bairro é âncora indexável (conteúdo único ≥300 palavras) */
-  indexavel?: boolean;
-}
-
 interface BairroTemplateProps {
   data: BairroData;
 }
@@ -74,6 +58,7 @@ const servicePath = (label: string) => {
 };
 
 export const BairroTemplate = ({ data }: BairroTemplateProps) => {
+  BairroDataSchema.parse(data);
   const whatsappUrl = whatsappDeepLink({
     local: data.nome,
     servico: data.servicosDestaque[0],
@@ -496,22 +481,7 @@ export const BairroTemplate = ({ data }: BairroTemplateProps) => {
                       {data.conteudoExclusivo}
                     </div>
                   )}
-                  {data.dicasLocais && (
-                    <div className="bg-card rounded-xl p-6 md:p-8 border border-border">
-                      <h3 className="text-xl font-bold text-foreground mb-3 flex items-center gap-2">
-                        <MapPin className="h-5 w-5 text-accent" />
-                        Dicas para quem é do {data.nome}
-                      </h3>
-                      <ul className="space-y-2 text-muted-foreground">
-                        {data.dicasLocais.map((dica) => (
-                          <li key={dica} className="flex gap-2">
-                            <CheckCircle className="mt-0.5 h-4 w-4 shrink-0 text-accent" aria-hidden="true" />
-                            <span>{dica}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
+                  {data.dicasLocais && <DicasLocaisList nome={data.nome} dicas={data.dicasLocais} />}
                 </div>
               </div>
             </section>

@@ -189,6 +189,17 @@ jobs:
         run: npm ci --no-audit --no-fund
       - name: Typecheck (gate obrigatório)
         run: npm run check:types
+      - name: Typecheck (Bun) dos dados de bairros
+        run: bun run check:types
+      - name: Schema de BairroData e dicasLocais
+        run: bun run check:bairro-data-schema
+      - name: Upload relatório de schema dos bairros
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bairro-data-schema-report
+          path: reports/bairro-data-schema-report.json
+          if-no-files-found: ignore
       - name: Testes unit/integração com cobertura
         run: npm run test:coverage
       - name: Upload cobertura para o Codecov
