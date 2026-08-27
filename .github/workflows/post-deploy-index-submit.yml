@@ -54,8 +54,15 @@ jobs:
         if: env.LOVABLE_API_KEY != '' && env.GOOGLE_SEARCH_CONSOLE_API_KEY != ''
         run: node scripts/submit-sitemap-gsc.mjs
 
+      - name: Testes unitários do núcleo IndexNow
+        run: node --test scripts/lib/indexnow-core.test.mjs
+
+      - name: IndexNow — prévia (dry-run, sem ping)
+        run: node scripts/indexnow-submit.mjs --dry-run
+
       - name: IndexNow (somente URLs com mudança real)
         run: node scripts/indexnow-submit.mjs ${{ (github.event_name == 'workflow_dispatch' && inputs.all) && '--all' || '' }}
+
 
       - name: Relatório sitemap × indexação
         if: always()
