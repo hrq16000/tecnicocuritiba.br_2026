@@ -31,6 +31,7 @@ interface Payload {
     indexnowPendentes: number;
     gscCoverage: number | null;
     gscIndexadas: number | null;
+    naoAvaliadas?: number;
   };
   urls: UrlRow[];
   indexnow: {
@@ -141,6 +142,7 @@ export default function AdminSeoStatus() {
               />
               <Card label="Cobertura GSC (snapshot)" value={data.totals.gscCoverage ?? "—"} />
               <Card label="Indexadas (snapshot)" value={data.totals.gscIndexadas ?? "—"} />
+              <Card label="Não avaliadas (sem build)" value={data.totals.naoAvaliadas ?? 0} />
             </section>
 
             <section className="space-y-3">
