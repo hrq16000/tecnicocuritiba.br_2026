@@ -105,30 +105,9 @@ export const BairroTemplate = ({ data }: BairroTemplateProps) => {
   // (Home > Cidade > Bairros > Região > Bairro) e no interlinking de vizinhos.
   const regiaoAtual = REGIOES_COBERTURA.find((r) => r.itens.some((i) => i.slug === data.slug));
 
-  const localSchema = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": `Técnico de Informática em ${data.nome}`,
-    "description": data.metaDescription,
-    "areaServed": {
-      "@type": "Place",
-      "name": data.nome,
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": data.cidade,
-        "addressRegion": "PR",
-        "addressCountry": "BR"
-      }
-    },
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Serviços de Informática",
-      "itemListElement": data.servicosDestaque.map((servico) => ({
-        "@type": "Offer",
-        "itemOffered": { "@type": "Service", "name": servico }
-      }))
-    }
-  };
+  // LocalBusiness/Neighborhood com localidade exata, referências reais e as
+  // dicas locais (fonte única: src/lib/bairroEnriquecimento.ts).
+  const localSchema = bairroLocalBusinessSchema(data);
 
   useJsonLdSlot(SCHEMA_SLOTS.localBusiness, localSchema, SLOT_PRIORITY.page);
 
