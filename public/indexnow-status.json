@@ -1,0 +1,701 @@
+{
+  "atualizadoEm": "2026-08-27T07:42:58.318Z",
+  "ultimaExecucao": {
+    "executadoEm": "2026-08-27T07:42:58.318Z",
+    "iniciadoEm": "2026-08-27T07:42:58.317Z",
+    "host": "tecnico.curitiba.br",
+    "modo": "dry-run",
+    "dryRun": true,
+    "totais": {
+      "sitemap": 130,
+      "novas": 130,
+      "alteradas": 0,
+      "puladasPorLastmod": 0,
+      "puladasPorConteudo": 0,
+      "ignoradas": 0,
+      "candidatas": 130,
+      "enviadas": 0,
+      "aceitas": 0,
+      "falhas": 0
+    },
+    "urls": {
+      "novas": [
+        {
+          "path": "/atendimento-remoto",
+          "lastmod": "2026-08-23",
+          "motivo": "nova"
+        },
+        {
+          "path": "/bairros/bacacheri",
+          "lastmod": "2026-08-23",
+          "motivo": "nova"
+        },
+        {
+          "path": "/atendimento-domicilio",
+          "lastmod": "2026-08-15",
+          "motivo": "nova"
+        },
+        {
+          "path": "/bairros/batel",
+          "lastmod": "2026-08-23",
+          "motivo": "nova"
+        },
+        {
+          "path": "/bairros/bigorrilho",
+          "lastmod": "2026-08-23",
+          "motivo": "nova"
+        },
+        {
+          "path": "/bairros/boa-vista",
+          "lastmod": "2026-08-16",
+          "motivo": "nova"
+        },
+        {
+          "path": "/bairros/boqueirao",
+          "lastmod": "2026-08-23",
+          "motivo": "nova"
+        },
+        {
+          "path": "/bairros/cabral",
+          "lastmod": "2026-08-23",
+          "motivo": "nova"
+        },
+        {
+          "path": "/bairros/cajuru",
+          "lastmod": "2026-08-23",
+          "motivo": "nova"
+        },
+        {
+          "path": "/bairros/campo-comprido",
+          "lastmod": "2026-08-16",
+          "motivo": "nova"
+        },
+        {
+          "path": "/bairros/centro",
+          "lastmod": "2026-08-23",
+          "motivo": "nova"
+        },
+        {
+          "path": "/bairros/capao-raso",
+          "lastmod": "2026-08-16",
+          "motivo": "nova"
+        },
+        {
+          "path": "/bairros/agua-verde",
+          "lastmod": "2026-08-23",
+          "motivo": "nova"
+        },
+        {
+          "path": "/bairros/cic",
+          "lastmod": "2026-08-23",
+          "motivo": "nova"
+        },
+        {
+          "path": "/bairros/cristo-rei",
+          "lastmod": "2026-08-23",
+          "motivo": "nova"
+        },
+        {
+          "path": "/bairros/fazendinha",
+          "lastmod": "2026-08-23",
+          "motivo": "nova"
+        },
+        {
+          "path": "/bairros/hauer",
+          "lastmod": "2026-08-23",
+          "motivo": "nova"
+        },
+        {
+          "path": "/bairros/juveve",
+          "lastmod": "2026-08-16",
+          "motivo": "nova"
+        },
+        {
+          "path": "/anuncie",
+          "lastmod": "2026-08-23",
+          "motivo": "nova"
+        },
+        {
+          "path": "/areas-atendidas",
+          "lastmod": "2026-08-25",
+          "motivo": "nova"
+        },
+        {
+          "path": "/bairros/merces",
+          "lastmod": "2026-08-23",
+          "motivo": "nova"
+        },
+        {
+          "path": "/bairros/pinheirinho",
+          "lastmod": "2026-08-16",
+          "motivo": "nova"
+        },
+        {
+          "path": "/bairros/novo-mundo",
+          "lastmod": "2026-08-23",
+          "motivo": "nova"
+        },
+        {
+          "path": "/bairros/portao",
+          "lastmod": "2026-08-23",
+          "motivo": "nova"
+        },
+        {
+          "path": "/bairros/sitio-cercado",
+          "lastmod": "2026-08-16",
+          "motivo": "nova"
+        },
+        {
+          "path": "/bairros/santa-felicidade",
+          "lastmod": "2026-08-23",
+          "motivo": "nova"
+        },
+        {
+          "path": "/bairros/seminario",
+          "lastmod": "2026-08-16",
+          "motivo": "nova"
+        },
+        {
+          "path": "/",
+          "lastmod": "2026-08-23",
+          "motivo": "nova"
+        },
+        {
+          "path": "/bairros/xaxim",
+          "lastmod": "2026-08-23",
+          "motivo": "nova"
+        },
+        {
+          "path": "/blog",
+          "lastmod": "2026-08-23",
+          "motivo": "nova"
+        },
+        {
+          "path": "/bairros/uberaba",
+          "lastmod": "2026-08-23",
+          "motivo": "nova"
+        },
+        {
+          "path": "/blog/como-escolher-uma-workstation",
+          "lastmod": null,
+          "motivo": "nova"
+        },
+        {
+          "path": "/coleta-e-entrega",
+          "lastmod": "2026-08-25",
+          "motivo": "nova"
+        },
+        {
+          "path": "/como-funciona",
+          "lastmod": "2026-08-25",
+          "motivo": "nova"
+        },
+        {
+          "path": "/blog/organizacao-de-ti-para-pequenos-escritorios",
+          "lastmod": null,
+          "motivo": "nova"
+        },
+        {
+          "path": "/contato",
+          "lastmod": "2026-08-15",
+          "motivo": "nova"
+        },
+        {
+          "path": "/diagnostico-tecnico",
+          "lastmod": "2026-08-23",
+          "motivo": "nova"
+        },
+        {
+          "path": "/empresa-de-ti-curitiba",
+          "lastmod": "2026-08-15",
+          "motivo": "nova"
+        },
+        {
+          "path": "/politica-de-pecas-do-cliente",
+          "lastmod": "2026-08-23",
+          "motivo": "nova"
+        },
+        {
+          "path": "/faq",
+          "lastmod": "2026-08-25",
+          "motivo": "nova"
+        },
+        {
+          "path": "/guia-tecnico-informatica",
+          "lastmod": "2026-08-23",
+          "motivo": "nova"
+        },
+        {
+          "path": "/precos-e-politicas",
+          "lastmod": "2026-08-26",
+          "motivo": "nova"
+        },
+        {
+          "path": "/equipamentos-atendidos",
+          "lastmod": "2026-08-23",
+          "motivo": "nova"
+        },
+        {
+          "path": "/problemas/computador-desliga-sozinho",
+          "lastmod": "2026-08-23",
+          "motivo": "nova"
+        },
+        {
+          "path": "/problemas",
+          "lastmod": "2026-08-25",
+          "motivo": "nova"
+        },
+        {
+          "path": "/problemas/computador-lento",
+          "lastmod": "2026-08-23",
+          "motivo": "nova"
+        },
+        {
+          "path": "/problemas/computador-sem-som",
+          "lastmod": "2026-08-23",
+          "motivo": "nova"
+        },
+        {
+          "path": "/problemas/computador-fazendo-barulho",
+          "lastmod": "2026-08-23",
+          "motivo": "nova"
+        },
+        {
+          "path": "/problemas/computador-travando",
+          "lastmod": "2026-08-25",
+          "motivo": "nova"
+        },
+        {
+          "path": "/problemas/computador-nao-liga",
+          "lastmod": "2026-08-23",
+          "motivo": "nova"
+        },
+        {
+          "path": "/problemas/dobradica-do-notebook-quebrada",
+          "lastmod": "2026-08-25",
+          "motivo": "nova"
+        },
+        {
+          "path": "/problemas/impressora-nao-imprime",
+          "lastmod": "2026-08-23",
+          "motivo": "nova"
+        },
+        {
+          "path": "/problemas/hd-nao-reconhecido",
+          "lastmod": "2026-08-26",
+          "motivo": "nova"
+        },
+        {
+          "path": "/problemas/monitor-sem-sinal",
+          "lastmod": "2026-08-25",
+          "motivo": "nova"
+        },
+        {
+          "path": "/problemas/notebook-com-tela-preta",
+          "lastmod": "2026-08-25",
+          "motivo": "nova"
+        },
+        {
+          "path": "/problemas/mouse-nao-funciona",
+          "lastmod": "2026-08-23",
+          "motivo": "nova"
+        },
+        {
+          "path": "/problemas/notebook-desligando-sozinho",
+          "lastmod": "2026-08-25",
+          "motivo": "nova"
+        },
+        {
+          "path": "/problemas/notebook-nao-carrega-bateria",
+          "lastmod": "2026-08-23",
+          "motivo": "nova"
+        },
+        {
+          "path": "/problemas/notebook-molhado",
+          "lastmod": "2026-08-23",
+          "motivo": "nova"
+        },
+        {
+          "path": "/problemas/notebook-lento",
+          "lastmod": "2026-08-23",
+          "motivo": "nova"
+        },
+        {
+          "path": "/problemas/notebook-nao-conecta-no-wifi",
+          "lastmod": "2026-08-23",
+          "motivo": "nova"
+        },
+        {
+          "path": "/problemas/notebook-nao-liga",
+          "lastmod": "2026-08-23",
+          "motivo": "nova"
+        },
+        {
+          "path": "/problemas/teclado-de-notebook-nao-funciona",
+          "lastmod": "2026-08-25",
+          "motivo": "nova"
+        },
+        {
+          "path": "/problemas/notebook-superaquecendo",
+          "lastmod": "2026-08-24",
+          "motivo": "nova"
+        },
+        {
+          "path": "/problemas/pen-drive-nao-reconhecido",
+          "lastmod": "2026-08-23",
+          "motivo": "nova"
+        },
+        {
+          "path": "/problemas/tela-azul-windows",
+          "lastmod": "2026-08-25",
+          "motivo": "nova"
+        },
+        {
+          "path": "/problemas/tela-de-notebook-quebrada",
+          "lastmod": "2026-08-25",
+          "motivo": "nova"
+        },
+        {
+          "path": "/problemas/tela-do-computador-piscando",
+          "lastmod": "2026-08-23",
+          "motivo": "nova"
+        },
+        {
+          "path": "/problemas/tv-com-imagem-escura",
+          "lastmod": "2026-08-23",
+          "motivo": "nova"
+        },
+        {
+          "path": "/problemas/tv-com-som-sem-imagem",
+          "lastmod": "2026-08-25",
+          "motivo": "nova"
+        },
+        {
+          "path": "/problemas/touchpad-nao-funciona",
+          "lastmod": "2026-08-25",
+          "motivo": "nova"
+        },
+        {
+          "path": "/problemas/tv-com-linhas-na-tela",
+          "lastmod": "2026-08-25",
+          "motivo": "nova"
+        },
+        {
+          "path": "/problemas/tv-nao-conecta-no-wifi",
+          "lastmod": "2026-08-23",
+          "motivo": "nova"
+        },
+        {
+          "path": "/problemas/tv-nao-liga",
+          "lastmod": "2026-08-25",
+          "motivo": "nova"
+        },
+        {
+          "path": "/problemas/tv-desligando-sozinha",
+          "lastmod": "2026-08-25",
+          "motivo": "nova"
+        },
+        {
+          "path": "/problemas/tv-travando",
+          "lastmod": "2026-08-23",
+          "motivo": "nova"
+        },
+        {
+          "path": "/problemas/tv-sem-som",
+          "lastmod": "2026-08-25",
+          "motivo": "nova"
+        },
+        {
+          "path": "/problemas/wifi-caindo-toda-hora",
+          "lastmod": "2026-08-23",
+          "motivo": "nova"
+        },
+        {
+          "path": "/problemas/windows-nao-inicia",
+          "lastmod": "2026-08-25",
+          "motivo": "nova"
+        },
+        {
+          "path": "/problemas/webcam-nao-funciona",
+          "lastmod": "2026-08-25",
+          "motivo": "nova"
+        },
+        {
+          "path": "/servicos",
+          "lastmod": "2026-08-25",
+          "motivo": "nova"
+        },
+        {
+          "path": "/quando-nao-compensa",
+          "lastmod": "2026-08-23",
+          "motivo": "nova"
+        },
+        {
+          "path": "/seguranca-dos-dados",
+          "lastmod": "2026-08-23",
+          "motivo": "nova"
+        },
+        {
+          "path": "/servicos/conserto-monitor",
+          "lastmod": "2026-08-25",
+          "motivo": "nova"
+        },
+        {
+          "path": "/servicos/backup-para-empresas",
+          "lastmod": "2026-08-25",
+          "motivo": "nova"
+        },
+        {
+          "path": "/servicos/conserto-placa",
+          "lastmod": "2026-08-25",
+          "motivo": "nova"
+        },
+        {
+          "path": "/servicos/formatacao",
+          "lastmod": "2026-08-25",
+          "motivo": "nova"
+        },
+        {
+          "path": "/servicos/manutencao-de-computador",
+          "lastmod": "2026-08-25",
+          "motivo": "nova"
+        },
+        {
+          "path": "/servicos/conserto-tv",
+          "lastmod": "2026-08-25",
+          "motivo": "nova"
+        },
+        {
+          "path": "/servicos/manutencao-de-notebook",
+          "lastmod": "2026-08-25",
+          "motivo": "nova"
+        },
+        {
+          "path": "/servicos/manutencao-preventiva-empresas",
+          "lastmod": "2026-08-25",
+          "motivo": "nova"
+        },
+        {
+          "path": "/servicos/manutencao-tv/batel",
+          "lastmod": "2026-08-15",
+          "motivo": "nova"
+        },
+        {
+          "path": "/servicos/manutencao-tv/alto-da-xv",
+          "lastmod": "2026-08-15",
+          "motivo": "nova"
+        },
+        {
+          "path": "/servicos/manutencao-tv/agua-verde",
+          "lastmod": "2026-08-15",
+          "motivo": "nova"
+        },
+        {
+          "path": "/servicos/manutencao-tv/bigorrilho",
+          "lastmod": "2026-08-15",
+          "motivo": "nova"
+        },
+        {
+          "path": "/servicos/manutencao-tv/boa-vista",
+          "lastmod": "2026-08-15",
+          "motivo": "nova"
+        },
+        {
+          "path": "/servicos/manutencao-tv/boqueirao",
+          "lastmod": "2026-08-15",
+          "motivo": "nova"
+        },
+        {
+          "path": "/servicos/manutencao-tv/centro",
+          "lastmod": "2026-08-15",
+          "motivo": "nova"
+        },
+        {
+          "path": "/servicos/manutencao-tv/cabral",
+          "lastmod": "2026-08-15",
+          "motivo": "nova"
+        },
+        {
+          "path": "/servicos/manutencao-tv/cajuru",
+          "lastmod": "2026-08-15",
+          "motivo": "nova"
+        },
+        {
+          "path": "/servicos/manutencao-tv/cic",
+          "lastmod": "2026-08-15",
+          "motivo": "nova"
+        },
+        {
+          "path": "/servicos/manutencao-tv/cristo-rei",
+          "lastmod": "2026-08-15",
+          "motivo": "nova"
+        },
+        {
+          "path": "/servicos/manutencao-tv/ecoville",
+          "lastmod": "2026-08-15",
+          "motivo": "nova"
+        },
+        {
+          "path": "/servicos/manutencao-tv/jardim-das-americas",
+          "lastmod": "2026-08-15",
+          "motivo": "nova"
+        },
+        {
+          "path": "/servicos/manutencao-tv/portao",
+          "lastmod": "2026-08-15",
+          "motivo": "nova"
+        },
+        {
+          "path": "/servicos/manutencao-tv/reboucas",
+          "lastmod": "2026-08-15",
+          "motivo": "nova"
+        },
+        {
+          "path": "/servicos/manutencao-tv/santa-felicidade",
+          "lastmod": "2026-08-15",
+          "motivo": "nova"
+        },
+        {
+          "path": "/servicos/redes-wifi/cic",
+          "lastmod": "2026-08-23",
+          "motivo": "nova"
+        },
+        {
+          "path": "/bairros/reboucas",
+          "lastmod": "2026-08-16",
+          "motivo": "nova"
+        },
+        {
+          "path": "/servicos/montagem-de-pc",
+          "lastmod": "2026-08-25",
+          "motivo": "nova"
+        },
+        {
+          "path": "/servicos/recuperacao-de-dados",
+          "lastmod": "2026-08-25",
+          "motivo": "nova"
+        },
+        {
+          "path": "/servicos/redes-wifi/jardim-das-americas",
+          "lastmod": "2026-08-23",
+          "motivo": "nova"
+        },
+        {
+          "path": "/servicos/remocao-de-virus",
+          "lastmod": "2026-08-25",
+          "motivo": "nova"
+        },
+        {
+          "path": "/servicos/redes-e-wifi",
+          "lastmod": "2026-08-25",
+          "motivo": "nova"
+        },
+        {
+          "path": "/servicos/suporte-tecnico-empresarial",
+          "lastmod": "2026-08-26",
+          "motivo": "nova"
+        },
+        {
+          "path": "/servicos/upgrade-ssd-memoria/reboucas",
+          "lastmod": null,
+          "motivo": "nova"
+        },
+        {
+          "path": "/servicos/upgrade-ssd-ram",
+          "lastmod": "2026-08-25",
+          "motivo": "nova"
+        },
+        {
+          "path": "/tecnico-informatica-almirante-tamandare",
+          "lastmod": "2026-08-23",
+          "motivo": "nova"
+        },
+        {
+          "path": "/sobre",
+          "lastmod": "2026-08-15",
+          "motivo": "nova"
+        },
+        {
+          "path": "/tecnico-informatica-araucaria",
+          "lastmod": "2026-08-23",
+          "motivo": "nova"
+        },
+        {
+          "path": "/servicos/suporte-home-office",
+          "lastmod": "2026-08-25",
+          "motivo": "nova"
+        },
+        {
+          "path": "/tecnico-informatica-campo-magro",
+          "lastmod": "2026-08-23",
+          "motivo": "nova"
+        },
+        {
+          "path": "/tecnico-informatica-campo-largo",
+          "lastmod": "2026-08-23",
+          "motivo": "nova"
+        },
+        {
+          "path": "/tecnico-informatica-colombo",
+          "lastmod": "2026-08-23",
+          "motivo": "nova"
+        },
+        {
+          "path": "/tecnico-informatica-fazenda-rio-grande",
+          "lastmod": "2026-08-23",
+          "motivo": "nova"
+        },
+        {
+          "path": "/tecnico-informatica-curitiba",
+          "lastmod": "2026-08-26",
+          "motivo": "nova"
+        },
+        {
+          "path": "/tecnico-informatica-sao-jose-pinhais",
+          "lastmod": "2026-08-23",
+          "motivo": "nova"
+        },
+        {
+          "path": "/tecnico-informatica-piraquara",
+          "lastmod": "2026-08-23",
+          "motivo": "nova"
+        },
+        {
+          "path": "/tecnico-informatica-pinhais",
+          "lastmod": "2026-08-23",
+          "motivo": "nova"
+        },
+        {
+          "path": "/tecnico-informatica-quatro-barras",
+          "lastmod": "2026-08-23",
+          "motivo": "nova"
+        }
+      ],
+      "alteradas": [],
+      "puladas": [],
+      "inalteradas": [],
+      "ignoradas": [],
+      "enviadas": []
+    },
+    "chunks": [],
+    "erros": []
+  },
+  "historico": [
+    {
+      "executadoEm": "2026-08-27T07:42:58.318Z",
+      "modo": "dry-run",
+      "dryRun": true,
+      "sitemap": 130,
+      "novas": 130,
+      "alteradas": 0,
+      "puladasPorLastmod": 0,
+      "puladasPorConteudo": 0,
+      "ignoradas": 0,
+      "candidatas": 130,
+      "enviadas": 0,
+      "aceitas": 0,
+      "falhas": 0,
+      "erros": 0
+    }
+  ]
+}
