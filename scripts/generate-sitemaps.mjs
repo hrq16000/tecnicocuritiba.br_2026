@@ -8,6 +8,7 @@ import { ACTIVE_SITEMAPS, BASE_URL, EMPTY_SITEMAPS } from "./lib/curated-urls.mj
 import { WAVES } from "./lib/content-waves.mjs";
 import { approvedWeeks } from "./lib/wave-approvals.mjs";
 import { lastmodFor } from "./lib/lastmod.mjs";
+import { effectiveLastmod } from "./lib/lastmod-source.mjs";
 
 // Só entra no sitemap URL aprovada no check de originalidade
 // (reports/content-approval.json, gerado por scripts/check-originality.mjs).
