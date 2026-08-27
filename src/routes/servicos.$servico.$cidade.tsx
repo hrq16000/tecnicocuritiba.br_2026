@@ -17,7 +17,14 @@ export const Route = createFileRoute("/servicos/$servico/$cidade")({
   head: ({ params }) => {
     const path = `/servicos/${params.servico}/${params.cidade}`;
     const curated = CURATED_DYNAMIC_HEAD[path];
-    return curated ? seoHead(curated) : seoHead({ path, title: "Assistência Técnica em Curitiba", description: "Atendimento técnico em Curitiba e região com diagnóstico antes do valor." });
+    if (curated) return seoHead(curated);
+    const servico = getServico(params.servico)?.nome ?? "Assistência técnica";
+    const cidade = getCidade(params.cidade)?.nome ?? "Curitiba";
+    return seoHead({
+      path,
+      title: `${servico} em ${cidade} | Técnico em Curitiba`,
+      description: `${servico} em ${cidade} e região: diagnóstico primeiro, valor combinado antes da execução e atendimento pelo WhatsApp.`,
+    });
   },
   component: ServicoCidadePage,
 });

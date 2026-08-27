@@ -92,7 +92,6 @@ export const HeroPremium = () => {
       {/* Slideshow de fundo — pontos turísticos de Curitiba, nítidos em AVIF/WebP. */}
       <div
         className="absolute inset-0 overflow-hidden"
-        aria-hidden="true"
         role="group"
         aria-roledescription="carrossel"
         aria-label="Pontos turísticos de Curitiba"
@@ -105,7 +104,7 @@ export const HeroPremium = () => {
               src={slide.fallback}
               srcSet={slide.jpg}
               sizes="100vw"
-              alt=""
+              alt={`${slide.place}, ponto turístico de Curitiba — atendimento técnico em informática na cidade`}
               width={1920}
               height={1088}
               loading={i === 0 ? "eager" : "lazy"}
