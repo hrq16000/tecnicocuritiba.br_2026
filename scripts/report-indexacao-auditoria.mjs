@@ -53,12 +53,15 @@ const urls = [];
 for (const p of [...sitemapOf.keys()].sort()) {
   const file = path.join(DIST, p === "/" ? "" : p, "index.html");
   const anomalias = [];
+  let avaliada = true;
   let noindex = null;
   let canonical = null;
   let title = null;
 
   if (!distDisponivel) {
-    anomalias.push("build indisponível — não foi possível validar o HTML servido");
+    // Sem build local não há HTML para auditar: a URL fica "não avaliada",
+    // nunca contabilizada como anomalia (evitaria alarme falso).
+    avaliada = false;
   } else if (!existsSync(file)) {
     anomalias.push("URL no sitemap sem HTML no build (404 provável)");
   } else {
@@ -80,6 +83,7 @@ for (const p of [...sitemapOf.keys()].sort()) {
     noindex,
     canonical,
     title,
+    avaliada,
     anomalias,
   });
 }
@@ -110,6 +114,7 @@ const payload = {
     sitemapUrls: urls.length,
     comLastmod: urls.filter((u) => u.lastmod).length,
     anomalias: comAnomalia.length,
+    naoAvaliadas: urls.filter((u) => !u.avaliada).length,
     noindexNoSitemap: urls.filter((u) => u.noindex).length,
     indexnowConhecidas: indexnowEntries.length,
     indexnowPendentes: naoSubmetidas.length,
