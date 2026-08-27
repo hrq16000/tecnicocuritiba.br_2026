@@ -318,7 +318,11 @@
     "check:sentinel-pre-d14": "node scripts/sentinel-pre-d14.mjs --gate",
     "freeze:corrigir-selo": "node scripts/corrigir-selo-freeze-v2.mjs",
     "check:os-privacidade": "node scripts/check-os-privacidade.mjs",
-    "audit:noindex-live": "node scripts/auditar-noindex-live.mjs"
+    "audit:noindex-live": "node scripts/auditar-noindex-live.mjs",
+    "check:schema-por-tipo": "node scripts/check-schema-por-tipo.mjs dist",
+    "report:indexacao-auditoria": "node scripts/report-indexacao-auditoria.mjs dist",
+    "submit:sitemap-gsc": "node scripts/submit-sitemap-gsc.mjs",
+    "test:e2e:seo-meta": "playwright test e2e/seo-meta-ssr-unicidade.spec.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
