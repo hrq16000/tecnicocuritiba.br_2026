@@ -36,7 +36,9 @@ function buildUrlset(entries) {
   const urls = entries
     .filter((e) => !blocked.has(e.path))
     .map((e) => {
-      const lastmod = e.lastmod ?? lastmodFor(e.path);
+      // lastmod real: data declarada combinada com o último commit que tocou
+      // a fonte da página (nunca a data do build).
+      const lastmod = e.lastmod ?? effectiveLastmod(e.path, lastmodFor(e.path));
       return `  <url><loc>${BASE_URL}${e.path}</loc>${lastmod ? `<lastmod>${lastmod}</lastmod>` : ""}<changefreq>${e.changefreq}</changefreq><priority>${e.priority}</priority></url>`;
     })
     .join("\n");
