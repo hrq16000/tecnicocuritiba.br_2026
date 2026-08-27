@@ -4,7 +4,7 @@
 import { corsHeaders } from "npm:@supabase/supabase-js@2/cors";
 
 const HOST = "tecnico.curitiba.br";
-const KEY = "f783ab585dfa9e6b017cb058009cccae";
+const KEY = "85fad1bb57c44507a97ed5bc051f6da8";
 const KEY_LOCATION = `https://${HOST}/${KEY}.txt`;
 const ENDPOINT = "https://api.indexnow.org/IndexNow";
 

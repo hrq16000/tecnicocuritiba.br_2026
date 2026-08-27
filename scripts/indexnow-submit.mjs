@@ -32,7 +32,7 @@ if (!dryRun) exitIfLocalMode("IndexNow", "submissão seletiva");
 
 const HOST = process.env.INDEXNOW_HOST || "tecnico.curitiba.br";
 const BASE = `https://${HOST}`;
-const KEY = process.env.INDEXNOW_KEY || "f783ab585dfa9e6b017cb058009cccae";
+const KEY = process.env.INDEXNOW_KEY || "85fad1bb57c44507a97ed5bc051f6da8";
 const ENDPOINT = "https://api.indexnow.org/IndexNow";
 const MANIFEST = resolve("reports/indexnow-manifest.json");
 
