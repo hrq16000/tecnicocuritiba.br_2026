@@ -168,10 +168,12 @@ function registrarExecucao(extra) {
   const registro = {
     executadoEm: new Date().toISOString(),
     host: HOST,
-    modo: dryRun ? "dry-run" : forceAll ? "baseline" : "incremental",
+    modo: dryRun ? "dry-run" : forceAll ? "baseline" : recheck ? "recheck" : "incremental",
     eligible: lista.length,
     novas,
     mudadas,
+    puladasPorLastmod: inalteradas.length,
+
     submitted: 0,
     accepted: 0,
     failed: 0,
