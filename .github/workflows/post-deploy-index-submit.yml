@@ -68,9 +68,13 @@ jobs:
           path: |
             reports/sitemap-submissions.json
             reports/indexnow-manifest.json
+            reports/indexnow-report.json
+            reports/indexnow-history.json
+            public/indexnow-status.json
             public/indexacao-auditoria.json
           if-no-files-found: warn
           retention-days: 30
+
 
       - name: Resumo
         if: always()
