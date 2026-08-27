@@ -2,32 +2,29 @@
 /**
  * INDEXNOW — SUBMISSÃO SELETIVA POR MUDANÇA REAL
  *
- * Diferente de `indexnow-ping.mjs` (envia o sitemap inteiro), este script
- * envia SOMENTE URLs cujo conteúdo relevante para busca mudou desde a última
+ * Envia SOMENTE URLs cujo conteúdo relevante para busca mudou desde a última
  * submissão. O estado fica em `reports/indexnow-manifest.json`:
  *
- *   { "<path>": { hash, lastSubmitted, submissions } }
+ *   { "<path>": { hash, lastmod, lastSubmitted, submissions } }
  *
- * O hash cobre apenas sinais de busca extraídos do HTML servido
- * (title, description, canonical, robots, headings, texto do <main>), então
- * mudanças de build, hash de asset ou markup de layout não geram ruído.
- *
- * Antes de qualquer requisição, aplicamos o gate de `lastmod` do sitemap:
- * URL já submetida cujo `lastmod` não mudou desde a última submissão não é
- * nem buscada nem pingada (economiza rede e evita ping repetido inútil).
- * `--recheck` ignora esse atalho e revalida o HTML de todas as URLs.
+ * Ordem de decisão (toda ela em scripts/lib/indexnow-core.mjs, testada):
+ *   1. gate de `lastmod`: URL já submetida com o mesmo lastmod é pulada —
+ *      nem fetch de HTML, nem ping;
+ *   2. para o restante, diff do hash de sinais de busca do HTML servido
+ *      (title, description, canonical, robots, headings, texto do <main>);
+ *   3. POST no endpoint com retry e backoff exponencial (nada falha calado).
  *
  * Uso:
  *   node scripts/indexnow-submit.mjs              # diff e envio
- *   node scripts/indexnow-submit.mjs --dry-run    # só mostra o que enviaria
+ *   node scripts/indexnow-submit.mjs --dry-run    # mostra o que enviaria e por quê
  *   node scripts/indexnow-submit.mjs --all        # primeira submissão (baseline)
  *   node scripts/indexnow-submit.mjs --recheck    # ignora o atalho de lastmod
  *   node scripts/indexnow-submit.mjs --limit 50
  */
-import { createHash } from "node:crypto";
 import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { exitIfLocalMode } from "./lib/local-mode.mjs";
+import { MOTIVOS, diagnosticar, planejar, postComRetry } from "./lib/indexnow-core.mjs";
 
 const args = process.argv.slice(2);
 const dryRun = args.includes("--dry-run");
@@ -67,185 +64,149 @@ for (const file of readdirSync(publicDir).filter(
     if (atual === undefined || (lastmod && (!atual || lastmod > atual))) lastmodPorPath.set(path, lastmod);
   }
 }
-const paths = new Set(lastmodPorPath.keys());
-
-
-/** Extrai só os sinais que interessam a um buscador e devolve o hash. */
-function seoHash(html) {
-  const pick = (re) => (html.match(re)?.[1] ?? "").trim();
-  const main = html.match(/<main\b[\s\S]*?<\/main>/i)?.[0] ?? html;
-  const texto = main
-    .replace(/<script[\s\S]*?<\/script>/gi, "")
-    .replace(/<style[\s\S]*?<\/style>/gi, "")
-    .replace(/<[^>]+>/g, " ")
-    .replace(/\s+/g, " ")
-    .trim();
-  const headings = [...main.matchAll(/<h[1-3]\b[^>]*>([\s\S]*?)<\/h[1-3]>/gi)]
-    .map((m) => m[1].replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim())
-    .join("|");
-  const partes = [
-    pick(/<title>([\s\S]*?)<\/title>/i),
-    pick(/name="description"\s+content="([^"]*)"/i),
-    pick(/rel="canonical"\s+href="([^"]*)"/i),
-    pick(/name="robots"\s+content="([^"]*)"/i),
-    headings,
-    texto,
-  ];
-  return createHash("sha1").update(partes.join("\u0000")).digest("hex");
-}
 
 const manifest = existsSync(MANIFEST) ? JSON.parse(readFileSync(MANIFEST, "utf8")) : {};
-const lista = [...paths].sort();
-const atualizado = {};
-const mudadas = [];
-const novas = [];
-const falhas = [];
-// URLs cujo lastmod não mudou desde a última submissão: nem fetch, nem ping.
-const inalteradas = [];
+const paths = [...lastmodPorPath.keys()];
 
-const queue = [];
-for (const path of lista) {
-  const lastmod = lastmodPorPath.get(path) ?? null;
-  const anterior = manifest[path];
-  const podePular =
-    !forceAll &&
-    !recheck &&
-    anterior &&
-    anterior.lastSubmitted &&
-    lastmod &&
-    anterior.lastmod &&
-    anterior.lastmod === lastmod;
-  if (podePular) {
-    atualizado[path] = { ...anterior, lastmod };
-    inalteradas.push(path);
-    continue;
-  }
-  queue.push(path);
-}
+const { fila, puladas, atualizado } = planejar({ paths, lastmodPorPath, manifest, forceAll, recheck });
+const { novas, mudadas, iguais, falhas } = await diagnosticar({
+  fila,
+  manifest,
+  base: BASE,
+  atualizado,
+});
 
-async function worker() {
-  while (queue.length) {
-    const path = queue.shift();
-    const lastmod = lastmodPorPath.get(path) ?? null;
-    try {
-      const res = await fetch(`${BASE}${path}`, { redirect: "manual" });
-      if (res.status !== 200) {
-        falhas.push(`${path} → HTTP ${res.status}`);
-        continue;
-      }
-      const html = await res.text();
-      if (/name="robots"\s+content="[^"]*noindex/i.test(html)) {
-        falhas.push(`${path} → noindex (não submetida)`);
-        continue;
-      }
-      const hash = seoHash(html);
-      const anterior = manifest[path];
-      atualizado[path] = {
-        hash,
-        lastmod,
-        lastSubmitted: anterior?.lastSubmitted ?? null,
-        submissions: anterior?.submissions ?? 0,
-      };
-      if (!anterior) novas.push(path);
-      else if (anterior.hash !== hash) mudadas.push(path);
-    } catch (e) {
-      falhas.push(`${path} → ${String(e).slice(0, 80)}`);
-    }
-  }
-}
-await Promise.all(Array.from({ length: 6 }, worker));
+const candidatas = forceAll
+  ? Object.keys(atualizado).map((path) => ({ path, lastmod: lastmodPorPath.get(path) ?? null, motivo: MOTIVOS.FORCE_ALL }))
+  : [...novas, ...mudadas];
+const enviar = candidatas.slice(0, limit);
 
-const enviar = (forceAll ? Object.keys(atualizado) : [...novas, ...mudadas]).slice(0, limit);
 console.log(
-  `[indexnow] ${lista.length} URL(s) no sitemap · ${novas.length} nova(s) · ${mudadas.length} alterada(s) · ${inalteradas.length} sem mudança de lastmod (puladas) · ${falhas.length} ignorada(s)`,
+  `[indexnow] ${paths.length} URL(s) no sitemap · ${novas.length} nova(s) · ${mudadas.length} alterada(s) · ${iguais.length} sem mudança de conteúdo · ${puladas.length} puladas por lastmod · ${falhas.length} ignorada(s)`,
 );
-for (const f of falhas.slice(0, 15)) console.log(`  · ignorada ${f}`);
+for (const f of falhas.slice(0, 15)) console.log(`  · ignorada ${f.path} → ${f.motivo}`);
 
+const modo = dryRun ? "dry-run" : forceAll ? "baseline" : recheck ? "recheck" : "incremental";
+const iniciadoEm = new Date().toISOString();
 
-/** Evidência para o painel operacional: sempre registrada, inclusive no no-op. */
-function registrarExecucao(extra) {
-  mkdirSync("reports", { recursive: true });
+/**
+ * Relatório por deploy: contagens + motivo por URL.
+ * `reports/indexnow-report.json`  → artefato de CI
+ * `public/indexnow-status.json`   → consumido por /admin/indexnow-status
+ */
+function gravarRelatorio({ enviadas = [], aceitas = 0, falhouEnvio = 0, chunks = [], erros = [] }) {
   const registro = {
     executadoEm: new Date().toISOString(),
+    iniciadoEm,
     host: HOST,
-    modo: dryRun ? "dry-run" : forceAll ? "baseline" : recheck ? "recheck" : "incremental",
-    eligible: lista.length,
-    novas,
-    mudadas,
-    puladasPorLastmod: inalteradas.length,
-
-    submitted: 0,
-    accepted: 0,
-    failed: 0,
-    ignoradas: falhas,
-    ...extra,
+    modo,
+    dryRun,
+    totais: {
+      sitemap: paths.length,
+      novas: novas.length,
+      alteradas: mudadas.length,
+      puladasPorLastmod: puladas.length,
+      puladasPorConteudo: iguais.length,
+      ignoradas: falhas.length,
+      candidatas: candidatas.length,
+      enviadas: enviadas.length,
+      aceitas,
+      falhas: falhouEnvio,
+    },
+    urls: {
+      novas: novas.map(({ path, lastmod, motivo }) => ({ path, lastmod, motivo })),
+      alteradas: mudadas.map(({ path, lastmod, motivo }) => ({ path, lastmod, motivo })),
+      puladas: puladas.map(({ path, lastmod, motivo }) => ({ path, lastmod, motivo })),
+      inalteradas: iguais.map(({ path, lastmod, motivo }) => ({ path, lastmod, motivo })),
+      ignoradas: falhas,
+      enviadas: enviadas.map((p) => (typeof p === "string" ? p : p.path)),
+    },
+    chunks,
+    erros,
   };
+
+  mkdirSync("reports", { recursive: true });
+  mkdirSync("public", { recursive: true });
   writeFileSync("reports/indexnow-last-run.json", JSON.stringify(registro, null, 2));
+  writeFileSync("reports/indexnow-report.json", JSON.stringify(registro, null, 2));
+
   const histPath = "reports/indexnow-history.json";
   const hist = existsSync(histPath) ? JSON.parse(readFileSync(histPath, "utf8")) : [];
   hist.push({
     executadoEm: registro.executadoEm,
-    modo: registro.modo,
-    eligible: registro.eligible,
-    submitted: registro.submitted,
-    accepted: registro.accepted,
-    failed: registro.failed,
+    modo,
+    dryRun,
+    ...registro.totais,
+    erros: erros.length,
   });
-  writeFileSync(histPath, JSON.stringify(hist.slice(-180), null, 2));
+  const historico = hist.slice(-180);
+  writeFileSync(histPath, JSON.stringify(historico, null, 2));
+
+  writeFileSync(
+    "public/indexnow-status.json",
+    JSON.stringify({ atualizadoEm: registro.executadoEm, ultimaExecucao: registro, historico: historico.slice(-60) }, null, 2),
+  );
   return registro;
+}
+
+if (dryRun) {
+  gravarRelatorio({});
+  console.log(`[indexnow] --dry-run: submeteria ${enviar.length} URL(s) (nenhum ping enviado).`);
+  for (const item of enviar.slice(0, 60)) console.log(`  → ${item.path}  [${item.motivo}]  lastmod=${item.lastmod ?? "—"}`);
+  console.log(`[indexnow] --dry-run: ${puladas.length} pulada(s) por lastmod inalterado, ${iguais.length} sem mudança de conteúdo.`);
+  for (const item of puladas.slice(0, 20)) console.log(`  · pulada ${item.path}  [${item.motivo}]  lastmod=${item.lastmod ?? "—"}`);
+  process.exit(0);
 }
 
 if (enviar.length === 0) {
   console.log("[indexnow] nada mudou — nenhuma submissão (evita ruído de ping repetido).");
-  if (!dryRun) writeFileSync(MANIFEST, JSON.stringify(atualizado, null, 2));
-  registrarExecucao({});
-  process.exit(0);
-}
-
-if (dryRun) {
-  registrarExecucao({ submitted: 0, elegiveisParaEnvio: enviar.length });
-  console.log(`[indexnow] --dry-run: submeteria ${enviar.length} URL(s):`);
-  for (const p of enviar.slice(0, 40)) console.log(`  → ${p}`);
+  writeFileSync(MANIFEST, JSON.stringify(atualizado, null, 2));
+  gravarRelatorio({});
   process.exit(0);
 }
 
 const agora = new Date().toISOString();
-let ok = true;
 let aceitas = 0;
-let falhou = 0;
+let falhouEnvio = 0;
+const chunksLog = [];
+const erros = [];
+
 for (let i = 0; i < enviar.length; i += 1000) {
   const chunk = enviar.slice(i, i + 1000);
-  const res = await fetch(ENDPOINT, {
-    method: "POST",
-    headers: { "Content-Type": "application/json; charset=utf-8" },
-    body: JSON.stringify({
+  const resultado = await postComRetry({
+    endpoint: ENDPOINT,
+    payload: {
       host: HOST,
       key: KEY,
       keyLocation: `${BASE}/${KEY}.txt`,
-      urlList: chunk.map((p) => `${BASE}${p}`),
-    }),
+      urlList: chunk.map((c) => `${BASE}${c.path}`),
+    },
+    onRetry: ({ tentativa, espera, erro }) =>
+      console.warn(`[indexnow] tentativa ${tentativa} falhou (${erro}) — novo envio em ${espera}ms`),
   });
-  console.log(`[indexnow] ${res.status} ${res.statusText} — ${chunk.length} URL(s)`);
-  if (!res.ok) {
-    ok = false;
-    falhou += chunk.length;
-    console.error(await res.text());
+
+  chunksLog.push({ urls: chunk.length, status: resultado.status, tentativas: resultado.tentativas, ok: resultado.ok });
+  console.log(`[indexnow] chunk de ${chunk.length} URL(s) → HTTP ${resultado.status} em ${resultado.tentativas} tentativa(s)`);
+
+  if (!resultado.ok) {
+    falhouEnvio += chunk.length;
+    erros.push({ chunk: chunksLog.length, status: resultado.status, tentativas: resultado.tentativas, erro: resultado.erro });
+    console.error(`[indexnow] FALHA definitiva no chunk ${chunksLog.length}: ${resultado.erro}`);
     continue;
   }
+
   aceitas += chunk.length;
-  for (const p of chunk) {
-    atualizado[p].lastSubmitted = agora;
-    atualizado[p].submissions += 1;
+  for (const { path } of chunk) {
+    atualizado[path].lastSubmitted = agora;
+    atualizado[path].submissions += 1;
   }
 }
 
 mkdirSync("reports", { recursive: true });
 writeFileSync(MANIFEST, JSON.stringify(atualizado, null, 2));
-registrarExecucao({
-  executadoEm: agora,
-  enviadas: enviar.length,
-  submitted: enviar.length,
-  accepted: aceitas,
-  failed: falhou,
-});
-if (!ok) process.exit(1);
+gravarRelatorio({ enviadas: enviar, aceitas, falhouEnvio, chunks: chunksLog, erros });
+
+if (erros.length) {
+  console.error(`[indexnow] ${erros.length} chunk(s) falharam após retry — saindo com erro (nunca falhar em silêncio).`);
+  process.exit(1);
+}
