@@ -60,15 +60,39 @@ const fold = (s) =>
 const errors = [];
 const titles = new Map();
 const descs = new Map();
+// Varredura global (todas as rotas do dist): duplicidade de title/description
+// é penalizada em todo o site, não só nas famílias programáticas.
+const globalTitles = new Map();
+const globalDescs = new Map();
+const globalDupes = [];
+// Rotas fora do índice não competem no SERP e não entram na varredura global.
+const GLOBAL_SKIP = /^\/(admin|lovable|ordem-de-servico|status|funil-indisponivel)(\/|$)/;
 let checked = 0;
+let globalChecked = 0;
 
 for (const file of files.sort()) {
   const route = ("/" + path.relative(DIST, file).replace(/index\.html$/, "").replace(/\\/g, "/")).replace(/\/$/, "") || "/";
-  if (!FAMILIES.some((re) => re.test(route))) continue;
-  checked++;
   const html = readFileSync(file, "utf8");
   const title = decode(html.match(/<title>([\s\S]*?)<\/title>/i)?.[1]);
   const desc = decode(html.match(/<meta name="description" content="([^"]*)"/i)?.[1]);
+
+  const indexavel = !/<meta name="robots" content="[^"]*noindex/i.test(html);
+  if (indexavel && !GLOBAL_SKIP.test(route)) {
+    globalChecked++;
+    if (title) {
+      const gk = fold(title);
+      if (globalTitles.has(gk)) globalDupes.push(`title duplicado: ${route} == ${globalTitles.get(gk)} — "${title}"`);
+      else globalTitles.set(gk, route);
+    }
+    if (desc) {
+      const gd = fold(desc);
+      if (globalDescs.has(gd)) globalDupes.push(`description duplicada: ${route} == ${globalDescs.get(gd)}`);
+      else globalDescs.set(gd, route);
+    }
+  }
+
+  if (!FAMILIES.some((re) => re.test(route))) continue;
+  checked++;
 
   if (!title) { errors.push(`${route}: <title> ausente`); continue; }
   if (!desc) { errors.push(`${route}: meta description ausente`); continue; }
@@ -92,6 +116,8 @@ for (const file of files.sort()) {
   else descs.set(dk, route);
 }
 
+errors.push(...globalDupes);
+
 if (errors.length) {
   console.error(`BLOQUEADO — ${errors.length} problema(s) de title/description:`);
   errors.slice(0, 40).forEach((e) => console.error(`  • ${e}`));
@@ -99,4 +125,5 @@ if (errors.length) {
   process.exit(1);
 }
 
+console.log(`OK — ${globalChecked} rotas indexáveis sem title/description duplicados no site.`);
 console.log(`OK — ${checked} rotas programáticas com title/description únicos e dentro dos limites.`);
