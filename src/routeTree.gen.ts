@@ -105,6 +105,7 @@ import { Route as AdminFotosBairrosRouteImport } from './routes/admin.fotos-bair
 import { Route as AdminFunnelRouteImport } from './routes/admin.funnel'
 import { Route as AdminIndexacaoRouteImport } from './routes/admin.indexacao'
 import { Route as AdminIndexacaoDiariaRouteImport } from './routes/admin.indexacao-diaria'
+import { Route as AdminIndexnowStatusRouteImport } from './routes/admin.indexnow-status'
 import { Route as AdminLoginRouteImport } from './routes/admin.login'
 import { Route as AdminMonitoramentoRouteImport } from './routes/admin.monitoramento'
 import { Route as AdminOperacaoRouteImport } from './routes/admin.operacao'
@@ -1015,6 +1016,11 @@ const AdminIndexacaoRoute = AdminIndexacaoRouteImport.update({
 const AdminIndexacaoDiariaRoute = AdminIndexacaoDiariaRouteImport.update({
   id: '/admin/indexacao-diaria',
   path: '/admin/indexacao-diaria',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminIndexnowStatusRoute = AdminIndexnowStatusRouteImport.update({
+  id: '/admin/indexnow-status',
+  path: '/admin/indexnow-status',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AdminLoginRoute = AdminLoginRouteImport.update({
@@ -3321,6 +3327,7 @@ export interface FileRoutesByFullPath {
   '/admin/funnel': typeof AdminFunnelRoute
   '/admin/indexacao': typeof AdminIndexacaoRoute
   '/admin/indexacao-diaria': typeof AdminIndexacaoDiariaRoute
+  '/admin/indexnow-status': typeof AdminIndexnowStatusRoute
   '/admin/login': typeof AdminLoginRoute
   '/admin/monitoramento': typeof AdminMonitoramentoRoute
   '/admin/operacao': typeof AdminOperacaoRoute
@@ -3826,6 +3833,7 @@ export interface FileRoutesByTo {
   '/admin/funnel': typeof AdminFunnelRoute
   '/admin/indexacao': typeof AdminIndexacaoRoute
   '/admin/indexacao-diaria': typeof AdminIndexacaoDiariaRoute
+  '/admin/indexnow-status': typeof AdminIndexnowStatusRoute
   '/admin/login': typeof AdminLoginRoute
   '/admin/monitoramento': typeof AdminMonitoramentoRoute
   '/admin/operacao': typeof AdminOperacaoRoute
@@ -4332,6 +4340,7 @@ export interface FileRoutesById {
   '/admin/funnel': typeof AdminFunnelRoute
   '/admin/indexacao': typeof AdminIndexacaoRoute
   '/admin/indexacao-diaria': typeof AdminIndexacaoDiariaRoute
+  '/admin/indexnow-status': typeof AdminIndexnowStatusRoute
   '/admin/login': typeof AdminLoginRoute
   '/admin/monitoramento': typeof AdminMonitoramentoRoute
   '/admin/operacao': typeof AdminOperacaoRoute
@@ -4839,6 +4848,7 @@ export interface FileRouteTypes {
     | '/admin/funnel'
     | '/admin/indexacao'
     | '/admin/indexacao-diaria'
+    | '/admin/indexnow-status'
     | '/admin/login'
     | '/admin/monitoramento'
     | '/admin/operacao'
@@ -5344,6 +5354,7 @@ export interface FileRouteTypes {
     | '/admin/funnel'
     | '/admin/indexacao'
     | '/admin/indexacao-diaria'
+    | '/admin/indexnow-status'
     | '/admin/login'
     | '/admin/monitoramento'
     | '/admin/operacao'
@@ -5849,6 +5860,7 @@ export interface FileRouteTypes {
     | '/admin/funnel'
     | '/admin/indexacao'
     | '/admin/indexacao-diaria'
+    | '/admin/indexnow-status'
     | '/admin/login'
     | '/admin/monitoramento'
     | '/admin/operacao'
@@ -6355,6 +6367,7 @@ export interface RootRouteChildren {
   AdminFunnelRoute: typeof AdminFunnelRoute
   AdminIndexacaoRoute: typeof AdminIndexacaoRoute
   AdminIndexacaoDiariaRoute: typeof AdminIndexacaoDiariaRoute
+  AdminIndexnowStatusRoute: typeof AdminIndexnowStatusRoute
   AdminLoginRoute: typeof AdminLoginRoute
   AdminMonitoramentoRoute: typeof AdminMonitoramentoRoute
   AdminOperacaoRoute: typeof AdminOperacaoRoute
@@ -7435,6 +7448,13 @@ declare module '@tanstack/react-router' {
       path: '/admin/indexacao-diaria'
       fullPath: '/admin/indexacao-diaria'
       preLoaderRoute: typeof AdminIndexacaoDiariaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/indexnow-status': {
+      id: '/admin/indexnow-status'
+      path: '/admin/indexnow-status'
+      fullPath: '/admin/indexnow-status'
+      preLoaderRoute: typeof AdminIndexnowStatusRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/admin/login': {
@@ -10405,6 +10425,7 @@ const rootRouteChildren: RootRouteChildren = {
   AdminFunnelRoute: AdminFunnelRoute,
   AdminIndexacaoRoute: AdminIndexacaoRoute,
   AdminIndexacaoDiariaRoute: AdminIndexacaoDiariaRoute,
+  AdminIndexnowStatusRoute: AdminIndexnowStatusRoute,
   AdminLoginRoute: AdminLoginRoute,
   AdminMonitoramentoRoute: AdminMonitoramentoRoute,
   AdminOperacaoRoute: AdminOperacaoRoute,
