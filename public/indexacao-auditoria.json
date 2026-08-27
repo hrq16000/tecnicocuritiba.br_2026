@@ -1,0 +1,2290 @@
+{
+  "generatedAt": "2026-08-27T05:31:38.818Z",
+  "fontes": {
+    "sitemap": "public/sitemap-*.xml",
+    "dist": null,
+    "indexnow": "reports/indexnow-manifest.json",
+    "gscSitemap": "reports/sitemap-submissions.json",
+    "gscIndex": null
+  },
+  "totals": {
+    "sitemapUrls": 130,
+    "comLastmod": 127,
+    "anomalias": 130,
+    "noindexNoSitemap": 0,
+    "indexnowConhecidas": 0,
+    "indexnowPendentes": 130,
+    "gscCoverage": null,
+    "gscIndexadas": null
+  },
+  "urls": [
+    {
+      "path": "/",
+      "sitemap": "sitemap-main.xml",
+      "lastmod": "2026-08-23",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/anuncie",
+      "sitemap": "sitemap-main.xml",
+      "lastmod": "2026-08-23",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/areas-atendidas",
+      "sitemap": "sitemap-main.xml",
+      "lastmod": "2026-08-25",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/atendimento-domicilio",
+      "sitemap": "sitemap-main.xml",
+      "lastmod": "2026-08-15",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/atendimento-remoto",
+      "sitemap": "sitemap-main.xml",
+      "lastmod": "2026-08-23",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/bairros/agua-verde",
+      "sitemap": "sitemap-bairros.xml",
+      "lastmod": "2026-08-23",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/bairros/bacacheri",
+      "sitemap": "sitemap-bairros.xml",
+      "lastmod": "2026-08-23",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/bairros/batel",
+      "sitemap": "sitemap-bairros.xml",
+      "lastmod": "2026-08-23",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/bairros/bigorrilho",
+      "sitemap": "sitemap-bairros.xml",
+      "lastmod": "2026-08-23",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/bairros/boa-vista",
+      "sitemap": "sitemap-bairros.xml",
+      "lastmod": "2026-08-16",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/bairros/boqueirao",
+      "sitemap": "sitemap-bairros.xml",
+      "lastmod": "2026-08-23",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/bairros/cabral",
+      "sitemap": "sitemap-bairros.xml",
+      "lastmod": "2026-08-23",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/bairros/cajuru",
+      "sitemap": "sitemap-bairros.xml",
+      "lastmod": "2026-08-23",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/bairros/campo-comprido",
+      "sitemap": "sitemap-bairros.xml",
+      "lastmod": "2026-08-16",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/bairros/capao-raso",
+      "sitemap": "sitemap-bairros.xml",
+      "lastmod": "2026-08-16",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/bairros/centro",
+      "sitemap": "sitemap-bairros.xml",
+      "lastmod": "2026-08-23",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/bairros/cic",
+      "sitemap": "sitemap-bairros.xml",
+      "lastmod": "2026-08-23",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/bairros/cristo-rei",
+      "sitemap": "sitemap-bairros.xml",
+      "lastmod": "2026-08-23",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/bairros/fazendinha",
+      "sitemap": "sitemap-bairros.xml",
+      "lastmod": "2026-08-23",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/bairros/hauer",
+      "sitemap": "sitemap-bairros.xml",
+      "lastmod": "2026-08-23",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/bairros/juveve",
+      "sitemap": "sitemap-bairros.xml",
+      "lastmod": "2026-08-16",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/bairros/merces",
+      "sitemap": "sitemap-bairros.xml",
+      "lastmod": "2026-08-23",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/bairros/novo-mundo",
+      "sitemap": "sitemap-bairros.xml",
+      "lastmod": "2026-08-23",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/bairros/pinheirinho",
+      "sitemap": "sitemap-bairros.xml",
+      "lastmod": "2026-08-16",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/bairros/portao",
+      "sitemap": "sitemap-bairros.xml",
+      "lastmod": "2026-08-23",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/bairros/reboucas",
+      "sitemap": "sitemap-bairros.xml",
+      "lastmod": "2026-08-16",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/bairros/santa-felicidade",
+      "sitemap": "sitemap-bairros.xml",
+      "lastmod": "2026-08-23",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/bairros/seminario",
+      "sitemap": "sitemap-bairros.xml",
+      "lastmod": "2026-08-16",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/bairros/sitio-cercado",
+      "sitemap": "sitemap-bairros.xml",
+      "lastmod": "2026-08-16",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/bairros/uberaba",
+      "sitemap": "sitemap-bairros.xml",
+      "lastmod": "2026-08-23",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/bairros/xaxim",
+      "sitemap": "sitemap-bairros.xml",
+      "lastmod": "2026-08-23",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/blog",
+      "sitemap": "sitemap-editorial.xml",
+      "lastmod": "2026-08-23",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/blog/como-escolher-uma-workstation",
+      "sitemap": "sitemap-editorial.xml",
+      "lastmod": null,
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/blog/organizacao-de-ti-para-pequenos-escritorios",
+      "sitemap": "sitemap-editorial.xml",
+      "lastmod": null,
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/coleta-e-entrega",
+      "sitemap": "sitemap-main.xml",
+      "lastmod": "2026-08-25",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/como-funciona",
+      "sitemap": "sitemap-main.xml",
+      "lastmod": "2026-08-25",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/contato",
+      "sitemap": "sitemap-main.xml",
+      "lastmod": "2026-08-15",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/diagnostico-tecnico",
+      "sitemap": "sitemap-main.xml",
+      "lastmod": "2026-08-23",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/empresa-de-ti-curitiba",
+      "sitemap": "sitemap-main.xml",
+      "lastmod": "2026-08-15",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/equipamentos-atendidos",
+      "sitemap": "sitemap-main.xml",
+      "lastmod": "2026-08-23",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/faq",
+      "sitemap": "sitemap-main.xml",
+      "lastmod": "2026-08-25",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/guia-tecnico-informatica",
+      "sitemap": "sitemap-main.xml",
+      "lastmod": "2026-08-23",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/politica-de-pecas-do-cliente",
+      "sitemap": "sitemap-main.xml",
+      "lastmod": "2026-08-23",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/precos-e-politicas",
+      "sitemap": "sitemap-main.xml",
+      "lastmod": "2026-08-26",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas",
+      "sitemap": "sitemap-problemas.xml",
+      "lastmod": "2026-08-25",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/computador-desliga-sozinho",
+      "sitemap": "sitemap-problemas.xml",
+      "lastmod": "2026-08-23",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/computador-fazendo-barulho",
+      "sitemap": "sitemap-problemas.xml",
+      "lastmod": "2026-08-23",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/computador-lento",
+      "sitemap": "sitemap-problemas.xml",
+      "lastmod": "2026-08-23",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/computador-nao-liga",
+      "sitemap": "sitemap-problemas.xml",
+      "lastmod": "2026-08-23",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/computador-sem-som",
+      "sitemap": "sitemap-problemas.xml",
+      "lastmod": "2026-08-23",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/computador-travando",
+      "sitemap": "sitemap-problemas.xml",
+      "lastmod": "2026-08-25",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/dobradica-do-notebook-quebrada",
+      "sitemap": "sitemap-problemas.xml",
+      "lastmod": "2026-08-25",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/hd-nao-reconhecido",
+      "sitemap": "sitemap-problemas.xml",
+      "lastmod": "2026-08-26",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/impressora-nao-imprime",
+      "sitemap": "sitemap-problemas.xml",
+      "lastmod": "2026-08-23",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/monitor-sem-sinal",
+      "sitemap": "sitemap-problemas.xml",
+      "lastmod": "2026-08-25",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/mouse-nao-funciona",
+      "sitemap": "sitemap-problemas.xml",
+      "lastmod": "2026-08-23",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/notebook-com-tela-preta",
+      "sitemap": "sitemap-problemas.xml",
+      "lastmod": "2026-08-25",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/notebook-desligando-sozinho",
+      "sitemap": "sitemap-problemas.xml",
+      "lastmod": "2026-08-25",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/notebook-lento",
+      "sitemap": "sitemap-problemas.xml",
+      "lastmod": "2026-08-23",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/notebook-molhado",
+      "sitemap": "sitemap-problemas.xml",
+      "lastmod": "2026-08-23",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/notebook-nao-carrega-bateria",
+      "sitemap": "sitemap-problemas.xml",
+      "lastmod": "2026-08-23",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/notebook-nao-conecta-no-wifi",
+      "sitemap": "sitemap-problemas.xml",
+      "lastmod": "2026-08-23",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/notebook-nao-liga",
+      "sitemap": "sitemap-problemas.xml",
+      "lastmod": "2026-08-23",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/notebook-superaquecendo",
+      "sitemap": "sitemap-problemas.xml",
+      "lastmod": "2026-08-24",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/pen-drive-nao-reconhecido",
+      "sitemap": "sitemap-problemas.xml",
+      "lastmod": "2026-08-23",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/teclado-de-notebook-nao-funciona",
+      "sitemap": "sitemap-problemas.xml",
+      "lastmod": "2026-08-25",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/tela-azul-windows",
+      "sitemap": "sitemap-problemas.xml",
+      "lastmod": "2026-08-25",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/tela-de-notebook-quebrada",
+      "sitemap": "sitemap-problemas.xml",
+      "lastmod": "2026-08-25",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/tela-do-computador-piscando",
+      "sitemap": "sitemap-problemas.xml",
+      "lastmod": "2026-08-23",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/touchpad-nao-funciona",
+      "sitemap": "sitemap-problemas.xml",
+      "lastmod": "2026-08-25",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/tv-com-imagem-escura",
+      "sitemap": "sitemap-problemas.xml",
+      "lastmod": "2026-08-23",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/tv-com-linhas-na-tela",
+      "sitemap": "sitemap-problemas.xml",
+      "lastmod": "2026-08-25",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/tv-com-som-sem-imagem",
+      "sitemap": "sitemap-problemas.xml",
+      "lastmod": "2026-08-25",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/tv-desligando-sozinha",
+      "sitemap": "sitemap-problemas.xml",
+      "lastmod": "2026-08-25",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/tv-nao-conecta-no-wifi",
+      "sitemap": "sitemap-problemas.xml",
+      "lastmod": "2026-08-23",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/tv-nao-liga",
+      "sitemap": "sitemap-problemas.xml",
+      "lastmod": "2026-08-25",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/tv-sem-som",
+      "sitemap": "sitemap-problemas.xml",
+      "lastmod": "2026-08-25",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/tv-travando",
+      "sitemap": "sitemap-problemas.xml",
+      "lastmod": "2026-08-23",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/webcam-nao-funciona",
+      "sitemap": "sitemap-problemas.xml",
+      "lastmod": "2026-08-25",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/wifi-caindo-toda-hora",
+      "sitemap": "sitemap-problemas.xml",
+      "lastmod": "2026-08-23",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/windows-nao-inicia",
+      "sitemap": "sitemap-problemas.xml",
+      "lastmod": "2026-08-25",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/quando-nao-compensa",
+      "sitemap": "sitemap-main.xml",
+      "lastmod": "2026-08-23",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/seguranca-dos-dados",
+      "sitemap": "sitemap-main.xml",
+      "lastmod": "2026-08-23",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos",
+      "sitemap": "sitemap-main.xml",
+      "lastmod": "2026-08-25",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos/backup-para-empresas",
+      "sitemap": "sitemap-servicos.xml",
+      "lastmod": "2026-08-25",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos/conserto-monitor",
+      "sitemap": "sitemap-servicos.xml",
+      "lastmod": "2026-08-25",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos/conserto-placa",
+      "sitemap": "sitemap-servicos.xml",
+      "lastmod": "2026-08-25",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos/conserto-tv",
+      "sitemap": "sitemap-servicos.xml",
+      "lastmod": "2026-08-25",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos/formatacao",
+      "sitemap": "sitemap-servicos.xml",
+      "lastmod": "2026-08-25",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos/manutencao-de-computador",
+      "sitemap": "sitemap-servicos.xml",
+      "lastmod": "2026-08-25",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos/manutencao-de-notebook",
+      "sitemap": "sitemap-servicos.xml",
+      "lastmod": "2026-08-25",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos/manutencao-preventiva-empresas",
+      "sitemap": "sitemap-servicos.xml",
+      "lastmod": "2026-08-25",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos/manutencao-tv/agua-verde",
+      "sitemap": "sitemap-servicos.xml",
+      "lastmod": "2026-08-15",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos/manutencao-tv/alto-da-xv",
+      "sitemap": "sitemap-servicos.xml",
+      "lastmod": "2026-08-15",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos/manutencao-tv/batel",
+      "sitemap": "sitemap-servicos.xml",
+      "lastmod": "2026-08-15",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos/manutencao-tv/bigorrilho",
+      "sitemap": "sitemap-servicos.xml",
+      "lastmod": "2026-08-15",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos/manutencao-tv/boa-vista",
+      "sitemap": "sitemap-servicos.xml",
+      "lastmod": "2026-08-15",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos/manutencao-tv/boqueirao",
+      "sitemap": "sitemap-servicos.xml",
+      "lastmod": "2026-08-15",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos/manutencao-tv/cabral",
+      "sitemap": "sitemap-servicos.xml",
+      "lastmod": "2026-08-15",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos/manutencao-tv/cajuru",
+      "sitemap": "sitemap-servicos.xml",
+      "lastmod": "2026-08-15",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos/manutencao-tv/centro",
+      "sitemap": "sitemap-servicos.xml",
+      "lastmod": "2026-08-15",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos/manutencao-tv/cic",
+      "sitemap": "sitemap-servicos.xml",
+      "lastmod": "2026-08-15",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos/manutencao-tv/cristo-rei",
+      "sitemap": "sitemap-servicos.xml",
+      "lastmod": "2026-08-15",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos/manutencao-tv/ecoville",
+      "sitemap": "sitemap-servicos.xml",
+      "lastmod": "2026-08-15",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos/manutencao-tv/jardim-das-americas",
+      "sitemap": "sitemap-servicos.xml",
+      "lastmod": "2026-08-15",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos/manutencao-tv/portao",
+      "sitemap": "sitemap-servicos.xml",
+      "lastmod": "2026-08-15",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos/manutencao-tv/reboucas",
+      "sitemap": "sitemap-servicos.xml",
+      "lastmod": "2026-08-15",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos/manutencao-tv/santa-felicidade",
+      "sitemap": "sitemap-servicos.xml",
+      "lastmod": "2026-08-15",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos/montagem-de-pc",
+      "sitemap": "sitemap-servicos.xml",
+      "lastmod": "2026-08-25",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos/recuperacao-de-dados",
+      "sitemap": "sitemap-servicos.xml",
+      "lastmod": "2026-08-25",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos/redes-e-wifi",
+      "sitemap": "sitemap-servicos.xml",
+      "lastmod": "2026-08-25",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos/redes-wifi/cic",
+      "sitemap": "sitemap-servicos.xml",
+      "lastmod": "2026-08-23",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos/redes-wifi/jardim-das-americas",
+      "sitemap": "sitemap-servicos.xml",
+      "lastmod": "2026-08-23",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos/remocao-de-virus",
+      "sitemap": "sitemap-servicos.xml",
+      "lastmod": "2026-08-25",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos/suporte-home-office",
+      "sitemap": "sitemap-servicos.xml",
+      "lastmod": "2026-08-25",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos/suporte-tecnico-empresarial",
+      "sitemap": "sitemap-servicos.xml",
+      "lastmod": "2026-08-26",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos/upgrade-ssd-memoria/reboucas",
+      "sitemap": "sitemap-servicos.xml",
+      "lastmod": null,
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos/upgrade-ssd-ram",
+      "sitemap": "sitemap-servicos.xml",
+      "lastmod": "2026-08-25",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/sobre",
+      "sitemap": "sitemap-main.xml",
+      "lastmod": "2026-08-15",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/tecnico-informatica-almirante-tamandare",
+      "sitemap": "sitemap-regioes.xml",
+      "lastmod": "2026-08-23",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/tecnico-informatica-araucaria",
+      "sitemap": "sitemap-regioes.xml",
+      "lastmod": "2026-08-23",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/tecnico-informatica-campo-largo",
+      "sitemap": "sitemap-regioes.xml",
+      "lastmod": "2026-08-23",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/tecnico-informatica-campo-magro",
+      "sitemap": "sitemap-regioes.xml",
+      "lastmod": "2026-08-23",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/tecnico-informatica-colombo",
+      "sitemap": "sitemap-regioes.xml",
+      "lastmod": "2026-08-23",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/tecnico-informatica-curitiba",
+      "sitemap": "sitemap-regioes.xml",
+      "lastmod": "2026-08-26",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/tecnico-informatica-fazenda-rio-grande",
+      "sitemap": "sitemap-regioes.xml",
+      "lastmod": "2026-08-23",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/tecnico-informatica-pinhais",
+      "sitemap": "sitemap-regioes.xml",
+      "lastmod": "2026-08-23",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/tecnico-informatica-piraquara",
+      "sitemap": "sitemap-regioes.xml",
+      "lastmod": "2026-08-23",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/tecnico-informatica-quatro-barras",
+      "sitemap": "sitemap-regioes.xml",
+      "lastmod": "2026-08-23",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/tecnico-informatica-sao-jose-pinhais",
+      "sitemap": "sitemap-regioes.xml",
+      "lastmod": "2026-08-23",
+      "noindex": null,
+      "canonical": null,
+      "title": null,
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    }
+  ],
+  "anomalias": [
+    {
+      "path": "/",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/anuncie",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/areas-atendidas",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/atendimento-domicilio",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/atendimento-remoto",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/bairros/agua-verde",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/bairros/bacacheri",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/bairros/batel",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/bairros/bigorrilho",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/bairros/boa-vista",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/bairros/boqueirao",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/bairros/cabral",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/bairros/cajuru",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/bairros/campo-comprido",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/bairros/capao-raso",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/bairros/centro",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/bairros/cic",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/bairros/cristo-rei",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/bairros/fazendinha",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/bairros/hauer",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/bairros/juveve",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/bairros/merces",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/bairros/novo-mundo",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/bairros/pinheirinho",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/bairros/portao",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/bairros/reboucas",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/bairros/santa-felicidade",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/bairros/seminario",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/bairros/sitio-cercado",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/bairros/uberaba",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/bairros/xaxim",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/blog",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/blog/como-escolher-uma-workstation",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/blog/organizacao-de-ti-para-pequenos-escritorios",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/coleta-e-entrega",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/como-funciona",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/contato",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/diagnostico-tecnico",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/empresa-de-ti-curitiba",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/equipamentos-atendidos",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/faq",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/guia-tecnico-informatica",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/politica-de-pecas-do-cliente",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/precos-e-politicas",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/computador-desliga-sozinho",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/computador-fazendo-barulho",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/computador-lento",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/computador-nao-liga",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/computador-sem-som",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/computador-travando",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/dobradica-do-notebook-quebrada",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/hd-nao-reconhecido",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/impressora-nao-imprime",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/monitor-sem-sinal",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/mouse-nao-funciona",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/notebook-com-tela-preta",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/notebook-desligando-sozinho",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/notebook-lento",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/notebook-molhado",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/notebook-nao-carrega-bateria",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/notebook-nao-conecta-no-wifi",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/notebook-nao-liga",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/notebook-superaquecendo",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/pen-drive-nao-reconhecido",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/teclado-de-notebook-nao-funciona",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/tela-azul-windows",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/tela-de-notebook-quebrada",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/tela-do-computador-piscando",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/touchpad-nao-funciona",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/tv-com-imagem-escura",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/tv-com-linhas-na-tela",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/tv-com-som-sem-imagem",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/tv-desligando-sozinha",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/tv-nao-conecta-no-wifi",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/tv-nao-liga",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/tv-sem-som",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/tv-travando",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/webcam-nao-funciona",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/wifi-caindo-toda-hora",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/problemas/windows-nao-inicia",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/quando-nao-compensa",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/seguranca-dos-dados",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos/backup-para-empresas",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos/conserto-monitor",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos/conserto-placa",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos/conserto-tv",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos/formatacao",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos/manutencao-de-computador",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos/manutencao-de-notebook",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos/manutencao-preventiva-empresas",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos/manutencao-tv/agua-verde",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos/manutencao-tv/alto-da-xv",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos/manutencao-tv/batel",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos/manutencao-tv/bigorrilho",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos/manutencao-tv/boa-vista",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos/manutencao-tv/boqueirao",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos/manutencao-tv/cabral",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos/manutencao-tv/cajuru",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos/manutencao-tv/centro",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos/manutencao-tv/cic",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos/manutencao-tv/cristo-rei",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos/manutencao-tv/ecoville",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos/manutencao-tv/jardim-das-americas",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos/manutencao-tv/portao",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos/manutencao-tv/reboucas",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos/manutencao-tv/santa-felicidade",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos/montagem-de-pc",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos/recuperacao-de-dados",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos/redes-e-wifi",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos/redes-wifi/cic",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos/redes-wifi/jardim-das-americas",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos/remocao-de-virus",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos/suporte-home-office",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos/suporte-tecnico-empresarial",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos/upgrade-ssd-memoria/reboucas",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/servicos/upgrade-ssd-ram",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/sobre",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/tecnico-informatica-almirante-tamandare",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/tecnico-informatica-araucaria",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/tecnico-informatica-campo-largo",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/tecnico-informatica-campo-magro",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/tecnico-informatica-colombo",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/tecnico-informatica-curitiba",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/tecnico-informatica-fazenda-rio-grande",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/tecnico-informatica-pinhais",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/tecnico-informatica-piraquara",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/tecnico-informatica-quatro-barras",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    },
+    {
+      "path": "/tecnico-informatica-sao-jose-pinhais",
+      "anomalias": [
+        "build indisponível — não foi possível validar o HTML servido"
+      ]
+    }
+  ],
+  "indexnow": {
+    "ultimasSubmissoes": [],
+    "pendentes": [
+      "/",
+      "/anuncie",
+      "/areas-atendidas",
+      "/atendimento-domicilio",
+      "/atendimento-remoto",
+      "/bairros/agua-verde",
+      "/bairros/bacacheri",
+      "/bairros/batel",
+      "/bairros/bigorrilho",
+      "/bairros/boa-vista",
+      "/bairros/boqueirao",
+      "/bairros/cabral",
+      "/bairros/cajuru",
+      "/bairros/campo-comprido",
+      "/bairros/capao-raso",
+      "/bairros/centro",
+      "/bairros/cic",
+      "/bairros/cristo-rei",
+      "/bairros/fazendinha",
+      "/bairros/hauer",
+      "/bairros/juveve",
+      "/bairros/merces",
+      "/bairros/novo-mundo",
+      "/bairros/pinheirinho",
+      "/bairros/portao",
+      "/bairros/reboucas",
+      "/bairros/santa-felicidade",
+      "/bairros/seminario",
+      "/bairros/sitio-cercado",
+      "/bairros/uberaba",
+      "/bairros/xaxim",
+      "/blog",
+      "/blog/como-escolher-uma-workstation",
+      "/blog/organizacao-de-ti-para-pequenos-escritorios",
+      "/coleta-e-entrega",
+      "/como-funciona",
+      "/contato",
+      "/diagnostico-tecnico",
+      "/empresa-de-ti-curitiba",
+      "/equipamentos-atendidos",
+      "/faq",
+      "/guia-tecnico-informatica",
+      "/politica-de-pecas-do-cliente",
+      "/precos-e-politicas",
+      "/problemas",
+      "/problemas/computador-desliga-sozinho",
+      "/problemas/computador-fazendo-barulho",
+      "/problemas/computador-lento",
+      "/problemas/computador-nao-liga",
+      "/problemas/computador-sem-som"
+    ]
+  },
+  "sitemapSubmissions": []
+}
