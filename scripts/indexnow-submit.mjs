@@ -100,11 +100,33 @@ const atualizado = {};
 const mudadas = [];
 const novas = [];
 const falhas = [];
+// URLs cujo lastmod não mudou desde a última submissão: nem fetch, nem ping.
+const inalteradas = [];
 
-const queue = [...lista];
+const queue = [];
+for (const path of lista) {
+  const lastmod = lastmodPorPath.get(path) ?? null;
+  const anterior = manifest[path];
+  const podePular =
+    !forceAll &&
+    !recheck &&
+    anterior &&
+    anterior.lastSubmitted &&
+    lastmod &&
+    anterior.lastmod &&
+    anterior.lastmod === lastmod;
+  if (podePular) {
+    atualizado[path] = { ...anterior, lastmod };
+    inalteradas.push(path);
+    continue;
+  }
+  queue.push(path);
+}
+
 async function worker() {
   while (queue.length) {
     const path = queue.shift();
+    const lastmod = lastmodPorPath.get(path) ?? null;
     try {
       const res = await fetch(`${BASE}${path}`, { redirect: "manual" });
       if (res.status !== 200) {
@@ -120,6 +142,7 @@ async function worker() {
       const anterior = manifest[path];
       atualizado[path] = {
         hash,
+        lastmod,
         lastSubmitted: anterior?.lastSubmitted ?? null,
         submissions: anterior?.submissions ?? 0,
       };
@@ -134,9 +157,10 @@ await Promise.all(Array.from({ length: 6 }, worker));
 
 const enviar = (forceAll ? Object.keys(atualizado) : [...novas, ...mudadas]).slice(0, limit);
 console.log(
-  `[indexnow] ${lista.length} URL(s) no sitemap · ${novas.length} nova(s) · ${mudadas.length} alterada(s) · ${falhas.length} ignorada(s)`,
+  `[indexnow] ${lista.length} URL(s) no sitemap · ${novas.length} nova(s) · ${mudadas.length} alterada(s) · ${inalteradas.length} sem mudança de lastmod (puladas) · ${falhas.length} ignorada(s)`,
 );
 for (const f of falhas.slice(0, 15)) console.log(`  · ignorada ${f}`);
+
 
 /** Evidência para o painel operacional: sempre registrada, inclusive no no-op. */
 function registrarExecucao(extra) {
