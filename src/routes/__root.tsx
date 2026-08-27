@@ -87,11 +87,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "UTF-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1.0" },
-      { title: "Técnico em Curitiba | Assistência Técnica e Suporte Local" },
+      { title: "Técnico em Curitiba" },
       {
         name: "description",
         content:
-          "Assistência técnica em Curitiba com diagnóstico honesto: atendimento a domicílio, remoto ou com coleta. Escolha o serviço e continue pelo WhatsApp.",
+          "Técnico em Curitiba — suporte e manutenção de informática para casas e empresas.",
       },
       { name: "theme-color", content: "#0b2733" },
       { name: "mobile-web-app-capable", content: "yes" },
@@ -113,11 +113,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "Técnico em Curitiba" },
       { property: "og:locale", content: "pt_BR" },
-      { property: "og:title", content: "Técnico em Curitiba | Assistência Técnica e Suporte Local" },
+      { property: "og:title", content: "Técnico em Curitiba" },
       {
         property: "og:description",
         content:
-          "Assistência técnica em Curitiba com diagnóstico honesto: atendimento a domicílio, remoto ou com coleta. Escolha o serviço e continue pelo WhatsApp.",
+          "Técnico em Curitiba — suporte e manutenção de informática para casas e empresas.",
       },
       { property: "og:image", content: "https://tecnico.curitiba.br/og-image.png?v=20260709-1" },
       { property: "og:image:secure_url", content: "https://tecnico.curitiba.br/og-image.png?v=20260709-1" },
@@ -126,11 +126,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:image:alt", content: "Técnico de Informática em Curitiba - Atendimento no mesmo dia" },
       { property: "og:image:type", content: "image/png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Técnico em Curitiba | Assistência Técnica e Suporte Local" },
+      { name: "twitter:title", content: "Técnico em Curitiba" },
       {
         name: "twitter:description",
         content:
-          "Assistência técnica em Curitiba com diagnóstico honesto: atendimento a domicílio, remoto ou com coleta. Escolha o serviço e continue pelo WhatsApp.",
+          "Técnico em Curitiba — suporte e manutenção de informática para casas e empresas.",
       },
       { name: "twitter:image", content: "https://tecnico.curitiba.br/og-image.png?v=20260709-1" },
       { name: "twitter:image:alt", content: "Técnico de Informática em Curitiba" },
