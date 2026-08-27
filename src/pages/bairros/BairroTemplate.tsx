@@ -22,6 +22,7 @@ import { LocalFAQSection } from "@/components/LocalFAQSection";
 import { ServiceLocalLinks } from "@/components/ServiceLocalLinks";
 import { DicasLocaisList } from "@/components/bairro/DicasLocaisList";
 import { BairroDataSchema, type BairroData } from "@/lib/bairroDataSchema";
+import { bairroLocalBusinessSchema } from "@/lib/bairroEnriquecimento";
 export type { BairroData } from "@/lib/bairroDataSchema";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { trackPageView, trackCTAClick } from "@/lib/analytics";
