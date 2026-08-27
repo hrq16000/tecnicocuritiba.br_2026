@@ -91,4 +91,9 @@ jobs:
             echo '```json'
             tail -c 2000 reports/sitemap-submissions.json 2>/dev/null || echo "sem submissão GSC"
             echo '```'
+            echo "### IndexNow — contagens desta execução"
+            echo '```json'
+            node -e "const r=require('./reports/indexnow-report.json');console.log(JSON.stringify(r.totais,null,2))" 2>/dev/null || echo "sem relatório IndexNow"
+            echo '```'
+
           } >> "$GITHUB_STEP_SUMMARY"
