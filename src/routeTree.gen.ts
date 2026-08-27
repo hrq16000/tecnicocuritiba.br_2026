@@ -113,6 +113,7 @@ import { Route as AdminProvasMonitorRouteImport } from './routes/admin.provas-mo
 import { Route as AdminProvasVerticaisRouteImport } from './routes/admin.provas-verticais'
 import { Route as AdminPublicacaoRouteImport } from './routes/admin.publicacao'
 import { Route as AdminReviewsRouteImport } from './routes/admin.reviews'
+import { Route as AdminSeoStatusRouteImport } from './routes/admin.seo-status'
 import { Route as AdminVitalsRouteImport } from './routes/admin.vitals'
 import { Route as AdsTecnicoInformaticaCuritibaRouteImport } from './routes/ads.tecnico-informatica-curitiba'
 import { Route as ArrumarPcIndexRouteImport } from './routes/arrumar-pc.index'
@@ -1054,6 +1055,11 @@ const AdminPublicacaoRoute = AdminPublicacaoRouteImport.update({
 const AdminReviewsRoute = AdminReviewsRouteImport.update({
   id: '/admin/reviews',
   path: '/admin/reviews',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminSeoStatusRoute = AdminSeoStatusRouteImport.update({
+  id: '/admin/seo-status',
+  path: '/admin/seo-status',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AdminVitalsRoute = AdminVitalsRouteImport.update({
@@ -3323,6 +3329,7 @@ export interface FileRoutesByFullPath {
   '/admin/provas-verticais': typeof AdminProvasVerticaisRoute
   '/admin/publicacao': typeof AdminPublicacaoRoute
   '/admin/reviews': typeof AdminReviewsRoute
+  '/admin/seo-status': typeof AdminSeoStatusRoute
   '/admin/vitals': typeof AdminVitalsRoute
   '/ads/tecnico-informatica-curitiba': typeof AdsTecnicoInformaticaCuritibaRoute
   '/arrumar-pc/$cidade': typeof ArrumarPcCidadeRoute
@@ -3827,6 +3834,7 @@ export interface FileRoutesByTo {
   '/admin/provas-verticais': typeof AdminProvasVerticaisRoute
   '/admin/publicacao': typeof AdminPublicacaoRoute
   '/admin/reviews': typeof AdminReviewsRoute
+  '/admin/seo-status': typeof AdminSeoStatusRoute
   '/admin/vitals': typeof AdminVitalsRoute
   '/ads/tecnico-informatica-curitiba': typeof AdsTecnicoInformaticaCuritibaRoute
   '/arrumar-pc/$cidade': typeof ArrumarPcCidadeRoute
@@ -4332,6 +4340,7 @@ export interface FileRoutesById {
   '/admin/provas-verticais': typeof AdminProvasVerticaisRoute
   '/admin/publicacao': typeof AdminPublicacaoRoute
   '/admin/reviews': typeof AdminReviewsRoute
+  '/admin/seo-status': typeof AdminSeoStatusRoute
   '/admin/vitals': typeof AdminVitalsRoute
   '/ads/tecnico-informatica-curitiba': typeof AdsTecnicoInformaticaCuritibaRoute
   '/arrumar-pc/$cidade': typeof ArrumarPcCidadeRoute
@@ -4838,6 +4847,7 @@ export interface FileRouteTypes {
     | '/admin/provas-verticais'
     | '/admin/publicacao'
     | '/admin/reviews'
+    | '/admin/seo-status'
     | '/admin/vitals'
     | '/ads/tecnico-informatica-curitiba'
     | '/arrumar-pc/$cidade'
@@ -5342,6 +5352,7 @@ export interface FileRouteTypes {
     | '/admin/provas-verticais'
     | '/admin/publicacao'
     | '/admin/reviews'
+    | '/admin/seo-status'
     | '/admin/vitals'
     | '/ads/tecnico-informatica-curitiba'
     | '/arrumar-pc/$cidade'
@@ -5846,6 +5857,7 @@ export interface FileRouteTypes {
     | '/admin/provas-verticais'
     | '/admin/publicacao'
     | '/admin/reviews'
+    | '/admin/seo-status'
     | '/admin/vitals'
     | '/ads/tecnico-informatica-curitiba'
     | '/arrumar-pc/$cidade'
@@ -6351,6 +6363,7 @@ export interface RootRouteChildren {
   AdminProvasVerticaisRoute: typeof AdminProvasVerticaisRoute
   AdminPublicacaoRoute: typeof AdminPublicacaoRoute
   AdminReviewsRoute: typeof AdminReviewsRoute
+  AdminSeoStatusRoute: typeof AdminSeoStatusRoute
   AdminVitalsRoute: typeof AdminVitalsRoute
   AdsTecnicoInformaticaCuritibaRoute: typeof AdsTecnicoInformaticaCuritibaRoute
   ArrumarPcCidadeRoute: typeof ArrumarPcCidadeRoute
@@ -7478,6 +7491,13 @@ declare module '@tanstack/react-router' {
       path: '/admin/reviews'
       fullPath: '/admin/reviews'
       preLoaderRoute: typeof AdminReviewsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/seo-status': {
+      id: '/admin/seo-status'
+      path: '/admin/seo-status'
+      fullPath: '/admin/seo-status'
+      preLoaderRoute: typeof AdminSeoStatusRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/admin/vitals': {
@@ -10393,6 +10413,7 @@ const rootRouteChildren: RootRouteChildren = {
   AdminProvasVerticaisRoute: AdminProvasVerticaisRoute,
   AdminPublicacaoRoute: AdminPublicacaoRoute,
   AdminReviewsRoute: AdminReviewsRoute,
+  AdminSeoStatusRoute: AdminSeoStatusRoute,
   AdminVitalsRoute: AdminVitalsRoute,
   AdsTecnicoInformaticaCuritibaRoute: AdsTecnicoInformaticaCuritibaRoute,
   ArrumarPcCidadeRoute: ArrumarPcCidadeRoute,

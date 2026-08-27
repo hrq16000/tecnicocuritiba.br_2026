@@ -8,6 +8,7 @@ import { ACTIVE_SITEMAPS, BASE_URL, EMPTY_SITEMAPS } from "./lib/curated-urls.mj
 import { WAVES } from "./lib/content-waves.mjs";
 import { approvedWeeks } from "./lib/wave-approvals.mjs";
 import { lastmodFor } from "./lib/lastmod.mjs";
+import { effectiveLastmod } from "./lib/lastmod-source.mjs";
 
 // Só entra no sitemap URL aprovada no check de originalidade
 // (reports/content-approval.json, gerado por scripts/check-originality.mjs).
@@ -35,7 +36,9 @@ function buildUrlset(entries) {
   const urls = entries
     .filter((e) => !blocked.has(e.path))
     .map((e) => {
-      const lastmod = e.lastmod ?? lastmodFor(e.path);
+      // lastmod real: data declarada combinada com o último commit que tocou
+      // a fonte da página (nunca a data do build).
+      const lastmod = e.lastmod ?? effectiveLastmod(e.path, lastmodFor(e.path));
       return `  <url><loc>${BASE_URL}${e.path}</loc>${lastmod ? `<lastmod>${lastmod}</lastmod>` : ""}<changefreq>${e.changefreq}</changefreq><priority>${e.priority}</priority></url>`;
     })
     .join("\n");

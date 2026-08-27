@@ -1,0 +1,83 @@
+# Submissão de índice pós-deploy (Rodada 1)
+#
+# Depois de cada publicação em produção:
+#   1. regenera os sitemaps (lastmod real, derivado do Git)
+#   2. submete/pinga o sitemap no Google Search Console
+#   3. envia ao IndexNow (Bing/Yandex/Seznam) apenas as URLs cujo conteúdo mudou
+#
+# Também roda de forma periódica (diária) para manter o ping vivo.
+name: Pós-deploy — submissão de índice
+
+on:
+  workflow_dispatch:
+    inputs:
+      all:
+        description: "Reenviar todas as URLs ao IndexNow (baseline)"
+        type: boolean
+        default: false
+  repository_dispatch:
+    types: [production-deployed]
+  schedule:
+    - cron: "20 6 * * *"
+
+concurrency:
+  group: post-deploy-index-submit
+  cancel-in-progress: true
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      LOVABLE_API_KEY: ${{ secrets.LOVABLE_API_KEY }}
+      GOOGLE_SEARCH_CONSOLE_API_KEY: ${{ secrets.GOOGLE_SEARCH_CONSOLE_API_KEY }}
+      GSC_SITE_URL: ${{ vars.GSC_SITE_URL }}
+      INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # histórico completo: lastmod vem do Git
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - name: Regenerar sitemaps com lastmod real
+        run: |
+          node scripts/generate-sitemaps.mjs
+          node scripts/check-sitemap-lastmod.mjs
+
+      - name: Submeter sitemap ao Search Console
+        if: env.LOVABLE_API_KEY != '' && env.GOOGLE_SEARCH_CONSOLE_API_KEY != ''
+        run: node scripts/submit-sitemap-gsc.mjs
+
+      - name: IndexNow (somente URLs com mudança real)
+        run: node scripts/indexnow-submit.mjs ${{ (github.event_name == 'workflow_dispatch' && inputs.all) && '--all' || '' }}
+
+      - name: Relatório sitemap × indexação
+        if: always()
+        run: node scripts/report-indexacao-auditoria.mjs || true
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: post-deploy-index-submit
+          path: |
+            reports/sitemap-submissions.json
+            reports/indexnow-manifest.json
+            public/indexacao-auditoria.json
+          if-no-files-found: warn
+          retention-days: 30
+
+      - name: Resumo
+        if: always()
+        run: |
+          {
+            echo "## Submissão de índice"
+            echo '```json'
+            tail -c 2000 reports/sitemap-submissions.json 2>/dev/null || echo "sem submissão GSC"
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
