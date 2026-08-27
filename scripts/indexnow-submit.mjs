@@ -12,10 +12,16 @@
  * (title, description, canonical, robots, headings, texto do <main>), então
  * mudanças de build, hash de asset ou markup de layout não geram ruído.
  *
+ * Antes de qualquer requisição, aplicamos o gate de `lastmod` do sitemap:
+ * URL já submetida cujo `lastmod` não mudou desde a última submissão não é
+ * nem buscada nem pingada (economiza rede e evita ping repetido inútil).
+ * `--recheck` ignora esse atalho e revalida o HTML de todas as URLs.
+ *
  * Uso:
  *   node scripts/indexnow-submit.mjs              # diff e envio
  *   node scripts/indexnow-submit.mjs --dry-run    # só mostra o que enviaria
  *   node scripts/indexnow-submit.mjs --all        # primeira submissão (baseline)
+ *   node scripts/indexnow-submit.mjs --recheck    # ignora o atalho de lastmod
  *   node scripts/indexnow-submit.mjs --limit 50
  */
 import { createHash } from "node:crypto";
@@ -26,6 +32,7 @@ import { exitIfLocalMode } from "./lib/local-mode.mjs";
 const args = process.argv.slice(2);
 const dryRun = args.includes("--dry-run");
 const forceAll = args.includes("--all");
+const recheck = args.includes("--recheck");
 const limit = Number(args[args.indexOf("--limit") + 1]) || 10000;
 
 if (!dryRun) exitIfLocalMode("IndexNow", "submissão seletiva");
@@ -43,13 +50,25 @@ if (!existsSync(resolve("public", `${KEY}.txt`))) {
 }
 
 const publicDir = resolve("public");
-const paths = new Set();
+// path → lastmod declarado no sitemap (pode ser null quando ausente).
+const lastmodPorPath = new Map();
 for (const file of readdirSync(publicDir).filter(
   (f) => f.startsWith("sitemap-") && f.endsWith(".xml") && f !== "sitemap-index.xml" && f !== "sitemap-images.xml",
 )) {
   const xml = readFileSync(resolve(publicDir, file), "utf8");
-  for (const m of xml.matchAll(/<loc>([^<]+)<\/loc>/g)) paths.add(m[1].trim().replace(BASE, "") || "/");
+  for (const m of xml.matchAll(/<url>([\s\S]*?)<\/url>/g)) {
+    const bloco = m[1];
+    const loc = bloco.match(/<loc>([^<]+)<\/loc>/)?.[1]?.trim();
+    if (!loc) continue;
+    const path = loc.replace(BASE, "") || "/";
+    const lastmod = bloco.match(/<lastmod>([^<]+)<\/lastmod>/)?.[1]?.trim() ?? null;
+    // Mantém o lastmod mais recente caso a URL apareça em mais de um sitemap.
+    const atual = lastmodPorPath.get(path);
+    if (atual === undefined || (lastmod && (!atual || lastmod > atual))) lastmodPorPath.set(path, lastmod);
+  }
 }
+const paths = new Set(lastmodPorPath.keys());
+
 
 /** Extrai só os sinais que interessam a um buscador e devolve o hash. */
 function seoHash(html) {
