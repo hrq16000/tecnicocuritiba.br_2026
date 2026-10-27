@@ -243,6 +243,35 @@ export const INTERVENCOES = [
     "coorte": "INTERVENTION_COHORT",
     "experimentalStatus": "INTERVENED"
   },
+  {
+    "id": "INT-2026-10-27-002",
+    "tipo": "PUBLIC_INTERVENTION",
+    "timestamp": "2026-10-27T18:03:16.717Z",
+    "deploymentId": null,
+    "commit": null,
+    "urlsDiretas": [
+      "/problemas/computador-nao-liga-curitiba"
+    ],
+    "urlsIndiretas": [],
+    "arquivos": [
+      "src/routes/problemas.$slug.tsx",
+      "src/lib/seo/problemaRouteMeta.ts",
+      "src/data/problema-route-meta.generated.json"
+    ],
+    "mudanca": "BUNDLE_SPLITTING",
+    "motivo": "Separar metadata compacta do corpo editorial de problemas para reduzir o JavaScript inicial. Nenhum texto, slug, canonical, robots ou destino de CTA é modificado.",
+    "impacto": {
+      "seo": "Mesma metadata nos 189 slugs distintos; ausência continua 404. Arquivo de entrada compartilhado pode mudar em todas as rotas.",
+      "internalLinking": "Sem novos links.",
+      "conteudo": "Conteúdo editorial permanece na fonte original e é carregado pela página.",
+      "schema": "Sem mudança intencional.",
+      "metadata": "Paridade exata com a primeira ocorrência da base original, incluindo 33 slugs repetidos.",
+      "lastmod": "Sem promoção artificial de datas.",
+      "conversao": "Sem mudança."
+    },
+    "coorte": "INTERVENTION_COHORT",
+    "experimentalStatus": "INTERVENED"
+  },
 ];
 
 export default { LEDGER_SCHEMA, D0, INTERVENCOES };
