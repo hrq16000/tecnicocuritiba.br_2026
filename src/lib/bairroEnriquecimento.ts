@@ -42,7 +42,7 @@ export function blocosEnriquecimento(data: BairroData): BlocoEnriquecimento[] {
       titulo: "Tempo de deslocamento e janela de atendimento",
       paragrafos: [
         `O deslocamento até o ${data.nome} leva ${data.tempoDeslocamento}. ` +
-          `Esse número define a janela que conseguimos confirmar no WhatsApp: quanto mais cedo o contato, maior a chance de coleta no mesmo dia. ` +
+          `A disponibilidade de coleta é confirmada no WhatsApp, conforme a agenda e o trajeto. ` +
           `Não há balcão para o cliente levar o equipamento — a retirada e a devolução são feitas por nós.`,
       ],
     });

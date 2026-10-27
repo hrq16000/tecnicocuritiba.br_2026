@@ -123,7 +123,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:image:secure_url", content: "https://tecnico.curitiba.br/og-image.png?v=20260709-1" },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
-      { property: "og:image:alt", content: "Técnico de Informática em Curitiba - Atendimento no mesmo dia" },
+      { property: "og:image:alt", content: "Técnico de Informática em Curitiba - Suporte e manutenção" },
       { property: "og:image:type", content: "image/png" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Técnico em Curitiba" },

@@ -14,6 +14,7 @@
  */
 import { readFileSync, readdirSync, statSync, existsSync } from "node:fs";
 import { join, relative } from "node:path";
+import { isNonPromotionalClaim } from "./lib/trust-claims-context.mjs";
 
 const ROOT = process.cwd();
 const SRC = join(ROOT, "src");
@@ -46,7 +47,7 @@ const RULES = [
   { id: "ano-divergente", re: /(desde|atuando desde|no mercado desde)\s+(19[0-9]{2}|20[0-2][0-9])/i, msg: "ano institucional divergente da fonte central", check: (m) => m[2] !== OFFICIAL_YEAR },
   { id: "whatsapp-divergente", re: /55\d{2}9?\d{8}/, msg: "número de WhatsApp divergente do oficial", check: (m) => m[0] !== OFFICIAL_WHATSAPP },
   { id: "garantia-divergente", re: /garantia\s+(de\s+)?(\d{1,3})\s*(dias|meses|ano)/i, msg: `garantia divergente da fonte central (${WARRANTY_DAYS} dias de serviço)`, check: (m) => !(m[3].startsWith("dia") && m[2] === WARRANTY_DAYS) },
-];
+].map((rule) => ({ ...rule, re: new RegExp(rule.re.source, `${rule.re.flags}g`) }));
 
 const allow = existsSync(ALLOWLIST_PATH) ? JSON.parse(readFileSync(ALLOWLIST_PATH, "utf8")) : { exceptions: [] };
 const isAllowed = (file, ruleId) =>
@@ -66,16 +67,17 @@ function walk(dir, out = []) {
 
 const findings = [];
 for (const file of walk(SRC)) {
-  const rel = relative(ROOT, file);
+  const rel = relative(ROOT, file).replace(/\\/g, "/");
   const lines = readFileSync(file, "utf8").split("\n");
   lines.forEach((line, i) => {
     if (/^\s*(\/\/|\*|\/\*)/.test(line)) return; // comentários de governança
     for (const rule of RULES) {
       if (isAllowed(rel, rule.id)) continue;
-      const m = line.match(rule.re);
-      if (!m) continue;
-      if (rule.check && !rule.check(m)) continue;
-      findings.push({ file: rel, line: i + 1, rule: rule.id, msg: rule.msg, excerpt: line.trim().slice(0, 160) });
+      for (const m of line.matchAll(rule.re)) {
+        if (rule.check && !rule.check(m)) continue;
+        if (isNonPromotionalClaim(rule.id, line, m)) continue;
+        findings.push({ file: rel, line: i + 1, rule: rule.id, msg: rule.msg, excerpt: line.trim().slice(0, 160) });
+      }
     }
   });
 }
