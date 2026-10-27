@@ -18,7 +18,18 @@ import path from "node:path";
 const ROOT = process.cwd();
 const HOJE = new Date().toISOString().slice(0, 10);
 
-let gitOk = true;
+// Shallow clones report the checkout boundary as a file's last change. Such
+// dates are unreliable; retain only explicitly declared dates in that case.
+let gitOk = false;
+try {
+  gitOk = execFileSync("git", ["rev-parse", "--is-shallow-repository"], {
+    cwd: ROOT,
+    encoding: "utf8",
+    stdio: ["ignore", "pipe", "ignore"],
+  }).trim() === "false";
+} catch {
+  // No Git metadata: use declared dates only.
+}
 const gitCache = new Map();
 
 /** Data (YYYY-MM-DD) do último commit que tocou o arquivo. */
