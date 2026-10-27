@@ -16,7 +16,7 @@ jobs:
           bun-version: latest
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22"
       - name: Install deps
         run: npm ci --no-audit --no-fund
       - name: Restore ESLint cache
@@ -182,9 +182,12 @@ jobs:
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22"
       - name: Install deps
         run: npm ci --no-audit --no-fund
       - name: Typecheck (gate obrigatório)
@@ -219,7 +222,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22"
       - name: Install deps
         run: npm ci --no-audit --no-fund
       - name: Install Playwright browsers
@@ -274,7 +277,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22"
           cache: npm
       - name: Install deps
         run: npm ci --no-audit --no-fund
@@ -337,7 +340,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22"
           cache: npm
       - name: Install deps
         run: npm ci --no-audit --no-fund
@@ -394,7 +397,7 @@ jobs:
       - uses: actions/setup-node@v4
         if: steps.changes.outputs.ping == 'true'
         with:
-          node-version: "20"
+          node-version: "22"
       - name: Ping IndexNow with sitemap URLs
         if: steps.changes.outputs.ping == 'true'
         env:
@@ -415,7 +418,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22"
       - name: Install deps
         run: npm ci --no-audit --no-fund
       - name: Install Lighthouse CI
