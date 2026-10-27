@@ -11,7 +11,7 @@ const PROIBIDOS = [
   { re: /traga (?:o|a|seu|sua) [\wçãáéíóêôõ-]+ (?:à|na|para a) (?:oficina|loja)/gi, motivo: "convida o cliente a levar o equipamento" },
   { re: /trazer (?:o|a|seu|sua)? ?[\wçãáéíóêôõ-]* ?(?:à|na|para a) (?:oficina|loja)/gi, motivo: "convida o cliente a levar o equipamento" },
   { re: /presencial(?:mente)? na oficina/gi, motivo: "sugere atendimento de balcão" },
-  { re: /balc[ãa]o de atendimento(?! ao p[úu]blico[:,]? o equipamento| ao p[úu]blico\.)/gi, motivo: "menciona balcão fora da negativa oficial" },
+  { id: "balcao", re: /balc[ãa]o de atendimento(?! ao p[úu]blico[:,]? o equipamento| ao p[úu]blico\.)/gi, motivo: "menciona balcão fora da negativa oficial" },
   { re: /(?:nossa|nossa nova) loja f[íi]sica/gi, motivo: "promete loja física inexistente" },
   { re: /venha at[ée] (?:n[óo]s|nossa)/gi, motivo: "convida visita do cliente" },
 ];
@@ -32,8 +32,12 @@ collectFiles("src");
 const violacoes = [];
 for (const file of files) {
   const src = readFileSync(file, "utf8");
-  for (const { re, motivo } of PROIBIDOS) {
+  for (const { id, re, motivo } of PROIBIDOS) {
     for (const m of src.matchAll(re)) {
+      // A negativa explícita descreve a operação; não oferece atendimento físico.
+      const before = src.slice(Math.max(0, m.index - 16), m.index);
+      const after = src.slice(m.index + m[0].length);
+      if (id === "balcao" && /não temos\s+$/i.test(before) && /^ ao p[úu]blico[:.]/i.test(after)) continue;
       const linha = src.slice(0, m.index).split("\n").length;
       violacoes.push(`${file}:${linha} — "${m[0].trim()}" (${motivo})`);
     }

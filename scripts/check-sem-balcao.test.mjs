@@ -25,7 +25,7 @@ function runFixture(copy) {
   }
 }
 test("varre conteúdo TS/TSX sem depender de rg e ignora arquivos de teste", () => {
-  const result = runFixture('export const texto = "Coleta e entrega por agendamento";');
+  const result = runFixture('export const texto = "Não temos balcão de atendimento ao público: quando o caso exige bancada, combinamos coleta e devolução.";');
   assert.equal(result.status, 0, result.stderr);
   assert.match(result.stdout, /2 arquivos sem convite a balcão/);
 });
@@ -33,4 +33,10 @@ test("continua bloqueando convite para loja física inexistente", () => {
   const result = runFixture('export const texto = "Visite nossa loja física";');
   assert.equal(result.status, 1);
   assert.match(result.stderr, /promete loja física inexistente/);
+});
+
+test("oferta afirmativa de balcão continua bloqueada", () => {
+  const result = runFixture('export const texto = "Temos balcão de atendimento ao público: quando quiser, compareça";');
+  assert.equal(result.status, 1);
+  assert.match(result.stderr, /menciona balcão fora da negativa oficial/);
 });
