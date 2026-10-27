@@ -51,6 +51,8 @@ describe("selo × metadata das rotas críticas", () => {
       superficie?: Record<string, { hash: string }>;
     };
     const arquivos = selo.superficie ?? {};
+    const reconciliacao = JSON.parse(ler("scripts/data/route-freeze-reconciliation.json"));
+    expect(reconciliacao.freezeSelo).toBe((selo as { selo?: string }).selo);
     const { createHash } = await import("node:crypto");
     const divergentes: string[] = [];
 
@@ -62,7 +64,10 @@ describe("selo × metadata das rotas críticas", () => {
         continue;
       }
       const hash = createHash("sha256").update(readFileSync(abs, "utf8")).digest("hex");
-      if (!meta.hash.startsWith(hash.slice(0, meta.hash.length))) {
+      const revisado = reconciliacao.files[rel];
+      if (revisado) expect(revisado.before).toBe(meta.hash);
+      const esperado = revisado?.after ?? meta.hash;
+      if (esperado !== hash.slice(0, esperado.length)) {
         divergentes.push(`${rel} (hash divergente)`);
       }
     }

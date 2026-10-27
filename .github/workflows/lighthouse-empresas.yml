@@ -38,7 +38,7 @@ jobs:
 
       - name: Iniciar preview para testes
         run: |
-          npx vite preview --port 8080 --strictPort > /tmp/tecnico-preview.log 2>&1 &
+          node scripts/preview-built.mjs --port 8080 --strictPort > /tmp/tecnico-preview.log 2>&1 &
           for i in $(seq 1 60); do curl -sf -o /dev/null http://localhost:8080/ && exit 0; sleep 1; done
           cat /tmp/tecnico-preview.log
           exit 1

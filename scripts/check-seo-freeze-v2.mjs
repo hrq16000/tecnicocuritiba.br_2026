@@ -46,7 +46,16 @@ for (const rel of Object.keys(antes)) if (!atual[rel]) diffs.push({ arquivo: rel
 
 const porClasse = diffs.reduce((acc, d) => { acc[d.classe] = (acc[d.classe] ?? 0) + 1; return acc; }, {});
 const publicos = diffs.filter((d) => d.classe === "PUBLIC_CHANGE");
-const naoRegistrados = publicos.filter((d) => !declarado(d.arquivo));
+// Reconciliações revisadas aceitam apenas os hashes exatos registrados;
+// o freeze histórico não é regravado e novas mudanças continuam bloqueadas.
+const recFile = "scripts/data/route-freeze-reconciliation.json";
+const rec = existsSync(recFile) ? JSON.parse(readFileSync(recFile, "utf8")) : null;
+const reconciliado = (rel) => {
+  const item = rec?.files?.[rel];
+  return rec?.freezeSelo === freeze.selo && item &&
+    antes[rel]?.hash === item.before && atual[rel]?.hash === item.after;
+};
+const naoRegistrados = publicos.filter((d) => !declarado(d.arquivo) && !reconciliado(d.arquivo));
 
 const relatorio = {
   schema: "freeze-v2-drift/1.0",

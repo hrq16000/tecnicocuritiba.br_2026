@@ -28,7 +28,9 @@ jobs:
             eslint-${{ runner.os }}-${{ hashFiles('eslint.config.js', 'package-lock.json') }}-
             eslint-${{ runner.os }}-
       - name: Lint (cache incremental, non-blocking warnings)
-        run: npm run lint:ci --silent || echo "::warning::lint reported issues"
+        run: |
+          mkdir -p reports
+          npm run lint:ci --silent -- --format json --output-file reports/eslint.json || echo "::warning::lint reported issues (reports/eslint.json)"
       - name: Gate de Motion Principles (skeleton, lazyload, progresso)
         run: npm run check:motion-coverage
       - name: CTA funnel gate
@@ -108,7 +110,7 @@ jobs:
 
       - name: SEO estático das rotas comerciais (canonical/og:url/og:site_name)
         run: |
-          npx vite preview --port 4325 --strictPort &
+          node scripts/preview-built.mjs --port 4325 --strictPort &
           for i in $(seq 1 60); do curl -sf -o /dev/null http://localhost:4325/ && break; sleep 1; done
           E2E_BASE_URL=http://localhost:4325 npx playwright test --config=playwright.ci.config.ts e2e/comercial-og-canonical.spec.ts --reporter=line
       - name: Changelog de SEO do build (headings, metadados, structured data)
@@ -138,7 +140,7 @@ jobs:
       # além de garantir que nenhum alias 301 tenha canonical próprio.
       - name: Gate de saúde de indexação (rotas + aliases)
         run: |
-          npx vite preview --port 4321 --strictPort &
+          node scripts/preview-built.mjs --port 4321 --strictPort &
           for i in $(seq 1 60); do curl -sf -o /dev/null http://localhost:4321/ && break; sleep 1; done
           node scripts/check-index-health.mjs --base=http://localhost:4321 --strict
       # Originalidade: mede o DOM renderizado de TODA URL curada, exige corpo
@@ -190,6 +192,8 @@ jobs:
           node-version: "22"
       - name: Install deps
         run: npm ci --no-audit --no-fund
+      - name: Preview do build (assets, SSR, redirects e status)
+        run: node --test scripts/preview-built.test.mjs
       - name: Typecheck (gate obrigatório)
         run: npm run check:types
       - name: Typecheck (Bun) dos dados de bairros
@@ -230,13 +234,13 @@ jobs:
       - name: Build
         run: npm run build
       - name: Start preview
-        run: npx vite preview --port 8080 &
+        run: node scripts/preview-built.mjs --port 8080 &
         env:
           CI: "true"
       - name: Wait for server
         run: npx wait-on http://localhost:8080 --timeout 60000
       - name: Run targeted E2E (whatsapp + termos + sitemap + como-funciona + segurança)
-        run: npx playwright test e2e/whatsapp-funnel.spec.ts e2e/termos-e-condicoes.spec.ts e2e/seo-sitemap-robots.spec.ts e2e/como-funciona-mobile.spec.ts e2e/security-data-exposure.spec.ts
+        run: npx playwright test --config=playwright.ci.config.ts e2e/whatsapp-funnel.spec.ts e2e/termos-e-condicoes.spec.ts e2e/seo-sitemap-robots.spec.ts e2e/como-funciona-mobile.spec.ts e2e/security-data-exposure.spec.ts
         env:
           E2E_BASE_URL: http://localhost:8080
           # Chaves públicas (anon) — o teste também tem fallback embutido.
@@ -287,7 +291,7 @@ jobs:
       - name: Build (uma única vez por job)
         run: npm run build
       - name: Start preview
-        run: npx vite preview --port 8080 &
+        run: node scripts/preview-built.mjs --port 8080 &
       - name: Wait for server (healthcheck HTTP)
         run: npx wait-on http-get://localhost:8080/ --timeout 90000
       - name: Run shard ${{ matrix.shard }}/${{ matrix.totalShards }} (${{ matrix.browser }})

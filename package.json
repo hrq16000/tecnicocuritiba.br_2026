@@ -31,7 +31,7 @@
     "lint:ci": "eslint . --cache --cache-location .cache/eslint/ --cache-strategy content",
     "test": "vitest run",
     "test:coverage": "vitest run --coverage",
-    "preview": "vite preview",
+    "preview": "node scripts/preview-built.mjs",
     "test:e2e": "playwright test",
     "test:smoke": "playwright test e2e/smoke-buttons.spec.ts",
     "validate:jsonld": "node scripts/validate-jsonld-static.mjs",
