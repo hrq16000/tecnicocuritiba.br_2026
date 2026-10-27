@@ -10,11 +10,10 @@
         "http://localhost:4173/servicos/backup-para-empresas",
         "http://localhost:4173/servicos/redes-e-wifi"
       ],
-      "startServerCommand": "bun run preview -- --port 4173",
-      "startServerReadyPattern": "Local:",
+      "startServerCommand": "npm run preview -- --port 4173",
+      "startServerReadyPattern": "preview-built",
       "numberOfRuns": 3,
       "settings": {
-        "preset": "mobile",
         "formFactor": "mobile",
         "screenEmulation": {
           "mobile": true,

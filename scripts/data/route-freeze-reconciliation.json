@@ -1,0 +1,70 @@
+{
+  "schema": "route-freeze-reconciliation/1.0",
+  "freezeSelo": "b832bbdf095e97fc856f127728fad773063061e55ee6eed4b9b3678d7eaadb37",
+  "reviewedSourceCommit": "6ef7ab4567de0920ec918c8c834635ec64a96f66",
+  "comparisonBase": "07d3b0da0773047c0581328c725c2995bb35971b",
+  "reviewedAt": "2026-10-27",
+  "scope": "Reconciliação das 12 rotas alteradas no histórico após o freeze. O selo histórico permanece intacto; hashes futuros diferentes continuam bloqueados.",
+  "files": {
+    "src/routes/__root.tsx": {
+      "before": "67cde857336531ad4af5aa038bab6541",
+      "after": "b603984af5a1155f8edbe16ab2659e8c",
+      "note": "Título e descrições de fallback separados dos metadados da home."
+    },
+    "src/routes/arrumar-pc.$cidade.tsx": {
+      "before": "88c0b957555bfdfae86ed51fcc4d7b8c",
+      "after": "d7d2dbfe079c95d7cd71e52e51ab1484",
+      "note": "Metadados SSR específicos adicionados; política noindex preservada."
+    },
+    "src/routes/arrumar-pc.servico.$servico.$cidade.tsx": {
+      "before": "c3b42c75766d041d199fe72fdce11b8a",
+      "after": "965decf7237adaf00fcba9d008373fc8",
+      "note": "Metadados SSR específicos adicionados; política noindex preservada."
+    },
+    "src/routes/conserto-celular.$local.tsx": {
+      "before": "b74e6c004a1f7ee6547293637ded81fc",
+      "after": "f8780ead367bd5b0ad189faf4d94dba7",
+      "note": "Metadados SSR específicos adicionados; política noindex preservada."
+    },
+    "src/routes/conserto-som.$local.tsx": {
+      "before": "49e7094a9044abdef0dd722392bbb289",
+      "after": "012ed2ce5bcfba4e614f43260c39ea31",
+      "note": "Metadados SSR específicos adicionados; política noindex preservada."
+    },
+    "src/routes/conserto-tv.$local.tsx": {
+      "before": "a94eb04d7eeb2fed971d92b708b1c5dc",
+      "after": "ede64e5b9150377daa215e64090f3d44",
+      "note": "Metadados SSR específicos adicionados; política noindex preservada."
+    },
+    "src/routes/conserto-videogame.$local.tsx": {
+      "before": "bb03263b07a74a054252b1c04f8253b9",
+      "after": "dfc8704344df5275c9590ff516d05902",
+      "note": "Metadados SSR específicos adicionados; política noindex preservada."
+    },
+    "src/routes/marcas.$slug.tsx": {
+      "before": "42a634b2b0211ffbb19926c74bfc2cfd",
+      "after": "5d81b9e3471ce7740cde98ffd2ef532c",
+      "note": "Metadados SSR específicos adicionados; política noindex preservada."
+    },
+    "src/routes/problemas.$slug.tsx": {
+      "before": "b35d15d9c5b94927007d06e9433039cb",
+      "after": "1663c071d77dde5fef47e2516a7c1aa8",
+      "note": "Metadados SSR específicos adicionados; política noindex preservada."
+    },
+    "src/routes/procedimentos.$slug.tsx": {
+      "before": "c0a27b2c752e944f931f3049088cf320",
+      "after": "5a3c076d6e255519c4f8b39ef8e2dfc1",
+      "note": "Metadados SSR específicos adicionados; política noindex preservada."
+    },
+    "src/routes/servicos.$servico.$cidade.tsx": {
+      "before": "e81544902e3ff7f8c5de8b67434baaa4",
+      "after": "c40fd5bc3651fcd87a4536a639a38903",
+      "note": "Título e descrição específicos para serviço/cidade no fallback dinâmico."
+    },
+    "src/routes/servicos.suporte-tecnico-empresarial.tsx": {
+      "before": "1d57ac8b0f472fb5f783a76d0a5ea04d",
+      "after": "f673be3737b696c7c80e9f2e796c4ce1",
+      "note": "FAQ atualizada para planos de suporte gerenciado, com limites explícitos."
+    }
+  }
+}

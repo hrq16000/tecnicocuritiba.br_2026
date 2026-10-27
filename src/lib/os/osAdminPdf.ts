@@ -1,7 +1,7 @@
 // ─────────────────────────────────────────────────────────────
 // PDF PROFISSIONAL DA ORDEM DE SERVIÇO (uso administrativo)
 // Regra de integridade: só imprime o que existe na O.S. Campo vazio
-// não vira linha, e nada de garantia/prazo/CNPJ/assinatura é
+// não vira linha, e nada de garantia/prazo/identificação fiscal/assinatura é
 // inventado — se não houver fonte confiável, o bloco é omitido.
 // ─────────────────────────────────────────────────────────────
 import { createPdf, downloadBlob } from "@/lib/pdfDoc";

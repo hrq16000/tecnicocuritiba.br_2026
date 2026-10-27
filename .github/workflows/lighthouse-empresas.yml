@@ -24,7 +24,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22"
           cache: npm
 
       - name: Instalar dependências
@@ -36,8 +36,15 @@ jobs:
       - name: Instalar Chromium (Playwright)
         run: npx playwright install --with-deps chromium
 
+      - name: Iniciar preview para testes
+        run: |
+          node scripts/preview-built.mjs --port 8080 --strictPort > /tmp/tecnico-preview.log 2>&1 &
+          for i in $(seq 1 60); do curl -sf -o /dev/null http://localhost:8080/ && exit 0; sleep 1; done
+          cat /tmp/tecnico-preview.log
+          exit 1
+
       - name: JSON-LD, CTAs e dedupe da /empresas (E2E)
-        run: npx playwright test e2e/empresas-landing.spec.ts e2e/empresas-mobile-ctas.spec.ts
+        run: npx playwright test --config=playwright.ci.config.ts e2e/empresas-landing.spec.ts e2e/empresas-mobile-ctas.spec.ts
 
       - name: Lighthouse CI (/empresas, mobile)
         run: npx --yes @lhci/cli@0.14.x autorun --config=lighthouserc.empresas.json

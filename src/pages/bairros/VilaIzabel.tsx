@@ -9,7 +9,7 @@ const data = {
   metaDescription: "Técnico de informática na Vila Izabel, Curitiba: suporte para notebook, computador lento, Wi-Fi, backup e remoção de vírus. Diagnóstico antes do valor.",
   h1: "Técnico de Informática na Vila Izabel – Curitiba",
   subtitulo: "Atendimento na Vila Izabel com diagnóstico técnico, explicação clara e aprovação antes da execução.",
-  descricaoLonga: `A Vila Izabel reúne casas, apartamentos e atividades de serviço onde computador, notebook e Wi-Fi fazem parte do trabalho, estudo e organização da rotina. Problemas como lentidão, tela azul, falhas de inicialização e rede instável precisam ser investigados sem atalhos: antes de qualquer orçamento, verificamos o sintoma, o histórico e a necessidade de preservar arquivos e acessos.
+  descricaoLonga: `A Vila Izabel reúne casas, apartamentos e atividades de serviço onde computador, notebook e Wi-Fi fazem parte do trabalho, estudo e organização da rotina. Problemas como lentidão, tela azul, falhas de inicialização e rede instável precisam ser investigados sem atalhos: antes de apresentar o valor, verificamos o sintoma, o histórico e a necessidade de preservar arquivos e acessos.
 
     A manutenção pode envolver limpeza de software, correção de configurações, backup, melhoria de armazenamento ou avaliação de hardware. Quando existe indicação de formatação, ela é planejada com os dados essenciais; quando o defeito exige bancada, como tela, conector ou placa, a pessoa recebe a explicação e aprova o encaminhamento antes da coleta.`,
   pontosReferencia: ["Rua Bom Jesus de Iguape", "Praça Vila Izabel", "Av. República Argentina (próxima)", "Portão (divisa)", "Rua Holanda"],

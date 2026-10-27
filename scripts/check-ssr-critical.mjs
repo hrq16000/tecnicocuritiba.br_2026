@@ -39,6 +39,11 @@ for (const file of readdirSync(CLIENT).filter((f) => /^sitemap.*\.xml$/.test(f))
   for (const m of xml.matchAll(/<loc>\s*([^<\s]+)\s*<\/loc>/gi)) locs.add(m[1]);
 }
 
+if (locs.size === 0) {
+  console.error("[ssr-critical] BLOQUEADO: nenhum sitemap de URLs encontrado ou nenhum <loc> válido.");
+  process.exit(1);
+}
+
 const text = (html) =>
   html
     .replace(/<script[\s\S]*?<\/script>/gi, " ")
@@ -102,6 +107,11 @@ if (errors.length) {
   console.error(`[ssr-critical] BLOQUEADO — ${errors.length} problema(s):`);
   errors.slice(0, 60).forEach((e) => console.error(`  • ${e}`));
   if (errors.length > 60) console.error(`  … +${errors.length - 60}`);
+  process.exit(1);
+}
+
+if (stats.size === 0) {
+  console.error("[ssr-critical] BLOQUEADO: nenhum HTML de família crítica foi verificado.");
   process.exit(1);
 }
 
