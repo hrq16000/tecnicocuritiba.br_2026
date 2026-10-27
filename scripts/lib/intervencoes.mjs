@@ -208,6 +208,41 @@ export const INTERVENCOES = [
     coorte: "INTERVENTION_COHORT",
     experimentalStatus: "INTERVENED",
   },
+  {
+    "id": "INT-2026-10-27-001",
+    "tipo": "PUBLIC_INTERVENTION",
+    "timestamp": "2026-10-27T17:53:40.095Z",
+    "deploymentId": null,
+    "commit": null,
+    "urlsDiretas": [
+      "/",
+      "/empresas",
+      "/bairros/xaxim",
+      "/bairros/uberaba",
+      "/servicos/conserto-impressora-3d"
+    ],
+    "urlsIndiretas": [],
+    "arquivos": [
+      "src/routes/__root.tsx",
+      "src/pages/Empresas.tsx",
+      "src/lib/bairroEnriquecimento.ts",
+      "src/lib/bairrosData.ts",
+      "src/lib/servicosCore.ts"
+    ],
+    "mudanca": "COPY_TRUTHFULNESS",
+    "motivo": "Retirar prazos de coleta e reparo não confirmados. Preservar perguntas e orientações técnicas, a política de indexação, os destinos de CTA e o histórico do freeze.",
+    "impacto": {
+      "seo": "Sem promoção de indexação nem mudança de canonical; correções pontuais de texto em componentes compartilhados.",
+      "internalLinking": "Nenhum link novo.",
+      "conteudo": "Prazos passam a depender da triagem, agenda e teste.",
+      "schema": "FAQ empresarial atualizada no cliente a partir da mesma fonte do texto visível.",
+      "metadata": "Alt padrão OpenGraph compartilhado em todas as rotas passa a Suporte e manutenção; URLs listadas destacam o texto visível alterado, e bairroEnriquecimento também é compartilhado entre bairros.",
+      "lastmod": "Sem data artificial nem reescrita do histórico.",
+      "conversao": "Destino WhatsApp e comportamento dos CTAs preservados."
+    },
+    "coorte": "INTERVENTION_COHORT",
+    "experimentalStatus": "INTERVENED"
+  },
 ];
 
 export default { LEDGER_SCHEMA, D0, INTERVENCOES };

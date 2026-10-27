@@ -64,7 +64,7 @@ const FAQS = [
   {
     question: "Como funciona o atendimento quando a operação está parada?",
     answer:
-      "Solicitações marcadas como operação parada entram primeiro na fila de triagem. Fazemos a checagem inicial por WhatsApp para tentar restabelecer o essencial no mesmo dia e, quando é necessário atendimento presencial, o escopo e as condições são informados antes do deslocamento.",
+      "Solicitações marcadas como operação parada entram primeiro na fila de triagem. Fazemos a checagem inicial por WhatsApp para avaliar os próximos passos e combinar a janela disponível e, quando é necessário atendimento presencial, o escopo e as condições são informados antes do deslocamento.",
   },
   {
     question: "É possível contratar suporte recorrente para a empresa?",

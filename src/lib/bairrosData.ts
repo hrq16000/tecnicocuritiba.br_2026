@@ -680,7 +680,7 @@ export const BAIRROS: Record<string, BairroLocalData> = {
     introducaoLocal: [
       "O Xaxim é um bairro de ocupação consolidada no sul de Curitiba, com predomínio de casas térreas, sobrados e pequenos condomínios ao longo da Francisco Derosso e das ruas que ligam ao Capão Raso e ao Pinheirinho. É uma região de famílias com filhos em idade escolar e de muitos profissionais autônomos que trabalham de casa — costureiras, corretores, motoristas de aplicativo, professores particulares.",
       "Esse perfil define o tipo de chamado que recebemos: computador antigo que ficou lento demais para as tarefas da escola, notebook de trabalho com bateria e aquecimento comprometidos, e roteador entregue pela operadora que não cobre a casa inteira quando duas ou três pessoas usam a internet ao mesmo tempo. Tudo começa pela conversa no WhatsApp, com o sintoma descrito em detalhe.",
-      "A partir da descrição decidimos o caminho: alguns casos são resolvidos remotamente no mesmo dia, outros pedem visita ao seu endereço e uma parte exige bancada, quando o equipamento precisa de teste prolongado ou abertura. Nada é executado antes de você aprovar o valor.",
+      "A partir da descrição decidimos o caminho: alguns casos podem ser tratados remotamente, outros pedem visita ao seu endereço e uma parte exige bancada, quando o equipamento precisa de teste prolongado ou abertura. Nada é executado antes de você aprovar o valor.",
     ],
     operacaoLocal: [
       "Triagem pelo WhatsApp identificando se é lentidão, falha de hardware ou rede",
@@ -784,7 +784,7 @@ export const BAIRROS: Record<string, BairroLocalData> = {
     introducaoLocal: [
       "O Uberaba é um bairro extenso do leste de Curitiba, com bolsões residenciais que vão das proximidades do Jardim das Américas até a divisa com o Cajuru e o Prado Velho. Nos últimos anos ganhou muitos condomínios verticais, e com eles um público que trabalha em casa em regime híbrido e depende de conexão estável e máquina rápida para reuniões diárias.",
       "Os chamados mais frequentes refletem isso: microfone e câmera que somem em chamada, notebook que não segura a bateria depois de anos de uso, sistema travando durante o expediente e Wi-Fi instável em apartamento com muitas redes vizinhas concorrendo pelo mesmo canal.",
-      "Começamos pelo WhatsApp para entender rotina, urgência e o equipamento envolvido. Casos de configuração costumam sair por atendimento remoto no mesmo dia; falhas físicas seguem para visita ou coleta, com aprovação de valor antes de qualquer serviço.",
+      "Começamos pelo WhatsApp para entender rotina, urgência e o equipamento envolvido. Ajustes de configuração podem ser feitos por atendimento remoto; falhas físicas seguem para visita ou coleta, com aprovação de valor antes de qualquer serviço.",
     ],
     operacaoLocal: [
       "Triagem pelo WhatsApp com atenção a horário de reunião e expediente",

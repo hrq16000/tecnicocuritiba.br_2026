@@ -4,12 +4,21 @@
   "reviewedSourceCommit": "6ef7ab4567de0920ec918c8c834635ec64a96f66",
   "comparisonBase": "07d3b0da0773047c0581328c725c2995bb35971b",
   "reviewedAt": "2026-10-27",
-  "scope": "Reconciliação das 12 rotas alteradas no histórico após o freeze. O selo histórico permanece intacto; hashes futuros diferentes continuam bloqueados.",
+  "scope": "Reconciliação das 12 rotas alteradas no histórico após o freeze. O selo histórico permanece intacto; hashes futuros diferentes continuam bloqueados. Revisões aprovadas de metadata mantêm a cadeia de hashes e o motivo da intervenção.",
   "files": {
     "src/routes/__root.tsx": {
       "before": "67cde857336531ad4af5aa038bab6541",
-      "after": "b603984af5a1155f8edbe16ab2659e8c",
-      "note": "Título e descrições de fallback separados dos metadados da home."
+      "after": "c54d13eda7370255ce5e0c5e4de40f18",
+      "note": "Título e descrições de fallback separados dos metadados da home.",
+      "revisions": [
+        {
+          "sourceCommit": "82c7fd7542347e55320947ec27d8f4a0e6f0f86f",
+          "before": "b603984af5a1155f8edbe16ab2659e8c",
+          "after": "c54d13eda7370255ce5e0c5e4de40f18",
+          "intervention": "INT-2026-10-27-001",
+          "reason": "Remover promessa de atendimento no mesmo dia do alt OpenGraph, sem alterar title/description/canonical/robots."
+        }
+      ]
     },
     "src/routes/arrumar-pc.$cidade.tsx": {
       "before": "88c0b957555bfdfae86ed51fcc4d7b8c",
