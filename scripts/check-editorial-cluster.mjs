@@ -18,6 +18,7 @@
 
 import { promises as fs } from "node:fs";
 import path from "node:path";
+import { tanstackRouteIndex } from "./lib/tanstack-routes.mjs";
 
 const ROOT = process.cwd();
 const errors = [];
@@ -81,14 +82,8 @@ async function main() {
     ...[...prog.matchAll(/slug:\s*"([a-z0-9-]+)"/g)].map((m) => m[1]),
   ]);
 
-  // Rotas reais (pilares).
-  const appPaths = new Set();
-  for (const f of ["src/App.tsx", "src/LegacyApp.tsx"]) {
-    try {
-      const s = await read(f);
-      for (const m of s.matchAll(/path=\{?["'`]([^"'`}]+)["'`]/g)) appPaths.add(m[1]);
-    } catch { /* opcional */ }
-  }
+  // Rotas reais do TanStack: App/LegacyApp não definem mais o roteamento.
+  const { staticRoutes: appPaths } = tanstackRouteIndex(ROOT);
 
   // 1. Limites da rodada.
   const counts = wave.reduce((acc, e) => ((acc[e.acao] = (acc[e.acao] || 0) + 1), acc), {});
@@ -109,7 +104,7 @@ async function main() {
     if (!slugs.has(e.slug)) fail(`${e.slug}: slug não existe no acervo editorial`);
     const c = clusters[e.cluster];
     if (!c) { fail(`${e.slug}: cluster "${e.cluster}" inexistente`); continue; }
-    if (!appPaths.has(c.pilar) && !c.pilar.startsWith("/servicos/"))
+    if (!appPaths.has(c.pilar))
       fail(`${e.slug}: pilar ${c.pilar} não corresponde a rota real`);
 
     if (e.acao === "consolidar") {
