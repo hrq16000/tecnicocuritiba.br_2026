@@ -192,8 +192,10 @@ jobs:
           node-version: "22"
       - name: Install deps
         run: npm ci --no-audit --no-fund
-      - name: Preview do build (assets, SSR, redirects e status)
-        run: node --test scripts/preview-built.test.mjs
+      - name: Scripts de validação (preview e política sem balcão)
+        run: node --test scripts/preview-built.test.mjs scripts/check-sem-balcao.test.mjs
+      - name: Política sem balcão (sem dependência de rg)
+        run: npm run check:sem-balcao
       - name: Typecheck (gate obrigatório)
         run: npm run check:types
       - name: Typecheck (Bun) dos dados de bairros
