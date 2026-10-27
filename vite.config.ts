@@ -8,6 +8,22 @@ import { execSync } from "node:child_process";
 import { imagetools } from "vite-imagetools";
 import { mcpPlugin } from "@lovable.dev/mcp-js/stacks/supabase/vite";
 import { sentryVitePlugin } from "@sentry/vite-plugin";
+import type { Plugin } from "vite";
+
+// Diagnóstico de build no GitHub; não emite arquivo público nem código cliente.
+const entryBundleReport: Plugin = {
+  name: "entry-bundle-report",
+  generateBundle(_options, bundle) {
+    for (const chunk of Object.values(bundle)) {
+      if (chunk.type !== "chunk" || !chunk.fileName.startsWith("assets/index-")) continue;
+      const modules = Object.entries(chunk.modules)
+        .map(([id, info]) => ({ id: id.replace(process.cwd(), "."), bytes: info.renderedLength }))
+        .sort((a, b) => b.bytes - a.bytes)
+        .slice(0, 15);
+      console.log("[entry-bundle-report]", JSON.stringify({ file: chunk.fileName, bytes: Buffer.byteLength(chunk.code), modules }));
+    }
+  },
+};
 
 const resolveAppVersion = () => {
   if (process.env.APP_VERSION) return process.env.APP_VERSION;
@@ -44,6 +60,7 @@ export default defineConfig({
   },
   vite: {
     plugins: [
+      process.env.GITHUB_ACTIONS === "true" ? entryBundleReport : null,
       imagetools(),
       mcpPlugin(),
       // Upload de source maps para o Sentry apenas quando o CI tem credenciais.

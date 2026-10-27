@@ -255,15 +255,16 @@ export const INTERVENCOES = [
     "urlsIndiretas": [],
     "arquivos": [
       "src/routes/problemas.$slug.tsx",
+      "src/pages/ProblemaPage.tsx",
       "src/lib/seo/problemaRouteMeta.ts",
       "src/data/problema-route-meta.generated.json"
     ],
-    "mudanca": "BUNDLE_SPLITTING",
+    "mudanca": "SSR_AND_BUNDLE_SPLITTING",
     "motivo": "Separar metadata compacta do corpo editorial de problemas para reduzir o JavaScript inicial. Nenhum texto, slug, canonical, robots ou destino de CTA é modificado.",
     "impacto": {
       "seo": "Mesma metadata nos 189 slugs distintos; ausência continua 404. Arquivo de entrada compartilhado pode mudar em todas as rotas.",
       "internalLinking": "Sem novos links.",
-      "conteudo": "Conteúdo editorial permanece na fonte original e é carregado pela página.",
+      "conteudo": "Conteúdo editorial da fonte original passa a ser emitido no servidor em vez do esqueleto vazio. Sem promoção de indexação.",
       "schema": "Sem mudança intencional.",
       "metadata": "Paridade exata com a primeira ocorrência da base original, incluindo 33 slugs repetidos.",
       "lastmod": "Sem promoção artificial de datas.",
