@@ -4,8 +4,8 @@
 // A operação não tem balcão de atendimento ao público. Nenhuma copy pode
 // convidar o cliente a levar o equipamento até nós, nem prometer loja física.
 // Fonte única do texto: src/lib/precosConfig.ts (REGRA_SEM_BALCAO).
-import { readFileSync } from "node:fs";
-import { execSync } from "node:child_process";
+import { readFileSync, readdirSync } from "node:fs";
+import { join } from "node:path";
 
 const PROIBIDOS = [
   { re: /traga (?:o|a|seu|sua) [\wçãáéíóêôõ-]+ (?:à|na|para a) (?:oficina|loja)/gi, motivo: "convida o cliente a levar o equipamento" },
@@ -17,10 +17,17 @@ const PROIBIDOS = [
 ];
 
 // Arquivos de conteúdo público (src), excluindo scripts e testes do próprio gate.
-const files = execSync('rg -l --glob "src/**/*.{ts,tsx}" "" src', { encoding: "utf8" })
-  .trim()
-  .split("\n")
-  .filter((f) => f && !f.endsWith(".test.ts") && !f.endsWith(".test.tsx"));
+const files = [];
+function collectFiles(dir) {
+  for (const entry of readdirSync(dir, { withFileTypes: true }).sort((a, b) => a.name.localeCompare(b.name))) {
+    // Como no rg: arquivos ocultos não são superfícies de conteúdo público.
+    if (entry.name.startsWith(".")) continue;
+    const file = join(dir, entry.name);
+    if (entry.isDirectory()) collectFiles(file);
+    else if (entry.isFile() && /\.tsx?$/.test(entry.name) && !/\.test\.tsx?$/.test(entry.name)) files.push(file);
+  }
+}
+collectFiles("src");
 
 const violacoes = [];
 for (const file of files) {
