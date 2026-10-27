@@ -11,8 +11,8 @@
         "http://localhost:4173/conserto-tv/batel",
         "http://localhost:4173/conserto-celular/sao-jose-dos-pinhais"
       ],
-      "startServerCommand": "bun run preview -- --port 4173",
-      "startServerReadyPattern": "Local:",
+      "startServerCommand": "npm run preview -- --port 4173",
+      "startServerReadyPattern": "preview-built",
       "numberOfRuns": 3,
       "settings": {
         "preset": "desktop"

@@ -3,10 +3,9 @@
     "collect": {
       "url": ["http://localhost:4173/empresas"],
       "startServerCommand": "npm run preview -- --port 4173",
-      "startServerReadyPattern": "Local:",
+      "startServerReadyPattern": "preview-built",
       "numberOfRuns": 3,
       "settings": {
-        "preset": "mobile",
         "formFactor": "mobile",
         "screenEmulation": {
           "mobile": true,
