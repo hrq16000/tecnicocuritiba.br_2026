@@ -17,7 +17,7 @@ import { trackWaClick, trackProblemaServiceClick, trackProblemaLinkBroken } from
 import { auditInternalLink } from "@/lib/internalLinkAudit";
 import { useScrollDepthTracking } from "@/hooks/useScrollDepthTracking";
 import { useCtaVisibility } from "@/hooks/useCtaVisibility";
-import { getProblemaPageBySlug } from "@/lib/problemaPagesData";
+import { useLoaderData } from "@tanstack/react-router";
 import ReactMarkdown from "react-markdown";
 import { IMAGES } from "@/lib/images";
 import { RealImageSection } from "@/components/RealImageSection";
@@ -62,7 +62,7 @@ const diagnosticoSteps = [
 
 const ProblemaPage = () => {
   const { slug } = useParams<{ slug: string }>();
-  const data = slug ? getProblemaPageBySlug(slug) : undefined;
+  const data = useLoaderData({ from: "/problemas/$slug" });
 
   useCanonical(`https://tecnico.curitiba.br/problemas/${data?.slug ?? slug ?? ""}`);
 

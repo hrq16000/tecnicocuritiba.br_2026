@@ -256,6 +256,7 @@ export const INTERVENCOES = [
     "arquivos": [
       "src/routes/problemas.$slug.tsx",
       "src/pages/ProblemaPage.tsx",
+      "src/lib/problemaPage.functions.ts",
       "src/lib/seo/problemaRouteMeta.ts",
       "src/data/problema-route-meta.generated.json"
     ],

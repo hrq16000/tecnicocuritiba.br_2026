@@ -1,4 +1,5 @@
 import { test, expect } from "@playwright/test";
+import { getProblemaPageBySlug } from "../src/lib/problemaPagesData";
 
 test("problema dinâmico preserva head e conteúdo no HTML sem hidratação", async ({ request }) => {
   const response = await request.get("/problemas/computador-nao-liga-curitiba");
@@ -13,4 +14,23 @@ test("problema dinâmico preserva head e conteúdo no HTML sem hidratação", as
 test("problema inexistente continua respondendo 404 HTTP", async ({ request }) => {
   const response = await request.get("/problemas/sem-cadastro-regressao72", { maxRedirects: 0 });
   expect(response.status()).toBe(404);
+});
+
+test("navegação interna carrega outro artigo sem recarregar o documento", async ({ page }) => {
+  const current = "/problemas/computador-nao-liga-curitiba";
+  await page.goto(current);
+  await page.locator('html[data-hydrated="1"]').waitFor();
+  const links = await page.locator('a[href^="/problemas/"]').evaluateAll((anchors) =>
+    anchors.map((anchor) => anchor.getAttribute("href") ?? ""),
+  );
+  const target = links.find((href) => href !== current && getProblemaPageBySlug(href.split("/").at(-1) ?? ""));
+  expect(target).toBeTruthy();
+  const expected = getProblemaPageBySlug(target!.split("/").at(-1) ?? "")!;
+  let documentNavigations = 0;
+  page.on("request", (request) => {
+    if (request.isNavigationRequest() && request.frame() === page.mainFrame()) documentNavigations += 1;
+  });
+  await page.locator(`a[href="${target}"]`).first().click();
+  await expect(page.getByRole("heading", { level: 1 })).toHaveText(expected.h1);
+  expect(documentNavigations).toBe(0);
 });

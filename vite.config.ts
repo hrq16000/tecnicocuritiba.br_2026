@@ -20,7 +20,9 @@ const entryBundleReport: Plugin = {
         .map(([id, info]) => ({ id: id.replace(process.cwd(), "."), bytes: info.renderedLength }))
         .sort((a, b) => b.bytes - a.bytes)
         .slice(0, 15);
-      console.log("[entry-bundle-report]", JSON.stringify({ file: chunk.fileName, bytes: Buffer.byteLength(chunk.code), modules }));
+      const problemId = Object.keys(chunk.modules).find((id) => id.endsWith("/problemaPagesData.ts"));
+      const problemImporters = problemId ? this.getModuleInfo(problemId)?.importers : [];
+      console.log("[entry-bundle-report]", JSON.stringify({ file: chunk.fileName, bytes: Buffer.byteLength(chunk.code), modules, problemImporters }));
     }
   },
 };

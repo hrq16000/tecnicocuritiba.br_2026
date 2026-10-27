@@ -57,7 +57,7 @@
     },
     "src/routes/problemas.$slug.tsx": {
       "before": "b35d15d9c5b94927007d06e9433039cb",
-      "after": "13ee683ca0053310dcf9ec9fd2d6c17a",
+      "after": "0b3c9827b2ade5a8f427f6e69a7b337f",
       "note": "Metadados SSR específicos adicionados; política noindex preservada.",
       "revisions": [
         {
@@ -66,6 +66,13 @@
           "after": "13ee683ca0053310dcf9ec9fd2d6c17a",
           "intervention": "INT-2026-10-27-002",
           "reason": "Usar índice compacto de metadata sem carregar o corpo editorial na validação e no head. Mesmo conteúdo, canonical, noindex e 404."
+        },
+        {
+          "sourceCommit": "497dbbdf847aa547926ea118be8aecbb0d01a30d",
+          "before": "13ee683ca0053310dcf9ec9fd2d6c17a",
+          "after": "0b3c9827b2ade5a8f427f6e69a7b337f",
+          "intervention": "INT-2026-10-27-002",
+          "reason": "Loader busca apenas o artigo via Server Function; base editorial não é necessária no cliente."
         }
       ]
     },
