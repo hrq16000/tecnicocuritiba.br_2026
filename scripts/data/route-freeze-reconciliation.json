@@ -99,6 +99,62 @@
       "before": "1d57ac8b0f472fb5f783a76d0a5ea04d",
       "after": "f673be3737b696c7c80e9f2e796c4ce1",
       "note": "FAQ atualizada para planos de suporte gerenciado, com limites explícitos."
+    },
+    "src/pages/ColetaEntrega.tsx": {
+      "before": "7ba2c0ce5375d2edcce82f8974cffe21",
+      "after": "22c3ac8bc1c9c70c48b21779965281d5",
+      "note": "SSR de FAQ e preço mínimo de coleta/diagnóstico derivados da configuração comercial central, sem alterar preços exibidos, rotas ou política de indexação",
+      "revisions": [
+        {
+          "sourceCommit": "564983645a4806227912f3adf0b6027ad526556f",
+          "before": "7ba2c0ce5375d2edcce82f8974cffe21",
+          "after": "22c3ac8bc1c9c70c48b21779965281d5",
+          "intervention": "PR-79",
+          "reason": "SSR de FAQ e preço mínimo de coleta/diagnóstico derivados da configuração comercial central, sem alterar preços exibidos, rotas ou política de indexação"
+        }
+      ]
+    },
+    "src/pages/ComoFunciona.tsx": {
+      "before": "e1b9a61c50b738f134dd3f68bafb4c42",
+      "after": "12119d508db6cd6f5a7e07be2c61d4a5",
+      "note": "Respostas da FAQ montadas no HTML SSR mesmo com accordion fechado, preservando texto e interação",
+      "revisions": [
+        {
+          "sourceCommit": "c7e30d0d738e6077ce34e2b0535af64325ed656f",
+          "before": "e1b9a61c50b738f134dd3f68bafb4c42",
+          "after": "12119d508db6cd6f5a7e07be2c61d4a5",
+          "intervention": "PR-79",
+          "reason": "Respostas da FAQ montadas no HTML SSR mesmo com accordion fechado, preservando texto e interação"
+        }
+      ]
+    },
+    "src/pages/FAQ.tsx": {
+      "before": "d7311bc41a8d6e95e9f6d0999bb56308",
+      "after": "763f2f0316bb791d87e759a3b4d83554",
+      "note": "Respostas da FAQ montadas no HTML SSR em paridade com JSON-LD, mantendo semântica e interação",
+      "revisions": [
+        {
+          "sourceCommit": "d0e45f65ea92c59d5079993f1177b688438e18ea",
+          "before": "d7311bc41a8d6e95e9f6d0999bb56308",
+          "after": "763f2f0316bb791d87e759a3b4d83554",
+          "intervention": "PR-79",
+          "reason": "Respostas da FAQ montadas no HTML SSR em paridade com JSON-LD, mantendo semântica e interação"
+        }
+      ]
+    },
+    "src/components/LocalFAQSection.tsx": {
+      "before": "f3ca374aee30a7c79f28f48d6008ec08",
+      "after": "aaa8b4c2b5d3d3efeb6b9b791916889e",
+      "note": "Componente compartilhado: respostas de FAQ renderizadas no SSR com acordeão acessível, sem alterar perguntas, respostas ou indexação",
+      "revisions": [
+        {
+          "sourceCommit": "1e08b39accbbb7bcb34e89bd3ec73d17d65d0f97",
+          "before": "f3ca374aee30a7c79f28f48d6008ec08",
+          "after": "aaa8b4c2b5d3d3efeb6b9b791916889e",
+          "intervention": "PR-79",
+          "reason": "Componente compartilhado: respostas de FAQ renderizadas no SSR com acordeão acessível, sem alterar perguntas, respostas ou indexação"
+        }
+      ]
     }
   }
 }
