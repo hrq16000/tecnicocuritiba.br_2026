@@ -16,12 +16,12 @@
  *   6. Ausência de prova não verificável (nota, depoimento, "melhor", "nº 1",
  *      "X mil clientes", certificação sem emissor).
  *
- * Uso: node scripts/check-eeat-coverage.mjs [dist]
+ * Uso: node scripts/check-eeat-coverage.mjs [dist/client]
  */
 import { readFileSync, existsSync } from "node:fs";
 import { join } from "node:path";
 
-const DIST = process.argv[2] && !process.argv[2].startsWith("--") ? process.argv[2] : "dist";
+const DIST = process.argv[2] && !process.argv[2].startsWith("--") ? process.argv[2] : "dist/client";
 const BASE = "https://tecnico.curitiba.br";
 const ORG_ID = `${BASE}/#organization`;
 const WA = "wa.me/5541997086380";
