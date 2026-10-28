@@ -103,7 +103,7 @@ jobs:
       - name: Image sitemap (geração + integridade)
         run: node --test scripts/image-sitemap.test.mjs && npm run sitemap:images && npm run check:image-sitemap
       - name: Licenças e créditos das fotos públicas
-        run: npm run check:image-credits
+        run: node --test scripts/check-image-credits.test.mjs && npm run check:image-credits
       - name: Relatório público de paridade de FAQ (CSV/MD)
         run: npm run report:faq-parity
 
