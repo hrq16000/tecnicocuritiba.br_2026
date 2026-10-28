@@ -267,6 +267,48 @@
           "reason": "Correção estritamente editorial da negação de prova social; mantém E-E-A-T fail-closed e identidade verificável."
         }
       ]
+    },
+    "src/routes/blog.$slug.tsx": {
+      "before": "5f10256448b6d02775b58eab78791846",
+      "after": "548d93fd317e60bc613fde75bafe1535",
+      "note": "Existing legacy blog aliases return 301 before the editorial 404; unapproved non-alias drafts still return 404.",
+      "revisions": [
+        {
+          "sourceCommit": "d9935c585dbf08c21bebc9c6defe78c872bf6880",
+          "before": "5f10256448b6d02775b58eab78791846",
+          "after": "548d93fd317e60bc613fde75bafe1535",
+          "intervention": "PR-79",
+          "reason": "Existing legacy blog aliases return 301 before the editorial 404; unapproved non-alias drafts still return 404."
+        }
+      ]
+    },
+    "src/routes/politica-de-privacidade.tsx": {
+      "before": "8590e083bd11dcf71bfbbd1b19a277fd",
+      "after": "cc50bb8e58809ba02910194a1eeb03c4",
+      "note": "Privacy destination receives canonical self and noindex SSR without promoting an uncurated URL.",
+      "revisions": [
+        {
+          "sourceCommit": "5ccc648fbcfd7b169845f139564eecd080455d89",
+          "before": "8590e083bd11dcf71bfbbd1b19a277fd",
+          "after": "cc50bb8e58809ba02910194a1eeb03c4",
+          "intervention": "PR-79",
+          "reason": "Privacy destination receives canonical self and noindex SSR without promoting an uncurated URL."
+        }
+      ]
+    },
+    "src/lib/seo/routeHead.ts": {
+      "before": "bac070baac3a4ea0726b8cc912038eef",
+      "after": "07785fc408d6c81e40e693a6f20b6559",
+      "note": "Only pricing policy page receives an accurate WebPage JSON-LD; existing FAQ and pricing remain intact.",
+      "revisions": [
+        {
+          "sourceCommit": "897639423d566e8a81c8d320af2f7991971660f6",
+          "before": "bac070baac3a4ea0726b8cc912038eef",
+          "after": "07785fc408d6c81e40e693a6f20b6559",
+          "intervention": "PR-79",
+          "reason": "Only pricing policy page receives an accurate WebPage JSON-LD; existing FAQ and pricing remain intact."
+        }
+      ]
     }
   }
 }
