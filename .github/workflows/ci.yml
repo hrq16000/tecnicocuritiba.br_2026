@@ -93,7 +93,7 @@ jobs:
       - name: Paridade JSON-LD × conteúdo visível (FAQPage/Offer/LocalBusiness)
         run: npm run check:jsonld-parity
       - name: BreadcrumbList serviço × cidade
-        run: npm run check:breadcrumb-schema
+        run: node --test scripts/check-breadcrumb-schema.test.mjs && npm run check:breadcrumb-schema
       - name: Markup de preço (Offer/PriceSpecification)
         run: npm run check:price-schema
       - name: Paridade 1:1 FAQPage × FAQ visível
