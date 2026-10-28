@@ -309,6 +309,20 @@
           "reason": "Only pricing policy page receives an accurate WebPage JSON-LD; existing FAQ and pricing remain intact."
         }
       ]
+    },
+    "src/routes/seja-parceiro.tsx": {
+      "before": "5ab61cee81abced3b9c0fadb2bcc69f2",
+      "after": "b550a52b1dc09547fa6a181d52fe159f",
+      "note": "SSR canonical na landing de parceiros usada como destino de quatro aliases antigos do blog, sem inclusão no sitemap; robots noindex,follow preserva política anti-doorway.",
+      "revisions": [
+        {
+          "sourceCommit": "baf0af778279ad24e6b6b66065957626f93486c1",
+          "before": "5ab61cee81abced3b9c0fadb2bcc69f2",
+          "after": "b550a52b1dc09547fa6a181d52fe159f",
+          "intervention": "PR-79",
+          "reason": "SSR canonical na landing de parceiros usada como destino de quatro aliases antigos do blog, sem inclusão no sitemap; robots noindex,follow preserva política anti-doorway."
+        }
+      ]
     }
   }
 }
