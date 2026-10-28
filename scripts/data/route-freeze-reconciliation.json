@@ -102,8 +102,8 @@
     },
     "src/pages/ColetaEntrega.tsx": {
       "before": "7ba2c0ce5375d2edcce82f8974cffe21",
-      "after": "22c3ac8bc1c9c70c48b21779965281d5",
-      "note": "SSR de FAQ e preço mínimo de coleta/diagnóstico derivados da configuração comercial central, sem alterar preços exibidos, rotas ou política de indexação",
+      "after": "2fdce9ff8ff3064251ea6dd03b88cbd9",
+      "note": "SSR de FAQ e preço mínimo de coleta/diagnóstico derivados da configuração comercial central, sem alterar preços exibidos, rotas ou política de indexação Foto remota de logística recebe crédito Unsplash visível em figcaption.",
       "revisions": [
         {
           "sourceCommit": "564983645a4806227912f3adf0b6027ad526556f",
@@ -111,6 +111,13 @@
           "after": "22c3ac8bc1c9c70c48b21779965281d5",
           "intervention": "PR-79",
           "reason": "SSR de FAQ e preço mínimo de coleta/diagnóstico derivados da configuração comercial central, sem alterar preços exibidos, rotas ou política de indexação"
+        },
+        {
+          "sourceCommit": "e31c6e012c96f6e8e814f1008086a59e7fb85fd7",
+          "before": "22c3ac8bc1c9c70c48b21779965281d5",
+          "after": "2fdce9ff8ff3064251ea6dd03b88cbd9",
+          "intervention": "PR-79",
+          "reason": "Creditar a foto Unsplash já existente da página coleta/entrega com link para licença no próprio figcaption; manter conteúdo, SEO e fluxo comercial."
         }
       ]
     },
