@@ -123,8 +123,8 @@
     },
     "src/pages/ComoFunciona.tsx": {
       "before": "e1b9a61c50b738f134dd3f68bafb4c42",
-      "after": "12119d508db6cd6f5a7e07be2c61d4a5",
-      "note": "Respostas da FAQ montadas no HTML SSR mesmo com accordion fechado, preservando texto e interação",
+      "after": "3e6b086f949535bba61109dacb16e8b3",
+      "note": "Respostas da FAQ montadas no HTML SSR mesmo com accordion fechado, preservando texto e interação Foto Unsplash/Pexels existente recebe crédito factual visível e link à licença no mesmo figcaption, sem troca de imagem, título, CTA ou política de indexação.",
       "revisions": [
         {
           "sourceCommit": "c7e30d0d738e6077ce34e2b0535af64325ed656f",
@@ -132,6 +132,13 @@
           "after": "12119d508db6cd6f5a7e07be2c61d4a5",
           "intervention": "PR-79",
           "reason": "Respostas da FAQ montadas no HTML SSR mesmo com accordion fechado, preservando texto e interação"
+        },
+        {
+          "sourceCommit": "854c5dc6dd8d26a7dff7933e3adb49bedb82d125",
+          "before": "12119d508db6cd6f5a7e07be2c61d4a5",
+          "after": "3e6b086f949535bba61109dacb16e8b3",
+          "intervention": "PR-79",
+          "reason": "Foto Unsplash/Pexels existente recebe crédito factual visível e link à licença no mesmo figcaption, sem troca de imagem, título, CTA ou política de indexação."
         }
       ]
     },
@@ -174,6 +181,62 @@
           "after": "c749fea6d81e3ec98aa96a2cffb52667",
           "intervention": "PR-79",
           "reason": "Atribuição visível, factual e vinculada à licença de fotografias remotas; preserva o selo histórico e a política de indexação."
+        }
+      ]
+    },
+    "src/pages/DiagnosticoTecnico.tsx": {
+      "before": "58680d591005883e052cf55445fe1590",
+      "after": "853a871dfba611fedd32790759b1a864",
+      "note": "Foto Unsplash/Pexels existente recebe crédito factual visível e link à licença no mesmo figcaption, sem troca de imagem, título, CTA ou política de indexação.",
+      "revisions": [
+        {
+          "sourceCommit": "b3482e0e1fb268a6c747d4cca203307e891abce2",
+          "before": "58680d591005883e052cf55445fe1590",
+          "after": "853a871dfba611fedd32790759b1a864",
+          "intervention": "PR-79",
+          "reason": "Foto Unsplash/Pexels existente recebe crédito factual visível e link à licença no mesmo figcaption, sem troca de imagem, título, CTA ou política de indexação."
+        }
+      ]
+    },
+    "src/pages/EquipamentosAtendidos.tsx": {
+      "before": "5a8234ca59d068baa1429fa9516da347",
+      "after": "b985e64f9d9e8d87b667f274bfa18871",
+      "note": "Foto Unsplash/Pexels existente recebe crédito factual visível e link à licença no mesmo figcaption, sem troca de imagem, título, CTA ou política de indexação.",
+      "revisions": [
+        {
+          "sourceCommit": "2608caf18ded61792833a4a18031a052fcf517cc",
+          "before": "5a8234ca59d068baa1429fa9516da347",
+          "after": "b985e64f9d9e8d87b667f274bfa18871",
+          "intervention": "PR-79",
+          "reason": "Foto Unsplash/Pexels existente recebe crédito factual visível e link à licença no mesmo figcaption, sem troca de imagem, título, CTA ou política de indexação."
+        }
+      ]
+    },
+    "src/pages/QuandoNaoCompensa.tsx": {
+      "before": "d060a7736a4559c2846e29f9e3c4f123",
+      "after": "b626c8aa114c8da337ace036532dd59a",
+      "note": "Foto Unsplash/Pexels existente recebe crédito factual visível e link à licença no mesmo figcaption, sem troca de imagem, título, CTA ou política de indexação.",
+      "revisions": [
+        {
+          "sourceCommit": "dd86c0a123190466a78e3265777a37fc59cb8e47",
+          "before": "d060a7736a4559c2846e29f9e3c4f123",
+          "after": "b626c8aa114c8da337ace036532dd59a",
+          "intervention": "PR-79",
+          "reason": "Foto Unsplash/Pexels existente recebe crédito factual visível e link à licença no mesmo figcaption, sem troca de imagem, título, CTA ou política de indexação."
+        }
+      ]
+    },
+    "src/pages/servico-bairro/ServicoBairroTemplate.tsx": {
+      "before": "dceabb1428d1d20f81116ab222622bdd",
+      "after": "fe3f338b9410a57274a348fa35592c14",
+      "note": "Foto Unsplash/Pexels existente recebe crédito factual visível e link à licença no mesmo figcaption, sem troca de imagem, título, CTA ou política de indexação.",
+      "revisions": [
+        {
+          "sourceCommit": "63a178db7faf0f17bbb623510e740dd33aa8764b",
+          "before": "dceabb1428d1d20f81116ab222622bdd",
+          "after": "fe3f338b9410a57274a348fa35592c14",
+          "intervention": "PR-79",
+          "reason": "Foto Unsplash/Pexels existente recebe crédito factual visível e link à licença no mesmo figcaption, sem troca de imagem, título, CTA ou política de indexação."
         }
       ]
     }
