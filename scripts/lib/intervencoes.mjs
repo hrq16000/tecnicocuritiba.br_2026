@@ -304,6 +304,35 @@ export const INTERVENCOES = [
     "coorte": "INTERVENTION_COHORT",
     "experimentalStatus": "INTERVENED"
   },
+  {
+    "id": "INT-2026-10-28-004",
+    "tipo": "PUBLIC_INTERVENTION",
+    "timestamp": "2026-10-28T01:20:51.137Z",
+    "deploymentId": null,
+    "commit": null,
+    "urlsDiretas": [
+      "/problemas/computador-nao-liga-curitiba",
+      "/procedimentos/computador-nao-liga-curitiba"
+    ],
+    "urlsIndiretas": [],
+    "arquivos": [
+      "src/lib/problemaPage.functions.ts",
+      "src/generated/problema-articles/"
+    ],
+    "mudanca": "STATIC_ARTICLE_DATA",
+    "motivo": "Navegação entre artigos passa a importar módulos estáticos individuais; elimina dependência de RPC rejeitado no host publicado. Mesma fonte, conteúdo, SSR e política noindex.",
+    "impacto": {
+      "seo": "Sem promoção de indexação.",
+      "internalLinking": "Sem novos links.",
+      "conteudo": "Paridade integral validada com a primeira ocorrência da base editorial.",
+      "schema": "Sem mudança intencional.",
+      "metadata": "Sem alteração.",
+      "lastmod": "Sem mudança artificial.",
+      "conversao": "Restaura a navegação sem endpoint de dados."
+    },
+    "coorte": "INTERVENTION_COHORT",
+    "experimentalStatus": "INTERVENED"
+  },
 ];
 
 export default { LEDGER_SCHEMA, D0, INTERVENCOES };
