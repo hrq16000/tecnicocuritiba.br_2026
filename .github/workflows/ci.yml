@@ -169,6 +169,7 @@ jobs:
           node scripts/preview-built.mjs --port 4321 --strictPort &
           for i in $(seq 1 60); do curl -sf -o /dev/null http://localhost:4321/ && break; sleep 1; done
           node scripts/check-index-health.mjs --base=http://localhost:4321 --strict
+          E2E_BASE_URL=http://localhost:4321 npx playwright test --config=playwright.ci.config.ts e2e/index-health-aliases.spec.ts --reporter=line
       # Originalidade: mede o DOM renderizado de TODA URL curada, exige corpo
       # autoral mínimo por família e bloqueia duplicidade (Jaccard de shingles).
       # Escreve reports/content-approval.json, consumido pelo gerador de sitemap.
