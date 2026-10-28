@@ -160,7 +160,7 @@ jobs:
       - name: Interlinking local gate (mãe ⇄ bairros/cidades)
         run: npm run check:local-interlinking
       - name: E-E-A-T coverage gate
-        run: npm run check:eeat
+        run: node --test scripts/check-eeat-coverage.test.mjs && npm run check:eeat
       # Gate de indexação: serve o build e valida status, content-type,
       # canonical self-referente, robots e JSON-LD de cada rota do sitemap,
       # além de garantir que nenhum alias 301 tenha canonical próprio.
