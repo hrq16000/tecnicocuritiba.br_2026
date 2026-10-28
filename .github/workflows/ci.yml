@@ -156,7 +156,7 @@ jobs:
         run: npm run check:redirects:curated
 
       - name: Paridade de analytics (GA4 x click_events x relatorio)
-        run: npm run check:analytics-parity
+        run: node --test scripts/check-analytics-parity.test.mjs && npm run check:analytics-parity
       - name: Interlinking local gate (mãe ⇄ bairros/cidades)
         run: npm run check:local-interlinking
       - name: E-E-A-T coverage gate
