@@ -40,15 +40,15 @@ const run = (cwd, args = []) => spawnSync(process.execPath, [SCRIPT, ...args], {
 
 test("verifica todas as rotas em dist/client por padrão", (t) => {
   const { root } = fixture(t);
-  const p = run(root);
+  const p = run(root, ["--all"]);
   assert.equal(p.status, 0, p.stderr + p.stdout);
-  assert.match(p.stdout, new RegExp("válido em " + CATEGORIES.length * LOCAIS.length + " páginas"));
+  assert.match(p.stdout, new RegExp("válido em " + CATEGORIES.length * LOCAIS.length + " URL"));
 });
 
 test("não aprova rotas ausentes", (t) => {
   const { root, dir } = fixture(t);
   unlinkSync(path.join(dir, "conserto-tv/curitiba/index.html"));
-  const p = run(root);
+  const p = run(root, ["--all"]);
   assert.equal(p.status, 1);
   assert.match(p.stderr, /HTML estático ausente/);
 });
@@ -62,6 +62,14 @@ test("não ignora BreadcrumbList com position incorreta", (t) => {
 
 test("aceita caminho explícito para distribuição alternativa", (t) => {
   const { root, dir } = fixture(t);
-  const p = run(root, [dir]);
+  const p = run(root, [dir, "--all"]);
   assert.equal(p.status, 0, p.stderr + p.stdout);
+});
+
+
+test("modo normal não promove automaticamente as 76 combinações fora do manifesto curado", (t) => {
+  const { root } = fixture(t);
+  const p = run(root);
+  assert.equal(p.status, 0, p.stderr + p.stdout);
+  assert.match(p.stdout, /válido em 0 URL\(s\) curada\(s\)/);
 });
