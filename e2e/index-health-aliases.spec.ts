@@ -49,3 +49,25 @@ test("preços públicos possuem WebPage JSON-LD SSR e canonical self", async ({ 
     })).toBe(true);
   } finally { await ctx.dispose(); }
 });
+
+test("quatro URLs de marketplace legado convergem em 301 para landing noindex com canonical SSR", async ({ baseURL }) => {
+  const ctx = await pwRequest.newContext({ baseURL: process.env.E2E_BASE_URL ?? baseURL });
+  try {
+    const legacyPaths = [
+      "/blog/preciso-de-um-plataforma-prestadores",
+      "/blog/como-cadastrar-preciso-de-um",
+      "/blog/preciso-de-um-todos-os-ramos",
+      "/blog/preciso-de-um-vagas-oportunidades",
+    ];
+    for (const path of legacyPaths) {
+      const res = await ctx.get(path, { maxRedirects: 0 });
+      expect(res.status(), path).toBe(301);
+      expect(new URL(res.headers()["location"], "https://tecnico.curitiba.br").pathname, path).toBe("/seja-parceiro");
+    }
+    const target = await ctx.get("/seja-parceiro");
+    expect(target.status()).toBe(200);
+    const html = await target.text();
+    expect(html).toContain('href="https://tecnico.curitiba.br/seja-parceiro"');
+    expect(html).toMatch(/name="robots"[^>]+content="noindex,\s*follow"/i);
+  } finally { await ctx.dispose(); }
+});
