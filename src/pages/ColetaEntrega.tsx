@@ -20,7 +20,9 @@ import {
   Accordion, AccordionContent, AccordionItem, AccordionTrigger,
 } from "@/components/ui/accordion";
 import {
+  COLETA_TAXA_MINIMA,
   COLETA_TAXA_MINIMA_LABEL,
+  DIAGNOSTICO_VALOR,
   DIAGNOSTICO_VALOR_LABEL,
   EQUIPAMENTOS_COLETA,
   PRAZOS,
@@ -83,12 +85,12 @@ const ColetaEntrega = () => {
         offers: {
           "@type": "Offer",
           priceCurrency: "BRL",
-          price: "300.00",
+          price: COLETA_TAXA_MINIMA.toFixed(2),
           url: "https://tecnico.curitiba.br/coleta-e-entrega",
           availability: "https://schema.org/InStock",
           priceSpecification: [
-            { "@type": "PriceSpecification", name: "Reparo mínimo com coleta", price: "300.00", priceCurrency: "BRL", description: "Faixa pré-aprovada R$ 300–R$ 500. Acima disso, autorização do cliente." },
-            { "@type": "PriceSpecification", name: "Diagnóstico em bancada (se desistir)", price: "90.00", priceCurrency: "BRL" },
+            { "@type": "PriceSpecification", name: "Reparo mínimo com coleta", price: COLETA_TAXA_MINIMA.toFixed(2), priceCurrency: "BRL", description: `Mínimo pré-aprovado de ${COLETA_TAXA_MINIMA_LABEL}; valores superiores exigem autorização do cliente.` },
+            { "@type": "PriceSpecification", name: "Diagnóstico em bancada (se desistir)", price: DIAGNOSTICO_VALOR.toFixed(2), priceCurrency: "BRL" },
           ],
         },
       })}} />
@@ -317,7 +319,7 @@ const ColetaEntrega = () => {
                     <AccordionTrigger className="text-left font-semibold text-primary hover:no-underline">
                       {item.q}
                     </AccordionTrigger>
-                    <AccordionContent className="text-muted-foreground">{item.a}</AccordionContent>
+                    <AccordionContent forceMount className="text-muted-foreground">{item.a}</AccordionContent>
                   </AccordionItem>
                 ))}
               </Accordion>
