@@ -125,3 +125,26 @@ test("JSON-LD Service + FAQPage com paridade com as perguntas visíveis", async 
   // Nunca inventar avaliações.
   expect(blocos.join(" ")).not.toContain("aggregateRating");
 });
+
+
+test("landing /empresas entrega noindex e canonical no HTML inicial e após hidratar", async ({ request, page }) => {
+  const response = await request.get("/empresas");
+  expect(response.status()).toBe(200);
+  const html = await response.text();
+  const robotsTags = html.match(/<meta\b[^>]*\bname=["']robots["'][^>]*>/gi) ?? [];
+  expect(robotsTags, "HTML SSR deve ter uma única diretiva robots").toHaveLength(1);
+  expect(robotsTags[0]).toMatch(/\bcontent=["']noindex,\s*follow["']/i);
+  const canonicalTags = html.match(/<link\b[^>]*\brel=["']canonical["'][^>]*>/gi) ?? [];
+  expect(canonicalTags, "HTML SSR deve ter um único canonical").toHaveLength(1);
+  expect(canonicalTags[0]).toContain("https://tecnico.curitiba.br/empresas");
+
+  await page.goto("/empresas");
+  await page.locator('html[data-hydrated="1"]').waitFor();
+  await expect(page.locator('meta[name="robots"]')).toHaveCount(1);
+  await expect(page.locator('meta[name="robots"]')).toHaveAttribute("content", /noindex,\s*follow/i);
+  await expect(page.locator('link[rel="canonical"]')).toHaveCount(1);
+  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute(
+    "href",
+    "https://tecnico.curitiba.br/empresas",
+  );
+});

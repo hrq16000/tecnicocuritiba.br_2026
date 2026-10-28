@@ -100,6 +100,20 @@
       "after": "f673be3737b696c7c80e9f2e796c4ce1",
       "note": "FAQ atualizada para planos de suporte gerenciado, com limites explícitos."
     },
+    "src/routes/empresas.tsx": {
+      "before": "d8dd838955ef473776e603ba0945afc7",
+      "after": "9c4f1d9ce96f1555996add86f573f97a",
+      "note": "Intervenção pontual na metadata da landing B2B: noindex, follow e canonical self declarados no SSR. Página de autoridade /empresa-de-ti-curitiba permanece indexável; selo histórico preservado.",
+      "revisions": [
+        {
+          "sourceCommit": "80d6fff561ee575000ca454fb0a5c588ccb348f6",
+          "before": "d8dd838955ef473776e603ba0945afc7",
+          "after": "9c4f1d9ce96f1555996add86f573f97a",
+          "intervention": "PR-78",
+          "reason": "Garantir robots noindex,follow e canonical já na resposta HTTP de /empresas, em paridade com PageSEO após hidratação. Nenhuma nova URL indexável, CTA ou conteúdo público alterado."
+        }
+      ]
+    },
     "src/pages/ColetaEntrega.tsx": {
       "before": "7ba2c0ce5375d2edcce82f8974cffe21",
       "after": "2fdce9ff8ff3064251ea6dd03b88cbd9",
