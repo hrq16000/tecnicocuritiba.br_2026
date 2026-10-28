@@ -196,6 +196,10 @@ jobs:
         run: node --test scripts/preview-built.test.mjs scripts/check-sem-balcao.test.mjs scripts/check-trust-claims.test.mjs
       - name: Política sem balcão (sem dependência de rg)
         run: npm run check:sem-balcao
+      - name: Metadata leve dos problemas atualizada
+        run: node scripts/generate-problema-route-meta.mjs --check
+      - name: Cluster editorial com rotas TanStack
+        run: npm run check:editorial-cluster
       - name: Claims comerciais (antes do lint completo)
         run: npm run check:trust-claims
       - name: Typecheck (gate obrigatório)

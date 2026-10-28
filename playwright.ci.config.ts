@@ -49,5 +49,12 @@ export default defineConfig({
     video: "off",
     launchOptions: { args: browser === "chromium" ? ["--no-sandbox", "--disable-dev-shm-usage"] : [] },
   },
-  projects: [{ name: browser, use: { ...devices[deviceName] } }],
+  projects: [{
+    name: browser,
+    use: {
+      ...devices[deviceName],
+      // Workflow rápido pode usar o Chrome Stable pré-instalado no runner.
+      ...(browser === "chromium" && process.env.PW_CHANNEL === "chrome" ? { channel: "chrome" } : {}),
+    },
+  }],
 });

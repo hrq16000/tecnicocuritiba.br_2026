@@ -33,8 +33,8 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Instalar Chromium (Playwright)
-        run: npx playwright install --with-deps chromium
+      - name: Conferir Chrome Stable do runner
+        run: google-chrome --version
 
       - name: Iniciar preview para testes
         run: |
@@ -44,7 +44,9 @@ jobs:
           exit 1
 
       - name: JSON-LD, CTAs e dedupe da /empresas (E2E)
-        run: npx playwright test --config=playwright.ci.config.ts e2e/empresas-landing.spec.ts e2e/empresas-mobile-ctas.spec.ts
+        run: npx playwright test --config=playwright.ci.config.ts e2e/empresas-landing.spec.ts e2e/empresas-mobile-ctas.spec.ts e2e/problema-ssr-regression.spec.ts
+        env:
+          PW_CHANNEL: chrome
 
       - name: Lighthouse CI (/empresas, mobile)
         run: npx --yes @lhci/cli@0.14.x autorun --config=lighthouserc.empresas.json

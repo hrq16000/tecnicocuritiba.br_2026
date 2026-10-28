@@ -1,0 +1,947 @@
+{
+  "computador-nao-liga-curitiba": {
+    "title": "Computador Não Liga em Curitiba | Diagnóstico Profissional",
+    "metaDescription": "Seu computador não liga? Veja causas reais, sintomas, riscos e como resolver com diagnóstico técnico em Curitiba. Atendimento a domicílio no mesmo dia.",
+    "h1": "Computador Não Liga em Curitiba — Causas Reais e Solução Profissional"
+  },
+  "computador-liga-e-desliga-curitiba": {
+    "title": "Computador Liga e Desliga Sozinho | Técnico Curitiba",
+    "metaDescription": "Computador ligando e desligando sozinho em Curitiba? Veja causas, riscos e solução profissional. Diagnóstico no mesmo dia.",
+    "h1": "Computador Liga e Desliga Sozinho em Curitiba — O Que Está Acontecendo?"
+  },
+  "computador-lento-curitiba": {
+    "title": "Computador Lento em Curitiba | Soluções Reais",
+    "metaDescription": "Computador lento em Curitiba? Descubra as causas reais e como resolver. Diagnóstico profissional, upgrade SSD, limpeza e otimização. Atendimento no mesmo dia.",
+    "h1": "Computador Lento em Curitiba — Diagnóstico e Soluções Reais"
+  },
+  "computador-travando-curitiba": {
+    "title": "Computador Travando em Curitiba | Causas e Soluções",
+    "metaDescription": "Computador travando constantemente? Veja causas reais, desde hardware até software, e como resolver com diagnóstico profissional em Curitiba.",
+    "h1": "Computador Travando em Curitiba — Causas Reais e Diagnóstico"
+  },
+  "computador-sem-video-curitiba": {
+    "title": "Computador Sem Vídeo em Curitiba | Tela Preta",
+    "metaDescription": "Computador liga mas não exibe imagem? Veja causas e soluções. Diagnóstico de GPU, RAM e placa-mãe em Curitiba. Atendimento técnico no mesmo dia.",
+    "h1": "Computador Sem Vídeo em Curitiba — Liga Mas Tela Fica Preta"
+  },
+  "computador-com-tela-preta-curitiba": {
+    "title": "Computador com Tela Preta em Curitiba | Solução",
+    "metaDescription": "Tela preta no computador? Veja as causas mais comuns e como resolver. Diagnóstico profissional em Curitiba com atendimento no mesmo dia.",
+    "h1": "Computador com Tela Preta em Curitiba — Causas e Solução"
+  },
+  "pc-reiniciando-sozinho-curitiba": {
+    "title": "PC Reiniciando Sozinho em Curitiba | Diagnóstico",
+    "metaDescription": "Computador reiniciando sozinho? Descubra as causas e soluções. Diagnóstico profissional em Curitiba com atendimento a domicílio.",
+    "h1": "PC Reiniciando Sozinho em Curitiba — Por Que Acontece?"
+  },
+  "pc-superaquecendo-curitiba": {
+    "title": "PC Superaquecendo em Curitiba | Limpeza e Reparo",
+    "metaDescription": "Computador superaquecendo? Veja causas, riscos e soluções profissionais em Curitiba. Limpeza interna, troca de pasta térmica e diagnóstico.",
+    "h1": "PC Superaquecendo em Curitiba — Causas e Solução Profissional"
+  },
+  "pc-com-barulho-estranho-curitiba": {
+    "title": "PC com Barulho Estranho em Curitiba | Diagnóstico",
+    "metaDescription": "Computador fazendo barulho estranho? Cliques, zumbidos ou ventoinhas altas? Veja o que pode ser e quando procurar técnico em Curitiba.",
+    "h1": "PC com Barulho Estranho em Curitiba — O Que Significa?"
+  },
+  "pc-nao-reconhece-hd-curitiba": {
+    "title": "PC Não Reconhece HD/SSD em Curitiba | Diagnóstico",
+    "metaDescription": "Computador não reconhece HD ou SSD? Veja causas e soluções profissionais em Curitiba. Diagnóstico e recuperação de dados.",
+    "h1": "PC Não Reconhece HD ou SSD em Curitiba — Causas e Soluções"
+  },
+  "notebook-nao-liga-curitiba": {
+    "title": "Notebook Não Liga em Curitiba | Diagnóstico Profissional",
+    "metaDescription": "Notebook não liga? Veja causas, sintomas e soluções. Diagnóstico profissional em Curitiba com atendimento a domicílio no mesmo dia.",
+    "h1": "Notebook Não Liga em Curitiba — Diagnóstico e Solução"
+  },
+  "notebook-lento-curitiba": {
+    "title": "Notebook Lento em Curitiba | Upgrade e Otimização",
+    "metaDescription": "Notebook lento? Saiba quando fazer upgrade de SSD e RAM, quando formatar e quando trocar. Diagnóstico em Curitiba no mesmo dia.",
+    "h1": "Notebook Lento em Curitiba — Upgrade, Otimização ou Troca?"
+  },
+  "notebook-esquentando-curitiba": {
+    "title": "Notebook Esquentando em Curitiba | Limpeza Técnica",
+    "metaDescription": "Notebook esquentando demais? Limpeza interna profissional, troca de pasta térmica e diagnóstico em Curitiba. Atendimento no mesmo dia.",
+    "h1": "Notebook Esquentando em Curitiba — Limpeza e Manutenção"
+  },
+  "notebook-desligando-sozinho-curitiba": {
+    "title": "Notebook Desligando Sozinho | Técnico Curitiba",
+    "metaDescription": "Notebook desligando sozinho? Superaquecimento, bateria ou placa-mãe. Diagnóstico profissional em Curitiba.",
+    "h1": "Notebook Desligando Sozinho em Curitiba — Causas e Solução"
+  },
+  "notebook-sem-imagem-curitiba": {
+    "title": "Notebook Sem Imagem em Curitiba | Tela Preta",
+    "metaDescription": "Notebook liga mas tela fica preta? Veja causas e soluções. Flex, tela, GPU. Diagnóstico em Curitiba.",
+    "h1": "Notebook Sem Imagem em Curitiba — Tela Preta com Notebook Ligado"
+  },
+  "notebook-com-tela-quebrada-curitiba": {
+    "title": "Tela de Notebook Quebrada em Curitiba | Troca",
+    "metaDescription": "Tela de notebook quebrada ou trincada? Troca de tela LCD/LED em Curitiba. Diagnóstico e valor no mesmo dia.",
+    "h1": "Notebook com Tela Quebrada em Curitiba — Troca de Tela"
+  },
+  "notebook-nao-carrega-bateria-curitiba": {
+    "title": "Notebook Não Carrega Bateria em Curitiba | Solução",
+    "metaDescription": "Notebook não carrega bateria? Veja causas: carregador, bateria ou placa-mãe. Diagnóstico em Curitiba.",
+    "h1": "Notebook Não Carrega Bateria em Curitiba — Diagnóstico"
+  },
+  "notebook-teclado-nao-funciona-curitiba": {
+    "title": "Teclado de Notebook Não Funciona | Curitiba",
+    "metaDescription": "Teclado do notebook não funciona? Algumas teclas ou todo o teclado? Diagnóstico e troca em Curitiba.",
+    "h1": "Teclado de Notebook Não Funciona em Curitiba"
+  },
+  "notebook-com-agua-ou-liquido-curitiba": {
+    "title": "Notebook Molhou? Caiu Líquido | Urgente Curitiba",
+    "metaDescription": "Caiu água ou líquido no notebook? Veja o que fazer AGORA. Atendimento urgente em Curitiba. Limpeza profissional e recuperação.",
+    "h1": "Notebook com Água ou Líquido em Curitiba — O Que Fazer AGORA"
+  },
+  "notebook-apos-upgrade-nao-liga-curitiba": {
+    "title": "Notebook Não Liga Após Upgrade | Curitiba",
+    "metaDescription": "Fez upgrade de SSD ou RAM e o notebook não liga? Veja causas e soluções. Diagnóstico em Curitiba.",
+    "h1": "Notebook Não Liga Após Upgrade em Curitiba — O Que Aconteceu?"
+  },
+  "tv-com-som-sem-imagem-curitiba": {
+    "title": "TV com Som Sem Imagem em Curitiba | Diagnóstico",
+    "metaDescription": "TV com som mas sem imagem? Veja causas e soluções. Backlight, placa T-CON, LED. Reparo em Curitiba.",
+    "h1": "TV com Som Sem Imagem em Curitiba — Causas e Reparo"
+  },
+  "tv-nao-liga-curitiba": {
+    "title": "TV Não Liga em Curitiba | Diagnóstico e Reparo",
+    "metaDescription": "TV não liga? Veja causas comuns: fonte, placa, LED de standby. Reparo profissional em Curitiba.",
+    "h1": "TV Não Liga em Curitiba — Diagnóstico Profissional"
+  },
+  "tv-desligando-sozinha-curitiba": {
+    "title": "TV Desligando Sozinha em Curitiba | Diagnóstico",
+    "metaDescription": "TV desligando sozinha? Veja causas: timer, superaquecimento, placa com defeito. Reparo em Curitiba.",
+    "h1": "TV Desligando Sozinha em Curitiba — O Que Pode Ser?"
+  },
+  "tv-com-tela-escura-curitiba": {
+    "title": "TV com Tela Escura em Curitiba | Backlight",
+    "metaDescription": "TV com tela escura ou pouco brilho? Backlight com defeito. Reparo profissional em Curitiba.",
+    "h1": "TV com Tela Escura em Curitiba — Backlight com Defeito"
+  },
+  "tv-com-linhas-na-tela-curitiba": {
+    "title": "TV com Linhas na Tela em Curitiba | Diagnóstico",
+    "metaDescription": "TV com linhas horizontais ou verticais na tela? Veja causas e soluções. Reparo profissional em Curitiba.",
+    "h1": "TV com Linhas na Tela em Curitiba — Causas e Reparo"
+  },
+  "erro-ao-instalar-memoria-ram": {
+    "title": "Erro ao Instalar Memória RAM | Guia Técnico",
+    "metaDescription": "Erro ao instalar RAM? Computador não liga após trocar memória? Veja causas e soluções. Diagnóstico profissional em Curitiba.",
+    "h1": "Erro ao Instalar Memória RAM — O Que Fazer?"
+  },
+  "upgrade-deu-problema": {
+    "title": "Upgrade Deu Problema | Técnico Curitiba",
+    "metaDescription": "Fez upgrade e deu problema? SSD, RAM ou outro componente não funciona? Diagnóstico em Curitiba.",
+    "h1": "Upgrade Deu Problema — Como Resolver?"
+  },
+  "placa-mae-queimada": {
+    "title": "Placa-Mãe Queimada | Diagnóstico Curitiba",
+    "metaDescription": "Placa-mãe queimada? Veja sintomas, causas e quando compensa reparar. Diagnóstico profissional em Curitiba.",
+    "h1": "Placa-Mãe Queimada — Diagnóstico e Opções"
+  },
+  "gpu-desgastada": {
+    "title": "GPU Desgastada | Diagnóstico Curitiba",
+    "metaDescription": "GPU/placa de vídeo com problemas? Artefatos, tela preta, desempenho baixo? Diagnóstico em Curitiba.",
+    "h1": "GPU Desgastada — Sinais e O Que Fazer"
+  },
+  "curto-em-placa-eletronica": {
+    "title": "Curto em Placa Eletrônica | Diagnóstico Curitiba",
+    "metaDescription": "Curto-circuito em placa eletrônica? Diagnóstico profissional e reparo com microssolda em Curitiba.",
+    "h1": "Curto em Placa Eletrônica — Diagnóstico e Reparo"
+  },
+  "windows-lento-curitiba": {
+    "title": "Windows Lento em Curitiba | Otimização e Diagnóstico",
+    "metaDescription": "Windows lento? Otimização profissional, limpeza e diagnóstico em Curitiba. Resolva sem formatar.",
+    "h1": "Windows Lento em Curitiba — Otimização Profissional"
+  },
+  "computador-com-virus-curitiba": {
+    "title": "Computador com Vírus em Curitiba | Remoção",
+    "metaDescription": "Computador com vírus? Remoção profissional em Curitiba. Malware, ransomware, adware. Atendimento no mesmo dia.",
+    "h1": "Computador com Vírus em Curitiba — Remoção Profissional"
+  },
+  "formatacao-resolve-curitiba": {
+    "title": "Formatação Resolve Meu Problema? | Curitiba",
+    "metaDescription": "Será que formatar resolve? Saiba quando a formatação é a solução e quando é desnecessária. Técnico em Curitiba.",
+    "h1": "Formatação Resolve Meu Problema? — Guia Honesto"
+  },
+  "erro-apos-formatacao": {
+    "title": "Erro Após Formatação | Técnico Curitiba",
+    "metaDescription": "Formatou e continua com problemas? Veja por que a formatação não resolveu e o que fazer. Curitiba.",
+    "h1": "Erro Após Formatação — Por Que Não Resolveu?"
+  },
+  "pc-com-programas-pesados": {
+    "title": "PC com Programas Pesados em Curitiba | Otimização",
+    "metaDescription": "PC não roda programas pesados? AutoCAD, Photoshop, jogos? Diagnóstico e upgrade em Curitiba.",
+    "h1": "PC com Programas Pesados em Curitiba — Otimização e Upgrade"
+  },
+  "vale-a-pena-consertar-computador": {
+    "title": "Vale a Pena Consertar o Computador? | Guia",
+    "metaDescription": "Vale a pena consertar ou comprar novo? Guia completo para decidir. Diagnóstico profissional em Curitiba.",
+    "h1": "Vale a Pena Consertar o Computador? — Guia de Decisão"
+  },
+  "vale-a-pena-consertar-notebook": {
+    "title": "Vale a Pena Consertar o Notebook? | Guia",
+    "metaDescription": "Vale a pena consertar o notebook ou comprar novo? Guia de decisão com dados reais. Curitiba.",
+    "h1": "Vale a Pena Consertar o Notebook? — Guia Completo"
+  },
+  "quando-trocar-computador": {
+    "title": "Quando Trocar o Computador? | Guia Técnico",
+    "metaDescription": "Quando vale trocar o computador por um novo? Guia técnico honesto. Diagnóstico em Curitiba.",
+    "h1": "Quando Trocar o Computador? — Guia Técnico Honesto"
+  },
+  "quando-nao-compensa-reparo": {
+    "title": "Quando Não Compensa o Reparo? | Guia Transparente",
+    "metaDescription": "Quando não compensa reparar? Guia honesto sobre custos, riscos e decisões. Curitiba.",
+    "h1": "Quando Não Compensa o Reparo — Transparência Total"
+  },
+  "custo-reparo-vs-novo": {
+    "title": "Custo de Reparo vs Computador Novo | Comparação",
+    "metaDescription": "Quanto custa reparar vs comprar novo? Comparação real com dados atualizados. Curitiba.",
+    "h1": "Custo de Reparo vs Computador Novo — Comparação Real"
+  },
+  "o-que-fazer-computador-nao-liga": {
+    "title": "O Que Fazer Quando o Computador Não Liga?",
+    "metaDescription": "Passo a passo: o que fazer quando o computador não liga. Verificações, testes e quando chamar técnico.",
+    "h1": "O Que Fazer Quando o Computador Não Liga?"
+  },
+  "o-que-fazer-notebook-lento": {
+    "title": "O Que Fazer Com Notebook Lento? | Guia Prático",
+    "metaDescription": "Notebook lento? Guia prático com verificações e soluções. Quando otimizar, quando fazer upgrade, quando trocar.",
+    "h1": "O Que Fazer Com Notebook Lento? — Guia Prático"
+  },
+  "o-que-causa-curto-em-placa": {
+    "title": "O Que Causa Curto em Placa Eletrônica?",
+    "metaDescription": "Entenda o que causa curto-circuito em placas eletrônicas. Prevenção, causas e reparo. Curitiba.",
+    "h1": "O Que Causa Curto em Placa Eletrônica?"
+  },
+  "erros-comuns-em-upgrade": {
+    "title": "Erros Comuns em Upgrade de PC | Evite Problemas",
+    "metaDescription": "Os erros mais comuns ao fazer upgrade de PC. Evite problemas com RAM, SSD, GPU. Guia técnico.",
+    "h1": "Erros Comuns em Upgrade de PC — Evite Problemas"
+  },
+  "riscos-de-tentar-consertar": {
+    "title": "Riscos de Tentar Consertar Sozinho | Guia",
+    "metaDescription": "Os riscos de tentar consertar computador, notebook ou TV sozinho. Por que o diagnóstico profissional evita prejuízo.",
+    "h1": "Riscos de Tentar Consertar Sozinho — Por Que Evitar"
+  },
+  "assistencia-tecnica-urgente-curitiba": {
+    "title": "Assistência Técnica Urgente em Curitiba | Mesmo Dia",
+    "metaDescription": "Precisa de assistência técnica urgente em Curitiba? Atendimento no mesmo dia. Computador, notebook, TV. WhatsApp.",
+    "h1": "Assistência Técnica Urgente em Curitiba — Atendimento no Mesmo Dia"
+  },
+  "tecnico-informatica-emergencia-curitiba": {
+    "title": "Técnico Informática Emergência Curitiba | 24h",
+    "metaDescription": "Técnico de informática para emergência em Curitiba. Atendimento prioritário, computador, notebook, rede. WhatsApp.",
+    "h1": "Técnico de Informática para Emergência em Curitiba"
+  },
+  "conserto-computador-domicilio-curitiba": {
+    "title": "Conserto de Computador a Domicílio em Curitiba",
+    "metaDescription": "Conserto de computador e notebook a domicílio em Curitiba e região. Técnico vai até você. Atendimento no mesmo dia.",
+    "h1": "Conserto de Computador a Domicílio em Curitiba"
+  },
+  "manutencao-notebook-curitiba-rapido": {
+    "title": "Manutenção de Notebook Rápida em Curitiba",
+    "metaDescription": "Manutenção de notebook rápida em Curitiba. Limpeza, upgrade SSD, troca de tela, formatação. Atendimento no mesmo dia.",
+    "h1": "Manutenção de Notebook Rápida em Curitiba"
+  },
+  "tecnico-computador-perto-de-mim": {
+    "title": "Técnico de Computador Perto de Mim | Curitiba",
+    "metaDescription": "Procurando técnico de computador perto de você em Curitiba? Atendimento a domicílio em todos os bairros. WhatsApp.",
+    "h1": "Técnico de Computador Perto de Mim em Curitiba"
+  },
+  "impressora-nao-imprime-curitiba": {
+    "title": "Impressora Não Imprime em Curitiba | Diagnóstico e Soluções Reais",
+    "metaDescription": "Impressora não imprime? Diagnóstico profissional em Curitiba e região. Problemas de driver, cabeçote, papel, Wi-Fi. Atendimento rápido. WhatsApp.",
+    "h1": "Impressora Não Imprime — Diagnóstico e Soluções Reais"
+  },
+  "monitor-sem-sinal-curitiba": {
+    "title": "Monitor Sem Sinal em Curitiba | Diagnóstico e Soluções Reais",
+    "metaDescription": "Monitor sem sinal? Diagnóstico profissional em Curitiba. Problema na placa de vídeo, cabo, monitor ou configuração. Atendimento rápido. WhatsApp.",
+    "h1": "Monitor Sem Sinal — Diagnóstico e Soluções Reais"
+  },
+  "internet-lenta-curitiba": {
+    "title": "Internet Lenta em Curitiba | Diagnóstico de Rede e Soluções",
+    "metaDescription": "Internet lenta em Curitiba? Diagnóstico de rede profissional. Roteador, Wi-Fi, cabeamento, DNS. Atendimento rápido. WhatsApp.",
+    "h1": "Internet Lenta — Diagnóstico de Rede e Soluções Profissionais"
+  },
+  "teclado-mouse-nao-funciona-curitiba": {
+    "title": "Teclado ou Mouse Não Funciona em Curitiba | Diagnóstico Rápido",
+    "metaDescription": "Teclado ou mouse não funcionam? Diagnóstico rápido em Curitiba. Porta USB, driver, Bluetooth. Atendimento no mesmo dia. WhatsApp.",
+    "h1": "Teclado ou Mouse Não Funciona — Diagnóstico e Soluções Rápidas"
+  },
+  "hd-externo-nao-reconhece-curitiba": {
+    "title": "HD Externo Não Reconhece em Curitiba | Recuperação e Diagnóstico",
+    "metaDescription": "HD externo não reconhece? Diagnóstico e recuperação de dados em Curitiba. USB, partição, firmware. Atendimento especializado. WhatsApp.",
+    "h1": "HD Externo Não Reconhece — Diagnóstico e Recuperação de Dados"
+  },
+  "tela-azul-windows-curitiba": {
+    "title": "Tela Azul no Windows em Curitiba | Diagnóstico BSOD Profissional",
+    "metaDescription": "Tela azul da morte (BSOD) no Windows? Diagnóstico profissional em Curitiba. Identificamos o driver ou hardware causador. WhatsApp.",
+    "h1": "Tela Azul no Windows (BSOD) — Diagnóstico e Solução Profissional"
+  },
+  "notebook-sem-wifi-curitiba": {
+    "title": "Notebook Sem Wi-Fi em Curitiba | Diagnóstico e Solução Rápida",
+    "metaDescription": "Notebook não conecta no Wi-Fi? Diagnóstico rápido em Curitiba. Problema de driver, placa wireless, configuração. Atendimento no mesmo dia. WhatsApp.",
+    "h1": "Notebook Sem Wi-Fi — Diagnóstico e Solução Rápida"
+  },
+  "pc-trava-ao-jogar-curitiba": {
+    "title": "PC Trava ao Jogar em Curitiba | Diagnóstico Gamer Profissional",
+    "metaDescription": "PC trava, congela ou reinicia durante jogos? Diagnóstico gamer em Curitiba. GPU, fonte, temperatura, drivers. Atendimento especializado. WhatsApp.",
+    "h1": "PC Trava ao Jogar — Diagnóstico Gamer e Soluções Reais"
+  },
+  "computador-com-som-estranho-curitiba": {
+    "title": "Computador Com Som Estranho em Curitiba | Diagnóstico de Barulhos",
+    "metaDescription": "Computador fazendo barulho estranho? Diagnóstico profissional em Curitiba. Ventoinha, HD, fonte, cooler. Identifique antes que quebre. WhatsApp.",
+    "h1": "Computador Com Som Estranho — Diagnóstico de Barulhos e Ruídos"
+  },
+  "computador-nao-conecta-bluetooth-curitiba": {
+    "title": "Computador Não Conecta Bluetooth em Curitiba | Diagnóstico Rápido",
+    "metaDescription": "Bluetooth não funciona no computador? Diagnóstico rápido em Curitiba. Driver, adaptador, configuração. Atendimento no mesmo dia. WhatsApp.",
+    "h1": "Computador Não Conecta Bluetooth — Diagnóstico e Solução"
+  },
+  "pen-drive-nao-reconhece-curitiba": {
+    "title": "Pen Drive Não Reconhece em Curitiba | Técnico Especialista",
+    "metaDescription": "Pen drive não aparece no computador? Diagnóstico profissional em Curitiba. Recuperação de dados, reparo de porta USB e formatação especializada.",
+    "h1": "Pen Drive Não Reconhece — Diagnóstico e Solução em Curitiba"
+  },
+  "som-nao-funciona-curitiba": {
+    "title": "Som Não Funciona no Computador em Curitiba | Técnico",
+    "metaDescription": "Computador sem som em Curitiba? Diagnóstico de áudio, drivers, placa de som e alto-falantes. Atendimento rápido a domicílio.",
+    "h1": "Som Não Funciona no Computador — Diagnóstico em Curitiba"
+  },
+  "computador-nao-desliga-curitiba": {
+    "title": "Computador Não Desliga em Curitiba | Diagnóstico Técnico",
+    "metaDescription": "Computador não desliga ou fica na tela de desligamento? Técnico em Curitiba resolve problema de shutdown, driver e energia.",
+    "h1": "Computador Não Desliga — Diagnóstico e Solução em Curitiba"
+  },
+  "erro-ao-instalar-windows-curitiba": {
+    "title": "Erro ao Instalar Windows em Curitiba | Técnico Especialista",
+    "metaDescription": "Erro na instalação do Windows em Curitiba? Técnico resolve problemas de boot, partição, driver e BIOS para instalação limpa do Windows 10/11.",
+    "h1": "Erro ao Instalar Windows — Solução Profissional em Curitiba"
+  },
+  "notebook-superaquecendo-curitiba": {
+    "title": "Notebook Superaquecendo em Curitiba | Diagnóstico e Reparo",
+    "metaDescription": "Notebook esquentando demais e desligando sozinho? Técnico em Curitiba resolve superaquecimento com limpeza térmica, troca de pasta e reparo de cooler. Atendimento rápido.",
+    "h1": "Notebook Superaquecendo — Diagnóstico e Solução em Curitiba"
+  },
+  "camera-seguranca-nao-funciona-curitiba": {
+    "title": "Câmera de Segurança Não Funciona em Curitiba | Reparo CFTV",
+    "metaDescription": "Câmera de segurança parou de funcionar? Técnico CFTV em Curitiba resolve problemas de DVR, câmeras IP, acesso remoto e gravação. Atendimento rápido.",
+    "h1": "Câmera de Segurança Não Funciona — Reparo CFTV em Curitiba"
+  },
+  "fonte-queimada-curitiba": {
+    "title": "Fonte Queimada em Curitiba | Diagnóstico e Troca de Fonte",
+    "metaDescription": "Fonte do computador ou notebook queimou? Técnico em Curitiba faz diagnóstico e troca de fonte com garantia. Atendimento rápido em domicílio.",
+    "h1": "Fonte Queimada — Diagnóstico e Substituição em Curitiba"
+  },
+  "placa-mae-com-defeito-curitiba": {
+    "title": "Placa-Mãe com Defeito em Curitiba | Diagnóstico e Reparo",
+    "metaDescription": "Placa-mãe com defeito? Técnico em Curitiba faz diagnóstico profissional, reparo de componentes e substituição. Atendimento para desktop e notebook.",
+    "h1": "Placa-Mãe com Defeito — Diagnóstico e Reparo em Curitiba"
+  },
+  "notebook-nao-carrega-curitiba": {
+    "title": "Notebook Não Carrega a Bateria em Curitiba — Diagnóstico e Reparo",
+    "metaDescription": "Notebook não carrega a bateria em Curitiba? Diagnóstico profissional identifica se é carregador, conector DC, bateria ou placa. Atendimento rápido.",
+    "h1": "Notebook Não Carrega a Bateria — Diagnóstico e Reparo em Curitiba"
+  },
+  "pc-com-tela-preta-curitiba": {
+    "title": "PC com Tela Preta em Curitiba — Diagnóstico e Reparo",
+    "metaDescription": "Computador ou notebook com tela preta em Curitiba? Diagnóstico identifica se é placa de vídeo, RAM, monitor ou sistema. Atendimento rápido.",
+    "h1": "PC com Tela Preta — Diagnóstico e Reparo em Curitiba"
+  },
+  "erro-disco-cheio-curitiba": {
+    "title": "Erro de Disco Cheio em Curitiba — Diagnóstico e Solução",
+    "metaDescription": "Computador com disco cheio em Curitiba? Limpeza profissional, migração para SSD e organização de arquivos. Atendimento rápido em domicílio.",
+    "h1": "Erro de Disco Cheio — Diagnóstico e Solução em Curitiba"
+  },
+  "windows-travando-na-atualizacao-curitiba": {
+    "title": "Windows Travando na Atualização em Curitiba — Diagnóstico e Solução",
+    "metaDescription": "Windows travou na atualização em Curitiba? Técnico resolve atualização parada, loop de reinicialização e tela preta pós-update. Atendimento rápido.",
+    "h1": "Windows Travando na Atualização — Diagnóstico e Solução em Curitiba"
+  },
+  "hd-fazendo-barulho-curitiba": {
+    "title": "HD Fazendo Barulho em Curitiba — Diagnóstico e Recuperação de Dados",
+    "metaDescription": "HD fazendo barulho, clique ou rangido em Curitiba? Diagnóstico urgente e recuperação de dados. Não ignore — cada minuto conta. Atendimento rápido.",
+    "h1": "HD Fazendo Barulho — Diagnóstico e Recuperação de Dados em Curitiba"
+  },
+  "teclado-nao-funciona-curitiba": {
+    "title": "Teclado Não Funciona em Curitiba — Diagnóstico e Reparo",
+    "metaDescription": "Teclado do notebook ou PC não funciona em Curitiba? Diagnóstico de teclas travadas, líquido derramado, cabo flat e driver. Atendimento rápido.",
+    "h1": "Teclado Não Funciona — Diagnóstico e Reparo em Curitiba"
+  },
+  "pc-nao-conecta-wifi-curitiba": {
+    "title": "PC Não Conecta no Wi-Fi em Curitiba — Diagnóstico e Solução",
+    "metaDescription": "Computador ou notebook não conecta no Wi-Fi em Curitiba? Técnico resolve driver, adaptador, configuração de rede e sinal fraco. Atendimento rápido.",
+    "h1": "PC Não Conecta no Wi-Fi — Diagnóstico e Solução em Curitiba"
+  },
+  "notebook-esquentando-desligando-curitiba": {
+    "title": "Notebook Esquentando e Desligando Sozinho em Curitiba | Técnico Especialista",
+    "metaDescription": "Notebook esquentando demais e desligando sozinho? Técnico em Curitiba resolve superaquecimento com limpeza, troca de pasta térmica e reparo de cooler. Atendimento rápido.",
+    "h1": "Notebook Esquentando e Desligando — Diagnóstico e Reparo em Curitiba"
+  },
+  "erro-bios-curitiba": {
+    "title": "Erro de BIOS em Curitiba | Diagnóstico e Reparo Especializado",
+    "metaDescription": "Erro de BIOS no computador? Técnico em Curitiba resolve BIOS corrompida, configuração errada, atualização falha e senha esquecida. Atendimento profissional.",
+    "h1": "Erro de BIOS — Diagnóstico e Reparo Profissional em Curitiba"
+  },
+  "pc-travando-em-jogos-curitiba": {
+    "title": "PC Travando em Jogos em Curitiba | Diagnóstico Gamer Profissional",
+    "metaDescription": "PC travando, engasgando ou dando tela azul em jogos? Técnico gamer em Curitiba diagnostica e resolve problemas de performance, FPS baixo e crashes. Atendimento especializado.",
+    "h1": "PC Travando em Jogos — Diagnóstico e Otimização Gamer em Curitiba"
+  },
+  "backup-perdido-curitiba": {
+    "title": "Backup Perdido em Curitiba | Recuperação de Dados Especializada",
+    "metaDescription": "Perdeu backup, arquivos ou fotos importantes? Técnico em Curitiba recupera dados de HD, SSD, pen drive e nuvem. Atendimento emergencial com sigilo total.",
+    "h1": "Backup Perdido — Recuperação de Dados em Curitiba"
+  },
+  "notebook-nao-conecta-bluetooth-curitiba": {
+    "title": "Notebook Não Conecta Bluetooth em Curitiba | Técnico Especialista",
+    "metaDescription": "Bluetooth do notebook não funciona, não pareia ou não aparece? Técnico em Curitiba resolve problemas de Bluetooth com diagnóstico rápido. Atendimento profissional.",
+    "h1": "Notebook Não Conecta Bluetooth — Diagnóstico e Reparo em Curitiba"
+  },
+  "erro-driver-windows-curitiba": {
+    "title": "Erro de Driver no Windows em Curitiba | Diagnóstico e Correção",
+    "metaDescription": "Erro de driver no Windows? Tela azul, dispositivo não reconhecido, hardware sem funcionar? Técnico em Curitiba resolve problemas de drivers com diagnóstico profissional.",
+    "h1": "Erro de Driver no Windows — Diagnóstico e Correção em Curitiba"
+  },
+  "pc-sem-imagem-curitiba": {
+    "title": "PC Sem Imagem no Monitor em Curitiba | Diagnóstico Especializado",
+    "metaDescription": "PC liga mas não aparece imagem no monitor? Técnico em Curitiba diagnostica e resolve problemas de vídeo, GPU, cabo e placa-mãe. Atendimento rápido.",
+    "h1": "PC Sem Imagem no Monitor — Diagnóstico e Reparo em Curitiba"
+  },
+  "memoria-ram-com-defeito-curitiba": {
+    "title": "Memória RAM com Defeito em Curitiba | Diagnóstico e Troca",
+    "metaDescription": "Memória RAM com defeito? PC travando, tela azul ou reiniciando? Técnico em Curitiba diagnostica e troca RAM com teste MemTest86. Atendimento profissional.",
+    "h1": "Memória RAM com Defeito — Diagnóstico e Troca em Curitiba"
+  },
+  "notebook-com-tela-piscando-curitiba": {
+    "title": "Notebook com Tela Piscando em Curitiba | Diagnóstico e Reparo",
+    "metaDescription": "Tela do notebook piscando, tremendo ou com flickering? Técnico em Curitiba diagnostica e resolve problemas de tela com reparo profissional. Atendimento rápido.",
+    "h1": "Notebook com Tela Piscando — Diagnóstico e Reparo em Curitiba"
+  },
+  "pc-fazendo-barulho-estranho-curitiba": {
+    "title": "PC Fazendo Barulho Estranho em Curitiba | Diagnóstico Profissional",
+    "metaDescription": "Computador fazendo barulho estranho? Cliques, zumbido, chiado ou vibração? Técnico em Curitiba identifica a origem e resolve. Diagnóstico rápido e preciso.",
+    "h1": "PC Fazendo Barulho Estranho — Diagnóstico e Reparo em Curitiba"
+  },
+  "erro-particao-windows-curitiba": {
+    "title": "Erro de Partição no Windows em Curitiba | Reparo Profissional",
+    "metaDescription": "Erro de partição no Windows? Disco não reconhecido, partição RAW ou corrompida? Técnico em Curitiba recupera partições e dados. Atendimento especializado.",
+    "h1": "Erro de Partição no Windows — Reparo e Recuperação em Curitiba"
+  },
+  "computador-desligando-apos-segundos-curitiba": {
+    "title": "Computador Desligando Após Poucos Segundos em Curitiba | Diagnóstico",
+    "metaDescription": "Computador liga e desliga sozinho após poucos segundos? Técnico em Curitiba diagnostica problemas de fonte, processador, placa-mãe e superaquecimento. Atendimento rápido.",
+    "h1": "Computador Desligando Após Poucos Segundos — Diagnóstico em Curitiba"
+  },
+  "notebook-touchpad-nao-funciona-curitiba": {
+    "title": "Touchpad do Notebook Não Funciona em Curitiba | Técnico Especialista",
+    "metaDescription": "Touchpad do notebook parou de funcionar, não responde ao toque ou está travado? Técnico em Curitiba resolve problemas de touchpad com diagnóstico rápido e preciso.",
+    "h1": "Touchpad do Notebook Não Funciona — Diagnóstico e Reparo em Curitiba"
+  },
+  "pc-nao-reconhece-segundo-monitor-curitiba": {
+    "title": "PC Não Reconhece Segundo Monitor em Curitiba | Técnico Especialista",
+    "metaDescription": "Segundo monitor não é reconhecido pelo PC ou notebook? Técnico em Curitiba resolve problemas de dual monitor com diagnóstico profissional. Atendimento rápido.",
+    "h1": "PC Não Reconhece Segundo Monitor — Diagnóstico e Configuração em Curitiba"
+  },
+  "erro-atualizacao-windows-11-curitiba": {
+    "title": "Erro na Atualização do Windows 11 em Curitiba | Técnico Especialista",
+    "metaDescription": "Erro ao atualizar o Windows 11? Atualização travada, falha de instalação ou PC incompatível? Técnico em Curitiba resolve problemas de update com segurança.",
+    "h1": "Erro na Atualização do Windows 11 — Diagnóstico e Correção em Curitiba"
+  },
+  "computador-com-cheiro-de-queimado-curitiba": {
+    "title": "Computador com Cheiro de Queimado em Curitiba | Emergência Técnica",
+    "metaDescription": "Computador com cheiro de queimado? DESLIGUE IMEDIATAMENTE. Técnico em Curitiba diagnostica componente queimado (fonte, placa-mãe, capacitor) com urgência.",
+    "h1": "Computador com Cheiro de Queimado — Atendimento de Emergência em Curitiba"
+  },
+  "notebook-bateria-nao-carrega-curitiba": {
+    "title": "Notebook Não Carrega a Bateria em Curitiba | Diagnóstico Especializado",
+    "metaDescription": "Notebook não carrega a bateria? Técnico em Curitiba diagnostica problemas no carregador, conector DC, chip de carga e bateria com laudo profissional.",
+    "h1": "Notebook Não Carrega a Bateria — Diagnóstico e Reparo em Curitiba"
+  },
+  "pc-com-pop-ups-e-propagandas-curitiba": {
+    "title": "PC com Pop-ups e Propagandas em Curitiba | Remoção de Adware",
+    "metaDescription": "Computador cheio de pop-ups e propagandas? Técnico em Curitiba remove adware, browser hijackers e PUPs com limpeza profunda e proteção contra reinfecção.",
+    "h1": "PC com Pop-ups e Propagandas — Remoção Profissional em Curitiba"
+  },
+  "erro-0x0000007b-curitiba": {
+    "title": "Erro 0x0000007B (INACCESSIBLE_BOOT_DEVICE) Curitiba | Reparo Especializado",
+    "metaDescription": "Erro 0x0000007B INACCESSIBLE_BOOT_DEVICE? Técnico em Curitiba resolve tela azul na inicialização com diagnóstico de disco, BIOS e drivers de armazenamento.",
+    "h1": "Erro 0x0000007B (INACCESSIBLE_BOOT_DEVICE) — Reparo em Curitiba"
+  },
+  "computador-nao-reconhece-usb-curitiba": {
+    "title": "Computador Não Reconhece USB em Curitiba | Diagnóstico e Reparo",
+    "metaDescription": "Computador não reconhece pendrive, HD externo ou dispositivo USB? Técnico em Curitiba diagnostica portas, drivers, hub e controladora USB.",
+    "h1": "Computador Não Reconhece USB — Diagnóstico e Reparo em Curitiba"
+  },
+  "pc-sem-audio-curitiba": {
+    "title": "PC Sem Áudio? Computador Sem Som | Técnico em Curitiba",
+    "metaDescription": "Computador ou notebook sem som? Áudio parou de funcionar? Diagnóstico e reparo em Curitiba e região metropolitana. Atendimento rápido a domicílio.",
+    "h1": "PC ou Notebook Sem Áudio em Curitiba? Diagnóstico e Solução"
+  },
+  "erro-disco-100-porcento-curitiba": {
+    "title": "Disco 100% no Gerenciador de Tarefas? Solução | Técnico Curitiba",
+    "metaDescription": "Disco em 100% no Windows? Computador extremamente lento por uso de disco constante? Diagnóstico e solução em Curitiba. Atendimento rápido.",
+    "h1": "Disco 100% no Gerenciador de Tarefas em Curitiba? Resolvemos!"
+  },
+  "computador-reiniciando-sozinho-curitiba": {
+    "title": "Computador Reiniciando Sozinho? Causas e Soluções | Técnico Curitiba",
+    "metaDescription": "Computador reiniciando sozinho sem aviso? Pode ser superaquecimento, fonte, RAM ou Windows. Diagnóstico profissional em Curitiba. Atendimento rápido.",
+    "h1": "Computador Reiniciando Sozinho em Curitiba? Encontramos a Causa!"
+  },
+  "pc-nao-conecta-internet-curitiba": {
+    "title": "PC Não Conecta na Internet? Causas e Soluções | Técnico Curitiba",
+    "metaDescription": "Computador ou notebook sem internet? Wi-Fi não conecta, cabo sem rede? Diagnóstico e solução em Curitiba e região. Atendimento rápido a domicílio.",
+    "h1": "PC ou Notebook Não Conecta na Internet em Curitiba? Resolvemos!"
+  },
+  "erro-registro-windows-curitiba": {
+    "title": "Erro no Registro do Windows? Solução | Técnico em Curitiba",
+    "metaDescription": "Erros no registro do Windows? Computador travando, programas não abrem? Reparo profissional do registro em Curitiba. Sem risco de perda de dados.",
+    "h1": "Erro no Registro do Windows em Curitiba? Reparo Seguro e Profissional"
+  },
+  "pc-com-virus-ransomware-curitiba": {
+    "title": "PC com Vírus Ransomware? Arquivos Criptografados | Técnico Curitiba",
+    "metaDescription": "Computador infectado com ransomware? Arquivos criptografados e pedido de resgate? Diagnóstico e tentativa de recuperação em Curitiba. Atendimento urgente.",
+    "h1": "PC com Ransomware em Curitiba? Ação Urgente Necessária"
+  },
+  "notebook-tela-amarelada-curitiba": {
+    "title": "Notebook com Tela Amarelada em Curitiba | Diagnóstico e Reparo",
+    "metaDescription": "Tela do notebook amarelada ou com tonalidade quente? Saiba as causas reais — cabo flat, inversor, painel LCD ou configuração — e como resolver em Curitiba.",
+    "h1": "Notebook com Tela Amarelada — Causas, Diagnóstico e Reparo em Curitiba"
+  },
+  "pc-nao-entra-modo-seguro-curitiba": {
+    "title": "PC Não Entra no Modo Seguro em Curitiba | Diagnóstico e Reparo",
+    "metaDescription": "Computador não entra no Modo Seguro do Windows? Saiba as causas — BCD corrompido, falha no disco, malware — e como resolver em Curitiba.",
+    "h1": "PC Não Entra no Modo Seguro — Causas e Soluções em Curitiba"
+  },
+  "erro-0xc000021a-curitiba": {
+    "title": "Erro 0xc000021a Windows em Curitiba | Diagnóstico e Reparo",
+    "metaDescription": "Erro 0xc000021a no Windows? Tela azul crítica com STATUS_SYSTEM_PROCESS_TERMINATED. Saiba as causas e como resolver em Curitiba.",
+    "h1": "Erro 0xc000021a no Windows — Diagnóstico e Reparo em Curitiba"
+  },
+  "computador-sem-wifi-curitiba": {
+    "title": "Computador Sem Wi-Fi em Curitiba | Diagnóstico e Reparo",
+    "metaDescription": "Computador não conecta no Wi-Fi? Ícone de rede ausente ou adaptador desativado? Saiba as causas e como resolver em Curitiba.",
+    "h1": "Computador Sem Wi-Fi — Causas, Diagnóstico e Reparo em Curitiba"
+  },
+  "notebook-sem-webcam-curitiba": {
+    "title": "Notebook Sem Webcam Funcionando em Curitiba | Câmera Não Detectada",
+    "metaDescription": "Webcam do notebook não funciona em Curitiba? Diagnóstico de driver, cabo flat e módulo da câmera. Técnico especialista com atendimento rápido.",
+    "h1": "Notebook Sem Webcam Funcionando em Curitiba — Câmera Não Detectada"
+  },
+  "erro-0xc00000e-curitiba": {
+    "title": "Erro 0xc00000e em Curitiba | PC Não Inicia — BCD Corrompido",
+    "metaDescription": "Erro 0xc00000e no Windows em Curitiba? Reparo de BCD, boot manager e configuração de inicialização. Técnico especialista com diagnóstico rápido.",
+    "h1": "Erro 0xc00000e — PC Não Inicia em Curitiba — BCD Corrompido"
+  },
+  "pc-com-tela-congelada-curitiba": {
+    "title": "PC com Tela Congelada em Curitiba | Computador Trava e Não Responde",
+    "metaDescription": "Computador congela e trava em Curitiba? Diagnóstico de superaquecimento, RAM, disco e drivers. Técnico especialista resolve com atendimento rápido.",
+    "h1": "PC com Tela Congelada em Curitiba — Computador Trava e Não Responde"
+  },
+  "computador-muito-barulhento-curitiba": {
+    "title": "Computador Muito Barulhento em Curitiba | Ventoinhas e Ruídos Anormais",
+    "metaDescription": "Computador fazendo barulho em Curitiba? Diagnóstico de cooler, HD, ventoinha e vibração. Técnico especialista com atendimento rápido e solução definitiva.",
+    "h1": "Computador Muito Barulhento em Curitiba — Ventoinhas e Ruídos Anormais"
+  },
+  "notebook-sem-audio-curitiba": {
+    "title": "Notebook Sem Áudio em Curitiba — Diagnóstico e Solução",
+    "metaDescription": "Notebook sem som? Veja causas reais (driver, serviço de áudio, alto-falante queimado) e como resolver em Curitiba com técnico especializado.",
+    "h1": "Notebook Sem Áudio — Diagnóstico e Reparo em Curitiba"
+  },
+  "erro-0x80070005-curitiba": {
+    "title": "Erro 0x80070005 em Curitiba — Acesso Negado no Windows",
+    "metaDescription": "Erro 0x80070005 (Acesso Negado) no Windows? Veja causas reais e soluções profissionais em Curitiba. Diagnóstico técnico especializado.",
+    "h1": "Erro 0x80070005 (Acesso Negado) — Solução em Curitiba"
+  },
+  "pc-desligando-sozinho-curitiba": {
+    "title": "PC Desligando Sozinho em Curitiba — Diagnóstico e Solução",
+    "metaDescription": "PC desliga sozinho sem aviso? Veja causas reais (superaquecimento, fonte, placa-mãe) e solução profissional em Curitiba. Diagnóstico técnico.",
+    "h1": "PC Desligando Sozinho — Diagnóstico e Reparo em Curitiba"
+  },
+  "notebook-esquentando-muito-curitiba": {
+    "title": "Notebook Esquentando Muito em Curitiba | Superaquecimento — Técnico Especializado",
+    "metaDescription": "Notebook esquentando demais em Curitiba? Limpeza interna, troca de pasta térmica e reparo de cooler. Diagnóstico profissional com atendimento rápido.",
+    "h1": "Notebook Esquentando Muito — Diagnóstico e Reparo em Curitiba"
+  },
+  "erro-0x80004005-curitiba": {
+    "title": "Erro 0x80004005 em Curitiba | Falha Não Especificada — Técnico Windows",
+    "metaDescription": "Erro 0x80004005 no Windows em Curitiba? Diagnóstico profissional para resolver falhas de atualização, rede e registro. Atendimento rápido.",
+    "h1": "Erro 0x80004005 no Windows — Diagnóstico e Correção em Curitiba"
+  },
+  "erro-0x800f081f-curitiba": {
+    "title": "Erro 0x800F081F no Windows em Curitiba | Resolução Profissional",
+    "metaDescription": "Erro 0x800F081F no Windows Update ou .NET Framework? Técnico especialista em Curitiba resolve falhas de componentes do Windows com diagnóstico preciso.",
+    "h1": "Erro 0x800F081F — Resolução Profissional em Curitiba"
+  },
+  "pc-sem-som-hdmi-curitiba": {
+    "title": "PC Sem Som no HDMI em Curitiba | Diagnóstico e Solução",
+    "metaDescription": "PC ou notebook sem som na TV via HDMI? Áudio não sai pelo HDMI? Técnico em Curitiba resolve problemas de áudio HDMI com diagnóstico preciso.",
+    "h1": "PC Sem Som no HDMI — Diagnóstico e Solução em Curitiba"
+  },
+  "monitor-piscando-curitiba": {
+    "title": "Monitor Piscando em Curitiba | Diagnóstico e Reparo Profissional",
+    "metaDescription": "Monitor piscando, com flickering ou desligando sozinho? Técnico em Curitiba diagnostica e repara problemas de monitor e placa de vídeo com precisão.",
+    "h1": "Monitor Piscando — Diagnóstico e Reparo em Curitiba"
+  },
+  "pc-nao-reconhece-usb-curitiba": {
+    "title": "PC Não Reconhece USB em Curitiba | Diagnóstico e Solução",
+    "metaDescription": "PC ou notebook não reconhece pendrive, HD externo ou dispositivo USB? Técnico em Curitiba resolve problemas de portas USB com diagnóstico preciso.",
+    "h1": "PC Não Reconhece USB — Diagnóstico e Solução em Curitiba"
+  },
+  "wifi-caindo-curitiba": {
+    "title": "Wi-Fi Caindo em Curitiba | Diagnóstico e Solução Profissional",
+    "metaDescription": "Wi-Fi caindo toda hora? Internet instável, lenta ou desconectando? Técnico em Curitiba resolve problemas de rede Wi-Fi com diagnóstico completo.",
+    "h1": "Wi-Fi Caindo — Diagnóstico e Solução em Curitiba"
+  },
+  "notebook-tela-preta-curitiba": {
+    "title": "Notebook com Tela Preta em Curitiba — Diagnóstico e Reparo",
+    "metaDescription": "Notebook ligou mas a tela ficou preta? Técnico em Curitiba identifica se é backlight, flat cable, GPU ou placa-mãe. Diagnóstico profissional com valor transparente.",
+    "h1": "Notebook com Tela Preta — Diagnóstico e Reparo em Curitiba"
+  },
+  "erro-0x80240034-curitiba": {
+    "title": "Erro 0x80240034 Windows Update Curitiba — Solução Profissional",
+    "metaDescription": "Erro 0x80240034 impedindo atualizações do Windows? Técnico em Curitiba resolve falhas do Windows Update com diagnóstico profissional. Atendimento rápido.",
+    "h1": "Erro 0x80240034 no Windows Update — Solução em Curitiba"
+  },
+  "pc-nao-conecta-bluetooth-curitiba": {
+    "title": "PC Não Conecta Bluetooth Curitiba — Diagnóstico e Solução",
+    "metaDescription": "PC ou notebook não conecta Bluetooth em Curitiba? Técnico resolve problemas de driver, adaptador e pareamento. Diagnóstico profissional com atendimento rápido.",
+    "h1": "PC Não Conecta Bluetooth — Diagnóstico e Solução em Curitiba"
+  },
+  "notebook-desliga-sozinho-curitiba": {
+    "title": "Notebook Desliga Sozinho em Curitiba — Causas e Solução Técnica",
+    "metaDescription": "Notebook desliga sozinho? Técnico em Curitiba diagnostica superaquecimento, bateria defeituosa, falha de placa e instabilidade elétrica. Atendimento profissional.",
+    "h1": "Notebook Desliga Sozinho — Diagnóstico e Reparo em Curitiba"
+  },
+  "erro-0x80070057-curitiba": {
+    "title": "Erro 0x80070057 em Curitiba — Diagnóstico e Correção Profissional",
+    "metaDescription": "Erro 0x80070057 no Windows? Técnico em Curitiba resolve falha de parâmetro incorreto em backup, formatação, Windows Update e partições. Atendimento especializado.",
+    "h1": "Erro 0x80070057 — Correção Profissional em Curitiba"
+  },
+  "placa-de-video-nao-funciona-curitiba": {
+    "title": "Placa de Vídeo Não Funciona em Curitiba — Diagnóstico e Reparo",
+    "metaDescription": "Placa de vídeo não funciona? Técnico em Curitiba diagnostica GPU queimada, driver crashando, artefatos e sem imagem. Reparo profissional com garantia.",
+    "h1": "Placa de Vídeo Não Funciona — Diagnóstico e Reparo em Curitiba"
+  },
+  "ssd-nao-reconhece-curitiba": {
+    "title": "SSD Não Reconhece em Curitiba — Diagnóstico e Recuperação",
+    "metaDescription": "SSD não reconhece no PC? Técnico em Curitiba diagnostica falha de firmware, BIOS, partição e recupera dados. Atendimento profissional com garantia.",
+    "h1": "SSD Não Reconhece — Diagnóstico e Solução em Curitiba"
+  },
+  "pc-travando-jogos-curitiba": {
+    "title": "PC Travando em Jogos em Curitiba | Diagnóstico Gamer Profissional",
+    "metaDescription": "PC trava, congela ou dá tela azul em jogos? Técnico gamer em Curitiba diagnostica GPU, CPU, RAM, temperaturas e fonte. Atendimento especializado.",
+    "h1": "PC Travando em Jogos — Diagnóstico Gamer em Curitiba"
+  },
+  "cabo-rede-nao-funciona-curitiba": {
+    "title": "Cabo de Rede Não Funciona em Curitiba | Diagnóstico de Rede Profissional",
+    "metaDescription": "Cabo de rede não funciona? Internet cabeada sem conexão, velocidade baixa ou intermitente. Técnico em Curitiba diagnostica com testador certificado.",
+    "h1": "Cabo de Rede Não Funciona — Diagnóstico de Rede em Curitiba"
+  },
+  "notebook-sem-som-curitiba": {
+    "title": "Notebook Sem Som em Curitiba — Diagnóstico e Reparo de Áudio",
+    "metaDescription": "Notebook sem som? Técnico em Curitiba resolve driver de áudio, alto-falante queimado, conector P2 danificado e conflitos de dispositivo. Atendimento rápido.",
+    "h1": "Notebook Sem Som — Diagnóstico e Reparo de Áudio em Curitiba"
+  },
+  "mouse-nao-funciona-curitiba": {
+    "title": "Mouse Não Funciona em Curitiba — Diagnóstico e Reparo | Técnico Curitiba",
+    "metaDescription": "Mouse parou de funcionar? Técnico em Curitiba resolve mouse com fio, sem fio e Bluetooth. Diagnóstico rápido, atendimento em domicílio. WhatsApp agora!",
+    "h1": "Mouse Não Funciona — Diagnóstico e Reparo em Curitiba"
+  },
+  "erro-windows-update-curitiba": {
+    "title": "Erro no Windows Update em Curitiba — Correção Profissional | Técnico Curitiba",
+    "metaDescription": "Windows Update travado ou com erro? Técnico em Curitiba corrige falhas de atualização, loops de reinicialização e erros 0x80070002. Diagnóstico rápido!",
+    "h1": "Erro no Windows Update — Correção Profissional em Curitiba"
+  },
+  "notebook-tela-escura-curitiba": {
+    "title": "Notebook com Tela Escura em Curitiba — Diagnóstico e Reparo | Técnico Curitiba",
+    "metaDescription": "Notebook com tela escura ou apagada? Técnico em Curitiba diagnostica backlight, flat cable e placa de vídeo. Atendimento em domicílio. WhatsApp agora!",
+    "h1": "Notebook com Tela Escura — Diagnóstico e Reparo em Curitiba"
+  },
+  "celular-nao-liga-curitiba": {
+    "title": "Celular Não Liga em Curitiba | Conserto Profissional",
+    "metaDescription": "Celular não liga? Tela preta, sem resposta ao botão? Diagnóstico e conserto de celular em Curitiba. Atendimento em bancada, com coleta e entrega com atendimento humanizado.",
+    "h1": "Celular Não Liga — Diagnóstico e Conserto em Curitiba"
+  },
+  "celular-tela-quebrada-curitiba": {
+    "title": "Tela de Celular Quebrada em Curitiba | Troca de Display",
+    "metaDescription": "Tela do celular quebrada ou trincada? Troca de display em Curitiba. Samsung, Motorola, iPhone, Xiaomi. Saiba por que display é a peça mais cara do celular.",
+    "h1": "Tela de Celular Quebrada — Troca de Display em Curitiba"
+  },
+  "celular-lento-curitiba": {
+    "title": "Celular Lento em Curitiba | Otimização e Conserto",
+    "metaDescription": "Celular lento, travando ou demorando para abrir apps? Diagnóstico e otimização profissional em Curitiba. Samsung, Motorola, iPhone, Xiaomi.",
+    "h1": "Celular Lento ou Travando — Solução Profissional em Curitiba"
+  },
+  "celular-com-virus-curitiba": {
+    "title": "Celular com Vírus em Curitiba | Remoção de Malware",
+    "metaDescription": "Celular com vírus, pop-ups ou apps estranhos? Remoção profissional de malware em Curitiba. Android e iPhone. diagnóstico em bancada, com coleta e entrega.",
+    "h1": "Celular com Vírus — Remoção de Malware em Curitiba"
+  },
+  "celular-nao-carrega-curitiba": {
+    "title": "Celular Não Carrega em Curitiba | Conserto de Carga",
+    "metaDescription": "Celular não carrega ou carrega muito devagar? Conserto de conector USB, troca de bateria em Curitiba. diagnóstico em bancada, com coleta e entrega.",
+    "h1": "Celular Não Carrega — Conserto em Curitiba"
+  },
+  "celular-bateria-inchada-curitiba": {
+    "title": "Bateria Inchada de Celular em Curitiba | Troca Urgente",
+    "metaDescription": "Bateria do celular inchada, estufada ou empurrando a tela? Troca urgente com segurança em Curitiba. Risco de explosão — não tente em casa.",
+    "h1": "Bateria Inchada de Celular — Troca com Segurança em Curitiba"
+  },
+  "celular-molhou-curitiba": {
+    "title": "Celular Molhou em Curitiba | Recuperação de Celular com Água",
+    "metaDescription": "Celular caiu na água, molhou na chuva ou tomou líquido? Recuperação profissional em Curitiba. Quanto mais rápido agir, maior a chance de salvar.",
+    "h1": "Celular Molhou — Recuperação Profissional em Curitiba"
+  },
+  "celular-touch-nao-funciona-curitiba": {
+    "title": "Touch do Celular Não Funciona em Curitiba | Conserto",
+    "metaDescription": "Tela do celular não responde ao toque? Touch fantasma, áreas mortas ou digitalizador com defeito? Conserto profissional em Curitiba.",
+    "h1": "Touch do Celular Não Funciona — Conserto em Curitiba"
+  },
+  "celular-sem-sinal-curitiba": {
+    "title": "Celular Sem Sinal em Curitiba | Problema de Rede Celular",
+    "metaDescription": "Celular sem sinal, sem rede, ou perdendo cobertura? Diagnóstico de antena e rede em Curitiba. Samsung, Motorola, iPhone, Xiaomi.",
+    "h1": "Celular Sem Sinal ou Sem Rede — Diagnóstico em Curitiba"
+  },
+  "celular-camera-nao-funciona-curitiba": {
+    "title": "Câmera do Celular Não Funciona em Curitiba | Conserto",
+    "metaDescription": "Câmera do celular com erro, foto embaçada, foco travado ou app não abre? Conserto de câmera de celular em Curitiba. Diagnóstico presencial.",
+    "h1": "Câmera do Celular Não Funciona — Conserto em Curitiba"
+  },
+  "tv-sem-imagem-curitiba": {
+    "title": "TV Sem Imagem em Curitiba | Tela Preta com Som",
+    "metaDescription": "TV ligada mas sem imagem? Tela preta com som funcionando? Conserto de backlight e placa em Curitiba.",
+    "h1": "TV Sem Imagem — Diagnóstico e Conserto em Curitiba"
+  },
+  "tv-som-sem-video-curitiba": {
+    "title": "TV com Som Mas Sem Vídeo em Curitiba | Conserto",
+    "metaDescription": "TV com som mas sem vídeo? Tela apagada mas áudio funcionando? Diagnóstico e conserto em Curitiba.",
+    "h1": "TV com Som Mas Sem Vídeo — Conserto em Curitiba"
+  },
+  "tv-listras-na-tela-curitiba": {
+    "title": "TV com Listras na Tela em Curitiba | Conserto",
+    "metaDescription": "TV com listras verticais, horizontais ou coloridas? Conserto de painel, T-CON e flat cable em Curitiba.",
+    "h1": "TV com Listras na Tela — Diagnóstico e Conserto em Curitiba"
+  },
+  "tv-manchas-na-tela-curitiba": {
+    "title": "TV com Manchas na Tela em Curitiba | Diagnóstico",
+    "metaDescription": "TV com manchas escuras, claras ou coloridas? Diagnóstico de painel e backlight em Curitiba.",
+    "h1": "TV com Manchas na Tela — Diagnóstico em Curitiba"
+  },
+  "tv-desliga-sozinha-curitiba": {
+    "title": "TV Desliga Sozinha em Curitiba | Diagnóstico e Conserto",
+    "metaDescription": "TV desliga sozinha, reinicia ou entra em standby? Conserto profissional em Curitiba.",
+    "h1": "TV Desliga Sozinha — Diagnóstico e Conserto em Curitiba"
+  },
+  "smart-tv-lenta-curitiba": {
+    "title": "Smart TV Lenta em Curitiba | Otimização e Conserto",
+    "metaDescription": "Smart TV lenta, travando, apps demorando? Otimização em Curitiba. Samsung, LG, TCL, Philco.",
+    "h1": "Smart TV Lenta ou Travando — Solução em Curitiba"
+  },
+  "tv-sem-wifi-curitiba": {
+    "title": "TV Sem Wi-Fi em Curitiba | Problema de Conexão",
+    "metaDescription": "Smart TV não conecta no Wi-Fi? Diagnóstico de rede e conserto em Curitiba.",
+    "h1": "TV Sem Wi-Fi ou Sem Internet — Diagnóstico em Curitiba"
+  },
+  "tv-sem-som-curitiba": {
+    "title": "TV Sem Som em Curitiba | Diagnóstico e Conserto",
+    "metaDescription": "TV sem som, chiando ou distorcido? Conserto de alto-falante em Curitiba.",
+    "h1": "TV Sem Som — Diagnóstico e Conserto em Curitiba"
+  },
+  "tv-tela-quebrada-curitiba": {
+    "title": "TV com Tela Quebrada em Curitiba | Vale Consertar?",
+    "metaDescription": "Tela da TV quebrada ou trincada? Saiba por que o painel é a peça mais cara. Diagnóstico em Curitiba.",
+    "h1": "TV com Tela Quebrada — Por Que é Tão Caro e Quando Vale Consertar"
+  },
+  "radio-nao-liga-curitiba": {
+    "title": "Rádio Não Liga em Curitiba | Conserto de Som",
+    "metaDescription": "Rádio não liga, sem reação ao botão? Conserto profissional de rádio e equipamento de som em Curitiba. diagnóstico em bancada, com coleta e entrega.",
+    "h1": "Rádio Não Liga — Conserto Profissional em Curitiba"
+  },
+  "som-chiando-curitiba": {
+    "title": "Som Chiando em Curitiba | Conserto de Áudio",
+    "metaDescription": "Som chiando, com ruído, estalo ou distorção? Conserto de caixa de som, amplificador e receiver em Curitiba. Diagnóstico presencial.",
+    "h1": "Som Chiando ou com Ruído — Conserto em Curitiba"
+  },
+  "caixa-som-sem-bluetooth-curitiba": {
+    "title": "Caixa de Som Sem Bluetooth em Curitiba | Conserto",
+    "metaDescription": "Caixa de som não conecta no Bluetooth? Não aparece para parear? Conserto de módulo Bluetooth em Curitiba.",
+    "h1": "Caixa de Som Sem Bluetooth — Conserto em Curitiba"
+  },
+  "caixa-som-sem-audio-curitiba": {
+    "title": "Caixa de Som Sem Áudio em Curitiba | Conserto",
+    "metaDescription": "Caixa de som liga mas sem áudio? Alto-falante queimado ou amplificador com defeito? Conserto em Curitiba.",
+    "h1": "Caixa de Som Sem Áudio — Diagnóstico e Conserto em Curitiba"
+  },
+  "caixa-som-nao-carrega-curitiba": {
+    "title": "Caixa de Som Não Carrega em Curitiba | Conserto",
+    "metaDescription": "Caixa de som Bluetooth não carrega, bateria viciada ou conector quebrado? Conserto em Curitiba. JBL, Bose, Sony.",
+    "h1": "Caixa de Som Não Carrega — Conserto em Curitiba"
+  },
+  "amplificador-nao-liga-curitiba": {
+    "title": "Amplificador Não Liga em Curitiba | Conserto",
+    "metaDescription": "Amplificador de som não liga? Receiver, potência ou integrado? Conserto profissional em Curitiba.",
+    "h1": "Amplificador Não Liga — Conserto em Curitiba"
+  },
+  "receiver-sem-som-curitiba": {
+    "title": "Receiver Sem Som em Curitiba | Conserto de Home Theater",
+    "metaDescription": "Receiver sem som, home theater mudo? Conserto de receiver e sistema de som em Curitiba. Yamaha, Onkyo, Denon, Sony.",
+    "h1": "Receiver Sem Som — Conserto de Home Theater em Curitiba"
+  },
+  "alto-falante-queimado-curitiba": {
+    "title": "Alto-Falante Queimado em Curitiba | Troca e Reparo",
+    "metaDescription": "Alto-falante queimado, com som distorcido ou raspando? Troca e reparo de alto-falante em Curitiba.",
+    "h1": "Alto-Falante Queimado — Troca e Reparo em Curitiba"
+  },
+  "som-automotivo-nao-funciona-curitiba": {
+    "title": "Som Automotivo Não Funciona em Curitiba | Conserto",
+    "metaDescription": "Som do carro não liga, sem áudio ou com chiado? Conserto de rádio automotivo, amplificador e alto-falante em Curitiba.",
+    "h1": "Som Automotivo Não Funciona — Conserto em Curitiba"
+  },
+  "quanto-custa-trocar-tela-celular-curitiba": {
+    "title": "Quanto Custa Trocar a Tela do Celular em Curitiba? | Guia Completo",
+    "metaDescription": "Quanto custa trocar a tela do celular? Display original vs compatível, preços por modelo (Samsung, iPhone, Motorola, Xiaomi). Guia completo em Curitiba.",
+    "h1": "Quanto Custa Trocar a Tela do Celular em Curitiba? Guia Completo de Preços"
+  },
+  "quanto-custa-trocar-tela-tv-curitiba": {
+    "title": "Quanto Custa Trocar a Tela da TV em Curitiba? | Guia de Preços",
+    "metaDescription": "Quanto custa trocar a tela da TV? Painel LED, QLED e OLED: preços por tamanho e quando vale a pena. Guia completo em Curitiba.",
+    "h1": "Quanto Custa Trocar a Tela da TV? Guia Completo de Preços"
+  },
+  "por-que-display-e-caro-curitiba": {
+    "title": "Por Que Display de TV e Celular é Tão Caro? | Explicação Técnica",
+    "metaDescription": "Entenda por que a tela do celular e da TV é a peça mais cara. AMOLED, OLED, LCD: tecnologia, fabricação e custos. Guia técnico em Curitiba.",
+    "h1": "Por Que o Display de TV e Celular é Tão Caro? Explicação Técnica"
+  },
+  "tv-travando-lenta-curitiba": {
+    "title": "Smart TV Travando e Lenta em Curitiba | Conserto",
+    "metaDescription": "Smart TV travando, lenta ou apps demorados? Diagnóstico e conserto em Curitiba.",
+    "h1": "Smart TV Travando e Lenta — Diagnóstico em Curitiba"
+  },
+  "tv-sem-hdmi-curitiba": {
+    "title": "TV Não Reconhece HDMI em Curitiba | Sem Sinal",
+    "metaDescription": "TV não reconhece HDMI? Sem sinal ou tela preta? Diagnóstico em Curitiba.",
+    "h1": "TV Não Reconhece HDMI — Conserto em Curitiba"
+  },
+  "tv-imagem-fantasma-curitiba": {
+    "title": "TV com Imagem Fantasma em Curitiba | Conserto",
+    "metaDescription": "TV com imagem fantasma, duplicada ou sombra? Diagnóstico em Curitiba.",
+    "h1": "TV com Imagem Fantasma — Conserto em Curitiba"
+  },
+  "tv-demora-ligar-curitiba": {
+    "title": "TV Demora Para Ligar em Curitiba | Capacitores",
+    "metaDescription": "TV demora para ligar? Diagnóstico de fonte e capacitores em Curitiba.",
+    "h1": "TV Demora Para Ligar — Diagnóstico em Curitiba"
+  },
+  "tv-cheiro-queimado-curitiba": {
+    "title": "TV com Cheiro de Queimado em Curitiba | URGENTE",
+    "metaDescription": "TV com cheiro de queimado? DESLIGUE imediatamente. Diagnóstico urgente em Curitiba.",
+    "h1": "TV com Cheiro de Queimado — Desligue Imediatamente!"
+  },
+  "tv-controle-nao-funciona-curitiba": {
+    "title": "Controle Remoto da TV Não Funciona em Curitiba",
+    "metaDescription": "Controle remoto não funciona? Diagnóstico de sensor IR em Curitiba.",
+    "h1": "Controle Remoto Não Funciona — Soluções em Curitiba"
+  },
+  "tv-sem-cores-curitiba": {
+    "title": "TV Sem Cores / Preto e Branco em Curitiba",
+    "metaDescription": "TV em preto e branco ou cores erradas? Diagnóstico em Curitiba.",
+    "h1": "TV Sem Cores — Conserto em Curitiba"
+  },
+  "tv-nao-conecta-wifi-bluetooth-curitiba": {
+    "title": "TV Não Conecta Wi-Fi/Bluetooth em Curitiba",
+    "metaDescription": "Smart TV sem Wi-Fi ou Bluetooth? Módulo wireless defeituoso? Conserto em Curitiba.",
+    "h1": "TV Não Conecta Wi-Fi nem Bluetooth — Conserto em Curitiba"
+  },
+  "tv-pixel-morto-curitiba": {
+    "title": "TV com Pixel Morto em Curitiba | Diagnóstico",
+    "metaDescription": "TV com ponto preto ou colorido fixo? Diagnóstico de pixel morto em Curitiba.",
+    "h1": "TV com Pixel Morto ou Preso — Diagnóstico em Curitiba"
+  },
+  "celular-listras-na-tela-curitiba": {
+    "title": "Celular com Listras na Tela em Curitiba | Conserto Especializado",
+    "metaDescription": "Celular com listras verdes, brancas ou coloridas na tela? Problema comum após atualizações. Diagnóstico e conserto especializado em Curitiba. Saiba custos reais.",
+    "h1": "Celular com Listras na Tela — Diagnóstico e Conserto em Curitiba"
+  },
+  "listras-tela-celular-apos-atualizacao-curitiba": {
+    "title": "Listras no Celular Após Atualização em Curitiba | Samsung e iPhone",
+    "metaDescription": "Celular com listras após atualização do sistema? Problema documentado em Samsung Galaxy e iPhone. Diagnóstico especializado em Curitiba.",
+    "h1": "Listras no Celular Após Atualização — Samsung e iPhone em Curitiba"
+  },
+  "tv-listras-horizontais-verticais-conserto-curitiba": {
+    "title": "TV Listras Horizontais e Verticais — Conserto Delicado em Curitiba",
+    "metaDescription": "TV com listras horizontais ou verticais? Flat cable, T-CON ou painel? Entenda por que o conserto é delicado e os custos reais.",
+    "h1": "TV com Listras Horizontais ou Verticais — Conserto Delicado em Curitiba"
+  },
+  "reparo-placa-mae-notebook-curitiba": {
+    "title": "Reparo de Placa-Mãe de Notebook em Curitiba | Microsoldagem BGA",
+    "metaDescription": "Reparo de placa-mãe de notebook com microsoldagem BGA em Curitiba. Entenda por que o serviço custa caro: equipamentos de R$ 5.000 a R$ 50.000+.",
+    "h1": "Reparo de Placa-Mãe de Notebook — Por Que Custa Caro e Quando Vale a Pena"
+  },
+  "reparo-placa-mae-celular-curitiba": {
+    "title": "Reparo de Placa-Mãe de Celular em Curitiba | Microsoldagem Especializada",
+    "metaDescription": "Conserto de placa-mãe de celular com microsoldagem em Curitiba. Equipamentos de R$ 15.000+. iPhone, Samsung, Motorola. Custos reais e quando compensa.",
+    "h1": "Reparo de Placa-Mãe de Celular — Microsoldagem Especializada em Curitiba"
+  },
+  "reparo-placa-principal-tv-curitiba": {
+    "title": "Reparo de Placa Principal de TV em Curitiba | Componentes e Custos",
+    "metaDescription": "Reparo de placa principal, fonte e T-CON de TV em Curitiba. Conserto a nível de componente. Custos reais: R$ 150 a R$ 1.200.",
+    "h1": "Reparo de Placa Principal de TV — Conserto a Nível de Componente em Curitiba"
+  },
+  "reparo-placa-som-amplificador-curitiba": {
+    "title": "Reparo de Placa de Som, Amplificador e Receiver em Curitiba",
+    "metaDescription": "Conserto de amplificador, receiver, caixa de som e rádio em Curitiba. Reparo de placa a nível de componente. Transistores, capacitores, ICs de áudio.",
+    "h1": "Reparo de Amplificador, Receiver e Equipamento de Som em Curitiba"
+  },
+  "por-que-conserto-placa-mae-custa-caro-curitiba": {
+    "title": "Por Que Conserto de Placa-Mãe Custa Caro? | Entenda os Custos Reais",
+    "metaDescription": "Entenda por que o reparo de placa-mãe custa R$ 300-1.500. Equipamentos de R$ 20.000-65.000, anos de treinamento e componentes importados.",
+    "h1": "Por Que o Conserto de Placa-Mãe Custa Caro? — A Verdade Sobre os Custos"
+  },
+  "reflow-bga-curitiba": {
+    "title": "Reflow BGA em Curitiba — O Que É, Funciona? Tem Garantia?",
+    "metaDescription": "Reflow BGA: solução temporária ou definitiva? Entenda o procedimento, por que NÃO tem garantia, taxa de sucesso e quando é indicado. Curitiba.",
+    "h1": "Reflow BGA — O Que É, Por Que Não Tem Garantia e Quando É Indicado"
+  },
+  "reballing-bga-curitiba": {
+    "title": "Reballing BGA em Curitiba — Procedimento Definitivo com Garantia",
+    "metaDescription": "Reballing BGA profissional em Curitiba. Troca completa das esferas de solda. Garantia de 90 dias. GPU, CPU, chipsets. Notebooks, consoles, placas de vídeo.",
+    "h1": "Reballing BGA — Troca de Esferas de Solda com Garantia em Curitiba"
+  },
+  "troca-chip-bga-curitiba": {
+    "title": "Troca de Chip BGA em Curitiba — GPU, CPU, Chipset | Solução Definitiva",
+    "metaDescription": "Troca completa de chip BGA (GPU, CPU, chipset) em Curitiba. Solução definitiva quando reflow e reballing não resolvem. Garantia de 90 dias.",
+    "h1": "Troca de Chip BGA — Quando Reballing Não É Suficiente"
+  },
+  "microsoldagem-celular-curitiba": {
+    "title": "Microsoldagem de Celular em Curitiba — Procedimento, Equipamento e Custos",
+    "metaDescription": "Microsoldagem profissional de celular em Curitiba. Reparo de componentes de 0.3mm sob microscópio. iPhone, Samsung, Motorola. Garantia de 90 dias.",
+    "h1": "Microsoldagem de Celular — Precisão Cirúrgica em Curitiba"
+  },
+  "recapacitacao-placa-eletronica-curitiba": {
+    "title": "Recapacitação de Placa Eletrônica em Curitiba — Capacitores Novos",
+    "metaDescription": "Recapacitação: troca de todos os capacitores eletrolíticos de uma placa. Restauração de TVs, amplificadores, fontes. Garantia de 90 dias.",
+    "h1": "Recapacitação — Troca Completa de Capacitores em Curitiba"
+  },
+  "impressora-papel-preso-curitiba": {
+    "title": "Impressora com Papel Preso em Curitiba | Atolamento de Papel",
+    "metaDescription": "Impressora atolando papel? Causas reais: rolos de tração gastos, sensor de papel sujo, papel úmido ou fora do padrão. Diagnóstico e reparo em Curitiba.",
+    "h1": "Impressora com Papel Preso — Diagnóstico e Reparo em Curitiba"
+  },
+  "impressora-tinta-nao-sai-curitiba": {
+    "title": "Impressora Não Sai Tinta em Curitiba | Cabeçote Entupido | Reparo",
+    "metaDescription": "Impressora jato de tinta não imprime? Cabeçote entupido, cartucho seco, tinta ressecada. Diagnóstico e reparo em Curitiba. HP, Epson, Canon.",
+    "h1": "Impressora Não Sai Tinta — Cabeçote Entupido e Soluções em Curitiba"
+  },
+  "impressora-erro-conexao-usb-wifi-curitiba": {
+    "title": "Impressora Não Conecta USB ou Wi-Fi em Curitiba | Erro de Conexão",
+    "metaDescription": "Impressora offline, não conecta USB ou Wi-Fi? Driver incompatível, IP errado, cabo defeituoso. Diagnóstico e reparo em Curitiba e região.",
+    "h1": "Impressora Não Conecta — Erro USB, Wi-Fi e Rede em Curitiba"
+  },
+  "impressora-cartucho-nao-reconhece-curitiba": {
+    "title": "Impressora Não Reconhece Cartucho ou Toner em Curitiba | Reparo",
+    "metaDescription": "Impressora não reconhece cartucho ou toner? Chip incompatível, contato sujo, cartucho remanufaturado com defeito. Diagnóstico em Curitiba.",
+    "h1": "Impressora Não Reconhece Cartucho ou Toner — Soluções em Curitiba"
+  }
+}

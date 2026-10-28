@@ -57,13 +57,38 @@
     },
     "src/routes/problemas.$slug.tsx": {
       "before": "b35d15d9c5b94927007d06e9433039cb",
-      "after": "1663c071d77dde5fef47e2516a7c1aa8",
-      "note": "Metadados SSR específicos adicionados; política noindex preservada."
+      "after": "0b3c9827b2ade5a8f427f6e69a7b337f",
+      "note": "Metadados SSR específicos adicionados; política noindex preservada.",
+      "revisions": [
+        {
+          "sourceCommit": "82cb50c87380094db1b034ddfb964386b1b91142",
+          "before": "1663c071d77dde5fef47e2516a7c1aa8",
+          "after": "13ee683ca0053310dcf9ec9fd2d6c17a",
+          "intervention": "INT-2026-10-27-002",
+          "reason": "Usar índice compacto de metadata sem carregar o corpo editorial na validação e no head. Mesmo conteúdo, canonical, noindex e 404."
+        },
+        {
+          "sourceCommit": "497dbbdf847aa547926ea118be8aecbb0d01a30d",
+          "before": "13ee683ca0053310dcf9ec9fd2d6c17a",
+          "after": "0b3c9827b2ade5a8f427f6e69a7b337f",
+          "intervention": "INT-2026-10-27-002",
+          "reason": "Loader busca apenas o artigo via Server Function; base editorial não é necessária no cliente."
+        }
+      ]
     },
     "src/routes/procedimentos.$slug.tsx": {
       "before": "c0a27b2c752e944f931f3049088cf320",
-      "after": "5a3c076d6e255519c4f8b39ef8e2dfc1",
-      "note": "Metadados SSR específicos adicionados; política noindex preservada."
+      "after": "0b91d63ad1b44b105e5a784cfa6f6679",
+      "note": "Metadados SSR específicos adicionados; política noindex preservada.",
+      "revisions": [
+        {
+          "sourceCommit": "f3d3a9072740cb1d9611ac21bbbc4782e61bae17",
+          "before": "5a3c076d6e255519c4f8b39ef8e2dfc1",
+          "after": "0b91d63ad1b44b105e5a784cfa6f6679",
+          "intervention": "INT-2026-10-27-002",
+          "reason": "Procedimentos reutiliza loader de artigo no servidor e metadata leve; canonical hidratado acompanha o path real."
+        }
+      ]
     },
     "src/routes/servicos.$servico.$cidade.tsx": {
       "before": "e81544902e3ff7f8c5de8b67434baaa4",

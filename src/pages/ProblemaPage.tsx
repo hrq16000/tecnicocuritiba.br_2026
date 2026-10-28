@@ -1,7 +1,6 @@
-import { SkeletonBlock, SkeletonText } from "@/components/motion/Skeletons";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { AnimatedSection } from "@/components/AnimatedSection";
-import { useParams } from "@/lib/router-compat";
+import { useLocation } from "@/lib/router-compat";
 import { Link } from "@/lib/router-compat";
 import { AlertCircle, MessageCircle, ArrowRight, CheckCircle, Wrench, Shield, Search, TrendingDown, Microscope, Zap, ThermometerSun, Cpu, ClipboardCheck, Truck, ClipboardList } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -18,6 +17,7 @@ import { trackWaClick, trackProblemaServiceClick, trackProblemaLinkBroken } from
 import { auditInternalLink } from "@/lib/internalLinkAudit";
 import { useScrollDepthTracking } from "@/hooks/useScrollDepthTracking";
 import { useCtaVisibility } from "@/hooks/useCtaVisibility";
+import { useLoaderData } from "@tanstack/react-router";
 import type { ProblemaPageData } from "@/lib/problemaPagesData";
 import ReactMarkdown from "react-markdown";
 import { IMAGES } from "@/lib/images";
@@ -62,24 +62,10 @@ const diagnosticoSteps = [
 ];
 
 const ProblemaPage = () => {
-  const { slug } = useParams<{ slug: string }>();
-  const [data, setData] = useState<ProblemaPageData | undefined>(undefined);
-  const [loading, setLoading] = useState(true);
+  const { pathname } = useLocation();
+  const data = useLoaderData({ strict: false }) as ProblemaPageData | undefined;
 
-  useCanonical(`https://tecnico.curitiba.br/problemas/${data?.slug ?? slug ?? ""}`);
-
-  useEffect(() => {
-    if (!slug) { setLoading(false); return; }
-    let active = true;
-    setLoading(true);
-    import("@/lib/problemaPagesData").then(({ getProblemaPageBySlug }) => {
-      if (!active) return;
-      const found = getProblemaPageBySlug(slug);
-      setData(found);
-      setLoading(false);
-    }).catch(() => { if (active) setLoading(false); });
-    return () => { active = false; };
-  }, [slug]);
+  useCanonical(absoluteUrl(pathname));
 
   useEffect(() => {
     if (data) {
@@ -94,17 +80,24 @@ const ProblemaPage = () => {
   const heroCtaRef = useCtaVisibility<HTMLDivElement>("whatsapp", `problema:${data?.slug || "unknown"}:hero`);
   const finalCtaRef = useCtaVisibility<HTMLDivElement>("whatsapp", `problema:${data?.slug || "unknown"}:final`);
 
-  const validatedRelatedPages = data ? data.relatedPages.filter((link) => {
-    const audit = auditInternalLink(link.to);
-    if (audit.valid === true) return true;
-    trackProblemaLinkBroken({
-      problemaSlug: data.slug,
-      targetHref: link.to,
-      reason: (audit as { reason: string }).reason,
-      linkLabel: link.label,
-    });
-    return false;
-  }) : [];
+  const validatedRelatedPages = data
+    ? data.relatedPages.filter((link) => auditInternalLink(link.to).valid)
+    : [];
+
+  // Telemetria só no cliente; a renderização SSR permanece sem efeitos.
+  useEffect(() => {
+    if (!data) return;
+    for (const link of data.relatedPages) {
+      const audit = auditInternalLink(link.to);
+      if (audit.valid === true) continue;
+      trackProblemaLinkBroken({
+        problemaSlug: data.slug,
+        targetHref: link.to,
+        reason: audit.reason,
+        linkLabel: link.label,
+      });
+    }
+  }, [data]);
 
 
 
@@ -181,21 +174,6 @@ const ProblemaPage = () => {
       { "@type": "ListItem", position: 3, name: data.h1.split("—")[0].trim(), item: `https://tecnico.curitiba.br/problemas/${data.slug}` },
     ],
   } : null;
-
-  if (loading) {
-    return (
-      <div className="min-h-screen bg-background">
-        <Header />
-        <div className="container mx-auto py-16 max-w-3xl" role="status" aria-label="Carregando conteúdo">
-          <SkeletonBlock className="h-9 w-3/4" />
-          <SkeletonText lines={4} className="mt-6" />
-          <SkeletonBlock className="mt-8 h-52 w-full rounded-xl" />
-          <SkeletonText lines={3} className="mt-6" />
-        </div>
-        <Footer />
-      </div>
-    );
-  }
 
   if (!data) {
     return (
