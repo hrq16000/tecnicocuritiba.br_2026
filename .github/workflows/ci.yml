@@ -192,8 +192,6 @@ jobs:
           node-version: "22"
       - name: Install deps
         run: npm ci --no-audit --no-fund
-      - name: Preparar dados estáticos de artigos
-        run: node scripts/generate-problema-articles.mjs
       - name: Scripts de validação (preview e política sem balcão)
         run: node --test scripts/preview-built.test.mjs scripts/check-sem-balcao.test.mjs scripts/check-trust-claims.test.mjs
       - name: Política sem balcão (sem dependência de rg)
