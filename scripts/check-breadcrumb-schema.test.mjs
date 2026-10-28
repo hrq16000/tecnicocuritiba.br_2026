@@ -55,7 +55,7 @@ test("não aprova rotas ausentes", (t) => {
 
 test("não ignora BreadcrumbList com position incorreta", (t) => {
   const { root } = fixture(t, true);
-  const p = run(root);
+  const p = run(root, ["--all"]);
   assert.equal(p.status, 1);
   assert.match(p.stderr, /position=4/);
 });
