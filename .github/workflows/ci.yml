@@ -80,12 +80,8 @@ jobs:
         run: npm run test:photo-variants && npm run check:photo-variants
       - name: Gate de privacidade das fotos reais (EXIF/GPS)
         run: npm run check:photos
-      - name: Imagens versionadas permanecem imutáveis após o build
-        run: |
-          # Relatórios e sitemaps public/ são regenerados e possuem gates específicos.
-          # Este gate continua reprovando mudanças em imagens reais versionadas.
-          git diff --exit-code -- src/assets ':(glob)public/**/*.jpg' ':(glob)public/**/*.jpeg' ':(glob)public/**/*.png' ':(glob)public/**/*.webp' ':(glob)public/**/*.avif' ':(glob)public/**/*.svg' ':(glob)public/**/*.gif'
-          test -z "$(git ls-files --others --exclude-standard -- src/assets)"
+      - name: Fotos otimizadas commitadas (sem diff pendente)
+        run: git diff --exit-code -- public/fotos src/assets
       - name: Gate de LocalBusiness unificado no cluster de informática
         run: npm run check:localbusiness-cluster
       - name: JSON-LD validation
