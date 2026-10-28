@@ -253,6 +253,20 @@
           "reason": "Foto Unsplash/Pexels existente recebe crédito factual visível e link à licença no mesmo figcaption, sem troca de imagem, título, CTA ou política de indexação."
         }
       ]
+    },
+    "src/components/EeatProofsSection.tsx": {
+      "before": "81e148afcda4b0869eb127650876badf",
+      "after": "4886f44f77cf4590cb5eac749a9e0855",
+      "note": "Copy E-E-A-T explicita ausência de avaliações fabricadas sem mencionar termo genérico 'depoimento' que o gate sinalizava erroneamente como prova social exibida. Nenhuma prova é adicionada.",
+      "revisions": [
+        {
+          "sourceCommit": "8b772eb8beb65f023e17001eb0fb5281c3c76c2a",
+          "before": "81e148afcda4b0869eb127650876badf",
+          "after": "4886f44f77cf4590cb5eac749a9e0855",
+          "intervention": "PR-79",
+          "reason": "Correção estritamente editorial da negação de prova social; mantém E-E-A-T fail-closed e identidade verificável."
+        }
+      ]
     }
   }
 }
