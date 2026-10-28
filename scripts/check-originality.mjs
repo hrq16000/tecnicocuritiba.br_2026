@@ -205,6 +205,13 @@ if (STATIC_MODE) {
 const blocked = new Map(); // path -> reasons[]
 const addReason = (p, r) => blocked.set(p, [...(blocked.get(p) || []), r]);
 
+// Uma URL curada cujo HTML não pôde ser avaliado NÃO está aprovada.
+// Sem esta regra, ela ficava fora de approved[] e blocked[], permitindo
+// que um relatório parcial fosse interpretado como liberação.
+for (const route of missing) {
+  addReason(route, "HTML da URL curada indisponível para avaliar originalidade");
+}
+
 for (const page of pages) {
   if (page.words < page.rules.minWords) {
     addReason(page.path, `corpo autoral insuficiente: ${page.words} palavras (mínimo ${page.rules.minWords} para ${page.family})`);

@@ -9,19 +9,18 @@ import { WAVES } from "./lib/content-waves.mjs";
 import { approvedWeeks } from "./lib/wave-approvals.mjs";
 import { lastmodFor } from "./lib/lastmod.mjs";
 import { effectiveLastmod } from "./lib/lastmod-source.mjs";
+import { blockedFromContentApproval } from "./lib/content-approval.mjs";
 
-// Só entra no sitemap URL aprovada no check de originalidade
-// (reports/content-approval.json, gerado por scripts/check-originality.mjs).
-// Sem relatório disponível, o manifesto curado é usado integralmente.
+// O relatório de originalidade é produzido APÓS o build renderizado.
+// Na primeira passagem (prebuild), apenas o manifesto curado e os gates
+// de ondas controlam a inclusão. Se existir relatório, ele DEVE ser íntegro;
+// relatórios corrompidos/parciais não podem liberar URLs silenciosamente.
 const APPROVAL_FILE = resolve("reports/content-approval.json");
-const blocked = new Set();
-if (existsSync(APPROVAL_FILE)) {
-  try {
-    const data = JSON.parse(readFileSync(APPROVAL_FILE, "utf8"));
-    for (const item of data.blocked ?? []) blocked.add(item.path);
-  } catch {
-    console.warn("aviso: reports/content-approval.json ilegível — sitemap gerado sem filtro de originalidade.");
-  }
+const approvalText = existsSync(APPROVAL_FILE) ? readFileSync(APPROVAL_FILE, "utf8") : null;
+const curatedPaths = ACTIVE_SITEMAPS.flatMap(([, entries]) => entries.map((entry) => entry.path));
+const blocked = blockedFromContentApproval(approvalText, curatedPaths);
+if (approvalText === null) {
+  console.warn("[sitemap] sem relatório de originalidade nesta passagem; aplicando manifesto curado e gates de ondas.");
 }
 
 // URL declarada em onda só entra no sitemap depois da aprovação em lote
@@ -69,5 +68,5 @@ writeFileSync(resolve("public/sitemap.xml"), indexXml);
 const declaradas = ACTIVE_SITEMAPS.reduce((n, [, e]) => n + e.length, 0);
 const emitidas = ACTIVE_SITEMAPS.reduce((n, [, e]) => n + e.filter((x) => !blocked.has(x.path)).length, 0);
 console.log(
-  `sitemap curado: index + ${ACTIVE_SITEMAPS.length} sub-sitemaps (${emitidas}/${declaradas} urls${blocked.size ? `, ${declaradas - emitidas} bloqueadas por originalidade` : ""})`,
+  `sitemap curado: index + ${ACTIVE_SITEMAPS.length} sub-sitemaps (${emitidas}/${declaradas} urls${blocked.size ? `, ${declaradas - emitidas} excluídas por gates` : ""})`,
 );
