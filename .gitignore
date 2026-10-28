@@ -33,3 +33,6 @@ coverage
 .eslintcache
 *.map
 .env.local
+
+# Dados derivados da fonte editorial; gerados antes de dev/build/test.
+/src/generated/problema-articles/

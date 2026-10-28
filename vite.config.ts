@@ -9,6 +9,7 @@ import { imagetools } from "vite-imagetools";
 import { mcpPlugin } from "@lovable.dev/mcp-js/stacks/supabase/vite";
 import { sentryVitePlugin } from "@sentry/vite-plugin";
 import type { Plugin } from "vite";
+import { generateProblemaArticles } from "./scripts/generate-problema-articles.mjs";
 
 // Diagnóstico de build no GitHub; não emite arquivo público nem código cliente.
 const entryBundleReport: Plugin = {
@@ -62,6 +63,7 @@ export default defineConfig({
   },
   vite: {
     plugins: [
+      { name: "prepare-problema-articles", configResolved: async () => { await generateProblemaArticles(); } },
       process.env.GITHUB_ACTIONS === "true" ? entryBundleReport : null,
       imagetools(),
       mcpPlugin(),
