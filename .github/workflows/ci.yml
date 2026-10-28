@@ -82,10 +82,10 @@ jobs:
         run: npm run check:photos
       - name: Imagens versionadas permanecem imutáveis após o build
         run: |
-          set -euo pipefail
-          # O build atualiza relatórios e sitemaps JSON/XML em public/.
-          # Esta etapa protege somente imagens; outros artefatos têm gates de SEO próprios.
-          changed="$( { git diff --name-only -- public src/assets; git ls-files --others --exclude-standard -- public src/assets; } | grep -Ei '\\.(jpe?g|png|webp|avif|gif|svg)
+          # Relatórios e sitemaps public/ são regenerados e possuem gates específicos.
+          # Este gate continua reprovando mudanças em imagens reais versionadas.
+          git diff --exit-code -- src/assets ':(glob)public/**/*.jpg' ':(glob)public/**/*.jpeg' ':(glob)public/**/*.png' ':(glob)public/**/*.webp' ':(glob)public/**/*.avif' ':(glob)public/**/*.svg' ':(glob)public/**/*.gif'
+          test -z "$(git ls-files --others --exclude-standard -- src/assets)"
       - name: Gate de LocalBusiness unificado no cluster de informática
         run: npm run check:localbusiness-cluster
       - name: JSON-LD validation
