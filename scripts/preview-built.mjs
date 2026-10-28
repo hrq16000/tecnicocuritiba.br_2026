@@ -25,7 +25,9 @@ export async function createBuiltPreview({ distDir = "dist", handler } = {}) {
 
   return http.createServer(async (req, res) => {
     try {
-      const url = new URL(req.url || "/", `http://${req.headers.host || "localhost"}`);
+      const forwarded = String(req.headers["x-forwarded-proto"] || "").split(",")[0].trim();
+      const protocol = forwarded === "https" ? "https" : "http";
+      const url = new URL(req.url || "/", `${protocol}://${req.headers.host || "localhost"}`);
       const pathname = decodeURIComponent(url.pathname);
       const asset = path.resolve(client, "." + pathname);
       const relative = path.relative(client, asset);
