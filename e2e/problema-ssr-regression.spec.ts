@@ -16,7 +16,7 @@ test("problema inexistente continua respondendo 404 HTTP", async ({ request }) =
   expect(response.status()).toBe(404);
 });
 
-test("navegação interna carrega outro artigo sem recarregar o documento", async ({ page }) => {
+test("navegação interna com host canônico carrega artigo sem recarregar o documento", async ({ page }) => {
   const current = "/problemas/computador-nao-liga-curitiba";
   await page.goto(current);
   await page.locator('html[data-hydrated="1"]').waitFor();
@@ -26,6 +26,22 @@ test("navegação interna carrega outro artigo sem recarregar o documento", asyn
   const target = links.find((href) => href !== current && getProblemaPageBySlug(href.split("/").at(-1) ?? ""));
   expect(target).toBeTruthy();
   const expected = getProblemaPageBySlug(target!.split("/").at(-1) ?? "")!;
+  let serverFunctions = 0;
+  await page.route("**/_serverFn/**", async (route) => {
+    serverFunctions += 1;
+    const response = await route.fetch({
+      headers: {
+        ...route.request().headers(),
+        host: "tecnico.curitiba.br",
+        "x-forwarded-proto": "https",
+        origin: "https://tecnico.curitiba.br",
+        referer: "https://tecnico.curitiba.br" + current,
+      },
+      maxRedirects: 0,
+    });
+    expect(response.status()).toBe(200);
+    await route.fulfill({ response });
+  });
   let documentNavigations = 0;
   page.on("request", (request) => {
     if (request.isNavigationRequest() && request.frame() === page.mainFrame()) documentNavigations += 1;
@@ -33,6 +49,7 @@ test("navegação interna carrega outro artigo sem recarregar o documento", asyn
   await page.locator(`a[href="${target}"]`).first().click();
   await expect(page.getByRole("heading", { level: 1 })).toHaveText(expected.h1);
   expect(documentNavigations).toBe(0);
+  expect(serverFunctions).toBeGreaterThan(0);
 });
 
 test("procedimento preserva SSR, canonical e conteúdo após hidratar", async ({ page, request }) => {

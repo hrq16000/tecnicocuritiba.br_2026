@@ -7,7 +7,7 @@ import { Readable, Writable } from "node:stream";
 
 async function request(server, url, options = {}) {
   const req = Readable.from(options.body ? [Buffer.from(options.body)] : []);
-  req.url = url; req.method = options.method || "GET"; req.headers = { host: "localhost" };
+  req.url = url; req.method = options.method || "GET"; req.headers = { host: "localhost", ...options.headers };
   const chunks = []; const headers = new Map();
   const res = new Writable({ write(chunk, encoding, callback) { chunks.push(Buffer.from(chunk)); callback(); } });
   res.statusCode = 200;
@@ -31,6 +31,7 @@ test("preview serve assets e HTML reais; preserva SSR, redirect, 404 e POST", as
       const p = new URL(req.url).pathname;
       requests.push(p);
       if (p === "/antigo") return new Response(null, { status: 301, headers: { Location: "/contato" } });
+      if (p === "/request-url") return new Response(req.url);
       if (p === "/ssr") return new Response("<h1>SSR</h1>", { headers: { "Content-Type": "text/html" } });
       if (p === "/api/teste") return new Response(await req.text(), { status: 201 });
       return new Response("Não encontrado", { status: 404 });
@@ -45,6 +46,8 @@ test("preview serve assets e HTML reais; preserva SSR, redirect, 404 e POST", as
     assert.equal((await request(server, "/nao-existe")).status, 404);
     r = await request(server, "/api/teste", { method: "POST", body: "teste=ok" });
     assert.equal(r.status, 201); assert.equal(await r.text(), "teste=ok");
+    r = await request(server, "/request-url?payload=AbC", { headers: { host: "tecnico.curitiba.br", "x-forwarded-proto": "https" } });
+    assert.equal(await r.text(), "https://tecnico.curitiba.br/request-url?payload=AbC");
     assert.ok(!requests.includes("/contato"));
     assert.ok(!requests.includes("/assets/app.js"));
   } finally {

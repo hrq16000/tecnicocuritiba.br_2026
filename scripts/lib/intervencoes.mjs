@@ -275,6 +275,35 @@ export const INTERVENCOES = [
     "coorte": "INTERVENTION_COHORT",
     "experimentalStatus": "INTERVENED"
   },
+  {
+    "id": "INT-2026-10-28-003",
+    "tipo": "PUBLIC_INTERVENTION",
+    "timestamp": "2026-10-28T01:06:46.425Z",
+    "deploymentId": null,
+    "commit": null,
+    "urlsDiretas": [
+      "/problemas/computador-nao-liga-curitiba",
+      "/procedimentos/computador-nao-liga-curitiba"
+    ],
+    "urlsIndiretas": [],
+    "arquivos": [
+      "src/server.ts",
+      "src/lib/serverCanonical.ts"
+    ],
+    "mudanca": "INTERNAL_ENDPOINT_ROUTING",
+    "motivo": "Preservar a caixa de /_serverFn/ no host público; a canonicalização de SEO alterava esse endpoint interno e quebrava navegação SPA. Host, HTTPS e regras de caminho das páginas públicas preservados.",
+    "impacto": {
+      "seo": "Sem promoção de indexação ou mudança de canonical público.",
+      "internalLinking": "Sem novos links.",
+      "conteudo": "Sem alteração de texto.",
+      "schema": "Sem alteração.",
+      "metadata": "Sem alteração.",
+      "lastmod": "Sem mudança artificial.",
+      "conversao": "Restaura navegação entre artigos mantendo o carregamento por Server Function."
+    },
+    "coorte": "INTERVENTION_COHORT",
+    "experimentalStatus": "INTERVENED"
+  },
 ];
 
 export default { LEDGER_SCHEMA, D0, INTERVENCOES };
