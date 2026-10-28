@@ -137,6 +137,22 @@ export function seoHead({
     );
   }
 
+  // Página institucional de políticas deve declarar WebPage próprio no SSR.
+  // Não usar Offer inventado nem alterar as regras comerciais existentes.
+  if (path === "/precos-e-politicas") {
+    scripts.push(jsonLd("web-page", {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": `${url}#webpage`,
+      url,
+      name: title,
+      description,
+      inLanguage: "pt-BR",
+      isPartOf: { "@id": `${siteConfig.baseUrl}/#website` },
+      about: { "@id": `${siteConfig.baseUrl}/#organization` },
+    }));
+  }
+
   const citySlug = path.startsWith("/tecnico-informatica-")
     ? path.slice("/tecnico-informatica-".length)
     : undefined;
