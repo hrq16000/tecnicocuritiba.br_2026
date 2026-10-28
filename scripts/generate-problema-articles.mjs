@@ -6,10 +6,35 @@ import { fileURLToPath } from "node:url";
 import ts from "typescript";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
-let pending;
+let queue = Promise.resolve();
 
 export function generateProblemaArticles() {
-  return pending ??= generate();
+  const next = queue.then(generate);
+  queue = next.catch(() => {});
+  return next;
+}
+
+// Compartilhado por Vite e Vitest: um checkout novo nunca depende de JSON antigo.
+export function problemaArticlesPlugin() {
+  return {
+    name: "prepare-problema-articles",
+    configResolved: async () => { await generateProblemaArticles(); },
+    configureServer(server) {
+      server.watcher.add(join(ROOT, "src/lib/problemaPagesData.ts"));
+    },
+    async handleHotUpdate(context) {
+      if (resolve(context.file) !== join(ROOT, "src/lib/problemaPagesData.ts")) return;
+      const changed = await generateProblemaArticles();
+      const files = [...changed, join(ROOT, "src/lib/problemaPage.functions.ts")];
+      for (const file of files) {
+        for (const module of context.server.moduleGraph.getModulesByFile(file) ?? []) {
+          context.server.moduleGraph.invalidateModule(module);
+        }
+      }
+      context.server.ws.send({ type: "full-reload" });
+      return [];
+    },
+  };
 }
 
 async function generate() {
@@ -84,17 +109,26 @@ async function generate() {
   }
   const output = join(ROOT, "src/generated/problema-articles");
   await mkdir(output, { recursive: true });
+  const changed = [];
   const expected = new Set([...unique.keys()].map((slug) => slug + ".json"));
   for (const entry of await readdir(output, { withFileTypes: true })) {
-    if (entry.isFile() && entry.name.endsWith(".json") && !expected.has(entry.name)) await unlink(join(output, entry.name));
+    if (entry.isFile() && entry.name.endsWith(".json") && !expected.has(entry.name)) {
+      const file = join(output, entry.name);
+      await unlink(file);
+      changed.push(file);
+    }
   }
   for (const [slug, article] of unique) {
     const file = join(output, slug + ".json");
     const next = JSON.stringify(article) + "\n";
     const current = await readFile(file, "utf8").catch(() => null);
-    if (current !== next) await writeFile(file, next);
+    if (current !== next) {
+      await writeFile(file, next);
+      changed.push(file);
+    }
   }
   console.log("[problema-articles] " + unique.size + " artigos estáticos; primeira ocorrência preservada.");
+  return changed;
 }
 
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
