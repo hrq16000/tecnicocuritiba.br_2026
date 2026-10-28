@@ -202,7 +202,7 @@
     "check:premium-tv-board-4a": "node scripts/check-premium-tv-board-4a.mjs dist",
     "check:multielectronics-3y": "node scripts/check-multielectronics-wave-3y.mjs",
     "test:a11y": "playwright test e2e/a11y-empresarial.spec.ts",
-    "check:breadcrumb-schema": "node scripts/check-breadcrumb-schema.mjs dist",
+    "check:breadcrumb-schema": "node scripts/check-breadcrumb-schema.mjs dist/client",
     "check:price-schema": "node scripts/check-price-schema.mjs dist",
     "check:faq-parity": "node scripts/check-faq-parity.mjs dist",
     "check:meta-uniqueness": "node scripts/check-meta-uniqueness.mjs dist",
