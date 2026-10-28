@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { PageSEO } from "@/components/PageSEO";
 import { PoliticaAtendimentoBlock } from "@/components/PoliticaAtendimentoBlock";
 import { IMAGES } from "@/lib/images";
+import { creditFor } from "@/lib/imageCredits";
 import { Link } from "@/lib/router-compat";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -137,9 +138,14 @@ const ColetaEntrega = () => {
         <section className="py-0 bg-background">
           <div className="container mx-auto">
             <div className="max-w-4xl mx-auto -mt-8 relative z-20">
-              <div className="rounded-xl overflow-hidden shadow-2xl">
+              <figure className="rounded-xl overflow-hidden shadow-2xl">
                 <img decoding="async" src={IMAGES.coletaEntrega} alt={IMAGES.coletaEntregaAlt} className="w-full h-48 md:h-64 object-cover" loading="eager" width="800" height="400" />
-              </div>
+                <figcaption className="text-xs text-muted-foreground bg-background px-3 py-2 text-center">
+                  <a href={creditFor(IMAGES.coletaEntrega).licenseUrl} target="_blank" rel="noopener noreferrer" className="hover:underline">
+                    {creditFor(IMAGES.coletaEntrega).creditText}
+                  </a>
+                </figcaption>
+              </figure>
             </div>
           </div>
         </section>
