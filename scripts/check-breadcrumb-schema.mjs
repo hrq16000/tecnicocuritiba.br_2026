@@ -2,19 +2,19 @@
 /**
  * GATE — BreadcrumbList das páginas serviço × cidade/bairro.
  *
- * Valida no build (dist/) que cada /conserto-<categoria>/<local>/ tem:
+ * Valida HTML pré-renderizado (dist/client/) que cada /conserto-<categoria>/<local>/ tem:
  *   • exatamente 1 BreadcrumbList;
  *   • 3 níveis na ordem Home > Serviço > Cidade;
  *   • `item` de cada nível apontando para URLs reais (nível 3 == canonical);
  *   • os mesmos rótulos presentes na trilha visível do HTML.
  *
- * Uso: node scripts/check-breadcrumb-schema.mjs [dist]
+ * Uso: node scripts/check-breadcrumb-schema.mjs [dist/client]
  */
 import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { CATEGORIES, LOCAIS, cityLabel } from "./lib/category-local.mjs";
 
-const DIST = path.resolve(process.argv[2] || "dist");
+const DIST = path.resolve(process.argv[2] || "dist/client");
 const SITE = "https://tecnico.curitiba.br";
 
 if (!existsSync(DIST)) {
