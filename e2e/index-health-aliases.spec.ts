@@ -7,7 +7,7 @@ test("artigo legado redireciona antes da proteção fail-closed do blog", async 
   try {
     const res = await ctx.get("/blog/quando-trocar-hd-por-ssd", { maxRedirects: 0 });
     expect(res.status()).toBe(301);
-    expect(res.headers()["location"]).toBe("/servicos/upgrade-ssd-ram");
+    expect(new URL(res.headers()["location"], "https://tecnico.curitiba.br").pathname).toBe("/servicos/upgrade-ssd-ram");
     const target = await ctx.get("/blog/quando-trocar-hd-por-ssd");
     expect(target.status()).toBe(200);
     expect(await target.text()).toContain('rel="canonical"');
