@@ -76,18 +76,18 @@ jobs:
 
       - name: Gate de alt text das imagens (sem alt genérico/placeholder)
         run: npm run check:image-alt
-      - name: Otimização de fotos reais (WebP/AVIF) — bloqueia deploy se falhar
-        run: npm run photos:optimize
+      - name: Gate de fotos responsivas já versionadas (WebP) — somente leitura
+        run: npm run test:photo-variants && npm run check:photo-variants
       - name: Gate de privacidade das fotos reais (EXIF/GPS)
         run: npm run check:photos
       - name: Fotos otimizadas commitadas (sem diff pendente)
-        run: git diff --exit-code -- public src/assets
+        run: git diff --exit-code -- public/fotos src/assets
       - name: Gate de LocalBusiness unificado no cluster de informática
         run: npm run check:localbusiness-cluster
       - name: JSON-LD validation
         run: npm run validate:jsonld
       - name: JSON-LD gate das 4 páginas P0
-        run: npm run check:jsonld-p0
+        run: node --test scripts/check-jsonld-p0.test.mjs && npm run check:jsonld-p0
       - name: Gate de rich results (LocalBusiness/Service/FAQPage)
         run: npm run check:rich-results:strict
       - name: Paridade JSON-LD × conteúdo visível (FAQPage/Offer/LocalBusiness)

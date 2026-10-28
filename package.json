@@ -223,6 +223,8 @@
     "check:photos": "npm run check:photo-privacy",
     "photos:strip-exif": "node scripts/strip-photo-exif.mjs",
     "photos:optimize": "node scripts/optimize-photos.mjs",
+    "check:photo-variants": "node scripts/check-photo-variants.mjs",
+    "test:photo-variants": "node --test scripts/lib/photo-variants.test.mjs",
     "check:localbusiness-cluster": "node scripts/check-localbusiness-cluster.mjs dist",
     "test:wa-prefill": "playwright test e2e/whatsapp-prefill.spec.ts",
     "check:sem-balcao": "node scripts/check-sem-balcao.mjs",

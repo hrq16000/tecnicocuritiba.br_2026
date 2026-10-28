@@ -5,7 +5,7 @@
  * Rotas: /, /tecnico-informatica-curitiba, /atendimento-domicilio,
  *        /empresa-de-ti-curitiba
  *
- * Valida no HTML estático (dist/):
+ * Valida no HTML pré-renderizado (dist/client/):
  *   1. BreadcrumbList presente (exceto home), com positions 1..n sequenciais,
  *      primeiro item = Início ("/") e último item = a própria URL.
  *   2. Ausência de AggregateRating e de Review/reviews.
@@ -16,12 +16,12 @@
  *      "nº 1", "certificado pela", "atendimento no mesmo dia", "24h").
  *   5. Organization consistente: sempre o mesmo @id institucional.
  *
- * Uso: node scripts/check-jsonld-p0.mjs [dist]
+ * Uso: node scripts/check-jsonld-p0.mjs [dist/client]
  */
 import { readFileSync, existsSync } from "node:fs";
 import { join } from "node:path";
 
-const DIST = process.argv[2] && !process.argv[2].startsWith("--") ? process.argv[2] : "dist";
+const DIST = process.argv[2] && !process.argv[2].startsWith("--") ? process.argv[2] : "dist/client";
 const BASE = "https://tecnico.curitiba.br";
 const ORG_ID = `${BASE}/#organization`;
 const ROUTES = ["/", "/tecnico-informatica-curitiba", "/atendimento-domicilio", "/empresa-de-ti-curitiba"];
