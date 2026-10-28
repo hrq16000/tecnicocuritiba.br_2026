@@ -19,16 +19,16 @@ jobs:
         run: sleep 60
       - name: Run Lighthouse against production (mobile)
         run: |
-          lighthouse https://tecnicocuritiba.com.br/ \
+          lighthouse https://tecnico.curitiba.br/ \
             --output=json --output=html \
             --output-path=./lh-mobile \
-            --form-factor=mobile --quiet --chrome-flags="--headless --no-sandbox" || true
+            --form-factor=mobile --quiet --chrome-flags="--headless --no-sandbox"
       - name: Run Lighthouse against production (desktop)
         run: |
-          lighthouse https://tecnicocuritiba.com.br/ \
+          lighthouse https://tecnico.curitiba.br/ \
             --output=json --output=html \
             --output-path=./lh-desktop \
-            --preset=desktop --quiet --chrome-flags="--headless --no-sandbox" || true
+            --preset=desktop --quiet --chrome-flags="--headless --no-sandbox"
       - name: Compare with baseline
         run: |
           node <<'EOF'
@@ -39,7 +39,7 @@ jobs:
             ? JSON.parse(fs.readFileSync(BASELINE, 'utf8'))
             : { mobile: {}, desktop: {} };
           const readMetrics = (file) => {
-            if (!fs.existsSync(file)) return null;
+            if (!fs.existsSync(file)) throw new Error('Relatório Lighthouse ausente: ' + file);
             const r = JSON.parse(fs.readFileSync(file, 'utf8'));
             const a = r.audits || {};
             return {
@@ -53,6 +53,11 @@ jobs:
             mobile: readMetrics('./lh-mobile.report.json'),
             desktop: readMetrics('./lh-desktop.report.json'),
           };
+          for (const [device, metrics] of Object.entries(current)) {
+            if (metrics.LCP == null || metrics.score == null) {
+              throw new Error('Relatório Lighthouse incompleto para ' + device);
+            }
+          }
           console.log('Atual:', JSON.stringify(current, null, 2));
           console.log('Baseline:', JSON.stringify(baseline, null, 2));
           const regressions = [];
