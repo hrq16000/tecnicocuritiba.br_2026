@@ -87,7 +87,7 @@ jobs:
       - name: JSON-LD validation
         run: npm run validate:jsonld
       - name: JSON-LD gate das 4 páginas P0
-        run: npm run check:jsonld-p0
+        run: node --test scripts/check-jsonld-p0.test.mjs && npm run check:jsonld-p0
       - name: Gate de rich results (LocalBusiness/Service/FAQPage)
         run: npm run check:rich-results:strict
       - name: Paridade JSON-LD × conteúdo visível (FAQPage/Offer/LocalBusiness)
