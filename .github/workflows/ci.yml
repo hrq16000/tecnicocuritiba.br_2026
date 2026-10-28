@@ -101,7 +101,7 @@ jobs:
       - name: Unicidade de title/description (serviço × cidade e blog)
         run: npm run check:meta-uniqueness
       - name: Image sitemap (geração + integridade)
-        run: npm run sitemap:images && npm run check:image-sitemap
+        run: node --test scripts/image-sitemap.test.mjs && npm run sitemap:images && npm run check:image-sitemap
       - name: Licenças e créditos das fotos públicas
         run: npm run check:image-credits
       - name: Relatório público de paridade de FAQ (CSV/MD)
