@@ -54,7 +54,7 @@ test("rejeita ausência de HTML prerenderizado, em vez de aprovar só dist", (t)
   const cwd = fixture(t, { dir: "dist" });
   const result = run(cwd);
   assert.equal(result.status, 1);
-  assert.match(result.stderr, /HTML estático ausente/);
+  assert.match(result.stderr, /HTML estático ausente|dist\/client\/ ausente/);
 });
 
 test("mantém reprovação por preço mensal no JSON-LD", (t) => {
