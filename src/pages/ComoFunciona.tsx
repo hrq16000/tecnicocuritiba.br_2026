@@ -692,7 +692,7 @@ const ComoFunciona = () => {
                     <AccordionTrigger className="text-left font-semibold text-primary hover:text-accent">
                       {item.question}
                     </AccordionTrigger>
-                    <AccordionContent className="text-muted-foreground leading-relaxed">
+                    <AccordionContent forceMount className="text-muted-foreground leading-relaxed">
                       {item.answer}
                     </AccordionContent>
                   </AccordionItem>
