@@ -255,6 +255,7 @@ export const INTERVENCOES = [
     "urlsIndiretas": [],
     "arquivos": [
       "src/routes/problemas.$slug.tsx",
+      "src/routes/procedimentos.$slug.tsx",
       "src/pages/ProblemaPage.tsx",
       "src/lib/problemaPage.functions.ts",
       "src/lib/seo/problemaRouteMeta.ts",
@@ -265,7 +266,7 @@ export const INTERVENCOES = [
     "impacto": {
       "seo": "Mesma metadata nos 189 slugs distintos; ausência continua 404. Arquivo de entrada compartilhado pode mudar em todas as rotas.",
       "internalLinking": "Sem novos links.",
-      "conteudo": "Conteúdo editorial da fonte original passa a ser emitido no servidor em vez do esqueleto vazio. Sem promoção de indexação.",
+      "conteudo": "Problemas e procedimentos usam loader de artigo no servidor em vez do esqueleto vazio. Canonical da hidratação acompanha o path, sem promoção de indexação.",
       "schema": "Sem mudança intencional.",
       "metadata": "Paridade exata com a primeira ocorrência da base original, incluindo 33 slugs repetidos.",
       "lastmod": "Sem promoção artificial de datas.",

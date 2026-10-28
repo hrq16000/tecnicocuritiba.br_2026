@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { AnimatedSection } from "@/components/AnimatedSection";
-import { useParams } from "@/lib/router-compat";
+import { useLocation } from "@/lib/router-compat";
 import { Link } from "@/lib/router-compat";
 import { AlertCircle, MessageCircle, ArrowRight, CheckCircle, Wrench, Shield, Search, TrendingDown, Microscope, Zap, ThermometerSun, Cpu, ClipboardCheck, Truck, ClipboardList } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -18,6 +18,7 @@ import { auditInternalLink } from "@/lib/internalLinkAudit";
 import { useScrollDepthTracking } from "@/hooks/useScrollDepthTracking";
 import { useCtaVisibility } from "@/hooks/useCtaVisibility";
 import { useLoaderData } from "@tanstack/react-router";
+import type { ProblemaPageData } from "@/lib/problemaPagesData";
 import ReactMarkdown from "react-markdown";
 import { IMAGES } from "@/lib/images";
 import { RealImageSection } from "@/components/RealImageSection";
@@ -61,10 +62,10 @@ const diagnosticoSteps = [
 ];
 
 const ProblemaPage = () => {
-  const { slug } = useParams<{ slug: string }>();
-  const data = useLoaderData({ from: "/problemas/$slug" });
+  const { pathname } = useLocation();
+  const data = useLoaderData({ strict: false }) as ProblemaPageData | undefined;
 
-  useCanonical(`https://tecnico.curitiba.br/problemas/${data?.slug ?? slug ?? ""}`);
+  useCanonical(absoluteUrl(pathname));
 
   useEffect(() => {
     if (data) {

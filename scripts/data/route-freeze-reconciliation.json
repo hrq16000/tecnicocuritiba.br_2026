@@ -78,8 +78,17 @@
     },
     "src/routes/procedimentos.$slug.tsx": {
       "before": "c0a27b2c752e944f931f3049088cf320",
-      "after": "5a3c076d6e255519c4f8b39ef8e2dfc1",
-      "note": "Metadados SSR específicos adicionados; política noindex preservada."
+      "after": "0b91d63ad1b44b105e5a784cfa6f6679",
+      "note": "Metadados SSR específicos adicionados; política noindex preservada.",
+      "revisions": [
+        {
+          "sourceCommit": "f3d3a9072740cb1d9611ac21bbbc4782e61bae17",
+          "before": "5a3c076d6e255519c4f8b39ef8e2dfc1",
+          "after": "0b91d63ad1b44b105e5a784cfa6f6679",
+          "intervention": "INT-2026-10-27-002",
+          "reason": "Procedimentos reutiliza loader de artigo no servidor e metadata leve; canonical hidratado acompanha o path real."
+        }
+      ]
     },
     "src/routes/servicos.$servico.$cidade.tsx": {
       "before": "e81544902e3ff7f8c5de8b67434baaa4",

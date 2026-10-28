@@ -13,6 +13,7 @@ describe("índice leve de metadata das páginas de problema", () => {
       expect(getProblemaRouteMeta(slug), slug).toEqual({
         title: full?.title,
         metaDescription: full?.metaDescription,
+        h1: full?.h1,
       });
     }
   });

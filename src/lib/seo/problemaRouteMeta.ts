@@ -3,6 +3,7 @@ import metadata from "@/data/problema-route-meta.generated.json";
 export interface ProblemaRouteMeta {
   title: string;
   metaDescription: string;
+  h1: string;
 }
 
 /** Não importa o corpo editorial para validar a URL ou construir o head. */

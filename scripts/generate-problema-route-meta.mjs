@@ -36,7 +36,7 @@ for (const entry of entries) {
   const slug = text("slug");
   // O componente atual usa Array.find: a primeira ocorrência é a canônica.
   if (metadata.has(slug)) { duplicates += 1; continue; }
-  metadata.set(slug, { title: text("title"), metaDescription: text("metaDescription") });
+  metadata.set(slug, { title: text("title"), metaDescription: text("metaDescription"), h1: text("h1") });
 }
 const next = JSON.stringify(Object.fromEntries(metadata), null, 2) + "\n";
 if (process.argv.includes("--check")) {

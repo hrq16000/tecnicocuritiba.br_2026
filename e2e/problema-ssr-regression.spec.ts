@@ -34,3 +34,23 @@ test("navegação interna carrega outro artigo sem recarregar o documento", asyn
   await expect(page.getByRole("heading", { level: 1 })).toHaveText(expected.h1);
   expect(documentNavigations).toBe(0);
 });
+
+test("procedimento preserva SSR, canonical e conteúdo após hidratar", async ({ page, request }) => {
+  const path = "/procedimentos/computador-nao-liga-curitiba";
+  const response = await request.get(path);
+  expect(response.status()).toBe(200);
+  const html = await response.text();
+  expect(html).toContain("Procedimento técnico:");
+  expect(html).toContain('href="https://tecnico.curitiba.br' + path + '"');
+  expect(html).toMatch(/<h1[\s>]/);
+  await page.goto(path);
+  await page.locator('html[data-hydrated="1"]').waitFor();
+  await expect(page.getByRole("heading", { level: 1 })).toHaveText(
+    getProblemaPageBySlug("computador-nao-liga-curitiba")!.h1,
+  );
+  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute("href", "https://tecnico.curitiba.br" + path);
+});
+
+test("procedimento inexistente continua 404 HTTP", async ({ request }) => {
+  expect((await request.get("/procedimentos/sem-cadastro-regressao72", { maxRedirects: 0 })).status()).toBe(404);
+});
