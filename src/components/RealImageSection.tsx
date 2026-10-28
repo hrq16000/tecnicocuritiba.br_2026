@@ -1,5 +1,6 @@
 import { IMAGES } from "@/lib/images";
 import { SmartImage } from "@/components/motion/SmartImage";
+import { creditFor } from "@/lib/imageCredits";
 
 export type ImageKey = "tecnicoTrabalhando" | "notebookReparo" | "placaMae" | "bancadaTecnica" | "ferramentas" | "atendimentoDomiciliar" | "componentesSsd" | "redesWifi" | "cameraSeguranca" | "diagnostico" | "desktopMontado" | "smartTv" | "suporteRemoto" | "servidores" | "segurancaDigital" | "coletaEntrega" | "clienteSatisfeito" | "microsoldagem" | "estacaoSolda" | "microscopio" | "amplificadorSom";
 
@@ -9,6 +10,27 @@ interface RealImageSectionProps {
   caption?: string;
   secondaryCaption?: string;
   layout?: "single" | "duo";
+}
+
+/**
+ * Créditos da foto vinculados à imagem no HTML inicial e hidratado.
+ * Não atribuir fotos locais ao Unsplash/Pexels sem comprovação.
+ */
+function FigureCaption({ src, caption }: { src: string; caption?: string }) {
+  const remoteLicensed = /^https:\/\/(images\.unsplash\.com|images\.pexels\.com)\//i.test(src);
+  const credit = remoteLicensed ? creditFor(src) : null;
+  if (!caption && !credit) return null;
+  return (
+    <figcaption className="text-xs text-muted-foreground mt-2 text-center italic">
+      {caption && <span>{caption}</span>}
+      {caption && credit && " · "}
+      {credit && (
+        <a href={credit.licenseUrl} target="_blank" rel="noopener noreferrer" className="underline-offset-2 hover:underline">
+          {credit.creditText}
+        </a>
+      )}
+    </figcaption>
+  );
 }
 
 export const RealImageSection = ({
@@ -37,9 +59,7 @@ export const RealImageSection = ({
                 wrapperClassName="rounded-xl shadow-md"
                 className="rounded-xl w-full h-64 md:h-72 object-cover"
               />
-              {caption && (
-                <figcaption className="text-xs text-muted-foreground mt-2 text-center italic">{caption}</figcaption>
-              )}
+              <FigureCaption src={src} caption={caption} />
             </figure>
             <figure>
               <SmartImage
@@ -50,9 +70,7 @@ export const RealImageSection = ({
                 wrapperClassName="rounded-xl shadow-md"
                 className="rounded-xl w-full h-64 md:h-72 object-cover"
               />
-              {secondaryCaption && (
-                <figcaption className="text-xs text-muted-foreground mt-2 text-center italic">{secondaryCaption}</figcaption>
-              )}
+              <FigureCaption src={src2} caption={secondaryCaption} />
             </figure>
           </div>
         </div>
@@ -73,9 +91,7 @@ export const RealImageSection = ({
               wrapperClassName="rounded-xl shadow-md"
               className="rounded-xl w-full h-64 md:h-80 object-cover"
             />
-            {caption && (
-              <figcaption className="text-xs text-muted-foreground mt-2 text-center italic">{caption}</figcaption>
-            )}
+            <FigureCaption src={src} caption={caption} />
           </figure>
         </div>
       </div>
