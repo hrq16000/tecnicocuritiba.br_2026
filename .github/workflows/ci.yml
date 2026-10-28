@@ -5,6 +5,11 @@ on:
     branches: [main]
   pull_request:
 
+# Mantém somente o CI mais recente de cada PR; nunca cancela o CI da main.
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
 jobs:
   build:
     runs-on: ubuntu-latest
