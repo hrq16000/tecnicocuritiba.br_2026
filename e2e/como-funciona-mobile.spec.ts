@@ -18,6 +18,11 @@ test.describe("Como Funciona + modais — CTAs e CLS", () => {
     await expect(primary).toBeEnabled();
     expect(await primary.getAttribute("href")).toContain("wa.me/");
 
+    // GlobalWidgets é client-only: aguardar o botão flutuante demonstra que
+    // o interceptor de links e o modal obrigatório estão montados. Um clique
+    // antes dessa hidratação pode navegar para wa.me sem abrir a triagem.
+    await page.waitForLoadState("networkidle");
+    await expect(page.getByTestId("whatsapp-float")).toBeVisible({ timeout: 15000 });
     await primary.click();
     const triage = page.getByRole("dialog").filter({ hasText: /Triagem antes do atendimento/i });
     await expect(triage).toBeVisible({ timeout: 10000 });
