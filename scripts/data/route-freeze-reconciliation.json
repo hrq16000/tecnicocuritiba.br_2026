@@ -871,6 +871,20 @@
           "reason": "Reduzir trabalho contínuo de blur/composição em viewport mobile; medir no Lighthouse sem mudar SEO ou política comercial."
         }
       ]
+    },
+    "src/components/servico/Blocos3T.tsx": {
+      "before": "9fa0fffabce8847eb879499778fbaefc",
+      "after": "4dd47785a84732df062cfabdc1d2e656",
+      "note": "A tabela horizontal da matriz empresarial passa a ser região rotulada e focável via teclado (mobile e desktop), sem alterações de conteúdo ou layout.",
+      "revisions": [
+        {
+          "sourceCommit": "PR-79",
+          "before": "9fa0fffabce8847eb879499778fbaefc",
+          "after": "4dd47785a84732df062cfabdc1d2e656",
+          "intervention": "PR-79",
+          "reason": "Corrige axe serious scrollable-region-focusable no mobile 360px da página manutenção preventiva empresas."
+        }
+      ]
     }
   },
   "historicalReviews": [
