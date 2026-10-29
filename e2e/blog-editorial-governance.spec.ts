@@ -157,7 +157,7 @@ test.describe("Sitemaps (fail-closed)", () => {
       const fp = resolve(publicDir, name);
       expect(existsSync(fp), `sitemap ativo ausente: ${name}`).toBe(true);
       const xml = readFileSync(fp, "utf8");
-      const urls = Array.from(xml.matchAll(/<loc>([^<]+)<\\/loc>/g), (m) => m[1]);
+      const urls = Array.from(xml.matchAll(new RegExp("<loc>([^<]+)</loc>", "g")), (m) => m[1]);
       const allowed = new Set(entries.map((entry: { path: string }) => `${BASE_URL}${entry.path}`));
       expect(new Set(urls).size, `URLs repetidas em ${name}`).toBe(urls.length);
       for (const url of urls) {
