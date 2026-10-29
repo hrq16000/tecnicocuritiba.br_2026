@@ -829,6 +829,20 @@
       "lastSourceChangedAt": "2026-08-25T08:53:04Z",
       "reviewedAt": "2026-10-28",
       "review": "HISTORICAL-DRIFT-PR79-20261028"
+    },
+    "src/components/WhatsAppFloat.tsx": {
+      "before": "3641f104b8dadc40c62c223156d11b75",
+      "after": "16e036528ad291a8b7fc97c8c414163c",
+      "note": "PR #79: botão flutuante mantém abertura obrigatória do funil, CTA e rastreamento, mas deixa de usar escala animada infinita que impedia o toque estável (mobile/E2E).",
+      "revisions": [
+        {
+          "sourceCommit": "PR-79",
+          "before": "3641f104b8dadc40c62c223156d11b75",
+          "after": "16e036528ad291a8b7fc97c8c414163c",
+          "intervention": "PR-79",
+          "reason": "Corrigir instabilidade real de clique sem alterar destinatário, mensagem, SEO ou conversão."
+        }
+      ]
     }
   },
   "historicalReviews": [

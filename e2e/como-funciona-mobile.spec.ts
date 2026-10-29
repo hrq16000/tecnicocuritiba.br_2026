@@ -2,7 +2,10 @@ import { test, expect, devices } from "@playwright/test";
 
 const BASE = process.env.E2E_BASE_URL || "http://localhost:8080";
 
-test.use({ ...devices["iPhone 13"] });
+// Simula iPhone no navegador do projeto (Chromium no gate obrigatório).
+// Não importar defaultBrowserType=webkit: o runner rápido instala Chromium.
+const { viewport, deviceScaleFactor, isMobile, hasTouch, userAgent } = devices["iPhone 13"];
+test.use({ viewport, deviceScaleFactor, isMobile, hasTouch, userAgent });
 
 test.describe("Como Funciona + modais — CTAs e CLS", () => {
   test("CTAs WhatsApp permanecem clicáveis e sem links tel:", async ({ page }) => {

@@ -107,13 +107,24 @@ test.describe("Triagem V5 — funil ramificado por equipamento", () => {
     expect(opened?.payload.app_version).toBeTruthy();
   });
 
-  test("GA4 dispara wa_funnel_open com UTM payload", async ({ page }) => {
+  test("GA4 registra wa_funnel_open com UTM no dataLayer sob Consent Mode v2", async ({ page }) => {
     await page.goto(`${HOME}${UTM_QS}`);
     await page.waitForLoadState("networkidle");
     await openFunnel(page);
-    const calls = await page.evaluate(() => (window as unknown as { __gtagCalls: unknown[][] }).__gtagCalls);
-    const open = calls.find((c) => c[0] === "event" && c[1] === "wa_funnel_open");
-    expect(open).toBeTruthy();
+    // O bootstrap oficial substitui o espião gtag; a fonte real é o dataLayer.
+    // Não depende de envio à rede enquanto o consentimento está negado.
+    const open = await page.evaluate(() => {
+      const layer = (window as unknown as { dataLayer?: ArrayLike<unknown>[] }).dataLayer || [];
+      return layer
+        .map((entry) => Array.from(entry))
+        .find((args) => args[0] === "event" && args[1] === "wa_funnel_open");
+    });
+    expect(open, "evento de abertura deve ser enfileirado no dataLayer").toBeTruthy();
+    expect(open?.[2]).toMatchObject({
+      utm_source: "ci",
+      utm_campaign: "triage_v5_e2e",
+      click_location: "test",
+    });
   });
 
   test("link 'Termos e Condições' resolve a rota pública /termos-e-condicoes", async ({ page }) => {
