@@ -24,6 +24,9 @@ test.describe("Como Funciona + modais — CTAs e CLS", () => {
     await page.waitForLoadState("networkidle");
     await expect(page.getByTestId("whatsapp-float")).toBeVisible({ timeout: 15000 });
     await primary.click();
+    // O CTA deve permanecer na rota até a triagem obrigatória abrir — não
+    // escapar para wa.me antes de o usuário informar o equipamento.
+    await expect(page).toHaveURL(/\/como-funciona(?:[?#]|$)/);
     const triage = page.getByRole("dialog").filter({ hasText: /Triagem antes do atendimento/i });
     await expect(triage).toBeVisible({ timeout: 10000 });
     await expect(triage.getByText(/Triagem antes do atendimento/i)).toBeVisible();
