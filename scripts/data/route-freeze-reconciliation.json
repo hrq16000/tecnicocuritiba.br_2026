@@ -111,8 +111,8 @@
     },
     "src/routes/servicos.suporte-tecnico-empresarial.tsx": {
       "before": "1d57ac8b0f472fb5f783a76d0a5ea04d",
-      "after": "d864e92b3c2404e16c7cf334922afbd3",
-      "note": "Carregamento sob demanda do componente da rota de serviço, preservando metadata SSR, conteúdo, políticas comerciais e funil.",
+      "after": "dc5806340758d6d03036e9624eba1266",
+      "note": "Componente visual do serviço importado sob demanda via TanStack Router com createElement (sem JSX no módulo virtual); SSR/SEO e conteúdo comercial preservados.",
       "revisions": [
         {
           "sourceCommit": "PR-79",
@@ -120,6 +120,13 @@
           "after": "d864e92b3c2404e16c7cf334922afbd3",
           "intervention": "PR-79",
           "reason": "Reduzir dependências pesadas do bundle compartilhado via lazyRouteComponent; verificar SSR, E2E e Lighthouse antes do merge."
+        },
+        {
+          "sourceCommit": "PR-79",
+          "before": "d864e92b3c2404e16c7cf334922afbd3",
+          "after": "dc5806340758d6d03036e9624eba1266",
+          "intervention": "PR-79",
+          "reason": "Evitar erro JSX no virtual module tanstack-router: usar createElement(ServicoCore, {slug}) no loader lazy mantendo SSR, SEO e CTAs."
         }
       ]
     },
@@ -852,13 +859,29 @@
     },
     "src/routes/servicos.conserto-impressora-3d.tsx": {
       "added": true,
-      "after": "b9c7da26d5a2192f2e0561688c17f314",
-      "note": "Integração histórica da impressora 3D à ficha, triagem e catálogo; política de enriquecimento continua fail-closed sem prova visual aprovada. Valores existentes não são modificados nesta reconciliação.",
+      "after": "fb5348ba8ce054d7d822aed86145780a",
+      "note": "Componente visual do serviço importado sob demanda via TanStack Router com createElement (sem JSX no módulo virtual); SSR/SEO e conteúdo comercial preservados.",
       "sourceCommit": "a0c4604015812aa75e00f86e4d0715e74c57b764",
       "lastSourceCommit": "990b743ab70f05c415578d5f11a38dc57e493a32",
       "lastSourceChangedAt": "2026-08-25T08:53:04Z",
       "reviewedAt": "2026-10-28",
-      "review": "HISTORICAL-DRIFT-PR79-20261028"
+      "review": "HISTORICAL-DRIFT-PR79-20261028",
+      "revisions": [
+        {
+          "sourceCommit": "e8d8a5a92d0514754d5829a5d89e71dd2ecc98ad",
+          "before": "b9c7da26d5a2192f2e0561688c17f314",
+          "after": "cffa9baa76cd5e70db4aa805f1186cd7",
+          "intervention": "PR-79",
+          "reason": "Registrar lazyRouteComponent anterior no caminho não protegido do Freeze V2."
+        },
+        {
+          "sourceCommit": "PR-79",
+          "before": "cffa9baa76cd5e70db4aa805f1186cd7",
+          "after": "fb5348ba8ce054d7d822aed86145780a",
+          "intervention": "PR-79",
+          "reason": "Evitar erro JSX no virtual module tanstack-router: usar createElement(ServicoCore, {slug}) no loader lazy mantendo SSR, SEO e CTAs."
+        }
+      ]
     },
     "src/components/WhatsAppFloat.tsx": {
       "before": "3641f104b8dadc40c62c223156d11b75",
@@ -932,8 +955,8 @@
     },
     "src/routes/servicos.backup-para-empresas.tsx": {
       "before": "cc4645c32189a8c3aabb940b4d9cab37",
-      "after": "9e0453dd1ba7a58ff0951a7e5a529bce",
-      "note": "Carregamento sob demanda do componente da rota de serviço, preservando metadata SSR, conteúdo, políticas comerciais e funil.",
+      "after": "c2b2d6a5edadf731475fb224cfe01b0e",
+      "note": "Componente visual do serviço importado sob demanda via TanStack Router com createElement (sem JSX no módulo virtual); SSR/SEO e conteúdo comercial preservados.",
       "revisions": [
         {
           "sourceCommit": "PR-79",
@@ -941,13 +964,20 @@
           "after": "9e0453dd1ba7a58ff0951a7e5a529bce",
           "intervention": "PR-79",
           "reason": "Reduzir dependências pesadas do bundle compartilhado via lazyRouteComponent; verificar SSR, E2E e Lighthouse antes do merge."
+        },
+        {
+          "sourceCommit": "PR-79",
+          "before": "9e0453dd1ba7a58ff0951a7e5a529bce",
+          "after": "c2b2d6a5edadf731475fb224cfe01b0e",
+          "intervention": "PR-79",
+          "reason": "Evitar erro JSX no virtual module tanstack-router: usar createElement(ServicoCore, {slug}) no loader lazy mantendo SSR, SEO e CTAs."
         }
       ]
     },
     "src/routes/servicos.conserto-monitor.tsx": {
       "before": "cd6a9e571d4b9de5361253c64ad0ba2f",
-      "after": "e5e17470028c43f041b8c5419917d0b5",
-      "note": "Carregamento sob demanda do componente da rota de serviço, preservando metadata SSR, conteúdo, políticas comerciais e funil.",
+      "after": "c1e26cdb8bd2722abfd6de0a1374eb18",
+      "note": "Componente visual do serviço importado sob demanda via TanStack Router com createElement (sem JSX no módulo virtual); SSR/SEO e conteúdo comercial preservados.",
       "revisions": [
         {
           "sourceCommit": "PR-79",
@@ -955,13 +985,20 @@
           "after": "e5e17470028c43f041b8c5419917d0b5",
           "intervention": "PR-79",
           "reason": "Reduzir dependências pesadas do bundle compartilhado via lazyRouteComponent; verificar SSR, E2E e Lighthouse antes do merge."
+        },
+        {
+          "sourceCommit": "PR-79",
+          "before": "e5e17470028c43f041b8c5419917d0b5",
+          "after": "c1e26cdb8bd2722abfd6de0a1374eb18",
+          "intervention": "PR-79",
+          "reason": "Evitar erro JSX no virtual module tanstack-router: usar createElement(ServicoCore, {slug}) no loader lazy mantendo SSR, SEO e CTAs."
         }
       ]
     },
     "src/routes/servicos.conserto-placa.tsx": {
       "before": "3fc835b4c3adc56b54aec9977f69734a",
-      "after": "3ba1c0aec77887f99089e19da613fa14",
-      "note": "Carregamento sob demanda do componente da rota de serviço, preservando metadata SSR, conteúdo, políticas comerciais e funil.",
+      "after": "650a50bbe6f74b1dd4c9fa2fd48d9841",
+      "note": "Componente visual do serviço importado sob demanda via TanStack Router com createElement (sem JSX no módulo virtual); SSR/SEO e conteúdo comercial preservados.",
       "revisions": [
         {
           "sourceCommit": "PR-79",
@@ -969,13 +1006,20 @@
           "after": "3ba1c0aec77887f99089e19da613fa14",
           "intervention": "PR-79",
           "reason": "Reduzir dependências pesadas do bundle compartilhado via lazyRouteComponent; verificar SSR, E2E e Lighthouse antes do merge."
+        },
+        {
+          "sourceCommit": "PR-79",
+          "before": "3ba1c0aec77887f99089e19da613fa14",
+          "after": "650a50bbe6f74b1dd4c9fa2fd48d9841",
+          "intervention": "PR-79",
+          "reason": "Evitar erro JSX no virtual module tanstack-router: usar createElement(ServicoCore, {slug}) no loader lazy mantendo SSR, SEO e CTAs."
         }
       ]
     },
     "src/routes/servicos.conserto-tv.tsx": {
       "before": "584af24d45da68329159bd6a05622049",
-      "after": "5c8943663dc7b57db543ba407757a22c",
-      "note": "Carregamento sob demanda do componente da rota de serviço, preservando metadata SSR, conteúdo, políticas comerciais e funil.",
+      "after": "227e7abc1309c5fc3cd731b78e9f5f6d",
+      "note": "Componente visual do serviço importado sob demanda via TanStack Router com createElement (sem JSX no módulo virtual); SSR/SEO e conteúdo comercial preservados.",
       "revisions": [
         {
           "sourceCommit": "PR-79",
@@ -983,13 +1027,20 @@
           "after": "5c8943663dc7b57db543ba407757a22c",
           "intervention": "PR-79",
           "reason": "Reduzir dependências pesadas do bundle compartilhado via lazyRouteComponent; verificar SSR, E2E e Lighthouse antes do merge."
+        },
+        {
+          "sourceCommit": "PR-79",
+          "before": "5c8943663dc7b57db543ba407757a22c",
+          "after": "227e7abc1309c5fc3cd731b78e9f5f6d",
+          "intervention": "PR-79",
+          "reason": "Evitar erro JSX no virtual module tanstack-router: usar createElement(ServicoCore, {slug}) no loader lazy mantendo SSR, SEO e CTAs."
         }
       ]
     },
     "src/routes/servicos.formatacao.tsx": {
       "before": "91de645f4ec79d22cbd115e97a482339",
-      "after": "28c4971018370f9f4773e3d7d79c9851",
-      "note": "Carregamento sob demanda do componente da rota de serviço, preservando metadata SSR, conteúdo, políticas comerciais e funil.",
+      "after": "3ffcde36b6f3a7c8c6ca0cde91cee537",
+      "note": "Componente visual do serviço importado sob demanda via TanStack Router com createElement (sem JSX no módulo virtual); SSR/SEO e conteúdo comercial preservados.",
       "revisions": [
         {
           "sourceCommit": "PR-79",
@@ -997,13 +1048,20 @@
           "after": "28c4971018370f9f4773e3d7d79c9851",
           "intervention": "PR-79",
           "reason": "Reduzir dependências pesadas do bundle compartilhado via lazyRouteComponent; verificar SSR, E2E e Lighthouse antes do merge."
+        },
+        {
+          "sourceCommit": "PR-79",
+          "before": "28c4971018370f9f4773e3d7d79c9851",
+          "after": "3ffcde36b6f3a7c8c6ca0cde91cee537",
+          "intervention": "PR-79",
+          "reason": "Evitar erro JSX no virtual module tanstack-router: usar createElement(ServicoCore, {slug}) no loader lazy mantendo SSR, SEO e CTAs."
         }
       ]
     },
     "src/routes/servicos.manutencao-de-computador.tsx": {
       "before": "ded784b01fa7cc9d7a9c7cb11bbce99b",
-      "after": "aa3a7e52fecba567182f96349c9e9949",
-      "note": "Carregamento sob demanda do componente da rota de serviço, preservando metadata SSR, conteúdo, políticas comerciais e funil.",
+      "after": "f82631b5af9b2f4689d7e3fe3739b543",
+      "note": "Componente visual do serviço importado sob demanda via TanStack Router com createElement (sem JSX no módulo virtual); SSR/SEO e conteúdo comercial preservados.",
       "revisions": [
         {
           "sourceCommit": "PR-79",
@@ -1011,13 +1069,20 @@
           "after": "aa3a7e52fecba567182f96349c9e9949",
           "intervention": "PR-79",
           "reason": "Reduzir dependências pesadas do bundle compartilhado via lazyRouteComponent; verificar SSR, E2E e Lighthouse antes do merge."
+        },
+        {
+          "sourceCommit": "PR-79",
+          "before": "aa3a7e52fecba567182f96349c9e9949",
+          "after": "f82631b5af9b2f4689d7e3fe3739b543",
+          "intervention": "PR-79",
+          "reason": "Evitar erro JSX no virtual module tanstack-router: usar createElement(ServicoCore, {slug}) no loader lazy mantendo SSR, SEO e CTAs."
         }
       ]
     },
     "src/routes/servicos.manutencao-de-notebook.tsx": {
       "before": "926261ed16471b2cb1400ccbe06b3f05",
-      "after": "754568b61b81f2d9428301ba9b4fa3ff",
-      "note": "Carregamento sob demanda do componente da rota de serviço, preservando metadata SSR, conteúdo, políticas comerciais e funil.",
+      "after": "e1a72d4f80e8943001c9b8f01d0b3cfc",
+      "note": "Componente visual do serviço importado sob demanda via TanStack Router com createElement (sem JSX no módulo virtual); SSR/SEO e conteúdo comercial preservados.",
       "revisions": [
         {
           "sourceCommit": "PR-79",
@@ -1025,13 +1090,20 @@
           "after": "754568b61b81f2d9428301ba9b4fa3ff",
           "intervention": "PR-79",
           "reason": "Reduzir dependências pesadas do bundle compartilhado via lazyRouteComponent; verificar SSR, E2E e Lighthouse antes do merge."
+        },
+        {
+          "sourceCommit": "PR-79",
+          "before": "754568b61b81f2d9428301ba9b4fa3ff",
+          "after": "e1a72d4f80e8943001c9b8f01d0b3cfc",
+          "intervention": "PR-79",
+          "reason": "Evitar erro JSX no virtual module tanstack-router: usar createElement(ServicoCore, {slug}) no loader lazy mantendo SSR, SEO e CTAs."
         }
       ]
     },
     "src/routes/servicos.manutencao-preventiva-empresas.tsx": {
       "before": "8259d76741858ad6ef7f618863e4390f",
-      "after": "1011d8783bdea9ae7172624d7b67e2eb",
-      "note": "Carregamento sob demanda do componente da rota de serviço, preservando metadata SSR, conteúdo, políticas comerciais e funil.",
+      "after": "9d792d2a553d8d26282e34a7444f7c4e",
+      "note": "Componente visual do serviço importado sob demanda via TanStack Router com createElement (sem JSX no módulo virtual); SSR/SEO e conteúdo comercial preservados.",
       "revisions": [
         {
           "sourceCommit": "PR-79",
@@ -1039,13 +1111,20 @@
           "after": "1011d8783bdea9ae7172624d7b67e2eb",
           "intervention": "PR-79",
           "reason": "Reduzir dependências pesadas do bundle compartilhado via lazyRouteComponent; verificar SSR, E2E e Lighthouse antes do merge."
+        },
+        {
+          "sourceCommit": "PR-79",
+          "before": "1011d8783bdea9ae7172624d7b67e2eb",
+          "after": "9d792d2a553d8d26282e34a7444f7c4e",
+          "intervention": "PR-79",
+          "reason": "Evitar erro JSX no virtual module tanstack-router: usar createElement(ServicoCore, {slug}) no loader lazy mantendo SSR, SEO e CTAs."
         }
       ]
     },
     "src/routes/servicos.montagem-de-pc.tsx": {
       "before": "4f2319708b63e388faddf6c184170691",
-      "after": "977a4df035487da726719dc8c5c8ab90",
-      "note": "Carregamento sob demanda do componente da rota de serviço, preservando metadata SSR, conteúdo, políticas comerciais e funil.",
+      "after": "2848305b5d2bf02b04db88686e4858d6",
+      "note": "Componente visual do serviço importado sob demanda via TanStack Router com createElement (sem JSX no módulo virtual); SSR/SEO e conteúdo comercial preservados.",
       "revisions": [
         {
           "sourceCommit": "PR-79",
@@ -1053,13 +1132,20 @@
           "after": "977a4df035487da726719dc8c5c8ab90",
           "intervention": "PR-79",
           "reason": "Reduzir dependências pesadas do bundle compartilhado via lazyRouteComponent; verificar SSR, E2E e Lighthouse antes do merge."
+        },
+        {
+          "sourceCommit": "PR-79",
+          "before": "977a4df035487da726719dc8c5c8ab90",
+          "after": "2848305b5d2bf02b04db88686e4858d6",
+          "intervention": "PR-79",
+          "reason": "Evitar erro JSX no virtual module tanstack-router: usar createElement(ServicoCore, {slug}) no loader lazy mantendo SSR, SEO e CTAs."
         }
       ]
     },
     "src/routes/servicos.recuperacao-de-dados.tsx": {
       "before": "3b43f37dc1ee417e0bb47bfd0a9a903a",
-      "after": "d8ce4d445a21f08957e9f1a758383b3c",
-      "note": "Carregamento sob demanda do componente da rota de serviço, preservando metadata SSR, conteúdo, políticas comerciais e funil.",
+      "after": "761c27fc8d7bf1f37ccbefc2661be57b",
+      "note": "Componente visual do serviço importado sob demanda via TanStack Router com createElement (sem JSX no módulo virtual); SSR/SEO e conteúdo comercial preservados.",
       "revisions": [
         {
           "sourceCommit": "PR-79",
@@ -1067,13 +1153,20 @@
           "after": "d8ce4d445a21f08957e9f1a758383b3c",
           "intervention": "PR-79",
           "reason": "Reduzir dependências pesadas do bundle compartilhado via lazyRouteComponent; verificar SSR, E2E e Lighthouse antes do merge."
+        },
+        {
+          "sourceCommit": "PR-79",
+          "before": "d8ce4d445a21f08957e9f1a758383b3c",
+          "after": "761c27fc8d7bf1f37ccbefc2661be57b",
+          "intervention": "PR-79",
+          "reason": "Evitar erro JSX no virtual module tanstack-router: usar createElement(ServicoCore, {slug}) no loader lazy mantendo SSR, SEO e CTAs."
         }
       ]
     },
     "src/routes/servicos.redes-e-wifi.tsx": {
       "before": "1a8712bfacf158ffedfa1b5b578090b1",
-      "after": "f98954afddc330efcaf290bbd1bb91c8",
-      "note": "Carregamento sob demanda do componente da rota de serviço, preservando metadata SSR, conteúdo, políticas comerciais e funil.",
+      "after": "564440111fae7076f4ec3dc8afc8292d",
+      "note": "Componente visual do serviço importado sob demanda via TanStack Router com createElement (sem JSX no módulo virtual); SSR/SEO e conteúdo comercial preservados.",
       "revisions": [
         {
           "sourceCommit": "PR-79",
@@ -1081,13 +1174,20 @@
           "after": "f98954afddc330efcaf290bbd1bb91c8",
           "intervention": "PR-79",
           "reason": "Reduzir dependências pesadas do bundle compartilhado via lazyRouteComponent; verificar SSR, E2E e Lighthouse antes do merge."
+        },
+        {
+          "sourceCommit": "PR-79",
+          "before": "f98954afddc330efcaf290bbd1bb91c8",
+          "after": "564440111fae7076f4ec3dc8afc8292d",
+          "intervention": "PR-79",
+          "reason": "Evitar erro JSX no virtual module tanstack-router: usar createElement(ServicoCore, {slug}) no loader lazy mantendo SSR, SEO e CTAs."
         }
       ]
     },
     "src/routes/servicos.remocao-de-virus.tsx": {
       "before": "0c18ea1129c7834c05c2baa026b0ea65",
-      "after": "5aaa944049049192a04dc51683464a75",
-      "note": "Carregamento sob demanda do componente da rota de serviço, preservando metadata SSR, conteúdo, políticas comerciais e funil.",
+      "after": "3746e17d97acddc94148e926045ac91b",
+      "note": "Componente visual do serviço importado sob demanda via TanStack Router com createElement (sem JSX no módulo virtual); SSR/SEO e conteúdo comercial preservados.",
       "revisions": [
         {
           "sourceCommit": "PR-79",
@@ -1095,13 +1195,20 @@
           "after": "5aaa944049049192a04dc51683464a75",
           "intervention": "PR-79",
           "reason": "Reduzir dependências pesadas do bundle compartilhado via lazyRouteComponent; verificar SSR, E2E e Lighthouse antes do merge."
+        },
+        {
+          "sourceCommit": "PR-79",
+          "before": "5aaa944049049192a04dc51683464a75",
+          "after": "3746e17d97acddc94148e926045ac91b",
+          "intervention": "PR-79",
+          "reason": "Evitar erro JSX no virtual module tanstack-router: usar createElement(ServicoCore, {slug}) no loader lazy mantendo SSR, SEO e CTAs."
         }
       ]
     },
     "src/routes/servicos.suporte-home-office.tsx": {
       "before": "04ebed52f7c5fb0e2516696767c9317e",
-      "after": "5647bee6ae118ea28c3b39e0b5181883",
-      "note": "Carregamento sob demanda do componente da rota de serviço, preservando metadata SSR, conteúdo, políticas comerciais e funil.",
+      "after": "32d1628aa1a86261349a436fdf2207bd",
+      "note": "Componente visual do serviço importado sob demanda via TanStack Router com createElement (sem JSX no módulo virtual); SSR/SEO e conteúdo comercial preservados.",
       "revisions": [
         {
           "sourceCommit": "PR-79",
@@ -1109,13 +1216,20 @@
           "after": "5647bee6ae118ea28c3b39e0b5181883",
           "intervention": "PR-79",
           "reason": "Reduzir dependências pesadas do bundle compartilhado via lazyRouteComponent; verificar SSR, E2E e Lighthouse antes do merge."
+        },
+        {
+          "sourceCommit": "PR-79",
+          "before": "5647bee6ae118ea28c3b39e0b5181883",
+          "after": "32d1628aa1a86261349a436fdf2207bd",
+          "intervention": "PR-79",
+          "reason": "Evitar erro JSX no virtual module tanstack-router: usar createElement(ServicoCore, {slug}) no loader lazy mantendo SSR, SEO e CTAs."
         }
       ]
     },
     "src/routes/servicos.upgrade-ssd-ram.tsx": {
       "before": "66bcb96a6de1747ea8a6fed51664d720",
-      "after": "fb5c973a31d023a6daa02ed0d9949302",
-      "note": "Carregamento sob demanda do componente da rota de serviço, preservando metadata SSR, conteúdo, políticas comerciais e funil.",
+      "after": "83cafc8e7abb12f3d9d199e9c7b21437",
+      "note": "Componente visual do serviço importado sob demanda via TanStack Router com createElement (sem JSX no módulo virtual); SSR/SEO e conteúdo comercial preservados.",
       "revisions": [
         {
           "sourceCommit": "PR-79",
@@ -1123,6 +1237,13 @@
           "after": "fb5c973a31d023a6daa02ed0d9949302",
           "intervention": "PR-79",
           "reason": "Reduzir dependências pesadas do bundle compartilhado via lazyRouteComponent; verificar SSR, E2E e Lighthouse antes do merge."
+        },
+        {
+          "sourceCommit": "PR-79",
+          "before": "fb5c973a31d023a6daa02ed0d9949302",
+          "after": "83cafc8e7abb12f3d9d199e9c7b21437",
+          "intervention": "PR-79",
+          "reason": "Evitar erro JSX no virtual module tanstack-router: usar createElement(ServicoCore, {slug}) no loader lazy mantendo SSR, SEO e CTAs."
         }
       ]
     }

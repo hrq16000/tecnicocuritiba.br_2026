@@ -1,4 +1,5 @@
 import { createFileRoute, lazyRouteComponent } from "@tanstack/react-router";
+import { createElement } from "react";
 import { seoHead } from "@/lib/seo/routeHead";
 import { isNoindexByEnrichment } from "@/lib/enrichmentStatus";
 import { SERVICOS_CORE } from "@/lib/servicosCore";
@@ -19,7 +20,7 @@ export const Route = createFileRoute("/servicos/conserto-impressora-3d")({
     }),
   component: lazyRouteComponent(() =>
     import("@/pages/servicos/ServicoCore").then(({ default: ServicoCore }) => ({
-      default: () => <ServicoCore slug="conserto-impressora-3d" />,
+      default: () => createElement(ServicoCore, { slug: "conserto-impressora-3d" }),
     })),
   ),
 });

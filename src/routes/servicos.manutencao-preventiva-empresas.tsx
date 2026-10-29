@@ -1,4 +1,5 @@
 import { createFileRoute, lazyRouteComponent } from "@tanstack/react-router";
+import { createElement } from "react";
 import { seoHead } from "@/lib/seo/routeHead";
 // HTML e metadata permanecem SSR; só o módulo visual é carregado por rota.
 
@@ -62,7 +63,7 @@ export const Route = createFileRoute("/servicos/manutencao-preventiva-empresas")
   /* seo:auto-end */
   component: lazyRouteComponent(() =>
     import("@/pages/servicos/ServicoCore").then(({ default: ServicoCore }) => ({
-      default: () => <ServicoCore slug="manutencao-preventiva-empresas" />,
+      default: () => createElement(ServicoCore, { slug: "manutencao-preventiva-empresas" }),
     })),
   ),
 });

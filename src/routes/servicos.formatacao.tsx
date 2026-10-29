@@ -1,4 +1,5 @@
 import { createFileRoute, lazyRouteComponent } from "@tanstack/react-router";
+import { createElement } from "react";
 import { seoHead } from "@/lib/seo/routeHead";
 // O corpo do serviço é importado na navegação, mantendo o head no SSR.
 
@@ -54,7 +55,7 @@ export const Route = createFileRoute("/servicos/formatacao")({
   /* seo:auto-end */
   component: lazyRouteComponent(() =>
     import("@/pages/servicos/ServicoCore").then(({ default: ServicoCore }) => ({
-      default: () => <ServicoCore slug="formatacao" />,
+      default: () => createElement(ServicoCore, { slug: "formatacao" }),
     })),
   ),
 });
