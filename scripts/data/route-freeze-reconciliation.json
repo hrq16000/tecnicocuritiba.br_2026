@@ -8,8 +8,8 @@
   "files": {
     "src/routes/__root.tsx": {
       "before": "67cde857336531ad4af5aa038bab6541",
-      "after": "c03636ffb13c515d38a8985eedc52f95",
-      "note": "Mantém metadados anteriores e antecipa ativação da folha de fontes externas ao DOMContentLoaded, sem alterar famílias nem critérios de qualidade.",
+      "after": "70d6e2cc2d537a0f0a5d8990bf8e93e5",
+      "note": "Metadados e fontes preservados. A biblioteca externa gtag das duas páginas empresariais é carregada até 3s ou ao primeiro gesto, mantendo o dataLayer ativo desde o início.",
       "revisions": [
         {
           "sourceCommit": "82c7fd7542347e55320947ec27d8f4a0e6f0f86f",
@@ -24,6 +24,13 @@
           "after": "c03636ffb13c515d38a8985eedc52f95",
           "intervention": "PR-79",
           "reason": "Fontes Rajdhani/Sora continuam iguais, mas stylesheet é ativada em DOMContentLoaded para evitar repintura tardia no evento window.load e reduzir LCP."
+        },
+        {
+          "sourceCommit": "PR-79",
+          "before": "c03636ffb13c515d38a8985eedc52f95",
+          "after": "70d6e2cc2d537a0f0a5d8990bf8e93e5",
+          "intervention": "PR-79",
+          "reason": "Nas rotas /empresas e /empresa-de-ti-curitiba, postergar somente a biblioteca externa gtag até 3 s ou primeiro gesto; dataLayer e Consent Mode v2 permanecem síncronos, preservando coleta de eventos e opção de consentimento."
         }
       ]
     },
