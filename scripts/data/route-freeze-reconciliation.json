@@ -8,8 +8,8 @@
   "files": {
     "src/routes/__root.tsx": {
       "before": "67cde857336531ad4af5aa038bab6541",
-      "after": "c54d13eda7370255ce5e0c5e4de40f18",
-      "note": "Título e descrições de fallback separados dos metadados da home.",
+      "after": "c03636ffb13c515d38a8985eedc52f95",
+      "note": "Mantém metadados anteriores e antecipa ativação da folha de fontes externas ao DOMContentLoaded, sem alterar famílias nem critérios de qualidade.",
       "revisions": [
         {
           "sourceCommit": "82c7fd7542347e55320947ec27d8f4a0e6f0f86f",
@@ -17,6 +17,13 @@
           "after": "c54d13eda7370255ce5e0c5e4de40f18",
           "intervention": "INT-2026-10-27-001",
           "reason": "Remover promessa de atendimento no mesmo dia do alt OpenGraph, sem alterar title/description/canonical/robots."
+        },
+        {
+          "sourceCommit": "PR-79",
+          "before": "c54d13eda7370255ce5e0c5e4de40f18",
+          "after": "c03636ffb13c515d38a8985eedc52f95",
+          "intervention": "PR-79",
+          "reason": "Fontes Rajdhani/Sora continuam iguais, mas stylesheet é ativada em DOMContentLoaded para evitar repintura tardia no evento window.load e reduzir LCP."
         }
       ]
     },

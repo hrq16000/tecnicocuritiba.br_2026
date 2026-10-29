@@ -64,7 +64,7 @@ const GOOGLE_FONTS_HREF =
   "https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Sora:wght@400;500;600;700&display=swap";
 
 /** Promove o preload das webfonts para stylesheet sem bloquear o primeiro paint. */
-const FONTS_SWAP_SNIPPET = `(function(){var h=${JSON.stringify(GOOGLE_FONTS_HREF)};function p(){var l=document.querySelector('link[rel="preload"][href="'+h+'"]');if(l){l.rel="stylesheet";return;}var n=document.createElement("link");n.rel="stylesheet";n.href=h;document.head.appendChild(n);}if(document.readyState==="complete"){p();}else{window.addEventListener("load",p,{once:true});}})();`;
+const FONTS_SWAP_SNIPPET = `(function(){var h=${JSON.stringify(GOOGLE_FONTS_HREF)};function p(){var l=document.querySelector('link[rel="preload"][href="'+h+'"]');if(l){l.rel="stylesheet";return;}var n=document.createElement("link");n.rel="stylesheet";n.href=h;document.head.appendChild(n);}if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",p,{once:true});}else{p();}})();`;
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   beforeLoad: ({ location }) => {
