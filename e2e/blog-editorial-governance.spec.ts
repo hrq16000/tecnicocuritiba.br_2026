@@ -149,14 +149,21 @@ test.describe("Sitemaps (fail-closed)", () => {
     }
   });
 
-  test("sitemap principal = 33 URLs comerciais", () => {
-    const active = ["sitemap-main.xml", "sitemap-servicos.xml", "sitemap-regioes.xml", "sitemap-bairros.xml"];
-    let total = 0;
-    for (const f of active) {
-      const fp = resolve(publicDir, f);
-      if (existsSync(fp)) total += (readFileSync(fp, "utf8").match(/<loc>/gi) || []).length;
+  test("sitemaps ativos só publicam URLs do manifesto curado, sem duplicatas", async () => {
+    // A fonte de verdade é a lista das URLs, nunca uma contagem histórica fixa.
+    // @ts-ignore Manifesto Node .mjs já executado pelo gerador de sitemaps.
+    const { ACTIVE_SITEMAPS, BASE_URL } = await import("../scripts/lib/curated-urls.mjs");
+    for (const [name, entries] of ACTIVE_SITEMAPS) {
+      const fp = resolve(publicDir, name);
+      expect(existsSync(fp), `sitemap ativo ausente: ${name}`).toBe(true);
+      const xml = readFileSync(fp, "utf8");
+      const urls = Array.from(xml.matchAll(/<loc>([^<]+)<\\/loc>/g), (m) => m[1]);
+      const allowed = new Set(entries.map((entry: { path: string }) => `${BASE_URL}${entry.path}`));
+      expect(new Set(urls).size, `URLs repetidas em ${name}`).toBe(urls.length);
+      for (const url of urls) {
+        expect(allowed.has(url), `URL não curada em ${name}: ${url}`).toBe(true);
+      }
     }
-    expect(total).toBe(33);
   });
 
   test("sitemap-news.xml vazio (sem entradas editoriais)", () => {
