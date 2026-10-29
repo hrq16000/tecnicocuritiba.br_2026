@@ -286,7 +286,7 @@ jobs:
           E2E_NONADMIN_EMAIL: ${{ secrets.E2E_NONADMIN_EMAIL }}
           E2E_NONADMIN_PASSWORD: ${{ secrets.E2E_NONADMIN_PASSWORD }}
       - name: Acessibilidade axe-core (páginas empresariais 3T/3U)
-        run: npx playwright test e2e/a11y-empresarial.spec.ts
+        run: npx playwright test --config=playwright.ci.config.ts e2e/a11y-empresarial.spec.ts
         env:
           E2E_BASE_URL: http://localhost:8080
       - name: Upload resultados E2E para o Codecov (test analytics)
