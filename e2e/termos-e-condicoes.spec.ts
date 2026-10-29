@@ -36,11 +36,19 @@ test.describe("/termos-e-condicoes — alias consolidado, schema e política de 
     expect(localBusiness, "LocalBusiness required").toBeTruthy();
     expect(faq, "FAQPage required").toBeTruthy();
 
-    // LocalBusiness: Curitiba in areaServed, telephone matches WhatsApp, no postal address
+    // LocalBusiness: contato central e localização genérica (cidade/UF), sem endereço físico inventado.
     const area = JSON.stringify((localBusiness as { areaServed?: unknown }).areaServed || "");
     expect(area.toLowerCase()).toContain("curitiba");
     expect((localBusiness as { telephone?: string }).telephone).toBe(siteConfig.phoneE164);
-    expect(JSON.stringify(localBusiness)).not.toMatch(/PostalAddress|streetAddress/i);
+    const addr = (localBusiness as { address?: Record<string, unknown> }).address;
+    expect(addr).toMatchObject({
+      "@type": "PostalAddress",
+      addressLocality: siteConfig.primaryCity,
+      addressRegion: siteConfig.region,
+      addressCountry: siteConfig.country,
+    });
+    expect(addr).not.toHaveProperty("streetAddress");
+    expect(addr).not.toHaveProperty("postalCode");
 
     // FAQPage: minimum 5 questions
     const mainEntity = (faq as { mainEntity?: Array<{ name?: string; acceptedAnswer?: { text?: string } }> }).mainEntity || [];
