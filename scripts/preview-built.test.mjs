@@ -4,6 +4,7 @@ import { mkdtemp, mkdir, writeFile, rm } from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
 import { Readable, Writable } from "node:stream";
+import { gunzipSync } from "node:zlib";
 
 async function request(server, url, options = {}) {
   const req = Readable.from(options.body ? [Buffer.from(options.body)] : []);
@@ -12,9 +13,10 @@ async function request(server, url, options = {}) {
   const res = new Writable({ write(chunk, encoding, callback) { chunks.push(Buffer.from(chunk)); callback(); } });
   res.statusCode = 200;
   res.setHeader = (name, value) => headers.set(name.toLowerCase(), value);
+  res.removeHeader = (name) => headers.delete(name.toLowerCase());
   res.writeHead = (status, values = {}) => { res.statusCode = status; for (const [name, value] of Object.entries(values)) res.setHeader(name, value); return res; };
   await server.listeners("request")[0](req, res);
-  return { status: res.statusCode, headers, async text() { return Buffer.concat(chunks).toString(); } };
+  return { status: res.statusCode, headers, async bytes() { return Buffer.concat(chunks); }, async text() { return Buffer.concat(chunks).toString(); } };
 }
 import { createBuiltPreview } from "./preview-built.mjs";
 
@@ -50,6 +52,39 @@ test("preview serve assets e HTML reais; preserva SSR, redirect, 404 e POST", as
     assert.equal(await r.text(), "https://tecnico.curitiba.br/request-url?payload=AbC");
     assert.ok(!requests.includes("/contato"));
     assert.ok(!requests.includes("/assets/app.js"));
+  } finally {
+    if (server) server.close();
+    await rm(dir, { recursive: true, force: true });
+  }
+});
+
+test("preview negocia gzip sem mudar conteúdo, HEAD ou clientes sem suporte", async () => {
+  const dir = await mkdtemp(path.join(os.tmpdir(), "built-preview-gzip-"));
+  const source = "export const message = 'atendimento em Curitiba';\n".repeat(100);
+  let server;
+  try {
+    await mkdir(path.join(dir, "client/assets"), { recursive: true });
+    await writeFile(path.join(dir, "client/assets/app.js"), source);
+    server = await createBuiltPreview({ distDir: dir, handler: { async fetch() {
+      return new Response(source, { headers: { "Content-Type": "text/html", Vary: "Cookie" } });
+    } } });
+    let r = await request(server, "/assets/app.js", { headers: { "accept-encoding": "br, gzip" } });
+    assert.equal(r.headers.get("content-encoding"), "gzip");
+    assert.equal(r.headers.get("vary"), "Accept-Encoding");
+    assert.equal(gunzipSync(await r.bytes()).toString(), source);
+    assert.ok(Number(r.headers.get("content-length")) < Buffer.byteLength(source) / 2);
+    r = await request(server, "/assets/app.js", { method: "HEAD", headers: { "accept-encoding": "gzip" } });
+    assert.equal(r.headers.get("content-encoding"), "gzip");
+    assert.equal((await r.bytes()).length, 0);
+    for (const encoding of ["", "br", "gzip;q=0", "gzip;q=0.0"]) {
+      r = await request(server, "/assets/app.js", { headers: { "accept-encoding": encoding } });
+      assert.equal(r.headers.get("content-encoding"), undefined);
+      assert.equal(await r.text(), source);
+    }
+    r = await request(server, "/ssr", { headers: { "accept-encoding": "gzip" } });
+    assert.equal(r.headers.get("content-encoding"), "gzip");
+    assert.equal(r.headers.get("vary"), "Cookie, Accept-Encoding");
+    assert.equal(gunzipSync(await r.bytes()).toString(), source);
   } finally {
     if (server) server.close();
     await rm(dir, { recursive: true, force: true });

@@ -106,6 +106,32 @@ const Contato = () => {
           </div>
         </section>
 
+        <section className="py-8 md:py-10 bg-background">
+          <div className="container mx-auto max-w-3xl space-y-4">
+            <h2 className="text-2xl font-bold text-foreground">Como preparar seu pedido de atendimento</h2>
+            <p className="text-muted-foreground">
+              Na primeira mensagem, informe o tipo de equipamento, a marca e o modelo, se souber.
+              Descreva o sintoma com suas palavras: quando começou, se acontece sempre e se houve
+              queda, contato com líquido ou alguma alteração recente. Uma foto da mensagem de erro
+              pode ajudar na triagem; confira antes se a imagem mostra nomes, documentos ou outros
+              dados pessoais que precisam ser ocultados.
+            </p>
+            <p className="text-muted-foreground">
+              Para organizar a modalidade de atendimento, envie inicialmente apenas sua cidade e
+              bairro. O endereço completo pode ser combinado depois, quando necessário para a
+              visita ou coleta. Não envie senhas de acesso, códigos de autenticação, dados bancários
+              ou arquivos particulares pelo contato inicial. Se o computador contém informações
+              importantes sem cópia de segurança, avise antes de autorizar qualquer procedimento.
+            </p>
+            <p className="text-muted-foreground">
+              A conversa inicial serve para entender a necessidade e combinar os próximos passos.
+              A identificação da causa pode exigir avaliação do equipamento; por isso, descreva
+              também o que já tentou fazer e se o aparelho ainda liga. O escopo e o valor devem
+              ser confirmados antes da execução do serviço.
+            </p>
+          </div>
+        </section>
+
         {/* Informações Adicionais */}
         <section className="py-8 md:py-10 bg-secondary relative overflow-hidden">
           <div className="absolute bottom-0 left-0 w-72 h-72 bg-primary/5 rounded-full blur-3xl pointer-events-none" />
