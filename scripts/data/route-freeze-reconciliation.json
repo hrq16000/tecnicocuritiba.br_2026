@@ -111,8 +111,17 @@
     },
     "src/routes/servicos.suporte-tecnico-empresarial.tsx": {
       "before": "1d57ac8b0f472fb5f783a76d0a5ea04d",
-      "after": "f673be3737b696c7c80e9f2e796c4ce1",
-      "note": "FAQ atualizada para planos de suporte gerenciado, com limites explícitos."
+      "after": "d864e92b3c2404e16c7cf334922afbd3",
+      "note": "Carregamento sob demanda do componente da rota de serviço, preservando metadata SSR, conteúdo, políticas comerciais e funil.",
+      "revisions": [
+        {
+          "sourceCommit": "PR-79",
+          "before": "f673be3737b696c7c80e9f2e796c4ce1",
+          "after": "d864e92b3c2404e16c7cf334922afbd3",
+          "intervention": "PR-79",
+          "reason": "Reduzir dependências pesadas do bundle compartilhado via lazyRouteComponent; verificar SSR, E2E e Lighthouse antes do merge."
+        }
+      ]
     },
     "src/routes/empresas.tsx": {
       "before": "d8dd838955ef473776e603ba0945afc7",
@@ -904,6 +913,216 @@
           "after": "3c8927e5e77ea127fdc24bc4ddbe2f85",
           "intervention": "PR-79",
           "reason": "Separar módulo da página do bundle inicial via lazyRouteComponent oficial do TanStack Router; verificar SSR, E2E, SEO e Lighthouse antes de merge."
+        }
+      ]
+    },
+    "src/routes/servicos.index.tsx": {
+      "before": "dd6b7255b9b96e8dd3ac84b5a2233676",
+      "after": "eaac73d5cb12d76f47e44ae8d321fce0",
+      "note": "Carregamento sob demanda do componente da rota de serviço, preservando metadata SSR, conteúdo, políticas comerciais e funil.",
+      "revisions": [
+        {
+          "sourceCommit": "PR-79",
+          "before": "dd6b7255b9b96e8dd3ac84b5a2233676",
+          "after": "eaac73d5cb12d76f47e44ae8d321fce0",
+          "intervention": "PR-79",
+          "reason": "Reduzir dependências pesadas do bundle compartilhado via lazyRouteComponent; verificar SSR, E2E e Lighthouse antes do merge."
+        }
+      ]
+    },
+    "src/routes/servicos.backup-para-empresas.tsx": {
+      "before": "cc4645c32189a8c3aabb940b4d9cab37",
+      "after": "9e0453dd1ba7a58ff0951a7e5a529bce",
+      "note": "Carregamento sob demanda do componente da rota de serviço, preservando metadata SSR, conteúdo, políticas comerciais e funil.",
+      "revisions": [
+        {
+          "sourceCommit": "PR-79",
+          "before": "cc4645c32189a8c3aabb940b4d9cab37",
+          "after": "9e0453dd1ba7a58ff0951a7e5a529bce",
+          "intervention": "PR-79",
+          "reason": "Reduzir dependências pesadas do bundle compartilhado via lazyRouteComponent; verificar SSR, E2E e Lighthouse antes do merge."
+        }
+      ]
+    },
+    "src/routes/servicos.conserto-monitor.tsx": {
+      "before": "cd6a9e571d4b9de5361253c64ad0ba2f",
+      "after": "e5e17470028c43f041b8c5419917d0b5",
+      "note": "Carregamento sob demanda do componente da rota de serviço, preservando metadata SSR, conteúdo, políticas comerciais e funil.",
+      "revisions": [
+        {
+          "sourceCommit": "PR-79",
+          "before": "cd6a9e571d4b9de5361253c64ad0ba2f",
+          "after": "e5e17470028c43f041b8c5419917d0b5",
+          "intervention": "PR-79",
+          "reason": "Reduzir dependências pesadas do bundle compartilhado via lazyRouteComponent; verificar SSR, E2E e Lighthouse antes do merge."
+        }
+      ]
+    },
+    "src/routes/servicos.conserto-placa.tsx": {
+      "before": "3fc835b4c3adc56b54aec9977f69734a",
+      "after": "3ba1c0aec77887f99089e19da613fa14",
+      "note": "Carregamento sob demanda do componente da rota de serviço, preservando metadata SSR, conteúdo, políticas comerciais e funil.",
+      "revisions": [
+        {
+          "sourceCommit": "PR-79",
+          "before": "3fc835b4c3adc56b54aec9977f69734a",
+          "after": "3ba1c0aec77887f99089e19da613fa14",
+          "intervention": "PR-79",
+          "reason": "Reduzir dependências pesadas do bundle compartilhado via lazyRouteComponent; verificar SSR, E2E e Lighthouse antes do merge."
+        }
+      ]
+    },
+    "src/routes/servicos.conserto-tv.tsx": {
+      "before": "584af24d45da68329159bd6a05622049",
+      "after": "5c8943663dc7b57db543ba407757a22c",
+      "note": "Carregamento sob demanda do componente da rota de serviço, preservando metadata SSR, conteúdo, políticas comerciais e funil.",
+      "revisions": [
+        {
+          "sourceCommit": "PR-79",
+          "before": "584af24d45da68329159bd6a05622049",
+          "after": "5c8943663dc7b57db543ba407757a22c",
+          "intervention": "PR-79",
+          "reason": "Reduzir dependências pesadas do bundle compartilhado via lazyRouteComponent; verificar SSR, E2E e Lighthouse antes do merge."
+        }
+      ]
+    },
+    "src/routes/servicos.formatacao.tsx": {
+      "before": "91de645f4ec79d22cbd115e97a482339",
+      "after": "28c4971018370f9f4773e3d7d79c9851",
+      "note": "Carregamento sob demanda do componente da rota de serviço, preservando metadata SSR, conteúdo, políticas comerciais e funil.",
+      "revisions": [
+        {
+          "sourceCommit": "PR-79",
+          "before": "91de645f4ec79d22cbd115e97a482339",
+          "after": "28c4971018370f9f4773e3d7d79c9851",
+          "intervention": "PR-79",
+          "reason": "Reduzir dependências pesadas do bundle compartilhado via lazyRouteComponent; verificar SSR, E2E e Lighthouse antes do merge."
+        }
+      ]
+    },
+    "src/routes/servicos.manutencao-de-computador.tsx": {
+      "before": "ded784b01fa7cc9d7a9c7cb11bbce99b",
+      "after": "aa3a7e52fecba567182f96349c9e9949",
+      "note": "Carregamento sob demanda do componente da rota de serviço, preservando metadata SSR, conteúdo, políticas comerciais e funil.",
+      "revisions": [
+        {
+          "sourceCommit": "PR-79",
+          "before": "ded784b01fa7cc9d7a9c7cb11bbce99b",
+          "after": "aa3a7e52fecba567182f96349c9e9949",
+          "intervention": "PR-79",
+          "reason": "Reduzir dependências pesadas do bundle compartilhado via lazyRouteComponent; verificar SSR, E2E e Lighthouse antes do merge."
+        }
+      ]
+    },
+    "src/routes/servicos.manutencao-de-notebook.tsx": {
+      "before": "926261ed16471b2cb1400ccbe06b3f05",
+      "after": "754568b61b81f2d9428301ba9b4fa3ff",
+      "note": "Carregamento sob demanda do componente da rota de serviço, preservando metadata SSR, conteúdo, políticas comerciais e funil.",
+      "revisions": [
+        {
+          "sourceCommit": "PR-79",
+          "before": "926261ed16471b2cb1400ccbe06b3f05",
+          "after": "754568b61b81f2d9428301ba9b4fa3ff",
+          "intervention": "PR-79",
+          "reason": "Reduzir dependências pesadas do bundle compartilhado via lazyRouteComponent; verificar SSR, E2E e Lighthouse antes do merge."
+        }
+      ]
+    },
+    "src/routes/servicos.manutencao-preventiva-empresas.tsx": {
+      "before": "8259d76741858ad6ef7f618863e4390f",
+      "after": "1011d8783bdea9ae7172624d7b67e2eb",
+      "note": "Carregamento sob demanda do componente da rota de serviço, preservando metadata SSR, conteúdo, políticas comerciais e funil.",
+      "revisions": [
+        {
+          "sourceCommit": "PR-79",
+          "before": "8259d76741858ad6ef7f618863e4390f",
+          "after": "1011d8783bdea9ae7172624d7b67e2eb",
+          "intervention": "PR-79",
+          "reason": "Reduzir dependências pesadas do bundle compartilhado via lazyRouteComponent; verificar SSR, E2E e Lighthouse antes do merge."
+        }
+      ]
+    },
+    "src/routes/servicos.montagem-de-pc.tsx": {
+      "before": "4f2319708b63e388faddf6c184170691",
+      "after": "977a4df035487da726719dc8c5c8ab90",
+      "note": "Carregamento sob demanda do componente da rota de serviço, preservando metadata SSR, conteúdo, políticas comerciais e funil.",
+      "revisions": [
+        {
+          "sourceCommit": "PR-79",
+          "before": "4f2319708b63e388faddf6c184170691",
+          "after": "977a4df035487da726719dc8c5c8ab90",
+          "intervention": "PR-79",
+          "reason": "Reduzir dependências pesadas do bundle compartilhado via lazyRouteComponent; verificar SSR, E2E e Lighthouse antes do merge."
+        }
+      ]
+    },
+    "src/routes/servicos.recuperacao-de-dados.tsx": {
+      "before": "3b43f37dc1ee417e0bb47bfd0a9a903a",
+      "after": "d8ce4d445a21f08957e9f1a758383b3c",
+      "note": "Carregamento sob demanda do componente da rota de serviço, preservando metadata SSR, conteúdo, políticas comerciais e funil.",
+      "revisions": [
+        {
+          "sourceCommit": "PR-79",
+          "before": "3b43f37dc1ee417e0bb47bfd0a9a903a",
+          "after": "d8ce4d445a21f08957e9f1a758383b3c",
+          "intervention": "PR-79",
+          "reason": "Reduzir dependências pesadas do bundle compartilhado via lazyRouteComponent; verificar SSR, E2E e Lighthouse antes do merge."
+        }
+      ]
+    },
+    "src/routes/servicos.redes-e-wifi.tsx": {
+      "before": "1a8712bfacf158ffedfa1b5b578090b1",
+      "after": "f98954afddc330efcaf290bbd1bb91c8",
+      "note": "Carregamento sob demanda do componente da rota de serviço, preservando metadata SSR, conteúdo, políticas comerciais e funil.",
+      "revisions": [
+        {
+          "sourceCommit": "PR-79",
+          "before": "1a8712bfacf158ffedfa1b5b578090b1",
+          "after": "f98954afddc330efcaf290bbd1bb91c8",
+          "intervention": "PR-79",
+          "reason": "Reduzir dependências pesadas do bundle compartilhado via lazyRouteComponent; verificar SSR, E2E e Lighthouse antes do merge."
+        }
+      ]
+    },
+    "src/routes/servicos.remocao-de-virus.tsx": {
+      "before": "0c18ea1129c7834c05c2baa026b0ea65",
+      "after": "5aaa944049049192a04dc51683464a75",
+      "note": "Carregamento sob demanda do componente da rota de serviço, preservando metadata SSR, conteúdo, políticas comerciais e funil.",
+      "revisions": [
+        {
+          "sourceCommit": "PR-79",
+          "before": "0c18ea1129c7834c05c2baa026b0ea65",
+          "after": "5aaa944049049192a04dc51683464a75",
+          "intervention": "PR-79",
+          "reason": "Reduzir dependências pesadas do bundle compartilhado via lazyRouteComponent; verificar SSR, E2E e Lighthouse antes do merge."
+        }
+      ]
+    },
+    "src/routes/servicos.suporte-home-office.tsx": {
+      "before": "04ebed52f7c5fb0e2516696767c9317e",
+      "after": "5647bee6ae118ea28c3b39e0b5181883",
+      "note": "Carregamento sob demanda do componente da rota de serviço, preservando metadata SSR, conteúdo, políticas comerciais e funil.",
+      "revisions": [
+        {
+          "sourceCommit": "PR-79",
+          "before": "04ebed52f7c5fb0e2516696767c9317e",
+          "after": "5647bee6ae118ea28c3b39e0b5181883",
+          "intervention": "PR-79",
+          "reason": "Reduzir dependências pesadas do bundle compartilhado via lazyRouteComponent; verificar SSR, E2E e Lighthouse antes do merge."
+        }
+      ]
+    },
+    "src/routes/servicos.upgrade-ssd-ram.tsx": {
+      "before": "66bcb96a6de1747ea8a6fed51664d720",
+      "after": "fb5c973a31d023a6daa02ed0d9949302",
+      "note": "Carregamento sob demanda do componente da rota de serviço, preservando metadata SSR, conteúdo, políticas comerciais e funil.",
+      "revisions": [
+        {
+          "sourceCommit": "PR-79",
+          "before": "66bcb96a6de1747ea8a6fed51664d720",
+          "after": "fb5c973a31d023a6daa02ed0d9949302",
+          "intervention": "PR-79",
+          "reason": "Reduzir dependências pesadas do bundle compartilhado via lazyRouteComponent; verificar SSR, E2E e Lighthouse antes do merge."
         }
       ]
     }

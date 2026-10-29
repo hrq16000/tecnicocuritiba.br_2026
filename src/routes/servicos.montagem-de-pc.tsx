@@ -1,6 +1,6 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, lazyRouteComponent } from "@tanstack/react-router";
 import { seoHead } from "@/lib/seo/routeHead";
-import ServicoCore from "@/pages/servicos/ServicoCore";
+// HTML e metadata permanecem SSR; só o módulo visual é carregado por rota.
 
 export const Route = createFileRoute("/servicos/montagem-de-pc")({
   /* seo:auto-start */
@@ -72,5 +72,9 @@ export const Route = createFileRoute("/servicos/montagem-de-pc")({
     ]
   }),
   /* seo:auto-end */
-  component: () => <ServicoCore slug="montagem-de-pc" />,
+  component: lazyRouteComponent(() =>
+    import("@/pages/servicos/ServicoCore").then(({ default: ServicoCore }) => ({
+      default: () => <ServicoCore slug="montagem-de-pc" />,
+    })),
+  ),
 });

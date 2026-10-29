@@ -30,3 +30,17 @@ test.describe("SEO — sitemap & robots", () => {
     expect(canonical).toContain("/assistencia-tecnica-curitiba");
   });
 });
+
+
+test("serviços essenciais preservam HTML SSR e indexabilidade após split por rota", async ({ request }) => {
+  for (const path of ["/servicos", "/servicos/backup-para-empresas", "/servicos/formatacao", "/servicos/redes-e-wifi"]) {
+    const response = await request.get(BASE + path);
+    expect(response.status(), "HTTP SSR " + path).toBe(200);
+    const html = await response.text();
+    expect(html, "H1 SSR " + path).toMatch(/<h1\b/i);
+    const canonical = html.match(/<link\b(?=[^>]*rel=["']canonical["'])(?=[^>]*href=["']([^"']+)["'])[^>]*>/i)?.[1];
+    expect(canonical).toBe("https://tecnico.curitiba.br" + path);
+    const robots = html.match(/<meta\b(?=[^>]*name=["']robots["'])(?=[^>]*content=["']([^"']+)["'])[^>]*>/i)?.[1] ?? "";
+    expect(robots, "robots SSR " + path).not.toMatch(/\bnoindex\b/i);
+  }
+});
