@@ -116,8 +116,8 @@
     },
     "src/routes/empresas.tsx": {
       "before": "d8dd838955ef473776e603ba0945afc7",
-      "after": "9c4f1d9ce96f1555996add86f573f97a",
-      "note": "Intervenção pontual na metadata da landing B2B: noindex, follow e canonical self declarados no SSR. Página de autoridade /empresa-de-ti-curitiba permanece indexável; selo histórico preservado.",
+      "after": "7e479da15fcb0c4a9565a15550b362de",
+      "note": "Carregamento sob demanda do componente da rota /empresas; head SSR intacto, sem alterar robots/canonical/conteúdo/CTA.",
       "revisions": [
         {
           "sourceCommit": "80d6fff561ee575000ca454fb0a5c588ccb348f6",
@@ -125,6 +125,13 @@
           "after": "9c4f1d9ce96f1555996add86f573f97a",
           "intervention": "PR-78",
           "reason": "Garantir robots noindex,follow e canonical já na resposta HTTP de /empresas, em paridade com PageSEO após hidratação. Nenhuma nova URL indexável, CTA ou conteúdo público alterado."
+        },
+        {
+          "sourceCommit": "PR-79",
+          "before": "9c4f1d9ce96f1555996add86f573f97a",
+          "after": "7e479da15fcb0c4a9565a15550b362de",
+          "intervention": "PR-79",
+          "reason": "Separar módulo da página do bundle inicial via lazyRouteComponent oficial do TanStack Router; verificar SSR, E2E, SEO e Lighthouse antes de merge."
         }
       ]
     },
@@ -883,6 +890,20 @@
           "after": "4dd47785a84732df062cfabdc1d2e656",
           "intervention": "PR-79",
           "reason": "Corrige axe serious scrollable-region-focusable no mobile 360px da página manutenção preventiva empresas."
+        }
+      ]
+    },
+    "src/routes/empresa-de-ti-curitiba.tsx": {
+      "before": "e2aad6a1b6ebaf78d330495c01b62aee",
+      "after": "3c8927e5e77ea127fdc24bc4ddbe2f85",
+      "note": "Carregamento sob demanda do componente da rota /empresa-de-ti-curitiba; head SSR intacto, sem alterar robots/canonical/conteúdo/CTA.",
+      "revisions": [
+        {
+          "sourceCommit": "PR-79",
+          "before": "e2aad6a1b6ebaf78d330495c01b62aee",
+          "after": "3c8927e5e77ea127fdc24bc4ddbe2f85",
+          "intervention": "PR-79",
+          "reason": "Separar módulo da página do bundle inicial via lazyRouteComponent oficial do TanStack Router; verificar SSR, E2E, SEO e Lighthouse antes de merge."
         }
       ]
     }

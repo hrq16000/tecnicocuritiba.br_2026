@@ -1,6 +1,6 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, lazyRouteComponent } from "@tanstack/react-router";
 import { seoHead } from "@/lib/seo/routeHead";
-import Empresas from "@/pages/Empresas";
+// SSR permanece ativo: somente o componente da rota é carregado sob demanda.
 
 // Landing de triagem B2B: não concorre com /empresa-de-ti-curitiba.
 // robots, canonical, title e description são emitidos no SSR (sem depender da hidratação).
@@ -14,5 +14,5 @@ export const Route = createFileRoute("/empresas")({
       noindex: true,
       localBusiness: false,
     }),
-  component: Empresas,
+  component: lazyRouteComponent(() => import("@/pages/Empresas")),
 });
