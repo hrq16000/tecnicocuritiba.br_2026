@@ -850,6 +850,20 @@
           "reason": "Corrigir instabilidade real de clique sem alterar destinatário, mensagem, SEO ou conversão."
         }
       ]
+    },
+    "src/pages/EmpresaDeTiCuritiba.tsx": {
+      "before": "32e47a05cee01fc0ec7f883b2142efb1",
+      "after": "1cbefe37123e217ba7d2401503123002",
+      "note": "Na hero /empresa-de-ti-curitiba, duas manchas difusas animadas são exibidas apenas em desktop; mobile preserva gradiente, conteúdo e CTAs.",
+      "revisions": [
+        {
+          "sourceCommit": "PR-79",
+          "before": "32e47a05cee01fc0ec7f883b2142efb1",
+          "after": "1cbefe37123e217ba7d2401503123002",
+          "intervention": "PR-79",
+          "reason": "Reduzir trabalho contínuo de blur/composição em viewport mobile; medir no Lighthouse sem mudar SEO ou política comercial."
+        }
+      ]
     }
   },
   "historicalReviews": [
