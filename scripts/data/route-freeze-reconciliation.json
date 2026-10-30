@@ -859,8 +859,8 @@
     },
     "src/routes/servicos.conserto-impressora-3d.tsx": {
       "added": true,
-      "after": "fb5348ba8ce054d7d822aed86145780a",
-      "note": "Componente visual do serviço importado sob demanda via TanStack Router com createElement (sem JSX no módulo virtual); SSR/SEO e conteúdo comercial preservados.",
+      "after": "689faa7b679a6775f047879ca8286fe5",
+      "note": "Head SSR da impressora 3D recebe exatamente o mesmo title, description e 10 FAQs sem importar SERVICOS_CORE; teste Vitest impede divergência editorial; noindex fail-closed preservado.",
       "sourceCommit": "a0c4604015812aa75e00f86e4d0715e74c57b764",
       "lastSourceCommit": "990b743ab70f05c415578d5f11a38dc57e493a32",
       "lastSourceChangedAt": "2026-08-25T08:53:04Z",
@@ -880,6 +880,13 @@
           "after": "fb5348ba8ce054d7d822aed86145780a",
           "intervention": "PR-79",
           "reason": "Evitar erro JSX no virtual module tanstack-router: usar createElement(ServicoCore, {slug}) no loader lazy mantendo SSR, SEO e CTAs."
+        },
+        {
+          "sourceCommit": "1a128ed373c3bb2978fc3a20a6b341a8e2fdd5df",
+          "before": "fb5348ba8ce054d7d822aed86145780a",
+          "after": "689faa7b679a6775f047879ca8286fe5",
+          "intervention": "PR-79",
+          "reason": "Remover o último importador estático de 275 KB de servicosCore no bundle inicial; metadados e FAQs idênticos, com teste de paridade."
         }
       ]
     },
