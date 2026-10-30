@@ -52,6 +52,15 @@ jobs:
         env:
           PW_CHANNEL: chrome
 
+      # Diagnóstico observacional: coleta nó LCP e fontes de layout shift,
+      # sem mexer nos thresholds bloqueantes do Lighthouse.
+      - name: Rastrear LCP e CLS com PerformanceObserver (observacional)
+        continue-on-error: true
+        run: npx playwright test --config=playwright.ci.config.ts e2e/perf-layout-observer.spec.ts --reporter=line
+        env:
+          PW_CHANNEL: chrome
+          PERF_DIAGNOSTICS: "1"
+
       - name: Lighthouse CI (/empresas, mobile)
         run: npx --yes @lhci/cli@0.14.x autorun --config=lighthouserc.empresas.json
 
