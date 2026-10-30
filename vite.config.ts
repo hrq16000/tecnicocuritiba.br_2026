@@ -22,7 +22,17 @@ const entryBundleReport: Plugin = {
         .slice(0, 15);
       const problemId = Object.keys(chunk.modules).find((id) => id.endsWith("/problemaPagesData.ts"));
       const problemImporters = problemId ? this.getModuleInfo(problemId)?.importers : [];
-      console.log("[entry-bundle-report]", JSON.stringify({ file: chunk.fileName, bytes: Buffer.byteLength(chunk.code), modules, problemImporters }));
+      // Somente diagnóstico do build: quais imports estáticos prendem
+      // servicosCore ao bundle inicial? Não altera os chunks nem o runtime.
+      const coreId = Object.keys(chunk.modules).find((id) => id.endsWith("/servicosCore.ts"));
+      const clean = (id: string) => id.replace(process.cwd(), ".");
+      const coreImporters = coreId
+        ? (this.getModuleInfo(coreId)?.importers ?? []).slice(0, 20).map((id) => ({
+            path: clean(id),
+            parents: (this.getModuleInfo(id)?.importers ?? []).slice(0, 8).map(clean),
+          }))
+        : [];
+      console.log("[entry-bundle-report]", JSON.stringify({ file: chunk.fileName, bytes: Buffer.byteLength(chunk.code), modules, problemImporters, coreImporters }));
     }
   },
 };

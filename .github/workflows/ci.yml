@@ -5,15 +5,21 @@ on:
     branches: [main]
   pull_request:
 
+# Mantém somente o CI mais recente de cada PR; nunca cancela o CI da main.
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
 jobs:
-  build:
+  # Antes, o lint observacional segurava todos os gates obrigatórios do build.
+  # Agora ele roda em paralelo e continua registrando seus alertas como antes.
+  lint:
+    name: lint (observacional)
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 10
+    continue-on-error: true
     steps:
       - uses: actions/checkout@v4
-      - uses: oven-sh/setup-bun@v2
-        with:
-          bun-version: latest
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
@@ -31,6 +37,26 @@ jobs:
         run: |
           mkdir -p reports
           npm run lint:ci --silent -- --format json --output-file reports/eslint.json || echo "::warning::lint reported issues (reports/eslint.json)"
+      - name: Upload lint report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: eslint-report
+          path: reports/eslint.json
+          if-no-files-found: ignore
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Install deps
+        run: npm ci --no-audit --no-fund
       - name: Gate de Motion Principles (skeleton, lazyload, progresso)
         run: npm run check:motion-coverage
       - name: CTA funnel gate
@@ -93,7 +119,7 @@ jobs:
       - name: Paridade JSON-LD × conteúdo visível (FAQPage/Offer/LocalBusiness)
         run: npm run check:jsonld-parity
       - name: BreadcrumbList serviço × cidade
-        run: npm run check:breadcrumb-schema
+        run: node --test scripts/check-breadcrumb-schema.test.mjs && npm run check:breadcrumb-schema
       - name: Markup de preço (Offer/PriceSpecification)
         run: npm run check:price-schema
       - name: Paridade 1:1 FAQPage × FAQ visível
@@ -101,9 +127,9 @@ jobs:
       - name: Unicidade de title/description (serviço × cidade e blog)
         run: npm run check:meta-uniqueness
       - name: Image sitemap (geração + integridade)
-        run: npm run sitemap:images && npm run check:image-sitemap
+        run: node --test scripts/image-sitemap.test.mjs && npm run sitemap:images && npm run check:image-sitemap
       - name: Licenças e créditos das fotos públicas
-        run: npm run check:image-credits
+        run: node --test scripts/check-image-credits.test.mjs && npm run check:image-credits
       - name: Relatório público de paridade de FAQ (CSV/MD)
         run: npm run report:faq-parity
 
@@ -130,11 +156,11 @@ jobs:
         run: npm run check:redirects:curated
 
       - name: Paridade de analytics (GA4 x click_events x relatorio)
-        run: npm run check:analytics-parity
+        run: node --test scripts/check-analytics-parity.test.mjs && npm run check:analytics-parity
       - name: Interlinking local gate (mãe ⇄ bairros/cidades)
         run: npm run check:local-interlinking
       - name: E-E-A-T coverage gate
-        run: npm run check:eeat
+        run: node --test scripts/check-eeat-coverage.test.mjs && npm run check:eeat
       # Gate de indexação: serve o build e valida status, content-type,
       # canonical self-referente, robots e JSON-LD de cada rota do sitemap,
       # além de garantir que nenhum alias 301 tenha canonical próprio.
@@ -143,6 +169,7 @@ jobs:
           node scripts/preview-built.mjs --port 4321 --strictPort &
           for i in $(seq 1 60); do curl -sf -o /dev/null http://localhost:4321/ && break; sleep 1; done
           node scripts/check-index-health.mjs --base=http://localhost:4321 --strict
+          E2E_BASE_URL=http://localhost:4321 npx playwright test --config=playwright.ci.config.ts e2e/index-health-aliases.spec.ts --reporter=line
       # Originalidade: mede o DOM renderizado de TODA URL curada, exige corpo
       # autoral mínimo por família e bloqueia duplicidade (Jaccard de shingles).
       # Escreve reports/content-approval.json, consumido pelo gerador de sitemap.
@@ -161,8 +188,8 @@ jobs:
           retention-days: 30
       - name: Controle de ondas Wi-Fi/TV (4–6/semana + prova visual)
         run: npm run check:waves
-      - name: Reconciliação de coortes do experimento (91/2/37)
-        run: npm run check:coortes
+      - name: Reconciliação de coortes do experimento (91/29/10 selados)
+        run: node --test scripts/check-cohort-reconciliation.test.mjs && npm run check:coortes
       - name: Freeze V2 — proibição de drift público silencioso
         run: npm run check:seo-freeze-v2
       - name: Privacidade da Ordem de Serviço (fora do índice, sem PII em analytics)
@@ -259,7 +286,7 @@ jobs:
           E2E_NONADMIN_EMAIL: ${{ secrets.E2E_NONADMIN_EMAIL }}
           E2E_NONADMIN_PASSWORD: ${{ secrets.E2E_NONADMIN_PASSWORD }}
       - name: Acessibilidade axe-core (páginas empresariais 3T/3U)
-        run: npx playwright test e2e/a11y-empresarial.spec.ts
+        run: npx playwright test --config=playwright.ci.config.ts e2e/a11y-empresarial.spec.ts
         env:
           E2E_BASE_URL: http://localhost:8080
       - name: Upload resultados E2E para o Codecov (test analytics)

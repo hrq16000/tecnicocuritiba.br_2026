@@ -8,8 +8,8 @@
   "files": {
     "src/routes/__root.tsx": {
       "before": "67cde857336531ad4af5aa038bab6541",
-      "after": "c54d13eda7370255ce5e0c5e4de40f18",
-      "note": "Título e descrições de fallback separados dos metadados da home.",
+      "after": "70d6e2cc2d537a0f0a5d8990bf8e93e5",
+      "note": "Metadados e fontes preservados. A biblioteca externa gtag das duas páginas empresariais é carregada até 3s ou ao primeiro gesto, mantendo o dataLayer ativo desde o início.",
       "revisions": [
         {
           "sourceCommit": "82c7fd7542347e55320947ec27d8f4a0e6f0f86f",
@@ -17,6 +17,20 @@
           "after": "c54d13eda7370255ce5e0c5e4de40f18",
           "intervention": "INT-2026-10-27-001",
           "reason": "Remover promessa de atendimento no mesmo dia do alt OpenGraph, sem alterar title/description/canonical/robots."
+        },
+        {
+          "sourceCommit": "PR-79",
+          "before": "c54d13eda7370255ce5e0c5e4de40f18",
+          "after": "c03636ffb13c515d38a8985eedc52f95",
+          "intervention": "PR-79",
+          "reason": "Fontes Rajdhani/Sora continuam iguais, mas stylesheet é ativada em DOMContentLoaded para evitar repintura tardia no evento window.load e reduzir LCP."
+        },
+        {
+          "sourceCommit": "PR-79",
+          "before": "c03636ffb13c515d38a8985eedc52f95",
+          "after": "70d6e2cc2d537a0f0a5d8990bf8e93e5",
+          "intervention": "PR-79",
+          "reason": "Nas rotas /empresas e /empresa-de-ti-curitiba, postergar somente a biblioteca externa gtag até 3 s ou primeiro gesto; dataLayer e Consent Mode v2 permanecem síncronos, preservando coleta de eventos e opção de consentimento."
         }
       ]
     },
@@ -97,13 +111,29 @@
     },
     "src/routes/servicos.suporte-tecnico-empresarial.tsx": {
       "before": "1d57ac8b0f472fb5f783a76d0a5ea04d",
-      "after": "f673be3737b696c7c80e9f2e796c4ce1",
-      "note": "FAQ atualizada para planos de suporte gerenciado, com limites explícitos."
+      "after": "dc5806340758d6d03036e9624eba1266",
+      "note": "Componente visual do serviço importado sob demanda via TanStack Router com createElement (sem JSX no módulo virtual); SSR/SEO e conteúdo comercial preservados.",
+      "revisions": [
+        {
+          "sourceCommit": "PR-79",
+          "before": "f673be3737b696c7c80e9f2e796c4ce1",
+          "after": "d864e92b3c2404e16c7cf334922afbd3",
+          "intervention": "PR-79",
+          "reason": "Reduzir dependências pesadas do bundle compartilhado via lazyRouteComponent; verificar SSR, E2E e Lighthouse antes do merge."
+        },
+        {
+          "sourceCommit": "PR-79",
+          "before": "d864e92b3c2404e16c7cf334922afbd3",
+          "after": "dc5806340758d6d03036e9624eba1266",
+          "intervention": "PR-79",
+          "reason": "Evitar erro JSX no virtual module tanstack-router: usar createElement(ServicoCore, {slug}) no loader lazy mantendo SSR, SEO e CTAs."
+        }
+      ]
     },
     "src/routes/empresas.tsx": {
       "before": "d8dd838955ef473776e603ba0945afc7",
-      "after": "9c4f1d9ce96f1555996add86f573f97a",
-      "note": "Intervenção pontual na metadata da landing B2B: noindex, follow e canonical self declarados no SSR. Página de autoridade /empresa-de-ti-curitiba permanece indexável; selo histórico preservado.",
+      "after": "7e479da15fcb0c4a9565a15550b362de",
+      "note": "Carregamento sob demanda do componente da rota /empresas; head SSR intacto, sem alterar robots/canonical/conteúdo/CTA.",
       "revisions": [
         {
           "sourceCommit": "80d6fff561ee575000ca454fb0a5c588ccb348f6",
@@ -111,8 +141,1128 @@
           "after": "9c4f1d9ce96f1555996add86f573f97a",
           "intervention": "PR-78",
           "reason": "Garantir robots noindex,follow e canonical já na resposta HTTP de /empresas, em paridade com PageSEO após hidratação. Nenhuma nova URL indexável, CTA ou conteúdo público alterado."
+        },
+        {
+          "sourceCommit": "PR-79",
+          "before": "9c4f1d9ce96f1555996add86f573f97a",
+          "after": "7e479da15fcb0c4a9565a15550b362de",
+          "intervention": "PR-79",
+          "reason": "Separar módulo da página do bundle inicial via lazyRouteComponent oficial do TanStack Router; verificar SSR, E2E, SEO e Lighthouse antes de merge."
+        }
+      ]
+    },
+    "src/pages/ColetaEntrega.tsx": {
+      "before": "7ba2c0ce5375d2edcce82f8974cffe21",
+      "after": "2fdce9ff8ff3064251ea6dd03b88cbd9",
+      "note": "SSR de FAQ e preço mínimo de coleta/diagnóstico derivados da configuração comercial central, sem alterar preços exibidos, rotas ou política de indexação Foto remota de logística recebe crédito Unsplash visível em figcaption.",
+      "revisions": [
+        {
+          "sourceCommit": "564983645a4806227912f3adf0b6027ad526556f",
+          "before": "7ba2c0ce5375d2edcce82f8974cffe21",
+          "after": "22c3ac8bc1c9c70c48b21779965281d5",
+          "intervention": "PR-79",
+          "reason": "SSR de FAQ e preço mínimo de coleta/diagnóstico derivados da configuração comercial central, sem alterar preços exibidos, rotas ou política de indexação"
+        },
+        {
+          "sourceCommit": "e31c6e012c96f6e8e814f1008086a59e7fb85fd7",
+          "before": "22c3ac8bc1c9c70c48b21779965281d5",
+          "after": "2fdce9ff8ff3064251ea6dd03b88cbd9",
+          "intervention": "PR-79",
+          "reason": "Creditar a foto Unsplash já existente da página coleta/entrega com link para licença no próprio figcaption; manter conteúdo, SEO e fluxo comercial."
+        }
+      ]
+    },
+    "src/pages/ComoFunciona.tsx": {
+      "before": "e1b9a61c50b738f134dd3f68bafb4c42",
+      "after": "3e6b086f949535bba61109dacb16e8b3",
+      "note": "Respostas da FAQ montadas no HTML SSR mesmo com accordion fechado, preservando texto e interação Foto Unsplash/Pexels existente recebe crédito factual visível e link à licença no mesmo figcaption, sem troca de imagem, título, CTA ou política de indexação.",
+      "revisions": [
+        {
+          "sourceCommit": "c7e30d0d738e6077ce34e2b0535af64325ed656f",
+          "before": "e1b9a61c50b738f134dd3f68bafb4c42",
+          "after": "12119d508db6cd6f5a7e07be2c61d4a5",
+          "intervention": "PR-79",
+          "reason": "Respostas da FAQ montadas no HTML SSR mesmo com accordion fechado, preservando texto e interação"
+        },
+        {
+          "sourceCommit": "854c5dc6dd8d26a7dff7933e3adb49bedb82d125",
+          "before": "12119d508db6cd6f5a7e07be2c61d4a5",
+          "after": "3e6b086f949535bba61109dacb16e8b3",
+          "intervention": "PR-79",
+          "reason": "Foto Unsplash/Pexels existente recebe crédito factual visível e link à licença no mesmo figcaption, sem troca de imagem, título, CTA ou política de indexação."
+        }
+      ]
+    },
+    "src/pages/FAQ.tsx": {
+      "before": "d7311bc41a8d6e95e9f6d0999bb56308",
+      "after": "763f2f0316bb791d87e759a3b4d83554",
+      "note": "Respostas da FAQ montadas no HTML SSR em paridade com JSON-LD, mantendo semântica e interação",
+      "revisions": [
+        {
+          "sourceCommit": "d0e45f65ea92c59d5079993f1177b688438e18ea",
+          "before": "d7311bc41a8d6e95e9f6d0999bb56308",
+          "after": "763f2f0316bb791d87e759a3b4d83554",
+          "intervention": "PR-79",
+          "reason": "Respostas da FAQ montadas no HTML SSR em paridade com JSON-LD, mantendo semântica e interação"
+        }
+      ]
+    },
+    "src/components/LocalFAQSection.tsx": {
+      "before": "f3ca374aee30a7c79f28f48d6008ec08",
+      "after": "aaa8b4c2b5d3d3efeb6b9b791916889e",
+      "note": "Componente compartilhado: respostas de FAQ renderizadas no SSR com acordeão acessível, sem alterar perguntas, respostas ou indexação",
+      "revisions": [
+        {
+          "sourceCommit": "1e08b39accbbb7bcb34e89bd3ec73d17d65d0f97",
+          "before": "f3ca374aee30a7c79f28f48d6008ec08",
+          "after": "aaa8b4c2b5d3d3efeb6b9b791916889e",
+          "intervention": "PR-79",
+          "reason": "Componente compartilhado: respostas de FAQ renderizadas no SSR com acordeão acessível, sem alterar perguntas, respostas ou indexação"
+        }
+      ]
+    },
+    "src/components/RealImageSection.tsx": {
+      "before": "e798d7129118cd8e696e6cb8c388d4f8",
+      "after": "c749fea6d81e3ec98aa96a2cffb52667",
+      "note": "Crédito de foto existente Unsplash/Pexels, exibido junto à imagem no figcaption para conformidade com a licença; sem alterar fonte de imagem, conteúdo técnico ou URL.",
+      "revisions": [
+        {
+          "sourceCommit": "f36525ef39aa137314071e570c47ce4550d0055d",
+          "before": "e798d7129118cd8e696e6cb8c388d4f8",
+          "after": "c749fea6d81e3ec98aa96a2cffb52667",
+          "intervention": "PR-79",
+          "reason": "Atribuição visível, factual e vinculada à licença de fotografias remotas; preserva o selo histórico e a política de indexação."
+        }
+      ]
+    },
+    "src/pages/DiagnosticoTecnico.tsx": {
+      "before": "58680d591005883e052cf55445fe1590",
+      "after": "853a871dfba611fedd32790759b1a864",
+      "note": "Foto Unsplash/Pexels existente recebe crédito factual visível e link à licença no mesmo figcaption, sem troca de imagem, título, CTA ou política de indexação.",
+      "revisions": [
+        {
+          "sourceCommit": "b3482e0e1fb268a6c747d4cca203307e891abce2",
+          "before": "58680d591005883e052cf55445fe1590",
+          "after": "853a871dfba611fedd32790759b1a864",
+          "intervention": "PR-79",
+          "reason": "Foto Unsplash/Pexels existente recebe crédito factual visível e link à licença no mesmo figcaption, sem troca de imagem, título, CTA ou política de indexação."
+        }
+      ]
+    },
+    "src/pages/EquipamentosAtendidos.tsx": {
+      "before": "5a8234ca59d068baa1429fa9516da347",
+      "after": "b985e64f9d9e8d87b667f274bfa18871",
+      "note": "Foto Unsplash/Pexels existente recebe crédito factual visível e link à licença no mesmo figcaption, sem troca de imagem, título, CTA ou política de indexação.",
+      "revisions": [
+        {
+          "sourceCommit": "2608caf18ded61792833a4a18031a052fcf517cc",
+          "before": "5a8234ca59d068baa1429fa9516da347",
+          "after": "b985e64f9d9e8d87b667f274bfa18871",
+          "intervention": "PR-79",
+          "reason": "Foto Unsplash/Pexels existente recebe crédito factual visível e link à licença no mesmo figcaption, sem troca de imagem, título, CTA ou política de indexação."
+        }
+      ]
+    },
+    "src/pages/QuandoNaoCompensa.tsx": {
+      "before": "d060a7736a4559c2846e29f9e3c4f123",
+      "after": "b626c8aa114c8da337ace036532dd59a",
+      "note": "Foto Unsplash/Pexels existente recebe crédito factual visível e link à licença no mesmo figcaption, sem troca de imagem, título, CTA ou política de indexação.",
+      "revisions": [
+        {
+          "sourceCommit": "dd86c0a123190466a78e3265777a37fc59cb8e47",
+          "before": "d060a7736a4559c2846e29f9e3c4f123",
+          "after": "b626c8aa114c8da337ace036532dd59a",
+          "intervention": "PR-79",
+          "reason": "Foto Unsplash/Pexels existente recebe crédito factual visível e link à licença no mesmo figcaption, sem troca de imagem, título, CTA ou política de indexação."
+        }
+      ]
+    },
+    "src/pages/servico-bairro/ServicoBairroTemplate.tsx": {
+      "before": "dceabb1428d1d20f81116ab222622bdd",
+      "after": "fe3f338b9410a57274a348fa35592c14",
+      "note": "Foto Unsplash/Pexels existente recebe crédito factual visível e link à licença no mesmo figcaption, sem troca de imagem, título, CTA ou política de indexação.",
+      "revisions": [
+        {
+          "sourceCommit": "63a178db7faf0f17bbb623510e740dd33aa8764b",
+          "before": "dceabb1428d1d20f81116ab222622bdd",
+          "after": "fe3f338b9410a57274a348fa35592c14",
+          "intervention": "PR-79",
+          "reason": "Foto Unsplash/Pexels existente recebe crédito factual visível e link à licença no mesmo figcaption, sem troca de imagem, título, CTA ou política de indexação."
+        }
+      ]
+    },
+    "src/components/EeatProofsSection.tsx": {
+      "before": "81e148afcda4b0869eb127650876badf",
+      "after": "4886f44f77cf4590cb5eac749a9e0855",
+      "note": "Copy E-E-A-T explicita ausência de avaliações fabricadas sem mencionar termo genérico 'depoimento' que o gate sinalizava erroneamente como prova social exibida. Nenhuma prova é adicionada.",
+      "revisions": [
+        {
+          "sourceCommit": "8b772eb8beb65f023e17001eb0fb5281c3c76c2a",
+          "before": "81e148afcda4b0869eb127650876badf",
+          "after": "4886f44f77cf4590cb5eac749a9e0855",
+          "intervention": "PR-79",
+          "reason": "Correção estritamente editorial da negação de prova social; mantém E-E-A-T fail-closed e identidade verificável."
+        }
+      ]
+    },
+    "src/routes/blog.$slug.tsx": {
+      "before": "5f10256448b6d02775b58eab78791846",
+      "after": "548d93fd317e60bc613fde75bafe1535",
+      "note": "Existing legacy blog aliases return 301 before the editorial 404; unapproved non-alias drafts still return 404.",
+      "revisions": [
+        {
+          "sourceCommit": "d9935c585dbf08c21bebc9c6defe78c872bf6880",
+          "before": "5f10256448b6d02775b58eab78791846",
+          "after": "548d93fd317e60bc613fde75bafe1535",
+          "intervention": "PR-79",
+          "reason": "Existing legacy blog aliases return 301 before the editorial 404; unapproved non-alias drafts still return 404."
+        }
+      ]
+    },
+    "src/routes/politica-de-privacidade.tsx": {
+      "before": "8590e083bd11dcf71bfbbd1b19a277fd",
+      "after": "cc50bb8e58809ba02910194a1eeb03c4",
+      "note": "Privacy destination receives canonical self and noindex SSR without promoting an uncurated URL.",
+      "revisions": [
+        {
+          "sourceCommit": "5ccc648fbcfd7b169845f139564eecd080455d89",
+          "before": "8590e083bd11dcf71bfbbd1b19a277fd",
+          "after": "cc50bb8e58809ba02910194a1eeb03c4",
+          "intervention": "PR-79",
+          "reason": "Privacy destination receives canonical self and noindex SSR without promoting an uncurated URL."
+        }
+      ]
+    },
+    "src/lib/seo/routeHead.ts": {
+      "before": "bac070baac3a4ea0726b8cc912038eef",
+      "after": "07785fc408d6c81e40e693a6f20b6559",
+      "note": "Only pricing policy page receives an accurate WebPage JSON-LD; existing FAQ and pricing remain intact.",
+      "revisions": [
+        {
+          "sourceCommit": "897639423d566e8a81c8d320af2f7991971660f6",
+          "before": "bac070baac3a4ea0726b8cc912038eef",
+          "after": "07785fc408d6c81e40e693a6f20b6559",
+          "intervention": "PR-79",
+          "reason": "Only pricing policy page receives an accurate WebPage JSON-LD; existing FAQ and pricing remain intact."
+        }
+      ]
+    },
+    "src/routes/seja-parceiro.tsx": {
+      "before": "5ab61cee81abced3b9c0fadb2bcc69f2",
+      "after": "b550a52b1dc09547fa6a181d52fe159f",
+      "note": "SSR canonical na landing de parceiros usada como destino de quatro aliases antigos do blog, sem inclusão no sitemap; robots noindex,follow preserva política anti-doorway.",
+      "revisions": [
+        {
+          "sourceCommit": "baf0af778279ad24e6b6b66065957626f93486c1",
+          "before": "5ab61cee81abced3b9c0fadb2bcc69f2",
+          "after": "b550a52b1dc09547fa6a181d52fe159f",
+          "intervention": "PR-79",
+          "reason": "SSR canonical na landing de parceiros usada como destino de quatro aliases antigos do blog, sem inclusão no sitemap; robots noindex,follow preserva política anti-doorway."
+        }
+      ]
+    },
+    "src/pages/Contato.tsx": {
+      "before": "ed9a79e3c7b68f31b22ff02a0b2696b4",
+      "after": "671e3d9a0699844f883aa333a17d6d08",
+      "note": "Orientação de triagem, privacidade e autorização antes do atendimento; corrige 162 palavras contra mínimo 250 no run 40787582369.",
+      "sourceCommit": "a0c4604015812aa75e00f86e4d0715e74c57b764",
+      "reviewedAt": "2026-10-28"
+    },
+    "src/pages/servico-bairro/ManutencaoTvJardimAmericas.tsx": {
+      "before": "1e2bdc1741cb2eb5928651a588738bfb",
+      "after": "996b27c3aa7c4c25ddb580090506d736",
+      "note": "Orientação específica de sintomas, segurança e coleta da TV; diferencia as duas rotas locais com Jaccard 0.493 contra teto 0.45.",
+      "sourceCommit": "a0c4604015812aa75e00f86e4d0715e74c57b764",
+      "reviewedAt": "2026-10-28"
+    },
+    "src/pages/servico-bairro/RedesWifiJardimAmericas.tsx": {
+      "before": "acb1002731f2679010e40fecf0355a4a",
+      "after": "67f1b08708e3d9e0069ec2ebef50f43b",
+      "note": "Orientação específica de cobertura, enlace e configuração Wi-Fi; diferencia as duas rotas locais sem mudar indexação.",
+      "sourceCommit": "a0c4604015812aa75e00f86e4d0715e74c57b764",
+      "reviewedAt": "2026-10-28"
+    },
+    "src/components/WhatsAppFunnel.tsx": {
+      "before": "f8ed697875ff3c3dcb3d308e5e00b20a",
+      "after": "f15b09eca232e77bcbf91e8eafc8aaaa",
+      "note": "Substituir import dinâmico do catálogo de ícones por mapa explícito dos mesmos 8 ícones, reduzindo JS sem mudar funil ou conversão.",
+      "sourceCommit": "a0c4604015812aa75e00f86e4d0715e74c57b764",
+      "reviewedAt": "2026-10-28"
+    },
+    "public/85fad1bb57c44507a97ed5bc051f6da8.txt": {
+      "added": true,
+      "after": "56cd9b43a47b06cd2b0aca8d9b201012",
+      "note": "Arquivo público de validação IndexNow já versionado desde agosto; reconciliação de adição histórica, sem criação ou exposição de credencial privada.",
+      "sourceCommit": "a0c4604015812aa75e00f86e4d0715e74c57b764",
+      "lastSourceCommit": "6f859cc319166e8bcdf3f971b5caf378c90b6c80",
+      "lastSourceChangedAt": "2026-08-27T04:59:09Z",
+      "reviewedAt": "2026-10-28",
+      "review": "HISTORICAL-DRIFT-PR79-20261028"
+    },
+    "public/sitemap-bairros.xml": {
+      "before": "609ca5055c754c4bc382e511982415e6",
+      "after": "609ca5055c754c4bc382e511982415e6",
+      "note": "Serialização dos mesmos 130 caminhos curados pelo gerador atual; lastmod declarado é o fallback documentado para clone shallow do CI. Não promove URL nem usa data do build.",
+      "sourceCommit": "a0c4604015812aa75e00f86e4d0715e74c57b764",
+      "lastSourceCommit": "b4898b88ee60191d48a9544c09e22f7b37d28e32",
+      "lastSourceChangedAt": "2026-08-27T05:24:02Z",
+      "reviewedAt": "2026-10-28",
+      "review": "HISTORICAL-DRIFT-PR79-20261028",
+      "generatedBy": "scripts/generate-sitemaps.mjs",
+      "checkout": "shallow",
+      "declaredLastmodOnly": true
+    },
+    "public/sitemap-editorial.xml": {
+      "before": "c62946a5ab4ef4f9722649c4fc5cc889",
+      "after": "c62946a5ab4ef4f9722649c4fc5cc889",
+      "note": "Serialização dos mesmos 130 caminhos curados pelo gerador atual; lastmod declarado é o fallback documentado para clone shallow do CI. Não promove URL nem usa data do build.",
+      "sourceCommit": "a0c4604015812aa75e00f86e4d0715e74c57b764",
+      "lastSourceCommit": "b4898b88ee60191d48a9544c09e22f7b37d28e32",
+      "lastSourceChangedAt": "2026-08-27T05:24:02Z",
+      "reviewedAt": "2026-10-28",
+      "review": "HISTORICAL-DRIFT-PR79-20261028",
+      "generatedBy": "scripts/generate-sitemaps.mjs",
+      "checkout": "shallow",
+      "declaredLastmodOnly": true
+    },
+    "public/sitemap-main.xml": {
+      "before": "f0f3f0e3b1b25ad4c780b9e4adae4242",
+      "after": "f0f3f0e3b1b25ad4c780b9e4adae4242",
+      "note": "Serialização dos mesmos 130 caminhos curados pelo gerador atual; lastmod declarado é o fallback documentado para clone shallow do CI. Não promove URL nem usa data do build.",
+      "sourceCommit": "a0c4604015812aa75e00f86e4d0715e74c57b764",
+      "lastSourceCommit": "b4898b88ee60191d48a9544c09e22f7b37d28e32",
+      "lastSourceChangedAt": "2026-08-27T05:24:02Z",
+      "reviewedAt": "2026-10-28",
+      "review": "HISTORICAL-DRIFT-PR79-20261028",
+      "generatedBy": "scripts/generate-sitemaps.mjs",
+      "checkout": "shallow",
+      "declaredLastmodOnly": true
+    },
+    "public/sitemap-problemas.xml": {
+      "before": "73a4256de5aa6e7cf1113e9be21554bf",
+      "after": "73a4256de5aa6e7cf1113e9be21554bf",
+      "note": "Serialização dos mesmos 130 caminhos curados pelo gerador atual; lastmod declarado é o fallback documentado para clone shallow do CI. Não promove URL nem usa data do build.",
+      "sourceCommit": "a0c4604015812aa75e00f86e4d0715e74c57b764",
+      "lastSourceCommit": "b4898b88ee60191d48a9544c09e22f7b37d28e32",
+      "lastSourceChangedAt": "2026-08-27T05:24:02Z",
+      "reviewedAt": "2026-10-28",
+      "review": "HISTORICAL-DRIFT-PR79-20261028",
+      "generatedBy": "scripts/generate-sitemaps.mjs",
+      "checkout": "shallow",
+      "declaredLastmodOnly": true
+    },
+    "public/sitemap-regioes.xml": {
+      "before": "efa32e0c0b28b5bc5bb1f97e04aacd77",
+      "after": "efa32e0c0b28b5bc5bb1f97e04aacd77",
+      "note": "Serialização dos mesmos 130 caminhos curados pelo gerador atual; lastmod declarado é o fallback documentado para clone shallow do CI. Não promove URL nem usa data do build.",
+      "sourceCommit": "a0c4604015812aa75e00f86e4d0715e74c57b764",
+      "lastSourceCommit": "b4898b88ee60191d48a9544c09e22f7b37d28e32",
+      "lastSourceChangedAt": "2026-08-27T05:24:02Z",
+      "reviewedAt": "2026-10-28",
+      "review": "HISTORICAL-DRIFT-PR79-20261028",
+      "generatedBy": "scripts/generate-sitemaps.mjs",
+      "checkout": "shallow",
+      "declaredLastmodOnly": true
+    },
+    "public/sitemap-servicos.xml": {
+      "before": "f82a14aa23b028b79794a62855931378",
+      "after": "f82a14aa23b028b79794a62855931378",
+      "note": "Serialização dos mesmos 130 caminhos curados pelo gerador atual; lastmod declarado é o fallback documentado para clone shallow do CI. Não promove URL nem usa data do build.",
+      "sourceCommit": "a0c4604015812aa75e00f86e4d0715e74c57b764",
+      "lastSourceCommit": "b4898b88ee60191d48a9544c09e22f7b37d28e32",
+      "lastSourceChangedAt": "2026-08-27T05:24:02Z",
+      "reviewedAt": "2026-10-28",
+      "review": "HISTORICAL-DRIFT-PR79-20261028",
+      "generatedBy": "scripts/generate-sitemaps.mjs",
+      "checkout": "shallow",
+      "declaredLastmodOnly": true
+    },
+    "src/components/ImageLicenseCaption.tsx": {
+      "added": true,
+      "after": "f285c46a7d79107653a3f0bf9c9d8adc",
+      "note": "Componente factual de crédito Unsplash/Pexels adicionado na PR #79; associa autor/licença à imagem existente.",
+      "sourceCommit": "a0c4604015812aa75e00f86e4d0715e74c57b764",
+      "lastSourceCommit": "014343cbe0865db687544461bb83534911386397",
+      "lastSourceChangedAt": "2026-10-28T08:46:56-03:00",
+      "reviewedAt": "2026-10-28",
+      "review": "HISTORICAL-DRIFT-PR79-20261028"
+    },
+    "src/components/bairro/BairroLocalLayout.tsx": {
+      "before": "6657ed81ca0caddfa0608de30b1a7a37",
+      "after": "41edde02aa03c5abcd1636d1acfb7a0a",
+      "note": "Interligação técnica e territorial já versionada em agosto: bairro/cidade para serviços, diagnósticos e localidades existentes.",
+      "sourceCommit": "a0c4604015812aa75e00f86e4d0715e74c57b764",
+      "lastSourceCommit": "863dd8ca7eb880811548b7cde417efa10658c03b",
+      "lastSourceChangedAt": "2026-08-26T01:16:25-03:00",
+      "reviewedAt": "2026-10-28",
+      "review": "HISTORICAL-DRIFT-PR79-20261028"
+    },
+    "src/components/bairro/DicasLocaisList.tsx": {
+      "added": true,
+      "after": "50f641e93d19121c45bffa6d15f8282f",
+      "note": "Validação tipada dos dados de bairros e renderização segura das dicas locais já versionadas em agosto.",
+      "sourceCommit": "a0c4604015812aa75e00f86e4d0715e74c57b764",
+      "lastSourceCommit": "dcd7a4ff21086af23a78ec7fbe1e8741fc624687",
+      "lastSourceChangedAt": "2026-08-26T04:46:01-03:00",
+      "reviewedAt": "2026-10-28",
+      "review": "HISTORICAL-DRIFT-PR79-20261028"
+    },
+    "src/components/cidade/CidadeLandingLayout.tsx": {
+      "before": "34fe1c489e508f6076de85d71abab86f",
+      "after": "df8fffd5310b3944ac8b0c5072fd341d",
+      "note": "Interligação técnica e territorial já versionada em agosto: bairro/cidade para serviços, diagnósticos e localidades existentes.",
+      "sourceCommit": "a0c4604015812aa75e00f86e4d0715e74c57b764",
+      "lastSourceCommit": "b1d79bffc8547f6adffc632bd49d0515f8ef1c47",
+      "lastSourceChangedAt": "2026-08-26T01:34:27-03:00",
+      "reviewedAt": "2026-10-28",
+      "review": "HISTORICAL-DRIFT-PR79-20261028"
+    },
+    "src/components/home/HeroPremium.tsx": {
+      "before": "846aad3fcc319fa1875a2a14a24a90c4",
+      "after": "47680d2dd3b89a11782695932f31062d",
+      "note": "Ordem inicial de slides determinística para SSR; embaralhamento ocorre após hidratação, conforme mudança histórica de agosto.",
+      "sourceCommit": "a0c4604015812aa75e00f86e4d0715e74c57b764",
+      "lastSourceCommit": "1a22a3a829204db220694a8da943432ae7a9f95d",
+      "lastSourceChangedAt": "2026-08-27T04:49:43Z",
+      "reviewedAt": "2026-10-28",
+      "review": "HISTORICAL-DRIFT-PR79-20261028"
+    },
+    "src/components/servico/RespostasConversacionais.tsx": {
+      "added": true,
+      "after": "63adaf7786bbb0054f3e81a41af9b037",
+      "note": "Blocos de respostas conversacionais e conteúdo técnico contextual por serviço já versionados em agosto.",
+      "sourceCommit": "a0c4604015812aa75e00f86e4d0715e74c57b764",
+      "lastSourceCommit": "bfda0104976fbd03155ac99ef6bb8e692b56f71d",
+      "lastSourceChangedAt": "2026-08-25T17:14:47Z",
+      "reviewedAt": "2026-10-28",
+      "review": "HISTORICAL-DRIFT-PR79-20261028"
+    },
+    "src/components/servico/ServicoLandingLayout.tsx": {
+      "before": "4edd72cdf7eacb5c971488d497255367",
+      "after": "325b76eacb914aedc90b26fbaa1a42fb",
+      "note": "Blocos de respostas conversacionais e conteúdo técnico contextual por serviço já versionados em agosto.",
+      "sourceCommit": "a0c4604015812aa75e00f86e4d0715e74c57b764",
+      "lastSourceCommit": "bfda0104976fbd03155ac99ef6bb8e692b56f71d",
+      "lastSourceChangedAt": "2026-08-25T17:14:47Z",
+      "reviewedAt": "2026-10-28",
+      "review": "HISTORICAL-DRIFT-PR79-20261028"
+    },
+    "src/components/servico/SuporteEmpresarialBlocos.tsx": {
+      "before": "8c953839b78ef62d365904ef0c9f3a20",
+      "after": "66ca8e71ae242cdf07f40e15e9dacff8",
+      "note": "Modalidades e planos de suporte empresarial existentes desde agosto; este registro não altera preço nem promessa comercial.",
+      "sourceCommit": "a0c4604015812aa75e00f86e4d0715e74c57b764",
+      "lastSourceCommit": "5747f1c1fdb98d6c35978ebfa68e803a3544eec4",
+      "lastSourceChangedAt": "2026-08-26T00:17:57-03:00",
+      "reviewedAt": "2026-10-28",
+      "review": "HISTORICAL-DRIFT-PR79-20261028"
+    },
+    "src/components/servico/SuporteModalidadesSection.tsx": {
+      "before": "6b064eb993b90736e2c0a8c3284de932",
+      "after": "c7331f4abf0cf31116cbc98d294ce00b",
+      "note": "Modalidades e planos de suporte empresarial existentes desde agosto; este registro não altera preço nem promessa comercial.",
+      "sourceCommit": "a0c4604015812aa75e00f86e4d0715e74c57b764",
+      "lastSourceCommit": "5747f1c1fdb98d6c35978ebfa68e803a3544eec4",
+      "lastSourceChangedAt": "2026-08-26T00:17:57-03:00",
+      "reviewedAt": "2026-10-28",
+      "review": "HISTORICAL-DRIFT-PR79-20261028"
+    },
+    "src/data/blogPostsContent.tsx": {
+      "before": "0a5e11f902fcae2e0cd1512f900c4f34",
+      "after": "72786b3a3a031f30378608fdf70a4df4",
+      "note": "Correções históricas de links internos e orientação técnica segura nos artigos e páginas de sintomas, já versionadas em agosto.",
+      "sourceCommit": "a0c4604015812aa75e00f86e4d0715e74c57b764",
+      "lastSourceCommit": "16106c473a8d1bc8ac9811f3cfdbaefe01ac802c",
+      "lastSourceChangedAt": "2026-08-25T23:30:32-03:00",
+      "reviewedAt": "2026-10-28",
+      "review": "HISTORICAL-DRIFT-PR79-20261028"
+    },
+    "src/lib/bairroDataSchema.ts": {
+      "added": true,
+      "after": "0096f94b895b4fdb2f114dc2cc612fd6",
+      "note": "Validação tipada dos dados de bairros e renderização segura das dicas locais já versionadas em agosto.",
+      "sourceCommit": "a0c4604015812aa75e00f86e4d0715e74c57b764",
+      "lastSourceCommit": "dcd7a4ff21086af23a78ec7fbe1e8741fc624687",
+      "lastSourceChangedAt": "2026-08-26T04:46:01-03:00",
+      "reviewedAt": "2026-10-28",
+      "review": "HISTORICAL-DRIFT-PR79-20261028"
+    },
+    "src/lib/bairroLinks.ts": {
+      "before": "4511d27c1482ed85f1c5024613da7e04",
+      "after": "5af8b83f5affe3391459c90360c0987e",
+      "note": "Interligação técnica e territorial já versionada em agosto: bairro/cidade para serviços, diagnósticos e localidades existentes.",
+      "sourceCommit": "a0c4604015812aa75e00f86e4d0715e74c57b764",
+      "lastSourceCommit": "20ef2d5d8884c66220af9fb52f74ced6abbc279a",
+      "lastSourceChangedAt": "2026-08-26T01:32:25-03:00",
+      "reviewedAt": "2026-10-28",
+      "review": "HISTORICAL-DRIFT-PR79-20261028"
+    },
+    "src/lib/conversacional.ts": {
+      "added": true,
+      "after": "b36704404aaa73bed1ae436db7052ae6",
+      "note": "Blocos de respostas conversacionais e conteúdo técnico contextual por serviço já versionados em agosto.",
+      "sourceCommit": "a0c4604015812aa75e00f86e4d0715e74c57b764",
+      "lastSourceCommit": "bfda0104976fbd03155ac99ef6bb8e692b56f71d",
+      "lastSourceChangedAt": "2026-08-25T17:14:47Z",
+      "reviewedAt": "2026-10-28",
+      "review": "HISTORICAL-DRIFT-PR79-20261028"
+    },
+    "src/lib/enrichmentStatus.ts": {
+      "added": true,
+      "after": "a5324539e1beed79bb6b0c05fc10f085",
+      "note": "Integração histórica da impressora 3D à ficha, triagem e catálogo; política de enriquecimento continua fail-closed sem prova visual aprovada. Valores existentes não são modificados nesta reconciliação.",
+      "sourceCommit": "a0c4604015812aa75e00f86e4d0715e74c57b764",
+      "lastSourceCommit": "990b743ab70f05c415578d5f11a38dc57e493a32",
+      "lastSourceChangedAt": "2026-08-25T08:53:04Z",
+      "reviewedAt": "2026-10-28",
+      "review": "HISTORICAL-DRIFT-PR79-20261028"
+    },
+    "src/lib/fichaComercial.ts": {
+      "before": "30779662ce83836b1ed4967d01cfa84b",
+      "after": "316e7009f2ed624e147023b9a607e1cd",
+      "note": "Integração histórica da impressora 3D à ficha, triagem e catálogo; política de enriquecimento continua fail-closed sem prova visual aprovada. Valores existentes não são modificados nesta reconciliação.",
+      "sourceCommit": "a0c4604015812aa75e00f86e4d0715e74c57b764",
+      "lastSourceCommit": "990b743ab70f05c415578d5f11a38dc57e493a32",
+      "lastSourceChangedAt": "2026-08-25T08:53:04Z",
+      "reviewedAt": "2026-10-28",
+      "review": "HISTORICAL-DRIFT-PR79-20261028"
+    },
+    "src/lib/funnel/triageConfig.ts": {
+      "before": "220a73a5815a0384cc2476799774aab8",
+      "after": "e02cea8803f08a33e1ad68319e1175eb",
+      "note": "Integração histórica da impressora 3D à ficha, triagem e catálogo; política de enriquecimento continua fail-closed sem prova visual aprovada. Valores existentes não são modificados nesta reconciliação.",
+      "sourceCommit": "a0c4604015812aa75e00f86e4d0715e74c57b764",
+      "lastSourceCommit": "18ad18ecefcfdd6cbdde03511c577f9a6ca33b61",
+      "lastSourceChangedAt": "2026-08-25T08:05:37Z",
+      "reviewedAt": "2026-10-28",
+      "review": "HISTORICAL-DRIFT-PR79-20261028"
+    },
+    "src/lib/funnel/triageMachine.ts": {
+      "before": "da46f069f7a8ad49851f4fdab5fe2900",
+      "after": "91c39a5f76094a629fa2eb2f2eb617b3",
+      "note": "Integração histórica da impressora 3D à ficha, triagem e catálogo; política de enriquecimento continua fail-closed sem prova visual aprovada. Valores existentes não são modificados nesta reconciliação.",
+      "sourceCommit": "a0c4604015812aa75e00f86e4d0715e74c57b764",
+      "lastSourceCommit": "18ad18ecefcfdd6cbdde03511c577f9a6ca33b61",
+      "lastSourceChangedAt": "2026-08-25T08:05:37Z",
+      "reviewedAt": "2026-10-28",
+      "review": "HISTORICAL-DRIFT-PR79-20261028"
+    },
+    "src/lib/mcp/__tests__/mcp-auth-audit.test.ts": {
+      "added": true,
+      "after": "629064e37d8812238ccb23f3376944fc",
+      "note": "Ferramentas e testes de autenticação/auditoria MCP já versionados em agosto; classificados conservadoramente PUBLIC_CHANGE pelo gate, sem ampliar a exclusão de diretórios.",
+      "sourceCommit": "a0c4604015812aa75e00f86e4d0715e74c57b764",
+      "lastSourceCommit": "9aed7d05f98a099d37ec8e9bab8ae5209247cc23",
+      "lastSourceChangedAt": "2026-08-25T17:16:53Z",
+      "reviewedAt": "2026-10-28",
+      "review": "HISTORICAL-DRIFT-PR79-20261028"
+    },
+    "src/lib/mcp/index.ts": {
+      "before": "5db7fc24883fb998239c6cfecd8cbe70",
+      "after": "8f8357c624b7db9060c4fa39196c17fa",
+      "note": "Ferramentas e testes de autenticação/auditoria MCP já versionados em agosto; classificados conservadoramente PUBLIC_CHANGE pelo gate, sem ampliar a exclusão de diretórios.",
+      "sourceCommit": "a0c4604015812aa75e00f86e4d0715e74c57b764",
+      "lastSourceCommit": "6af2b69225ce06759c6bbde84619148923270859",
+      "lastSourceChangedAt": "2026-08-25T16:59:58Z",
+      "reviewedAt": "2026-10-28",
+      "review": "HISTORICAL-DRIFT-PR79-20261028"
+    },
+    "src/lib/mcp/lib/audit.ts": {
+      "added": true,
+      "after": "a28c22567b25369a78f6cd8514247f3d",
+      "note": "Ferramentas e testes de autenticação/auditoria MCP já versionados em agosto; classificados conservadoramente PUBLIC_CHANGE pelo gate, sem ampliar a exclusão de diretórios.",
+      "sourceCommit": "a0c4604015812aa75e00f86e4d0715e74c57b764",
+      "lastSourceCommit": "e9f6eccf826670ed3df60e902c3c7e86f96adbc4",
+      "lastSourceChangedAt": "2026-08-25T17:16:08Z",
+      "reviewedAt": "2026-10-28",
+      "review": "HISTORICAL-DRIFT-PR79-20261028"
+    },
+    "src/lib/mcp/tools/check-geo-conformance.ts": {
+      "before": "b145b0011bbf2a9dad4a78d343f3cc17",
+      "after": "fe1e0316f3cba4257f795c989474049c",
+      "note": "Ferramentas e testes de autenticação/auditoria MCP já versionados em agosto; classificados conservadoramente PUBLIC_CHANGE pelo gate, sem ampliar a exclusão de diretórios.",
+      "sourceCommit": "a0c4604015812aa75e00f86e4d0715e74c57b764",
+      "lastSourceCommit": "710591451083472b95833e2d9ab10303c2243a95",
+      "lastSourceChangedAt": "2026-08-25T17:16:34Z",
+      "reviewedAt": "2026-10-28",
+      "review": "HISTORICAL-DRIFT-PR79-20261028"
+    },
+    "src/lib/mcp/tools/validate-jsonld.ts": {
+      "before": "9007ccc25ebfccf62a71945a1d0b2592",
+      "after": "a69bb64c56a33e06f54269d4baba5a55",
+      "note": "Ferramentas e testes de autenticação/auditoria MCP já versionados em agosto; classificados conservadoramente PUBLIC_CHANGE pelo gate, sem ampliar a exclusão de diretórios.",
+      "sourceCommit": "a0c4604015812aa75e00f86e4d0715e74c57b764",
+      "lastSourceCommit": "710591451083472b95833e2d9ab10303c2243a95",
+      "lastSourceChangedAt": "2026-08-25T17:16:34Z",
+      "reviewedAt": "2026-10-28",
+      "review": "HISTORICAL-DRIFT-PR79-20261028"
+    },
+    "src/lib/mcp/tools/validate-seo.ts": {
+      "before": "4ccdfd56f47747cf0abb0de18845bf51",
+      "after": "9412a936218e5dd15866b4fa50ec223f",
+      "note": "Ferramentas e testes de autenticação/auditoria MCP já versionados em agosto; classificados conservadoramente PUBLIC_CHANGE pelo gate, sem ampliar a exclusão de diretórios.",
+      "sourceCommit": "a0c4604015812aa75e00f86e4d0715e74c57b764",
+      "lastSourceCommit": "710591451083472b95833e2d9ab10303c2243a95",
+      "lastSourceChangedAt": "2026-08-25T17:16:34Z",
+      "reviewedAt": "2026-10-28",
+      "review": "HISTORICAL-DRIFT-PR79-20261028"
+    },
+    "src/lib/politicaComercial.ts": {
+      "before": "aae3c3aab68e800d53f48b3571d277e7",
+      "after": "a417bc79cd46bf20f660370e0584adba",
+      "note": "Modalidades e planos de suporte empresarial existentes desde agosto; este registro não altera preço nem promessa comercial.",
+      "sourceCommit": "a0c4604015812aa75e00f86e4d0715e74c57b764",
+      "lastSourceCommit": "5747f1c1fdb98d6c35978ebfa68e803a3544eec4",
+      "lastSourceChangedAt": "2026-08-26T00:17:57-03:00",
+      "reviewedAt": "2026-10-28",
+      "review": "HISTORICAL-DRIFT-PR79-20261028"
+    },
+    "src/lib/precosConfig.ts": {
+      "before": "212044013bfc21a8e0bec2ce0e297ddb",
+      "after": "477530bd8afa7e1ed5268b4c4f009aba",
+      "note": "Integração histórica da impressora 3D à ficha, triagem e catálogo; política de enriquecimento continua fail-closed sem prova visual aprovada. Valores existentes não são modificados nesta reconciliação.",
+      "sourceCommit": "a0c4604015812aa75e00f86e4d0715e74c57b764",
+      "lastSourceCommit": "073e64023ed970a61b335f4aae0e207386656ce2",
+      "lastSourceChangedAt": "2026-08-25T08:05:57Z",
+      "reviewedAt": "2026-10-28",
+      "review": "HISTORICAL-DRIFT-PR79-20261028"
+    },
+    "src/lib/redirectMatrix.ts": {
+      "before": "b02a17f0877ab7120fa9bd213aba4576",
+      "after": "6af2b0bcbb443459ab54510d3a4892b0",
+      "note": "Tratamento histórico de 404 e aliases antigos já versionado em agosto; não altera a matriz ou contratos HTTP nesta revisão.",
+      "sourceCommit": "a0c4604015812aa75e00f86e4d0715e74c57b764",
+      "lastSourceCommit": "d5cd1ff75fa12dd77d8bcd5a962ab7dbd6703ab6",
+      "lastSourceChangedAt": "2026-08-26T00:31:58-03:00",
+      "reviewedAt": "2026-10-28",
+      "review": "HISTORICAL-DRIFT-PR79-20261028"
+    },
+    "src/lib/triagePreset.ts": {
+      "before": "3e05ddb52a87b970c3148c6502dafc5d",
+      "after": "e87829b64611e783417ba916f3db5998",
+      "note": "Integração histórica da impressora 3D à ficha, triagem e catálogo; política de enriquecimento continua fail-closed sem prova visual aprovada. Valores existentes não são modificados nesta reconciliação.",
+      "sourceCommit": "a0c4604015812aa75e00f86e4d0715e74c57b764",
+      "lastSourceCommit": "990b743ab70f05c415578d5f11a38dc57e493a32",
+      "lastSourceChangedAt": "2026-08-25T08:53:04Z",
+      "reviewedAt": "2026-10-28",
+      "review": "HISTORICAL-DRIFT-PR79-20261028"
+    },
+    "src/pages/ArrumarPC.tsx": {
+      "before": "26069b53e7ddef424228dba73f2814cc",
+      "after": "413f0639bd6d2d53d584bf70e2e7f880",
+      "note": "Integração histórica da impressora 3D à ficha, triagem e catálogo; política de enriquecimento continua fail-closed sem prova visual aprovada. Valores existentes não são modificados nesta reconciliação.",
+      "sourceCommit": "a0c4604015812aa75e00f86e4d0715e74c57b764",
+      "lastSourceCommit": "990b743ab70f05c415578d5f11a38dc57e493a32",
+      "lastSourceChangedAt": "2026-08-25T08:53:04Z",
+      "reviewedAt": "2026-10-28",
+      "review": "HISTORICAL-DRIFT-PR79-20261028"
+    },
+    "src/pages/NotFound.tsx": {
+      "before": "9a55333c74803fa00fca5ab031c099ea",
+      "after": "74207ec650a0a95fd5a7b9bafb9ef31c",
+      "note": "Tratamento histórico de 404 e aliases antigos já versionado em agosto; não altera a matriz ou contratos HTTP nesta revisão.",
+      "sourceCommit": "a0c4604015812aa75e00f86e4d0715e74c57b764",
+      "lastSourceCommit": "d5cd1ff75fa12dd77d8bcd5a962ab7dbd6703ab6",
+      "lastSourceChangedAt": "2026-08-26T00:31:58-03:00",
+      "reviewedAt": "2026-10-28",
+      "review": "HISTORICAL-DRIFT-PR79-20261028"
+    },
+    "src/pages/PrecosEPoliticas.tsx": {
+      "before": "51d86ce0e31fe683b29059bdef7f7eb2",
+      "after": "d69c4b07c7ef3ed57e87642e59152e16",
+      "note": "Modalidades e planos de suporte empresarial existentes desde agosto; este registro não altera preço nem promessa comercial.",
+      "sourceCommit": "a0c4604015812aa75e00f86e4d0715e74c57b764",
+      "lastSourceCommit": "5747f1c1fdb98d6c35978ebfa68e803a3544eec4",
+      "lastSourceChangedAt": "2026-08-26T00:17:57-03:00",
+      "reviewedAt": "2026-10-28",
+      "review": "HISTORICAL-DRIFT-PR79-20261028"
+    },
+    "src/pages/Servicos.tsx": {
+      "before": "dfee1259a4bcde882288f74c97dda85d",
+      "after": "54942018bfd0e5929e95affbc262f304",
+      "note": "Integração histórica da impressora 3D à ficha, triagem e catálogo; política de enriquecimento continua fail-closed sem prova visual aprovada. Valores existentes não são modificados nesta reconciliação.",
+      "sourceCommit": "a0c4604015812aa75e00f86e4d0715e74c57b764",
+      "lastSourceCommit": "990b743ab70f05c415578d5f11a38dc57e493a32",
+      "lastSourceChangedAt": "2026-08-25T08:53:04Z",
+      "reviewedAt": "2026-10-28",
+      "review": "HISTORICAL-DRIFT-PR79-20261028"
+    },
+    "src/pages/problemas/DobradicaNotebookQuebrada.tsx": {
+      "before": "d0141fd1cb0a08cec2e5a1b95264c482",
+      "after": "8ee0dccca9eb400653590e7e2268d7a5",
+      "note": "Correções históricas de links internos e orientação técnica segura nos artigos e páginas de sintomas, já versionadas em agosto.",
+      "sourceCommit": "a0c4604015812aa75e00f86e4d0715e74c57b764",
+      "lastSourceCommit": "16106c473a8d1bc8ac9811f3cfdbaefe01ac802c",
+      "lastSourceChangedAt": "2026-08-25T23:30:32-03:00",
+      "reviewedAt": "2026-10-28",
+      "review": "HISTORICAL-DRIFT-PR79-20261028"
+    },
+    "src/pages/problemas/HdNaoReconhecido.tsx": {
+      "before": "b4fa1e935215bbb0933f8992ed01ca92",
+      "after": "ecbbe01da055b0ff8ade4384f797a447",
+      "note": "Correções históricas de links internos e orientação técnica segura nos artigos e páginas de sintomas, já versionadas em agosto.",
+      "sourceCommit": "a0c4604015812aa75e00f86e4d0715e74c57b764",
+      "lastSourceCommit": "e536e8d81609d1f494944d46afcc94e412f1523f",
+      "lastSourceChangedAt": "2026-08-26T02:28:26-03:00",
+      "reviewedAt": "2026-10-28",
+      "review": "HISTORICAL-DRIFT-PR79-20261028"
+    },
+    "src/pages/problemas/MonitorSemSinal.tsx": {
+      "before": "8d382927506174fc66d7a18e565882e8",
+      "after": "488186cd03967c9f636a58da736735e0",
+      "note": "Correções históricas de links internos e orientação técnica segura nos artigos e páginas de sintomas, já versionadas em agosto.",
+      "sourceCommit": "a0c4604015812aa75e00f86e4d0715e74c57b764",
+      "lastSourceCommit": "16106c473a8d1bc8ac9811f3cfdbaefe01ac802c",
+      "lastSourceChangedAt": "2026-08-25T23:30:32-03:00",
+      "reviewedAt": "2026-10-28",
+      "review": "HISTORICAL-DRIFT-PR79-20261028"
+    },
+    "src/pages/problemas/TelaAzulWindows.tsx": {
+      "before": "e51257b3a8ddc05bac0d5d184ef96fee",
+      "after": "bae4bba047108d10cddcbdabfb5e7dec",
+      "note": "Correções históricas de links internos e orientação técnica segura nos artigos e páginas de sintomas, já versionadas em agosto.",
+      "sourceCommit": "a0c4604015812aa75e00f86e4d0715e74c57b764",
+      "lastSourceCommit": "16106c473a8d1bc8ac9811f3cfdbaefe01ac802c",
+      "lastSourceChangedAt": "2026-08-25T23:30:32-03:00",
+      "reviewedAt": "2026-10-28",
+      "review": "HISTORICAL-DRIFT-PR79-20261028"
+    },
+    "src/pages/problemas/TouchpadNaoFunciona.tsx": {
+      "before": "0124b7e933de5179631f466870332ec5",
+      "after": "0b32dab60ac7d21746236a2a2834d0f5",
+      "note": "Correções históricas de links internos e orientação técnica segura nos artigos e páginas de sintomas, já versionadas em agosto.",
+      "sourceCommit": "a0c4604015812aa75e00f86e4d0715e74c57b764",
+      "lastSourceCommit": "16106c473a8d1bc8ac9811f3cfdbaefe01ac802c",
+      "lastSourceChangedAt": "2026-08-25T23:30:32-03:00",
+      "reviewedAt": "2026-10-28",
+      "review": "HISTORICAL-DRIFT-PR79-20261028"
+    },
+    "src/pages/problemas/WebcamNaoFunciona.tsx": {
+      "before": "1edaeb867f6e0cacb98303f6a543396a",
+      "after": "23c664710b827d1ba8476865ca1d8a0c",
+      "note": "Correções históricas de links internos e orientação técnica segura nos artigos e páginas de sintomas, já versionadas em agosto.",
+      "sourceCommit": "a0c4604015812aa75e00f86e4d0715e74c57b764",
+      "lastSourceCommit": "16106c473a8d1bc8ac9811f3cfdbaefe01ac802c",
+      "lastSourceChangedAt": "2026-08-25T23:30:32-03:00",
+      "reviewedAt": "2026-10-28",
+      "review": "HISTORICAL-DRIFT-PR79-20261028"
+    },
+    "src/pages/servicos/ServicoCore.tsx": {
+      "before": "8f626b35ae91e5881a8902b1bfc9d65b",
+      "after": "03666126fabce1a0bfdca40f2bd6253b",
+      "note": "Blocos de respostas conversacionais e conteúdo técnico contextual por serviço já versionados em agosto.",
+      "sourceCommit": "a0c4604015812aa75e00f86e4d0715e74c57b764",
+      "lastSourceCommit": "bfda0104976fbd03155ac99ef6bb8e692b56f71d",
+      "lastSourceChangedAt": "2026-08-25T17:14:47Z",
+      "reviewedAt": "2026-10-28",
+      "review": "HISTORICAL-DRIFT-PR79-20261028"
+    },
+    "src/routes/servicos.conserto-impressora-3d.tsx": {
+      "added": true,
+      "after": "689faa7b679a6775f047879ca8286fe5",
+      "note": "Head SSR da impressora 3D recebe exatamente o mesmo title, description e 10 FAQs sem importar SERVICOS_CORE; teste Vitest impede divergência editorial; noindex fail-closed preservado.",
+      "sourceCommit": "a0c4604015812aa75e00f86e4d0715e74c57b764",
+      "lastSourceCommit": "990b743ab70f05c415578d5f11a38dc57e493a32",
+      "lastSourceChangedAt": "2026-08-25T08:53:04Z",
+      "reviewedAt": "2026-10-28",
+      "review": "HISTORICAL-DRIFT-PR79-20261028",
+      "revisions": [
+        {
+          "sourceCommit": "e8d8a5a92d0514754d5829a5d89e71dd2ecc98ad",
+          "before": "b9c7da26d5a2192f2e0561688c17f314",
+          "after": "cffa9baa76cd5e70db4aa805f1186cd7",
+          "intervention": "PR-79",
+          "reason": "Registrar lazyRouteComponent anterior no caminho não protegido do Freeze V2."
+        },
+        {
+          "sourceCommit": "PR-79",
+          "before": "cffa9baa76cd5e70db4aa805f1186cd7",
+          "after": "fb5348ba8ce054d7d822aed86145780a",
+          "intervention": "PR-79",
+          "reason": "Evitar erro JSX no virtual module tanstack-router: usar createElement(ServicoCore, {slug}) no loader lazy mantendo SSR, SEO e CTAs."
+        },
+        {
+          "sourceCommit": "1a128ed373c3bb2978fc3a20a6b341a8e2fdd5df",
+          "before": "fb5348ba8ce054d7d822aed86145780a",
+          "after": "689faa7b679a6775f047879ca8286fe5",
+          "intervention": "PR-79",
+          "reason": "Remover o último importador estático de 275 KB de servicosCore no bundle inicial; metadados e FAQs idênticos, com teste de paridade."
+        }
+      ]
+    },
+    "src/components/WhatsAppFloat.tsx": {
+      "before": "3641f104b8dadc40c62c223156d11b75",
+      "after": "16e036528ad291a8b7fc97c8c414163c",
+      "note": "PR #79: botão flutuante mantém abertura obrigatória do funil, CTA e rastreamento, mas deixa de usar escala animada infinita que impedia o toque estável (mobile/E2E).",
+      "revisions": [
+        {
+          "sourceCommit": "PR-79",
+          "before": "3641f104b8dadc40c62c223156d11b75",
+          "after": "16e036528ad291a8b7fc97c8c414163c",
+          "intervention": "PR-79",
+          "reason": "Corrigir instabilidade real de clique sem alterar destinatário, mensagem, SEO ou conversão."
+        }
+      ]
+    },
+    "src/pages/EmpresaDeTiCuritiba.tsx": {
+      "before": "32e47a05cee01fc0ec7f883b2142efb1",
+      "after": "1cbefe37123e217ba7d2401503123002",
+      "note": "Na hero /empresa-de-ti-curitiba, duas manchas difusas animadas são exibidas apenas em desktop; mobile preserva gradiente, conteúdo e CTAs.",
+      "revisions": [
+        {
+          "sourceCommit": "PR-79",
+          "before": "32e47a05cee01fc0ec7f883b2142efb1",
+          "after": "1cbefe37123e217ba7d2401503123002",
+          "intervention": "PR-79",
+          "reason": "Reduzir trabalho contínuo de blur/composição em viewport mobile; medir no Lighthouse sem mudar SEO ou política comercial."
+        }
+      ]
+    },
+    "src/components/servico/Blocos3T.tsx": {
+      "before": "9fa0fffabce8847eb879499778fbaefc",
+      "after": "4dd47785a84732df062cfabdc1d2e656",
+      "note": "A tabela horizontal da matriz empresarial passa a ser região rotulada e focável via teclado (mobile e desktop), sem alterações de conteúdo ou layout.",
+      "revisions": [
+        {
+          "sourceCommit": "PR-79",
+          "before": "9fa0fffabce8847eb879499778fbaefc",
+          "after": "4dd47785a84732df062cfabdc1d2e656",
+          "intervention": "PR-79",
+          "reason": "Corrige axe serious scrollable-region-focusable no mobile 360px da página manutenção preventiva empresas."
+        }
+      ]
+    },
+    "src/routes/empresa-de-ti-curitiba.tsx": {
+      "before": "e2aad6a1b6ebaf78d330495c01b62aee",
+      "after": "3c8927e5e77ea127fdc24bc4ddbe2f85",
+      "note": "Carregamento sob demanda do componente da rota /empresa-de-ti-curitiba; head SSR intacto, sem alterar robots/canonical/conteúdo/CTA.",
+      "revisions": [
+        {
+          "sourceCommit": "PR-79",
+          "before": "e2aad6a1b6ebaf78d330495c01b62aee",
+          "after": "3c8927e5e77ea127fdc24bc4ddbe2f85",
+          "intervention": "PR-79",
+          "reason": "Separar módulo da página do bundle inicial via lazyRouteComponent oficial do TanStack Router; verificar SSR, E2E, SEO e Lighthouse antes de merge."
+        }
+      ]
+    },
+    "src/routes/servicos.index.tsx": {
+      "before": "dd6b7255b9b96e8dd3ac84b5a2233676",
+      "after": "eaac73d5cb12d76f47e44ae8d321fce0",
+      "note": "Carregamento sob demanda do componente da rota de serviço, preservando metadata SSR, conteúdo, políticas comerciais e funil.",
+      "revisions": [
+        {
+          "sourceCommit": "PR-79",
+          "before": "dd6b7255b9b96e8dd3ac84b5a2233676",
+          "after": "eaac73d5cb12d76f47e44ae8d321fce0",
+          "intervention": "PR-79",
+          "reason": "Reduzir dependências pesadas do bundle compartilhado via lazyRouteComponent; verificar SSR, E2E e Lighthouse antes do merge."
+        }
+      ]
+    },
+    "src/routes/servicos.backup-para-empresas.tsx": {
+      "before": "cc4645c32189a8c3aabb940b4d9cab37",
+      "after": "c2b2d6a5edadf731475fb224cfe01b0e",
+      "note": "Componente visual do serviço importado sob demanda via TanStack Router com createElement (sem JSX no módulo virtual); SSR/SEO e conteúdo comercial preservados.",
+      "revisions": [
+        {
+          "sourceCommit": "PR-79",
+          "before": "cc4645c32189a8c3aabb940b4d9cab37",
+          "after": "9e0453dd1ba7a58ff0951a7e5a529bce",
+          "intervention": "PR-79",
+          "reason": "Reduzir dependências pesadas do bundle compartilhado via lazyRouteComponent; verificar SSR, E2E e Lighthouse antes do merge."
+        },
+        {
+          "sourceCommit": "PR-79",
+          "before": "9e0453dd1ba7a58ff0951a7e5a529bce",
+          "after": "c2b2d6a5edadf731475fb224cfe01b0e",
+          "intervention": "PR-79",
+          "reason": "Evitar erro JSX no virtual module tanstack-router: usar createElement(ServicoCore, {slug}) no loader lazy mantendo SSR, SEO e CTAs."
+        }
+      ]
+    },
+    "src/routes/servicos.conserto-monitor.tsx": {
+      "before": "cd6a9e571d4b9de5361253c64ad0ba2f",
+      "after": "c1e26cdb8bd2722abfd6de0a1374eb18",
+      "note": "Componente visual do serviço importado sob demanda via TanStack Router com createElement (sem JSX no módulo virtual); SSR/SEO e conteúdo comercial preservados.",
+      "revisions": [
+        {
+          "sourceCommit": "PR-79",
+          "before": "cd6a9e571d4b9de5361253c64ad0ba2f",
+          "after": "e5e17470028c43f041b8c5419917d0b5",
+          "intervention": "PR-79",
+          "reason": "Reduzir dependências pesadas do bundle compartilhado via lazyRouteComponent; verificar SSR, E2E e Lighthouse antes do merge."
+        },
+        {
+          "sourceCommit": "PR-79",
+          "before": "e5e17470028c43f041b8c5419917d0b5",
+          "after": "c1e26cdb8bd2722abfd6de0a1374eb18",
+          "intervention": "PR-79",
+          "reason": "Evitar erro JSX no virtual module tanstack-router: usar createElement(ServicoCore, {slug}) no loader lazy mantendo SSR, SEO e CTAs."
+        }
+      ]
+    },
+    "src/routes/servicos.conserto-placa.tsx": {
+      "before": "3fc835b4c3adc56b54aec9977f69734a",
+      "after": "650a50bbe6f74b1dd4c9fa2fd48d9841",
+      "note": "Componente visual do serviço importado sob demanda via TanStack Router com createElement (sem JSX no módulo virtual); SSR/SEO e conteúdo comercial preservados.",
+      "revisions": [
+        {
+          "sourceCommit": "PR-79",
+          "before": "3fc835b4c3adc56b54aec9977f69734a",
+          "after": "3ba1c0aec77887f99089e19da613fa14",
+          "intervention": "PR-79",
+          "reason": "Reduzir dependências pesadas do bundle compartilhado via lazyRouteComponent; verificar SSR, E2E e Lighthouse antes do merge."
+        },
+        {
+          "sourceCommit": "PR-79",
+          "before": "3ba1c0aec77887f99089e19da613fa14",
+          "after": "650a50bbe6f74b1dd4c9fa2fd48d9841",
+          "intervention": "PR-79",
+          "reason": "Evitar erro JSX no virtual module tanstack-router: usar createElement(ServicoCore, {slug}) no loader lazy mantendo SSR, SEO e CTAs."
+        }
+      ]
+    },
+    "src/routes/servicos.conserto-tv.tsx": {
+      "before": "584af24d45da68329159bd6a05622049",
+      "after": "227e7abc1309c5fc3cd731b78e9f5f6d",
+      "note": "Componente visual do serviço importado sob demanda via TanStack Router com createElement (sem JSX no módulo virtual); SSR/SEO e conteúdo comercial preservados.",
+      "revisions": [
+        {
+          "sourceCommit": "PR-79",
+          "before": "584af24d45da68329159bd6a05622049",
+          "after": "5c8943663dc7b57db543ba407757a22c",
+          "intervention": "PR-79",
+          "reason": "Reduzir dependências pesadas do bundle compartilhado via lazyRouteComponent; verificar SSR, E2E e Lighthouse antes do merge."
+        },
+        {
+          "sourceCommit": "PR-79",
+          "before": "5c8943663dc7b57db543ba407757a22c",
+          "after": "227e7abc1309c5fc3cd731b78e9f5f6d",
+          "intervention": "PR-79",
+          "reason": "Evitar erro JSX no virtual module tanstack-router: usar createElement(ServicoCore, {slug}) no loader lazy mantendo SSR, SEO e CTAs."
+        }
+      ]
+    },
+    "src/routes/servicos.formatacao.tsx": {
+      "before": "91de645f4ec79d22cbd115e97a482339",
+      "after": "3ffcde36b6f3a7c8c6ca0cde91cee537",
+      "note": "Componente visual do serviço importado sob demanda via TanStack Router com createElement (sem JSX no módulo virtual); SSR/SEO e conteúdo comercial preservados.",
+      "revisions": [
+        {
+          "sourceCommit": "PR-79",
+          "before": "91de645f4ec79d22cbd115e97a482339",
+          "after": "28c4971018370f9f4773e3d7d79c9851",
+          "intervention": "PR-79",
+          "reason": "Reduzir dependências pesadas do bundle compartilhado via lazyRouteComponent; verificar SSR, E2E e Lighthouse antes do merge."
+        },
+        {
+          "sourceCommit": "PR-79",
+          "before": "28c4971018370f9f4773e3d7d79c9851",
+          "after": "3ffcde36b6f3a7c8c6ca0cde91cee537",
+          "intervention": "PR-79",
+          "reason": "Evitar erro JSX no virtual module tanstack-router: usar createElement(ServicoCore, {slug}) no loader lazy mantendo SSR, SEO e CTAs."
+        }
+      ]
+    },
+    "src/routes/servicos.manutencao-de-computador.tsx": {
+      "before": "ded784b01fa7cc9d7a9c7cb11bbce99b",
+      "after": "f82631b5af9b2f4689d7e3fe3739b543",
+      "note": "Componente visual do serviço importado sob demanda via TanStack Router com createElement (sem JSX no módulo virtual); SSR/SEO e conteúdo comercial preservados.",
+      "revisions": [
+        {
+          "sourceCommit": "PR-79",
+          "before": "ded784b01fa7cc9d7a9c7cb11bbce99b",
+          "after": "aa3a7e52fecba567182f96349c9e9949",
+          "intervention": "PR-79",
+          "reason": "Reduzir dependências pesadas do bundle compartilhado via lazyRouteComponent; verificar SSR, E2E e Lighthouse antes do merge."
+        },
+        {
+          "sourceCommit": "PR-79",
+          "before": "aa3a7e52fecba567182f96349c9e9949",
+          "after": "f82631b5af9b2f4689d7e3fe3739b543",
+          "intervention": "PR-79",
+          "reason": "Evitar erro JSX no virtual module tanstack-router: usar createElement(ServicoCore, {slug}) no loader lazy mantendo SSR, SEO e CTAs."
+        }
+      ]
+    },
+    "src/routes/servicos.manutencao-de-notebook.tsx": {
+      "before": "926261ed16471b2cb1400ccbe06b3f05",
+      "after": "e1a72d4f80e8943001c9b8f01d0b3cfc",
+      "note": "Componente visual do serviço importado sob demanda via TanStack Router com createElement (sem JSX no módulo virtual); SSR/SEO e conteúdo comercial preservados.",
+      "revisions": [
+        {
+          "sourceCommit": "PR-79",
+          "before": "926261ed16471b2cb1400ccbe06b3f05",
+          "after": "754568b61b81f2d9428301ba9b4fa3ff",
+          "intervention": "PR-79",
+          "reason": "Reduzir dependências pesadas do bundle compartilhado via lazyRouteComponent; verificar SSR, E2E e Lighthouse antes do merge."
+        },
+        {
+          "sourceCommit": "PR-79",
+          "before": "754568b61b81f2d9428301ba9b4fa3ff",
+          "after": "e1a72d4f80e8943001c9b8f01d0b3cfc",
+          "intervention": "PR-79",
+          "reason": "Evitar erro JSX no virtual module tanstack-router: usar createElement(ServicoCore, {slug}) no loader lazy mantendo SSR, SEO e CTAs."
+        }
+      ]
+    },
+    "src/routes/servicos.manutencao-preventiva-empresas.tsx": {
+      "before": "8259d76741858ad6ef7f618863e4390f",
+      "after": "9d792d2a553d8d26282e34a7444f7c4e",
+      "note": "Componente visual do serviço importado sob demanda via TanStack Router com createElement (sem JSX no módulo virtual); SSR/SEO e conteúdo comercial preservados.",
+      "revisions": [
+        {
+          "sourceCommit": "PR-79",
+          "before": "8259d76741858ad6ef7f618863e4390f",
+          "after": "1011d8783bdea9ae7172624d7b67e2eb",
+          "intervention": "PR-79",
+          "reason": "Reduzir dependências pesadas do bundle compartilhado via lazyRouteComponent; verificar SSR, E2E e Lighthouse antes do merge."
+        },
+        {
+          "sourceCommit": "PR-79",
+          "before": "1011d8783bdea9ae7172624d7b67e2eb",
+          "after": "9d792d2a553d8d26282e34a7444f7c4e",
+          "intervention": "PR-79",
+          "reason": "Evitar erro JSX no virtual module tanstack-router: usar createElement(ServicoCore, {slug}) no loader lazy mantendo SSR, SEO e CTAs."
+        }
+      ]
+    },
+    "src/routes/servicos.montagem-de-pc.tsx": {
+      "before": "4f2319708b63e388faddf6c184170691",
+      "after": "2848305b5d2bf02b04db88686e4858d6",
+      "note": "Componente visual do serviço importado sob demanda via TanStack Router com createElement (sem JSX no módulo virtual); SSR/SEO e conteúdo comercial preservados.",
+      "revisions": [
+        {
+          "sourceCommit": "PR-79",
+          "before": "4f2319708b63e388faddf6c184170691",
+          "after": "977a4df035487da726719dc8c5c8ab90",
+          "intervention": "PR-79",
+          "reason": "Reduzir dependências pesadas do bundle compartilhado via lazyRouteComponent; verificar SSR, E2E e Lighthouse antes do merge."
+        },
+        {
+          "sourceCommit": "PR-79",
+          "before": "977a4df035487da726719dc8c5c8ab90",
+          "after": "2848305b5d2bf02b04db88686e4858d6",
+          "intervention": "PR-79",
+          "reason": "Evitar erro JSX no virtual module tanstack-router: usar createElement(ServicoCore, {slug}) no loader lazy mantendo SSR, SEO e CTAs."
+        }
+      ]
+    },
+    "src/routes/servicos.recuperacao-de-dados.tsx": {
+      "before": "3b43f37dc1ee417e0bb47bfd0a9a903a",
+      "after": "761c27fc8d7bf1f37ccbefc2661be57b",
+      "note": "Componente visual do serviço importado sob demanda via TanStack Router com createElement (sem JSX no módulo virtual); SSR/SEO e conteúdo comercial preservados.",
+      "revisions": [
+        {
+          "sourceCommit": "PR-79",
+          "before": "3b43f37dc1ee417e0bb47bfd0a9a903a",
+          "after": "d8ce4d445a21f08957e9f1a758383b3c",
+          "intervention": "PR-79",
+          "reason": "Reduzir dependências pesadas do bundle compartilhado via lazyRouteComponent; verificar SSR, E2E e Lighthouse antes do merge."
+        },
+        {
+          "sourceCommit": "PR-79",
+          "before": "d8ce4d445a21f08957e9f1a758383b3c",
+          "after": "761c27fc8d7bf1f37ccbefc2661be57b",
+          "intervention": "PR-79",
+          "reason": "Evitar erro JSX no virtual module tanstack-router: usar createElement(ServicoCore, {slug}) no loader lazy mantendo SSR, SEO e CTAs."
+        }
+      ]
+    },
+    "src/routes/servicos.redes-e-wifi.tsx": {
+      "before": "1a8712bfacf158ffedfa1b5b578090b1",
+      "after": "564440111fae7076f4ec3dc8afc8292d",
+      "note": "Componente visual do serviço importado sob demanda via TanStack Router com createElement (sem JSX no módulo virtual); SSR/SEO e conteúdo comercial preservados.",
+      "revisions": [
+        {
+          "sourceCommit": "PR-79",
+          "before": "1a8712bfacf158ffedfa1b5b578090b1",
+          "after": "f98954afddc330efcaf290bbd1bb91c8",
+          "intervention": "PR-79",
+          "reason": "Reduzir dependências pesadas do bundle compartilhado via lazyRouteComponent; verificar SSR, E2E e Lighthouse antes do merge."
+        },
+        {
+          "sourceCommit": "PR-79",
+          "before": "f98954afddc330efcaf290bbd1bb91c8",
+          "after": "564440111fae7076f4ec3dc8afc8292d",
+          "intervention": "PR-79",
+          "reason": "Evitar erro JSX no virtual module tanstack-router: usar createElement(ServicoCore, {slug}) no loader lazy mantendo SSR, SEO e CTAs."
+        }
+      ]
+    },
+    "src/routes/servicos.remocao-de-virus.tsx": {
+      "before": "0c18ea1129c7834c05c2baa026b0ea65",
+      "after": "3746e17d97acddc94148e926045ac91b",
+      "note": "Componente visual do serviço importado sob demanda via TanStack Router com createElement (sem JSX no módulo virtual); SSR/SEO e conteúdo comercial preservados.",
+      "revisions": [
+        {
+          "sourceCommit": "PR-79",
+          "before": "0c18ea1129c7834c05c2baa026b0ea65",
+          "after": "5aaa944049049192a04dc51683464a75",
+          "intervention": "PR-79",
+          "reason": "Reduzir dependências pesadas do bundle compartilhado via lazyRouteComponent; verificar SSR, E2E e Lighthouse antes do merge."
+        },
+        {
+          "sourceCommit": "PR-79",
+          "before": "5aaa944049049192a04dc51683464a75",
+          "after": "3746e17d97acddc94148e926045ac91b",
+          "intervention": "PR-79",
+          "reason": "Evitar erro JSX no virtual module tanstack-router: usar createElement(ServicoCore, {slug}) no loader lazy mantendo SSR, SEO e CTAs."
+        }
+      ]
+    },
+    "src/routes/servicos.suporte-home-office.tsx": {
+      "before": "04ebed52f7c5fb0e2516696767c9317e",
+      "after": "32d1628aa1a86261349a436fdf2207bd",
+      "note": "Componente visual do serviço importado sob demanda via TanStack Router com createElement (sem JSX no módulo virtual); SSR/SEO e conteúdo comercial preservados.",
+      "revisions": [
+        {
+          "sourceCommit": "PR-79",
+          "before": "04ebed52f7c5fb0e2516696767c9317e",
+          "after": "5647bee6ae118ea28c3b39e0b5181883",
+          "intervention": "PR-79",
+          "reason": "Reduzir dependências pesadas do bundle compartilhado via lazyRouteComponent; verificar SSR, E2E e Lighthouse antes do merge."
+        },
+        {
+          "sourceCommit": "PR-79",
+          "before": "5647bee6ae118ea28c3b39e0b5181883",
+          "after": "32d1628aa1a86261349a436fdf2207bd",
+          "intervention": "PR-79",
+          "reason": "Evitar erro JSX no virtual module tanstack-router: usar createElement(ServicoCore, {slug}) no loader lazy mantendo SSR, SEO e CTAs."
+        }
+      ]
+    },
+    "src/routes/servicos.upgrade-ssd-ram.tsx": {
+      "before": "66bcb96a6de1747ea8a6fed51664d720",
+      "after": "83cafc8e7abb12f3d9d199e9c7b21437",
+      "note": "Componente visual do serviço importado sob demanda via TanStack Router com createElement (sem JSX no módulo virtual); SSR/SEO e conteúdo comercial preservados.",
+      "revisions": [
+        {
+          "sourceCommit": "PR-79",
+          "before": "66bcb96a6de1747ea8a6fed51664d720",
+          "after": "fb5c973a31d023a6daa02ed0d9949302",
+          "intervention": "PR-79",
+          "reason": "Reduzir dependências pesadas do bundle compartilhado via lazyRouteComponent; verificar SSR, E2E e Lighthouse antes do merge."
+        },
+        {
+          "sourceCommit": "PR-79",
+          "before": "fb5c973a31d023a6daa02ed0d9949302",
+          "after": "83cafc8e7abb12f3d9d199e9c7b21437",
+          "intervention": "PR-79",
+          "reason": "Evitar erro JSX no virtual module tanstack-router: usar createElement(ServicoCore, {slug}) no loader lazy mantendo SSR, SEO e CTAs."
         }
       ]
     }
-  }
+  },
+  "historicalReviews": [
+    {
+      "id": "HISTORICAL-DRIFT-PR79-20261028",
+      "reviewedAt": "2026-10-28",
+      "sourceCommit": "a0c4604015812aa75e00f86e4d0715e74c57b764",
+      "files": 46,
+      "evidence": "docs/pr79-historical-freeze-reconciliation.json",
+      "reason": "O gate de freeze ainda não havia sido alcançado porque check:originality bloqueava o build. Registra diferenças históricas exatas do estado já versionado; não declara ausência de intervenções nas coortes depois do selo."
+    }
+  ]
 }

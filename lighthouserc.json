@@ -19,62 +19,137 @@
       }
     },
     "assert": {
-      "assertions": {
-        "categories:performance": [
-          "warn",
-          {
-            "minScore": 0.85
+      "assertMatrix": [
+        {
+          "matchingUrlPattern": ".*",
+          "assertions": {
+            "categories:performance": [
+              "warn",
+              {
+                "minScore": 0.85
+              }
+            ],
+            "categories:accessibility": [
+              "error",
+              {
+                "minScore": 0.9
+              }
+            ],
+            "largest-contentful-paint": [
+              "error",
+              {
+                "maxNumericValue": 2500
+              }
+            ],
+            "cumulative-layout-shift": [
+              "error",
+              {
+                "maxNumericValue": 0.1
+              }
+            ],
+            "interaction-to-next-paint": [
+              "warn",
+              {
+                "maxNumericValue": 200
+              }
+            ],
+            "first-contentful-paint": [
+              "warn",
+              {
+                "maxNumericValue": 1800
+              }
+            ],
+            "total-blocking-time": [
+              "warn",
+              {
+                "maxNumericValue": 200
+              }
+            ],
+            "server-response-time": [
+              "error",
+              {
+                "maxNumericValue": 600
+              }
+            ]
           }
-        ],
-        "categories:accessibility": [
-          "error",
-          {
-            "minScore": 0.9
+        },
+        {
+          "matchingUrlPattern": "/(?:conserto-tv/(?:curitiba|batel)|conserto-celular/sao-jose-dos-pinhais)$",
+          "assertions": {
+            "document-title": [
+              "error",
+              {
+                "minScore": 1
+              }
+            ],
+            "meta-description": [
+              "error",
+              {
+                "minScore": 1
+              }
+            ],
+            "http-status-code": [
+              "error",
+              {
+                "minScore": 1
+              }
+            ],
+            "link-text": [
+              "error",
+              {
+                "minScore": 1
+              }
+            ],
+            "crawlable-anchors": [
+              "error",
+              {
+                "minScore": 1
+              }
+            ],
+            "robots-txt": [
+              "error",
+              {
+                "minScore": 1
+              }
+            ],
+            "image-alt": [
+              "error",
+              {
+                "minScore": 1
+              }
+            ],
+            "hreflang": [
+              "error",
+              {
+                "minScore": 1
+              }
+            ],
+            "canonical": [
+              "error",
+              {
+                "minScore": 1
+              }
+            ]
           }
-        ],
-        "categories:seo": [
-          "error",
-          {
-            "minScore": 0.9
+        },
+        {
+          "matchingUrlPattern": "/(?:assistencia-tecnica-curitiba|termos-e-condicoes|servicos/(?:manutencao-preventiva-empresas|backup-para-empresas|redes-e-wifi))$",
+          "assertions": {
+            "categories:seo": [
+              "error",
+              {
+                "minScore": 0.9
+              }
+            ],
+            "is-crawlable": [
+              "error",
+              {
+                "minScore": 1
+              }
+            ]
           }
-        ],
-        "largest-contentful-paint": [
-          "error",
-          {
-            "maxNumericValue": 2500
-          }
-        ],
-        "cumulative-layout-shift": [
-          "error",
-          {
-            "maxNumericValue": 0.1
-          }
-        ],
-        "interaction-to-next-paint": [
-          "warn",
-          {
-            "maxNumericValue": 200
-          }
-        ],
-        "first-contentful-paint": [
-          "warn",
-          {
-            "maxNumericValue": 1800
-          }
-        ],
-        "total-blocking-time": [
-          "warn",
-          {
-            "maxNumericValue": 200
-          }
-        ],
-        "server-response-time": [
-          "error",
-          {
-            "maxNumericValue": 600
-          }
-        ]
-      }
+        }
+      ]
     },
     "upload": {
       "target": "filesystem",

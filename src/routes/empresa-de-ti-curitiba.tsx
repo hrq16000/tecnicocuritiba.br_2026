@@ -1,6 +1,6 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, lazyRouteComponent } from "@tanstack/react-router";
 import { seoHead } from "@/lib/seo/routeHead";
-import EmpresaDeTiCuritiba from "@/pages/EmpresaDeTiCuritiba";
+// SSR permanece ativo: somente o componente da rota é carregado sob demanda.
 
 export const Route = createFileRoute("/empresa-de-ti-curitiba")({
   /* seo:auto-start */
@@ -52,5 +52,5 @@ export const Route = createFileRoute("/empresa-de-ti-curitiba")({
     ]
   }),
   /* seo:auto-end */
-  component: EmpresaDeTiCuritiba,
+  component: lazyRouteComponent(() => import("@/pages/EmpresaDeTiCuritiba")),
 });

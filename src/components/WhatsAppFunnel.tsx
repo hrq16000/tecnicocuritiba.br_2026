@@ -3,8 +3,8 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } f
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
-import * as Icons from "lucide-react";
-import { ArrowRight, ArrowLeft, CheckCircle2, Lock, MessageCircle, Copy, ExternalLink, AlertCircle } from "lucide-react";
+import { ArrowRight, ArrowLeft, CheckCircle2, Lock, MessageCircle, Copy, ExternalLink, AlertCircle,
+  Laptop, Tv, Smartphone, TabletSmartphone, Speaker, Gamepad2, Boxes, HelpCircle } from "lucide-react";
 import { trackCTAClick } from "@/lib/analytics";
 import {
   trackFunnelOpen,
@@ -91,6 +91,11 @@ import { setErrorContext } from "@/lib/errorReporter";
 
 
 const WA_HOSTS = ["wa.me", "api.whatsapp.com"];
+// Importação seletiva: acesso dinâmico ao namespace inteiro inclui milhares de
+// ícones no JavaScript inicial do funil, embora a triagem use somente estes oito.
+const EQUIPMENT_ICONS: Record<string, React.ComponentType<{ className?: string }>> = {
+  Laptop, Tv, Smartphone, TabletSmartphone, Speaker, Gamepad2, Boxes, HelpCircle,
+};
 const REDUCED_MOTION =
   typeof window !== "undefined" && window.matchMedia
     ? window.matchMedia("(prefers-reduced-motion: reduce)").matches
@@ -983,7 +988,7 @@ export const WhatsAppFunnel = () => {
                     <p className="text-sm font-medium">Qual o equipamento?</p>
                     <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
                       {EQUIPMENTS.map((eq) => {
-                        const Icon = (Icons[eq.icon as keyof typeof Icons] || Icons.HelpCircle) as React.ComponentType<{ className?: string }>;
+                        const Icon = EQUIPMENT_ICONS[eq.icon] || HelpCircle;
                         const active = answers.equipment === eq.id;
                         return (
                           <button

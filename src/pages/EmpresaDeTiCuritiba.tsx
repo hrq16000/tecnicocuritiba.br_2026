@@ -245,8 +245,8 @@ const EmpresaDeTiCuritiba = () => {
         {/* ═══ HERO ═══ */}
         <section className="relative pt-6 pb-7 md:pt-14 md:pb-14 overflow-hidden hero-gradient">
           <div className="absolute inset-0 pointer-events-none">
-            <div className="absolute top-1/4 right-1/4 w-72 h-72 bg-accent/10 rounded-full blur-[100px] animate-breathe" />
-            <div className="absolute bottom-1/3 left-1/5 w-56 h-56 bg-primary/8 rounded-full blur-[80px] animate-breathe" style={{ animationDelay: "2s" }} />
+            <div className="hidden md:block absolute top-1/4 right-1/4 w-72 h-72 bg-accent/10 rounded-full blur-[100px] animate-breathe" />
+            <div className="hidden md:block absolute bottom-1/3 left-1/5 w-56 h-56 bg-primary/8 rounded-full blur-[80px] animate-breathe" style={{ animationDelay: "2s" }} />
           </div>
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
