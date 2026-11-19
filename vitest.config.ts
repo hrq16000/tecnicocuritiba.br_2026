@@ -1,8 +1,9 @@
 import { defineConfig } from "vitest/config";
 import tsconfigPaths from "vite-tsconfig-paths";
+import { problemaArticlesPlugin } from "./scripts/generate-problema-articles.mjs";
 
 export default defineConfig({
-  plugins: [tsconfigPaths()],
+  plugins: [problemaArticlesPlugin(), tsconfigPaths()],
   test: {
     environment: "jsdom",
     setupFiles: ["./src/test/setup.ts"],

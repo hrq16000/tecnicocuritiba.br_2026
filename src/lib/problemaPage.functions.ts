@@ -1,14 +1,15 @@
-import { createServerFn } from "@tanstack/react-start";
+import type { ProblemaPageData } from "./problemaPagesData";
 
-/** Envia apenas o artigo solicitado; a base editorial fica no servidor. */
-export const getProblemaPage = createServerFn({ method: "GET" })
-  .inputValidator((input: { slug: string }) => {
-    if (!input || typeof input.slug !== "string" || !/^[a-z0-9-]{1,120}$/.test(input.slug)) {
-      throw new Error("Slug de problema inválido.");
-    }
-    return { slug: input.slug };
-  })
-  .handler(async ({ data }) => {
-    const { getProblemaPageBySlug } = await import("./problemaPagesData");
-    return getProblemaPageBySlug(data.slug) ?? null;
-  });
+// Módulos de dados por artigo: SSR e navegação usam o mesmo resultado.
+// O navegador busca um asset do build, sem depender de endpoints de RPC.
+const articles = import.meta.glob<ProblemaPageData>("../generated/problema-articles/*.json", {
+  import: "default",
+});
+
+export async function getProblemaPage({ data }: { data: { slug: string } }): Promise<ProblemaPageData | null> {
+  if (!data || typeof data.slug !== "string" || !/^[a-z0-9-]{1,120}$/.test(data.slug)) {
+    throw new Error("Slug de problema inválido.");
+  }
+  const load = articles[`../generated/problema-articles/${data.slug}.json`];
+  return load ? await load() : null;
+}
