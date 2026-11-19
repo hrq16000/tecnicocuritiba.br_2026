@@ -1,6 +1,7 @@
 import { test, expect, type Page } from "@playwright/test";
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
+import { siteConfig } from "../src/lib/siteConfig";
 
 const ROUTE = "/termos-e-condicoes";
 
@@ -21,7 +22,7 @@ const hasType = (schemas: Schema[], type: string) =>
     return Array.isArray(t) ? t.includes(type) : t === type;
   });
 
-test.describe("/termos-e-condicoes — schema, canonical, single H1, sitemap consistency", () => {
+test.describe("/termos-e-condicoes — alias consolidado, schema e política de sitemap", () => {
   test("renders BreadcrumbList, LocalBusiness, FAQPage JSON-LD", async ({ page }) => {
     await page.goto(ROUTE);
     await page.waitForLoadState("networkidle");
@@ -35,11 +36,19 @@ test.describe("/termos-e-condicoes — schema, canonical, single H1, sitemap con
     expect(localBusiness, "LocalBusiness required").toBeTruthy();
     expect(faq, "FAQPage required").toBeTruthy();
 
-    // LocalBusiness: Curitiba in areaServed, telephone matches WhatsApp, no postal address
+    // LocalBusiness: contato central e localização genérica (cidade/UF), sem endereço físico inventado.
     const area = JSON.stringify((localBusiness as { areaServed?: unknown }).areaServed || "");
     expect(area.toLowerCase()).toContain("curitiba");
-    expect((localBusiness as { telephone?: string }).telephone).toMatch(/\+?55.*4197452053/);
-    expect(JSON.stringify(localBusiness)).not.toMatch(/PostalAddress|streetAddress/i);
+    expect((localBusiness as { telephone?: string }).telephone).toBe(siteConfig.phoneE164);
+    const addr = (localBusiness as { address?: Record<string, unknown> }).address;
+    expect(addr).toMatchObject({
+      "@type": "PostalAddress",
+      addressLocality: siteConfig.primaryCity,
+      addressRegion: siteConfig.region,
+      addressCountry: siteConfig.country,
+    });
+    expect(addr).not.toHaveProperty("streetAddress");
+    expect(addr).not.toHaveProperty("postalCode");
 
     // FAQPage: minimum 5 questions
     const mainEntity = (faq as { mainEntity?: Array<{ name?: string; acceptedAnswer?: { text?: string } }> }).mainEntity || [];
@@ -52,7 +61,7 @@ test.describe("/termos-e-condicoes — schema, canonical, single H1, sitemap con
     // BreadcrumbList: at least 2 items, last item matches canonical
     const items = (breadcrumb as { itemListElement?: Array<{ item?: string }> }).itemListElement || [];
     expect(items.length).toBeGreaterThanOrEqual(2);
-    expect(items[items.length - 1].item).toContain("/termos-e-condicoes");
+    expect(items[items.length - 1].item).toContain("/precos-e-politicas");
   });
 
   test("single H1 + correct canonical + SEO meta tags", async ({ page }) => {
@@ -63,13 +72,13 @@ test.describe("/termos-e-condicoes — schema, canonical, single H1, sitemap con
     await expect(h1).toHaveCount(1);
 
     const canonical = await page.locator('head link[rel="canonical"]').getAttribute("href");
-    expect(canonical).toContain("/termos-e-condicoes");
+    expect(canonical).toBe("https://tecnico.curitiba.br/precos-e-politicas");
 
     await expect(page).toHaveTitle(/Termos.*Condi[çc]/i);
 
     const description = await page.locator('head meta[name="description"]').getAttribute("content");
-    expect(description || "").toMatch(/R\$\s?90/);
-    expect(description || "").toMatch(/R\$\s?99/);
+    expect(description || "").toMatch(/R\$\s?99,99/);
+    expect(description || "").toMatch(/R\$\s?299,99/);
 
     const ogTitle = await page.locator('head meta[property="og:title"]').getAttribute("content");
     const twTitle = await page.locator('head meta[name="twitter:title"]').getAttribute("content");
@@ -77,10 +86,11 @@ test.describe("/termos-e-condicoes — schema, canonical, single H1, sitemap con
     expect(twTitle).toBeTruthy();
   });
 
-  test("sitemap.xml contains /termos-e-condicoes", async () => {
-    const sitemapPath = join(process.cwd(), "public", "sitemap.xml");
+  test("sitemap-main.xml inclui destino canônico e exclui alias consolidado", async () => {
+    const sitemapPath = join(process.cwd(), "public", "sitemap-main.xml");
     const xml = readFileSync(sitemapPath, "utf8");
-    expect(xml).toContain("/termos-e-condicoes");
+    expect(xml).toContain("<loc>https://tecnico.curitiba.br/precos-e-politicas</loc>");
+    expect(xml).not.toContain("<loc>https://tecnico.curitiba.br/termos-e-condicoes</loc>");
   });
 
   test("h1 does not overflow on mobile and desktop", async ({ page }) => {

@@ -11,6 +11,7 @@
 import http from "node:http";
 import { promises as fs } from "node:fs";
 import path from "node:path";
+import { pathToFileURL } from "node:url";
 import { resolvePath } from "./lib/route-manifest.mjs";
 import { HEALTH_PATH, healthPayload, compileManifest, assertManifestSane } from "./lib/edge-router.mjs";
 
@@ -95,7 +96,7 @@ export async function createServer({ distDir = DIST } = {}) {
   });
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (process.argv[1] && import.meta.url === pathToFileURL(path.resolve(process.argv[1])).href) {
   const server = await createServer();
   server.listen(PORT, () => console.log(`[serve-dist] http://localhost:${PORT} (dist: ${DIST})`));
 }

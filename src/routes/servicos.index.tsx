@@ -1,6 +1,6 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, lazyRouteComponent } from "@tanstack/react-router";
 import { seoHead } from "@/lib/seo/routeHead";
-import Servicos from "@/pages/Servicos";
+// Catálogo completo é carregado na sua rota, não no entry global.
 
 export const Route = createFileRoute("/servicos/")({
   /* seo:auto-start */
@@ -36,5 +36,5 @@ export const Route = createFileRoute("/servicos/")({
     ]
   }),
   /* seo:auto-end */
-  component: Servicos,
+  component: lazyRouteComponent(() => import("@/pages/Servicos")),
 });

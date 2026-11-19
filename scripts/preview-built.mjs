@@ -7,6 +7,7 @@ import { pathToFileURL } from "node:url";
 import { parseArgs } from "node:util";
 import { Readable } from "node:stream";
 import { pipeline } from "node:stream/promises";
+import { createGzip, gzipSync } from "node:zlib";
 
 const MIME = {
   ".html": "text/html; charset=utf-8", ".js": "text/javascript; charset=utf-8",
@@ -17,9 +18,18 @@ const MIME = {
   ".ico": "image/x-icon", ".pdf": "application/pdf", ".woff": "font/woff", ".woff2": "font/woff2",
 };
 
+const compressible = (type = "") => /^(text\/|application\/(javascript|json|xml))|image\/svg\+xml/.test(type);
+const acceptsGzip = (value = "") => String(value).split(",").some((entry) => {
+  const [encoding, ...params] = entry.trim().split(";");
+  return encoding === "gzip" && !params.some((p) => /^\s*q\s*=\s*0(?:\.0*)?\s*$/.test(p));
+});
+
 export async function createBuiltPreview({ distDir = "dist", handler } = {}) {
   const dist = path.resolve(distDir);
   const client = path.join(dist, "client");
+  // Mesma negociação HTTP usada no CDN: o preview deve medir bytes de rede
+  // comprimidos, sem trocar o HTML, os assets ou as regras de indexação.
+  const compressedAssets = new Map();
   handler ??= (await import(pathToFileURL(path.join(dist, "server/index.mjs")).href)).default;
   if (typeof handler?.fetch !== "function") throw new Error("Build sem handler.fetch; rode npm run build.");
 
@@ -39,9 +49,24 @@ export async function createBuiltPreview({ distDir = "dist", handler } = {}) {
         // Só arquivos reais. Não usar shell SPA para mascarar 404/redirects SSR.
         for (const file of [asset, path.join(asset, "index.html")]) {
           try {
-            if (!(await stat(file)).isFile()) continue;
-            const body = await readFile(file);
-            res.writeHead(200, { "Content-Type": MIME[path.extname(file)] || "application/octet-stream" });
+            const info = await stat(file);
+            if (!info.isFile()) continue;
+            const contentType = MIME[path.extname(file)] || "application/octet-stream";
+            const useGzip = acceptsGzip(req.headers["accept-encoding"]) && compressible(contentType) && info.size >= 1024;
+            let body;
+            if (useGzip) {
+              const key = `${file}:${info.mtimeMs}:${info.size}`;
+              body = compressedAssets.get(key);
+              if (!body) {
+                body = gzipSync(await readFile(file));
+                if (compressedAssets.size >= 128) compressedAssets.delete(compressedAssets.keys().next().value);
+                compressedAssets.set(key, body);
+              }
+            } else body = await readFile(file);
+            res.writeHead(200, { "Content-Type": contentType, "Content-Length": body.length,
+              ...(compressible(contentType) ? { Vary: "Accept-Encoding" } : {}),
+              ...(useGzip ? { "Content-Encoding": "gzip" } : {}),
+            });
             res.end(req.method === "HEAD" ? undefined : body);
             return;
           } catch (error) {
@@ -61,6 +86,13 @@ export async function createBuiltPreview({ distDir = "dist", handler } = {}) {
       const cookies = response.headers.getSetCookie();
       if (cookies.length) res.setHeader("set-cookie", cookies);
       if (req.method === "HEAD" || !response.body) res.end();
+      else if (acceptsGzip(req.headers["accept-encoding"]) && compressible(response.headers.get("content-type")) && !response.headers.has("content-encoding")) {
+        res.removeHeader("content-length");
+        res.setHeader("Content-Encoding", "gzip");
+        const vary = response.headers.get("vary");
+        res.setHeader("Vary", vary ? `${vary}, Accept-Encoding` : "Accept-Encoding");
+        await pipeline(Readable.fromWeb(response.body), createGzip(), res);
+      }
       else await pipeline(Readable.fromWeb(response.body), res);
     } catch (error) {
       console.error("[preview-built]", error.message);

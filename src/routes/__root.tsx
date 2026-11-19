@@ -52,19 +52,41 @@ try {
 gtag('js', new Date());
 gtag('config', 'G-B9VPHCZC10', { anonymize_ip: true });
 gtag('config', 'AW-17892118207');
-(window.requestIdleCallback || function(cb){ return setTimeout(cb, 1800); })(function(){
-  var s = document.createElement('script');
-  s.async = true;
-  s.src = 'https://www.googletagmanager.com/gtag/js?id=G-B9VPHCZC10';
-  document.head.appendChild(s);
-});
+(function(){
+  var attached = false;
+  var attach = function(){
+    if (attached) return;
+    attached = true;
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-B9VPHCZC10';
+    document.head.appendChild(s);
+  };
+  // As duas páginas B2B preservam gtag/dataLayer e Consent Mode já
+  // inicializados acima, mas não competem com LCP pelo script externo.
+  // Qualquer interação antecipa a carga, para não perder conversões rápidas.
+  var b2b = location.pathname === '/empresas' || location.pathname === '/empresa-de-ti-curitiba';
+  if (b2b) {
+    var timer = setTimeout(attach, 3000);
+    var onInteraction = function(){
+      clearTimeout(timer);
+      attach();
+      document.removeEventListener('pointerdown', onInteraction, true);
+      document.removeEventListener('keydown', onInteraction, true);
+    };
+    document.addEventListener('pointerdown', onInteraction, true);
+    document.addEventListener('keydown', onInteraction, true);
+  } else {
+    (window.requestIdleCallback || function(cb){ return setTimeout(cb, 1800); })(attach);
+  }
+})();
 `;
 
 const GOOGLE_FONTS_HREF =
   "https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Sora:wght@400;500;600;700&display=swap";
 
 /** Promove o preload das webfonts para stylesheet sem bloquear o primeiro paint. */
-const FONTS_SWAP_SNIPPET = `(function(){var h=${JSON.stringify(GOOGLE_FONTS_HREF)};function p(){var l=document.querySelector('link[rel="preload"][href="'+h+'"]');if(l){l.rel="stylesheet";return;}var n=document.createElement("link");n.rel="stylesheet";n.href=h;document.head.appendChild(n);}if(document.readyState==="complete"){p();}else{window.addEventListener("load",p,{once:true});}})();`;
+const FONTS_SWAP_SNIPPET = `(function(){var h=${JSON.stringify(GOOGLE_FONTS_HREF)};function p(){var l=document.querySelector('link[rel="preload"][href="'+h+'"]');if(l){l.rel="stylesheet";return;}var n=document.createElement("link");n.rel="stylesheet";n.href=h;document.head.appendChild(n);}if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",p,{once:true});}else{p();}})();`;
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   beforeLoad: ({ location }) => {

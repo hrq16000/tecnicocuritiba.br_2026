@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { PageSEO } from "@/components/PageSEO";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { IMAGES } from "@/lib/images";
+import { ImageLicenseCaption } from "@/components/ImageLicenseCaption";
 import { Link } from "@/lib/router-compat";
 import { 
   CheckCircle, Clock, Shield, ArrowRight, MessageCircle, 
@@ -109,6 +110,16 @@ export const ServicoBairroTemplate = ({ data }: { data: ServicoBairroData }) => 
     );
   };
 
+
+  // A foto não muda por rota; o crédito factual acompanha a imagem no SSR.
+  const serviceImage = data.servicoSlug.includes("conserto") ? IMAGES.notebookReparo
+    : data.servicoSlug.includes("formatacao") ? IMAGES.tecnicoTrabalhando
+    : data.servicoSlug.includes("virus") ? IMAGES.segurancaDigital
+    : data.servicoSlug.includes("upgrade") ? IMAGES.componentesSsd
+    : data.servicoSlug.includes("redes") ? IMAGES.redesWifi
+    : data.servicoSlug.includes("backup") ? IMAGES.diagnostico
+    : data.servicoSlug.includes("montagem") ? IMAGES.desktopMontado
+    : IMAGES.tecnicoTrabalhando;
 
   // LocalBusiness, Service e BreadcrumbList são emitidos uma única vez pelo
   // head estático da rota (seoHead / inject-route-head). Emitir o grafo aqui
@@ -222,23 +233,17 @@ export const ServicoBairroTemplate = ({ data }: { data: ServicoBairroData }) => 
                     <p>{data.descricaoLonga}</p>
                   </div>
                 </div>
-                <div className="rounded-xl overflow-hidden shadow-lg group">
+                <figure className="rounded-xl overflow-hidden shadow-lg group">
                   <img decoding="async" 
-                    src={data.servicoSlug.includes("conserto") ? IMAGES.notebookReparo 
-                      : data.servicoSlug.includes("formatacao") ? IMAGES.tecnicoTrabalhando
-                      : data.servicoSlug.includes("virus") ? IMAGES.segurancaDigital
-                      : data.servicoSlug.includes("upgrade") ? IMAGES.componentesSsd
-                      : data.servicoSlug.includes("redes") ? IMAGES.redesWifi
-                      : data.servicoSlug.includes("backup") ? IMAGES.diagnostico
-                      : data.servicoSlug.includes("montagem") ? IMAGES.desktopMontado
-                      : IMAGES.tecnicoTrabalhando}
+                    src={serviceImage}
                     alt={`${data.servico} profissional no ${data.bairro}, ${data.cidade}`}
                     className="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-105"
                     loading="lazy"
                     width="800"
                     height="400"
                   />
-                </div>
+                  <ImageLicenseCaption src={serviceImage} />
+                </figure>
               </div>
               
               {/* Location tags with stagger */}

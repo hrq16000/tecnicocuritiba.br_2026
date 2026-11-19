@@ -1,4 +1,4 @@
-import { test, expect } from "@playwright/test";
+import { test, expect, type APIRequestContext } from "@playwright/test";
 import { readFileSync, existsSync, readdirSync } from "fs";
 import { resolve } from "path";
 
@@ -18,7 +18,7 @@ import { resolve } from "path";
 
 const SITE = "https://tecnico.curitiba.br";
 const BASE = process.env.E2E_BASE_URL ?? "http://localhost:4173";
-const DIST = (p: string) => resolve("dist", p);
+
 
 // Amostra representativa exigida pelo prompt.
 const SAMPLE = {
@@ -30,10 +30,14 @@ const SAMPLE = {
 };
 const SAMPLE_SLUGS = Object.values(SAMPLE);
 
-function readDist(rel: string): string {
-  const fp = DIST(rel);
-  expect(existsSync(fp), `arquivo ausente em dist: ${rel} (rode npm run build)`).toBeTruthy();
-  return readFileSync(fp, "utf8");
+// TanStack Start pré-renderiza apenas rotas curadas/indexáveis. Para o blog
+// editorial noindex, validar a resposta SSR efetiva evita um falso negativo
+// por dist/blog ausente e mantém o fail-closed testado de ponta a ponta.
+async function readSsr(request: APIRequestContext, route: string): Promise<string> {
+  const response = await request.get(`${BASE}${route}`);
+  expect(response.status(), `HTTP SSR de ${route}`).toBe(200);
+  expect(response.headers()["content-type"] ?? "").toMatch(/text\/html/i);
+  return response.text();
 }
 
 // ── 1. Registro editorial fail-closed ──────────────────────
@@ -66,21 +70,23 @@ test.describe("Registro editorial (fail-closed)", () => {
 });
 
 // ── 2. Hub /blog no HTML estático ──────────────────────────
-test.describe("Hub /blog (estático)", () => {
-  const html = readDist("blog/index.html");
+test.describe("Hub /blog (SSR, não pré-renderizado)", () => {
 
-  test("canonical self-referente único", () => {
+  test("canonical self-referente único", async ({ request }) => {
+    const html = await readSsr(request, "/blog");
     const canon = html.match(/<link\s+rel=["']canonical["'][^>]*>/gi) || [];
     expect(canon.length).toBe(1);
     expect(canon[0]).toContain(`${SITE}/blog`);
   });
 
-  test("robots noindex,follow", () => {
+  test("robots noindex,follow", async ({ request }) => {
+    const html = await readSsr(request, "/blog");
     const robots = html.match(/<meta\s+name=["']robots["']\s+content=["']([^"']+)["']/i);
     expect(robots?.[1] ?? "").toMatch(/noindex/);
   });
 
-  test("nenhum tipo Person/BlogPosting no JSON-LD", () => {
+  test("nenhum tipo Person/BlogPosting no JSON-LD", async ({ request }) => {
+    const html = await readSsr(request, "/blog");
     for (const block of html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g) || []) {
       const json = JSON.parse(block.replace(/^<script[^>]*>/, "").replace(/<\/script>$/, ""));
       expect(JSON.stringify(json)).not.toContain('"@type":"Person"');
@@ -90,10 +96,10 @@ test.describe("Hub /blog (estático)", () => {
 });
 
 // ── 3. Artigos (amostra) no HTML estático ──────────────────
-test.describe("Artigos em noindex,follow (estático)", () => {
+test.describe("Artigos em noindex,follow (SSR, não pré-renderizados)", () => {
   for (const [tipo, slug] of Object.entries(SAMPLE)) {
-    test(`/blog/${slug} (${tipo}) — HTML próprio noindex,follow + canonical self`, () => {
-      const html = readDist(`blog/${slug}/index.html`);
+    test(`/blog/${slug} (${tipo}) — HTML próprio noindex,follow + canonical self`, async ({ request }) => {
+      const html = await readSsr(request, `/blog/${slug}`);
       const url = `${SITE}/blog/${slug}`;
 
       const robots = html.match(/<meta\s+name=["']robots["'][^>]*>/gi) || [];
@@ -143,14 +149,21 @@ test.describe("Sitemaps (fail-closed)", () => {
     }
   });
 
-  test("sitemap principal = 33 URLs comerciais", () => {
-    const active = ["sitemap-main.xml", "sitemap-servicos.xml", "sitemap-regioes.xml", "sitemap-bairros.xml"];
-    let total = 0;
-    for (const f of active) {
-      const fp = resolve(publicDir, f);
-      if (existsSync(fp)) total += (readFileSync(fp, "utf8").match(/<loc>/gi) || []).length;
+  test("sitemaps ativos só publicam URLs do manifesto curado, sem duplicatas", async () => {
+    // A fonte de verdade é a lista das URLs, nunca uma contagem histórica fixa.
+    // @ts-ignore Manifesto Node .mjs já executado pelo gerador de sitemaps.
+    const { ACTIVE_SITEMAPS, BASE_URL } = await import("../scripts/lib/curated-urls.mjs");
+    for (const [name, entries] of ACTIVE_SITEMAPS) {
+      const fp = resolve(publicDir, name);
+      expect(existsSync(fp), `sitemap ativo ausente: ${name}`).toBe(true);
+      const xml = readFileSync(fp, "utf8");
+      const urls = Array.from(xml.matchAll(new RegExp("<loc>([^<]+)</loc>", "g")), (m) => m[1]);
+      const allowed = new Set(entries.map((entry: { path: string }) => `${BASE_URL}${entry.path}`));
+      expect(new Set(urls).size, `URLs repetidas em ${name}`).toBe(urls.length);
+      for (const url of urls) {
+        expect(allowed.has(url), `URL não curada em ${name}: ${url}`).toBe(true);
+      }
     }
-    expect(total).toBe(33);
   });
 
   test("sitemap-news.xml vazio (sem entradas editoriais)", () => {

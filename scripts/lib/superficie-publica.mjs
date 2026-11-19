@@ -35,6 +35,12 @@ const ADMIN = ["src/pages/admin/", "src/components/admin/", "src/routes/admin", 
 const CI = [".github/", "scripts/", "e2e/", "src/__tests__/", "src/test/", "src/routeTree.gen.ts", "playwright", "vitest", "package.json", "package-lock.json",
   "bun.lockb", "tsconfig", "eslint", "lighthouserc", "vite.config", "supabase/"];
 const OBSERVABILIDADE = ["reports/", "docs/", ".lovable/", "public/fotos/manifest"];
+// Artefatos de auditoria não são conteúdo de URLs curadas; correspondência exata
+// evita classificar outras páginas e recursos públicos como observabilidade.
+const RELATORIOS_PUBLICOS_EXATOS = new Set([
+  "public/reports/faq-parity.csv",
+  "public/reports/faq-parity.md",
+]);
 
 const ehJsonArtefato = (rel) => rel.startsWith("public/") && rel.endsWith(".json") && !rel.includes("/fotos/");
 
@@ -61,7 +67,7 @@ export function classificarArquivo(rel) {
   if (PUBLICO_NAO_CURADO.some((a) => p.startsWith(a))) return "NON_CURATED_PUBLIC_CHANGE";
   if (ehBairroBaseline(p)) return "NON_CURATED_PUBLIC_CHANGE";
   if (CI.some((a) => p.startsWith(a) || p.includes(a))) return "CI_CHANGE";
-  if (OBSERVABILIDADE.some((a) => p.startsWith(a)) || ehJsonArtefato(p)) return "OBSERVABILITY_CHANGE";
+  if (OBSERVABILIDADE.some((a) => p.startsWith(a)) || RELATORIOS_PUBLICOS_EXATOS.has(p) || ehJsonArtefato(p)) return "OBSERVABILITY_CHANGE";
   if (p.startsWith("src/") || p.startsWith("public/") || p === "index.html") return "PUBLIC_CHANGE";
   return "IGNORED";
 }

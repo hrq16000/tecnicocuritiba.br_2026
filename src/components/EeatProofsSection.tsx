@@ -18,7 +18,7 @@ import { siteConfig } from "@/lib/siteConfig";
  */
 export const EeatProofsSection = ({
   titulo = "Quem responde por este atendimento",
-  descricao = "Dados verificáveis, compromissos operacionais e escopo real de trabalho — sem nota, sem depoimento e sem promessa que não conseguimos cumprir.",
+  descricao = "Dados verificáveis, compromissos operacionais e escopo real de trabalho — sem avaliações fabricadas nem promessas que não conseguimos cumprir.",
   className = "",
 }: {
   titulo?: string;

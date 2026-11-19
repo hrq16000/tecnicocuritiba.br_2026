@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { PageSEO } from "@/components/PageSEO";
 import { IMAGES } from "@/lib/images";
+import { ImageLicenseCaption } from "@/components/ImageLicenseCaption";
 import { Link } from "@/lib/router-compat";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -73,9 +74,10 @@ const DiagnosticoTecnico = () => {
         <section className="py-0 bg-background">
           <div className="container mx-auto">
             <div className="max-w-4xl mx-auto -mt-8 relative z-20">
-              <div className="rounded-xl overflow-hidden shadow-2xl">
+              <figure className="rounded-xl overflow-hidden shadow-2xl">
                 <img decoding="async" src={IMAGES.diagnostico} alt={IMAGES.diagnosticoAlt} className="w-full h-48 md:h-64 object-cover" loading="eager" width="800" height="400" />
-              </div>
+                <ImageLicenseCaption src={IMAGES.diagnostico} />
+              </figure>
             </div>
           </div>
         </section>

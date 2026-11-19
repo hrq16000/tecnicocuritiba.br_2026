@@ -52,7 +52,17 @@ for (const file of files.sort()) {
   const hasCredit = html.includes(CREDIT_PREFIX);
   for (const src of srcs) {
     photos++;
-    const host = new URL(src).host;
+    const remote = new URL(src);
+    const host = remote.host;
+    // Endereço absoluto no próprio domínio é asset local, não foto de terceiro.
+    // Exigir existência no build servido; URL remota não concede licença presumida.
+    if (remote.origin === "https://tecnico.curitiba.br") {
+      const localPath = path.resolve(DIST, "." + decodeURIComponent(remote.pathname));
+      if (!localPath.startsWith(DIST + path.sep) || !existsSync(localPath) || !statSync(localPath).isFile()) {
+        errors.push(`${route}: imagem do próprio domínio não encontrada no build — ${remote.pathname}`);
+      }
+      continue;
+    }
     if (!ALLOWED_REMOTE_HOSTS.includes(host)) {
       errors.push(`${route}: host de imagem não licenciado — ${host}`);
       continue;

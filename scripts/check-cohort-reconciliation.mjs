@@ -12,10 +12,12 @@ import { existsSync, readFileSync } from "node:fs";
 import { CURATED_PATHS } from "./lib/curated-urls.mjs";
 
 const LEDGER = "public/intervencoes-d0.json";
-// Atualizado em 2026-08-25 (INT-2026-08-25-003): o interlinking do template de
-// bairro alcançou as 26 URLs /bairros/* curadas, migrando-as de descoberta
-// indireta para intervenção direta. Total permanece 130.
-const ESPERADO = { CLEAN_COHORT: 91, INTERVENTION_COHORT: 28, INDIRECT_DISCOVERY_COHORT: 11 };
+// O selo histórico FREEZE_V2 (b832bbdf095e...) inclui o evento
+// INT-2026-08-25-005: /tecnico-informatica-curitiba passou de descoberta
+// indireta para intervenção direta. O ledger e o freeze já selam 91/29/10;
+// somente este gate ainda conservava 91/28/11 do evento 003. Não regravar
+// ledger, snapshots ou selo para corrigir essa expectativa desatualizada.
+const ESPERADO = { CLEAN_COHORT: 91, INTERVENTION_COHORT: 29, INDIRECT_DISCOVERY_COHORT: 10 };
 
 if (!existsSync(LEDGER)) {
   console.error(`❌ Ledger ausente (${LEDGER}). Rode: npm run intervencao:registrar`);
@@ -58,4 +60,4 @@ if (erros.length) {
   for (const e of erros) console.error(`  • ${e}`);
   process.exit(1);
 }
-console.log("✅ 91 + 28 + 11 = 130 — coortes íntegras e mutuamente exclusivas.");
+console.log("✅ 91 + 29 + 10 = 130 — coortes íntegras e mutuamente exclusivas.");

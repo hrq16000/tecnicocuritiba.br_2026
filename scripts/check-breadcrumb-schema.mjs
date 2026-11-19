@@ -2,19 +2,25 @@
 /**
  * GATE — BreadcrumbList das páginas serviço × cidade/bairro.
  *
- * Valida no build (dist/) que cada /conserto-<categoria>/<local>/ tem:
+ * Valida as combinações de serviço/local aprovadas no manifesto de indexação.
+ * As rotas fora do índice não podem bloquear o CI por ausência de HTML.
+ * --all força a auditoria estrita das 76 combinações (para testes).
  *   • exatamente 1 BreadcrumbList;
  *   • 3 níveis na ordem Home > Serviço > Cidade;
  *   • `item` de cada nível apontando para URLs reais (nível 3 == canonical);
  *   • os mesmos rótulos presentes na trilha visível do HTML.
  *
- * Uso: node scripts/check-breadcrumb-schema.mjs [dist]
+ * Uso: node scripts/check-breadcrumb-schema.mjs [dist/client]
  */
 import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { CATEGORIES, LOCAIS, cityLabel } from "./lib/category-local.mjs";
+import { ACTIVE_SITEMAPS } from "./lib/curated-urls.mjs";
 
-const DIST = path.resolve(process.argv[2] || "dist");
+const explicitDist = process.argv.slice(2).find((arg) => !arg.startsWith("--"));
+const DIST = path.resolve(explicitDist || "dist/client");
+const ALL = process.argv.includes("--all");
+const indexable = new Set(ACTIVE_SITEMAPS.flatMap(([, entries]) => entries.map((entry) => entry.path)));
 const SITE = "https://tecnico.curitiba.br";
 
 if (!existsSync(DIST)) {
@@ -43,6 +49,8 @@ let checked = 0;
 for (const cat of CATEGORIES) {
   for (const local of LOCAIS) {
     const route = `/${cat.slug}/${local.slug}`;
+    // A política anti-doorway só autoriza validar/indexar URLs expressamente curadas.
+    if (!ALL && !indexable.has(route)) continue;
     const file = path.join(DIST, cat.slug, local.slug, "index.html");
     if (!existsSync(file)) {
       errors.push(`${route}: HTML estático ausente (${path.relative(DIST, file)})`);
@@ -98,4 +106,4 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log(`OK — BreadcrumbList Home > Serviço > Cidade válido em ${checked} páginas serviço × local.`);
+console.log(`OK — BreadcrumbList válido em ${checked} URL(s) curada(s) de serviço × local${ALL ? ' (modo --all)' : ''}; 76 candidatas não são promovidas automaticamente.`);

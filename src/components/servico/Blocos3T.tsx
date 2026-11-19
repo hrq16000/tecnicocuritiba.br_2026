@@ -62,7 +62,7 @@ const Secao = ({ secao }: { secao: Secao3T }) => {
       return (
         <div className="container mx-auto px-4">
           <H2>{secao.titulo}</H2>
-          <div className="overflow-x-auto">
+          <div className="overflow-x-auto" tabIndex={0} role="region" aria-label={`Tabela comparativa: ${secao.titulo}`}>
             <table className="w-full min-w-[520px] border-collapse text-left text-sm">
               <caption className="sr-only">{secao.titulo}</caption>
               <thead>

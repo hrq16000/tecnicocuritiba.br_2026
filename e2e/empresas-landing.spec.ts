@@ -148,3 +148,19 @@ test("landing /empresas entrega noindex e canonical no HTML inicial e após hidr
     "https://tecnico.curitiba.br/empresas",
   );
 });
+
+test("SSR nas duas rotas empresariais preserva HTML inicial e canonical", async ({ request }) => {
+  for (const [path, heading, robotsExpected] of [
+    ["/empresas", /Atendimento empresarial de TI em Curitiba/i, /\bnoindex\b/i],
+    ["/empresa-de-ti-curitiba", /Soluções de TI para empresas em Curitiba/i, /\bindex\b/i],
+  ] as const) {
+    const response = await request.get(path);
+    expect(response.status(), `SSR de ${path}`).toBe(200);
+    const html = await response.text();
+    expect(html).toMatch(/<h1\b/i);
+    expect(html).toMatch(heading);
+    expect(html).toContain(`https://tecnico.curitiba.br${path}`);
+    const robots = html.match(/<meta\b(?=[^>]*name=["']robots["'])(?=[^>]*content=["']([^"']*)["'])[^>]*>/i)?.[1] ?? "";
+    expect(robots, `robots SSR ${path}`).toMatch(robotsExpected);
+  }
+});

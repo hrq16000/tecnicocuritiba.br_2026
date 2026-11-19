@@ -14,15 +14,36 @@ import { readFileSync } from "node:fs";
 const EVENTS = ["wa_click", "call_click"];
 const UTMS = ["utm_source", "utm_medium", "utm_campaign"];
 
-const funnel = readFileSync("src/lib/funnelAnalytics.ts", "utf8");
-const weekly = readFileSync("scripts/report-weekly-seo.mjs", "utf8");
+const funnel = readFileSync(process.argv[2] || "src/lib/funnelAnalytics.ts", "utf8");
+const weekly = readFileSync(process.argv[3] || "scripts/report-weekly-seo.mjs", "utf8");
+
+// Implementação atual usa encaminhamento tipado por trackConversionClick:
+// trackWaClick/trackCallClick fornecem nomes literais; dispatcher envia o mesmo
+// eventName ao GA4 e a click_events. Não exigir calls literais obsoletas.
+const conversionBody = funnel.split("const trackConversionClick")[1]?.split("\n};")[0] ?? "";
+const forwardsToGa4 = /track\(\s*eventName\s*,\s*payload\s*\)/.test(conversionBody);
+const forwardsToDb = /persistClickEvent\(\s*eventName\s*,\s*location\s*,\s*ctx\s*,/.test(conversionBody);
+const typedNames = /eventName:\s*"wa_click"\s*\|\s*"call_click"/.test(conversionBody);
+
 
 const errors = [];
 
-for (const ev of EVENTS) {
-  if (!new RegExp(`track\\("${ev}"`).test(funnel)) errors.push(`GA4 não dispara "${ev}" em funnelAnalytics.ts`);
-  if (!new RegExp(`persistClickEvent\\("${ev}"`).test(funnel)) errors.push(`"${ev}" não é persistido em click_events`);
-  if (!weekly.includes(`"${ev}"`)) errors.push(`relatório semanal não contabiliza "${ev}"`);
+for (const [ev, kind, exportName] of [
+  ["wa_click", "whatsapp", "trackWaClick"],
+  ["call_click", "phone", "trackCallClick"],
+]) {
+  const directGa4 = new RegExp(`track\\s*\\(\\s*["']${ev}["']`).test(funnel);
+  const directDb = new RegExp(`persistClickEvent\\s*\\(\\s*["']${ev}["']`).test(funnel);
+  // Caller MUST bind the required public export to the typed dispatcher.
+  const caller = new RegExp(
+    `export\\s+const\\s+${exportName}\\b[\\s\\S]{0,220}?trackConversionClick\\s*\\(\\s*["']${kind}["']\\s*,\\s*["']${ev}["']`,
+  ).test(funnel);
+  if (!directGa4 && !(typedNames && forwardsToGa4 && caller))
+    errors.push(`GA4 não dispara "${ev}" em funnelAnalytics.ts`);
+  if (!directDb && !(typedNames && forwardsToDb && caller))
+    errors.push(`"${ev}" não é persistido em click_events`);
+  if (!weekly.includes(`"${ev}"`))
+    errors.push(`relatório semanal não contabiliza "${ev}"`);
 }
 
 // UTMs precisam existir tanto no payload do GA4 (baseParams) quanto no insert.
