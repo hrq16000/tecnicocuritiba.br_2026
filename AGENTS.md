@@ -11,3 +11,6 @@ Instruções incrementais para referências visuais. Consultar antes o README e 
 - Escopo: Site técnico com automações SEO: preservar marca, SEO por localidade, gates, canais de atendimento, privacidade e dados; não copiar visual de outros portais.
 - Implementar mudanças funcionais só em PRs pequenas com gates existentes, QA em 390/1440 quando houver UI e fallback sem animação. Preservar SEO, privacidade, dados, integrações e produção.
 - Não instalar CLIs, skills, pacotes externos ou serviços pagos de forma automática. Regras existentes do projeto têm precedência.
+
+## Padrão anti-site genérico — R8/10
+- Para trabalho visual autorizado, ler `docs/skills/ANTI_GENERIC_EXPERIENCE.md` antes do código. A diretriz integra TasteSkill, Transitions.dev, React Bits e Emil Kowalski; não substitui as regras específicas deste repositório.
