@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { PageSEO } from "@/components/PageSEO";
 import { PoliticaAtendimentoBlock } from "@/components/PoliticaAtendimentoBlock";
 import { IMAGES } from "@/lib/images";
+import { PhotoCaption } from "@/components/PhotoCaption";
 import { Link } from "@/lib/router-compat";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -142,11 +143,12 @@ const ComoFunciona = () => {
         {/* Imagem real de atendimento */}
         <section className="py-0 bg-background">
           <div className="container mx-auto">
-            <div className="max-w-4xl mx-auto -mt-8 relative z-20">
+            <figure className="max-w-4xl mx-auto -mt-8 relative z-20">
               <div className="rounded-xl overflow-hidden shadow-2xl">
                 <img decoding="async" src={IMAGES.atendimentoDomiciliar} alt={IMAGES.atendimentoDomiciliarAlt} className="w-full h-48 md:h-72 object-cover" loading="eager" width="800" height="400" />
               </div>
-            </div>
+              <PhotoCaption src={IMAGES.atendimentoDomiciliar} />
+            </figure>
           </div>
         </section>
 
