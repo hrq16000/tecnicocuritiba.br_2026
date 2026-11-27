@@ -22,6 +22,7 @@ import type { ProblemaPageData } from "@/lib/problemaPagesData";
 import ReactMarkdown from "react-markdown";
 import { IMAGES } from "@/lib/images";
 import { RealImageSection } from "@/components/RealImageSection";
+import { PhotoCaption } from "@/components/PhotoCaption";
 import { siteConfig, absoluteUrl } from "@/lib/siteConfig";
 
 const BAIRROS_ATENDIDOS = [
@@ -377,7 +378,7 @@ const ProblemaPage = () => {
                     height={400}
                     className="rounded-xl w-full h-56 md:h-64 object-cover shadow-md"
                   />
-                  <figcaption className="text-xs text-muted-foreground mt-2 text-center italic">Estação de diagnóstico com multímetro e osciloscópio</figcaption>
+                  <PhotoCaption src={IMAGES.estacaoSolda} caption="Estação de diagnóstico com multímetro e osciloscópio" />
                 </figure>
                 <div className="bg-accent/10 border border-accent/20 rounded-xl p-4 text-center">
                   <p className="text-sm text-muted-foreground mb-1">Diagnóstico profissional</p>
@@ -420,7 +421,7 @@ const ProblemaPage = () => {
                     height={400}
                     className="rounded-xl w-full h-56 md:h-64 object-cover shadow-md"
                   />
-                  <figcaption className="text-xs text-muted-foreground mt-2 text-center italic">Microsoldagem sob microscópio trinocular profissional</figcaption>
+                  <PhotoCaption src={IMAGES.microscopio} caption="Microsoldagem sob microscópio trinocular profissional" />
                 </figure>
                 <figure>
                   <img
@@ -432,7 +433,7 @@ const ProblemaPage = () => {
                     height={400}
                     className="rounded-xl w-full h-40 md:h-48 object-cover shadow-md"
                   />
-                  <figcaption className="text-xs text-muted-foreground mt-2 text-center italic">Ferramentas de precisão para reparo de componentes SMD</figcaption>
+                  <PhotoCaption src={IMAGES.ferramentas} caption="Ferramentas de precisão para reparo de componentes SMD" />
                 </figure>
               </div>
               <div className="bg-secondary rounded-xl p-6 border border-border space-y-3 md:order-0">

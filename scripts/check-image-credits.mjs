@@ -14,7 +14,9 @@ import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
 import path from "node:path";
 import { ALLOWED_REMOTE_HOSTS, CREDIT_PREFIX, creditFor } from "./lib/image-credits.mjs";
 
-const DIST = path.resolve(process.argv[2] || "dist");
+const buildRoot = path.resolve(process.argv[2] || "dist");
+const DIST = existsSync(path.join(buildRoot, "client")) ? path.join(buildRoot, "client") : buildRoot;
+const SITE = "https://tecnico.curitiba.br";
 if (!existsSync(DIST)) {
   console.error(`BLOQUEADO: ${DIST} não existe — rode "npm run build" antes.`);
   process.exit(1);
@@ -34,6 +36,7 @@ const files = [];
 const errors = [];
 let pagesWithPhotos = 0;
 let photos = 0;
+let localAssets = 0;
 
 for (const file of files.sort()) {
   const route = ("/" + path.relative(DIST, file).replace(/index\.html$/, "").replace(/\\/g, "/")).replace(/\/$/, "") || "/";
@@ -47,12 +50,25 @@ for (const file of files.sort()) {
 
   const srcs = [...html.matchAll(/<img[^>]+src="(https?:\/\/[^"]+)"/g)].map((m) => m[1]);
   if (!srcs.length) continue;
-  pagesWithPhotos++;
+  let hasRemote = false;
 
   const hasCredit = html.includes(CREDIT_PREFIX);
   for (const src of srcs) {
+    const url = new URL(src);
+    const host = url.host;
+    // Assets absolutos do próprio domínio são locais, mas precisam existir no build.
+    if (url.origin === SITE) {
+      const asset = path.resolve(DIST, "." + decodeURIComponent(url.pathname));
+      const relative = path.relative(DIST, asset);
+      if (relative === ".." || relative.startsWith(".." + path.sep) || path.isAbsolute(relative) || !existsSync(asset) || !statSync(asset).isFile()) {
+        errors.push(`${route}: asset local inexistente — ${url.pathname}`);
+      } else {
+        localAssets++;
+      }
+      continue;
+    }
+    hasRemote = true;
     photos++;
-    const host = new URL(src).host;
     if (!ALLOWED_REMOTE_HOSTS.includes(host)) {
       errors.push(`${route}: host de imagem não licenciado — ${host}`);
       continue;
@@ -68,6 +84,7 @@ for (const file of files.sort()) {
     const inFigcaption = /<figcaption[^>]*>[^<]*Foto:/.test(html) || /<figcaption[\s\S]{0,400}?Foto:/.test(html);
     if (!inFigcaption) errors.push(`${route}: crédito fora de <figcaption> (local incorreto)`);
   }
+  if (hasRemote) pagesWithPhotos++;
 }
 
 if (errors.length) {
@@ -78,4 +95,4 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log(`OK — ${photos} foto(s) licenciada(s) em ${pagesWithPhotos} página(s), todas com crédito visível em <figcaption>.`);
+console.log(`OK — ${photos} foto(s) licenciada(s) em ${pagesWithPhotos} página(s), todas com crédito visível em <figcaption>; ${localAssets} asset(s) absoluto(s) do próprio domínio verificados.`);
