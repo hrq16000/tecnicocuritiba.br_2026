@@ -1,9 +1,9 @@
 # Design engineering premium — análise e adoção Emil Kowalski
 
-**Estado:** R0 — diagnóstico estático e diretriz documental; implementação NÃO iniciada.
+**Estado:** R0 + R1.2 — diagnóstico estático e auditoria visual desktop parcial; implementação NÃO iniciada.
 **Data:** 27/11/2026 • **Repositório:** hrq16000/tecnicocuritiba.br_2026 • **Checkpoint analisado da main:** `ef83e3c6ed53d600feffd158d2699b990bcf2aa8`.
 
-Este documento é incremental. As regras locais de AGENTS.md, DESIGN.md, segurança, SEO, arquitetura, publicação, dados e funis prevalecem. Não autoriza alterações de runtime, instalações, custos, merge ou deploy. Não substitui a homologação visual da versão efetivamente publicada. O navegador ao vivo teve timeout nesta rodada; nenhuma inspeção de screenshots, teste visual, medição de performance ou aprovação de produção é reivindicada.
+Este documento é incremental. As regras locais de AGENTS.md, DESIGN.md, segurança, SEO, arquitetura, publicação, dados e funis prevalecem. Não autoriza alterações de runtime, instalações, custos, merge ou deploy. Não substitui a homologação visual da versão efetivamente publicada. A auditoria ao vivo posterior (R1.2) está registrada na seção 7; não implica homologação da produção.
 
 ## 1. Diagnóstico por projeto (evidência de leitura)
 
@@ -74,3 +74,13 @@ Se não existirem tokens equivalentes, avaliar curva de entrada/saída `cubic-be
 GO para implementação somente com baseline visual, brief próprio da marca, propósito de cada movimento, seleção dos módulos pertinentes e uma micro-superfície definida. GO para release somente com gates locais, comparação real nos viewports, interação funcional, reduced-motion, zero regressão crítica de performance/conversão, sem novos riscos de acessibilidade, SSR/SEO e privacidade. NO-GO se movimento interferir na ação, se houver conteúdo invisível, template copiado, alteração comercial incidental, bloqueio de dados, dependência sem justificativa ou validação inconclusiva.
 
 **Registro desta rodada:** leitura de referências e arquivos; documentação proposta/registrada em branch isolada. Nenhum código de aplicação, dependência, banco, DNS ou configuração de hospedagem foi alterado por esta diretriz.
+
+## 7. R1.2 — Auditoria visual inicial da Home (27/11/2026)
+
+- **URL pública observada:** https://tecnico.curitiba.br/
+- **Viewport efetivo:** 1363 × 936 CSS px; scrollWidth 1353; captura no navegador alternativo; h1 visual e AX presente.
+- **Evidência:** captura de tela do primeiro viewport e leitura de estado público. Hero usa foto reconhecível do Jardim Botânico, texto de alto impacto, navegação para serviços, valor inicial e prova de confiança. A árvore mostra carrossel de quatro pontos turísticos com controles de pausa, anterior/próximo e abas; há também sequência de confiança. No screenshot a palavra destacada em azul e link secundário sobre a fotografia têm contraste aparente inferior ao branco — medir antes de afirmar falha WCAG. O banner inferior esquerdo encobre parte da faixa de confiança/prova. A palavra notebook quebra como note-/book na largura observada. Sem overflow horizontal na medição.
+- **P0 — antes de direção de arte:** Medir contraste real para todos os slides; preservar leitura/CTA durante transições, controle de pausa e reduced-motion. Proteger faixa de confiança do consentimento e testar layout/zoom mobile.
+- **P1 — candidato de protótipo:** Manter a identidade local autêntica, avaliar hero estático versus crossfade lento controlado e fotografias de procedimento licenciadas; remover duplicidade de motion entre slides e provas se não tiver finalidade. Não usar novo 3D sobre a ação de atendimento.
+- **Skills aplicáveis:** find-animation-opportunities, remove-animations, review-animations, emil-design-eng, animation-performance, break-ui e mobile-native quando houver baseline móvel. `prototype` somente após terminar R1.
+- **Limites:** Calibração para 1440/390 px não concluída por timeout na extensão; o navegador alternativo permitiu inspeção desktop sem ajuste do viewport. Mobile e tablet pendentes. Não houve submissão de formulários, acionamento de WhatsApp, mudança de consentimento, verificação de commit implantado, medição de Web Vitals ou teste completo de acessibilidade/funil. Nenhuma captura foi incluída no Git. Não alterar contratos comerciais, SEO, dados, dependências, código ou produção com base neste diagnóstico. A aprovação R1 integral permanece pendente.
