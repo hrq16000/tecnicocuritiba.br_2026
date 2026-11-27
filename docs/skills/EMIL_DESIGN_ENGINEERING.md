@@ -1,6 +1,6 @@
 # Design engineering premium — análise e adoção Emil Kowalski
 
-**Estado:** R0 + R1.2 — diagnóstico estático e auditoria visual desktop parcial; implementação NÃO iniciada.
+**Estado:** R0 + R1.2/R1.3 — diagnóstico estático e auditoria inicial desktop/mobile; implementação NÃO iniciada.
 **Data:** 27/11/2026 • **Repositório:** hrq16000/tecnicocuritiba.br_2026 • **Checkpoint analisado da main:** `ef83e3c6ed53d600feffd158d2699b990bcf2aa8`.
 
 Este documento é incremental. As regras locais de AGENTS.md, DESIGN.md, segurança, SEO, arquitetura, publicação, dados e funis prevalecem. Não autoriza alterações de runtime, instalações, custos, merge ou deploy. Não substitui a homologação visual da versão efetivamente publicada. A auditoria ao vivo posterior (R1.2) está registrada na seção 7; não implica homologação da produção.
@@ -83,4 +83,14 @@ GO para implementação somente com baseline visual, brief próprio da marca, pr
 - **P0 — antes de direção de arte:** Medir contraste real para todos os slides; preservar leitura/CTA durante transições, controle de pausa e reduced-motion. Proteger faixa de confiança do consentimento e testar layout/zoom mobile.
 - **P1 — candidato de protótipo:** Manter a identidade local autêntica, avaliar hero estático versus crossfade lento controlado e fotografias de procedimento licenciadas; remover duplicidade de motion entre slides e provas se não tiver finalidade. Não usar novo 3D sobre a ação de atendimento.
 - **Skills aplicáveis:** find-animation-opportunities, remove-animations, review-animations, emil-design-eng, animation-performance, break-ui e mobile-native quando houver baseline móvel. `prototype` somente após terminar R1.
-- **Limites:** Calibração para 1440/390 px não concluída por timeout na extensão; o navegador alternativo permitiu inspeção desktop sem ajuste do viewport. Mobile e tablet pendentes. Não houve submissão de formulários, acionamento de WhatsApp, mudança de consentimento, verificação de commit implantado, medição de Web Vitals ou teste completo de acessibilidade/funil. Nenhuma captura foi incluída no Git. Não alterar contratos comerciais, SEO, dados, dependências, código ou produção com base neste diagnóstico. A aprovação R1 integral permanece pendente.
+- **Limites:** Calibração para 1440/390 px não concluída por timeout na extensão; o navegador alternativo permitiu inspeção desktop sem ajuste do viewport. Mobile e tablet estavam pendentes na R1.2; recuperação mobile consta na seção 8. Não houve submissão de formulários, acionamento de WhatsApp, mudança de consentimento, verificação de commit implantado, medição de Web Vitals ou teste completo de acessibilidade/funil. Nenhuma captura foi incluída no Git. Não alterar contratos comerciais, SEO, dados, dependências, código ou produção com base neste diagnóstico. A aprovação R1 integral permanece pendente.
+
+## 8. R1.3 — Recuperação da baseline mobile (27/11/2026)
+
+- **URL pública observada:** https://tecnico.curitiba.br/
+- **Viewport medido:** 390 × 844 CSS px, scrollWidth 377.
+- **Evidência:** captura(s) do primeiro viewport, leitura de DOM/estado público. Hero sobre fotografia local, CTA de descrever problema e CTA ver serviços empilhados e visíveis; chips de serviço abaixo. H1 quebra 'compu-/tador' e a parte azul sobre fotografia e o link inferior parecem menos legíveis; medir contraste para todas as imagens. Banner não apareceu na captura inicial, sem inferir ausência permanente. Sem overflow.
+- **P0 — prioridade antes de prototipar:** Ajustar wrapping, contraste e overlays, preservar CTA e controles dos slides em todas as larguras. Testar zoom e reduced motion.
+- **P1 — direção de arte e motion:** Preservar identidade local e testar fotografia estática contra transição controlada, sem ornamentação adicional.
+- **Skills aplicáveis:** find-animation-opportunities, remove-animations, review-animations, emil-design-eng, animation-performance, break-ui, mobile-native; prototype após diagnóstico completo.
+- **Limites:** Desktop anterior registrado na seção 7; tentativa de recalibrar 1440 exatos interrompida. Tablet, outras rotas, teclado, reduced-motion, LCP/CLS/INP, build/deployment SHA e funil completo pendentes. Não houve submissão de formulário, WhatsApp, alteração de consentimento, código, dependências, dados, produção ou merge. Não incluímos screenshots no Git. Esta é baseline inicial, não homologação.
