@@ -71,7 +71,7 @@ export const LocalFAQSection = ({ title, faqs }: LocalFAQSectionProps) => {
                 <AccordionTrigger className="px-5 py-4 text-left font-semibold text-foreground hover:text-accent hover:no-underline">
                   {item.question}
                 </AccordionTrigger>
-                <AccordionContent className="px-5 pb-4 text-muted-foreground leading-relaxed">
+                <AccordionContent forceMount className="px-5 pb-4 text-muted-foreground leading-relaxed">
                   {item.answer}
                 </AccordionContent>
               </AccordionItem>
