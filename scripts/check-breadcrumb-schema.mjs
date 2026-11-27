@@ -2,7 +2,7 @@
 /**
  * GATE — BreadcrumbList das páginas serviço × cidade/bairro.
  *
- * Valida no build (dist/) que cada /conserto-<categoria>/<local>/ tem:
+ * Valida no HTML do handler SSR do build (fallback para HTML estático) que cada /conserto-<categoria>/<local>/ tem:
  *   • exatamente 1 BreadcrumbList;
  *   • 3 níveis na ordem Home > Serviço > Cidade;
  *   • `item` de cada nível apontando para URLs reais (nível 3 == canonical);
@@ -12,6 +12,7 @@
  */
 import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
+import { pathToFileURL } from "node:url";
 import { CATEGORIES, LOCAIS, cityLabel } from "./lib/category-local.mjs";
 
 const DIST = path.resolve(process.argv[2] || "dist");
@@ -37,20 +38,36 @@ const norm = (s) =>
     .replace(/[^a-z0-9]+/g, " ")
     .trim();
 
+// O build TanStack/Nitro materializa dist/server; os hubs noindex não são prerenderizados.
+const serverEntry = path.join(DIST, "server/index.mjs");
+const handler = existsSync(serverEntry) ? (await import(pathToFileURL(serverEntry).href)).default : null;
+if (handler && typeof handler.fetch !== "function") {
+  throw new Error("Build SSR sem handler.fetch");
+}
+const staticRoot = existsSync(path.join(DIST, "client")) ? path.join(DIST, "client") : DIST;
 const errors = [];
 let checked = 0;
 
 for (const cat of CATEGORIES) {
   for (const local of LOCAIS) {
     const route = `/${cat.slug}/${local.slug}`;
-    const file = path.join(DIST, cat.slug, local.slug, "index.html");
-    if (!existsSync(file)) {
-      errors.push(`${route}: HTML estático ausente (${path.relative(DIST, file)})`);
+    let html;
+    try {
+      if (handler) {
+        const res = await handler.fetch(new Request(`${SITE}${route}`), {}, { waitUntil() {} });
+        if (res.status !== 200) throw new Error(`HTTP ${res.status}`);
+        html = await res.text();
+      } else {
+        const file = path.join(staticRoot, cat.slug, local.slug, "index.html");
+        if (!existsSync(file)) throw new Error(`HTML estático ausente (${path.relative(DIST, file)})`);
+        html = readFileSync(file, "utf8");
+      }
+    } catch (e) {
+      errors.push(`${route}: ${e.message}`);
       continue;
     }
     checked++;
-    const html = readFileSync(file, "utf8");
-    const blocks = [...html.matchAll(/<script type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/gi)]
+    const blocks = [...html.matchAll(/<script[^>]*\btype="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/gi)]
       .map((m) => { try { return JSON.parse(m[1]); } catch { return null; } })
       .filter(Boolean);
     const crumbs = blocks.flatMap(flatten).filter((n) => n["@type"] === "BreadcrumbList");

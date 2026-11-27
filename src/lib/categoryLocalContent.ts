@@ -81,6 +81,15 @@ export function clamp(text: string, max = 165): string {
 export const cityLabel = (l: LocalData) =>
   l.kind === "bairro" ? `${l.nome}, ${l.cidadeMae}` : l.nome;
 
+/** Trilha canônica compartilhada pelo head SSR e pela navegação visível. */
+export function categoryLocalBreadcrumbs(cat: CategoryData, local: LocalData) {
+  return [
+    { name: "Início", path: "/" },
+    { name: cat.titlePrefix, path: `/${cat.slug}-curitiba` },
+    { name: cityLabel(local), path: `/${cat.slug}/${local.slug}` },
+  ];
+}
+
 export const shortLabel = (l: LocalData) =>
   l.kind === "bairro" ? `${l.nome} (Curitiba)` : l.nome;
 

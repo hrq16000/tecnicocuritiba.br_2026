@@ -5,6 +5,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageHero } from "@/components/PageHero";
 import { PageSEO } from "@/components/PageSEO";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { BenefitsGrid } from "@/components/BenefitsGrid";
 import { CTASection } from "@/components/CTASection";
 import { trackPageView } from "@/lib/analytics";
@@ -13,6 +14,7 @@ import { CATEGORIES, type CategoryId, findCategory } from "./categories";
 import { LOCAIS, findLocal, type LocalData } from "./locais";
 import {
   categoryLocalMeta,
+  categoryLocalBreadcrumbs,
   localizedFaqs,
   offerFor,
   faixaDe,
@@ -75,6 +77,7 @@ export const CategoryLocalTemplate = ({ categoryId, localSlug }: Props) => {
   }, [path, title, local]);
 
   if (!local) return <Navigate to={`/${category.slug}-curitiba`} replace />;
+  const breadcrumbs = categoryLocalBreadcrumbs(category, local);
 
   const serviceSchema = {
     "@context": "https://schema.org",
@@ -114,11 +117,7 @@ export const CategoryLocalTemplate = ({ categoryId, localSlug }: Props) => {
         path={path}
         ogImage={cover.url}
         noindex
-        breadcrumbs={[
-          { name: "Início", path: "/" },
-          { name: category.titlePrefix, path: `/${category.slug}-curitiba` },
-          { name: cityLabel, path },
-        ]}
+        breadcrumbs={breadcrumbs}
       />
       <Helmet>
         <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
@@ -128,6 +127,7 @@ export const CategoryLocalTemplate = ({ categoryId, localSlug }: Props) => {
       </Helmet>
 
       <Header />
+      <Breadcrumbs items={breadcrumbs.slice(1).map(({ name, path }) => ({ label: name, href: path }))} />
 
       <main>
         <PageHero
