@@ -14,6 +14,9 @@ import { buildOrganizationSchema, buildWebSiteSchema } from "@/lib/organizationJ
 import { HOME_FAQS, HOME_SERVICES } from "@/lib/home/homeContent";
 import { CIDADES } from "@/lib/cidadesData";
 import { absoluteUrl, siteConfig } from "@/lib/siteConfig";
+import { findCategory } from "@/pages/hubs/categories";
+import { findLocal } from "@/pages/hubs/locais";
+import { categoryLocalBreadcrumbs } from "@/lib/categoryLocalContent";
 
 export interface RouteFaq {
   question: string;
@@ -60,6 +63,13 @@ interface Crumb {
 function buildBreadcrumbs(path: string, title: string): Crumb[] {
   if (path === "/") return [];
   const segments = path.split("/").filter(Boolean);
+  if (segments.length === 2) {
+    const category = findCategory(segments[0] ?? "");
+    const local = findLocal(segments[1]);
+    if (category && category.slug === segments[0] && local) {
+      return categoryLocalBreadcrumbs(category, local);
+    }
+  }
   const crumbs: Crumb[] = [{ name: "Início", path: "/" }];
   let acc = "";
   segments.forEach((seg, i) => {

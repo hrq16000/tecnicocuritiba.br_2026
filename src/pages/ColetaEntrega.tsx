@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { PageSEO } from "@/components/PageSEO";
 import { PoliticaAtendimentoBlock } from "@/components/PoliticaAtendimentoBlock";
 import { IMAGES } from "@/lib/images";
+import { PhotoCaption } from "@/components/PhotoCaption";
 import { Link } from "@/lib/router-compat";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -20,7 +21,9 @@ import {
   Accordion, AccordionContent, AccordionItem, AccordionTrigger,
 } from "@/components/ui/accordion";
 import {
+  COLETA_TAXA_MINIMA,
   COLETA_TAXA_MINIMA_LABEL,
+  DIAGNOSTICO_VALOR,
   DIAGNOSTICO_VALOR_LABEL,
   EQUIPAMENTOS_COLETA,
   PRAZOS,
@@ -83,12 +86,12 @@ const ColetaEntrega = () => {
         offers: {
           "@type": "Offer",
           priceCurrency: "BRL",
-          price: "300.00",
+          price: COLETA_TAXA_MINIMA.toFixed(2),
           url: "https://tecnico.curitiba.br/coleta-e-entrega",
           availability: "https://schema.org/InStock",
           priceSpecification: [
-            { "@type": "PriceSpecification", name: "Reparo mínimo com coleta", price: "300.00", priceCurrency: "BRL", description: "Faixa pré-aprovada R$ 300–R$ 500. Acima disso, autorização do cliente." },
-            { "@type": "PriceSpecification", name: "Diagnóstico em bancada (se desistir)", price: "90.00", priceCurrency: "BRL" },
+            { "@type": "PriceSpecification", name: "Reparo mínimo com coleta", price: COLETA_TAXA_MINIMA.toFixed(2), priceCurrency: "BRL", description: `Taxa mínima pré-aprovada: ${COLETA_TAXA_MINIMA_LABEL}. Acima desse valor, o cliente é consultado antes.` },
+            { "@type": "PriceSpecification", name: "Diagnóstico em bancada (se desistir)", price: DIAGNOSTICO_VALOR.toFixed(2), priceCurrency: "BRL" },
           ],
         },
       })}} />
@@ -134,11 +137,12 @@ const ColetaEntrega = () => {
         {/* Imagem coleta */}
         <section className="py-0 bg-background">
           <div className="container mx-auto">
-            <div className="max-w-4xl mx-auto -mt-8 relative z-20">
+            <figure className="max-w-4xl mx-auto -mt-8 relative z-20">
               <div className="rounded-xl overflow-hidden shadow-2xl">
                 <img decoding="async" src={IMAGES.coletaEntrega} alt={IMAGES.coletaEntregaAlt} className="w-full h-48 md:h-64 object-cover" loading="eager" width="800" height="400" />
               </div>
-            </div>
+              <PhotoCaption src={IMAGES.coletaEntrega} />
+            </figure>
           </div>
         </section>
 
@@ -317,7 +321,7 @@ const ColetaEntrega = () => {
                     <AccordionTrigger className="text-left font-semibold text-primary hover:no-underline">
                       {item.q}
                     </AccordionTrigger>
-                    <AccordionContent className="text-muted-foreground">{item.a}</AccordionContent>
+                    <AccordionContent forceMount className="text-muted-foreground">{item.a}</AccordionContent>
                   </AccordionItem>
                 ))}
               </Accordion>

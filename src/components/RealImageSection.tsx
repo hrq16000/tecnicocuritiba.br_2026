@@ -1,5 +1,6 @@
 import { IMAGES } from "@/lib/images";
 import { SmartImage } from "@/components/motion/SmartImage";
+import { PhotoCaption } from "@/components/PhotoCaption";
 
 export type ImageKey = "tecnicoTrabalhando" | "notebookReparo" | "placaMae" | "bancadaTecnica" | "ferramentas" | "atendimentoDomiciliar" | "componentesSsd" | "redesWifi" | "cameraSeguranca" | "diagnostico" | "desktopMontado" | "smartTv" | "suporteRemoto" | "servidores" | "segurancaDigital" | "coletaEntrega" | "clienteSatisfeito" | "microsoldagem" | "estacaoSolda" | "microscopio" | "amplificadorSom";
 
@@ -37,9 +38,7 @@ export const RealImageSection = ({
                 wrapperClassName="rounded-xl shadow-md"
                 className="rounded-xl w-full h-64 md:h-72 object-cover"
               />
-              {caption && (
-                <figcaption className="text-xs text-muted-foreground mt-2 text-center italic">{caption}</figcaption>
-              )}
+              <PhotoCaption src={src} caption={caption} />
             </figure>
             <figure>
               <SmartImage
@@ -50,9 +49,7 @@ export const RealImageSection = ({
                 wrapperClassName="rounded-xl shadow-md"
                 className="rounded-xl w-full h-64 md:h-72 object-cover"
               />
-              {secondaryCaption && (
-                <figcaption className="text-xs text-muted-foreground mt-2 text-center italic">{secondaryCaption}</figcaption>
-              )}
+              <PhotoCaption src={src2} caption={secondaryCaption} />
             </figure>
           </div>
         </div>
@@ -73,9 +70,7 @@ export const RealImageSection = ({
               wrapperClassName="rounded-xl shadow-md"
               className="rounded-xl w-full h-64 md:h-80 object-cover"
             />
-            {caption && (
-              <figcaption className="text-xs text-muted-foreground mt-2 text-center italic">{caption}</figcaption>
-            )}
+            <PhotoCaption src={src} caption={caption} />
           </figure>
         </div>
       </div>

@@ -468,7 +468,8 @@ const trackConversionClick = (
     ...ctx,
     ...extra,
   };
-  track(eventName, payload);
+  if (eventName === "wa_click") track("wa_click", payload);
+  else track("call_click", payload);
   recordCtaSpan(kind === "whatsapp" ? "cta.click.whatsapp" : "cta.click.call", {
     "app.cta_location": location,
   });
@@ -482,7 +483,8 @@ const trackConversionClick = (
     });
     gtagReportConversion();
   }
-  persistClickEvent(eventName, location, ctx, { ...extra, lead_id: leadId });
+  if (eventName === "wa_click") persistClickEvent("wa_click", location, ctx, { ...extra, lead_id: leadId });
+  else persistClickEvent("call_click", location, ctx, { ...extra, lead_id: leadId });
 };
 
 export const trackWaClick = (location: string, extra: Record<string, unknown> = {}) =>

@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { PageSEO } from "@/components/PageSEO";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { IMAGES } from "@/lib/images";
+import { PhotoCaption } from "@/components/PhotoCaption";
 import { Link } from "@/lib/router-compat";
 import { 
   CheckCircle, Clock, Shield, ArrowRight, MessageCircle, 
@@ -59,6 +60,14 @@ export interface ServicoBairroData {
 export const ServicoBairroTemplate = ({ data }: { data: ServicoBairroData }) => {
   const path = `/servicos/${data.servicoSlug}/${data.bairroSlug}`;
   const canonical = `${CANONICAL_BASE}${path}`;
+  const servicePhoto = data.servicoSlug.includes("conserto") ? IMAGES.notebookReparo
+    : data.servicoSlug.includes("formatacao") ? IMAGES.tecnicoTrabalhando
+    : data.servicoSlug.includes("virus") ? IMAGES.segurancaDigital
+    : data.servicoSlug.includes("upgrade") ? IMAGES.componentesSsd
+    : data.servicoSlug.includes("redes") ? IMAGES.redesWifi
+    : data.servicoSlug.includes("backup") ? IMAGES.diagnostico
+    : data.servicoSlug.includes("montagem") ? IMAGES.desktopMontado
+    : IMAGES.tecnicoTrabalhando;
 
   // Nenhum link interno pode apontar para URL consolidada (301): os destinos
   // removidos na antidoorway saem da malha antes de renderizar.
@@ -222,23 +231,19 @@ export const ServicoBairroTemplate = ({ data }: { data: ServicoBairroData }) => 
                     <p>{data.descricaoLonga}</p>
                   </div>
                 </div>
-                <div className="rounded-xl overflow-hidden shadow-lg group">
-                  <img decoding="async" 
-                    src={data.servicoSlug.includes("conserto") ? IMAGES.notebookReparo 
-                      : data.servicoSlug.includes("formatacao") ? IMAGES.tecnicoTrabalhando
-                      : data.servicoSlug.includes("virus") ? IMAGES.segurancaDigital
-                      : data.servicoSlug.includes("upgrade") ? IMAGES.componentesSsd
-                      : data.servicoSlug.includes("redes") ? IMAGES.redesWifi
-                      : data.servicoSlug.includes("backup") ? IMAGES.diagnostico
-                      : data.servicoSlug.includes("montagem") ? IMAGES.desktopMontado
-                      : IMAGES.tecnicoTrabalhando}
-                    alt={`${data.servico} profissional no ${data.bairro}, ${data.cidade}`}
-                    className="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-105"
-                    loading="lazy"
-                    width="800"
-                    height="400"
-                  />
-                </div>
+                <figure className="min-w-0">
+                  <div className="rounded-xl overflow-hidden shadow-lg group">
+                    <img decoding="async"
+                      src={servicePhoto}
+                      alt={`${data.servico} profissional no ${data.bairro}, ${data.cidade}`}
+                      className="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-105"
+                      loading="lazy"
+                      width="800"
+                      height="400"
+                    />
+                  </div>
+                  <PhotoCaption src={servicePhoto} />
+                </figure>
               </div>
               
               {/* Location tags with stagger */}
