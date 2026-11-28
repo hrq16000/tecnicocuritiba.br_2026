@@ -114,7 +114,7 @@
     "report:jsonld": "node scripts/report-jsonld-coverage.mjs dist",
     "report:jsonld:strict": "node scripts/report-jsonld-coverage.mjs dist --strict",
     "migration:rollback": "node scripts/publish-redirects.mjs --rollback",
-    "check:analytics-parity": "node scripts/check-analytics-parity.mjs",
+    "check:analytics-parity": "node --test scripts/analytics-conversion-routes.node-test.mjs && node scripts/check-analytics-parity.mjs",
     "check:cf-zone": "node scripts/check-cloudflare-zone.mjs",
     "check:nap": "node scripts/check-nap-whatsapp.mjs",
     "migration:export": "node scripts/export-redirects.mjs",

@@ -10,6 +10,7 @@
  * Sem isso, o relatório de conversão por rota deixa de bater com o GA4.
  */
 import { readFileSync } from "node:fs";
+import { checkConversionRoutes } from "./analytics-conversion-routes.mjs";
 
 const EVENTS = ["wa_click", "call_click"];
 const UTMS = ["utm_source", "utm_medium", "utm_campaign"];
@@ -17,11 +18,8 @@ const UTMS = ["utm_source", "utm_medium", "utm_campaign"];
 const funnel = readFileSync("src/lib/funnelAnalytics.ts", "utf8");
 const weekly = readFileSync("scripts/report-weekly-seo.mjs", "utf8");
 
-const errors = [];
-
+const errors = checkConversionRoutes(funnel);
 for (const ev of EVENTS) {
-  if (!new RegExp(`track\\("${ev}"`).test(funnel)) errors.push(`GA4 não dispara "${ev}" em funnelAnalytics.ts`);
-  if (!new RegExp(`persistClickEvent\\("${ev}"`).test(funnel)) errors.push(`"${ev}" não é persistido em click_events`);
   if (!weekly.includes(`"${ev}"`)) errors.push(`relatório semanal não contabiliza "${ev}"`);
 }
 
