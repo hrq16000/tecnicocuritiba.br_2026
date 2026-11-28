@@ -208,7 +208,7 @@
     "check:meta-uniqueness": "node scripts/check-meta-uniqueness.mjs dist",
     "sitemap:images": "node scripts/generate-image-sitemap.mjs dist",
     "check:image-sitemap": "node --test scripts/generate-image-sitemap.test.mjs && node scripts/check-image-sitemap.mjs dist",
-    "check:image-credits": "node scripts/check-image-credits.mjs dist",
+    "check:image-credits": "node --test scripts/check-image-credits.node-test.mjs && node scripts/check-image-credits.mjs dist",
     "check:image-alt": "node scripts/check-image-alt.mjs dist",
     "report:faq-parity": "node scripts/report-faq-parity.mjs dist",
     "check:local-perf": "node scripts/check-local-perf.mjs",

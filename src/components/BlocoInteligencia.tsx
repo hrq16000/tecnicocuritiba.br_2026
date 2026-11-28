@@ -1,5 +1,6 @@
 import { Link } from "@/lib/router-compat";
 import { IMAGES } from "@/lib/images";
+import { LicensedPhotoCaption } from "@/components/LicensedPhotoCaption";
 import { 
   AlertTriangle, 
   Search, 
@@ -19,7 +20,7 @@ export const BlocoInteligencia = ({ compact = false }: BlocoInteligenciaProps) =
     <section className="py-12 bg-muted/30" aria-label="Informações importantes sobre diagnóstico e serviço técnico">
       <div className="container mx-auto px-4 max-w-5xl">
         {/* Imagem de destaque */}
-        <div className="mb-8 rounded-xl overflow-hidden shadow-lg max-w-3xl mx-auto">
+        <figure className="mb-8 rounded-xl overflow-hidden shadow-lg max-w-3xl mx-auto bg-card">
           <img decoding="async" 
             src={IMAGES.bancadaTecnica} 
             alt={IMAGES.bancadaTecnicaAlt}
@@ -28,7 +29,8 @@ export const BlocoInteligencia = ({ compact = false }: BlocoInteligenciaProps) =
             width="800"
             height="300"
           />
-        </div>
+          <LicensedPhotoCaption src={IMAGES.bancadaTecnica} className="px-3 py-2 text-center text-xs text-muted-foreground" />
+        </figure>
         <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center mb-8">
           🧠 O Que Você Precisa Saber Antes de Contratar um Técnico
         </h2>

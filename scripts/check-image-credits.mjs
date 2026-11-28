@@ -14,7 +14,8 @@ import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
 import path from "node:path";
 import { ALLOWED_REMOTE_HOSTS, CREDIT_PREFIX, creditFor } from "./lib/image-credits.mjs";
 
-const DIST = path.resolve(process.argv[2] || "dist");
+const OUTPUT = path.resolve(process.argv[2] || "dist");
+const DIST = existsSync(path.join(OUTPUT, "client")) ? path.join(OUTPUT, "client") : OUTPUT;
 if (!existsSync(DIST)) {
   console.error(`BLOQUEADO: ${DIST} não existe — rode "npm run build" antes.`);
   process.exit(1);
@@ -34,6 +35,25 @@ const files = [];
 const errors = [];
 let pagesWithPhotos = 0;
 let photos = 0;
+let ownAssets = 0;
+
+// Canonical absolute URLs can refer to local build assets. They are not
+// external licensed photographs, but must actually resolve inside this build.
+function firstPartyAsset(url) {
+  if (url.origin !== "https://tecnico.curitiba.br") return null;
+  let pathname;
+  try { pathname = decodeURIComponent(url.pathname); } catch { return false; }
+  const file = path.resolve(DIST, "." + pathname);
+  const relative = path.relative(DIST, file);
+  return !relative.startsWith("..") && !path.isAbsolute(relative)
+    && /\.(avif|webp|png|jpe?g|gif|svg)$/i.test(file)
+    && existsSync(file) && statSync(file).isFile();
+}
+
+if (!files.length) {
+  console.error("BLOQUEADO: nenhum HTML publicável encontrado.");
+  process.exit(1);
+}
 
 for (const file of files.sort()) {
   const route = ("/" + path.relative(DIST, file).replace(/index\.html$/, "").replace(/\\/g, "/")).replace(/\/$/, "") || "/";
@@ -47,12 +67,20 @@ for (const file of files.sort()) {
 
   const srcs = [...html.matchAll(/<img[^>]+src="(https?:\/\/[^"]+)"/g)].map((m) => m[1]);
   if (!srcs.length) continue;
-  pagesWithPhotos++;
+  let hasExternalPhoto = false;
 
   const hasCredit = html.includes(CREDIT_PREFIX);
   for (const src of srcs) {
+    const url = new URL(src);
+    const local = firstPartyAsset(url);
+    if (local !== null) {
+      if (local) ownAssets++;
+      else errors.push(`${route}: asset próprio ausente ou inválido — ${url.pathname}`);
+      continue;
+    }
+    hasExternalPhoto = true;
     photos++;
-    const host = new URL(src).host;
+    const host = url.host;
     if (!ALLOWED_REMOTE_HOSTS.includes(host)) {
       errors.push(`${route}: host de imagem não licenciado — ${host}`);
       continue;
@@ -68,6 +96,7 @@ for (const file of files.sort()) {
     const inFigcaption = /<figcaption[^>]*>[^<]*Foto:/.test(html) || /<figcaption[\s\S]{0,400}?Foto:/.test(html);
     if (!inFigcaption) errors.push(`${route}: crédito fora de <figcaption> (local incorreto)`);
   }
+  if (hasExternalPhoto) pagesWithPhotos++;
 }
 
 if (errors.length) {
@@ -78,4 +107,4 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log(`OK — ${photos} foto(s) licenciada(s) em ${pagesWithPhotos} página(s), todas com crédito visível em <figcaption>.`);
+console.log(`OK — ${photos} foto(s) licenciada(s) em ${pagesWithPhotos} página(s), todas com crédito visível em <figcaption>; ${ownAssets} asset(s) próprio(s) absoluto(s) confirmado(s).`);

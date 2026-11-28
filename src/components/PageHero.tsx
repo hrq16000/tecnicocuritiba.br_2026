@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { FloatingParticles } from "@/components/FloatingParticles";
 import { trackCTAClick } from "@/lib/analytics";
 import type { HeroImageSet } from "@/pages/arrumar-pc/cityImages";
+import { LicensedPhotoCaption } from "@/components/LicensedPhotoCaption";
 
 const WHATSAPP_NUMBER = "5541997086380";
 const WHATSAPP_MESSAGE = "Olá! Preciso de suporte técnico.";
@@ -67,7 +68,7 @@ export const PageHero = ({ title, subtitle, ctaText = "Chame no WhatsApp", whats
           </Button>
 
           {heroSrc && (
-            <div className="mt-10 md:mt-12 max-w-3xl mx-auto">
+            <figure className="mt-10 md:mt-12 max-w-3xl mx-auto">
               <div className="relative rounded-2xl overflow-hidden ring-1 ring-white/15 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.6)]">
                 <picture>
                   {heroSet?.webpSrcset && (
@@ -96,7 +97,8 @@ export const PageHero = ({ title, subtitle, ctaText = "Chame no WhatsApp", whats
                 </picture>
                 <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent pointer-events-none" />
               </div>
-            </div>
+              <LicensedPhotoCaption src={heroSrc} className="mt-2 text-center text-xs text-white/90" />
+            </figure>
           )}
         </div>
       </div>
