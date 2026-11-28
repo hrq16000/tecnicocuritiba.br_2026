@@ -1,6 +1,7 @@
 import { forwardRef, useId, useState } from "react";
 import { Input } from "@/components/ui/input";
-import { LOCALIDADE_GRUPOS, LOCALIDADES } from "@/lib/bairrosSelect";
+import { LOCALIDADES } from "@/lib/bairrosSelect";
+import { rankLocalidades } from "@/lib/localidade-filter";
 import { cepToLocalidade, formatCep, isValidCep, lookupCep } from "@/lib/cepLookup";
 import { setGeoFromUser } from "@/lib/geoContext";
 
@@ -20,13 +21,16 @@ interface Props {
  * permissão negada, VPN) o visitante precisa conseguir escolher o local
  * do atendimento — caso contrário a mensagem do WhatsApp sai sem região.
  * Por isso o campo aceita digitação livre (datalist) e oferece um seletor
- * agrupado por Curitiba × Região Metropolitana.
+ * pesquisável de Curitiba e Região Metropolitana.
  */
 export const LocalidadeInput = forwardRef<HTMLInputElement, Props>(
   ({ id, value, onChange, placeholder, ariaDescribedBy, className }, ref) => {
     const listId = useId();
     const cepId = useId();
     const [manual, setManual] = useState(false);
+    const [manualQuery, setManualQuery] = useState("");
+    const manualId = useId();
+    const suggestions = manual ? rankLocalidades(LOCALIDADES, manualQuery) : [];
     const [cep, setCep] = useState("");
     const [cepStatus, setCepStatus] = useState<"idle" | "loading" | "ok" | "erro">("idle");
 
@@ -111,29 +115,38 @@ export const LocalidadeInput = forwardRef<HTMLInputElement, Props>(
         {!manual ? (
           <button
             type="button"
-            onClick={() => setManual(true)}
+            onClick={() => { setManualQuery(""); setManual(true); }}
             className="mt-1.5 text-xs font-medium text-primary underline underline-offset-2"
           >
             Não encontrou? Escolher bairro ou cidade na lista
           </button>
         ) : (
-          <select
-            aria-label="Selecionar bairro ou cidade"
-            value={LOCALIDADES.includes(value) ? value : ""}
-            onChange={(e) => e.target.value && onChange(e.target.value)}
-            className="mt-2 min-h-11 w-full rounded-md border border-input bg-background px-3 text-base text-foreground"
-          >
-            <option value="">Selecione o bairro ou a cidade…</option>
-            {LOCALIDADE_GRUPOS.map((g) => (
-              <optgroup key={g.grupo} label={g.grupo}>
-                {g.opcoes.map((o) => (
-                  <option key={o} value={o}>
-                    {o}
-                  </option>
-                ))}
-              </optgroup>
-            ))}
-          </select>
+          <div className="mt-2 space-y-2 rounded-lg border border-border p-2">
+            <label htmlFor={manualId} className="text-xs font-medium text-muted-foreground">
+              Pesquisar bairro ou cidade
+            </label>
+            <Input id={manualId} value={manualQuery} type="search" autoComplete="off"
+              placeholder="Digite parte do nome" onChange={(event) => setManualQuery(event.target.value)}
+              className="min-h-11 text-base" />
+            <p className="text-xs text-muted-foreground" role="status">
+              {suggestions.length ? "Selecione uma sugestão ou refine sua busca." : "Nenhuma opção encontrada. Você pode digitar a localidade no campo acima."}
+            </p>
+            <ul aria-label="Sugestões de localidade" className="space-y-1">
+              {suggestions.map((option) => (
+                <li key={option}>
+                  <button type="button" aria-pressed={value === option}
+                    onClick={() => { onChange(option); setManualQuery(option); }}
+                    className="min-h-11 w-full rounded-md px-3 py-2 text-left text-sm hover:bg-muted focus-visible:ring-2 focus-visible:ring-ring aria-pressed:bg-primary/10 aria-pressed:font-semibold">
+                    {option}
+                  </button>
+                </li>
+              ))}
+            </ul>
+            <button type="button" onClick={() => setManual(false)}
+              className="min-h-11 text-xs font-medium text-primary underline underline-offset-2">
+              Fechar sugestões
+            </button>
+          </div>
         )}
       </div>
     );
