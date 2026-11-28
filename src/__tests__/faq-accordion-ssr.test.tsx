@@ -33,12 +33,14 @@ describe("FAQ estática com acordeão acessível", () => {
   it("permite expandir e recolher a mesma resposta sem desmontá-la", () => {
     render(<Example persistent />);
     const trigger = screen.getByRole("button", { name: "Pergunta frequente" });
-    const region = document.getElementById(trigger.getAttribute("aria-controls")!);
+    const region = screen.getByText("Resposta disponível para o visitante.").closest('[role="region"]');
+    expect(region).not.toBeNull();
     expect(region).toHaveAttribute("data-state", "closed");
     expect(region).toHaveTextContent("Resposta disponível");
     fireEvent.click(trigger);
     expect(trigger).toHaveAttribute("aria-expanded", "true");
     expect(region).toHaveAttribute("data-state", "open");
+    expect(trigger).toHaveAttribute("aria-controls", region!.id);
     fireEvent.click(trigger);
     expect(trigger).toHaveAttribute("aria-expanded", "false");
     expect(region).toHaveAttribute("data-state", "closed");
