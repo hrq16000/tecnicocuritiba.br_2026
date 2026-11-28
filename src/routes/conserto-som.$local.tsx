@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { seoHead } from "@/lib/seo/routeHead";
 import { CATEGORIES } from "@/pages/hubs/categories";
 import { findLocal } from "@/pages/hubs/locais";
-import { categoryLocalMeta } from "@/lib/categoryLocalContent";
+import { categoryLocalBreadcrumbs, categoryLocalMeta } from "@/lib/categoryLocalContent";
 import { ConsertoSomCity } from "@/pages/hubs/CategoryLocalTemplate";
 
 export const Route = createFileRoute("/conserto-som/$local")({
@@ -16,6 +16,7 @@ export const Route = createFileRoute("/conserto-som/$local")({
         meta?.description ??
         "Conserto de som e áudio com coleta e entrega na região de Curitiba, diagnóstico em bancada e valor aprovado antes do reparo.",
       noindex: true,
+      breadcrumbs: local ? categoryLocalBreadcrumbs(CATEGORIES.som, local) : undefined,
     });
   },
   component: ConsertoSomCity,

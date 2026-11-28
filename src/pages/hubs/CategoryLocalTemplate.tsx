@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet";
 import { Link, useParams, Navigate } from "@/lib/router-compat";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { PageHero } from "@/components/PageHero";
 import { PageSEO } from "@/components/PageSEO";
 import { BenefitsGrid } from "@/components/BenefitsGrid";
@@ -12,6 +13,7 @@ import { trackWaClick } from "@/lib/funnelAnalytics";
 import { CATEGORIES, type CategoryId, findCategory } from "./categories";
 import { LOCAIS, findLocal, type LocalData } from "./locais";
 import {
+  categoryLocalBreadcrumbs,
   categoryLocalMeta,
   localizedFaqs,
   offerFor,
@@ -76,6 +78,7 @@ export const CategoryLocalTemplate = ({ categoryId, localSlug }: Props) => {
 
   if (!local) return <Navigate to={`/${category.slug}-curitiba`} replace />;
 
+  const breadcrumbs = categoryLocalBreadcrumbs(category, local);
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -114,11 +117,7 @@ export const CategoryLocalTemplate = ({ categoryId, localSlug }: Props) => {
         path={path}
         ogImage={cover.url}
         noindex
-        breadcrumbs={[
-          { name: "Início", path: "/" },
-          { name: category.titlePrefix, path: `/${category.slug}-curitiba` },
-          { name: cityLabel, path },
-        ]}
+        breadcrumbs={breadcrumbs}
       />
       <Helmet>
         <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
@@ -130,6 +129,7 @@ export const CategoryLocalTemplate = ({ categoryId, localSlug }: Props) => {
       <Header />
 
       <main>
+        <Breadcrumbs items={breadcrumbs.slice(1).map(({ name, path }) => ({ label: name, href: path }))} />
         <PageHero
           title={`${category.titlePrefix} em ${cityLabel}`}
           subtitle={`${category.emoji} Coleta e entrega no seu endereço · diagnóstico incluso · garantia de 90 dias. Atendimento por WhatsApp em até 30 min.`}

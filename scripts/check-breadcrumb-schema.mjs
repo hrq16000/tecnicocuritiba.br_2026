@@ -2,7 +2,7 @@
 /**
  * GATE — BreadcrumbList das páginas serviço × cidade/bairro.
  *
- * Valida no build (dist/) que cada /conserto-<categoria>/<local>/ tem:
+ * Valida no HTML servido pelo build (prerender ou SSR dinâmico) que cada /conserto-<categoria>/<local>/ tem:
  *   • exatamente 1 BreadcrumbList;
  *   • 3 níveis na ordem Home > Serviço > Cidade;
  *   • `item` de cada nível apontando para URLs reais (nível 3 == canonical);
@@ -12,10 +12,17 @@
  */
 import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
+import { pathToFileURL } from "node:url";
+import { CURATED_ROUTES } from "./curated-routes-meta.mjs";
 import { CATEGORIES, LOCAIS, cityLabel } from "./lib/category-local.mjs";
 
 const DIST = path.resolve(process.argv[2] || "dist");
 const SITE = "https://tecnico.curitiba.br";
+const CLIENT = existsSync(path.join(DIST, "client")) ? path.join(DIST, "client") : DIST;
+const curated = new Set(CURATED_ROUTES.map((r) => r.path));
+let handler;
+let checkedStatic = 0;
+let checkedSSR = 0;
 
 if (!existsSync(DIST)) {
   console.error(`BLOQUEADO: ${DIST} não existe — rode "npm run build" antes.`);
@@ -43,14 +50,37 @@ let checked = 0;
 for (const cat of CATEGORIES) {
   for (const local of LOCAIS) {
     const route = `/${cat.slug}/${local.slug}`;
-    const file = path.join(DIST, cat.slug, local.slug, "index.html");
-    if (!existsSync(file)) {
-      errors.push(`${route}: HTML estático ausente (${path.relative(DIST, file)})`);
+    const file = path.join(CLIENT, cat.slug, local.slug, "index.html");
+    let html;
+    if (existsSync(file)) {
+      html = readFileSync(file, "utf8");
+      checkedStatic++;
+    } else if (curated.has(route)) {
+      errors.push(`${route}: HTML estático curado ausente (${path.relative(DIST, file)})`);
       continue;
+    } else {
+      // Estas landings não entram no prerender curado. Teste o handler real
+      // compilado (sem hidratação), nunca o shell SPA nem um HTML inventado.
+      try {
+        handler ??= (await import(pathToFileURL(path.join(DIST, "server/index.mjs")).href)).default;
+        const res = await handler.fetch(new Request(`${SITE}${route}`), {}, { waitUntil() {} });
+        if (res.status !== 200) {
+          errors.push(`${route}: SSR HTTP ${res.status} (esperado 200)`);
+          continue;
+        }
+        html = await res.text();
+        const robots = html.match(/<meta\b[^>]*\bname="robots"[^>]*>/i)?.[0] ?? "";
+        if (!/\bcontent="noindex,\s*follow"/i.test(robots)) {
+          errors.push(`${route}: SSR fora da política noindex, follow`);
+        }
+        checkedSSR++;
+      } catch (error) {
+        errors.push(`${route}: SSR indisponível (${error.message})`);
+        continue;
+      }
     }
     checked++;
-    const html = readFileSync(file, "utf8");
-    const blocks = [...html.matchAll(/<script type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/gi)]
+    const blocks = [...html.matchAll(/<script\b[^>]*\btype="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/gi)]
       .map((m) => { try { return JSON.parse(m[1]); } catch { return null; } })
       .filter(Boolean);
     const crumbs = blocks.flatMap(flatten).filter((n) => n["@type"] === "BreadcrumbList");
@@ -78,15 +108,24 @@ for (const cat of CATEGORIES) {
     });
 
     // Canonical precisa bater com o último nível.
-    const canonical = html.match(/<link rel="canonical" href="([^"]+)"/i)?.[1];
+    const canonicalTag = html.match(/<link\b[^>]*\brel="canonical"[^>]*>/i)?.[0] ?? "";
+    const canonical = canonicalTag.match(/\bhref="([^"]+)"/i)?.[1];
     if (canonical !== `${SITE}${route}`)
       errors.push(`${route}: canonical="${canonical}" difere do último nível do breadcrumb`);
 
     // Trilha visível.
-    const text = norm(html.replace(/<script[\s\S]*?<\/script>/gi, " ").replace(/<[^>]+>/g, " "));
+    const nav = html.match(/<nav[^>]+aria-label="Breadcrumb"[^>]*>([\s\S]*?)<\/nav>/i)?.[1];
+    if (!nav) { errors.push(`${route}: trilha de navegação visível ausente`); continue; }
+    const text = norm(nav.replace(/<[^>]+>/g, " "));
+    for (const exp of expected.slice(0, 2)) {
+      const href = new URL(exp.item).pathname;
+      if (!nav.includes(`href="${href}"`)) errors.push(`${route}: link visível ${href} ausente`);
+    }
+    let previous = -1;
     for (const exp of expected) {
-      if (!text.includes(norm(exp.name)))
-        errors.push(`${route}: rótulo "${exp.name}" ausente do conteúdo visível`);
+      const at = text.indexOf(norm(exp.name), previous + 1);
+      if (at < 0) errors.push(`${route}: rótulo "${exp.name}" ausente ou fora de ordem na trilha`);
+      else previous = at;
     }
   }
 }
@@ -98,4 +137,4 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log(`OK — BreadcrumbList Home > Serviço > Cidade válido em ${checked} páginas serviço × local.`);
+console.log(`OK — BreadcrumbList Home > Serviço > Cidade válido em ${checked} páginas serviço × local (${checkedStatic} estáticas; ${checkedSSR} SSR).`);
