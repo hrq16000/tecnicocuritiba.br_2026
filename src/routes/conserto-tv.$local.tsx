@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { seoHead } from "@/lib/seo/routeHead";
 import { CATEGORIES } from "@/pages/hubs/categories";
 import { findLocal } from "@/pages/hubs/locais";
-import { categoryLocalMeta } from "@/lib/categoryLocalContent";
+import { categoryLocalBreadcrumbs, categoryLocalMeta } from "@/lib/categoryLocalContent";
 import { ConsertoTVCity } from "@/pages/hubs/CategoryLocalTemplate";
 
 export const Route = createFileRoute("/conserto-tv/$local")({
@@ -16,6 +16,7 @@ export const Route = createFileRoute("/conserto-tv/$local")({
         meta?.description ??
         "Conserto de TV com coleta e entrega na região de Curitiba, diagnóstico em bancada e valor aprovado antes do reparo.",
       noindex: true,
+      breadcrumbs: local ? categoryLocalBreadcrumbs(CATEGORIES.tv, local) : undefined,
     });
   },
   component: ConsertoTVCity,

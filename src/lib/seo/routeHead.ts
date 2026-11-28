@@ -25,6 +25,8 @@ export interface RouteHeadInput {
   title: string;
   description: string;
   faq?: RouteFaq[];
+  /** Trilha explícita quando o hub não coincide com um segmento da URL. */
+  breadcrumbs?: Crumb[];
   /** Desliga o LocalBusiness estático (rotas institucionais/editoriais). */
   localBusiness?: boolean;
   ogImage?: string;
@@ -80,6 +82,7 @@ export function seoHead({
   title,
   description,
   faq,
+  breadcrumbs,
   localBusiness = true,
   ogImage = siteConfig.defaultOgImage,
   ogType = "website",
@@ -168,7 +171,7 @@ export function seoHead({
   }
 
   // BreadcrumbList — derivado do próprio path (dados reais da árvore de URLs).
-  const crumbs = buildBreadcrumbs(path, title);
+  const crumbs = breadcrumbs ?? buildBreadcrumbs(path, title);
   if (crumbs.length > 1) {
     scripts.push(
       jsonLd("breadcrumb", {

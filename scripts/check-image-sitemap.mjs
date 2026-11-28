@@ -15,7 +15,10 @@
 import { existsSync, readFileSync, statSync } from "node:fs";
 import path from "node:path";
 
-const DIST = path.resolve(process.argv[2] || "dist");
+const BUILD_ROOT = path.resolve(process.argv[2] || "dist");
+// TanStack Start entrega HTML e assets em client/. Um build legado plano
+// continua aceito, mas nunca trate "client" como segmento público da URL.
+const DIST = existsSync(path.join(BUILD_ROOT, "client")) ? path.join(BUILD_ROOT, "client") : BUILD_ROOT;
 const SITE = "https://tecnico.curitiba.br";
 const FILE = path.join(DIST, "sitemap-images.xml");
 
@@ -48,7 +51,8 @@ for (const block of blocks) {
     errors.push(`${loc}: página inexistente no build`);
   } else {
     const html = readFileSync(pageFile, "utf8");
-    const robots = html.match(/<meta name="robots" content="([^"]*)"/i)?.[1] ?? "";
+    const robotsTag = html.match(/<meta\b[^>]*\bname="robots"[^>]*>/i)?.[0] ?? "";
+    const robots = robotsTag.match(/\bcontent="([^"]*)"/i)?.[1] ?? "";
     if (/noindex/i.test(robots)) errors.push(`${loc}: página noindex não pode entrar no image sitemap`);
   }
 

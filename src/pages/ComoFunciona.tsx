@@ -1,3 +1,4 @@
+import { LicensedPhotoCaption } from "@/components/LicensedPhotoCaption";
 import { useEffect } from "react";
 import { PageSEO } from "@/components/PageSEO";
 import { PoliticaAtendimentoBlock } from "@/components/PoliticaAtendimentoBlock";
@@ -143,9 +144,10 @@ const ComoFunciona = () => {
         <section className="py-0 bg-background">
           <div className="container mx-auto">
             <div className="max-w-4xl mx-auto -mt-8 relative z-20">
-              <div className="rounded-xl overflow-hidden shadow-2xl">
+              <figure className="rounded-xl overflow-hidden shadow-2xl">
                 <img decoding="async" src={IMAGES.atendimentoDomiciliar} alt={IMAGES.atendimentoDomiciliarAlt} className="w-full h-48 md:h-72 object-cover" loading="eager" width="800" height="400" />
-              </div>
+                <LicensedPhotoCaption src={IMAGES.atendimentoDomiciliar} className="px-3 py-2 text-center text-xs text-muted-foreground bg-background" />
+              </figure>
             </div>
           </div>
         </section>
@@ -692,7 +694,7 @@ const ComoFunciona = () => {
                     <AccordionTrigger className="text-left font-semibold text-primary hover:text-accent">
                       {item.question}
                     </AccordionTrigger>
-                    <AccordionContent className="text-muted-foreground leading-relaxed">
+                    <AccordionContent forceMount className="text-muted-foreground leading-relaxed">
                       {item.answer}
                     </AccordionContent>
                   </AccordionItem>

@@ -10,7 +10,10 @@
 import { existsSync, readFileSync, readdirSync, statSync, writeFileSync } from "node:fs";
 import path from "node:path";
 
-const DIST = path.resolve(process.argv[2] || "dist");
+const BUILD_ROOT = path.resolve(process.argv[2] || "dist");
+// TanStack Start entrega HTML e assets em client/. Um build legado plano
+// continua aceito, mas nunca trate "client" como segmento público da URL.
+const DIST = existsSync(path.join(BUILD_ROOT, "client")) ? path.join(BUILD_ROOT, "client") : BUILD_ROOT;
 const SITE = "https://tecnico.curitiba.br";
 const VARIANTS = [".avif", ".webp"];
 
@@ -32,7 +35,8 @@ const esc = (s) =>
   s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 
 const isIndexable = (html) => {
-  const robots = html.match(/<meta name="robots" content="([^"]*)"/i)?.[1] ?? "";
+  const robotsTag = html.match(/<meta\b[^>]*\bname="robots"[^>]*>/i)?.[0] ?? "";
+  const robots = robotsTag.match(/\bcontent="([^"]*)"/i)?.[1] ?? "";
   return !/noindex/i.test(robots);
 };
 
@@ -105,12 +109,13 @@ const xml =
   `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n` +
   `${body}\n</urlset>\n`;
 
-writeFileSync(path.join(DIST, "sitemap-images.xml"), xml);
-// O diretório realmente servido é `dist/client` (TanStack Start). Sem esta
-// cópia, o Sitemap declarado no robots.txt respondia 404 para os crawlers.
-if (existsSync(path.join(DIST, "client"))) {
-  writeFileSync(path.join(DIST, "client", "sitemap-images.xml"), xml);
+if (!entries.size) {
+  console.error("BLOQUEADO: nenhuma imagem local encontrada em páginas indexáveis do build servido.");
+  process.exit(1);
 }
+writeFileSync(path.join(DIST, "sitemap-images.xml"), xml);
+// Espelho legado somente após gerar com sucesso, preservando consumidores de dist/.
+if (BUILD_ROOT !== DIST) writeFileSync(path.join(BUILD_ROOT, "sitemap-images.xml"), xml);
 
 
 const total = [...entries.values()].reduce((n, e) => n + e.images.size, 0);

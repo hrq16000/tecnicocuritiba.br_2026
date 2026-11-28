@@ -134,7 +134,7 @@ jobs:
       - name: Interlinking local gate (mãe ⇄ bairros/cidades)
         run: npm run check:local-interlinking
       - name: E-E-A-T coverage gate
-        run: npm run check:eeat
+        run: node --test scripts/check-eeat-coverage.test.mjs && npm run check:eeat
       # Gate de indexação: serve o build e valida status, content-type,
       # canonical self-referente, robots e JSON-LD de cada rota do sitemap,
       # além de garantir que nenhum alias 301 tenha canonical próprio.
@@ -248,7 +248,7 @@ jobs:
       - name: Wait for server
         run: npx wait-on http://localhost:8080 --timeout 60000
       - name: Run targeted E2E (whatsapp + termos + sitemap + como-funciona + segurança)
-        run: npx playwright test --config=playwright.ci.config.ts e2e/whatsapp-funnel.spec.ts e2e/termos-e-condicoes.spec.ts e2e/seo-sitemap-robots.spec.ts e2e/como-funciona-mobile.spec.ts e2e/security-data-exposure.spec.ts
+        run: npx playwright test --config=playwright.ci.config.ts e2e/whatsapp-funnel.spec.ts e2e/termos-e-condicoes.spec.ts e2e/seo-sitemap-robots.spec.ts e2e/como-funciona-mobile.spec.ts e2e/security-data-exposure.spec.ts e2e/category-local-breadcrumb.spec.ts
         env:
           E2E_BASE_URL: http://localhost:8080
           # Chaves públicas (anon) — o teste também tem fallback embutido.

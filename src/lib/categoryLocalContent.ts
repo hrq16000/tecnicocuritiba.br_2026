@@ -81,6 +81,15 @@ export function clamp(text: string, max = 165): string {
 export const cityLabel = (l: LocalData) =>
   l.kind === "bairro" ? `${l.nome}, ${l.cidadeMae}` : l.nome;
 
+/** Mesma trilha usada na navegação renderizada, no SSR e após hidratação. */
+export function categoryLocalBreadcrumbs(cat: CategoryData, local: LocalData) {
+  return [
+    { name: "Início", path: "/" },
+    { name: cat.titlePrefix, path: `/${cat.slug}-curitiba` },
+    { name: cityLabel(local), path: `/${cat.slug}/${local.slug}` },
+  ];
+}
+
 export const shortLabel = (l: LocalData) =>
   l.kind === "bairro" ? `${l.nome} (Curitiba)` : l.nome;
 

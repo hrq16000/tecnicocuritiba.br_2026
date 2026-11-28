@@ -32,23 +32,59 @@
     },
     "src/routes/conserto-celular.$local.tsx": {
       "before": "b74e6c004a1f7ee6547293637ded81fc",
-      "after": "f8780ead367bd5b0ad189faf4d94dba7",
-      "note": "Metadados SSR específicos adicionados; política noindex preservada."
+      "after": "9cabfbb327b0089f7a5ad66c16dd327f",
+      "note": "Metadados SSR específicos adicionados; política noindex preservada.",
+      "revisions": [
+        {
+          "sourceCommit": "82fcf416c21a223ebc93eb00a589b65bc0cebe13",
+          "before": "f8780ead367bd5b0ad189faf4d94dba7",
+          "after": "9cabfbb327b0089f7a5ad66c16dd327f",
+          "intervention": "PR-86",
+          "reason": "Paridade BreadcrumbList entre SSR, trilha visível e hidratação; preserva title, description, canonical self, noindex, rotas, catálogo e preços. Selo histórico permanece intacto."
+        }
+      ]
     },
     "src/routes/conserto-som.$local.tsx": {
       "before": "49e7094a9044abdef0dd722392bbb289",
-      "after": "012ed2ce5bcfba4e614f43260c39ea31",
-      "note": "Metadados SSR específicos adicionados; política noindex preservada."
+      "after": "aa4565ec7192d6849380aeb5ddf51d2c",
+      "note": "Metadados SSR específicos adicionados; política noindex preservada.",
+      "revisions": [
+        {
+          "sourceCommit": "82fcf416c21a223ebc93eb00a589b65bc0cebe13",
+          "before": "012ed2ce5bcfba4e614f43260c39ea31",
+          "after": "aa4565ec7192d6849380aeb5ddf51d2c",
+          "intervention": "PR-86",
+          "reason": "Paridade BreadcrumbList entre SSR, trilha visível e hidratação; preserva title, description, canonical self, noindex, rotas, catálogo e preços. Selo histórico permanece intacto."
+        }
+      ]
     },
     "src/routes/conserto-tv.$local.tsx": {
       "before": "a94eb04d7eeb2fed971d92b708b1c5dc",
-      "after": "ede64e5b9150377daa215e64090f3d44",
-      "note": "Metadados SSR específicos adicionados; política noindex preservada."
+      "after": "19df02944278bbf647db07e44b82893f",
+      "note": "Metadados SSR específicos adicionados; política noindex preservada.",
+      "revisions": [
+        {
+          "sourceCommit": "82fcf416c21a223ebc93eb00a589b65bc0cebe13",
+          "before": "ede64e5b9150377daa215e64090f3d44",
+          "after": "19df02944278bbf647db07e44b82893f",
+          "intervention": "PR-86",
+          "reason": "Paridade BreadcrumbList entre SSR, trilha visível e hidratação; preserva title, description, canonical self, noindex, rotas, catálogo e preços. Selo histórico permanece intacto."
+        }
+      ]
     },
     "src/routes/conserto-videogame.$local.tsx": {
       "before": "bb03263b07a74a054252b1c04f8253b9",
-      "after": "dfc8704344df5275c9590ff516d05902",
-      "note": "Metadados SSR específicos adicionados; política noindex preservada."
+      "after": "ba296368443e58ea5dc07c9fc855f5e2",
+      "note": "Metadados SSR específicos adicionados; política noindex preservada.",
+      "revisions": [
+        {
+          "sourceCommit": "82fcf416c21a223ebc93eb00a589b65bc0cebe13",
+          "before": "dfc8704344df5275c9590ff516d05902",
+          "after": "ba296368443e58ea5dc07c9fc855f5e2",
+          "intervention": "PR-86",
+          "reason": "Paridade BreadcrumbList entre SSR, trilha visível e hidratação; preserva title, description, canonical self, noindex, rotas, catálogo e preços. Selo histórico permanece intacto."
+        }
+      ]
     },
     "src/routes/marcas.$slug.tsx": {
       "before": "42a634b2b0211ffbb19926c74bfc2cfd",
