@@ -824,6 +824,11 @@ export const WhatsAppFunnel = () => {
     <Dialog open={open} onOpenChange={handleOpenChange}>
       <DialogContent
         data-triage="1"
+        onEscapeKeyDown={(event) => {
+          if (event.target instanceof HTMLElement && event.target.closest("[data-localidade-search]")) {
+            event.preventDefault();
+          }
+        }}
         className="z-[120] w-[calc(100vw-1.5rem)] max-w-[600px] max-h-[92dvh] gap-0 overflow-hidden p-0 sm:w-full"
       >
         {/* Cabeçalho fixo compacto */}

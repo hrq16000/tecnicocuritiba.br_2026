@@ -41,6 +41,60 @@ test.describe("Triagem V5 — funil ramificado por equipamento", () => {
     await context.route("https://wa.me/**", (route) => route.fulfill({ status: 204, body: "" }));
   });
 
+
+  for (const width of [390, 768, 1440]) {
+    test(`localidade pesquisável mantém o contexto e foco — ${width}px`, async ({ page }) => {
+      await page.setViewportSize({ width, height: width === 390 ? 844 : width === 768 ? 1024 : 900 });
+      await page.goto(`${HOME}${UTM_QS}`);
+      await page.waitForLoadState("networkidle");
+      const dialog = await openFunnel(page);
+      const origin = page.url();
+      await chooseResidential(dialog);
+      await dialog.getByRole("button", { name: /PC \/ Notebook/i }).click();
+      await dialog.getByRole("radio", { name: /^Notebook$/i }).click();
+      await dialog.getByRole("radio", { name: /Liga e inicia normalmente/i }).click();
+
+      const field = dialog.locator("#bairro");
+      const trigger = dialog.getByRole("button", { name: /Escolher bairro ou cidade/i });
+      await expect(field).toBeVisible();
+      await trigger.click();
+      const search = dialog.getByRole("searchbox", { name: "Pesquisar bairro ou cidade" });
+      await expect(search).toBeFocused();
+      await search.fill("inexistente");
+      await expect(dialog.getByText(/Nenhuma opção encontrada/)).toBeVisible();
+      await search.fill("pinhais");
+      await search.press("ArrowDown");
+      const pinhais = dialog.getByRole("button", { name: "Pinhais, PR", exact: true });
+      await expect(pinhais).toBeFocused();
+      await page.keyboard.press("Enter");
+      await expect(field).toHaveValue("Pinhais, PR");
+      await expect(trigger).toBeFocused();
+      await expect(search).toHaveCount(0);
+      await expect.poll(() => page.evaluate(() => {
+        const item = sessionStorage.getItem("__geo_ctx__");
+        return item ? JSON.parse(item).city : null;
+      })).toBe("Pinhais");
+
+      await trigger.click();
+      await search.fill("agua verde");
+      await dialog.getByRole("button", { name: "Água Verde, Curitiba", exact: true }).click();
+      await expect(field).toHaveValue("Água Verde, Curitiba");
+      await expect(search).toHaveCount(0);
+
+      await trigger.click();
+      await search.fill("batel");
+      await search.press("Escape");
+      await expect(dialog).toBeVisible();
+      await expect(field).toHaveValue("Água Verde, Curitiba");
+      await expect(trigger).toBeFocused();
+      expect(page.url()).toBe(origin);
+      const rect = await dialog.boundingBox();
+      expect(rect).not.toBeNull();
+      expect(rect!.x).toBeGreaterThanOrEqual(0);
+      expect(rect!.x + rect!.width).toBeLessThanOrEqual(width + 1);
+    });
+  }
+
   test("categoria 'Outro' substitui 'Outro / Só orçamento' e não há remoto para TV", async ({ page }) => {
     await page.goto(`${HOME}${UTM_QS}`);
     await page.waitForLoadState("networkidle");
