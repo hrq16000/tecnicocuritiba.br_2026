@@ -54,3 +54,18 @@ for (const vp of VIEWPORTS) {
     });
   });
 }
+
+// A Home usa a imagem PNG de marca; o tamanho declarado deve refletir os bytes reais.
+test("Home declara as dimensões reais da imagem social", async ({ page }) => {
+  await page.goto("/");
+  const image = await metaContent(page, 'meta[property="og:image"]');
+  expect(image).toBeTruthy();
+  const url = new URL(image!);
+  expect(url.pathname).toBe("/og-image.png");
+  const response = await page.request.get(url.pathname);
+  expect(response.status()).toBe(200);
+  const png = await response.body();
+  expect(png.subarray(0, 8).toString("hex")).toBe("89504e470d0a1a0a");
+  expect(await metaContent(page, 'meta[property="og:image:width"]')).toBe(String(png.readUInt32BE(16)));
+  expect(await metaContent(page, 'meta[property="og:image:height"]')).toBe(String(png.readUInt32BE(20)));
+});
